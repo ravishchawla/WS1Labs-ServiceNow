@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WS1UEMSpoke" max_length="40" name="x_646971_uemconn_0_ws1uemspoke" sizeclass="466" type="collection">
+        <element label="Device Name" max_length="40" name="device_name" type="string"/>
+        <element label="Email address" max_length="40" name="email_address" type="string"/>
+        <element label="Location Group Name" max_length="40" name="location_group_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Udid" max_length="40" name="udid" type="string"/>
+        <element display="true" label="Username" max_length="40" name="username" type="string"/>
+        <element label="Uuid" max_length="40" name="uuid" type="string"/>
+        <element label="ws1Webpage" max_length="100" name="webpage" type="url"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
