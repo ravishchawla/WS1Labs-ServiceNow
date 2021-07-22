@@ -41,6 +41,26 @@
             <element>x_646971_uemconn_0_ws1command</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Change Passcode</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-06 22:55:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d22a4b77070170105740f96d7c1ed043</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-17 02:05:24</sys_updated_on>
+            <value>changepasscode</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1command</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Request Logs</label>
             <language>en</language>
             <name>incident</name>
@@ -61,26 +81,6 @@
             <element>x_646971_uemconn_0_ws1command</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Query Device</label>
-            <language>en</language>
-            <name>incident</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-28 03:49:01</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>89073d4107c1f8105740f96d7c1ed0b0</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 03:51:59</sys_updated_on>
-            <value>devicequery</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>x_646971_uemconn_0_ws1command</element>
-            <hint/>
-            <inactive>false</inactive>
             <label>Device Wipe</label>
             <language>en</language>
             <name>incident</name>
@@ -91,10 +91,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>49649ef2073c34105740f96d7c1ed0b9</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>4</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 00:25:12</sys_updated_on>
-            <value>devicewipe</value>
+            <sys_updated_on>2021-07-07 02:10:36</sys_updated_on>
+            <value>DeviceWipe</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -111,10 +111,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>a1e5fdcd0781f8105740f96d7c1ed0ba</sys_id>
-            <sys_mod_count>1</sys_mod_count>
+            <sys_mod_count>2</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 03:51:49</sys_updated_on>
-            <value>enterprisewipe</value>
+            <sys_updated_on>2021-07-07 02:07:57</sys_updated_on>
+            <value>EnterpriseWipe</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -131,30 +131,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>55bb16c60778b0105740f96d7c1ed060</sys_id>
-            <sys_mod_count>12</sys_mod_count>
+            <sys_mod_count>13</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 03:45:03</sys_updated_on>
-            <value>lock</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>x_646971_uemconn_0_ws1command</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Logout User</label>
-            <language>en</language>
-            <name>incident</name>
-            <sequence/>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-18 22:47:00</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>069b9a4a0778b0105740f96d7c1ed0aa</sys_id>
-            <sys_mod_count>4</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 03:44:52</sys_updated_on>
-            <value>logout-user</value>
+            <sys_updated_on>2021-07-01 01:19:38</sys_updated_on>
+            <value>Lock</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -181,20 +161,20 @@
             <element>x_646971_uemconn_0_ws1command</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Shutdown Device</label>
+            <label>Soft Reset</label>
             <language>en</language>
             <name>incident</name>
             <sequence/>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-21 06:11:46</sys_created_on>
+            <sys_created_on>2021-07-06 22:55:51</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>4d949ef2073c34105740f96d7c1ed0bc</sys_id>
+            <sys_id>e94a8b77070170105740f96d7c1ed03f</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 03:45:26</sys_updated_on>
-            <value>shutdown</value>
+            <sys_updated_on>2021-07-07 02:05:36</sys_updated_on>
+            <value>SoftReset</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -211,10 +191,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>bb1669450781f8105740f96d7c1ed0b0</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-06-28 02:35:04</sys_updated_on>
-            <value>syncdevice</value>
+            <sys_updated_on>2021-07-07 02:08:51</sys_updated_on>
+            <value>SyncDevice</value>
         </sys_choice>
     </sys_choice>
 </record_update>

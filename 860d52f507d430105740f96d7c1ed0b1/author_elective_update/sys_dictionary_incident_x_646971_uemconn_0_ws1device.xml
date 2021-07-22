@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="x_646971_uemconn_0_ws1device" table="incident">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>edge_encryption_enabled=true</attributes>
+        <audit>false</audit>
+        <calculation/>
+        <choice>2</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>WS1 UEM Device name</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>x_646971_uemconn_0_ws1device</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Reference">reference</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <name>incident</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_646971_uemconn_0_ws1devices">x_646971_uemconn_0_ws1devices</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 06:57:34</sys_created_on>
+        <sys_id>dbe8a0700760b0105740f96d7c1ed09c</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>WS1 UEM Device name</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_dictionary_incident_x_646971_uemconn_0_ws1device</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-21 23:21:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_dictionary_incident_x_646971_uemconn_0_ws1device</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="x_646971_uemconn_0_ws1device" table="incident"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>edge_encryption_enabled=true</attributes><audit>false</audit><calculation/><choice>2</choice><choice_field/><choice_table/><column_label>WS1 UEM Device name</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>x_646971_uemconn_0_ws1device</element><element_reference>false</element_reference><foreign_database/><function_definition/><function_field>false</function_field><internal_type display_value="Reference">reference</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>incident</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference display_value="" name="x_646971_uemconn_0_ws1devices">x_646971_uemconn_0_ws1devices</reference><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-02 06:57:34</sys_created_on><sys_id>dbe8a0700760b0105740f96d7c1ed09c</sys_id><sys_mod_count>30</sys_mod_count><sys_name>WS1 UEM Device name</sys_name><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_dictionary_incident_x_646971_uemconn_0_ws1device</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-21 23:21:13</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>true</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>1225408549</payload_hash>
+        <record_name>Incident.WS1 UEM Device name</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-21 23:21:13</sys_created_on>
+        <sys_id>6940c24b07b474105740f96d7c1ed0cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a30e0bf3c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-21 23:21:13</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>e140c24b93b47410f6a8da912f1167cc</update_guid>
+        <update_guid_history>e140c24b93b47410f6a8da912f1167cc:1225408549,7510024b35b47410158ebd3336eedc16:293576496,862e79c735b47410afd66aeec27ecf01:-1510687819,06ddf1c7e9b474104bc7cec6d99ae997:-1630731296,3e1d7987d7b47410739d77d28faddee9:-1270555998,78cc358794b474105ad0a0e324336817:1225408549,c59cfd4707b474102618a08861fc10c3:1097523978,11fbb547a8b4741029c1b4299b918881:-772909726,32a5bafeae7c3410d02e402a95462830:1225408549,85ac41aee83cf01027d2c14cde4fa1f8:-1270555998,519c01ae7f3cf01051880980d9d1302c:-199960926,e5e841eaa93cf0105fb4df727476de0b:1776813090,de86816a653cf010e7167813531dbf94:-842223734,620b62bdc8bc70109bfbf64afa6c42e3:-1368537379,1fdaae7d13bc70102a6a864d427be02b:1361792611,cdaaaa7d6cbc7010455e2736b4a8ef5b:2089848944,076a667d20bc701021ac00f918e96b89:1926148124,5d2aa27d13bc701097c17ae8ac063e55:1628805682,710aee3d1ebc701040b29a36a7466588:1561763319,dcd82ef9f7bc70101eb89afa73dc1ae9:1628805682,4999dddd337430106dd46df6ee357e3e:65759713,acc8d1ddc47430100d11a324c839f16b:570729093,151dec1128343010db854ae79bde0650:719306499,eb9be8ddeaf030107f282760d4e2ee7f:65759713,6f5be4dd6bf03010c29d20e2230bf98f:2079818305,30faa0dd4cf03010d703c1b1155d8131:-1789198534,731aa49da0f030108ac806e317299613:65759713,0d37e01d7ef03010c92119d33a97f5ab:-469799957,70c62cd9a6f0301020785d59ebbb09ff:1281195946,81952c9968f0301072ceba344bbe78f7:-43499690,27e8a070a060b010326bf064e6a750d0:1674893640</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 02:12:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>1ed338ef2da64ae4b0ce05c39f8ed310</sys_id>
+        <sys_metadata>dbe8a0700760b0105740f96d7c1ed09c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1 UEM Device name</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="Incident">aee0858b6d2620100acb70b353433075</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_dictionary_incident_x_646971_uemconn_0_ws1device</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_incident_x_646971_uemconn_0_ws1device">6940c24b07b474105740f96d7c1ed0cc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 02:12:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="exclude_from_antivirus_scan=true,update_synch=true" extends="sys_metadata" label="Data Source" max_length="40" name="sys_data_source" sizeclass="18" text_index="true" type="collection">
+        <element attributes="encode_utf8=false,ref_ac_columns=sys_scope,ref_auto_completer=AJAXTableCompleter,ref_contributions=configure_datasource_datastream_action" hint="The Data Stream action that provides complex object stream to load data" label="Data Stream action" max_length="32" name="data_stream_action" reference="sys_hub_action_type_definition" reference_qual="action_template=DATASTREAM^state=published^EQ" type="reference"/>
+        <element attributes="list_layout_ignore=true,model_field=data_stream_action.master_snapshot,record_watcher_blacklist=true,serializer=com.glide.vars.VariableValueXMLSerializer,slushbucket_ref_no_expand=true" label="Data stream action inputs" max_length="32" name="data_stream_action_inputs" reference="sys_hub_action_input" type="glide_var"/>
+        <index name="index">
+            <element name="data_stream_action"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function continueOK() {
+//	alert("OK clicked");
+//	var gdw = GlideDialogWindow.get();
+	var action =gel('my_action').value;
+	var unlockpin = gel('my_pin').value;
+	var message = gel('my_message').value;
+	var sid = gel('sid').value;
+
+	sid = g_form.getUniqueValue();
+
+	
+	// Set the values back to the incident form
+    g_form.setValue("x_646971_uemconn_0_ws1_send_message", message); 
+	g_form.setValue("x_646971_uemconn_0_ws1_passcode", unlockpin); 
+	g_form.setValue("x_646971_uemconn_0_ws1command", action); 
+	g_form.setValue("x_646971_uemconn_0_ws1uem", "Queueing " + action + " action"); 
+	g_form.save();
+	
+	var app = new GlideRecord("incident");
+	if(app.get(sid)){
+		app.x_646971_uemconn_0_ws1command = action;
+		app.x_646971_uemconn_0_ws1_passcode = unlockpin;
+		app.x_646971_uemconn_0_ws1_send_message = message;
+		app.x_646971_uemconn_0_ws1uem = "Queueing " + action + " action";
+		app.update();
+	}
+	
+   // g_form.save();
+	alert( "Starting "+action+"---"+unlockpin+"---"+message);
+
+	document.getElementById("runprocessingscript").value = "hidden";
+	document.getElementById("sid").value = sid;
+	
+	GlideDialogWindow.get().destroy();	
+}
+
+function continueCancel() {
+	alert("Cancel clicked");
+	GlideDialogWindow.get().destroy();
+}
+
+function showHide(my_action) {
+	var input2 = document/getElementbyId('my_action');
+	alert("---"+input2.value);
+}]]></client_script>
+        <description>Popup to enable WS1 UEM details to be captured</description>
+        <direct>false</direct>
+        <endpoint>x_646971_uemconn_0_WS1UEM popup.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:ui_form>
+    <j:set var="jvar_si" value="$[RP.getWindowProperties().get('si')]"/> 
+    <input type="hidden" id="sid" name="sid" value="${jvar_si}" />
+	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
+		 
+	<table border="0">
+		<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			Select Action to Perform: 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+                      <g:ui_choicelist name="my_action" id="my_action" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1command" query="active=true" onChange="showHide(this)"/>
+                    </td>
+        </tr>
+		<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			Message to send to the device: 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+                      <input type="text" name="my_message" id="my_message" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_send_message" query="active=true"/>
+                    </td>
+        </tr>
+		<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			Passcode: 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+                      <input type="text" name="my_pin" id="my_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_passcode" query="active=true"/>
+                    </td>
+        </tr>
+		<tr>
+                     <td>
+                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit" ok_text="${gs.getMessage('Okay')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+                    </td>
+               </tr>
+	</table>
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>WS1UEM popup</name>
+        <processing_script><![CDATA[if(runprocessingscript != ''){
+	
+    gs.info("Running action flow from UI Page");
+    gs.info("sid value " + sid);
+    gs.info("current value " + current);
+
+	var session = gs.getSession();
+	var addr = session.getUrlOnStack();
+	gs.info("URL " + addr);
+		
+	var util = new GlideRecord('incident');
+	util.get(sid);
+//	util.update();
+	
+	
+	try {
+		var inputs = {};
+//		inputs['current'] = sid; // GlideRecord of table:  
+		inputs['current'] = util; // GlideRecord of table:  
+		inputs['table_name'] = 'incident';
+
+		// Start Asynchronously: Uncomment to run in background.
+        sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1uemactionfromscript').inBackground().withInputs(inputs).run();
+				
+		// Execute Synchronously: Run in foreground.
+		//sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
+		
+		
+	} catch (ex) {
+		var messages = ex.getMessage();
+		gs.error(messages);
+	}
+
+   response.sendRedirect(addr);
+}
+
+
+
+
+
+
+]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-10 00:49:49</sys_created_on>
+        <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
+        <sys_mod_count>179</sys_mod_count>
+        <sys_name>WS1UEM popup</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-20 07:23:17</sys_updated_on>
+    </sys_ui_page>
+</record_update>

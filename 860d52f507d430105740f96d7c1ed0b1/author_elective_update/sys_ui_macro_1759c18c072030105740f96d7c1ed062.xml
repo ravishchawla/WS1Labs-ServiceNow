@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="DELETE">
+        <active>false</active>
+        <category>general</category>
+        <description>onclick get user's device</description>
+        <media_type/>
+        <name>WS1UEM111111</name>
+        <scoped_name>x_646971_uemconn_0_WS1UEM111111</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-31 01:36:10</sys_created_on>
+        <sys_id>1759c18c072030105740f96d7c1ed062</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>WS1UEM111111</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_ui_macro_1759c18c072030105740f96d7c1ed062</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 07:22:31</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<a class="btn-default' " id="${jvar_n}" onclick="invokeWS1('${ref}');">
+		<image src="ws1uem.png" width="30" title="WS1 UEM" alt="${gs.getMessage('Click to get WS1 UEM')}" />
+	</a>
+	
+	<script>
+		function invokeUEM(reference) {
+		
+		var w = getTopWindow();
+		var url = "www.smh.com.au";
+		w.open(url);
+	}
+		
+	</script>
+	
+	
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_ui_macro_1759c18c072030105740f96d7c1ed062</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description&gt;onclick get user's device&lt;/description&gt;&lt;media_type/&gt;&lt;name&gt;WS1UEM111111&lt;/name&gt;&lt;scoped_name&gt;x_646971_uemconn_0_WS1UEM111111&lt;/scoped_name&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-05-31 01:36:10&lt;/sys_created_on&gt;&lt;sys_id&gt;1759c18c072030105740f96d7c1ed062&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEM111111&lt;/sys_name&gt;&lt;sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="WS1UEMSpoke"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_1759c18c072030105740f96d7c1ed062&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-07 07:22:31&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+	&lt;a class="btn-default' " id="${jvar_n}" onclick="invokeWS1('${ref}');"&gt;
+		&lt;image src="ws1uem.png" width="30" title="WS1 UEM" alt="${gs.getMessage('Click to get WS1 UEM')}" /&gt;
+	&lt;/a&gt;
+	
+	&lt;script&gt;
+		function invokeUEM(reference) {
+		
+		var w = getTopWindow();
+		var url = "www.smh.com.au";
+		w.open(url);
+	}
+		
+	&lt;/script&gt;
+	
+	
+	
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1224680549</payload_hash>
+        <record_name>WS1UEM111111</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 07:22:31</sys_created_on>
+        <sys_id>619e1a5e07e4b4105740f96d7c1ed031</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179e55a00870000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 07:22:31</sys_updated_on>
+        <type>Macro</type>
+        <update_guid>a99e1a5e9be4b41027a9a36c30814f30</update_guid>
+        <update_guid_history>a99e1a5e9be4b41027a9a36c30814f30:1224680549,86263d1c6c6c30100e18c6e5d2990c8d:445108441,be3471d8516c30107f46e41fd12dec1a:1070467897,b72c4100776030104b35fe6e77dfa873:-1180473472</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-18 05:38:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_macro">sys_ui_macro</sys_db_object>
+        <sys_id>0bdad2fd96f04a1c84f9828d4bd2c410</sys_id>
+        <sys_metadata>1759c18c072030105740f96d7c1ed062</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEM111111</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_ui_macro_1759c18c072030105740f96d7c1ed062</sys_update_name>
+        <sys_update_version display_value="sys_ui_macro_1759c18c072030105740f96d7c1ed062">619e1a5e07e4b4105740f96d7c1ed031</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 05:38:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
