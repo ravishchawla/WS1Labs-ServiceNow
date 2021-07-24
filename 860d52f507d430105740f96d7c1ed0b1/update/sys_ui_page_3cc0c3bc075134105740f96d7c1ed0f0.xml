@@ -57,8 +57,10 @@ function showHide(my_action) {
 	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
 		 
 	<table border="0">
+		
+		<hr></hr>
 		<tr>
-                   <td style="width:25%">
+                   <td style="width:15%">
 			<g:form_label>
 			Select Action to Perform: 
 			</g:form_label>
@@ -67,6 +69,7 @@ function showHide(my_action) {
                       <g:ui_choicelist name="my_action" id="my_action" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1command" query="active=true" onChange="showHide(this)"/>
                     </td>
         </tr>
+		
 		<tr>
                    <td style="width:25%">
 			<g:form_label>
@@ -87,12 +90,13 @@ function showHide(my_action) {
                       <input type="text" name="my_pin" id="my_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_passcode" query="active=true"/>
                     </td>
         </tr>
+		
 		<tr>
                      <td>
                        <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit" ok_text="${gs.getMessage('Okay')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
                     </td>
                </tr>
-	</table>
+		</table>	
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEM popup</name>
@@ -142,13 +146,13 @@ function showHide(my_action) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>179</sys_mod_count>
+        <sys_mod_count>188</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-20 07:23:17</sys_updated_on>
+        <sys_updated_on>2021-07-24 00:35:36</sys_updated_on>
     </sys_ui_page>
 </record_update>
