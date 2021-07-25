@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>3a287382eb0532008a1f4d3df106feb3</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;false&lt;/active&gt;
+        &lt;checksum&gt;6D8rnPTn/7XjLvx5ErV4umIKryc=&lt;/checksum&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;2&lt;/children_layout&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;p&gt;You can create a new class by extending an existing class, and then adding table columns and definitions unique to the new class.&lt;/p&gt;
+  &lt;p&gt;After you define basic elements, you can add the following configurations to the new class so that it is identifiable and tracked for health issues:&lt;/p&gt;
+  &lt;ul style="list-style-position: inside;"&gt;&lt;li&gt;Set up Identification and Reconciliation for the new class:&lt;/li&gt;&lt;/ul&gt;
+  &lt;p&gt;Follow the Identification and Reconciliation tasks in the Configuration (CMDB) Guided Setup.&lt;/p&gt;
+  &lt;ul style="list-style-position: inside;"&gt;&lt;li&gt;Define CMDB Health rules for the new class to include it in health calculations and reporting:&lt;/li&gt;&lt;/ul&gt;
+  &lt;p&gt;Follow the CMDB Health tasks in the Configuration (CMDB) Guided Setup.&lt;/p&gt;
+  &lt;p&gt;   &lt;/p&gt;
+  &lt;style type="text/css"&gt;&lt;!--
+  p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times}
+  p.p2 {margin: 0.0px 0.0px 0.0px 48.0px; font: 18.0px Times}
+  li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Times}
+  ul.ul1 {list-style-type: disc}
+--&gt;&lt;/style&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;parent display_value="Configuration (CMDB)"&gt;047578c6ebe322008a1f4d3df106fea5&lt;/parent&gt;
+        &lt;parents&gt;047578c6ebe322008a1f4d3df106fea5,f52f9c00c31022007bf1bea192d3aef8&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="IT Operations Management Guided Setup"&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;true&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-21 22:18:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;3a287382eb0532008a1f4d3df106feb3&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Class Extension&lt;/sys_name&gt;
+        &lt;sys_package display_value="Guided Setup for CMDB" source="com.snc.cmdb.guided_setup"&gt;7154490f6da620100acb70b3534330a5&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_3a287382eb0532008a1f4d3df106feb3&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;eric.szonyi@snc&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-09-13 20:10:31&lt;/sys_updated_on&gt;
+        &lt;title&gt;Class Extension&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=3a287382eb0532008a1f4d3df106feb3"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:30</sys_created_on>
+        <sys_id>f44e78bd0721b0105740f96d7c1ed092</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Class Extension</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_f44e78bd0721b0105740f96d7c1ed092</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:30</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

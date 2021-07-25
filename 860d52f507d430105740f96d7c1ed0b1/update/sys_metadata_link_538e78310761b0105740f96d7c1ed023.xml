@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>ac9c691025913200964f48ca4b89e8b7</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;checksum/&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;2&lt;/children_layout&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;div&gt;When a CMDB is created from the beginning, it is common for customers to have lists of their more easily identified CIs, such as computers, servers, printers, applications, and so on. These can be quickly imported into the ServiceNow CMDB to form the starting point.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;The following fields are mandatory to facilitate certain automation features within the ITSM processes&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;
+&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt; CI Fields&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;     Description &lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Name&lt;/td&gt;&lt;td&gt;&lt;strong&gt;     &lt;/strong&gt;Must exist for the CI record to be easily referenced by other processes.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Approval group&lt;/td&gt;&lt;td&gt;&lt;strong&gt;     &lt;/strong&gt;Required to drive automated approvals in the change management process.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt; &lt;/strong&gt;Support group&lt;/td&gt;&lt;td&gt;&lt;strong&gt;     &lt;/strong&gt;Required to drive automated assignment in the incident management process.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;Complete the four steps in this activity to perform a bulk import from an external data source and populate data in the target CMDB [cmdb_ci] table of the instance through an import set (a temporary table in the instance).&lt;/div&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;200&lt;/order&gt;
+        &lt;parent display_value="CMDB"&gt;b6d8299c25513200964f48ca4b89e86b&lt;/parent&gt;
+        &lt;parents&gt;b6d8299c25513200964f48ca4b89e86b,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 11:55:02&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ac9c691025913200964f48ca4b89e8b7&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;36&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Load CI data&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_ac9c691025913200964f48ca4b89e8b7&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-03-23 12:01:02&lt;/sys_updated_on&gt;
+        &lt;title&gt;Load CI data&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=ac9c691025913200964f48ca4b89e8b7"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:45</sys_created_on>
+        <sys_id>538e78310761b0105740f96d7c1ed023</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Load CI data</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_538e78310761b0105740f96d7c1ed023</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:45</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

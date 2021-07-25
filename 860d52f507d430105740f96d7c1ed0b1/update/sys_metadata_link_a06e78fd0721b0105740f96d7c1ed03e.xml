@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>72e2bd9025913200964f48ca4b89e89e</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;div&gt;After a change request is submitted, it goes through a number of approvals before the change can be implemented. Appropriate users are expected to look at the content of the change and confirm that it can proceed. The focus is not the scheduling of the change, but about what is being done, why, and how. This stage ensures that final authorization at CAB, or by management if CAB is not required, can be a quick review as technical SMEs have already reviewed the change.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;It is recommended that you generate different levels of approval based on factors like change type, risk, planned duration, and so on. You can configure workflows to automate and define change management approval processes.&lt;br /&gt;    &lt;/div&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;/workflow_ide.do?sysparm_wf_id=3fea6773cb100200d71cb9c0c24c9c46&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;2&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;true&lt;/more_info_available&gt;
+        &lt;more_info_html&gt;&lt;![CDATA[&lt;p&gt;A change request goes through a series of approvals before it is scheduled and implemented. It is recommended that you have different levels of approvals based on the type of change. The following describes the approval process for a Normal change request.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Normal Changes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Normal changes require the most attention. At the Assess state, approvals are triggered sequentially:&lt;/p&gt;
+&lt;ol id="c_MI_CM_AssessAuthorize__ol_cc1_rsp_cz" style="list-style-position: inside;"&gt;&lt;li&gt;Approval is requested from a change manager. The change manager performs a quality review of the contents to confirm it is good enough to proceed.&lt;/li&gt;&lt;li&gt;Technical or peer approval is triggered by adding the Approval Group linked with each related CI to the change. It is also possible to manually add approvers at this state if necessary.&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;After receiving these approvals, the change moves to Authorize state. In this state, the change goes to CAB if it is a higher risk. All changes receive a final sign-off from the change management team when everyone is happy with the requirements and the scheduling.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Emergency and Standard changes &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Emergency and Standard changes require less approval and have different approvers. The details of the proven practice process are explained in the guided setup activities for these change types.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;To configure the recommended approval process for a normal change request, complete the following tasks:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Workflow changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Navigate to Workflow &amp;gt; Workflow Editor &amp;gt; Change Request – Normal.&lt;/li&gt;&lt;li&gt;Add Approval-Group for Change Management group, and specify that this must be approved before other approvals are generated. If it is rejected, then the change is set back to New state. Manually change the approval to your change management group if a new change management group has been created.&lt;/li&gt;&lt;li&gt;At Assess state, currently the Assignment group is used. Update this to look for groups in the Approval group field on all related CIs and impacted services.&lt;/li&gt;&lt;li&gt;Allow for manual approvals to be added at Assess state by itil and change_manager roles, and at Authorize state by change_manager role. The state should not change until all outstanding approvals have been actioned.&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;change_manager role&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Add the approval_admin role to the change_manager role so that they have the ability to approve or reject changes on behalf of others or under extraordinary circumstances.&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;List control changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Update list control on the Group Approvals related list to:&lt;br /&gt;
+&lt;ul id="c_MI_CM_AssessAuthorize__ul_fc1_rsp_cz" style="list-style-position: inside;"&gt;&lt;li&gt;Allow group approvals to be added by any user associated with the change when it is in the Assess state.&lt;/li&gt;&lt;li&gt;Allow group approvals to be added by change_manager role users when it is in the Assess and Authorize state.&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;UI policy&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Add a UI policy to disable the approving field on group approval records so that users cannot edit the record they are approving. &lt;/li&gt;&lt;/ol&gt;]]&gt;&lt;/more_info_html&gt;
+        &lt;order&gt;500&lt;/order&gt;
+        &lt;parent display_value="Change Management"&gt;acc0759025913200964f48ca4b89e8cc&lt;/parent&gt;
+        &lt;parents&gt;acc0759025913200964f48ca4b89e8cc,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 12:21:56&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;72e2bd9025913200964f48ca4b89e89e&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;39&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Review and authorize&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_72e2bd9025913200964f48ca4b89e89e&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-09-15 10:07:58&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Review and authorize&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=72e2bd9025913200964f48ca4b89e89e"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:02</sys_created_on>
+        <sys_id>a06e78fd0721b0105740f96d7c1ed03e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Review and authorize</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_a06e78fd0721b0105740f96d7c1ed03e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:02</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

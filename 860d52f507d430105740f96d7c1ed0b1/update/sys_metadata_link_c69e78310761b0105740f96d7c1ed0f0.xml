@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>b6d8299c25513200964f48ca4b89e86b</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;checksum&gt;SyHQ4/eBVBdQFovMIGLXEXfvLhE=&lt;/checksum&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;1&lt;/children_layout&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;p&gt;CMDB is a repository of information about your IT infrastructure and services. It helps in effective execution of your IT service management processes by:&lt;/p&gt;
+&lt;ul style="list-style-position: inside;"&gt;&lt;li&gt;Providing the capability to associate configuration items (CIs) to incident, problem, or change management records.&lt;/li&gt;&lt;li&gt;Identifying the respective support teams.&lt;/li&gt;&lt;li&gt;Identifying the service level agreements and business impact information for prioritizing and escalating.&lt;/li&gt;&lt;li&gt;Identifying potential upstream or downstream impact.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note: &lt;/strong&gt;Before populating information on CIs in your CMDB, ensure you read to know about &lt;a title="CMDB Identification and Reconciliation tool" href="https://community.servicenow.com/community?id&amp;#61;community_blog&amp;amp;sys_id&amp;#61;7e3fb6d5db5afb00fece0b55ca9619e3" rel="nofollow"&gt;CMDB Identification and Reconciliation tool.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;400&lt;/order&gt;
+        &lt;parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/parent&gt;
+        &lt;parents&gt;01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;true&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 11:37:57&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;b6d8299c25513200964f48ca4b89e86b&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;CMDB&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_b6d8299c25513200964f48ca4b89e86b&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-09-05 12:23:22&lt;/sys_updated_on&gt;
+        &lt;title&gt;CMDB&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=b6d8299c25513200964f48ca4b89e86b"/&gt;
+    &lt;sys_attachment action="INSERT_OR_UPDATE"&gt;
+        &lt;average_image_color/&gt;
+        &lt;chunk_size_bytes/&gt;
+        &lt;compressed&gt;true&lt;/compressed&gt;
+        &lt;content_type&gt;image/svg+xml&lt;/content_type&gt;
+        &lt;file_name&gt;icon&lt;/file_name&gt;
+        &lt;hash/&gt;
+        &lt;image_height/&gt;
+        &lt;image_width/&gt;
+        &lt;size_bytes&gt;847&lt;/size_bytes&gt;
+        &lt;size_compressed&gt;508&lt;/size_compressed&gt;
+        &lt;state&gt;available&lt;/state&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-03-07 07:00:37&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;4f8c60222511b200964f48ca4b89e860&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;guest&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-09-05 10:58:56&lt;/sys_updated_on&gt;
+        &lt;table_name&gt;ZZ_YYgsw_content_group&lt;/table_name&gt;
+        &lt;table_sys_id&gt;b6d8299c25513200964f48ca4b89e86b&lt;/table_sys_id&gt;
+    &lt;/sys_attachment&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;H4sIAAAAAAAAAA==&lt;/data&gt;
+        &lt;length&gt;16&lt;/length&gt;
+        &lt;position&gt;0&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="4f8c60222511b200964f48ca4b89e860"&gt;4f8c60222511b200964f48ca4b89e860&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-03-07 07:00:37&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;8f8c60222511b200964f48ca4b89e860&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;bZLJbtswEIbPDZB3mLKnAuZw0W5EDeoFhgGlNdA0RU+FbDG2EFYStNhOnj6k7LRKmxP5z/zzzQylq+vjbw17VTd5WcREICegik2Z5cU2Jl17T0Ny/eny4uo9pbBQharTtqzH8Dkr1wqWWndN24dAhMiRj+Db3QLmx6qsW1jpbkuXBWAfvDs1GYOPnMOky3UG/CMApT1/9nV6+3M1h2a/hdX3SbKcAqGM/XCmjM1uZz1CoGBs/oUA2bVtNWbscDjgwcGy3rJFnVa7fNMwY2TWaIqYgQmBWZsR28OiB6sKAnkWkyR9VPUvI8xLFE38Blpyzi3qbBkfdV48vGUUURSxPmusMeHVkcDj6by8eAf7XB0mpU0AB8dF7oAMUQj75OlaK7pONw/buuwKM1ahDvCfz/QfN1W6UTGpatWoeq/6zaq03cF9rjWtO22Saq+KMssIbHRe/Ruzvph8cCezwJcETK8bESAX7kj66AeBpsJHV3o0QF8mfCQ5OjLQZ0+AYeSeBe2FWU1Tjl4YUoEyEMkr2hP8oXMUgQEaZzQSEj3PMXThYCidIV0O6XKITl6Rnuyb3rgYuLbOcX1toDKgHvqRON1HpzsdiGRQ8Hc2AzRzoyu8F5SHXhQZIZ0XQXuRDCrsBITZD2B/D3M+A/bnkBlPAwAA&lt;/data&gt;
+        &lt;length&gt;664&lt;/length&gt;
+        &lt;position&gt;1&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="4f8c60222511b200964f48ca4b89e860"&gt;4f8c60222511b200964f48ca4b89e860&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-03-07 07:00:37&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;038c60222511b200964f48ca4b89e861&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:57</sys_created_on>
+        <sys_id>c69e78310761b0105740f96d7c1ed0f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMDB</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_c69e78310761b0105740f96d7c1ed0f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:57</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

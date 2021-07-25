@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>acffe2b3db175c5048cdd3fa5e96193d</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;Agents can use Rejection Reasons to denote why they are declining an assignment in their inbox. These reasons are applied to all service channels by default, but can be specified to a single channel.&lt;/p&gt;
+&lt;p&gt;You can review the prebuilt Reject Reasons including ‘Busy’, ‘No access’, ‘Not my expertise’, and ‘Time out’. Additionally, you can create your own Reject Reasons and define which service channels they are applied to, whether agents can select them manually, and whether the chat are reassignable afterward.&lt;/p&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins&gt;com.glide.awa&lt;/dependent_on_plugins&gt;
+        &lt;dependent_on_plugins_ids&gt;com.glide.awa&lt;/dependent_on_plugins_ids&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;awa_reject_reason_list.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;2&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies&gt;9c1e01efdb081300c47f5f135e9619ee&lt;/implicit_plugin_dependencies&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;false&lt;/more_info_available&gt;
+        &lt;more_info_html/&gt;
+        &lt;order&gt;6&lt;/order&gt;
+        &lt;parent display_value="Advanced Work Assignment"&gt;9c1e01efdb081300c47f5f135e9619ee&lt;/parent&gt;
+        &lt;parents&gt;9c1e01efdb081300c47f5f135e9619ee,a869052fdb081300c47f5f135e961910&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="Agent Workspace Guided Setup"&gt;a869052fdb081300c47f5f135e961910&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;samantha.santo@snc&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-09-24 01:00:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;acffe2b3db175c5048cdd3fa5e96193d&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Rejection Reasons&lt;/sys_name&gt;
+        &lt;sys_package display_value="Agent Workspace" source="sn_agent_workspace"&gt;2b3a837a0bb732007a0e41d6f6673a7f&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Agent Workspace"&gt;2b3a837a0bb732007a0e41d6f6673a7f&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_acffe2b3db175c5048cdd3fa5e96193d&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;samantha.santo@snc&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-10-12 22:48:48&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Rejection Reasons&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=acffe2b3db175c5048cdd3fa5e96193d"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:46</sys_created_on>
+        <sys_id>578e78310761b0105740f96d7c1ed028</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Rejection Reasons</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_578e78310761b0105740f96d7c1ed028</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:46</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

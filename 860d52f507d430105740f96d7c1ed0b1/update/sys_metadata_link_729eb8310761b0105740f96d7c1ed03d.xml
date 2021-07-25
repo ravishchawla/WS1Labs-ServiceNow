@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>bbc4b9d025913200964f48ca4b89e898</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;The easiest way for Change Managers and users of the change process to remain aware of everything that is going on, is to use homepages. These pages display charts, gauges and data that is highly pertinent to the individual alerting them to situations where they may need to take action or providing useful real-time updates.&lt;/p&gt;
+&lt;p&gt;Configure homepages for Change managers and process users to manage their work.&lt;/p&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier&gt;change_dashboard&lt;/embedded_help_qualifier&gt;
+        &lt;end_point&gt;/home.do?sysparm_view=new_change_overview&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;true&lt;/more_info_available&gt;
+        &lt;more_info_html&gt;&lt;![CDATA[&lt;p&gt;It is recommended to create separate homepages for the change manager and change process users.&lt;/p&gt;
+&lt;p&gt;The homepage for change managers shows the health of the overall process and allows managers to quickly see and act upon any changes that are overdue or require intervention. Managers can also track where changes are causing issues to enable them to take appropriate action.&lt;/p&gt;
+&lt;p&gt;The homepage for change process users provides access to all changes associated with them or their groups. It shows progress through the life cycle and alerts them to needed actions.&lt;/p&gt;
+&lt;p&gt;The following list contains recommendations for change management homepages:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Change Overview&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Change Overview page is designed for change managers to track overall change management process.&lt;/p&gt;
+&lt;ul style="list-style-position: inside;"&gt;&lt;li&gt;Make the Overview module from the change application menu visible to users with the change_manager role. Clicking it opens a new homepage with the following gauges:&lt;br /&gt;
+&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Gauge &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt; Description&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Today’s High Risk Changes&lt;/td&gt;&lt;td&gt; Number of changes where Risk is High and Planned start date or Planned end date is today.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Emergency Changes&lt;/td&gt;&lt;td&gt; Number of active changes where Type is Emergency.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Changes Awaiting Change  Manager Approval&lt;/td&gt;&lt;td&gt; Number of changes with approval records where State is Requested and approval group is Change Management.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; On Hold Changes &lt;/td&gt;&lt;td&gt; Number of changes where State is On hold.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Overdue Changes&lt;/td&gt;&lt;td&gt; Number of change where Planned end date is in the past and State is Assess, Authorize,  Scheduled or Implement.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Unsuccessful Changes - Last 7 days&lt;/td&gt;&lt;td&gt; Number of changes where State is Review or Closed, Close code is Unsuccessful or Successful with issues and Actual end is in past 7 days.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Next 7 Days Changes&lt;/td&gt;&lt;td&gt; Bar chart of changes grouped by State where the Planned start date is between today and the next 7 days or Planned end date is between today and the next 7 days, and the State is not New or Canceled. &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Closed Changes - Last 30 Days&lt;/td&gt;&lt;td&gt; Donut chart of changes closed in the last 30 days grouped by Type.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Unsuccessful  Standard Change Templates&lt;/td&gt;&lt;td&gt; List of active standard change templates where Unsuccessful change count is greater than 0.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My Changes &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;My Changes homepage is designed for change process users. It provides access to all changes associated with them or their groups.&lt;/p&gt;
+&lt;ul style="list-style-position: inside;"&gt;&lt;li&gt;Add a new module in the Change application menu called My Changes. Make it visible to users with the itil role. Clicking it opens a new homepage with the following gauges:&lt;br /&gt;
+&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Gauge &lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Description &lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; My Draft Changes&lt;/td&gt;&lt;td&gt; Number of changes where Assigned to is me and the State is New. &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; My Group&amp;#39;s Emergency Changes&lt;/td&gt;&lt;td&gt; Number of active changes where the State is not New, Type is Emergency, and Assignment group is one of my groups. &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Changes Awaiting My Approval &lt;/td&gt;&lt;td&gt; Number of approvals where Approver is me, State is Requested, and Task type is Change Request.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; My Group&amp;#39;s Overdue Changes&lt;/td&gt;&lt;td&gt; Number of changes where Planned end date is in the past, Assignment group is one of my groups, and State is not New, Review, Closed, or Canceled.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; My Groups On Hold Changes&lt;/td&gt;&lt;td&gt; Number of changes where State is On Hold and Assignment group is one of my groups.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; My Groups Unsuccessful Changes - Last 30 Days&lt;/td&gt;&lt;td&gt; Number of changes in the last 30 days where Close code is Unsuccessful or Partially successful and State is Review or Closed.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Open Assigned to Me&lt;/td&gt;&lt;td&gt; Bar chart of active changes where Assigned to is me and State is not New. The bar chart is grouped by State and stacked by Risk.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; Open Assigned to My Groups&lt;/td&gt;&lt;td&gt; Bar chart of active changes where Assignment group is one of my groups and State is not New. The bar chart is grouped by Planned start date and stacked by State.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; My Groups Closed Changes - Last 30 Days &lt;/td&gt;&lt;td&gt; List of changes in the last 30 days where State is Closed and Assignment group is one of my groups. &lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/li&gt;&lt;/ul&gt;]]&gt;&lt;/more_info_html&gt;
+        &lt;order&gt;1200&lt;/order&gt;
+        &lt;parent display_value="Change Management"&gt;acc0759025913200964f48ca4b89e8cc&lt;/parent&gt;
+        &lt;parents&gt;acc0759025913200964f48ca4b89e8cc,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 12:30:15&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;bbc4b9d025913200964f48ca4b89e898&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;35&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Manage work with homepages&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_bbc4b9d025913200964f48ca4b89e898&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-09-15 10:15:51&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Manage work with homepages&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=bbc4b9d025913200964f48ca4b89e898"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:09:00</sys_created_on>
+        <sys_id>729eb8310761b0105740f96d7c1ed03d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manage work with homepages</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_729eb8310761b0105740f96d7c1ed03d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:09:00</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

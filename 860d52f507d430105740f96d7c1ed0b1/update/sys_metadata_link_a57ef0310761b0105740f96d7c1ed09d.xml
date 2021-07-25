@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>9677219c25513200964f48ca4b89e83e</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;Integrate an LDAP directory to ease the user login process and automate administrative tasks such as creating users and groups, and assigning group members. The instance uses your directory service as the main source of user data and synchronizes updates to the directory service.&lt;/p&gt;
+&lt;p&gt;LDAP integration uses a read-only account on the LDAP server to query the user distinguished name (DN), and then rebinds with LDAP with the user&amp;#39;s DN and password. The password that the user enters is not stored in the instance.&lt;/p&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins&gt;com.glide.ldap.ui&lt;/dependent_on_plugins&gt;
+        &lt;dependent_on_plugins_ids&gt;com.glide.ldap.ui&lt;/dependent_on_plugins_ids&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier&gt;ldap&lt;/embedded_help_qualifier&gt;
+        &lt;end_point&gt;$ldap_console.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;false&lt;/more_info_available&gt;
+        &lt;more_info_html/&gt;
+        &lt;order&gt;200&lt;/order&gt;
+        &lt;parent display_value="Connectivity"&gt;3957219c25513200964f48ca4b89e836&lt;/parent&gt;
+        &lt;parents&gt;3957219c25513200964f48ca4b89e836,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 11:31:52&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;9677219c25513200964f48ca4b89e83e&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;LDAP Integration&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_9677219c25513200964f48ca4b89e83e&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-09-30 14:05:35&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;LDAP Integration&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=9677219c25513200964f48ca4b89e83e"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:22</sys_created_on>
+        <sys_id>a57ef0310761b0105740f96d7c1ed09d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LDAP Integration</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_a57ef0310761b0105740f96d7c1ed09d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:22</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

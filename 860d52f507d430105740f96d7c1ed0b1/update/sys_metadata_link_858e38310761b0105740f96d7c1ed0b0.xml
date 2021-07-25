@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>a62b88045b1310100977ca225681c7da</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;div class="body conbody"&gt;
+&lt;div class="p"&gt;A search application configuration includes all search settings for a specific &lt;span class="ph"&gt;Now Platform&lt;/span&gt; application.
+&lt;ol id="define-search-app-config__ol_wpm_4lk_2nb" class="ol"&gt;&lt;li class="li"&gt;Review the default search application configurations by following these steps.&lt;br /&gt;
+&lt;ol id="define-search-app-config__ol_lx5_pyj_2nb" class="ol" type="a"&gt;&lt;li class="li"&gt;Edit a search application configuration.&lt;/li&gt;&lt;li class="li"&gt;Review the settings on the Search Application Configuration form and its related lists.&lt;/li&gt;&lt;li class="li"&gt;To return to the list of search application configurations, click the Back icon.&lt;/li&gt;&lt;/ol&gt;
+&lt;/li&gt;&lt;li class="li"&gt;Optionally, define new search application configurations as needed for your &lt;span class="ph"&gt;AI Search&lt;/span&gt; implementation by following these steps.&lt;br /&gt;
+&lt;ol id="define-search-app-config__ol_a2x_5lk_2nb" class="ol" type="a"&gt;&lt;li class="li"&gt;Click &lt;strong&gt;&lt;span class="ph uicontrol"&gt;New&lt;/span&gt;&lt;/strong&gt;.&lt;/li&gt;&lt;li class="li"&gt;On the Search Application Configuration form, fill in the fields.
+&lt;dl class="dl"&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Unique name for this search application configuration.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Application ID&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;ID for a &lt;span class="ph"&gt;Now Platform&lt;/span&gt; application.
+&lt;div class="note note"&gt;&lt;strong&gt;&lt;span class="notetitle"&gt;Note:&lt;/span&gt;&lt;/strong&gt; In &lt;span class="ph"&gt;Quebec&lt;/span&gt;, only the following applications support &lt;span class="ph"&gt;AI Search&lt;/span&gt;: &lt;span class="ph"&gt;Service Portal&lt;/span&gt;, &lt;span class="ph"&gt;Now Mobile&lt;/span&gt;, and &lt;span class="ph"&gt;Virtual Agent&lt;/span&gt;.&lt;/div&gt;
+&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Search Profile&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Profile with the search experience you want to provide for users of the application.&lt;/dd&gt;&lt;/dl&gt;
+&lt;/li&gt;&lt;li class="li"&gt;Click &lt;strong&gt;&lt;span class="ph uicontrol"&gt;Submit&lt;/span&gt;&lt;/strong&gt;.&lt;/li&gt;&lt;/ol&gt;
+&lt;/li&gt;&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;sys_search_context_config_list.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;false&lt;/more_info_available&gt;
+        &lt;more_info_html/&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;parent display_value="Configure AI Search applications"&gt;02e6c4805b1310100977ca225681c792&lt;/parent&gt;
+        &lt;parents&gt;02e6c4805b1310100977ca225681c792,d585222f5b4310100977ca225681c72f&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="AI Search Guided Setup"&gt;d585222f5b4310100977ca225681c72f&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-09-11 21:22:26&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a62b88045b1310100977ca225681c7da&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Define search application configurations&lt;/sys_name&gt;
+        &lt;sys_package display_value="AI Search" source="com.glide.ais"&gt;accdbc4b6d2220100acb70b353433053&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_a62b88045b1310100977ca225681c7da&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-10-09 04:12:12&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Define search application configurations&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=a62b88045b1310100977ca225681c7da"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:36</sys_created_on>
+        <sys_id>858e38310761b0105740f96d7c1ed0b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Define search application configurations</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_858e38310761b0105740f96d7c1ed0b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:36</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

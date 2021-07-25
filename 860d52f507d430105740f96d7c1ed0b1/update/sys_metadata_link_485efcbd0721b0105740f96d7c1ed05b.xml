@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>4ff66d5c25513200964f48ca4b89e8d4</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;checksum&gt;jzPc3SiHaVain+u5Sx/LAt8duPI=&lt;/checksum&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;1&lt;/children_layout&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;p&gt;Transform the ServiceNow instance by configuring your company name, logo, and color theme to reflect your corporate brand. Configure the default system settings such as the time zone and the date and time formats.&lt;/p&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/parent&gt;
+        &lt;parents&gt;01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;true&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 11:29:55&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;4ff66d5c25513200964f48ca4b89e8d4&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Company&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_4ff66d5c25513200964f48ca4b89e8d4&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-08-08 10:16:41&lt;/sys_updated_on&gt;
+        &lt;title&gt;Company&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=4ff66d5c25513200964f48ca4b89e8d4"/&gt;
+    &lt;sys_attachment action="INSERT_OR_UPDATE"&gt;
+        &lt;average_image_color/&gt;
+        &lt;chunk_size_bytes/&gt;
+        &lt;compressed&gt;true&lt;/compressed&gt;
+        &lt;content_type&gt;image/svg+xml&lt;/content_type&gt;
+        &lt;file_name&gt;icon&lt;/file_name&gt;
+        &lt;hash/&gt;
+        &lt;image_height/&gt;
+        &lt;image_width/&gt;
+        &lt;size_bytes&gt;1333&lt;/size_bytes&gt;
+        &lt;size_compressed&gt;748&lt;/size_compressed&gt;
+        &lt;state/&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-03-06 09:37:24&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ced64c9e25d97200964f48ca4b89e8a3&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;maint&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-03-06 09:37:24&lt;/sys_updated_on&gt;
+        &lt;table_name&gt;ZZ_YYgsw_content_group&lt;/table_name&gt;
+        &lt;table_sys_id&gt;4ff66d5c25513200964f48ca4b89e8d4&lt;/table_sys_id&gt;
+    &lt;/sys_attachment&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;H4sIAAAAAAAAAA==&lt;/data&gt;
+        &lt;length&gt;16&lt;/length&gt;
+        &lt;position&gt;0&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="ced64c9e25d97200964f48ca4b89e8a3"&gt;ced64c9e25d97200964f48ca4b89e8a3&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-03-06 09:37:24&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;c6d64c9e25d97200964f48ca4b89e8a4&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;dVRdT9swFH0e0v6D5z1Nih1/x67oEBQGSGxDGsu0p6k0oYnIkihN08Kv37VToJvYk319j8+5514nh0fb3xUa8m5VNvUUc8owyutFk5X1corX/R2x+Ojj24PDd4Sg87zOu3nfdBN0nDW3ObqsqvWqD0eIW8ooi9C39Bydbdum69F1tV6SyxrRcJiOIhNkKGPoZF1WGWIfECIk8J9+nd38vD5Dq2GJrr+fXF3OECZx/EPO4vj05jRQcMrj+OwLRrjo+3YSx5vNhm4kbbplfN7N26JcrGIAxh4Il2Ig45xmfYa9hqfes8oxKrMpvpo/5N0vCKAT9Wr6CrVgjHmqHWSyrcr6/jUgd87FIQvQKWbtFqOHcX178AYNZb45aXwCMSQ1Eo4K3+75bZWT2/niftk16xpKqvMN+gsDupNVO1/kU9x2+Srvhjw4aud9ge7KqiLduoJkPuR1k2UYLaqy/ffM46b4/afjYy2BE3Q+c0mdS6IEJmKKhGrrUk2tdAUZg5B4RE84R53Y4cBPammi7RM05F6gXFCr9IgdCDTbPCPH1B5U08T8BxpSe1BLjVXPFYzo5Bkdsi9owalh6lXiMQVQKSizNhIJ5YlODVVCXAhFdSqolKYgfpEpK4g3O+wdKq+v4HJyIalyKgUKxmeQ4s7TSakjkNTCB8bxiEUCPhHnrhiVTkZ+sAtNlYXCnOIRvFMhNVA7ARehHGbGAHQAZxPPACAjTMSos2oE6ciDVBVIvUeoQUJZMvG6MJ9ISsqM9pHy0b5f3yr45C3UqKlm3EuBKDdeQhhFFJXMwd4YTXxvvCNn4FloV/g4He8Bj5C+UVFoYEGYfzcDd9ARs/AGRQJngksiwQlspeQETIndPghzmHXEAKGZBU3mEoAIpUItLt2nTj1IFuNwxjcAaZ7sBjSehwt+xNAucGjg1cknhxx4tE7AoNAC9i5xwSAUIYzdNxiuPeLYf27+JwDrH0sg2dw1BQAA&lt;/data&gt;
+        &lt;length&gt;984&lt;/length&gt;
+        &lt;position&gt;1&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="ced64c9e25d97200964f48ca4b89e8a3"&gt;ced64c9e25d97200964f48ca4b89e8a3&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-03-06 09:37:24&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;4ad64c9e25d97200964f48ca4b89e8a4&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:43</sys_created_on>
+        <sys_id>485efcbd0721b0105740f96d7c1ed05b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Company</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_485efcbd0721b0105740f96d7c1ed05b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:43</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

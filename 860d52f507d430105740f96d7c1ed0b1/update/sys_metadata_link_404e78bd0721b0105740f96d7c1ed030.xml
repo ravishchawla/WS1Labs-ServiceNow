@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>2f9fb7f1dbfbd81048cdd3fa5e9619a1</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;&lt;em&gt;The System Admin (admin) role can create and edit profiles while Virtual Agent and Advanced Work Assignment Admins have read only access to this configuration page. Activation of the Agent Chat plugin is required in order to access the configuration page for this task.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Channel user profiles provide a way to match incoming identifiers (such as a phone number) to a specific customer. These allows agents to have continuity in conversations for with all end users, including guests. &lt;a title="Click here for more instructions on setting up Conversational service channels." href="/api/now/v1/context_doc_url/awa-sms-channel" target="_blank" rel="noopener noreferrer nofollow"&gt;Click here for more instructions on setting up Conversational service channels.&lt;/a&gt;&lt;/p&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;sys_cs_channel_user_profile_list.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;2&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;false&lt;/more_info_available&gt;
+        &lt;more_info_html/&gt;
+        &lt;order&gt;1&lt;/order&gt;
+        &lt;parent display_value="Conversational Messaging"&gt;e45fff71dbfbd81048cdd3fa5e9619fb&lt;/parent&gt;
+        &lt;parents&gt;e45fff71dbfbd81048cdd3fa5e9619fb,f40027b2dbc6dc10ab1354e4dc96194b&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="Conversational Interfaces Guided Setup"&gt;f40027b2dbc6dc10ab1354e4dc96194b&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;samantha.santo@snc&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-10-12 22:12:24&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;2f9fb7f1dbfbd81048cdd3fa5e9619a1&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Channel user profiles&lt;/sys_name&gt;
+        &lt;sys_package display_value="CI Guided Setup" source="sn_ci_gs_content"&gt;30f13c8d53521010af5addeeff7b121d&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="CI Guided Setup"&gt;30f13c8d53521010af5addeeff7b121d&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_2f9fb7f1dbfbd81048cdd3fa5e9619a1&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;samantha.santo@snc&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-11-12 19:27:28&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Channel user profiles&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=2f9fb7f1dbfbd81048cdd3fa5e9619a1"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:27</sys_created_on>
+        <sys_id>404e78bd0721b0105740f96d7c1ed030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Channel user profiles</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_404e78bd0721b0105740f96d7c1ed030</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:27</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

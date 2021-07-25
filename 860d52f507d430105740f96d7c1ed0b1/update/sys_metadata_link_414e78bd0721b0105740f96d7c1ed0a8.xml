@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>40304d7a87a823000e3dd61e36cb0b75</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;By making certain fields mandatory, you can ensure that critical information is captured when a problem is reported, or the problem transitions from one state to another state. Transitioning to a state may make certain fields mandatory. Use data policies to define the mandatory fields when you transition into a specific state.&lt;/p&gt;
+&lt;div&gt;Note: You can also make fields mandatory in the Form Layout.&lt;/div&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;true&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;sys_data_policy2_list.do?sysparm_query=model_tableINproblem,problem_task&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;true&lt;/more_info_available&gt;
+        &lt;more_info_html&gt;&lt;![CDATA[&lt;p&gt;The problem management process The following tables list the mandatory fields:&lt;/p&gt;
+&lt;div&gt;
+&lt;table id="c_MI_PM_MandatoryFields__table_sjm_15m_cfb" summary="" frame="border" rules="all" cellspacing="0" cellpadding="4"&gt;&lt;caption&gt;Table 1. Problem state-based mandatory fields&lt;/caption&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th id="d526194e40" valign="top" width="14.285714285714285%"&gt; Field&lt;/th&gt;&lt;th id="d526194e43" valign="top" width="14.285714285714285%"&gt; New&lt;/th&gt;&lt;th id="d526194e46" valign="top" width="14.285714285714285%"&gt; Assess&lt;/th&gt;&lt;th id="d526194e49" valign="top" width="14.285714285714285%"&gt; Root Cause Analysis&lt;/th&gt;&lt;th id="d526194e52" valign="top" width="14.285714285714285%"&gt; Fix in Progress&lt;/th&gt;&lt;th id="d526194e56" valign="top" width="14.285714285714285%"&gt; Resolved&lt;/th&gt;&lt;th id="d526194e59" valign="top" width="14.285714285714285%"&gt; Closed&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e40 " valign="top" width="14.285714285714285%"&gt; Problem statement&lt;/td&gt;&lt;td headers="d526194e43 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e46 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e49 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e52 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e56 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e59 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e40 " valign="top" width="14.285714285714285%"&gt; Assigned to&lt;/td&gt;&lt;td headers="d526194e43 " valign="top" width="14.285714285714285%"&gt; &lt;/td&gt;&lt;td headers="d526194e46 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e49 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e52 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e56 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e59 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e40 " valign="top" width="14.285714285714285%"&gt; Resolution code&lt;/td&gt;&lt;td headers="d526194e43 " valign="top" width="14.285714285714285%"&gt; &lt;/td&gt;&lt;td headers="d526194e46 " valign="top" width="14.285714285714285%"&gt; &lt;/td&gt;&lt;td headers="d526194e49 " valign="top" width="14.285714285714285%"&gt; &lt;/td&gt;&lt;td headers="d526194e52 " valign="top" width="14.285714285714285%"&gt; &lt;/td&gt;&lt;td headers="d526194e56 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e59 " valign="top" width="14.285714285714285%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;table id="c_MI_PM_MandatoryFields__table_pym_ngn_cfb" summary="" frame="border" rules="all" cellpadding="4"&gt;&lt;caption&gt;Table 2. Problem conditional mandatory fields&lt;/caption&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th id="d526194e153" valign="top" width="50%"&gt;
+&lt;p&gt; Field&lt;/p&gt;
+&lt;/th&gt;&lt;th id="d526194e156" valign="top" width="50%"&gt;
+&lt;p&gt; Mandatory when&lt;/p&gt;
+&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e153 " valign="top" width="50%"&gt; Duplicate of&lt;/td&gt;&lt;td headers="d526194e156 " valign="top" width="50%"&gt; Resolution code is Duplicate&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e153 " valign="top" width="50%"&gt; Canceled reason&lt;/td&gt;&lt;td headers="d526194e156 " valign="top" width="50%"&gt; Resolution code is Canceled&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e153 " valign="top" width="50%"&gt; Risk accepted reason&lt;/td&gt;&lt;td headers="d526194e156 " valign="top" width="50%"&gt; Resolution code is Risk Accepted&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e153 " valign="top" width="50%"&gt; Workaround&lt;/td&gt;&lt;td headers="d526194e156 " valign="top" width="50%"&gt; Workaround applied is selected&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e153 " valign="top" width="50%"&gt; Cause notes&lt;/td&gt;&lt;td headers="d526194e156 " valign="top" width="50%"&gt; State is Fix in Progress or the Resolved by state is not empty&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e153 " valign="top" width="50%"&gt; Fix notes&lt;/td&gt;&lt;td headers="d526194e156 " valign="top" width="50%"&gt; State is Fix in Progress or the Resolved by state is not empty&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;table id="c_MI_PM_MandatoryFields__table_wt1_mhn_cfb" summary="" frame="border" rules="all" cellpadding="4"&gt;&lt;caption&gt;Table 3. Problem task state-based mandatory fields&lt;/caption&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th id="d526194e268" valign="top" width="20%"&gt;
+&lt;p&gt; Field&lt;/p&gt;
+&lt;/th&gt;&lt;th id="d526194e271" valign="top" width="20%"&gt;
+&lt;p&gt; New&lt;/p&gt;
+&lt;/th&gt;&lt;th id="d526194e274" valign="top" width="20%"&gt;
+&lt;p&gt; Assess&lt;/p&gt;
+&lt;/th&gt;&lt;th id="d526194e277" valign="top" width="20%"&gt;
+&lt;p&gt; Work in Progress&lt;/p&gt;
+&lt;/th&gt;&lt;th id="d526194e280" valign="top" width="20%"&gt;
+&lt;p&gt; Closed&lt;/p&gt;
+&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e268 " valign="top" width="20%"&gt; Short description&lt;/td&gt;&lt;td headers="d526194e271 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e274 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e277 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e280 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e268 " valign="top" width="20%"&gt; Assigned to&lt;/td&gt;&lt;td headers="d526194e271 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e274 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e277 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;td headers="d526194e280 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e268 " valign="top" width="20%"&gt; Cause code (for a root cause analysis task)&lt;/td&gt;&lt;td headers="d526194e271 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e274 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e277 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e280 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e268 " valign="top" width="20%"&gt; Close notes (for a general task)&lt;/td&gt;&lt;td headers="d526194e271 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e274 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e277 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e280 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e268 " valign="top" width="20%"&gt; Fix notes (for a root cause analysis task)&lt;/td&gt;&lt;td headers="d526194e271 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e274 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e277 " valign="top" width="20%"&gt; &lt;/td&gt;&lt;td headers="d526194e280 " valign="top" width="20%"&gt; Yes&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;table id="c_MI_PM_MandatoryFields__table_rgm_5hn_cfb" summary="" frame="border" rules="all" cellpadding="4"&gt;&lt;caption&gt;Table 4. Problem task conditional mandatory fields&lt;/caption&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th id="d526194e384" valign="top" width="50%"&gt;
+&lt;p&gt; Field&lt;/p&gt;
+&lt;/th&gt;&lt;th id="d526194e387" valign="top" width="50%"&gt;
+&lt;p&gt; Mandatory when&lt;/p&gt;
+&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e384 " valign="top" width="50%"&gt; Other reason&lt;/td&gt;&lt;td headers="d526194e387 " valign="top" width="50%"&gt; Cause code is Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e384 " valign="top" width="50%"&gt; Vendor&lt;/td&gt;&lt;td headers="d526194e387 " valign="top" width="50%"&gt; Cause code is Vendor Issue&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td headers="d526194e384 " valign="top" width="50%"&gt; Canceled reason&lt;/td&gt;&lt;td headers="d526194e387 " valign="top" width="50%"&gt; Close code is Canceled&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;The Confirmation window prompt you to enter mandatory fields while changing the state of the Problem. The form views displayed inside the windows are as follows:&lt;/p&gt;
+&lt;ul id="c_GS_PM_RelatedLists__ul_krz_3x4_cfb" style="list-style-position: inside;"&gt;&lt;li&gt;Accept Risk Dialog Form View&lt;/li&gt;&lt;li&gt;Assess Dialog Form View&lt;/li&gt;&lt;li&gt;Cancel Dialog Form View&lt;/li&gt;&lt;li&gt;Mark Duplicate Dialog Form View&lt;/li&gt;&lt;li&gt;Start Fix Dialog Form View&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;The Confirmation window prompt you to enter mandatory fields while changing the state of the Problem Task. The form views displayed inside the windows are as follows:&lt;/p&gt;
+&lt;ul id="c_GS_PM_RelatedLists__ul_krz_3x4_cfb" style="list-style-position: inside;"&gt;&lt;li&gt;PTASK Assess Dialog View&lt;/li&gt;&lt;li&gt;PTASK Cancel Dialog View&lt;/li&gt;&lt;li&gt;PTASK Complete Dialog View 1&lt;/li&gt;&lt;li&gt;PTASK Complete Dialog View 2 &lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;]]&gt;&lt;/more_info_html&gt;
+        &lt;order&gt;300&lt;/order&gt;
+        &lt;parent display_value="Problem Management"&gt;315e6404db1103004d27b31be0b8f58c&lt;/parent&gt;
+        &lt;parents&gt;315e6404db1103004d27b31be0b8f58c,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2018-09-18 08:57:38&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;40304d7a87a823000e3dd61e36cb0b75&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Mandatory Fields&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_40304d7a87a823000e3dd61e36cb0b75&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2018-11-02 07:11:59&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Mandatory Fields&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=40304d7a87a823000e3dd61e36cb0b75"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:31</sys_created_on>
+        <sys_id>414e78bd0721b0105740f96d7c1ed0a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mandatory Fields</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_414e78bd0721b0105740f96d7c1ed0a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:31</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

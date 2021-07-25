@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>0b37b6275b8310100977ca225681c7df</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;div class="body conbody"&gt;
+&lt;div class="p"&gt;Promote specific results for a search using result improvement rules linked to a search profile.
+&lt;ol id="promote-search-result-documents__ol_yxf_tbs_cnb" class="ol"&gt;&lt;li class="li"&gt;Edit the search profile that you want to create a result improvement rule for.&lt;/li&gt;&lt;li class="li"&gt;In the Result Improvement Rules related list, click &lt;strong&gt;&lt;span class="ph uicontrol"&gt;Create&lt;/span&gt;&lt;/strong&gt;.&lt;/li&gt;&lt;li class="li"&gt;On the &lt;span class="ph"&gt;AI Search&lt;/span&gt; Results Improvement Rule form, fill in the fields.
+&lt;dl class="dl"&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Label&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Unique label for the result improvement rule.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Start Date&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;First date on which the rule can activate. If left empty, uses current date.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;End Date&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Late date on which the rule can activate. If left empty, uses 30 days from &lt;span class="ph uicontrol"&gt;Start Date&lt;/span&gt;.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Activate on all queries&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Option to activate the rule for every search query that satisfies its date and language constraints.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Language&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Limits activation to search queries in the selected language. Leave empty to activate for searches in any language.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Expand Synonyms For Query Conditions&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;Option to enable expansion of Query condition arguments using synonyms defined in the same search profile and with the same language.&lt;/dd&gt;&lt;dt class="dt dlterm"&gt;&lt;strong&gt;Triggers&lt;/strong&gt;&lt;/dt&gt;&lt;dd class="dd"&gt;List of filters describing conditions for activating the rule. This field appears only when &lt;span class="ph uicontrol"&gt;Activate on all queries&lt;/span&gt; is deselected.&lt;/dd&gt;&lt;/dl&gt;
+&lt;/li&gt;&lt;li class="li"&gt;Click &lt;strong&gt;&lt;span class="ph uicontrol"&gt;Submit&lt;/span&gt;&lt;/strong&gt;.&lt;/li&gt;&lt;li class="li"&gt;In the Actions related list, click &lt;strong&gt;&lt;span class="ph uicontrol"&gt;Promote Documents&lt;/span&gt;&lt;/strong&gt;.&lt;/li&gt;&lt;li class="li"&gt;In the Select Documents To Promote form, search for documents that you want to promote when this rule triggers.&lt;/li&gt;&lt;li class="li"&gt;Click the plus icon next to a result document to select it for promotion. Promoted results appear in order of selection.&lt;/li&gt;&lt;li class="li"&gt;After selecting all the documents you want to promote, click &lt;strong&gt;&lt;span class="ph uicontrol"&gt;Add Documents and Close&lt;/span&gt;&lt;/strong&gt;.&lt;/li&gt;&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;ais_search_profile_list.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;false&lt;/more_info_available&gt;
+        &lt;more_info_html/&gt;
+        &lt;order&gt;300&lt;/order&gt;
+        &lt;parent display_value="Fine-tune AI Search results"&gt;649636275b8310100977ca225681c734&lt;/parent&gt;
+        &lt;parents&gt;649636275b8310100977ca225681c734,d585222f5b4310100977ca225681c72f&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="AI Search Guided Setup"&gt;d585222f5b4310100977ca225681c72f&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-09-10 20:37:17&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;0b37b6275b8310100977ca225681c7df&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Promote search result documents&lt;/sys_name&gt;
+        &lt;sys_package display_value="AI Search" source="com.glide.ais"&gt;accdbc4b6d2220100acb70b353433053&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_0b37b6275b8310100977ca225681c7df&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-10-09 04:11:55&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Promote search result documents&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=0b37b6275b8310100977ca225681c7df"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:15</sys_created_on>
+        <sys_id>193ef4bd0721b0105740f96d7c1ed0c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Promote search result documents</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_193ef4bd0721b0105740f96d7c1ed0c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:15</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

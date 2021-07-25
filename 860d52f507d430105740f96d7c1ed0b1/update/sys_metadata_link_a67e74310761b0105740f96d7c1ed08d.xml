@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>9d346ebadb2600101391f1471d961920</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;You must subscribe to Coaching to use the application. The Coaching plugin (com.sn_coaching) is activated by a ServiceNow personnel.&lt;/p&gt;
+&lt;p&gt;Use coaching opportunities to provide real-time improvement feedback and make context-based recommendations on employee performance and processes. Coaching opportunities automatically generate assessments for trainees which get assigned to coaches. The trainees can get trained by the coaches or using automated virtual content.&lt;/p&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins&gt;com.sn_coaching&lt;/dependent_on_plugins&gt;
+        &lt;dependent_on_plugins_ids&gt;com.sn_coaching&lt;/dependent_on_plugins_ids&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;sn_coaching_opportunity_list.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies&gt;0313a2badb2600101391f1471d961983&lt;/implicit_plugin_dependencies&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;false&lt;/more_info_available&gt;
+        &lt;more_info_html/&gt;
+        &lt;order&gt;300&lt;/order&gt;
+        &lt;parent display_value="Continual Improvement Management"&gt;0313a2badb2600101391f1471d961983&lt;/parent&gt;
+        &lt;parents&gt;0313a2badb2600101391f1471d961983,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;manjeet.singh@snc&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2020-01-28 18:37:24&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;9d346ebadb2600101391f1471d961920&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Add a Coaching Opportunity&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_9d346ebadb2600101391f1471d961920&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2020-03-06 22:30:03&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Add a Coaching Opportunity&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=9d346ebadb2600101391f1471d961920"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:26</sys_created_on>
+        <sys_id>a67e74310761b0105740f96d7c1ed08d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add a Coaching Opportunity</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_a67e74310761b0105740f96d7c1ed08d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:26</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

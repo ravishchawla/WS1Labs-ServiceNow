@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>751baddc25513200964f48ca4b89e85d</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;div&gt;A business service is a set of interconnected applications and infrastructure which are configured to offer a service to your organization. Business service can be internal, like messaging and collaboration services, or customer-facing, like a web site.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;Identify and list the services that will help you manage IT from a business perspective.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;You can also look at the ServiceNow Service Mapping application. Service Mapping discovers business services in your organization and builds a comprehensive map of all devices, applications, and configuration profiles used in these business services. Service Mapping maps dependencies based on a connection between devices and applications. This method is referred to as top-down mapping. The top-down mapping helps you immediately see the impact of a problematic object on the rest of the business service operation.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier&gt;cmdb_business_service&lt;/embedded_help_qualifier&gt;
+        &lt;end_point&gt;cmdb_ci_service_list.do&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;true&lt;/more_info_available&gt;
+        &lt;more_info_html&gt;&lt;![CDATA[&lt;div&gt;Historically, in many of the core ITSM processes, the Category and Subcategory fields have been used to drive automation and for trend reporting. Since ServiceNow is a Service Management platform, it is critical to manage services in the best way by moving away from categorization and towards the use of service CIs in all these processes. Therefore, it is recommended to use services in ITSM processes from the beginning.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;It is also worth remembering that the list of services evolves and matures as your organization starts using them and begins to understand what they should be.&lt;/div&gt;]]&gt;&lt;/more_info_html&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;parent display_value="CMDB"&gt;b6d8299c25513200964f48ca4b89e86b&lt;/parent&gt;
+        &lt;parents&gt;b6d8299c25513200964f48ca4b89e86b,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 11:53:06&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;751baddc25513200964f48ca4b89e85d&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;29&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Using services to drive ITSM processes&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_751baddc25513200964f48ca4b89e85d&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-03-28 06:54:57&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Using services to drive ITSM processes&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=751baddc25513200964f48ca4b89e85d"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:03</sys_created_on>
+        <sys_id>016e78fd0721b0105740f96d7c1ed0e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Using services to drive ITSM processes</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_016e78fd0721b0105740f96d7c1ed0e0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:03</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>
