@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="VMware Workspace ONE HelpDesk Connector">159bbcca072db0105740f96d7c1ed0ba</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>HTML</link_type>
+        <map_page/>
+        <mobile_title>Workspace ONE</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>incident</name>
+        <order>1</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>https://dev106506.service-now.com/nav_to.do?uri=%2F$guided_setup.do%23%2Fcontent%2Fb51b3d1f07e5b4105740f96d7c1ed08b</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-30 04:06:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e67dae9307a9b4105740f96d7c1ed035</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Setup</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_app_module_e67dae9307a9b4105740f96d7c1ed035</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-30 04:21:11</sys_updated_on>
+        <timeline_page/>
+        <title>Setup</title>
+        <uncancelable>false</uncancelable>
+        <view_name>nav_to.do?uri=%2F$guided_setup.do%23%2Fc</view_name>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_app_module_e67dae9307a9b4105740f96d7c1ed035</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="VMware Workspace ONE HelpDesk Connector">159bbcca072db0105740f96d7c1ed0ba</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>HTML</link_type><map_page/><mobile_title>Workspace ONE</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>incident</name><order>1</order><override_menu_roles>false</override_menu_roles><query>https://dev106506.service-now.com/nav_to.do?uri=%2F$guided_setup.do%23%2Fcontent%2Fb51b3d1f07e5b4105740f96d7c1ed08b</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-07-30 04:06:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>e67dae9307a9b4105740f96d7c1ed035</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Setup</sys_name><sys_overrides/><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_app_module_e67dae9307a9b4105740f96d7c1ed035</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-07-30 04:21:11</sys_updated_on><timeline_page/><title>Setup</title><uncancelable>false</uncancelable><view_name>nav_to.do?uri=%2F$guided_setup.do%23%2Fc</view_name><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>4208824</payload_hash>
+        <record_name>Setup</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-30 04:21:11</sys_created_on>
+        <sys_id>0a51fe5707a9b4105740f96d7c1ed06d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17af5a50a270000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-30 04:21:11</sys_updated_on>
+        <type>Module</type>
+        <update_guid>0251fe5759a9b410668880e2a8da506d</update_guid>
+        <update_guid_history>0251fe5759a9b410668880e2a8da506d:4208824,76107a1700a9b410c6a85b0844b45fc6:-421760368,80dea217ffa9b4102221b9d1715e4484:1972411865,d2fdae93afa9b410acb90341c53ddb54:259105148</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Setup">45533ad707a9b4105740f96d7c1ed04c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-30 04:29:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>11c1bee2a8d944de83e0b075048607b9</sys_id>
+        <sys_metadata>e67dae9307a9b4105740f96d7c1ed035</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Setup</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_app_module_e67dae9307a9b4105740f96d7c1ed035</sys_update_name>
+        <sys_update_version display_value="sys_app_module_e67dae9307a9b4105740f96d7c1ed035">0a51fe5707a9b4105740f96d7c1ed06d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-30 04:29:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

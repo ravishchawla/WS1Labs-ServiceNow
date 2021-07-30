@@ -6,6 +6,7 @@
 //	var gdw = GlideDialogWindow.get();
 	var action =gel('my_action').value;
 	var unlockpin = gel('my_pin').value;
+	var passcode = gel('my_passcode').value;
 	var message = gel('my_message').value;
 	var sid = gel('sid').value;
 
@@ -14,7 +15,8 @@
 	
 	// Set the values back to the incident form
     g_form.setValue("x_646971_uemconn_0_ws1_send_message", message); 
-	g_form.setValue("x_646971_uemconn_0_ws1_passcode", unlockpin); 
+	g_form.setValue("x_646971_uemconn_0_ws1_passcode", passcode); 
+	g_form.setValue("x_646971_uemconn_0_ws1_unlock_pin", unlockpin); 
 	g_form.setValue("x_646971_uemconn_0_ws1command", action); 
 	g_form.setValue("x_646971_uemconn_0_ws1uem", "Queueing " + action + " action"); 
 	g_form.save();
@@ -22,14 +24,15 @@
 	var app = new GlideRecord("incident");
 	if(app.get(sid)){
 		app.x_646971_uemconn_0_ws1command = action;
-		app.x_646971_uemconn_0_ws1_passcode = unlockpin;
+		app.x_646971_uemconn_0_ws1_passcode = passcode;
+		app.x_646971_uemconn_0_ws1_unlock_pin = unlockpin;
 		app.x_646971_uemconn_0_ws1_send_message = message;
 		app.x_646971_uemconn_0_ws1uem = "Queueing " + action + " action";
 		app.update();
 	}
 	
    // g_form.save();
-	alert( "Starting "+action+"---"+unlockpin+"---"+message);
+	alert( "Starting "+action+"---"+unlockpin+"---"+message+"***");
 
 	document.getElementById("runprocessingscript").value = "hidden";
 	document.getElementById("sid").value = sid;
@@ -42,9 +45,9 @@ function continueCancel() {
 	GlideDialogWindow.get().destroy();
 }
 
-function showHide(my_action) {
-//	var input2 = document/getElementbyId('my_action');
-	alert("---"+input2.value);
+function showHide() {
+	g_form.setMandatory('my_passcode',false);
+	g_form.setDisplay('my_passcode',false);
 }]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
@@ -54,6 +57,7 @@ function showHide(my_action) {
     <g:ui_form>
     <j:set var="jvar_si" value="$[RP.getWindowProperties().get('si')]"/> 
     <input type="hidden" id="sid" name="sid" value="${jvar_si}" />
+		
 	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
 		 			
 		<div style="margin:10px;margin-top:15px">
@@ -86,9 +90,21 @@ function showHide(my_action) {
 			Passcode: 
 			</g:form_label>
 			</span>	
-                      <input type="text" name="my_pin" id="my_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10"/>
+                      <input type="text" name="my_passcode" id="my_passcode" table="incident"    field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10"/>
 		
 		</div>
+		
+			<div style="margin:10px">
+			<span style="display:inline-block; width:40%">
+			<g:form_label>
+			Unlock Pin: 
+			</g:form_label>
+			</span>	
+                      <input type="text" name="my_pin" id="my_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="10"/>
+		
+				</div>
+		
+		
 			   
                        <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit" ok_text="${gs.getMessage('Okay')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
 
@@ -142,13 +158,13 @@ function showHide(my_action) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>210</sys_mod_count>
+        <sys_mod_count>236</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-26 07:14:22</sys_updated_on>
+        <sys_updated_on>2021-07-28 04:46:28</sys_updated_on>
     </sys_ui_page>
 </record_update>

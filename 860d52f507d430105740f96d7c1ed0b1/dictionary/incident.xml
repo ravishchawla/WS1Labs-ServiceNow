@@ -2,15 +2,15 @@
     <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="69" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" label="WS1 UEM Action" max_length="40" name="x_646971_uemconn_0_ws1command" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Change Passcode" value="changepasscode"/>
-                <element inactive_on_update="false" label="Device Wipe" value="DeviceWipe"/>
-                <element inactive_on_update="false" label="Enterprise Wipe" value="EnterpriseWipe"/>
-                <element inactive_on_update="false" label="Lock Device" value="Lock"/>
-                <element inactive_on_update="false" label="Remote Assist" value="assist"/>
-                <element inactive_on_update="false" label="Request Logs" value="devicelogs"/>
-                <element inactive_on_update="false" label="Send Message" value="message"/>
-                <element inactive_on_update="false" label="Soft Reset" value="SoftReset"/>
-                <element inactive_on_update="false" label="Sync Device" value="SyncDevice"/>
+                <element inactive_on_update="false" label="Device Wipe" sequence="0" value="DeviceWipe"/>
+                <element inactive="true" inactive_on_update="true" label="Enterprise Wipe" sequence="0" value="EnterpriseWipe"/>
+                <element inactive="true" inactive_on_update="true" label="Change Passcode" sequence="1" value="changepasscode"/>
+                <element inactive_on_update="false" label="Lock Device" sequence="1" value="Lock"/>
+                <element inactive_on_update="false" label="Remote Assist" sequence="2" value="assist"/>
+                <element inactive_on_update="false" label="Request Logs" sequence="3" value="devicelogs"/>
+                <element inactive_on_update="false" label="Send Message" sequence="4" value="message"/>
+                <element inactive_on_update="false" label="Soft Reset" sequence="5" value="SoftReset"/>
+                <element inactive_on_update="false" label="Sync Device" sequence="6" value="SyncDevice"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="WS1 UEM Messages" max_length="40" name="x_646971_uemconn_0_ws1uem" type="string"/>
