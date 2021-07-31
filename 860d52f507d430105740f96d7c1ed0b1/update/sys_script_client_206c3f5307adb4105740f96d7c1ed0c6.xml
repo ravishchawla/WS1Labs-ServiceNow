@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>caller_id</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>WS1UEMCaller</name>
+        <order/>
+        <script><![CDATA[function onChange() {
+	//add tab is WS1 UEM role is enabled and there is a caller and a configurationItem else hide it
+	var isStandard = g_user.hasRole('x_646971_uemconn_0.WS1UEMStandard');
+	if (isStandard){	
+		var caller = g_form.getValue('caller_id');
+		if (caller){
+			var configItem = g_form.getValue('cmdb_ci');
+			if (configItem){
+				g_form.setSectionDisplay('wsactions', true);	
+			}
+			else {
+				g_form.setSectionDisplay('wsactions', false);	
+			}
+		}
+		else {
+			g_form.setSectionDisplay('wsactions', false);	
+		}
+	}	
+	else {
+		g_form.setSectionDisplay('wsactions', false);	
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-30 09:49:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>206c3f5307adb4105740f96d7c1ed0c6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>WS1UEMCaller</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_client_206c3f5307adb4105740f96d7c1ed0c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-30 10:01:45</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

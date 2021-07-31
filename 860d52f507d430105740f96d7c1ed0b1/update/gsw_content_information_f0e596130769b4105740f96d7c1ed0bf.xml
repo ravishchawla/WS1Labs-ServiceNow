@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
     <gsw_content_information action="INSERT_OR_UPDATE">
         <active>true</active>
-        <article><![CDATA[<p>Click <strong>Configure,</strong> then click the <strong>Test Load 20 Records</strong> related link to test the connection to the VMware Workspace ONE UEM API. Testing the connection takes a few moments, after which the page refreshes to show the test results. The connection is successful if the <strong>HTTP Status</strong> is <strong>200.</strong> If there is an <strong>Error Code</strong> and <strong>Error Message</strong>, the connection failed and further troubleshooting is required.</p>]]></article>
+        <article><![CDATA[<p>Click <strong>Configure,</strong> then click the <strong>Test</strong> <strong>Connection</strong> button to test the connection to the VMware Workspace ONE UEM API. Testing the connection takes a few moments, after which the page refreshes to show the test results. </p>]]></article>
         <best_practice_acceptable>false</best_practice_acceptable>
         <dependent_on_contents>1914de9f0729b4105740f96d7c1ed08e</dependent_on_contents>
         <dependent_on_plugins/>
         <dependent_on_plugins_ids/>
         <description/>
         <embedded_help_qualifier>vmwoneuem_integ_test_connection</embedded_help_qualifier>
-        <end_point>/sys_data_source.do?sys_id=70880d6e5300201091b8ddeeff7b12c7</end_point>
+        <end_point>x_646971_uemconn_0_WS1UEMVerifyConnection.do</end_point>
         <end_point_open_mode>3</end_point_open_mode>
         <end_point_type>1</end_point_type>
         <field/>
@@ -33,16 +33,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-30 02:23:16</sys_created_on>
         <sys_id>f0e596130769b4105740f96d7c1ed0bf</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Validate data sources</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Verify connection</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>gsw_content_information_f0e596130769b4105740f96d7c1ed0bf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-30 02:23:17</sys_updated_on>
+        <sys_updated_on>2021-07-31 02:40:10</sys_updated_on>
         <table/>
-        <title>Validate data sources</title>
+        <title>Verify connection</title>
         <weight>1</weight>
     </gsw_content_information>
     <sys_translated_text action="delete_multiple" query="documentkey=f0e596130769b4105740f96d7c1ed0bf"/>

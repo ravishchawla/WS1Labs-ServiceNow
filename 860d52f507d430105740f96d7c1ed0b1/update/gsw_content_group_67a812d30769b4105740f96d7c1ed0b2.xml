@@ -4,11 +4,20 @@
         <checksum>Wo4OLDFHUYlXvxPQeoBpMyMl8yc=</checksum>
         <child_can_have_roles>false</child_can_have_roles>
         <children_layout>1</children_layout>
-        <dependent_on_contents/>
+        <dependent_on_contents>f0e596130769b4105740f96d7c1ed0bf</dependent_on_contents>
         <dependent_on_plugins/>
         <dependent_on_plugins_ids/>
-        <description><![CDATA[<p>Configure the actions available to the Workspace ONE UEM administrator. The following table highlights the actions and and their associated role.</p>
-<table style="height: 145px; width: 72.0185%; border-collapse: collapse; border-style: solid; float: left;" border="1"><tbody><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"><strong>Action</strong></td><td style="width: 21.3787%; height: 13px;"><strong>Role</strong></td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Device Wipe</td><td style="width: 21.3787%; height: 13px;">Advanced</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Enterprise Wipe</td><td style="width: 21.3787%; height: 13px;">Advanced</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Lock Device</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Remote Assist</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Request Logs</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Send Message</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Soft Reset</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Sync Device</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;">Change Passcode</td><td style="width: 21.3787%; height: 13px;">Standard</td></tr></tbody></table>]]></description>
+        <description><![CDATA[<p>Configure the actions available to the Workspace ONE UEM administrator. The following table highlights the actions and and their associated role. </p>
+<table style="height: 130px; width: 72.0185%; border-collapse: collapse; border-style: solid; float: left;" border="2"><tbody><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"><strong> Action</strong></td><td style="width: 21.3787%; height: 13px;"><strong>Role</strong></td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Device Wipe</td><td style="width: 21.3787%; height: 13px;"> WS1UEMAdvanced</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Enterprise Wipe</td><td style="width: 21.3787%; height: 13px;"> WS1UEMAdvanced</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Lock Device</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Remote Assist</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Request Logs</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Send Message</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Soft Reset</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Sync Device</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Change Passcode</td><td style="width: 21.3787%; height: 13px;"> WS1UEMStandard</td></tr></tbody></table>
+<p><br /></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>To get further information on the details of each action please refer to the <a title="documentation" href="https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2105/UEM_Managing_Devices/GUID-AWT-DEVICEACTIONDESCRIPTIONS-MDM.html" rel="nofollow">documentation</a>.</p>]]></description>
         <display_child_max_num/>
         <done_status_text/>
         <hide_getting_started>false</hide_getting_started>
@@ -29,14 +38,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-30 02:34:34</sys_created_on>
         <sys_id>67a812d30769b4105740f96d7c1ed0b2</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Configure the actions</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>gsw_content_group_67a812d30769b4105740f96d7c1ed0b2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-30 03:31:28</sys_updated_on>
+        <sys_updated_on>2021-07-31 04:37:38</sys_updated_on>
         <title>Configure the actions</title>
         <weight>1</weight>
     </gsw_content_group>

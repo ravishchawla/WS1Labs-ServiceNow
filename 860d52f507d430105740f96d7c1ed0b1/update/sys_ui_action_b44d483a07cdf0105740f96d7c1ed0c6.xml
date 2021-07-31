@@ -25,8 +25,8 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <messages>Refresh user and their devices</messages>
-        <name>WS1Refresh</name>
+        <messages>Call to WS1 UEM to find all devices for this caller an add any news ones to the CMDB </messages>
+        <name>WS1UEMRefreshDevices</name>
         <onclick/>
         <order>100</order>
         <script><![CDATA[// Update message on screen
@@ -61,15 +61,15 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b44d483a07cdf0105740f96d7c1ed0c6</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>WS1Refresh</sys_name>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>WS1UEMRefreshDevices</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_action_b44d483a07cdf0105740f96d7c1ed0c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-22 05:18:20</sys_updated_on>
+        <sys_updated_on>2021-07-30 10:11:16</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

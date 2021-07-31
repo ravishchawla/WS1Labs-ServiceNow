@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>L1 Configuration	</description>
+        <name>chrome_toolbar</name>
+        <page display_value="WS1UEMSpoke">f7e717ab32e5f41086262f4e8213d23b</page>
+        <required_translations>[{"message":"List","comment":""},{"message":"Home","comment":""}]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-31 01:48:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>bfe717abbae5f410bdf4d62c3ab6493b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_ux_page_property_bfe717abbae5f410bdf4d62c3ab6493b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-31 01:48:16</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_646971_uemconn_0.f7e717ab32e5f41086262f4e8213d23b.root.chrome_toolbar</unique_name>
+        <value>[
+   {
+      "id":"home",
+      "label":"Home",
+      "icon":"home-outline",
+      "viewportInfo":{
+         
+      },
+      "routeInfo":{
+         "route":"home"
+      },
+      "group":"top",
+      "badge":{
+         
+      },
+      "presence":{
+         
+      },
+      "availability":{
+         
+      }
+   },
+   {
+      "id":"list",
+      "label":"List",
+      "icon":"list-outline",
+      "viewportInfo":{
+         
+      },
+      "routeInfo":{
+         "route":"list"
+      },
+      "group":"top",
+      "badge":{
+         
+      },
+      "presence":{
+         
+      },
+      "availability":{
+         
+      }
+   }
+]</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=bfe717abbae5f410bdf4d62c3ab6493b"/>
+</record_update>
