@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from display_value="Submit a Form">cf507914073578105740f96d7c1ed0b3</copied_from>
+        <description>Submit the current form and confirm form submitted to server</description>
+        <display_name>Submit a Form</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <snapshot/>
+        <step_config display_value="Submit a Form">be8e0a935332120028bc29cac2dc34e4</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>544eb6dc07f578105740f96d7c1ed094</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Submit a Form</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_544eb6dc07f578105740f96d7c1ed094</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:52:13</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEMSendMessage2">4c4eb2dc07f578105740f96d7c1ed0a4</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=544eb6dc07f578105740f96d7c1ed094"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>544eb6dc07f578105740f96d7c1ed094</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>944eb6dc07f578105740f96d7c1ed095</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:51:31</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">ae8b91c9ffa333008d3f5d9ad53bf1ba</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>544eb6dc07f578105740f96d7c1ed094</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>d04eb6dc07f578105740f96d7c1ed095</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:51:31</sys_updated_on>
+        <value>form_submitted_to_server</value>
+        <variable display_value="Assert type">c796d40497302200abe4bb7503ac4ad8</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_atf_step_544eb6dc07f578105740f96d7c1ed094</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from display_value="Submit a Form">cf507914073578105740f96d7c1ed0b3</copied_from><description>Submit the current form and confirm form submitted to server</description><display_name>Submit a Form</display_name><inputs/><mugshots_cache_json/><notes/><order>3</order><snapshot/><step_config display_value="Submit a Form">be8e0a935332120028bc29cac2dc34e4</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>544eb6dc07f578105740f96d7c1ed094</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Submit a Form</sys_name><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_atf_step_544eb6dc07f578105740f96d7c1ed094</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:52:13</sys_updated_on><table/><test display_value="WS1UEMSendMessage2">4c4eb2dc07f578105740f96d7c1ed0a4</test><timeout>1970-01-01 00:00:05</timeout><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=544eb6dc07f578105740f96d7c1ed094"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>544eb6dc07f578105740f96d7c1ed094</document_key><order>50</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>944eb6dc07f578105740f96d7c1ed095</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:51:31</sys_updated_on><value>standard_ui</value><variable display_value="Form UI">ae8b91c9ffa333008d3f5d9ad53bf1ba</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>544eb6dc07f578105740f96d7c1ed094</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>d04eb6dc07f578105740f96d7c1ed095</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:51:31</sys_updated_on><value>form_submitted_to_server</value><variable display_value="Assert type">c796d40497302200abe4bb7503ac4ad8</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>453198273</payload_hash>
+        <record_name>Submit a Form</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:52:13</sys_created_on>
+        <sys_id>ae6ebadc07f578105740f96d7c1ed017</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b05d950580000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:52:13</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>a66ebadcdaf57810a477dfb2aa77ef17</update_guid>
+        <update_guid_history>a66ebadcdaf57810a477dfb2aa77ef17:453198273,504eb6dc7bf57810ba99d3b3e34b5e97:1594266469</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:52:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>5420dfad0fb1413c86c081b422524ec4</sys_id>
+        <sys_metadata>544eb6dc07f578105740f96d7c1ed094</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Submit a Form</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_atf_step_544eb6dc07f578105740f96d7c1ed094</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_544eb6dc07f578105740f96d7c1ed094">ae6ebadc07f578105740f96d7c1ed017</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:52:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

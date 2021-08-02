@@ -16,7 +16,7 @@
    }
 	
 	var dialog = new GlideDialogWindow('x_646971_uemconn_0_WS1UEM popup'); 
-    dialog.setTitle('WS1 UEM Action details'); 
+    dialog.setTitle('Workspace ONE UEM Action'); 
     dialog.setSize(550, 800); //Set the dialog size
     dialog.setPreference('si', g_form.getUniqueValue()); //pass current object id
     dialog.setPreference('actionvalue', newValue);//pass the selected value on the form	
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ae3614fa072d34105740f96d7c1ed0ba</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>WS1UEMActionPopup</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -37,7 +37,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_ae3614fa072d34105740f96d7c1ed0ba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-28 04:46:09</sys_updated_on>
+        <sys_updated_on>2021-08-01 04:14:51</sys_updated_on>
         <table>incident</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

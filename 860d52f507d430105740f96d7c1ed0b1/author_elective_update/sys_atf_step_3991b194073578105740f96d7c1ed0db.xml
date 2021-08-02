@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Set the following values on the form:
+Workspace ONE UEM Action = Send Message</description>
+        <display_name>Set Field Values</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>5</order>
+        <snapshot/>
+        <step_config display_value="Set Field Values">fcae4a935332120028bc29cac2dc340e</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 02:19:51</sys_created_on>
+        <sys_id>3991b194073578105740f96d7c1ed0db</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Set Field Values</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_3991b194073578105740f96d7c1ed0db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 02:27:04</sys_updated_on>
+        <table>incident</table>
+        <test display_value="WS1UEMSendMessage">c13d2990073578105740f96d7c1ed05b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=3991b194073578105740f96d7c1ed0db"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3991b194073578105740f96d7c1ed0db</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 02:19:51</sys_created_on>
+        <sys_id>0a523d94073578105740f96d7c1ed0f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 02:19:51</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">946f3c1a0f23330072e6452bc4767eda</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3991b194073578105740f96d7c1ed0db</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 02:19:51</sys_created_on>
+        <sys_id>0e523d94073578105740f96d7c1ed0f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 02:19:51</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">424ca6465320220002c6435723dc34b5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3991b194073578105740f96d7c1ed0db</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 02:19:51</sys_created_on>
+        <sys_id>ce523d94073578105740f96d7c1ed0f6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 02:25:42</sys_updated_on>
+        <value>x_646971_uemconn_0_ws1command=message^EQ</value>
+        <variable display_value="Field values">b3dba2465320220002c6435723dc34f0</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_atf_step_3991b194073578105740f96d7c1ed0db</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Set the following values on the form:
+Workspace ONE UEM Action = Send Message</description><display_name>Set Field Values</display_name><inputs/><mugshots_cache_json/><notes/><order>5</order><snapshot/><step_config display_value="Set Field Values">fcae4a935332120028bc29cac2dc340e</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 02:19:51</sys_created_on><sys_id>3991b194073578105740f96d7c1ed0db</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Set Field Values</sys_name><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_atf_step_3991b194073578105740f96d7c1ed0db</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 02:27:04</sys_updated_on><table>incident</table><test display_value="WS1UEMSendMessage">c13d2990073578105740f96d7c1ed05b</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=3991b194073578105740f96d7c1ed0db"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>3991b194073578105740f96d7c1ed0db</document_key><order>50</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 02:19:51</sys_created_on><sys_id>0a523d94073578105740f96d7c1ed0f6</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 02:19:51</sys_updated_on><value>standard_ui</value><variable display_value="Form UI">946f3c1a0f23330072e6452bc4767eda</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>3991b194073578105740f96d7c1ed0db</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 02:19:51</sys_created_on><sys_id>0e523d94073578105740f96d7c1ed0f6</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 02:19:51</sys_updated_on><value>incident</value><variable display_value="Table">424ca6465320220002c6435723dc34b5</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>3991b194073578105740f96d7c1ed0db</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 02:19:51</sys_created_on><sys_id>ce523d94073578105740f96d7c1ed0f6</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 02:25:42</sys_updated_on><value>x_646971_uemconn_0_ws1command=message^EQ</value><variable display_value="Field values">b3dba2465320220002c6435723dc34f0</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-1306622108</payload_hash>
+        <record_name>Set Field Values</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 02:27:04</sys_created_on>
+        <sys_id>33f3f518073578105740f96d7c1ed0d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b04afa4480000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 02:27:04</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>f7f3f518c335781070f3aee906ffa4d7</update_guid>
+        <update_guid_history>f7f3f518c335781070f3aee906ffa4d7:-1306622108,6fa3711803357810ffe7b54937d29474:-1698662715,5713f5d4433578107645eb6a80fb8f4a:498438452,0ee2f1d4083578106dc9dba962792fbb:1632226579,ce523d942e357810a69ece1ed96522f8:977492004</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:07:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>3e31bb0cabb1451aa05d76d32f1fe724</sys_id>
+        <sys_metadata>3991b194073578105740f96d7c1ed0db</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Field Values</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_atf_step_3991b194073578105740f96d7c1ed0db</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_3991b194073578105740f96d7c1ed0db">33f3f518073578105740f96d7c1ed0d8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:07:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

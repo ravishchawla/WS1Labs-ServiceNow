@@ -11,6 +11,8 @@
         <name>WS1UEMConfigurationItem</name>
         <order/>
         <script><![CDATA[function onChange() {
+	var showsection = false;
+	
 	//add tab is WS1 UEM role is enabled and there is a caller and a configurationItem else hide it
 	var isStandard = g_user.hasRole('x_646971_uemconn_0.WS1UEMStandard');
 	if (isStandard){	
@@ -18,27 +20,35 @@
 		if (caller){
 			var configItem = g_form.getValue('cmdb_ci');
 			if (configItem){
-				g_form.setSectionDisplay('wsactions', true);	
+				showsection = true;	
 			}
-			else {
-				g_form.setSectionDisplay('wsactions', false);	
-			}
-		}
-		else {
-			g_form.setSectionDisplay('wsactions', false);	
 		}
 	}	
-	else {
-		g_form.setSectionDisplay('wsactions', false);	
+	
+	//Show or hide the section using English name so will work when translated
+//	var section = $$('span[tab_caption_raw="workspace_oneuem"]')[0].select('span[id*=section.]')[0];
+	if (showsection == true) {
+//		section.show();	
+		g_form.setSectionDisplay('workspace_oneuem', true);	
 	}
-}]]></script>
+	else {
+		g_form.setSectionDisplay('workspace_oneuem', false);	
+//		section.hide();
+	}
+}
+
+
+
+
+
+]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-30 09:50:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>329c3b9307adb4105740f96d7c1ed02f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>WS1UEMConfigurationItem</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -46,7 +56,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_329c3b9307adb4105740f96d7c1ed02f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-30 10:02:32</sys_updated_on>
+        <sys_updated_on>2021-08-01 05:22:29</sys_updated_on>
         <table>incident</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

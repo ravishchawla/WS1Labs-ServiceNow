@@ -14,14 +14,23 @@
 	//remove tab is WS1 UEM role is not enabled
 	var isStandard = g_user.hasRole('x_646971_uemconn_0.WS1UEMStandard');
 	if (!isStandard){	
-		g_form.setSectionDisplay('wsactions', false);	
+		//g_form.setSectionDisplay('workspace_oneuem', false);
+		
+		//Hide the section using English name so will work when translated
+		var section = $$('span[tab_caption_raw="workspace_oneuem"]')[0].select('span[id*=section.]')[0];
+		section.hide();	
 	}
-	
-	//remove destructive actions from list if not an advanced user
-	var isAdvanced = g_user.hasRole('x_646971_uemconn_0.WS1UEMAdvanced');
-	if (!isAdvanced){
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'DeviceWipe');
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'EnterpriseWipe');
+	else {
+		// Reset the message box
+		g_form.setValue('x_646971_uemconn_0_ws1uem', "");
+		
+		// If the user has the standard WS1 UEM rights then check if advanced
+		// and remove destructive actions from list if not
+		var isAdvanced = g_user.hasRole('x_646971_uemconn_0.WS1UEMAdvanced');
+		if (!isAdvanced){
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'DeviceWipe');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'EnterpriseWipe');
+		}
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -30,7 +39,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ae8e3adf07a9b4105740f96d7c1ed0be</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -38,7 +47,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_ae8e3adf07a9b4105740f96d7c1ed0be</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-30 09:55:05</sys_updated_on>
+        <sys_updated_on>2021-08-01 05:05:03</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
