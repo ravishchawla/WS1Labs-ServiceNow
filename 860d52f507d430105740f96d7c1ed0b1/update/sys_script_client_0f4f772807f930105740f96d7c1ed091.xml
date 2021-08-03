@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>state</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>WS1UEMState</name>
+        <order/>
+        <script><![CDATA[function onChange() {
+	
+	// if the user has a WS1UEM role then set action to read only if not new or open
+	var isStandard = g_user.hasRole('x_646971_uemconn_0.WS1UEMStandard');
+	if (isStandard){	
+		var currentstate = g_form.getValue('state');
+		if (currentstate == 1 || currentstate == 2){
+			g_form.setReadOnly('x_646971_uemconn_0_ws1command',false);
+			}
+		else {
+			g_form.setReadOnly('x_646971_uemconn_0_ws1command',true);
+			}	
+	}
+}	
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 07:14:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0f4f772807f930105740f96d7c1ed091</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>WS1UEMState</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_client_0f4f772807f930105740f96d7c1ed091</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 07:28:45</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

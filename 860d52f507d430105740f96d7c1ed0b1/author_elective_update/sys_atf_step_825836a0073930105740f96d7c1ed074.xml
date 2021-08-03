@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Click on the button with id 'cancel' within the modal UI page 'WS1UEM popup'
+With a failure timeout of 5 Seconds
+Assert the modal is closed and page is reloaded or redirected within 5 Seconds</description>
+        <display_name>Click Modal Button</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>8</order>
+        <snapshot/>
+        <step_config display_value="Click Modal Button">22aed143dfe0220062fe6c7a4df2639d</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>825836a0073930105740f96d7c1ed074</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Click Modal Button</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_825836a0073930105740f96d7c1ed074</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEMSendMessage">c13d2990073578105740f96d7c1ed05b</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=825836a0073930105740f96d7c1ed074"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>37c8fea0073930105740f96d7c1ed0ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value>page_reloaded</value>
+        <variable display_value="Assert type">22cf38c26721130091d005225685ef81</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>3bc8fea0073930105740f96d7c1ed0af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value>1970-01-01 00:00:05</value>
+        <variable display_value="Assertion timeout">6354395e6761130091d005225685ef4e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>3fc8fea0073930105740f96d7c1ed0ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value>cancel</value>
+        <variable display_value="Button">a325ae60c3302200f25d174292d3aebf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>250</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>77c8fea0073930105740f96d7c1ed0af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value/>
+        <variable display_value="Modal values">d7c942e753a33300ac15ddeeff7b128e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>b3c8fea0073930105740f96d7c1ed0af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value>confirm</value>
+        <variable display_value="Modal action">e5a3e12353633300ac15ddeeff7b125c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>fbc8fea0073930105740f96d7c1ed0af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value>3cc0c3bc075134105740f96d7c1ed0f0</value>
+        <variable display_value="UI page">6fe5aad0c3302200f25d174292d3aeba</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>825836a0073930105740f96d7c1ed074</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>ffc8fea0073930105740f96d7c1ed0ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">e9b1cdde53233300ac15ddeeff7b12c2</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_atf_step_825836a0073930105740f96d7c1ed074</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Click on the button with id 'cancel' within the modal UI page 'WS1UEM popup'
+With a failure timeout of 5 Seconds
+Assert the modal is closed and page is reloaded or redirected within 5 Seconds</description><display_name>Click Modal Button</display_name><inputs/><mugshots_cache_json/><notes/><order>8</order><snapshot/><step_config display_value="Click Modal Button">22aed143dfe0220062fe6c7a4df2639d</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>825836a0073930105740f96d7c1ed074</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Click Modal Button</sys_name><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_atf_step_825836a0073930105740f96d7c1ed074</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><table/><test display_value="WS1UEMSendMessage">c13d2990073578105740f96d7c1ed05b</test><timeout>1970-01-01 00:00:05</timeout><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=825836a0073930105740f96d7c1ed074"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>37c8fea0073930105740f96d7c1ed0ae</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value>page_reloaded</value><variable display_value="Assert type">22cf38c26721130091d005225685ef81</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>3bc8fea0073930105740f96d7c1ed0af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value>1970-01-01 00:00:05</value><variable display_value="Assertion timeout">6354395e6761130091d005225685ef4e</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>3fc8fea0073930105740f96d7c1ed0ae</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value>cancel</value><variable display_value="Button">a325ae60c3302200f25d174292d3aebf</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>250</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>77c8fea0073930105740f96d7c1ed0af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value/><variable display_value="Modal values">d7c942e753a33300ac15ddeeff7b128e</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>300</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>b3c8fea0073930105740f96d7c1ed0af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value>confirm</value><variable display_value="Modal action">e5a3e12353633300ac15ddeeff7b125c</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>fbc8fea0073930105740f96d7c1ed0af</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value>3cc0c3bc075134105740f96d7c1ed0f0</value><variable display_value="UI page">6fe5aad0c3302200f25d174292d3aeba</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>825836a0073930105740f96d7c1ed074</document_key><order>50</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-03 02:06:12</sys_created_on><sys_id>ffc8fea0073930105740f96d7c1ed0ae</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-03 02:06:12</sys_updated_on><value>standard_ui</value><variable display_value="Form UI">e9b1cdde53233300ac15ddeeff7b12c2</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-1533105816</payload_hash>
+        <record_name>Click Modal Button</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:06:12</sys_created_on>
+        <sys_id>7bc8fea0073930105740f96d7c1ed0b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b09c2e5d40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:06:12</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>b3c8fea05639301047a28741ee9960b2</update_guid>
+        <update_guid_history>b3c8fea05639301047a28741ee9960b2:-1533105816</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:08:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>39a03bc87da84890909734666c028924</sys_id>
+        <sys_metadata>825836a0073930105740f96d7c1ed074</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Click Modal Button</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_atf_step_825836a0073930105740f96d7c1ed074</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_825836a0073930105740f96d7c1ed074">7bc8fea0073930105740f96d7c1ed0b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 02:08:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

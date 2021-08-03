@@ -21,6 +21,26 @@
             <element>x_646971_uemconn_0_ws1command</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Remote Assist</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-18 22:47:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>85cb5a4a0778b0105740f96d7c1ed03e</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
+            <value>assist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1command</element>
+            <hint/>
+            <inactive>true</inactive>
             <label>Device Wipe</label>
             <language>en</language>
             <name>incident</name>
@@ -31,50 +51,10 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>49649ef2073c34105740f96d7c1ed0b9</sys_id>
-            <sys_mod_count>5</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-07-30 02:41:55</sys_updated_on>
-            <value>DeviceWipe</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>x_646971_uemconn_0_ws1command</element>
-            <hint/>
-            <inactive>true</inactive>
-            <label>Enterprise Wipe</label>
-            <language>en</language>
-            <name>incident</name>
-            <sequence>0</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-28 03:44:00</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>a1e5fdcd0781f8105740f96d7c1ed0ba</sys_id>
             <sys_mod_count>6</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 23:06:25</sys_updated_on>
-            <value>EnterpriseWipe</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>x_646971_uemconn_0_ws1command</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Remote Assist</label>
-            <language>en</language>
-            <name>incident</name>
-            <sequence>1</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-18 22:47:32</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>85cb5a4a0778b0105740f96d7c1ed03e</sys_id>
-            <sys_mod_count>4</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 21:54:31</sys_updated_on>
-            <value>assist</value>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
+            <value>DeviceWipe</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -84,16 +64,16 @@
             <label>Request Logs</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>2</sequence>
+            <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-06-27 03:40:14</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>d76ba0f00705b8105740f96d7c1ed0e8</sys_id>
-            <sys_mod_count>4</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 21:54:31</sys_updated_on>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
             <value>devicelogs</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -104,16 +84,16 @@
             <label>Send Message</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>3</sequence>
+            <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-06-18 22:55:09</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>b48d16ca0778b0105740f96d7c1ed055</sys_id>
-            <sys_mod_count>5</sys_mod_count>
+            <sys_mod_count>6</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 21:54:31</sys_updated_on>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
             <value>message</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -124,37 +104,17 @@
             <label>Soft Reset</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>4</sequence>
+            <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-07-06 22:55:51</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e94a8b77070170105740f96d7c1ed03f</sys_id>
-            <sys_mod_count>4</sys_mod_count>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 21:54:31</sys_updated_on>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
             <value>SoftReset</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>x_646971_uemconn_0_ws1command</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Sync Device</label>
-            <language>en</language>
-            <name>incident</name>
-            <sequence>5</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-28 02:35:04</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>bb1669450781f8105740f96d7c1ed0b0</sys_id>
-            <sys_mod_count>4</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 21:54:31</sys_updated_on>
-            <value>SyncDevice</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -164,16 +124,16 @@
             <label>Change Passcode</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>6</sequence>
+            <sequence>4</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-07-06 22:55:29</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>d22a4b77070170105740f96d7c1ed043</sys_id>
-            <sys_mod_count>9</sys_mod_count>
+            <sys_mod_count>11</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 21:54:31</sys_updated_on>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
             <value>changepasscode</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -184,17 +144,57 @@
             <label>Lock Device</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>7</sequence>
+            <sequence>5</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-06-18 22:47:19</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>55bb16c60778b0105740f96d7c1ed060</sys_id>
-            <sys_mod_count>17</sys_mod_count>
+            <sys_mod_count>19</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-02 23:06:25</sys_updated_on>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
             <value>Lock</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1command</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sync Device</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-28 02:35:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bb1669450781f8105740f96d7c1ed0b0</sys_id>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
+            <value>SyncDevice</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1command</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Enterprise Wipe</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-28 03:44:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a1e5fdcd0781f8105740f96d7c1ed0ba</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-03 04:46:49</sys_updated_on>
+            <value>EnterpriseWipe</value>
         </sys_choice>
     </sys_choice>
 </record_update>
