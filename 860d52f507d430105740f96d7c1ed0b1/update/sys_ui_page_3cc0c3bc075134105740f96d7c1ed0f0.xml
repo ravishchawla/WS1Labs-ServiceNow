@@ -1,13 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[function continueOK() {
+        <client_script><![CDATA[onLoad();
+
+function onLoad() {
+	var action = $("ws1_action");
+//	console.log("demo action " + action.value);
+	
+	if (action.value == "assist") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;		
+	} else if (action.value == "message") {
+		$("div_ws1_message").hidden = false;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;		
+	} else if (action.value == "devicelogs") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;		
+	} else if (action.value == "changepasscode") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = false;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;		
+	} else if (action.value == "Lock") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = false;
+		$("div_ws1_caption").hidden = true;		
+	} else if (action.value == "EnterpriseWipe") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = false;
+		$("div_ws1_unlock_pin").hidden = true;		
+		$("div_ws1_caption").hidden = false;
+		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMWarningEnterpriseWipe')  + '</g:form_label>';
+	} else if (action.value == "SoftReset") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;		
+	} else if (action.value == "SyncDevice") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;	
+	} else if (action.value == "DeviceWipe") {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = false;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = false;
+		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMWarningDeviceWipe')  + '</g:form_label>';		
+	} 
+	else {
+		$("div_ws1_message").hidden = true;
+		$("div_ws1_passcode").hidden = true;
+		$("div_ws1_unlock_pin").hidden = true;
+		$("div_ws1_caption").hidden = true;				
+	}
+}
+
+function continueOK() {
 //	alert("OK clicked");
 //	var gdw = GlideDialogWindow.get();
-	var action =gel('my_action').value;
-	var unlockpin = gel('my_pin').value;
-	var passcode = gel('my_passcode').value;
-	var message = gel('my_message').value;
+	var action =gel('ws1_action').value;
+	var unlockpin = gel('input_ws1_unlock_pin').value;
+	var passcode = gel('input_ws1_passcode').value;
+	var message = gel('input_ws1_message').value;
 	var sid = gel('sid').value;
 
 	sid = g_form.getUniqueValue();
@@ -32,7 +94,7 @@
 	}
 	
    // g_form.save();
-	alert( "Starting "+action+"---"+unlockpin+"---"+message+"***");
+//	alert( "Starting "+action+"---"+unlockpin+"---"+message+"***");
 
 	document.getElementById("runprocessingscript").value = "hidden";
 	document.getElementById("sid").value = sid;
@@ -41,13 +103,8 @@
 }
 
 function continueCancel() {
-	alert("Cancel clicked");
+//	alert("Cancel clicked");
 	GlideDialogWindow.get().destroy();
-}
-
-function showHide() {
-	g_form.setMandatory('my_passcode',false);
-	g_form.setDisplay('my_passcode',false);
 }]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
@@ -56,50 +113,57 @@ function showHide() {
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <g:ui_form>
 
-    <j:set var="jvar_si" value="$[RP.getWindowProperties().get('si')]"/> 
+	<g:evaluate var="jvar_ws1_action" expression="RP.getWindowProperties().actionvalue" />
+	<g:evaluate var="jvar_si" expression="RP.getWindowProperties().si" />
+	
+    <input type="hidden" id="ws1_action" name="ws1_action" value="${jvar_ws1_action}" />
     <input type="hidden" id="sid" name="sid" value="${jvar_si}" />		
 	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
-		 			
-	<div style="margin:10px;margin-top:15px">
+		 		
+	<div style="margin:10px;margin-top:15px" hidden="true">
 		<span style="display:inline-block; width:40%">
-			<g:form_label>
-				Select Action to Perform: 
-			</g:form_label>
 		</span>
-		<g:ui_choicelist name="my_action" id="my_action" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1command" query="active=true" onChange="showHide(this)"/>
-	</div>	
+	</div>
+		<div id="div_ws1_caption" style="margin:10px;margin-top:15px" hidden="true">
+			<span style="display:inline-block; width:40%">
+			</span>
+		</div>
 
-	<div style="margin:10px">
+		<div style="margin:10px" id="div_ws1_message" hidden="true">
 		<span style="display:inline-block; width:40%">
 			<g:form_label>
-				Message to send to the device: 
+				${gs.getMessage('WS1UEMMessage to send to the device')}
 			</g:form_label>
-		</span>
-		<input type="text" name="my_message" id="my_message" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_send_message" query="active=true" size="40"/>
-	</div>
+			</span>
+                      <input type="text" name="input_ws1_message" id="input_ws1_message" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_send_message" query="active=true" size="40"/>
 
-	<div style="margin:10px">
-		<span style="display:inline-block; width:40%">
+		   </div>
+
+		   <div style="margin:10px" id="div_ws1_passcode" hidden="true">
+	
+			<span style="display:inline-block; width:40%">
 			<g:form_label>
-				Passcode: 
+				${gs.getMessage('WS1UEMPasscode')}
 			</g:form_label>
-		</span>	
-        <input type="text" name="my_passcode" id="my_passcode" table="incident"    field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10"/>
-	</div>
+			</span>	
+                      <input type="text" name="input_ws1_passcode" id="input_ws1_passcode" table="incident"    field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10"/>
 		
-	<div style="margin:10px">
-		<span style="display:inline-block; width:40%">
+		</div>
+		
+			<div style="margin:10px" id="div_ws1_unlock_pin" hidden="true">
+			<span style="display:inline-block; width:40%">
 			<g:form_label>
-				Unlock Pin: 
+				${gs.getMessage('WS1UEMUnlock Pin')}
 			</g:form_label>
-		</span>	
-        <input type="text" name="my_pin" id="my_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="10"/>
-	</div>
+			</span>	
+                      <input type="text" name="input_ws1_unlock_pin" id="input_ws1_unlock_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="10"/>
+		
+				</div>
 			   
-    <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit" ok_text="${gs.getMessage('Okay')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit"  ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
 
-</g:ui_form>
 
+	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEM popup</name>
         <processing_script><![CDATA[if(runprocessingscript != ''){
@@ -127,7 +191,7 @@ function showHide() {
         sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1uemactionfromscript').inBackground().withInputs(inputs).run();
 				
 		// Execute Synchronously: Run in foreground.
-		//sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
+//		sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
 		
 		
 	} catch (ex) {
@@ -148,13 +212,13 @@ function showHide() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>247</sys_mod_count>
+        <sys_mod_count>302</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-03 01:47:51</sys_updated_on>
+        <sys_updated_on>2021-08-04 02:48:33</sys_updated_on>
     </sys_ui_page>
 </record_update>

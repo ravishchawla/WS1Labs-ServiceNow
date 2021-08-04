@@ -2,7 +2,7 @@
     <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="69" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" label="Workspace ONE UEM Action" max_length="40" name="x_646971_uemconn_0_ws1command" type="choice">
             <choice>
-                <element inactive="true" inactive_on_update="true" label="Device Wipe" sequence="0" value="DeviceWipe"/>
+                <element inactive_on_update="false" label="Device Wipe" sequence="0" value="DeviceWipe"/>
                 <element inactive_on_update="false" label="Remote Assist" sequence="0" value="assist"/>
                 <element inactive_on_update="false" label="Request Logs" sequence="1" value="devicelogs"/>
                 <element inactive_on_update="false" label="Send Message" sequence="2" value="message"/>
