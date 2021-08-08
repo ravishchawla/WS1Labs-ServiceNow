@@ -3,7 +3,8 @@
         <category>general</category>
         <client_script><![CDATA[function testConnection() {
 	document.getElementById("runprocessingscript").value = "testconnection";
-}]]></client_script>
+}
+]]></client_script>
         <description>Verify the connection to Workspace ONE UEM, retrieves and displays the Platform version </description>
         <direct>false</direct>
         <endpoint>x_646971_uemconn_0_WS1UEMVerifyConnection.do</endpoint>
@@ -12,7 +13,7 @@
     <g:ui_form>
 		
 	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
-		 			
+		 	
 		<div style="margin:10px;margin-top:15px">
 		<span style="display:inline-block; width:40%">
 		<g:form_label>
@@ -46,6 +47,8 @@
 		
 		gs.info("Workspace ONE UEM Platform Version: " + ws1productpersion);
 				
+		gs.setProperty('x_646971_uemconn_0.WS1UEM Platform', ws1productpersion);
+	
 		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productpersion);
 		
 	} catch (ex) {
@@ -53,6 +56,10 @@
 		gs.addInfoMessage(gs.getMessage('WS1ConnectionFailed'));
 		gs.error(message);
 	}
+} else {
+	
+//	gs.addInfoMessage("processing");
+
 }
 	
 
@@ -62,13 +69,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-30 22:38:24</sys_created_on>
         <sys_id>363c6e6b0765f4105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>112</sys_mod_count>
         <sys_name>WS1UEMVerifyConnection</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_363c6e6b0765f4105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-02 01:44:52</sys_updated_on>
+        <sys_updated_on>2021-08-07 01:27:01</sys_updated_on>
     </sys_ui_page>
 </record_update>

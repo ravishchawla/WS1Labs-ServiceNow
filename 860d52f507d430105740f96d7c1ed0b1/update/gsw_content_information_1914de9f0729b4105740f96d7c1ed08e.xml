@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
     <gsw_content_information action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <article><![CDATA[<ul style="list-style-position: inside;"><li>Update the <strong>Host</strong> field with your VMware Workspace ONE UEM host information. </li></ul>
 <p>For more information about the VMware Workspace ONE UEM API, see the VMware Workspace ONE UEM documentation.</p>]]></article>
         <best_practice_acceptable>false</best_practice_acceptable>
@@ -20,7 +20,7 @@
         <is_dynamic>false</is_dynamic>
         <more_info_available>false</more_info_available>
         <more_info_html/>
-        <order>200</order>
+        <order>999</order>
         <parent display_value="Configure the connection">368bb55f07e5b4105740f96d7c1ed035</parent>
         <parents>368bb55f07e5b4105740f96d7c1ed035,b51b3d1f07e5b4105740f96d7c1ed08b</parents>
         <plugin_id/>
@@ -34,14 +34,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-30 02:17:43</sys_created_on>
         <sys_id>1914de9f0729b4105740f96d7c1ed08e</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Configure HTTP connection</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>gsw_content_information_1914de9f0729b4105740f96d7c1ed08e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-30 02:57:31</sys_updated_on>
+        <sys_updated_on>2021-08-07 01:40:44</sys_updated_on>
         <table/>
         <title>Configure HTTP connection</title>
         <weight>1</weight>

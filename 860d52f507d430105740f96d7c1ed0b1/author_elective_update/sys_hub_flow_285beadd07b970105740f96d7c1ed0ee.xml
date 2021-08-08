@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>ws1uemgetplatform</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>WS1UEMGetPlatform</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 09:02:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>285beadd07b970105740f96d7c1ed0ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMGetPlatform</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_hub_flow_285beadd07b970105740f96d7c1ed0ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 09:02:43</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=285beadd07b970105740f96d7c1ed0ee"/>
+    <sys_variable_value action="DELETE" query="document_key=285beadd07b970105740f96d7c1ed0ee"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=285beadd07b970105740f96d7c1ed0ee^sys_idNOT INec5beadd07b970105740f96d7c1ed0f0"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>285beadd07b970105740f96d7c1ed0ee</id>
+        <name>WS1UEMGetPlatform</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 09:02:43</sys_created_on>
+        <sys_id>ec5beadd07b970105740f96d7c1ed0f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 09:02:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_hub_flow_285beadd07b970105740f96d7c1ed0ee</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow"><sys_hub_flow action="INSERT_OR_UPDATE"><access>public</access><acls/><active>false</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description/><internal_name>ws1uemgetplatform</internal_name><label_cache>[]</label_cache><latest_snapshot/><master_snapshot/><name>WS1UEMGetPlatform</name><natlang/><outputs/><remote_trigger_id/><run_as>system</run_as><run_with_roles/><sc_callable>false</sc_callable><show_draft_actions>false</show_draft_actions><show_triggered_flows>false</show_triggered_flows><status>draft</status><sys_class_name>sys_hub_flow</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-05 09:02:43</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>285beadd07b970105740f96d7c1ed0ee</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WS1UEMGetPlatform</sys_name><sys_overrides/><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_hub_flow_285beadd07b970105740f96d7c1ed0ee</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-05 09:02:43</sys_updated_on><type>flow</type></sys_hub_flow><sys_translated_text action="delete_multiple" query="documentkey=285beadd07b970105740f96d7c1ed0ee"/><sys_variable_value action="delete_multiple" query="document_key=285beadd07b970105740f96d7c1ed0ee"/><sys_flow_cat_variable_model action="delete_multiple" query="id=285beadd07b970105740f96d7c1ed0ee^sys_idNOT INec5beadd07b970105740f96d7c1ed0f0"/><sys_flow_cat_variable_model action="INSERT_OR_UPDATE"><id>285beadd07b970105740f96d7c1ed0ee</id><name>WS1UEMGetPlatform</name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-05 09:02:43</sys_created_on><sys_id>ec5beadd07b970105740f96d7c1ed0f0</sys_id><sys_mod_count>0</sys_mod_count><sys_scope/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-05 09:02:43</sys_updated_on></sys_flow_cat_variable_model></record_update>]]></payload>
+        <payload_hash>2100072920</payload_hash>
+        <record_name>WS1UEMGetPlatform</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 09:02:43</sys_created_on>
+        <sys_id>ac5beadd07b970105740f96d7c1ed0f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b158cf1b60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 09:02:43</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>e45beadd5ab970108866cd000d4ca2f5</update_guid>
+        <update_guid_history>e45beadd5ab970108866cd000d4ca2f5:2100072920</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 09:41:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>b3c116469f5a47bb92345784bddb6f31</sys_id>
+        <sys_metadata>285beadd07b970105740f96d7c1ed0ee</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMGetPlatform</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_285beadd07b970105740f96d7c1ed0ee</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_285beadd07b970105740f96d7c1ed0ee">ac5beadd07b970105740f96d7c1ed0f5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 09:41:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

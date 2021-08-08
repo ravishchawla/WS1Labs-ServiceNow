@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_646971_uemconn_0_ws1_uem_assist_type" table="incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_646971_uemconn_0_ws1_uem_assist_type</element>
+            <name>incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-05 02:43:01</sys_created_on>
+            <sys_id>ee64915907b570105740f96d7c1ed077</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_646971_uemconn_0_ws1_uem_assist_type</sys_name>
+            <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+            <sys_update_name>sys_choice_incident_x_646971_uemconn_0_ws1_uem_assist_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-05 02:43:01</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Screen Share</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-05 02:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e054915907b570105740f96d7c1ed0de</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-05 02:47:14</sys_updated_on>
+            <value>ScreenShare</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Remote Shell</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-05 02:43:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce84555907b570105740f96d7c1ed0d5</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-05 02:47:18</sys_updated_on>
+            <value>RemoteShell</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>File Manager</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-05 02:43:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7364191907b570105740f96d7c1ed008</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-05 02:47:24</sys_updated_on>
+            <value>FileManager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Registry Editor</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-05 02:44:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>99a4155907b570105740f96d7c1ed000</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-05 02:47:28</sys_updated_on>
+            <value>RegistryEditor</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>WS1UEM check platform version</name>
+        <offset/>
+        <offset_type/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2021-08-05 09:27:32</run_start>
+        <run_time>1970-01-01 11:30:45</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[gs.info("Checking platform version");
+		
+try {
+	// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+	// sn_fd.FlowAPI.getRunner().action('x_646971_uemconn_0.uemversion').inBackground().run();
+				
+	// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+	var result = sn_fd.FlowAPI.getRunner().action('x_646971_uemconn_0.uemversion').inForeground().run();
+	var outputs = result.getOutputs();
+
+	// Get Outputs:
+	// Note: outputs can only be retrieved when executing synchronously.
+	var variable = outputs['variable']; // String
+	var status = outputs['status']; // String
+	var response = outputs['response']; // String
+	var ws1productpersion = outputs['ws1productpersion']; // String
+		
+	gs.info("Workspace ONE UEM Platform Version: " + ws1productpersion);
+				
+	gs.setProperty('x_646971_uemconn_0.WS1UEM Platform', ws1productpersion);		
+} catch (ex) {
+	var message = ex.getMessage();
+	gs.error(message);
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 09:30:25</sys_created_on>
+        <sys_id>4001fa5507f970105740f96d7c1ed0be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>WS1UEM check platform version</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sysauto_script_4001fa5507f970105740f96d7c1ed0be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 09:30:37</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
