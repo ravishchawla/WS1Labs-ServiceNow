@@ -40,7 +40,10 @@
         <reference_floats>false</reference_floats>
         <reference_key/>
         <reference_qual>action_template=DATASTREAM^state=published^EQ</reference_qual>
-        <reference_qual_condition/>
+        <reference_qual_condition table="sys_hub_action_type_definition">action_template=DATASTREAM^state=published^EQ<item endquery="false" field="action_template" goto="false" newquery="false" operator="=" or="false" value="DATASTREAM"/>
+            <item display_value="Published" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="published"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
         <reference_type/>
         <sizeclass/>
         <spell_check>false</spell_check>
