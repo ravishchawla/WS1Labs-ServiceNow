@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>x_646971_uemconn_0_ws1command</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>WS1EUM popup</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {	
+	if (isLoading || newValue === '') {
+			return;
+	}
+   
+	if (newValue == 'true') {					
+		var dialog = new GlideDialogWindow('x_646971_uemconn_0_WS1UEM popup');
+		dialog.setTitle('WS1 UEM Action details'); 
+		dialog.setSize(550, 800);
+		dialog.setPreference('si', g_form.getUniqueValue()); 
+		dialog.setPreference('sysparm_ws1_action', "demo");
+		dialog.setPreference('value',newValue);	
+		dialog.render();    
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-10 01:35:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bcea4774079134105740f96d7c1ed095</sys_id>
+        <sys_mod_count>53</sys_mod_count>
+        <sys_name>WS1EUM popup</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_client_bcea4774079134105740f96d7c1ed095</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-10 02:32:13</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_script_client_bcea4774079134105740f96d7c1ed095</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;x_646971_uemconn_0_ws1command&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;WS1EUM popup&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {	
+	if (isLoading || newValue === '') {
+			return;
+	}
+   
+	if (newValue == 'true') {					
+		var dialog = new GlideDialogWindow('x_646971_uemconn_0_WS1UEM popup');
+		dialog.setTitle('WS1 UEM Action details'); 
+		dialog.setSize(550, 800);
+		dialog.setPreference('si', g_form.getUniqueValue()); 
+		dialog.setPreference('sysparm_ws1_action', "demo");
+		dialog.setPreference('value',newValue);	
+		dialog.render();    
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-07-10 01:35:43&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;bcea4774079134105740f96d7c1ed095&lt;/sys_id&gt;&lt;sys_mod_count&gt;53&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1EUM popup&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="WS1UEMSpoke"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_bcea4774079134105740f96d7c1ed095&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-10 02:32:13&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-925266287</payload_hash>
+        <record_name>WS1EUM popup</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-10 02:32:13</sys_created_on>
+        <sys_id>c9e10bf607f1b4105740f96d7c1ed0f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b2de739360000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-10 02:32:13</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>81e10bf657f1b41096ea95713a5feef3</update_guid>
+        <update_guid_history>81e10bf657f1b41096ea95713a5feef3:-925266287,da5869f671fd74102f8f7c75701cd8f1:243396743,d3a7adb608fd7410cfbb90688f38b511:1161658182,8c4725b6defd741098ed85f757bc5e4c:842235437,3c08e6b4e9b13010c31147d676515023:-232598471,2af62a7403b13010f5eda1b7ca0befc4:-787315597,3ac6ea343fb13010a0bc50ac8bcd6854:-232598471,39566274adb13010b66ffc0d5f42f9c2:-787315597,30f41238e8713010ae832798fd3fb90d:37977473,7f9f0e74ed7130107c33abc6539fd150:-271007632,a65f0a74437130104076b68be5334401:-1119459369,3fce0e349c7130108e99da0fb09d6a29:-2068906177,4d4ec234c9713010e476c960dcd28daf:298453244,00da79f406313010ffee3e96b728bd7d:-1127989822,55baf5f44531301016346520603e026f:342248884,689afdb49731301008f9dd15072b9341:-1419545429,a15ab1f41b313010068d7e4578358546:1649426648,c31abdb434313010560367a4e5d082bc:298453244,667faaceeb61f0109433a0d38d365ce5:1631892947,a21f228e0161f01064b74fee5356304c:1520860886,a61e268ee861f010055b3c3039dc38ac:1631892947,3bdde28e5261f01028a6d6eccd58de9d:-558324461,9ecda28e5661f010295426798383d01d:1631892947,457d264eaa61f0109216a2cb97215c7c:255614994,3c3de24e1761f010a9e538887e2e4506:1631892947,5cec664e6a61f0103530d69c0cf93e31:1409912632,a7ac624ebb61f0102194a5ca68b2835a:255614994,95bd80b541ad70102b56e53f8f4c558a:-1286796396,b64d0075a5ad7010605042d6e53248f2:-1333274491,dcec00755fad701037b7fa1c366818ed:1660098470,1aacc07543ad7010908bcdba95f678f8:-1099614159,ff5b8cf1cead70102483f18543bb8879:-414271405,217944b11fad701048584cf7bb71b482:1639545185,6bf844b1acad7010fc12b3d2233a9ed4:-2040795607,35d84c7183ad7010fd59e97d4b5ca402:1494721783,599392bdaa5db41023060da9723b59fb:-1787211680,19d2563dc15db4105a5330a3367f8f4e:317538208,ed4e02a58f51b4107364daca18811dd6:-1787211680,535ac6a1b151b4108bc09bed84aa90fa:317538208,3e0582adc711b41055b8aa49890ea365:-1787211680,ee7c91a1f9dd74101fb161f7bef62afb:2006464744,f3fb5d21c8dd741022958c98890a070b:-285927473,a3583425335d7410872a58374cb43195:956565805,52cae5d16e157410553cb13d9a1f4d83:-1441261843,3a896d914d15741035966a4a197818a5:1663157003,3fc621515515741005b3d4fd76cb1c54:-1441163733,2246211154157410096eebe15bb7c7f7:-1656879131,7b542d9dd8d174108c48fac62d0ebaf1:199740874,3ac62c91a35174102614797445c4a6e5:-64983890,2c8440992add34107d5aff423b6dbd00:1973278822,0bb3085955dd3410e6c7de6e0bb634de:-1612224094,817248197add34105d0a2cac21ede819:56159581,185ccf7428913410680aa92b9fb26a5c:876079071,9bab07746f913410dfc30da452c7572f:442994535</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-10 02:33:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>119d6b399cbf4033835af054928a7e59</sys_id>
+        <sys_metadata>bcea4774079134105740f96d7c1ed095</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1EUM popup</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="Incident">aee0858b6d2620100acb70b353433075</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_script_client_bcea4774079134105740f96d7c1ed095</sys_update_name>
+        <sys_update_version display_value="sys_script_client_bcea4774079134105740f96d7c1ed095">c9e10bf607f1b4105740f96d7c1ed0f3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-10 02:33:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

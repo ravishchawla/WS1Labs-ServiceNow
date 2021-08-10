@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WS1ActionOsMapping" max_length="40" name="x_646971_uemconn_0_ws1actionosmapping" type="collection">
+        <element label="assist" max_length="40" name="assist" type="string"/>
+        <element label="Assist filemanager" max_length="40" name="assist_filemanager" type="string"/>
+        <element label="Assist remoteshell" max_length="40" name="assist_remoteshell" type="string"/>
+        <element label="Assist screenshare" max_length="40" name="assist_screenshare" type="string"/>
+        <element label="Change passcode" max_length="40" name="change_passcode" type="string"/>
+        <element label="Device wipe" max_length="40" name="device_wipe" type="string"/>
+        <element label="Enterprise wipe" max_length="40" name="enterprise_wipe" type="string"/>
+        <element label="lock" max_length="40" name="lock" type="string"/>
+        <element label="Max os" max_length="40" name="max_os" type="string"/>
+        <element label="Max uem" max_length="40" name="max_uem" type="integer"/>
+        <element label="message" max_length="40" name="message" type="string"/>
+        <element label="Min os" max_length="40" name="min_os" type="string"/>
+        <element label="Min uem" max_length="40" name="min_uem" type="integer"/>
+        <element label="Os action" mandatory="true" max_length="40" name="os_action" type="string"/>
+        <element label="precedent" max_length="40" name="precedent" type="string"/>
+        <element label="Request logs" max_length="40" name="request_logs" type="string"/>
+        <element label="Soft reset" max_length="40" name="soft_reset" type="string"/>
+        <element label="sync" max_length="40" name="sync" type="string"/>
+    </element>
+</database>
