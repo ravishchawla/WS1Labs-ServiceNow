@@ -20,6 +20,26 @@
             <dependent_value/>
             <element>x_646971_uemconn_0_ws1command</element>
             <hint/>
+            <inactive>true</inactive>
+            <label>Request Logs</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-27 03:40:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d76ba0f00705b8105740f96d7c1ed0e8</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-10 08:00:23</sys_updated_on>
+            <value>devicelogs</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_646971_uemconn_0_ws1command</element>
+            <hint/>
             <inactive>false</inactive>
             <label>Device Wipe</label>
             <language>en</language>
@@ -40,20 +60,20 @@
             <dependent_value/>
             <element>x_646971_uemconn_0_ws1command</element>
             <hint/>
-            <inactive>true</inactive>
+            <inactive>false</inactive>
             <label>Sync Device</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>0</sequence>
+            <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-06-28 02:35:04</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>bb1669450781f8105740f96d7c1ed0b0</sys_id>
-            <sys_mod_count>7</sys_mod_count>
+            <sys_mod_count>9</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 21:37:46</sys_updated_on>
+            <sys_updated_on>2021-08-10 08:00:23</sys_updated_on>
             <value>SyncDevice</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -64,37 +84,17 @@
             <label>Remote Assist</label>
             <language>en</language>
             <name>incident</name>
-            <sequence>1</sequence>
+            <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2021-06-18 22:47:32</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>85cb5a4a0778b0105740f96d7c1ed03e</sys_id>
-            <sys_mod_count>6</sys_mod_count>
+            <sys_mod_count>7</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 21:37:45</sys_updated_on>
+            <sys_updated_on>2021-08-10 08:00:23</sys_updated_on>
             <value>assist</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>x_646971_uemconn_0_ws1command</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Request Logs</label>
-            <language>en</language>
-            <name>incident</name>
-            <sequence>2</sequence>
-            <synonyms/>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2021-06-27 03:40:14</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>d76ba0f00705b8105740f96d7c1ed0e8</sys_id>
-            <sys_mod_count>6</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2021-08-05 21:37:46</sys_updated_on>
-            <value>devicelogs</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>

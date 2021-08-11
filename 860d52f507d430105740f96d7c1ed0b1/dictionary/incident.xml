@@ -3,9 +3,9 @@
         <element attributes="edge_encryption_enabled=true" choice="1" label="Workspace ONE UEM Action" max_length="40" name="x_646971_uemconn_0_ws1command" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Device Wipe" sequence="0" value="DeviceWipe"/>
-                <element inactive="true" inactive_on_update="true" label="Sync Device" sequence="0" value="SyncDevice"/>
-                <element inactive_on_update="false" label="Remote Assist" sequence="1" value="assist"/>
-                <element inactive_on_update="false" label="Request Logs" sequence="2" value="devicelogs"/>
+                <element inactive="true" inactive_on_update="true" label="Request Logs" sequence="0" value="devicelogs"/>
+                <element inactive_on_update="false" label="Sync Device" sequence="1" value="SyncDevice"/>
+                <element inactive_on_update="false" label="Remote Assist" sequence="2" value="assist"/>
                 <element inactive_on_update="false" label="Send Message" sequence="3" value="message"/>
                 <element inactive_on_update="false" label="Soft Reset" sequence="4" value="SoftReset"/>
                 <element inactive_on_update="false" label="Change Passcode" sequence="5" value="changepasscode"/>
@@ -25,7 +25,6 @@
                 <element inactive_on_update="false" label="Registry Editor" sequence="3" value="RegistryEditor"/>
             </choice>
         </element>
-        <element label="WS1 UEM Button" max_length="40" name="x_646971_uemconn_0_ws1_uem_button" type="boolean"/>
         <element label="WS1 Unlock Pin" max_length="40" name="x_646971_uemconn_0_ws1_unlock_pin" type="integer"/>
     </element>
 </database>
