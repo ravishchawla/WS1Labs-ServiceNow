@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="69" text_index="true" type="collection">
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="70" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" label="Workspace ONE UEM Action" max_length="40" name="x_646971_uemconn_0_ws1command" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Change Passcode" value="changepasscode_winrt"/>
+                <element inactive_on_update="false" label="Device Wipe" value="DeviceWipe_mac"/>
+                <element inactive_on_update="false" label="Remote Assist" value="assist_screenshare"/>
+                <element inactive_on_update="false" label="Remote Assist" value="assist_filemanager"/>
+                <element inactive_on_update="false" label="Remote Assist" value="assist_registryeditor"/>
+                <element inactive_on_update="false" label="Remote Assist" value="assist_remoteshell"/>
                 <element inactive_on_update="false" label="Device Wipe" sequence="0" value="DeviceWipe"/>
-                <element inactive="true" inactive_on_update="true" label="Request Logs" sequence="0" value="devicelogs"/>
+                <element inactive_on_update="false" label="Request Logs" sequence="0" value="devicelogs"/>
                 <element inactive_on_update="false" label="Sync Device" sequence="1" value="SyncDevice"/>
                 <element inactive_on_update="false" label="Remote Assist" sequence="2" value="assist"/>
                 <element inactive_on_update="false" label="Send Message" sequence="3" value="message"/>
                 <element inactive_on_update="false" label="Soft Reset" sequence="4" value="SoftReset"/>
-                <element inactive_on_update="false" label="Change Passcode" sequence="5" value="changepasscode"/>
+                <element inactive_on_update="false" label="Clear Passcode" sequence="5" value="changepasscode"/>
                 <element inactive_on_update="false" label="Lock Device" sequence="6" value="Lock"/>
                 <element inactive_on_update="false" label="Enterprise Wipe" sequence="7" value="EnterpriseWipe"/>
             </choice>

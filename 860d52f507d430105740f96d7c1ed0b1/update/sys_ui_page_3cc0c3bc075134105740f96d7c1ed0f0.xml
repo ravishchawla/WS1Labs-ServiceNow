@@ -3,8 +3,6 @@
         <category>general</category>
         <client_script><![CDATA[onLoad();
 
-getActionsForOs();
-
 function onLoad() {
 	var stringText;
 
@@ -179,43 +177,40 @@ function parse_os_name(response) {
 	response = response.responseXML.documentElement.getAttribute("answer");
 	jslog('Received response from request ' + response);
 	var os_name = response.toLowerCase();
-	if (os_name.includes('mac')) {
-		$("div_ws1_unlock_pin").hidden = false;
-	}
+// 	if (os_name.includes('mac')) {
+// 		$("div_ws1_unlock_pin").hidden = false;
+// 	}
+	
+	getActionsForOs(os_name);
 }
 
-function getActionsForOs(os_name) {
-	var os_name = "mac";
+function getActionsForOs(os_name) {	
+	var ga = new GlideAjax('x_646971_uemconn_0.ws1_get_action_from_os');
+	ga.addParam('sysparm_name', 'get_action');
+	ga.addParam('sysparm_os_name', "mac");
+	ga.getXML(parse_actions_as_json);
+}
+
+function parse_actions_as_json(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
 	
-	var action_visibility_conditions = {'assist' : [], 
-										'assist_filemanager' : [], 
-										'assist_remoteshell' : [],
-										'assist_screenshare' : [],
-										'change_passcode' : [], 
-										'device_wipe' : [],
-										'enterprise_wipe' : [],
-										'lock' : []
-									   };
+	var actions = JSON.parse(answer);
 	
-	console.log(action_visibility_conditions);
-	var mapTable = new GlideRecord("x_646971_uemconn_0_ws1actionosmapping");
-	mapTable.addQuery("os_action", os_name);
-	
-	// mapTable.addOrderBy("precedent");
-	mapTable.query();
-	console.log('demo numRows ' + mapTable.rows.length);
-	console.log(mapTable);
-	while(mapTable.next()) {
-		console.log('demo -> ');
-		console.log('demo bef hasNext? ' + mapTable.hasNext())		
-		console.log(mapTable);
-		/*
-		for (var key in action_visibility_conditions) {
-			console.log('demo n k ' + key + ' ' + mapTable.get(key));
-		}
-		*/
-		console.log('demo precedent ' + mapTable.get('precedent'));
+	if (actions['devicewipe_mac'] == true) {
+		$("div_ws1_unlock_pin").hidden = false;
+	} else {
+		$("div_ws1_unlock_pin").hidden = true;
 	}
+	
+	if (actions['changepasscode_winrt'] == true) {
+		$("div_ws1_unlock_pin").hidden = false;
+	} else {
+		$("div_ws1_unlock_pin").hidden = true;
+	}
+	
+// 	for (var key in actions) {
+// 		g_form.addOption('x_646971_uemconn_0_ws1command', key);
+// 	}
 }]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
@@ -343,13 +338,13 @@ function getActionsForOs(os_name) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>467</sys_mod_count>
+        <sys_mod_count>475</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-09 20:55:42</sys_updated_on>
+        <sys_updated_on>2021-08-11 19:38:04</sys_updated_on>
     </sys_ui_page>
 </record_update>
