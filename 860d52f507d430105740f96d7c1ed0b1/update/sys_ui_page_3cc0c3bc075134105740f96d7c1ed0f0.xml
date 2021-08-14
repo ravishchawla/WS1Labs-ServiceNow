@@ -5,12 +5,13 @@
 
 function onLoad() {
 	var stringText;
+	var ws1_actions_response;
 
 	var action = $("ws1_action");
-		$("div_ws1_message").hidden = true;
-		$("div_ws1_passcode").hidden = true;
-		$("div_ws1_unlock_pin").hidden = true;
-		$("div_ws1_caption").hidden = true;	
+	$("div_ws1_message").hidden = true;
+	$("div_ws1_passcode").hidden = true;
+	$("div_ws1_unlock_pin").hidden = true;
+	$("div_ws1_caption").hidden = true;
 	
 	if (action.value == "assist") {
 		// Infomation message text
@@ -21,6 +22,21 @@ function onLoad() {
 		if (console_version) {
 			if (util_compare_versions(console_version.value, TRHRESHOLD_VERSION) <= 0) {
 				$("div_ws1_assist_type").hidden = false;
+				ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
+				ws1_actions_response = JSON.parse(ws1_actions_response);
+					
+				var select_dropdown_id = "input_ws1_assist_type";
+				
+				for (var key in ws1_actions_response) {
+					if ((key.includes('assist_') && (ws1_actions_response[key]) == false)) {
+						remove_actions_from_select_input(select_dropdown_id, key.substring(7));
+					}
+				}
+				
+				if ($("input_ws1_assist_type").length == 0) {
+					$("div_ws1_assist_type").hidden = true;
+				}
+				
 			} else {
 				$("div_ws1_assist_type").hidden = true;
 			}
@@ -42,60 +58,62 @@ function onLoad() {
 		
 		$("div_ws1_passcode").hidden = false;
 	
-	} else if (action.value == "Lock") {
+	} else if (action.value == "lock") {
 		// Infomation message text
 		stringText = getMessage('WS1UEMLockInfo');
 		
-		$("div_ws1_unlock_pin").hidden = false;
-	
-	} else if (action.value == "EnterpriseWipe") {
+		ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
+		ws1_actions_response = JSON.parse(ws1_actions_response);
+				
+		if (ws1_actions_response["lock_mac"] == true) {
+			$("div_ws1_unlock_pin").hidden = false;
+			$("div_ws1_caption").hidden = false;
+			$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMRememberPin')  + '</g:form_label>';
+		}
+			
+	} else if (action.value == "enterprisewipe") {
 		// Infomation message text
 		stringText = getMessage('WS1UEMEnterpriseWipeInfo');
 		
-		$("div_ws1_passcode").hidden = false;	
 		$("div_ws1_caption").hidden = false;
 		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMWarningEnterpriseWipe')  + '</g:form_label>';
 		
 	
-	} else if (action.value == "SoftReset") {
+	} else if (action.value == "softreset") {
 		// Infomation message text
 		stringText = getMessage('WS1UEMSoftResetInfo');
 	
-	} else if (action.value == "SyncDevice") {
+	} else if (action.value == "syncdevice") {
 		// Infomation message text
 		stringText = getMessage('WS1UEMSyncDeviceInfo');
 		
-	} else if (action.value == "DeviceWipe") {
+	} else if (action.value == "devicewipe") {
 		// Infomation message text
 		stringText = getMessage('WS1UEMDeviceWipeInfo');
 		
-		$("div_ws1_caption").hidden = false;
-		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMWarningDeviceWipe')  + '</g:form_label>';
+		var warningMessage = getMessage('WS1UEMWarningDeviceWipe');
 		
-		var app = new GlideRecord("incident");
-		var sid = g_form.getUniqueValue();
-		
-		if (app.get(sid)) {
-			var config_item = app.cmdb_ci;
-
-			var config_table = new GlideRecord("cmdb_ci");
-			
-			config_table.addQuery("sys_id", config_item);
-			if (app.get(sid)) {
-
-				var ga = new GlideAjax('x_646971_uemconn_0.ws1_uem_get_os_field');
-				ga.addParam('sysparm_name', 'get_os_field');
-				ga.addParam('sysparm_device_id', config_item);
-				ga.getXML(parse_os_name);
-			}
+		ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
+		ws1_actions_response = JSON.parse(ws1_actions_response);
+				
+		if (ws1_actions_response["devicewipe_mac"] == true) {
+			$("div_ws1_unlock_pin").hidden = false;
+			warningMessage = warningMessage + " " + getMessage('WS1UEMRememberPin');
 		}
-
-	}	
+		
+		$("div_ws1_caption").hidden = false;
+		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + warningMessage  + '</g:form_label>';
+	}
+	else if (action.value == "refreshdevices") {
+		// Infomation message text
+		stringText = getMessage('WS1UEMRefreshDevices');
+	}
 	
 	// display informational message for action type
 	$("div_ws1_text").innerHTML = getMessage(stringText);
-	$("div_ws1_text").hidden = false;	
+	$("div_ws1_text").hidden = false;
 }
+
 
 function continueOK() {
 //	alert("OK clicked");
@@ -139,7 +157,12 @@ function continueOK() {
    // g_form.save();
 //	alert( "Starting "+action+"---"+unlockpin+"---"+message+"***");
 
-	document.getElementById("runprocessingscript").value = "hidden";
+	if (action == 'refreshdevices') {
+		document.getElementById("runprocessingscript").value = "refreshdevices";
+	}
+	else {
+		document.getElementById("runprocessingscript").value = "actionflow";
+	}
 	document.getElementById("sid").value = sid;
 	
 	GlideDialogWindow.get().destroy();	
@@ -211,6 +234,16 @@ function parse_actions_as_json(response) {
 // 	for (var key in actions) {
 // 		g_form.addOption('x_646971_uemconn_0_ws1command', key);
 // 	}
+}
+
+function remove_actions_from_select_input(select_input, option_name) {
+	var selectobject = $(select_input);
+	
+	for (var i=0; i<selectobject.length; i++) {
+		if (selectobject.options[i].value.toLowerCase() == option_name) {
+			selectobject.remove(i);
+		}
+	}
 }]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
@@ -283,7 +316,7 @@ function parse_actions_as_json(response) {
 				${gs.getMessage('WS1UEMAssist Type')}
 			</g:form_label>
 		</span>	
-        <g:ui_choicelist name="div_ws1_assist_type" id="input_ws1_assist" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_uem_assist_type" query="active=true" size="10"/>
+        <g:ui_choicelist name="input_ws1_assist_type" id="input_ws1_assist" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_uem_assist_type" query="active=true" size="10"/>
 		
 	</div>
 			   
@@ -292,7 +325,7 @@ function parse_actions_as_json(response) {
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEM popup</name>
-        <processing_script><![CDATA[if(runprocessingscript != ''){
+        <processing_script><![CDATA[if(runprocessingscript == 'actionflow'){
 	
     gs.info("Running action flow from UI Page");
     gs.info("sid value " + sid);
@@ -303,13 +336,10 @@ function parse_actions_as_json(response) {
 	gs.info("URL " + addr);
 		
 	var util = new GlideRecord('incident');
-	util.get(sid);
-//	util.update();
-	
+	util.get(sid);	
 	
 	try {
 		var inputs = {};
-//		inputs['current'] = sid; // GlideRecord of table:  
 		inputs['current'] = util; // GlideRecord of table:  
 		inputs['table_name'] = 'incident';
 
@@ -329,6 +359,36 @@ function parse_actions_as_json(response) {
 }
 
 
+if(runprocessingscript == 'refreshdevices'){
+	// Update message on screen
+//	current.x_646971_uemconn_0_ws1uem = "Checking for new devices in WS1 UEM";
+
+	util = new GlideRecord('incident');
+	util.get(sid);
+	
+	// call the flow to get all devices for this caller and add them if they don't exist
+	try {
+		var refreshinputs = {};
+		refreshinputs['current'] = util; // GlideRecord of table:  
+		refreshinputs['table_name'] = 'incident';
+
+		// Start Asynchronously: Uncomment to run in background.
+		sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1alluemgetdevices').inBackground().withInputs(refreshinputs).run();
+				
+		// Execute Synchronously: Run in foreground.
+		// sn_fd.FlowAPI.getRunner().flow('x_646971_uemconn_0.ws1alluemgetdevices').inForeground().withInputs(inputs).run();
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+
+	session = gs.getSession();
+	addr = session.getUrlOnStack();
+	gs.info("URL " + addr);
+	
+	response.sendRedirect(addr);
+}
 
 
 
@@ -338,13 +398,13 @@ function parse_actions_as_json(response) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>475</sys_mod_count>
+        <sys_mod_count>520</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-11 19:38:04</sys_updated_on>
+        <sys_updated_on>2021-08-13 06:20:12</sys_updated_on>
     </sys_ui_page>
 </record_update>

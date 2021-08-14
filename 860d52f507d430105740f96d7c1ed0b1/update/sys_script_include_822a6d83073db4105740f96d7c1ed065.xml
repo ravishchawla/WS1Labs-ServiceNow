@@ -7,60 +7,127 @@
         <client_callable>true</client_callable>
         <description/>
         <name>ws1_get_action_from_os</name>
-        <script><![CDATA[var ws1_get_action_from_os = Class.create();
+        <script><![CDATA[function get_os_field(device_id) {  
+	var config_table = new GlideRecord("cmdb_ci");
+	config_table.addQuery("sys_id", device_id);
+
+	var status_code;
+	var error_log;
+	var res;
+	config_table.query();
+	
+	if (config_table.next()) {
+
+		var class_name = config_table.sys_class_name;
+
+			var child_table;
+			if (class_name == 'cmdb_ci_computer') {
+				child_table = new GlideRecord("cmdb_ci_computer");
+			} else if (class_name == 'cmdb_ci_handheld_computing') {
+				child_table = new GlideRecord("cmdb_ci_handheld_computing");
+			} else {
+				error_log = 'OS for device ' + device_id + ' not found in type ' + class_name;
+				jslog(error_log);
+				
+				return '';
+			}
+			
+			child_table.addQuery("sys_id", device_id);
+
+			child_table.query();
+
+			if (child_table.next()) {
+				var os_name = child_table.os;
+				return os_name;
+			}
+
+		} else {
+
+		error_log = 'Error with request ' + 'ws1_uem_get_os_field' + ' when querying device ' + device_id;
+		jslog(error_log);
+
+		return '';
+	}
+   }
+
+
+var ws1_get_action_from_os = Class.create();
 ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
    get_action:function() {
 	   var os_name = this.getParameter('sysparm_os_name');
+	   var session_id = this.getParameter('sysparm_sid');
+	   
+	   var INCIDENT_TABLE_NAME = "incident";
+
+	   var DEVICE_TABLE_NAME = "cmdb_ci";
+	   
 	   var TABLE_NAME = "x_646971_uemconn_0_ws1_action_os_mapping";
 
-	   var action_visibility_conditions = {}/*'assist' : false, 
-										   'assist_filemanager' : false, 
-										   'assist_remoteshell' : false,
-										   'assist_screenshare' : false,
-										   'change_passcode' : false, 
-										   'device_wipe' : false,
-										   'device_wipe_unlockpin' : false,
-										   'enterprise_wipe' : false,
-										   'lock' : false
-										  };*/
+	   var app = new GlideRecord(INCIDENT_TABLE_NAME);
+	   app.addQuery('sys_id', session_id);
+	   app.query();
+
+	   var os_name;
+	   if (app.next()) {
+		   var device_id = app.getValue(DEVICE_TABLE_NAME);
+
+		   os_name = get_os_field(device_id);
+
+		   os_name = os_name.toLowerCase();
+		   
+		   if (os_name == '') {
+			   return '';
+		   }
+		   
+		   if (os_name.includes('mac')) {
+			   os_name = 'mac';
+		   } else if (os_name.includes('windows')) {
+			   os_name = 'winrt';
+		   } else if (os_name.includes('android')) {
+			   os_name = 'android'
+		   } else if (os_name.includes('ios')) {
+			   os_name = 'ios'
+		   }
+		   
+		   
+	   }
+
+	   var action_visibility_conditions = {};
 	
-	var fields = new GlideRecord('sys_dictionary');
-	fields.addQuery('name', TABLE_NAME);
-	fields.query();
-	while(fields.next())
-	{
-		action_visibility_conditions[fields.element.toString()] = false
-	}
+		var fields = new GlideRecord('sys_dictionary');
+		fields.addQuery('name', TABLE_NAME);
+		fields.query();
+		while(fields.next())
+		{
+			action_visibility_conditions[fields.element.toString()] = false
+		}
 
-	var mapTable = new GlideRecord(TABLE_NAME);
-	mapTable.addQuery("os_action", os_name);
-	mapTable.orderByDesc("precedent");
-	mapTable.query();
-	gs.info('num rows ' + mapTable.getRowCount());
-	try {
-		while(mapTable.next()) {
-			gs.info('demo -> ');
+		var mapTable = new GlideRecord(TABLE_NAME);
+		mapTable.addQuery("os_action", os_name);
+		mapTable.orderByDesc("precedent");
+		mapTable.query();
+	    
+	    gs.info("Querying WS1 actions for OS " + os_name);
 
-			for (var key in action_visibility_conditions) {
-				var actionValue = mapTable.getValue(key);
+		gs.info('num rows ' + mapTable.getRowCount());
+		try {
+			while(mapTable.next()) {
 
-				if (key == 'devicewipe_mac') {
-					gs.info('devicewipe ' + actionValue);
+				for (var key in action_visibility_conditions) {
+					var actionValue = mapTable.getValue(key);
+
+					if (actionValue == 'true') {
+						action_visibility_conditions[key] = true;
+					}
+
 				}
-				if (actionValue == 'true') {
-					action_visibility_conditions[key] = true;
-				}
-				
-				//gs.info("key " + key + " actionValue " + actionValue);
-				// gs.info('key ' + key + ' actionValue ' + actionValue);
 			}
-		}
-		for (var key in action_visibility_conditions) {
-			gs.info('key ' + key + ' value ' + action_visibility_conditions[key]);
-		}
+// 			for (var key in action_visibility_conditions) {
+// 				gs.info('key ' + key + ' value ' + action_visibility_conditions[key]);
+// 			}
 
-		gs.info('JSON stringify ' + JSON.stringify(action_visibility_conditions));
-		return JSON.stringify(action_visibility_conditions);
+			gs.info('JSON stringify ' + JSON.stringify(action_visibility_conditions));
+			return JSON.stringify(action_visibility_conditions);
 	} catch (err) {
 		return "Catch " + err + "!";
 	}
@@ -72,13 +139,13 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-10 14:50:09</sys_created_on>
         <sys_id>822a6d83073db4105740f96d7c1ed065</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>98</sys_mod_count>
         <sys_name>ws1_get_action_from_os</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_include_822a6d83073db4105740f96d7c1ed065</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-11 19:26:15</sys_updated_on>
+        <sys_updated_on>2021-08-12 23:37:31</sys_updated_on>
     </sys_script_include>
 </record_update>

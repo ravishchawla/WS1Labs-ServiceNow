@@ -11,6 +11,7 @@
         <name>WS1UEMAction</name>
         <order/>
         <script><![CDATA[function onLoad() {	
+	
 	// remove tab if WS1 UEM role is not enabled
 	var isStandard = g_user.hasRole('x_646971_uemconn_0.WS1UEMStandard');
 	if (!isStandard){	
@@ -19,15 +20,13 @@
 		// also make the command read only
 		g_form.setReadOnly('x_646971_uemconn_0_ws1command',true);			
 	}
-	else {		
-		// remove extended options, as these are needed in the next step
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'assist_remoteshell');
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'assist_registryeditor');
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'assist_filemanager');
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'assist_screenshare');
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'changepasscode_winrt');
-		g_form.removeOption('x_646971_uemconn_0_ws1command', 'DeviceWipe_mac');
-
+	else {
+		var sid = g_form.getUniqueValue();
+		var ga = new GlideAjax('x_646971_uemconn_0.ws1_get_action_from_os');
+		ga.addParam('sysparm_name', 'get_action');
+		ga.addParam('sysparm_sid', sid);
+		ga.getXML(parse_os_name);
+		
 		// check os of config item
 		// depending on this hide actions that don't match
 		// TODO 
@@ -42,11 +41,39 @@
 		// and remove destructive actions from list if not
 		var isAdvanced = g_user.hasRole('x_646971_uemconn_0.WS1UEMAdvanced');
 		if (!isAdvanced){
-			g_form.removeOption('x_646971_uemconn_0_ws1command', 'DeviceWipe');
-			g_form.removeOption('x_646971_uemconn_0_ws1command', 'EnterpriseWipe');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'devicewipe');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'enterprisewipe');
 		}
 		
+		var configItem = g_form.getValue('cmdb_ci');
+		if (!configItem){
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'devicewipe');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'enterprisewipe');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'lock');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'assist');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'message');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'syncdevice');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'devicelogs');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'changepasscode');
+			g_form.removeOption('x_646971_uemconn_0_ws1command', 'softreset');
+		}
 	}
+}
+
+function parse_os_name(response) {
+	response = response.responseXML.documentElement.getAttribute("answer");
+	jslog('Received response from request ' + response);
+	$("incident.x_646971_uemconn_0_u_string_1").value = response;
+	
+	response = JSON.parse(response);
+	for (var key in response) {
+		if (response[key] == false && key != "") {
+			g_form.removeOption('x_646971_uemconn_0_ws1command', key);
+		}
+		
+		jslog('Removing option from dropdown: ' + key);
+	}
+	
 }
 
 
@@ -58,7 +85,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>653eb1290735b0105740f96d7c1ed0fd</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>56</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -66,7 +93,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_653eb1290735b0105740f96d7c1ed0fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-12 08:16:35</sys_updated_on>
+        <sys_updated_on>2021-08-13 06:54:35</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

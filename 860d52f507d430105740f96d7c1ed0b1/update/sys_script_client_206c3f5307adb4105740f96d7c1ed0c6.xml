@@ -18,10 +18,10 @@
 	if (isStandard){	
 		var caller = g_form.getValue('caller_id');
 		if (caller){
-			var configItem = g_form.getValue('cmdb_ci');
-			if (configItem){
+//			var configItem = g_form.getValue('cmdb_ci');
+//			if (configItem){
 				actionNotEditable = false;	
-			}
+//			}
 		}
 	}	
 	
@@ -33,7 +33,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>206c3f5307adb4105740f96d7c1ed0c6</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>WS1UEMCaller</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -41,7 +41,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_206c3f5307adb4105740f96d7c1ed0c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-10 02:52:06</sys_updated_on>
+        <sys_updated_on>2021-08-13 06:58:10</sys_updated_on>
         <table>incident</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

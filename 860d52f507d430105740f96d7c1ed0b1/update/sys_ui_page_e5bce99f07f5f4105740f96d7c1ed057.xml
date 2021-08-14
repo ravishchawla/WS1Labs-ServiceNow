@@ -19,7 +19,7 @@ function onLoad() {
 			}
 		}
 		
-		if (action_table.value == 'EnterpriseWipe') {	
+		if (action_table.value == 'enterprisewipe') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_enterprisewipe").checked = false;
 			}
@@ -28,7 +28,7 @@ function onLoad() {
 			}
 		}
 		
-		if (action_table.value == 'DeviceWipe') {	
+		if (action_table.value == 'devicewipe') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_devicewipe").checked = false;
 			}
@@ -37,7 +37,7 @@ function onLoad() {
 			}
 		}
 		
-		if (action_table.value == 'SyncDevice') {	
+		if (action_table.value == 'syncdevice') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_syncdevice").checked = false;
 			}
@@ -64,7 +64,7 @@ function onLoad() {
 			}
 		}
 
-		if (action_table.value == 'SoftReset') {	
+		if (action_table.value == 'softreset') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_softreset").checked = false;
 			}
@@ -82,12 +82,21 @@ function onLoad() {
 			}
 		}
 		
-		if (action_table.value == 'Lock') {	
+		if (action_table.value == 'lock') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_lock").checked = false;
 			}
 			else {
 				$("input_ws1_lock").checked = true;
+			}
+		}
+		
+		if (action_table.value == 'refreshdevices') {	
+			if (action_table.inactive == 'true') {
+				$("input_ws1_refreshdevices").checked = false;
+			}
+			else {
+				$("input_ws1_refreshdevices").checked = true;
 			}
 		}
 
@@ -112,7 +121,7 @@ function setValues() {
 			}
 		}
 		
-		if (action_table.value == 'EnterpriseWipe') {	
+		if (action_table.value == 'enterprisewipe') {	
 			if ( $("input_ws1_enterprisewipe").checked == false) {
 				action_table.inactive = true;
 			}
@@ -121,7 +130,7 @@ function setValues() {
 			}
 		}
 			
-		if (action_table.value == 'DeviceWipe') {	
+		if (action_table.value == 'devicewipe') {	
 			if ( $("input_ws1_devicewipe").checked == false) {
 				action_table.inactive = true;
 			}
@@ -130,7 +139,7 @@ function setValues() {
 			}
 		}
 	
-		if (action_table.value == 'SyncDevice' || action_table.value == 'DeviceWipe_mac') {	
+		if (action_table.value == 'syncdevice') {	
 			if ( $("input_ws1_syncdevice").checked == false) {
 				action_table.inactive = true;
 			}
@@ -139,8 +148,7 @@ function setValues() {
 			}
 		}
 	
-		if (action_table.value == 'assist' || action_table.value == 'assist_screenshare' || action_table.value == 'assist_filemanager' 
-				|| action_table.value == 'assist_registryeditor' || action_table.value == 'assist_remoteshell') {	
+		if (action_table.value == 'assist') {	
 			if ( $("input_ws1_remoteassist").checked == false) {
 				action_table.inactive = true;
 			}
@@ -158,7 +166,7 @@ function setValues() {
 			}
 		}
 		
-		if (action_table.value == 'SoftReset') {	
+		if (action_table.value == 'softreset') {	
 			if ( $("input_ws1_softreset").checked == false) {
 				action_table.inactive = true;
 			}
@@ -167,7 +175,7 @@ function setValues() {
 			}
 		}
 		
-		if (action_table.value == 'changepasscode' || action_table.value == 'changepasscode_winrt') {	
+		if (action_table.value == 'changepasscode') {	
 			if ( $("input_ws1_changepasscode").checked == false) {
 				action_table.inactive = true;
 			}
@@ -176,8 +184,17 @@ function setValues() {
 			}
 		}	
 		
-		if (action_table.value == 'Lock') {	
+		if (action_table.value == 'lock') {	
 			if ( $("input_ws1_lock").checked == false) {
+				action_table.inactive = true;
+			}
+			else {
+				action_table.inactive = false;
+			}
+		}
+		
+		if (action_table.value == 'refreshdevices') {	
+			if ( $("input_ws1_refreshdevices").checked == false) {
 				action_table.inactive = true;
 			}
 			else {
@@ -274,6 +291,12 @@ function setValues() {
 		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			<input type="checkbox" name="input_ws1_lock" id="input_ws1_lock" />
 		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMRefresh')}  
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_refreshdevices" id="input_ws1_refreshdevices" />
+		</td></tr>
 
 	</table>
 
@@ -293,13 +316,13 @@ function setValues() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-11 09:37:19</sys_created_on>
         <sys_id>e5bce99f07f5f4105740f96d7c1ed057</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_e5bce99f07f5f4105740f96d7c1ed057</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-12 02:59:45</sys_updated_on>
+        <sys_updated_on>2021-08-13 07:35:01</sys_updated_on>
     </sys_ui_page>
 </record_update>

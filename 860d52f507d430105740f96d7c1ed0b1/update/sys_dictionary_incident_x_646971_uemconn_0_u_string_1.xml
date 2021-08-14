@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="x_646971_uemconn_0_ws1command" table="incident">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="x_646971_uemconn_0_u_string_1" table="incident">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>3</choice>
+        <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Workspace ONE UEM Action</column_label>
+        <column_label>ws1_actions_response</column_label>
         <comments/>
         <create_roles/>
-        <default_value>none</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -22,12 +22,12 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>x_646971_uemconn_0_ws1command</element>
+        <element>x_646971_uemconn_0_u_string_1</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Choice">choice</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>incident</name>
@@ -47,16 +47,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-06-02 08:54:06</sys_created_on>
-        <sys_id>a293cd3407a0b0105740f96d7c1ed04f</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>Workspace ONE UEM Action</sys_name>
+        <sys_created_on>2021-08-12 18:25:02</sys_created_on>
+        <sys_id>0a2fe4b7077d38105740f96d7c1ed0a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws1_actions_response</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
-        <sys_update_name>sys_dictionary_incident_x_646971_uemconn_0_ws1command</sys_update_name>
+        <sys_update_name>sys_dictionary_incident_x_646971_uemconn_0_u_string_1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-13 05:33:05</sys_updated_on>
+        <sys_updated_on>2021-08-12 18:25:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

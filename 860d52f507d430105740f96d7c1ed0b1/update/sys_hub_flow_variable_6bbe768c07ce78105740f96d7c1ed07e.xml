@@ -1,18 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="x_646971_uemconn_0_ws1command" table="incident">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_variable">
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=36844f30-574d-4d79-bcde-475707130f36</attributes>
         <audit>false</audit>
-        <calculation/>
-        <choice>3</choice>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Workspace ONE UEM Action</column_label>
+        <column_label/>
         <comments/>
         <create_roles/>
-        <default_value>none</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -22,16 +27,23 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>x_646971_uemconn_0_ws1command</element>
+        <element>ws1uemownership</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Choice">choice</internal_type>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>WS1UEMOwnership</label>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
-        <name>incident</name>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMFindDevice">53be368c07ce78105740f96d7c1ed0aa</model>
+        <model_id>53be368c07ce78105740f96d7c1ed0aa</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_53be368c07ce78105740f96d7c1ed0aa</name>
         <next_element/>
+        <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -45,18 +57,18 @@
         <sizeclass/>
         <spell_check>false</spell_check>
         <staged>false</staged>
-        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-06-02 08:54:06</sys_created_on>
-        <sys_id>a293cd3407a0b0105740f96d7c1ed04f</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>Workspace ONE UEM Action</sys_name>
+        <sys_created_on>2021-08-13 23:30:51</sys_created_on>
+        <sys_id>6bbe768c07ce78105740f96d7c1ed07e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMOwnership</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
-        <sys_update_name>sys_dictionary_incident_x_646971_uemconn_0_ws1command</sys_update_name>
+        <sys_update_name>sys_hub_flow_variable_6bbe768c07ce78105740f96d7c1ed07e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-13 05:33:05</sys_updated_on>
+        <sys_updated_on>2021-08-13 23:30:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -67,5 +79,5 @@
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
-    </sys_dictionary>
+    </sys_hub_flow_variable>
 </record_update>

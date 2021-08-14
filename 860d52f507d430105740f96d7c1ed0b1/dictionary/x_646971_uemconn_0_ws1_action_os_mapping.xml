@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="ws1_action_os_mapping" max_length="40" name="x_646971_uemconn_0_ws1_action_os_mapping" type="collection">
+    <element label="ws1_action_os_mapping" max_length="40" name="x_646971_uemconn_0_ws1_action_os_mapping" sizeclass="9" type="collection">
         <element label="Remote Assist" max_length="40" name="assist" type="string"/>
         <element label="Assist (File Manager)" max_length="40" name="assist_filemanager" type="string"/>
         <element label="Assist (Registry Editor)" max_length="40" name="assist_registryeditor" type="string"/>
@@ -12,6 +12,7 @@
         <element label="Device Wipe (mac)" max_length="40" name="devicewipe_mac" type="string"/>
         <element label="Enterprise Wipe" max_length="40" name="enterprisewipe" type="string"/>
         <element label="Lock Device" max_length="40" name="lock" type="string"/>
+        <element label="Lock Device (mac)" max_length="40" name="lock_mac" type="string"/>
         <element label="Max OS" max_length="40" name="max_os" type="string"/>
         <element label="Max UEM" max_length="40" name="max_uem" type="string"/>
         <element label="Send Message" max_length="40" name="message" type="string"/>
