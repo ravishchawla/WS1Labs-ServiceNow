@@ -14,13 +14,15 @@ function onLoad() {
 	$("div_ws1_caption").hidden = true;
 	
 	if (action.value == "assist") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMAssistInfo');
 		
-		var TRHRESHOLD_VERSION = "21.0.7";
+		// TODO -- This threshold value should be from the table
+		var THRESHOLD_VERSION = "21.5";
 		var console_version = $("ws1_version");
-		if (console_version) {
-			if (util_compare_versions(console_version.value, TRHRESHOLD_VERSION) <= 0) {
+						
+		if (console_version) {			
+			if (util_compare_versions(console_version.value, THRESHOLD_VERSION) >= 0) {
 				$("div_ws1_assist_type").hidden = false;
 				ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
 				ws1_actions_response = JSON.parse(ws1_actions_response);
@@ -43,36 +45,40 @@ function onLoad() {
 		}
 		
 	} else if (action.value == "message") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMMessageInfo');
+		$("submitData").disabled = true;
 		
 		$("div_ws1_message").hidden = false;	
 
 	} else if (action.value == "devicelogs") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMDeviceLogsInfo');
 	
 	} else if (action.value == "changepasscode") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMPasscodeInfo');
-		
+		$("submitData").disabled = true;
+	
 		$("div_ws1_passcode").hidden = false;
 	
 	} else if (action.value == "lock") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMLockInfo');
 		
 		ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
 		ws1_actions_response = JSON.parse(ws1_actions_response);
 				
 		if (ws1_actions_response["lock_mac"] == true) {
+			$("submitData").disabled = true;
+
 			$("div_ws1_unlock_pin").hidden = false;
 			$("div_ws1_caption").hidden = false;
 			$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMRememberPin')  + '</g:form_label>';
 		}
 			
 	} else if (action.value == "enterprisewipe") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMEnterpriseWipeInfo');
 		
 		$("div_ws1_caption").hidden = false;
@@ -80,15 +86,15 @@ function onLoad() {
 		
 	
 	} else if (action.value == "softreset") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMSoftResetInfo');
 	
 	} else if (action.value == "syncdevice") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMSyncDeviceInfo');
 		
 	} else if (action.value == "devicewipe") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMDeviceWipeInfo');
 		
 		var warningMessage = getMessage('WS1UEMWarningDeviceWipe');
@@ -105,7 +111,7 @@ function onLoad() {
 		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + warningMessage  + '</g:form_label>';
 	}
 	else if (action.value == "refreshdevices") {
-		// Infomation message text
+		// Information message text
 		stringText = getMessage('WS1UEMRefreshDevices');
 	}
 	
@@ -116,18 +122,19 @@ function onLoad() {
 
 
 function continueOK() {
-//	alert("OK clicked");
-//	var gdw = GlideDialogWindow.get();
 	var action =gel('ws1_action').value;
-	var unlockpin = gel('input_ws1_unlock_pin').value;
+	
+	var unlockpin0 = gel('input_ws1_unlock_pin0').value;
+	var unlockpin1 = gel('input_ws1_unlock_pin1').value;
+	var unlockpin2 = gel('input_ws1_unlock_pin2').value;
+	var unlockpin3 = gel('input_ws1_unlock_pin3').value;
+	var unlockpin4 = gel('input_ws1_unlock_pin4').value;
+	var unlockpin5 = gel('input_ws1_unlock_pin5').value;
+	var unlockpin = unlockpin0 + unlockpin1 + unlockpin2 +unlockpin3 + unlockpin4 + unlockpin5;
+	
 	var passcode = gel('input_ws1_passcode').value;
 	var message = gel('input_ws1_message').value;
-	
-	// TODO - this isn't working, so hardcoding for now
-//	var assisttype = gel('input_ws1_assist').value;
-	var assisttype = 'ScreenShare';
-//	alert( "Starting "+ assisttype);
-	
+	var assisttype = gel('input_ws1_assist_type').value;
 	var sid = gel('sid').value;
 
 	sid = g_form.getUniqueValue();
@@ -153,9 +160,6 @@ function continueOK() {
 		app.x_646971_uemconn_0_ws1uem = str;
 		app.update();
 	}
-	
-   // g_form.save();
-//	alert( "Starting "+action+"---"+unlockpin+"---"+message+"***");
 
 	if (action == 'refreshdevices') {
 		document.getElementById("runprocessingscript").value = "refreshdevices";
@@ -169,14 +173,13 @@ function continueOK() {
 }
 
 function continueCancel() {
-//	alert("Cancel clicked");
 	GlideDialogWindow.get().destroy();
 }
 
 function util_compare_versions(version_a, version_b) {
 	var sub_versions_a = version_a.split(".").map(Number);
 	var sub_versions_b = version_b.split(".").map(Number);
-
+			
 	if (sub_versions_a.length < sub_versions_b.length) {
 		sub_versions_a = sub_versions_a.concat(Array(sub_versions_b.length - sub_versions_a.length).fill(0));
 	} else 	if (sub_versions_b.length < sub_versions_a.length) {
@@ -184,34 +187,16 @@ function util_compare_versions(version_a, version_b) {
 	}
 	
 	for (var i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i++) {
-		if (sub_versions_a[i] < sub_versions_b[i]) {
+		if (sub_versions_a[i] > sub_versions_b[i]) {
 			return 1;
 		}
 		
-		if (sub_versions_a[i] > sub_versions_b[i]) {
+		if (sub_versions_a[i] < sub_versions_b[i]) {
 			return -1;
 		}
 	}
 	
 	return 0;
-}
-
-function parse_os_name(response) {
-	response = response.responseXML.documentElement.getAttribute("answer");
-	jslog('Received response from request ' + response);
-	var os_name = response.toLowerCase();
-// 	if (os_name.includes('mac')) {
-// 		$("div_ws1_unlock_pin").hidden = false;
-// 	}
-	
-	getActionsForOs(os_name);
-}
-
-function getActionsForOs(os_name) {	
-	var ga = new GlideAjax('x_646971_uemconn_0.ws1_get_action_from_os');
-	ga.addParam('sysparm_name', 'get_action');
-	ga.addParam('sysparm_os_name', "mac");
-	ga.getXML(parse_actions_as_json);
 }
 
 function parse_actions_as_json(response) {
@@ -244,6 +229,115 @@ function remove_actions_from_select_input(select_input, option_name) {
 			selectobject.remove(i);
 		}
 	}
+}
+
+// validate the entered pin is valid
+function validatePin() {
+	var validPin0 = false;
+	var unlockpin0 = gel('input_ws1_unlock_pin0').value;
+	if (unlockpin0.length == 1) {
+		unlockpin0 = parseInt(unlockpin0);
+		if(unlockpin0 >=0 && unlockpin0 <=9) {
+			validPin0 = true;
+		}
+		else {
+			$("input_ws1_unlock_pin0").value = "";
+		}
+	}
+	
+	var validPin1 = false;
+	var unlockpin1 = gel('input_ws1_unlock_pin1').value;
+	if (unlockpin1.length == 1) {
+		unlockpin1 = parseInt(unlockpin1);
+		if(unlockpin1 >=0 && unlockpin1 <=9) {
+			validPin1 = true;
+		}
+		else {
+			$("input_ws1_unlock_pin1").value = "";
+		}
+	}
+	
+	var validPin2 = false;
+	var unlockpin2 = gel('input_ws1_unlock_pin2').value;
+	if (unlockpin2.length == 1) {
+		unlockpin2 = parseInt(unlockpin2);
+		if(unlockpin2 >=0 && unlockpin2 <=9) {
+			validPin2 = true;
+		}
+		else {
+			$("input_ws1_unlock_pin2").value = "";
+		}
+	}
+	
+	var validPin3 = false;
+	var unlockpin3 = gel('input_ws1_unlock_pin3').value;
+	if (unlockpin3.length == 1) {
+		unlockpin3 = parseInt(unlockpin3);
+		if(unlockpin3 >=0 && unlockpin3 <=9) {
+			validPin3 = true;
+		}
+		else {
+			$("input_ws1_unlock_pin3").value = "";
+		}
+	}
+	
+	var validPin4 = false;
+	var unlockpin4 = gel('input_ws1_unlock_pin4').value;
+	if (unlockpin4.length == 1) {
+		unlockpin4 = parseInt(unlockpin4);
+		if(unlockpin4 >=0 && unlockpin4 <=9) {
+			validPin4 = true;
+		}
+		else {
+			$("input_ws1_unlock_pin4").value = "";
+		}
+	}
+	
+	var validPin5 = false;
+	var unlockpin5 = gel('input_ws1_unlock_pin5').value;
+	if (unlockpin5.length == 1) {
+		unlockpin5 = parseInt(unlockpin5);
+		if(unlockpin5 >=0 && unlockpin5 <=9) {
+			validPin5 = true;
+		}
+		else {
+			$("input_ws1_unlock_pin5").value = "";
+		}
+	}
+	
+	if (validPin0 && validPin1 && validPin2 && validPin3 && validPin4 && validPin5) {
+		$("submitData").disabled = false;
+	}
+	else {
+		$("submitData").disabled = true;
+	}
+}
+
+
+// validate the entered passcodes match
+function validatePasscode() {
+	var passcode = gel('input_ws1_passcode').value;
+	var passcodeConfirm = gel('input_ws1_passcode_confirm').value;
+
+	if (passcode.length > 0 && passcode == passcodeConfirm) {
+		$("submitData").disabled = false;
+	}
+	else {
+		$("submitData").disabled = true;
+	}
+}
+
+
+// validate the message is greater than 1 character
+function checkMessage() {
+	var message = gel('input_ws1_message').value;
+
+	if (message.length > 0) {
+		$("submitData").disabled = false;
+	}
+	else {
+		$("submitData").disabled = true;
+	}
 }]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
@@ -258,7 +352,7 @@ function remove_actions_from_select_input(select_input, option_name) {
     <input type="hidden" id="ws1_action" name="ws1_action" value="${jvar_ws1_action}" />
     <input type="hidden" id="sid" name="sid" value="${jvar_si}" />		
 	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
-	<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_646971_uemconn_0.WS1UEM Platform')};"/>
+	<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_646971_uemconn_0.WS1UEM Platform')}"/>
 		 		
 	<div style="margin:10px;margin-top:15px" hidden="true">
 		<span style="display:inline-block; width:40%">
@@ -284,7 +378,7 @@ function remove_actions_from_select_input(select_input, option_name) {
 			</g:form_label>
 		</span>
 		<br>
-			<textarea rows = "5" cols = "60" name="input_ws1_message" id="input_ws1_message" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_send_message" query="active=true">
+			<textarea rows = "5" cols = "60" name="input_ws1_message" id="input_ws1_message" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_send_message" query="active=true" oninput = "checkMessage()">
 			</textarea>
 		</br>
 
@@ -296,8 +390,15 @@ function remove_actions_from_select_input(select_input, option_name) {
 				${gs.getMessage('WS1UEMPasscode')}
 			</g:form_label>
 		</span>	
-		<input type="text" name="input_ws1_passcode" id="input_ws1_passcode" table="incident"    field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10"/>
-		
+		<input type="password" name="input_ws1_passcode" id="input_ws1_passcode" table="incident"    field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10" oninput = "validatePasscode()"/>
+		<div>
+		<span style="display:inline-block; width:40%">
+			<g:form_label>
+				${gs.getMessage('WS1UEMConfirmPasscode')}
+			</g:form_label>
+		</span>	
+		<input type="password" name="input_ws1_passcode_confirm" id="input_ws1_passcode_confirm" table="incident"    field="x_646971_uemconn_0_ws1_passcode" query="active=true" size="10" oninput = "validatePasscode()"/>
+		</div>
 	</div>
 		
 	<div style="margin:10px" id="div_ws1_unlock_pin" hidden="true">
@@ -306,8 +407,12 @@ function remove_actions_from_select_input(select_input, option_name) {
 				${gs.getMessage('WS1UEMUnlock Pin')}
 			</g:form_label>
 		</span>	
-        <input type="text" name="input_ws1_unlock_pin" id="input_ws1_unlock_pin" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="10"/>
-		
+        <input type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin()"/>
+		<input type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin()"/>
+		<input type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin()"/>
+		<input type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin()"/>
+		<input type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin()"/>
+		<input type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin()"/>
 	</div>
 	
 	<div style="margin:10px" id="div_ws1_assist_type" hidden="true">
@@ -316,7 +421,7 @@ function remove_actions_from_select_input(select_input, option_name) {
 				${gs.getMessage('WS1UEMAssist Type')}
 			</g:form_label>
 		</span>	
-        <g:ui_choicelist name="input_ws1_assist_type" id="input_ws1_assist" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_uem_assist_type" query="active=true" size="10"/>
+        <g:ui_choicelist name="input_ws1_assist_type" id="input_ws1_assist_type" table="incident" mandatory="true"   field="x_646971_uemconn_0_ws1_uem_assist_type" query="active=true" size="10"/>
 		
 	</div>
 			   
@@ -398,13 +503,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>520</sys_mod_count>
+        <sys_mod_count>593</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-13 06:20:12</sys_updated_on>
+        <sys_updated_on>2021-08-17 03:32:00</sys_updated_on>
     </sys_ui_page>
 </record_update>

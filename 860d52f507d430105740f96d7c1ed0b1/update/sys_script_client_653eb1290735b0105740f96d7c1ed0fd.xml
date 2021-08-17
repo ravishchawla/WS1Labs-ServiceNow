@@ -21,6 +21,8 @@
 		g_form.setReadOnly('x_646971_uemconn_0_ws1command',true);			
 	}
 	else {
+		// var console_version = gs.getProperty('x_646971_uemconn_0.WS1UEM Platform');
+		// console.log('> console version ' + console_version)
 		var sid = g_form.getUniqueValue();
 		var ga = new GlideAjax('x_646971_uemconn_0.ws1_get_action_from_os');
 		ga.addParam('sysparm_name', 'get_action');
@@ -85,7 +87,7 @@ function parse_os_name(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>653eb1290735b0105740f96d7c1ed0fd</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -93,7 +95,7 @@ function parse_os_name(response) {
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_653eb1290735b0105740f96d7c1ed0fd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-13 06:54:35</sys_updated_on>
+        <sys_updated_on>2021-08-15 19:33:39</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

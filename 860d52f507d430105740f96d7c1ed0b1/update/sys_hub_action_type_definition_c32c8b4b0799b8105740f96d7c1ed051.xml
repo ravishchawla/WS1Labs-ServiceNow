@@ -13,7 +13,7 @@
         <ih_action>true</ih_action>
         <internal_name>uemchangepasscode</internal_name>
         <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1body}}","label":"action➛WS1Passcode","type":"action","ref":""},{"name":"{{action.ws1passcode}}","label":"action➛WS1Passcode","type":"action","ref":""},{"name":"{{action.ws1action}}","label":"action➛WS1Action","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[5a3ddb2b-356d-4c8b-b21b-259bace718d6].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[5a3ddb2b-356d-4c8b-b21b-259bace718d6].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[5a3ddb2b-356d-4c8b-b21b-259bace718d6].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>a4fcf87b07993c105740f96d7c1ed0f1</latest_snapshot>
+        <latest_snapshot>7c692a7407c630105740f96d7c1ed03c</latest_snapshot>
         <master_snapshot>12cc078b0799b8105740f96d7c1ed02d</master_snapshot>
         <name>UEMChangePasscode</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c32c8b4b0799b8105740f96d7c1ed051</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>UEMChangePasscode</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_c32c8b4b0799b8105740f96d7c1ed051</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:54</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:59</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -94,10 +94,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:24:14</sys_created_on>
         <sys_id>1b2c8b4b0799b8105740f96d7c1ed0a2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:43</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1b2c8b4b0799b8105740f96d7c1ed0a2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -108,10 +108,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:24:15</sys_created_on>
         <sys_id>2b2c8b4b0799b8105740f96d7c1ed0b9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-17 01:26:45</sys_updated_on>
-        <value>https://assistrm.ssdevrd.com/api</value>
+        <sys_updated_on>2021-08-16 05:52:44</sys_updated_on>
+        <value>https://assistrm.ssdevrd.com:443/api</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -243,12 +243,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:24:15</sys_created_on>
         <sys_id>eb2c8b4b0799b8105740f96d7c1ed0b6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:43</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:44</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
-    "Passcode":{{action.ws1passcode}},
+    "Passcode":"{{action.ws1passcode}}",
     "WorkPasscode": false
 }</value>
     </sys_element_mapping>
@@ -1124,14 +1124,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:24:16</sys_created_on>
         <sys_id>b72ccb4b0799b8105740f96d7c1ed004</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:50</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1207,14 +1207,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:24:15</sys_created_on>
         <sys_id>bf2c8b4b0799b8105740f96d7c1ed0fd</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:50</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1347,17 +1347,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="UEMChangePasscode">c32c8b4b0799b8105740f96d7c1ed051</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"1bcc478b0799b8105740f96d7c1ed068","name":"plan"}}</plan>
-        <snapshot>a4fcf87b07993c105740f96d7c1ed0f1</snapshot>
+        <snapshot>7c692a7407c630105740f96d7c1ed03c</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:26:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1bcc478b0799b8105740f96d7c1ed068</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:56</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:53:03</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1846,10 +1846,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:26:54</sys_created_on>
         <sys_id>5acc078b0799b8105740f96d7c1ed03e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:53</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:58</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5acc078b0799b8105740f96d7c1ed03e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1902,10 +1902,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:26:54</sys_created_on>
         <sys_id>5ecc078b0799b8105740f96d7c1ed053</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-17 01:26:54</sys_updated_on>
-        <value>https://assistrm.ssdevrd.com/api</value>
+        <sys_updated_on>2021-08-16 05:52:58</sys_updated_on>
+        <value>https://assistrm.ssdevrd.com:443/api</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1995,12 +1995,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:26:54</sys_created_on>
         <sys_id>16cc078b0799b8105740f96d7c1ed051</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:53</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:58</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
-    "Passcode":{{action.ws1passcode}},
+    "Passcode":"{{action.ws1passcode}}",
     "WorkPasscode": false
 }</value>
     </sys_element_mapping>
@@ -2398,14 +2398,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:26:55</sys_created_on>
         <sys_id>2acc078b0799b8105740f96d7c1ed090</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:53</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2481,14 +2481,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-17 01:26:55</sys_created_on>
         <sys_id>62cc078b0799b8105740f96d7c1ed08a</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 22:53:53</sys_updated_on>
+        <sys_updated_on>2021-08-16 05:52:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
