@@ -13,18 +13,17 @@
         <script><![CDATA[function onChange() {
 	var actionNotEditable = true;
 	
-	// If WS1 UEM role is enabled and there is a caller and a configurationItem enable the action button, else make it readonly
+	// If WS1 UEM role is enabled, there is a caller and a valid state then enable the action option, else make it readonly
 	var isStandard = g_user.hasRole('x_646971_uemconn_0.WS1UEMStandard');
 	if (isStandard){	
 		var caller = g_form.getValue('caller_id');
 		if (caller){
-//			var configItem = g_form.getValue('cmdb_ci');
-//			if (configItem){
+			var currentstate = g_form.getValue('state');
+			if (currentstate == 1 || currentstate == 2){
 				actionNotEditable = false;	
-//			}
+			}
 		}
 	}	
-	
 	g_form.setReadOnly('x_646971_uemconn_0_ws1command', actionNotEditable);	
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -33,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>206c3f5307adb4105740f96d7c1ed0c6</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>WS1UEMCaller</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -41,7 +40,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_client_206c3f5307adb4105740f96d7c1ed0c6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-13 06:58:10</sys_updated_on>
+        <sys_updated_on>2021-08-17 04:06:06</sys_updated_on>
         <table>incident</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
