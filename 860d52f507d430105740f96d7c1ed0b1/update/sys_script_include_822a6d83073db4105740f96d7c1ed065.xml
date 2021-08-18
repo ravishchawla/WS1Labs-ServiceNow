@@ -52,6 +52,34 @@
 	}
    }
 
+function util_compare_versions(version_a, version_b) {
+	
+	if ((!version_a) || (!version_b)) {
+		return 0;
+	}
+	
+	var sub_versions_a = version_a.split(".").map(Number);
+	
+	var sub_versions_b = version_b.split(".").map(Number);
+	
+	if (sub_versions_a.length < sub_versions_b.length) {
+		sub_versions_a = sub_versions_a.concat(Array.apply(null, Array(sub_versions_b.length - sub_versions_a.length)).map(function(){return 0;}));
+	} else 	if (sub_versions_b.length < sub_versions_a.length) {
+		sub_versions_b = sub_versions_b.concat(Array.apply(null, Array(sub_versions_a.length - sub_versions_b.length)).map(function(){return 0;}));
+	}
+	
+	for (var i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i++) {
+		if (sub_versions_a[i] > sub_versions_b[i]) {
+			return 1;
+		}
+		
+		if (sub_versions_a[i] < sub_versions_b[i]) {
+			return -1;
+		}
+	}
+	
+	return 0;
+}
 
 var ws1_get_action_from_os = Class.create();
 ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
@@ -86,12 +114,26 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
 
 			if (os_name.includes('mac')) {
 				os_name = 'mac';
-			} else if (os_name.includes('windows')) {
-				os_name = 'winrt';
 			} else if (os_name.includes('android')) {
 				os_name = 'android';
 			} else if (os_name.includes('ios')) {
 				os_name = 'ios';
+			} else if (os_name.includes('windows 10')) {
+				if (os_name.includes('10')) {
+					if (os_name.includes('home')) {
+						os_name = 'windows10_home';
+					} else if (os_name.includes('education')) {
+						os_name = 'windows10_education';
+					} else if (os_name.includes('pro')) {
+						os_name = 'windows10_pro';
+					} else if (os_name.endsWith('s')) {
+						os_name = 'windows10_s';
+					} else {
+						os_name = 'windows10_enterprise';
+					}
+				} else if (os_name.includes('windows')) {
+					os_name = 'winrt';
+				}
 			}
 		}
 
@@ -114,14 +156,23 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
 
 		try {
 			while(mapTable.next()) {
+				
+				var min_os = mapTable.getValue('min_os');
+				var max_os = mapTable.getValue('max_os');
+				
+// 				gs.info('comp0 ' + util_compare_versions(os_version, min_os))
+// 				gs.info('comp1 ' + util_compare_versions(os_version, max_os))				
+				
+				if ((util_compare_versions(os_version, min_os) >= 0) && 
+					(util_compare_versions(os_version, max_os) <= 0)) {
 
-				for (var key in action_visibility_conditions) {
-					var actionValue = mapTable.getValue(key);
+					for (var key in action_visibility_conditions) {
+						var actionValue = mapTable.getValue(key);
 
-					if (actionValue == 'true') {
-						action_visibility_conditions[key] = true;
+						if (actionValue == 'true') {
+							action_visibility_conditions[key] = true;
+						}
 					}
-
 				}
 			}
 
@@ -138,13 +189,13 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-10 14:50:09</sys_created_on>
         <sys_id>822a6d83073db4105740f96d7c1ed065</sys_id>
-        <sys_mod_count>104</sys_mod_count>
+        <sys_mod_count>129</sys_mod_count>
         <sys_name>ws1_get_action_from_os</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_include_822a6d83073db4105740f96d7c1ed065</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-16 17:47:03</sys_updated_on>
+        <sys_updated_on>2021-08-17 18:52:11</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -9,7 +9,7 @@ function onLoad() {
 	action_table.addQuery('element', "x_646971_uemconn_0_ws1command");
 	action_table.query();
 	while (action_table.next()) {
-	
+		
 		if (action_table.value == 'devicelogs') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_requestlogs").checked = false;
@@ -18,8 +18,7 @@ function onLoad() {
 				$("input_ws1_requestlogs").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'enterprisewipe') {	
+		else if (action_table.value == 'enterprisewipe') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_enterprisewipe").checked = false;
 			}
@@ -27,8 +26,7 @@ function onLoad() {
 				$("input_ws1_enterprisewipe").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'devicewipe') {	
+		else if (action_table.value == 'devicewipe') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_devicewipe").checked = false;
 			}
@@ -36,8 +34,7 @@ function onLoad() {
 				$("input_ws1_devicewipe").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'syncdevice') {	
+		else if (action_table.value == 'syncdevice') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_syncdevice").checked = false;
 			}
@@ -45,8 +42,7 @@ function onLoad() {
 				$("input_ws1_syncdevice").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'assist') {	
+		else if (action_table.value == 'assist') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_remoteassist").checked = false;
 			}
@@ -54,8 +50,7 @@ function onLoad() {
 				$("input_ws1_remoteassist").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'message') {	
+		else if (action_table.value == 'message') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_message").checked = false;
 			}
@@ -63,8 +58,7 @@ function onLoad() {
 				$("input_ws1_message").checked = true;
 			}
 		}
-
-		if (action_table.value == 'softreset') {	
+		else if (action_table.value == 'softreset') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_softreset").checked = false;
 			}
@@ -72,8 +66,7 @@ function onLoad() {
 				$("input_ws1_softreset").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'changepasscode') {	
+		else if (action_table.value == 'changepasscode') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_changepasscode").checked = false;
 			}
@@ -81,8 +74,7 @@ function onLoad() {
 				$("input_ws1_changepasscode").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'lock') {	
+		else if (action_table.value == 'lock') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_lock").checked = false;
 			}
@@ -90,8 +82,7 @@ function onLoad() {
 				$("input_ws1_lock").checked = true;
 			}
 		}
-		
-		if (action_table.value == 'refreshdevices') {	
+		else if (action_table.value == 'refreshdevices') {	
 			if (action_table.inactive == 'true') {
 				$("input_ws1_refreshdevices").checked = false;
 			}
@@ -99,13 +90,11 @@ function onLoad() {
 				$("input_ws1_refreshdevices").checked = true;
 			}
 		}
-
 	}
 }
 
 
-function setValues() {
-	
+function setValues() {	
 	var action_table = new GlideRecord('sys_choice');
 	action_table.addQuery('element', "x_646971_uemconn_0_ws1command");
 	action_table.query();
@@ -203,11 +192,22 @@ function setValues() {
 		}
 		
 		action_table.update();
-	}		
+	}	
 } 
 
-
-
+// update checked box
+function updateValue(cb, actionType) {
+	var action_table = new GlideRecord('sys_choice');
+	action_table.addQuery('element', "x_646971_uemconn_0_ws1command");
+	action_table.query();
+	while (action_table.next()) {
+		if (action_table.value == actionType) {	
+			action_table.inactive = !cb.checked;
+			action_table.update();
+			return;
+		}
+	}
+}
 
 
 ]]></client_script>
@@ -237,77 +237,74 @@ function setValues() {
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMChangePasscode')} 
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_changepasscode" id="input_ws1_changepasscode" onclick = "updateValue(this, 'changepasscode')"/>
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMDeviceWipe')}
 		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_devicewipe" id="input_ws1_devicewipe"/>
+			<input type="checkbox" name="input_ws1_devicewipe" id="input_ws1_devicewipe" onclick = "updateValue(this, 'devicewipe')"/>
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMEnterpriseWipe')}  
 		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_enterprisewipe" id="input_ws1_enterprisewipe" />
-		</td></tr>
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMRequestLogs')}
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_requestlogs" id="input_ws1_requestlogs"/>
-		</td></tr>
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMSyncDevice')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_syncdevice" id="input_ws1_syncdevice" />
-		</td></tr>
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMRemoteAssist')}  
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_remoteassist" id="input_ws1_remoteassist" />
-		</td></tr>
-		
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMSendMessage')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_message" id="input_ws1_message" />
-		</td></tr>
-		
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMSoftReset')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_softreset" id="input_ws1_softreset" />
-		</td></tr>
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMChangePasscode')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_changepasscode" id="input_ws1_changepasscode" />
+			<input type="checkbox" name="input_ws1_enterprisewipe" id="input_ws1_enterprisewipe" onclick = "updateValue(this, 'enterprisewipe')"/>
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMLockDevice')}  
 		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_lock" id="input_ws1_lock" />
-		</td></tr>
+			<input type="checkbox" name="input_ws1_lock" id="input_ws1_lock" onclick = "updateValue(this, 'lock')"/>
+		</td></tr>	
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMRefresh')}  
 		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_refreshdevices" id="input_ws1_refreshdevices" />
+			<input type="checkbox" name="input_ws1_refreshdevices" id="input_ws1_refreshdevices" onclick = "updateValue(this, 'refreshdevices')" />
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMRemoteAssist')}  
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_remoteassist" id="input_ws1_remoteassist" onclick = "updateValue(this, 'assist')"/>
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMRequestLogs')}
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_requestlogs" id="input_ws1_requestlogs" onclick = "updateValue(this, 'devicelogs')"/>
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMSendMessage')} 
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_message" id="input_ws1_message" onclick = "updateValue(this, 'message')"/>
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMSoftReset')} 
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_softreset" id="input_ws1_softreset" onclick = "updateValue(this, 'softreset')" />
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMSyncDevice')} 
+		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			<input type="checkbox" name="input_ws1_syncdevice" id="input_ws1_syncdevice" onclick = "updateValue(this, 'syncdevice')"/>
 		</td></tr>
 
 	</table>
-
 	<div style="margin:10px" id="div_ws1_test" >
 		<span style="display:inline-block; width:40%">
 			<g:form_label>
-				<button type="submit" onclick="setValues()">${gs.getMessage('Save')}</button>
+				<button type="submit" hidden="true" onclick="setValues()">${gs.getMessage('Save')}</button>
 			</g:form_label>
 		</span>	
 	</div>
-		
+	
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEMActions</name>
@@ -316,13 +313,13 @@ function setValues() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-11 09:37:19</sys_created_on>
         <sys_id>e5bce99f07f5f4105740f96d7c1ed057</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_e5bce99f07f5f4105740f96d7c1ed057</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-13 07:35:01</sys_updated_on>
+        <sys_updated_on>2021-08-18 06:44:18</sys_updated_on>
     </sys_ui_page>
 </record_update>

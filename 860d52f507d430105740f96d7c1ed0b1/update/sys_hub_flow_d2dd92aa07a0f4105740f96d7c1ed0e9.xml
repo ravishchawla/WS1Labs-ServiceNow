@@ -12,7 +12,7 @@
         <description/>
         <internal_name>ws1alluemgetdevices</internal_name>
         <label_cache>[{"name":"3268b42f-2bd7-4c33-acb5-a520952edf7b.ws1user","label":"4➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"ef207d1e-0eca-4958-a59b-44609246a64b.ws1user","label":"6➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.enrollment_status","label":"12➛Device➛enrollment_status","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"63e25856-0c72-4d18-8a6c-47ba81fd7713.item","label":"9➛user","reference_display":"user","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"722a95e2-e088-4a6d-bd6e-24f39ecac1b9.table_name","label":"5➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"722a95e2-e088-4a6d-bd6e-24f39ecac1b9.record","label":"5➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"395d1ab6-d8d5-4b3c-b303-d0a88233c895.table_name","label":"55➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"395d1ab6-d8d5-4b3c-b303-d0a88233c895.record","label":"55➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{}},{"name":"f6d2b748-653f-48bb-afa3-dabfd4de671a.table_name","label":"53➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"f6d2b748-653f-48bb-afa3-dabfd4de671a.record","label":"53➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"98e8ce56-1161-4a20-8207-c408bfdc2bcc.error_message","label":"37➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string"}},{"name":"98e8ce56-1161-4a20-8207-c408bfdc2bcc.status","label":"37➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice"}},{"name":"98e8ce56-1161-4a20-8207-c408bfdc2bcc.table_name","label":"37➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"table_name"}},{"name":"98e8ce56-1161-4a20-8207-c408bfdc2bcc.record","label":"37➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"document_id"}},{"name":"Created_1.current.caller_id.email","label":"Trigger➛Incident Record➛Caller➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"dfec885e-36e7-456f-bcb8-7ad19915ea18.error_message","label":"48➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dfec885e-36e7-456f-bcb8-7ad19915ea18.status","label":"48➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dfec885e-36e7-456f-bcb8-7ad19915ea18.table_name","label":"48➛SG-Workspace ONE UEM Device Related Table","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dfec885e-36e7-456f-bcb8-7ad19915ea18.record","label":"48➛SG-Workspace ONE UEM Device Related Record","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"817171b2-3a64-4903-b39d-52507a17506a.error_message","label":"42➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"817171b2-3a64-4903-b39d-52507a17506a.status","label":"42➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"817171b2-3a64-4903-b39d-52507a17506a.table_name","label":"42➛SG-Workspace ONE UEM Device Related Table","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"817171b2-3a64-4903-b39d-52507a17506a.record","label":"42➛SG-Workspace ONE UEM Device Related Record","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.caller_id.company","label":"Trigger➛Incident Record➛Caller➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company"},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.imei","label":"12➛Device➛imei","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"d5ec960b-3321-4c3d-b2d3-ef6083ac3f56.error_message","label":"32➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5ec960b-3321-4c3d-b2d3-ef6083ac3f56.status","label":"32➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5ec960b-3321-4c3d-b2d3-ef6083ac3f56.table_name","label":"32➛SG-Workspace ONE UEM Device Related Table","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5ec960b-3321-4c3d-b2d3-ef6083ac3f56.record","label":"32➛SG-Workspace ONE UEM Device Related Record","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"14b0033a-c26e-4bdb-b310-e70df21c92c4.error_message","label":"28➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"14b0033a-c26e-4bdb-b310-e70df21c92c4.status","label":"28➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"14b0033a-c26e-4bdb-b310-e70df21c92c4.table_name","label":"28➛SG-Workspace ONE UEM Device Related Table","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"14b0033a-c26e-4bdb-b310-e70df21c92c4.record","label":"28➛SG-Workspace ONE UEM Device Related Record","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4f31480-f6df-40df-8de5-28f8167a437f.response","label":"7➛response","reference_display":"response","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"055f4427-eb9a-4160-82c2-503694b520f9"}},{"name":"c4f31480-f6df-40df-8de5-28f8167a437f.status","label":"7➛status","reference_display":"status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"166b6954-8f54-4a27-ae7c-c4ae40ddbc45"}},{"name":"c4f31480-f6df-40df-8de5-28f8167a437f.variable","label":"7➛Errors","reference_display":"Errors","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","child_label":"Device","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","child_type":"object","child_name":"Device","child_uiUniqueId":"48ad98e1-6d03-4dd6-bd6c-d19b586e0719","uiUniqueId":"ca37ad3d-a542-437f-b96f-590961e5c3c3"}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.serial_number","label":"12➛Device➛serial_number","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"6f4dc258-7a87-4779-a6a1-bf73ab7afc54.error_message","label":"24➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"6f4dc258-7a87-4779-a6a1-bf73ab7afc54.status","label":"24➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"6f4dc258-7a87-4779-a6a1-bf73ab7afc54.Table","label":"24➛Computer Table","reference":"cmdb_ci_computer","reference_display":"Computer","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6f4dc258-7a87-4779-a6a1-bf73ab7afc54.Record","label":"24➛Computer Record","reference":"cmdb_ci_computer","reference_display":"Computer","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.ownership","label":"12➛Device➛ownership","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.compliance_status","label":"12➛Device➛compliance_status","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"6fd24710-5c82-41b1-896b-c0f7bee53d91.error_message","label":"26➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6fd24710-5c82-41b1-896b-c0f7bee53d91.status","label":"26➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6fd24710-5c82-41b1-896b-c0f7bee53d91.table_name","label":"26➛SG-Workspace ONE UEM Device Related Table","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6fd24710-5c82-41b1-896b-c0f7bee53d91.record","label":"26➛SG-Workspace ONE UEM Device Related Record","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"034d93aa-0cb9-49cb-8f15-2701c301fe04.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string"}},{"name":"034d93aa-0cb9-49cb-8f15-2701c301fe04.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice"}},{"name":"034d93aa-0cb9-49cb-8f15-2701c301fe04.table_name","label":"3➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"table_name"}},{"name":"034d93aa-0cb9-49cb-8f15-2701c301fe04.record","label":"3➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"document_id"}},{"name":"7394611b-a878-4628-bf71-d6349d82b209.table_name","label":"3➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7394611b-a878-4628-bf71-d6349d82b209.record","label":"3➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a90c128b-55c0-40c2-a67f-e61b296866d9.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a90c128b-55c0-40c2-a67f-e61b296866d9.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a90c128b-55c0-40c2-a67f-e61b296866d9.table_name","label":"3➛WS1UEMSpoke Table","reference":"x_646971_uemconn_0_ws1uemspoke","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a90c128b-55c0-40c2-a67f-e61b296866d9.record","label":"3➛WS1UEMSpoke Record","reference":"x_646971_uemconn_0_ws1uemspoke","reference_display":"label","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ad33e1e3-b07d-4ad7-8b04-86a84aa19c2a.variable","label":"10➛WS1Devices","reference_display":"WS1Devices","type":"array.object","base_type":"array.object","attributes":{"sourceId":"cd4cc0d4-ef49-44d4-8085-e3a7411912fa","child_name":"Device","uiUniqueId":"ca37ad3d-a542-437f-b96f-590961e5c3c3","uiTypeLabel":"Array.Object","co_type_name":"FD481fdaea4da0f410af16da865a9b27fa","child_label":"Device","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"48ed5793-7742-479c-bf33-60875d264407","uiType":"array.object","child_type":"object","child_uiUniqueId":"48ad98e1-6d03-4dd6-bd6c-d19b586e0719"}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.webpage","label":"2➛Device➛webpage","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"00541030-67ec-410c-9858-a72e1f5ac519.WS1testing","label":"1➛WS1testing","reference":"","reference_display":"WS1testing","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"flow_variable.ws1username","label":"Flow Variables➛WS1username","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b335fbe7-a89f-4acc-aeac-d5e4892fe363"}},{"name":"311c1448-1fcd-4a20-b6fb-98a07ff61544.variable","label":"1➛variable","reference_display":"variable","type":"array.object","base_type":"array.object","attributes":{"sourceId":"cd4cc0d4-ef49-44d4-8085-e3a7411912fa","child_name":"Device","uiUniqueId":"ca37ad3d-a542-437f-b96f-590961e5c3c3","uiTypeLabel":"Array.Object","co_type_name":"FDba86fdc6cf5030106ce0270ff5de3fc6","child_label":"Device","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"48ed5793-7742-479c-bf33-60875d264407","uiType":"array.object","child_type":"object","child_uiUniqueId":"48ad98e1-6d03-4dd6-bd6c-d19b586e0719"}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item","label":"2➛undefined","type":"document_id","base_type":"document_id","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"48dcf2cc-91c7-4030-ab4d-5e6afe9fecb3.record","label":"3➛WS1UEMSpoke Record","reference":"x_646971_uemconn_0_ws1uemspoke","reference_display":"label","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"48dcf2cc-91c7-4030-ab4d-5e6afe9fecb3.table_name","label":"3➛WS1UEMSpoke Table","reference":"x_646971_uemconn_0_ws1uemspoke","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"48dcf2cc-91c7-4030-ab4d-5e6afe9fecb3.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"48dcf2cc-91c7-4030-ab4d-5e6afe9fecb3.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.Udid","label":"2➛Device➛Udid","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.username","label":"2➛Device➛username","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.useremailaddress","label":"2➛Device➛useremailaddress","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.devicereportedname","label":"2➛Device➛devicereportedname","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.locationgroupname","label":"2➛Device➛locationgroupname","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.uuid","label":"2➛Device➛uuid","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"Service Catalog_1.table_name","label":"Trigger➛Table Name","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"360134c3-bb23-48dd-a710-fdb6601bd444.item.ws1webpage","label":"2➛Device➛ws1webpage","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item","label":"12➛Device","reference_display":"Device","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"48e600f4-963c-4d35-803b-8460cfd50548.record","label":"3➛WS1UEMSpoke Record","reference":"x_646971_uemconn_0_ws1uemspoke","reference_display":"label","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"48e600f4-963c-4d35-803b-8460cfd50548.table_name","label":"3➛WS1UEMSpoke Table","reference":"x_646971_uemconn_0_ws1uemspoke","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"48e600f4-963c-4d35-803b-8460cfd50548.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"48e600f4-963c-4d35-803b-8460cfd50548.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.devicereportedname","label":"12➛Device➛devicereportedname","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.useremailaddress","label":"12➛Device➛useremailaddress","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.locationgroupname","label":"12➛Device➛locationgroupname","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.Udid","label":"12➛Device➛Udid","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.uuid","label":"12➛Device➛uuid","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.username","label":"12➛Device➛username","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.ws1webpage","label":"12➛Device➛ws1webpage","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"1fa69c32-7f25-453d-8337-4a500473412b.record","label":"3➛WS1Devices Record","reference":"x_646971_uemconn_0_ws1devices","reference_display":"label","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1fa69c32-7f25-453d-8337-4a500473412b.table_name","label":"3➛WS1Devices Table","reference":"x_646971_uemconn_0_ws1devices","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1fa69c32-7f25-453d-8337-4a500473412b.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1fa69c32-7f25-453d-8337-4a500473412b.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1c8f7a0d-3fc2-4644-913c-2d43e259f089.record","label":"3➛ws1users Record","reference":"x_646971_uemconn_0_ws1users","reference_display":"label","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1c8f7a0d-3fc2-4644-913c-2d43e259f089.table_name","label":"3➛ws1users Table","reference":"x_646971_uemconn_0_ws1users","reference_display":"label","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1c8f7a0d-3fc2-4644-913c-2d43e259f089.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1c8f7a0d-3fc2-4644-913c-2d43e259f089.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.platform","label":"12➛Device➛platform","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.id","label":"12➛Device➛id","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"Created_1.current.ws1action","label":"Trigger➛WS1Actions Record➛WS1Action","reference":"","reference_display":"WS1Action","type":"string","base_type":"string","parent_table_name":"x_646971_uemconn_0_ws1actions","column_name":"ws1action"},{"name":"ad33e1e3-b07d-4ad7-8b04-86a84aa19c2a.ws1error","label":"10➛WS1Error","reference_display":"WS1Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"15231e41-0733-4d09-b06c-e30087ad87d1"}},{"name":"ad33e1e3-b07d-4ad7-8b04-86a84aa19c2a.ws1status","label":"10➛WS1Status","reference_display":"WS1Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"86d8d46e-4633-4ef4-af0a-f98900c57280"}},{"name":"ad33e1e3-b07d-4ad7-8b04-86a84aa19c2a.ws1response","label":"10➛WS1Response","reference_display":"WS1Response","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"2e496386-2437-41d3-b7ec-48e5544d7ba8"}},{"name":"97885184-30c8-4d9c-a22e-e53c8c868be1.record","label":"5➛SG-Workspace ONE UEM Devices and Apps Record","reference":"sn_vmwoneuem_integ_devices_and_apps","reference_display":"SG-Workspace ONE UEM Devices and Apps","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"97885184-30c8-4d9c-a22e-e53c8c868be1.table_name","label":"5➛SG-Workspace ONE UEM Devices and Apps Table","reference":"sn_vmwoneuem_integ_devices_and_apps","reference_display":"SG-Workspace ONE UEM Devices and Apps","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"97885184-30c8-4d9c-a22e-e53c8c868be1.status","label":"5➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"97885184-30c8-4d9c-a22e-e53c8c868be1.error_message","label":"5➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4303c403-2621-40e3-b0df-ba761cc811d2.record","label":"3➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4303c403-2621-40e3-b0df-ba761cc811d2.table_name","label":"3➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e33a6443-c5ef-4c2a-9dda-cefb4c508862.Record","label":"14➛SG-Workspace ONE UEM Device Related Record","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e33a6443-c5ef-4c2a-9dda-cefb4c508862.Table","label":"14➛SG-Workspace ONE UEM Device Related Table","reference":"sn_vmwoneuem_integ_device_related","reference_display":"SG-Workspace ONE UEM Device Related","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e33a6443-c5ef-4c2a-9dda-cefb4c508862.status","label":"14➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"e33a6443-c5ef-4c2a-9dda-cefb4c508862.error_message","label":"14➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"flow_variable.ws1compliance","label":"Flow Variables➛WS1Compliance","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6622b88c-96dc-4612-8b1a-c37cc3d300cd"}},{"name":"flow_variable.ws1ownership","label":"Flow Variables➛WS1Ownership","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"30a014ac-85a2-402c-9be2-57421ebd262e"}},{"name":"c4f31480-f6df-40df-8de5-28f8167a437f._","label":"7➛WS1Username","reference_display":"WS1Username","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"870d4f2a-67b2-4706-a595-a0c174a8299e"}},{"name":"6592e189-93ca-4164-b56f-7aec2c6abff8.record","label":"41➛Computer Record","reference":"cmdb_ci_computer","reference_display":"Computer","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6592e189-93ca-4164-b56f-7aec2c6abff8.table_name","label":"41➛Computer Table","reference":"cmdb_ci_computer","reference_display":"Computer","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6592e189-93ca-4164-b56f-7aec2c6abff8.status","label":"41➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6592e189-93ca-4164-b56f-7aec2c6abff8.error_message","label":"41➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2e981834-734b-4980-ab92-5e9251a1d7cb.record","label":"22➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2e981834-734b-4980-ab92-5e9251a1d7cb.table_name","label":"22➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"eff1e292-9388-4f85-ad38-c7881f7ca67d.record","label":"47➛Handheld Computing Device Record","reference":"cmdb_ci_handheld_computing","reference_display":"Handheld Computing Device","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"eff1e292-9388-4f85-ad38-c7881f7ca67d.table_name","label":"47➛Handheld Computing Device Table","reference":"cmdb_ci_handheld_computing","reference_display":"Handheld Computing Device","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"eff1e292-9388-4f85-ad38-c7881f7ca67d.status","label":"47➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"eff1e292-9388-4f85-ad38-c7881f7ca67d.error_message","label":"47➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.model_identifier","label":"12➛Device➛model_identifier","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"856b7c0e-c60c-426e-8b64-12b4edce941d.item.operating_system","label":"12➛Device➛operating_system","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"Created_1.current.caller_id","label":"Trigger➛Incident Record➛Caller","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"incident","column_name":"caller_id"},{"name":"flow_variable.ws1os","label":"Flow Variables➛WS1OS","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9f4e3462-037a-4190-98a4-dd28c9f14da7"}},{"name":"411efa7c-af43-492a-859b-bc38ca13ceb1.Record","label":"30➛Handheld Computing Device Record","reference":"cmdb_ci_handheld_computing","reference_display":"Handheld Computing Device","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"411efa7c-af43-492a-859b-bc38ca13ceb1.Table","label":"30➛Handheld Computing Device Table","reference":"cmdb_ci_handheld_computing","reference_display":"Handheld Computing Device","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"411efa7c-af43-492a-859b-bc38ca13ceb1.status","label":"30➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"411efa7c-af43-492a-859b-bc38ca13ceb1.error_message","label":"30➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"57847935-9429-451c-a2f6-1b8c81dc3e84.record","label":"34➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"57847935-9429-451c-a2f6-1b8c81dc3e84.table_name","label":"34➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7031ffe6-4826-436b-97c2-487c549f12ca.record","label":"44➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7031ffe6-4826-436b-97c2-487c549f12ca.table_name","label":"44➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0d675b99-0cdb-4530-96f2-2617f5707a7e.record","label":"50➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0d675b99-0cdb-4530-96f2-2617f5707a7e.table_name","label":"50➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.ws1founddevice","label":"Flow Variables➛WS1FoundDevice","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"c33b8fa4-0bc7-456e-b185-a14afa70d13c"}},{"name":"c4f31480-f6df-40df-8de5-28f8167a437f.users","label":"7➛users","reference_display":"users","type":"array.object","base_type":"array.object","attributes":{"sourceId":"1d9861d4-53be-4e3e-beb0-ac8f67de2cdf","child_name":"user","uiUniqueId":"764d2034-761c-4fe9-8c70-6e533404b92e","uiTypeLabel":"Array.Object","co_type_name":"FD235df53043e53010ab9f769a1488da83","child_label":"user","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"c8b27073-69d7-4895-b89a-daee81499358","uiType":"array.object","child_type":"object","child_uiUniqueId":"d0a39a6f-8b32-4c6e-8a01-26cdfb86abc2"}},{"name":"63e25856-0c72-4d18-8a6c-47ba81fd7713.item.username","label":"9➛user➛username","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"631503e0-e5d9-47c6-a316-951813e585c4.ws1user","label":"33➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"1d8db23c-58f6-4cd3-b387-6c6ab45aae2d.ws1user","label":"43➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"49d027ee-cc80-464b-9812-28c6e6df7a1b.ws1user","label":"49➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"1f498067-dc0f-4f98-a6a9-892a57de8127.ws1user","label":"27➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"dbef0858-e544-4414-8c16-1e5665b55645.record","label":"28➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dbef0858-e544-4414-8c16-1e5665b55645.table_name","label":"28➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
-        <latest_snapshot>3220226e07a0f4105740f96d7c1ed080</latest_snapshot>
+        <latest_snapshot>ef8d8b9507ce30105740f96d7c1ed0ff</latest_snapshot>
         <master_snapshot>3220226e07a0f4105740f96d7c1ed080</master_snapshot>
         <name>WS1UEMGetDevicesForCaller</name>
         <natlang/>
@@ -71,15 +71,15 @@
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"f8aac349078230105740f96d7c1ed086","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"f8aac349078230105740f96d7c1ed086","name":"trigger_runner","type":"java.util.HashMap"}</data>
         <identifier>d2dd92aa07a0f4105740f96d7c1ed0e9</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:56:45</sys_created_on>
         <sys_id>f8aac349078230105740f96d7c1ed086</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:45</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:59:01</sys_updated_on>
         <trigger display_value="">e9bd228c07e97c105740f96d7c1ed0f3</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
@@ -92,6 +92,17 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:56:45</sys_created_on>
         <sys_id>38aac349078230105740f96d7c1ed093</sys_id>
+    </sys_json_chunk>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MiZGWoTYkAEFVsdC0N1iY2oY+KyjnmaXU2XzUPPEWAtljKEIqH749EIigd31JfG/42XNK+wHxPKN7oYAAAA=</data>
+        <document_id>f8aac349078230105740f96d7c1ed086</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-17 21:59:01</sys_created_on>
+        <sys_id>59109fd907ce30105740f96d7c1ed057</sys_id>
     </sys_json_chunk>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
@@ -344,10 +355,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 02:30:23</sys_created_on>
         <sys_id>0d4b09b807e130105740f96d7c1ed0d0</sys_id>
-        <sys_mod_count>142</sys_mod_count>
+        <sys_mod_count>144</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:51</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>dfec885e-36e7-456f-bcb8-7ad19915ea18</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0d4b09b807e130105740f96d7c1ed0d0"/>
@@ -405,10 +416,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 02:08:35</sys_created_on>
         <sys_id>2546457407e130105740f96d7c1ed0d6</sys_id>
-        <sys_mod_count>144</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>411efa7c-af43-492a-859b-bc38ca13ceb1</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2546457407e130105740f96d7c1ed0d6"/>
@@ -492,10 +503,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-21 06:34:55</sys_created_on>
         <sys_id>29a9b0a407a530105740f96d7c1ed02e</sys_id>
-        <sys_mod_count>154</sys_mod_count>
+        <sys_mod_count>156</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:51</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>eff1e292-9388-4f85-ad38-c7881f7ca67d</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=29a9b0a407a530105740f96d7c1ed02e"/>
@@ -567,10 +578,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 04:44:30</sys_created_on>
         <sys_id>29f9edf4076530105740f96d7c1ed067</sys_id>
-        <sys_mod_count>98</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:51</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>0d675b99-0cdb-4530-96f2-2617f5707a7e</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=29f9edf4076530105740f96d7c1ed067"/>
@@ -640,10 +651,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 04:55:29</sys_created_on>
         <sys_id>2a7ca1f8076530105740f96d7c1ed0a8</sys_id>
-        <sys_mod_count>90</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:51</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:03</sys_updated_on>
         <ui_id>395d1ab6-d8d5-4b3c-b303-d0a88233c895</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2a7ca1f8076530105740f96d7c1ed0a8"/>
@@ -713,10 +724,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 04:44:30</sys_created_on>
         <sys_id>2df9edf4076530105740f96d7c1ed059</sys_id>
-        <sys_mod_count>98</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>7031ffe6-4826-436b-97c2-487c549f12ca</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2df9edf4076530105740f96d7c1ed059"/>
@@ -776,7 +787,7 @@
         <action_type display_value="UEMMessageTranslator">4adada56077934105740f96d7c1ed050</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>4adada56077934105740f96d7c1ed050</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMGetDevicesForCaller">d2dd92aa07a0f4105740f96d7c1ed0e9</flow>
         <order>6</order>
@@ -785,10 +796,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:20:22</sys_created_on>
         <sys_id>33428b4d074230105740f96d7c1ed0ab</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:48</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>ef207d1e-0eca-4958-a59b-44609246a64b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=33428b4d074230105740f96d7c1ed0ab"/>
@@ -821,10 +832,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 02:30:23</sys_created_on>
         <sys_id>344b09b807e130105740f96d7c1ed0c2</sys_id>
-        <sys_mod_count>142</sys_mod_count>
+        <sys_mod_count>144</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>817171b2-3a64-4903-b39d-52507a17506a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=344b09b807e130105740f96d7c1ed0c2"/>
@@ -872,7 +883,7 @@
         <action_type display_value="UEMMessageTranslator">4adada56077934105740f96d7c1ed050</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>4adada56077934105740f96d7c1ed050</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMGetDevicesForCaller">d2dd92aa07a0f4105740f96d7c1ed0e9</flow>
         <order>4</order>
@@ -881,10 +892,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:20:22</sys_created_on>
         <sys_id>3f428b4d074230105740f96d7c1ed075</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:48</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>3268b42f-2bd7-4c33-acb5-a520952edf7b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3f428b4d074230105740f96d7c1ed075"/>
@@ -907,7 +918,7 @@
         <action_type display_value="UEMMessageTranslator">4adada56077934105740f96d7c1ed050</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>4adada56077934105740f96d7c1ed050</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMGetDevicesForCaller">d2dd92aa07a0f4105740f96d7c1ed0e9</flow>
         <order>27</order>
@@ -916,10 +927,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:31:55</sys_created_on>
         <sys_id>49f44301078230105740f96d7c1ed052</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:49</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>1f498067-dc0f-4f98-a6a9-892a57de8127</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=49f44301078230105740f96d7c1ed052"/>
@@ -952,10 +963,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 04:44:29</sys_created_on>
         <sys_id>55f9edf4076530105740f96d7c1ed027</sys_id>
-        <sys_mod_count>98</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>57847935-9429-451c-a2f6-1b8c81dc3e84</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=55f9edf4076530105740f96d7c1ed027"/>
@@ -1025,10 +1036,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-21 02:37:37</sys_created_on>
         <sys_id>5d53c02807e130105740f96d7c1ed0a7</sys_id>
-        <sys_mod_count>182</sys_mod_count>
+        <sys_mod_count>184</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:49</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>6fd24710-5c82-41b1-896b-c0f7bee53d91</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5d53c02807e130105740f96d7c1ed0a7"/>
@@ -1076,7 +1087,7 @@
         <action_type display_value="UEMMessageTranslator">4adada56077934105740f96d7c1ed050</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>4adada56077934105740f96d7c1ed050</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMGetDevicesForCaller">d2dd92aa07a0f4105740f96d7c1ed0e9</flow>
         <order>49</order>
@@ -1085,10 +1096,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:31:57</sys_created_on>
         <sys_id>61f44301078230105740f96d7c1ed0ef</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:51</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>49d027ee-cc80-464b-9812-28c6e6df7a1b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=61f44301078230105740f96d7c1ed0ef"/>
@@ -1111,7 +1122,7 @@
         <action_type display_value="UEMMessageTranslator">4adada56077934105740f96d7c1ed050</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>4adada56077934105740f96d7c1ed050</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMGetDevicesForCaller">d2dd92aa07a0f4105740f96d7c1ed0e9</flow>
         <order>43</order>
@@ -1120,10 +1131,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:31:56</sys_created_on>
         <sys_id>69f44301078230105740f96d7c1ed0d9</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>1d8db23c-58f6-4cd3-b387-6c6ab45aae2d</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=69f44301078230105740f96d7c1ed0d9"/>
@@ -1156,10 +1167,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-21 02:25:25</sys_created_on>
         <sys_id>6a80886407e130105740f96d7c1ed054</sys_id>
-        <sys_mod_count>184</sys_mod_count>
+        <sys_mod_count>186</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:48</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>e33a6443-c5ef-4c2a-9dda-cefb4c508862</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6a80886407e130105740f96d7c1ed054"/>
@@ -1243,10 +1254,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-06-08 02:04:09</sys_created_on>
         <sys_id>7f4f122e07a0f4105740f96d7c1ed028</sys_id>
-        <sys_mod_count>310</sys_mod_count>
+        <sys_mod_count>312</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:48</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>ad33e1e3-b07d-4ad7-8b04-86a84aa19c2a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7f4f122e07a0f4105740f96d7c1ed028"/>
@@ -1304,10 +1315,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:31:55</sys_created_on>
         <sys_id>99f44301078230105740f96d7c1ed07d</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:49</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>dbef0858-e544-4414-8c16-1e5665b55645</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=99f44301078230105740f96d7c1ed07d"/>
@@ -1377,10 +1388,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-21 06:34:55</sys_created_on>
         <sys_id>9da9b0a407a530105740f96d7c1ed023</sys_id>
-        <sys_mod_count>154</sys_mod_count>
+        <sys_mod_count>156</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>6592e189-93ca-4164-b56f-7aec2c6abff8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9da9b0a407a530105740f96d7c1ed023"/>
@@ -1452,10 +1463,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-21 03:29:38</sys_created_on>
         <sys_id>9f3fcca0072530105740f96d7c1ed03d</sys_id>
-        <sys_mod_count>170</sys_mod_count>
+        <sys_mod_count>172</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:48</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>c4f31480-f6df-40df-8de5-28f8167a437f</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9f3fcca0072530105740f96d7c1ed03d"/>
@@ -1501,10 +1512,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-21 02:49:43</sys_created_on>
         <sys_id>a6160ca807e130105740f96d7c1ed0ac</sys_id>
-        <sys_mod_count>178</sys_mod_count>
+        <sys_mod_count>180</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:49</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>6f4dc258-7a87-4779-a6a1-bf73ab7afc54</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a6160ca807e130105740f96d7c1ed0ac"/>
@@ -1588,10 +1599,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 04:44:31</sys_created_on>
         <sys_id>b1f9edf4076530105740f96d7c1ed0ae</sys_id>
-        <sys_mod_count>98</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:51</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:03</sys_updated_on>
         <ui_id>f6d2b748-653f-48bb-afa3-dabfd4de671a</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b1f9edf4076530105740f96d7c1ed0ae"/>
@@ -1661,10 +1672,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 05:02:54</sys_created_on>
         <sys_id>cb2ea1bc076530105740f96d7c1ed0f4</sys_id>
-        <sys_mod_count>82</sys_mod_count>
+        <sys_mod_count>84</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:48</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>722a95e2-e088-4a6d-bd6e-24f39ecac1b9</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cb2ea1bc076530105740f96d7c1ed0f4"/>
@@ -1724,7 +1735,7 @@
         <action_type display_value="UEMMessageTranslator">4adada56077934105740f96d7c1ed050</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>4adada56077934105740f96d7c1ed050</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMGetDevicesForCaller">d2dd92aa07a0f4105740f96d7c1ed0e9</flow>
         <order>33</order>
@@ -1733,10 +1744,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-17 02:31:56</sys_created_on>
         <sys_id>d9f44301078230105740f96d7c1ed092</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>631503e0-e5d9-47c6-a316-951813e585c4</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d9f44301078230105740f96d7c1ed092"/>
@@ -1769,10 +1780,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-22 02:08:35</sys_created_on>
         <sys_id>ed46457407e130105740f96d7c1ed0e1</sys_id>
-        <sys_mod_count>144</sys_mod_count>
+        <sys_mod_count>146</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-17 02:56:50</sys_updated_on>
+        <sys_updated_on>2021-08-17 21:48:02</sys_updated_on>
         <ui_id>d5ec960b-3321-4c3d-b2d3-ef6083ac3f56</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ed46457407e130105740f96d7c1ed0e1"/>
@@ -3999,7 +4010,7 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"e320626e07a0f4105740f96d7c1ed04e","name":"plan"}}</plan>
         <plan_id>d2dd92aa07a0f4105740f96d7c1ed0e9</plan_id>
-        <snapshot>3220226e07a0f4105740f96d7c1ed080</snapshot>
+        <snapshot>ef8d8b9507ce30105740f96d7c1ed0ff</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-06-08 02:07:57</sys_created_on>
         <sys_domain>global</sys_domain>
