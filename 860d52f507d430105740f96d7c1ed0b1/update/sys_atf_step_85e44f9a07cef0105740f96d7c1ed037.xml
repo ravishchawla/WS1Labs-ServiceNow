@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Click the component: 'Button &lt;button&gt;: Cancel'</description>
+        <display_name>Click Component (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"aa08c13a497986e5d856bb6396b019ed":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Button &lt;button&gt;: Cancel\",\"inner_text\":\"Cancel\",\"sn_atf_mugshot_long_description\":\"Button &lt;button&gt;: Cancel\",\"methods\":[\"click\"],\"sn_atf_mugshot_label\":\"Cancel\",\"index\":0,\"type\":\"button\",\"version\":\"19.0\",\"get_value_result\":\"Cancel\",\"sn_atf_mugshot_tag_display_name\":\"Button &lt;button&gt;\",\"sn_atf_mugshot_value\":\"Cancel\",\"tag\":\"button\",\"isDisabled\":false,\"hash\":\"aa08c13a497986e5d856bb6396b019ed\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>4</order>
+        <snapshot/>
+        <step_config display_value="Click Component (Custom UI)">def25c4b73730300c79260bdfaf6a700</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 23:48:17</sys_created_on>
+        <sys_id>85e44f9a07cef0105740f96d7c1ed037</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Click Component (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_85e44f9a07cef0105740f96d7c1ed037</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:48:17</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEMSendMessage2">4c4eb2dc07f578105740f96d7c1ed0a4</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=85e44f9a07cef0105740f96d7c1ed037"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>85e44f9a07cef0105740f96d7c1ed037</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 23:48:17</sys_created_on>
+        <sys_id>13d58bda07cef0105740f96d7c1ed094</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:48:17</sys_updated_on>
+        <value>aa08c13a497986e5d856bb6396b019ed</value>
+        <variable display_value="Component">ee05588b73730300c79260bdfaf6a749</variable>
+    </sys_variable_value>
+</record_update>

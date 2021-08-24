@@ -4,75 +4,86 @@
         <client_script><![CDATA[onLoad();
 
 function onLoad() {
-	var stringText;
 	var ws1_actions_response;
-
+	
 	var action = $("ws1_action");
-	$("div_ws1_message").hidden = true;
-	$("div_ws1_passcode").hidden = true;
-	$("div_ws1_unlock_pin").hidden = true;
+	
+	if ((!action) || (action.value.includes("Undefined"))) {
+			var ga_test_action = new GlideAjax('x_646971_uemconn_0.ws1_get_test_action');
+			ga_test_action.addParam('sysparm_name', 'get_test_action');
+			ga_test_action.getXML(function parse_response(response) {
+				action = response.responseXML.documentElement.getAttribute('answer');
+				ws1_actions_response = {}
+				loadPopupContents(action, ws1_actions_response);
+			});
+	} else {
+		ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
+		ws1_actions_response = JSON.parse(ws1_actions_response);
+		loadPopupContents(action.value, ws1_actions_response);
+	}
+}
+
+function loadPopupContents(action, ws1_actions_response) {
+	var stringText;
+
+	set_message_state(true);
+	set_unlock_passcode_state(true);
+	set_unlock_pin_state(true);
 	$("div_ws1_caption").hidden = true;
 	$("div_ws1_check").hidden = true;
 
 	
-	if (action.value == "assist") {
+	if (action == "assist") {
 		// Information message text
 		stringText = getMessage('WS1UEMAssistInfo');
 		
 		var console_version = $("ws1_version");
 						
-		if (console_version) {
-				$("div_ws1_assist_type").hidden = false;
-				ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
-				ws1_actions_response = JSON.parse(ws1_actions_response);
-					
-				var select_dropdown_id = "input_ws1_assist_type";
-				
-				for (var key in ws1_actions_response) {
-					if ((key.includes('assist_') && (ws1_actions_response[key]) == false)) {
-						remove_actions_from_select_input(select_dropdown_id, key.substring(7));
-					}
-				}
-				
-				if ($("input_ws1_assist_type").length == 0) {
-					$("div_ws1_assist_type").hidden = true;
-				}
+		$("div_ws1_assist_type").hidden = false;
+
+		var select_dropdown_id = "input_ws1_assist_type";
+
+		for (var key in ws1_actions_response) {
+			if ((key.includes('assist_') && (ws1_actions_response[key]) == false)) {
+				remove_actions_from_select_input(select_dropdown_id, key.substring(7));
+			}
+		}
+
+		if ($("input_ws1_assist_type").length == 0) {
+			$("div_ws1_assist_type").hidden = true;
 		}
 		
-	} else if (action.value == "message") {
+	} else if (action == "message") {
 		// Information message text
 		stringText = getMessage('WS1UEMMessageInfo');
 		$("submitData").disabled = true;
 		
-		$("div_ws1_message").hidden = false;	
+		set_message_state(false);
 
-	} else if (action.value == "devicelogs") {
+	} else if (action == "devicelogs") {
 		// Information message text
 		stringText = getMessage('WS1UEMDeviceLogsInfo');
 	
-	} else if (action.value == "changepasscode") {
+	} else if (action == "changepasscode") {
 		// Information message text
 		stringText = getMessage('WS1UEMPasscodeInfo');
 		$("submitData").disabled = true;
 	
-		$("div_ws1_passcode").hidden = false;
+		set_unlock_passcode_state(false);
 	
-	} else if (action.value == "lock") {
+	} else if (action == "lock") {
 		// Information message text
 		stringText = getMessage('WS1UEMLockInfo');
-		
-		ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
-		ws1_actions_response = JSON.parse(ws1_actions_response);
 				
 		if (ws1_actions_response["lock_mac"] == true) {
 			$("submitData").disabled = true;
 
-			$("div_ws1_unlock_pin").hidden = false;
+			set_unlock_pin_state(false);
 			$("div_ws1_caption").hidden = false;
 			$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMRememberPin')  + '</g:form_label>';
 		}
 			
-	} else if (action.value == "enterprisewipe") {
+	} else if (action == "enterprisewipe") {
 		// Information message text
 		stringText = getMessage('WS1UEMEnterpriseWipeInfo');
 		$("div_ws1_check").hidden = false;
@@ -80,26 +91,23 @@ function onLoad() {
 		$("div_ws1_caption").hidden = false;
 		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMWarningEnterpriseWipe')  + '</g:form_label>';
 	
-	} else if (action.value == "softreset") {
+	} else if (action == "softreset") {
 		// Information message text
 		stringText = getMessage('WS1UEMSoftResetInfo');
 	
-	} else if (action.value == "syncdevice") {
+	} else if (action == "syncdevice") {
 		// Information message text
 		stringText = getMessage('WS1UEMSyncDeviceInfo');
 		
-	} else if (action.value == "devicewipe") {
+	} else if (action == "devicewipe") {
 		// Information message text
 		stringText = getMessage('WS1UEMDeviceWipeInfo');
 
 		var warningMessage = getMessage('WS1UEMWarningDeviceWipe');
-		
-		ws1_actions_response = $("incident.x_646971_uemconn_0_u_string_1").value;
-		ws1_actions_response = JSON.parse(ws1_actions_response);
 				
 		if (ws1_actions_response["devicewipe_mac"] == true) {
 			$("submitData").disabled = true;
-			$("div_ws1_unlock_pin").hidden = false;
+			set_unlock_pin_state(false);
 			warningMessage = warningMessage + " " + getMessage('WS1UEMRememberPin');
 		}
 		else {
@@ -110,13 +118,13 @@ function onLoad() {
 		$("div_ws1_caption").hidden = false;
 		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + warningMessage  + '</g:form_label>';
 	}
-	else if (action.value == "refreshdevices") {
+	else if (action == "refreshdevices") {
 		// Information message text
 		stringText = getMessage('WS1UEMRefreshDevices');
 	}
 	
 	// display informational message for action type
-	$("div_ws1_text").innerHTML = getMessage(stringText);
+	$("div_ws1_text").innerHTML = stringText;
 	$("div_ws1_text").hidden = false;
 }
 
@@ -204,20 +212,16 @@ function parse_actions_as_json(response) {
 	var actions = JSON.parse(answer);
 	
 	if (actions['devicewipe_mac'] == true) {
-		$("div_ws1_unlock_pin").hidden = false;
+		set_unlock_pin_state(false);
 	} else {
-		$("div_ws1_unlock_pin").hidden = true;
+		set_unlock_pin_state(true);
 	}
 	
 	if (actions['changepasscode_winrt'] == true) {
-		$("div_ws1_unlock_pin").hidden = false;
+		set_unlock_pin_state(false);
 	} else {
-		$("div_ws1_unlock_pin").hidden = true;
+		set_unlock_pin_state(true);
 	}
-	
-// 	for (var key in actions) {
-// 		g_form.addOption('x_646971_uemconn_0_ws1command', key);
-// 	}
 }
 
 function remove_actions_from_select_input(select_input, option_name) {
@@ -294,7 +298,28 @@ function checkMessage() {
 
 function checkStatus(cb) {
 	$("submitData").disabled = !cb.checked;
-}]]></client_script>
+}
+
+function set_unlock_pin_state(state) {
+	$("div_ws1_unlock_pin").hidden = state;
+	var inputs = document.querySelector('#div_ws1_unlock_pin').getElementsByTagName('input');
+	for(var i = 0; i < inputs.length; i++) {
+		inputs[i].readOnly = state;
+	}
+}
+
+function set_unlock_passcode_state(state) {
+	$("div_ws1_passcode").hidden = state;
+	var inputs = document.querySelector('#div_ws1_passcode').getElementsByTagName('input');
+	inputs[0].readOnly = state;
+}
+
+function set_message_state(state) {
+	$("div_ws1_message").hidden = state;
+	var inputs = document.querySelector('#div_ws1_message').getElementsByTagName('textarea');
+	inputs[0].readOnly = state;
+}
+]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
         <endpoint>x_646971_uemconn_0_WS1UEM popup.do</endpoint>
@@ -304,12 +329,13 @@ function checkStatus(cb) {
 
 	<g:evaluate var="jvar_ws1_action" expression="RP.getWindowProperties().actionvalue" />
 	<g:evaluate var="jvar_si" expression="RP.getWindowProperties().si" />
+	<div sn-atf-class="SettableTestComponent">
+		<input sn-atf-settable="true" type="hidden" id="ws1_action" name="ws1_action" value="${jvar_ws1_action}" />
+		<input sn-atf-settable="true" type="hidden" id="sid" name="sid" value="${jvar_si}" />		
+		<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
+		<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_646971_uemconn_0.WS1UEM Platform')}"/>
+	</div>
 	
-    <input type="hidden" id="ws1_action" name="ws1_action" value="${jvar_ws1_action}" />
-    <input type="hidden" id="sid" name="sid" value="${jvar_si}" />		
-	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
-	<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_646971_uemconn_0.WS1UEM Platform')}"/>
-		 		
 	<div style="margin:10px;margin-top:15px" hidden="true">
 		<span style="display:inline-block; width:40%">
 		</span>
@@ -468,13 +494,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>660</sys_mod_count>
+        <sys_mod_count>686</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-19 06:47:47</sys_updated_on>
+        <sys_updated_on>2021-08-23 20:41:45</sys_updated_on>
     </sys_ui_page>
 </record_update>

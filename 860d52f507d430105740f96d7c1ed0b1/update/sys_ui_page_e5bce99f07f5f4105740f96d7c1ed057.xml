@@ -223,7 +223,7 @@ function updateValue(cb, actionType) {
 	<div style="margin-left:10px; margin-top:10px" id="div_ws1_hostid" >
 		<span style="display:inline-block; width:40%">
 			<g:form_label>
-				${gs.getMessage('WS1UEMSelectActions')}
+				${gs.getMessage('WS1UEMSelectAdvancedActions')}
 			</g:form_label>
 		</span>	
 	</div>
@@ -232,71 +232,93 @@ function updateValue(cb, actionType) {
 	<table style="margin-left:10px">
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMActionTitle')}
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; ">
+			${gs.getMessage('WS1UEMEnabled')}
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMDeviceWipe')}
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
+			<input type="checkbox" name="input_ws1_devicewipe" id="input_ws1_devicewipe" onclick = "updateValue(this, 'devicewipe')"/>
+		</td></tr>
+		
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMEnterpriseWipe')}  
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
+			<input type="checkbox" name="input_ws1_enterprisewipe" id="input_ws1_enterprisewipe" onclick = "updateValue(this, 'enterprisewipe')"/>
+		</td></tr>
+		</table>
+
+		<div style="margin-left:10px; margin-top:10px" id="div_ws1_hostid" >
+		<span style="display:inline-block; width:40%">
+			<g:form_label>
+				${gs.getMessage('WS1UEMSelectStandardActions')}
+			</g:form_label>
+		</span>	
+		</div>
+		
+		<table style="margin-left:10px">
+		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			${gs.getMessage('WS1UEMActionTitle')}
 		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMEnabled')}
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMChangePasscode')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_changepasscode" id="input_ws1_changepasscode" onclick = "updateValue(this, 'changepasscode')"/>
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMDeviceWipe')}
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_devicewipe" id="input_ws1_devicewipe" onclick = "updateValue(this, 'devicewipe')"/>
-		</td></tr>
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			${gs.getMessage('WS1UEMEnterpriseWipe')}  
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
-			<input type="checkbox" name="input_ws1_enterprisewipe" id="input_ws1_enterprisewipe" onclick = "updateValue(this, 'enterprisewipe')"/>
-		</td></tr>
-		
-		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMLockDevice')}  
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_lock" id="input_ws1_lock" onclick = "updateValue(this, 'lock')"/>
 		</td></tr>	
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMRefresh')}  
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_refreshdevices" id="input_ws1_refreshdevices" onclick = "updateValue(this, 'refreshdevices')" />
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMRemoteAssist')}  
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_remoteassist" id="input_ws1_remoteassist" onclick = "updateValue(this, 'assist')"/>
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMRequestLogs')}
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_requestlogs" id="input_ws1_requestlogs" onclick = "updateValue(this, 'devicelogs')"/>
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMSendMessage')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_message" id="input_ws1_message" onclick = "updateValue(this, 'message')"/>
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMSoftReset')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_softreset" id="input_ws1_softreset" onclick = "updateValue(this, 'softreset')" />
 		</td></tr>
 		
 		<tr><td style="padding: 5px; border: 1px solid; border-color: grey;" >
 			${gs.getMessage('WS1UEMSyncDevice')} 
-		</td><td style="padding: 5px; border: 1px solid; border-color: grey;" >
+			</td><td style="padding: 5px; border: 1px solid; border-color: grey; text-align: center;" >
 			<input type="checkbox" name="input_ws1_syncdevice" id="input_ws1_syncdevice" onclick = "updateValue(this, 'syncdevice')"/>
 		</td></tr>
+	</table>		
+		
+		
+		
+		
+		
+		
 
-	</table>
 	<div style="margin:10px" id="div_ws1_test" >
 		<span style="display:inline-block; width:40%">
 			<g:form_label>
@@ -313,13 +335,13 @@ function updateValue(cb, actionType) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-11 09:37:19</sys_created_on>
         <sys_id>e5bce99f07f5f4105740f96d7c1ed057</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>102</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_e5bce99f07f5f4105740f96d7c1ed057</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-18 06:44:18</sys_updated_on>
+        <sys_updated_on>2021-08-22 11:46:15</sys_updated_on>
     </sys_ui_page>
 </record_update>
