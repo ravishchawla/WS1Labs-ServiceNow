@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_concat_operation">
+    <sys_rte_eb_concat_operation action="DELETE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <joining_string> ---</joining_string>
+        <name>Concatenation - u_oem_info,u_device_type_1</name>
+        <operation_group/>
+        <order>1200</order>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields>75e7920c07de38105740f96d7c1ed058,3eeb9e8c07de38105740f96d7c1ed0f4</source_sys_rte_eb_fields>
+        <sys_class_name>sys_rte_eb_concat_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-27 07:16:39</sys_created_on>
+        <sys_id>1906235807de78105740f96d7c1ed082</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Concatenation - u_oem_info,u_device_type_1</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">70d7120c07de38105740f96d7c1ed061</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">78e7520c07de38105740f96d7c1ed075</sys_rte_eb_entity>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_rte_eb_concat_operation_1906235807de78105740f96d7c1ed082</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 07:20:02</sys_updated_on>
+        <target_sys_rte_eb_field display_value="u_oem_info_u_device_type_1_1">9906235807de78105740f96d7c1ed07f</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Concatenation">4e38102a73b333002b6265a751ab9e1f</type>
+    </sys_rte_eb_concat_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_rte_eb_concat_operation_1906235807de78105740f96d7c1ed082</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_concat_operation"&gt;&lt;sys_rte_eb_concat_operation action="INSERT_OR_UPDATE"&gt;&lt;conditional_fields/&gt;&lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;joining_string&gt; ---&lt;/joining_string&gt;&lt;name&gt;Concatenation - u_oem_info,u_device_type_1&lt;/name&gt;&lt;operation_group/&gt;&lt;order&gt;1200&lt;/order&gt;&lt;source_sys_rte_eb_field/&gt;&lt;source_sys_rte_eb_fields&gt;75e7920c07de38105740f96d7c1ed058,3eeb9e8c07de38105740f96d7c1ed0f4&lt;/source_sys_rte_eb_fields&gt;&lt;sys_class_name&gt;sys_rte_eb_concat_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-27 07:16:39&lt;/sys_created_on&gt;&lt;sys_id&gt;1906235807de78105740f96d7c1ed082&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Concatenation - u_oem_info,u_device_type_1&lt;/sys_name&gt;&lt;sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;70d7120c07de38105740f96d7c1ed061&lt;/sys_rte_eb_definition&gt;&lt;sys_rte_eb_entity display_value="temp"&gt;78e7520c07de38105740f96d7c1ed075&lt;/sys_rte_eb_entity&gt;&lt;sys_scope display_value="WS1UEMSpoke"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_concat_operation_1906235807de78105740f96d7c1ed082&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-27 07:20:02&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_field display_value="u_oem_info_u_device_type_1_1"&gt;9906235807de78105740f96d7c1ed07f&lt;/target_sys_rte_eb_field&gt;&lt;target_sys_rte_eb_fields/&gt;&lt;type display_value="Concatenation"&gt;4e38102a73b333002b6265a751ab9e1f&lt;/type&gt;&lt;/sys_rte_eb_concat_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>416180128</payload_hash>
+        <record_name>Concatenation - u_oem_info,u_device_type_1</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-27 07:20:02</sys_created_on>
+        <sys_id>43c6a7d807de78105740f96d7c1ed01a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b867ad6830000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 07:20:02</sys_updated_on>
+        <type>RTE Entity Concatenation Operation</type>
+        <update_guid>c7c6a7d822de781002d401f54db0c019</update_guid>
+        <update_guid_history>c7c6a7d822de781002d401f54db0c019:416180128,94b66f9851de78107c6768f14253f5b5:1366509765,9d062358cade7810b81cd07fc9162f84:-2013852451</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-27 07:24:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_concat_operation">sys_rte_eb_concat_operation</sys_db_object>
+        <sys_id>772e414885f94fa681b8a31a1ced0644</sys_id>
+        <sys_metadata>1906235807de78105740f96d7c1ed082</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Concatenation - u_oem_info,u_device_type_1</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_concat_operation_1906235807de78105740f96d7c1ed082</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_concat_operation_1906235807de78105740f96d7c1ed082">43c6a7d807de78105740f96d7c1ed01a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 07:24:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

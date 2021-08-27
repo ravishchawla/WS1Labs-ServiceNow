@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Open an Existing Record">afd8dea707c6f4105740f96d7c1ed056</copied_from>
+        <description>Open the 'UI Page' form with id 'UI Page: WS1UEM popup'
+
+Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+Warning: Using an existing record may cause unexpected behavior for this test&#13;
+See the documentation for Test Design Considerations</description>
+        <display_name>Open an Existing Record</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <snapshot display_value="2cd3e3237c59bc2ad86c1fb8f6c2b8ca">884fe9d3074ab4105740f96d7c1ed0d5</snapshot>
+        <step_config display_value="Open an Existing Record">5f2e0e535332120028bc29cac2dc34d3</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:15</sys_created_on>
+        <sys_id>8e66a2e3070af4105740f96d7c1ed08d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open an Existing Record</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_8e66a2e3070af4105740f96d7c1ed08d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:15</sys_updated_on>
+        <table>sys_ui_page</table>
+        <test display_value="WS1UEmTestPopup_devicewipe">f966a2e3070af4105740f96d7c1ed04a</test>
+        <timeout/>
+        <warning_message>Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+Warning: Using an existing record may cause unexpected behavior for this test&#13;
+See the documentation for Test Design Considerations</warning_message>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=8e66a2e3070af4105740f96d7c1ed08d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8e66a2e3070af4105740f96d7c1ed08d</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:15</sys_created_on>
+        <sys_id>0666a2e3070af4105740f96d7c1ed08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:15</sys_updated_on>
+        <value>3cc0c3bc075134105740f96d7c1ed0f0</value>
+        <variable display_value="Record">ad351a4e53a0220002c6435723dc34f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8e66a2e3070af4105740f96d7c1ed08d</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:15</sys_created_on>
+        <sys_id>4266a2e3070af4105740f96d7c1ed08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:15</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">17d732a9c7a333005e5c45b881c26007</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8e66a2e3070af4105740f96d7c1ed08d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:15</sys_created_on>
+        <sys_id>8a66a2e3070af4105740f96d7c1ed08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:15</sys_updated_on>
+        <value>sys_ui_page</value>
+        <variable display_value="Table">b124164e53a0220002c6435723dc34c5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8e66a2e3070af4105740f96d7c1ed08d</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:15</sys_created_on>
+        <sys_id>c666a2e3070af4105740f96d7c1ed08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:15</sys_updated_on>
+        <value/>
+        <variable display_value="View">6e55da4e53a0220002c6435723dc34a0</variable>
+    </sys_variable_value>
+</record_update>

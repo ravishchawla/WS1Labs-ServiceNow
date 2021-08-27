@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="ws1uemimport" max_length="40" name="x_646971_uemconn_0_ws1uemimport" sizeclass="162" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ac_line_status" label="ac_line_status" max_length="40" name="u_ac_line_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=asset_number" label="asset_number" max_length="42" name="u_asset_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=available_device_capacity" label="available_device_capacity" max_length="40" name="u_available_device_capacity" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=battery_level" label="battery_level" max_length="40" name="u_battery_level" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=compliance_status" label="compliance_status" max_length="40" name="u_compliance_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=compromised_status" label="compromised_status" max_length="40" name="u_compromised_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=data_protection_status" label="data_protection_status" max_length="40" name="u_data_protection_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=device_capacity" label="device_capacity" max_length="40" name="u_device_capacity" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=device_friendly_name" label="device_friendly_name" max_length="59" name="u_device_friendly_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=device_reported_name" label="device_reported_name" max_length="40" name="u_device_reported_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=device_type" label="device_type" max_length="40" name="u_device_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=eas_ids" label="eas_ids" max_length="40" name="u_eas_ids" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=enrollment_status" label="enrollment_status" max_length="40" name="u_enrollment_status" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=enrollment_user_name" label="enrollment_user_name" max_length="40" name="u_enrollment_user_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=enrollment_user_uuid" label="enrollment_user_uuid" max_length="40" name="u_enrollment_user_uuid" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=enrollment_user_email_address" label="enrollment_user_email_address" max_length="40" name="u_enrollment_u__email_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Id" label="Id" max_length="40" name="u_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=imei" label="imei" max_length="40" name="u_imei" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=is_activation_lock_enabled" label="is_activation_lock_enabled" max_length="40" name="u_is_activation_lock_enabled" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=is_cloud_backup_enabled" label="is_cloud_backup_enabled" max_length="40" name="u_is_cloud_backup_enabled" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=is_device_dnd_enabled" label="is_device_dnd_enabled" max_length="40" name="u_is_device_dnd_enabled" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=is_device_locator_enabled" label="is_device_locator_enabled" max_length="40" name="u_is_device_locator_enabled" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=is_network_tethered" label="is_network_tethered" max_length="40" name="u_is_network_tethered" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=is_supervised" label="is_supervised" max_length="40" name="u_is_supervised" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=last_compliance_check_on" label="last_compliance_check_on" max_length="40" name="u_last_compliance_check_on" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=last_compromised_check_on" label="last_compromised_check_on" max_length="40" name="u_last_compromised_check_on" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=last_enrolled_on" label="last_enrolled_on" max_length="40" name="u_last_enrolled_on" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=last_seen" label="last_seen" max_length="40" name="u_last_seen" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=managed_by" label="managed_by" max_length="40" name="u_managed_by" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=model" label="model" max_length="40" name="u_model" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=model_identifier" label="model_identifier" max_length="40" name="u_model_identifier" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=oem_info" label="oem_info" max_length="40" name="u_oem_info" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=operating_system" label="operating_system" max_length="40" name="u_operating_system" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=organization_group_name" label="organization_group_name" max_length="40" name="u_organization_group_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=organization_group_uuid" label="organization_group_uuid" max_length="40" name="u_organization_group_uuid" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=os_build_version" label="os_build_version" max_length="40" name="u_os_build_version" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ownership" label="ownership" max_length="40" name="u_ownership" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=platform_name" label="platform_name" max_length="40" name="u_platform_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=processor_architecture" label="processor_architecture" max_length="40" name="u_processor_architecture" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=serial_number" label="serial_number" max_length="54" name="u_serial_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=time_zone" label="time_zone" max_length="40" name="u_time_zone" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=udid" label="udid" max_length="42" name="u_udid" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Uuid" label="Uuid" max_length="40" name="u_uuid" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=virtual_memory" label="virtual_memory" max_length="40" name="u_virtual_memory" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=wifi_ssid" label="wifi_ssid" max_length="40" name="u_wifi_ssid" type="string"/>
+    </element>
+</database>

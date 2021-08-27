@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Click Component (Custom UI)">9a66a2e3070af4105740f96d7c1ed0de</copied_from>
+        <description>Click the component: 'Button &lt;button&gt;: OK'</description>
+        <display_name>Click Component (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"1d2bf4e1d8e5d0d64b7b7f3ec24c64da":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Button &lt;button&gt;: OK\",\"inner_text\":\"OK\",\"sn_atf_mugshot_long_description\":\"Button &lt;button&gt; [submitData]: OK\",\"methods\":[\"click\"],\"sn_atf_mugshot_label\":\"OK\",\"index\":1,\"type\":\"submit\",\"version\":\"19.0\",\"get_value_result\":\"OK\",\"sn_atf_mugshot_tag_display_name\":\"Button &lt;button&gt;\",\"sn_atf_mugshot_value\":\"OK\",\"tag\":\"button\",\"isDisabled\":false,\"id\":\"submitData\",\"hash\":\"1d2bf4e1d8e5d0d64b7b7f3ec24c64da\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>16</order>
+        <snapshot/>
+        <step_config display_value="Click Component (Custom UI)">def25c4b73730300c79260bdfaf6a700</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 19:00:33</sys_created_on>
+        <sys_id>935a22e7070af4105740f96d7c1ed09f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Click Component (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_935a22e7070af4105740f96d7c1ed09f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 19:21:47</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_devicewipemac">7e5aeaa7070af4105740f96d7c1ed07d</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=935a22e7070af4105740f96d7c1ed09f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>935a22e7070af4105740f96d7c1ed09f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 19:00:33</sys_created_on>
+        <sys_id>935a22e7070af4105740f96d7c1ed0a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 19:00:33</sys_updated_on>
+        <value>1d2bf4e1d8e5d0d64b7b7f3ec24c64da</value>
+        <variable display_value="Component">ee05588b73730300c79260bdfaf6a749</variable>
+    </sys_variable_value>
+</record_update>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_cmdb_int_util_cleanse_serial_number_operation">
+    <sn_cmdb_int_util_cleanse_serial_number_operation action="DELETE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>Cleanse Serial Number - u_serial_number</name>
+        <operation_group/>
+        <order>200</order>
+        <source_sys_rte_eb_field display_value="u_serial_number">79e7920c07de38105740f96d7c1ed0b5</source_sys_rte_eb_field>
+        <source_sys_rte_eb_fields/>
+        <sys_class_name>sn_cmdb_int_util_cleanse_serial_number_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-27 00:08:46</sys_created_on>
+        <sys_id>b1140618079a78105740f96d7c1ed03b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cleanse Serial Number - u_serial_number</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">70d7120c07de38105740f96d7c1ed061</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">78e7520c07de38105740f96d7c1ed075</sys_rte_eb_entity>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sn_cmdb_int_util_cleanse_serial_number_operation_b1140618079a78105740f96d7c1ed03b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 00:08:46</sys_updated_on>
+        <target_sys_rte_eb_field display_value="u_serial_number_1">e5140618079a78105740f96d7c1ed037</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Cleanse Serial Number">a829d4f20f715410d041436eef767ef1</type>
+    </sn_cmdb_int_util_cleanse_serial_number_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sn_cmdb_int_util_cleanse_serial_number_operation_b1140618079a78105740f96d7c1ed03b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sn_cmdb_int_util_cleanse_serial_number_operation"&gt;&lt;sn_cmdb_int_util_cleanse_serial_number_operation action="INSERT_OR_UPDATE"&gt;&lt;conditional_fields/&gt;&lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;Cleanse Serial Number - u_serial_number&lt;/name&gt;&lt;operation_group/&gt;&lt;order&gt;200&lt;/order&gt;&lt;source_sys_rte_eb_field display_value="u_serial_number"&gt;79e7920c07de38105740f96d7c1ed0b5&lt;/source_sys_rte_eb_field&gt;&lt;source_sys_rte_eb_fields/&gt;&lt;sys_class_name&gt;sn_cmdb_int_util_cleanse_serial_number_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-27 00:08:46&lt;/sys_created_on&gt;&lt;sys_id&gt;b1140618079a78105740f96d7c1ed03b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Cleanse Serial Number - u_serial_number&lt;/sys_name&gt;&lt;sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;70d7120c07de38105740f96d7c1ed061&lt;/sys_rte_eb_definition&gt;&lt;sys_rte_eb_entity display_value="temp"&gt;78e7520c07de38105740f96d7c1ed075&lt;/sys_rte_eb_entity&gt;&lt;sys_scope display_value="WS1UEMSpoke"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sn_cmdb_int_util_cleanse_serial_number_operation_b1140618079a78105740f96d7c1ed03b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-27 00:08:46&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_field display_value="u_serial_number_1"&gt;e5140618079a78105740f96d7c1ed037&lt;/target_sys_rte_eb_field&gt;&lt;target_sys_rte_eb_fields/&gt;&lt;type display_value="Cleanse Serial Number"&gt;a829d4f20f715410d041436eef767ef1&lt;/type&gt;&lt;/sn_cmdb_int_util_cleanse_serial_number_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>518428974</payload_hash>
+        <record_name>Cleanse Serial Number - u_serial_number</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-27 00:08:46</sys_created_on>
+        <sys_id>71140618079a78105740f96d7c1ed03e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b84f001090000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 00:08:46</sys_updated_on>
+        <type>Robust Transform Engine Entity Cleanse S</type>
+        <update_guid>79140618e29a78107ab00570a94f9d3d</update_guid>
+        <update_guid_history>79140618e29a78107ab00570a94f9d3d:518428974</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Cleanse Serial Number - u_serial_number">01240e1007da78105740f96d7c1ed012</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-27 00:09:00</sys_created_on>
+        <sys_db_object display_value="" name="sn_cmdb_int_util_cleanse_serial_number_operation">sn_cmdb_int_util_cleanse_serial_number_operation</sys_db_object>
+        <sys_id>7893a19e27b64d7586b6004aaa1921f1</sys_id>
+        <sys_metadata>b1140618079a78105740f96d7c1ed03b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cleanse Serial Number - u_serial_number</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sn_cmdb_int_util_cleanse_serial_number_operation_b1140618079a78105740f96d7c1ed03b</sys_update_name>
+        <sys_update_version display_value="sn_cmdb_int_util_cleanse_serial_number_operation_b1140618079a78105740f96d7c1ed03b">71140618079a78105740f96d7c1ed03e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 00:09:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

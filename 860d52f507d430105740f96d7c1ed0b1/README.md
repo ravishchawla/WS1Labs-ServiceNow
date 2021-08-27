@@ -26,3 +26,4 @@ If you find yourself unable to import your repository due to the presence of fil
    Currently listed dependencies:
    * Service Graph Connector for VMware Workspace ONE UEM
    * Incident
+   * System Import Sets

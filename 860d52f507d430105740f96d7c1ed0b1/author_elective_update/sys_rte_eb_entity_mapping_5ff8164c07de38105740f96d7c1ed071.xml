@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_entity_mapping">
+    <sys_rte_eb_entity_mapping action="DELETE">
+        <condition_script><![CDATA[/*  Example Script  (function() {          //step1: access the input variables         if (input && input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]></condition_script>
+        <encoded_query/>
+        <entity_mapping_group>87f8d20c07de38105740f96d7c1ed00a</entity_mapping_group>
+        <ignore>true</ignore>
+        <is_conditional>false</is_conditional>
+        <name>tempToComputer 1</name>
+        <order>100</order>
+        <source_sys_rte_eb_entity display_value="temp">78e7520c07de38105740f96d7c1ed075</source_sys_rte_eb_entity>
+        <sys_class_name>sys_rte_eb_entity_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-26 07:01:36</sys_created_on>
+        <sys_id>5ff8164c07de38105740f96d7c1ed071</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>tempToComputer 1</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">70d7120c07de38105740f96d7c1ed061</sys_rte_eb_definition>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_rte_eb_entity_mapping_5ff8164c07de38105740f96d7c1ed071</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 07:58:42</sys_updated_on>
+        <target_sys_rte_eb_entity display_value="Computer 1">0bf8d20c07de38105740f96d7c1ed00a</target_sys_rte_eb_entity>
+    </sys_rte_eb_entity_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_rte_eb_entity_mapping_5ff8164c07de38105740f96d7c1ed071</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_entity_mapping"&gt;&lt;sys_rte_eb_entity_mapping action="INSERT_OR_UPDATE"&gt;&lt;condition_script&gt;&lt;![CDATA[/*  Example Script  (function() {          //step1: access the input variables         if (input &amp;&amp; input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]&gt;&lt;/condition_script&gt;&lt;encoded_query/&gt;&lt;entity_mapping_group&gt;87f8d20c07de38105740f96d7c1ed00a&lt;/entity_mapping_group&gt;&lt;ignore&gt;true&lt;/ignore&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;tempToComputer 1&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;source_sys_rte_eb_entity display_value="temp"&gt;78e7520c07de38105740f96d7c1ed075&lt;/source_sys_rte_eb_entity&gt;&lt;sys_class_name&gt;sys_rte_eb_entity_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-26 07:01:36&lt;/sys_created_on&gt;&lt;sys_id&gt;5ff8164c07de38105740f96d7c1ed071&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;tempToComputer 1&lt;/sys_name&gt;&lt;sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;70d7120c07de38105740f96d7c1ed061&lt;/sys_rte_eb_definition&gt;&lt;sys_scope display_value="WS1UEMSpoke"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_entity_mapping_5ff8164c07de38105740f96d7c1ed071&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 07:58:42&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_entity display_value="Computer 1"&gt;0bf8d20c07de38105740f96d7c1ed00a&lt;/target_sys_rte_eb_entity&gt;&lt;/sys_rte_eb_entity_mapping&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>168957151</payload_hash>
+        <record_name>tempToComputer 1</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-26 07:58:42</sys_created_on>
+        <sys_id>b70626c4071278105740f96d7c1ed09a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b8177e2020000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 07:58:42</sys_updated_on>
+        <type>RTE Entity Mapping</type>
+        <update_guid>3f0626c4ec127810a33a630159d94a99</update_guid>
+        <update_guid_history>3f0626c4ec127810a33a630159d94a99:168957151,d3f8164c0fde3810a8cc38b2f011de73:-1932049918</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-26 07:58:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_entity_mapping">sys_rte_eb_entity_mapping</sys_db_object>
+        <sys_id>2bb129d74475462b880bb5052a0dc269</sys_id>
+        <sys_metadata>5ff8164c07de38105740f96d7c1ed071</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tempToComputer 1</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_entity_mapping_5ff8164c07de38105740f96d7c1ed071</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_entity_mapping_5ff8164c07de38105740f96d7c1ed071">b70626c4071278105740f96d7c1ed09a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 07:58:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Component State Validation (Custom UI)">8f4f6dd3074ab4105740f96d7c1ed04c</copied_from>
+        <description>Confirm that the 'Text &lt;div&gt;: Remotely connect to enrolled device to view and control its screen in real-time.' component is enabled</description>
+        <display_name>Component State Validation (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"ba8fad6da8a3de340eafa25c987f7cee":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Text &lt;div&gt;: Remotely connect to enrolled device to view and control its screen in real-time.\",\"inner_text\":\"Remotely connect to enrolled device to view and control its screen in real-time.\",\"sn_atf_mugshot_long_description\":\"Text &lt;div&gt; [div_ws1_text]: Remotely connect to enrolled device to view and...\",\"methods\":[\"click\"],\"sn_atf_mugshot_label\":\"Remotely connect to enrolled device to view and control its screen in real-time.\",\"index\":2,\"version\":\"19.0\",\"get_value_result\":\"Remotely connect to enrolled device to view and control its screen in real-time.\",\"sn_atf_mugshot_tag_display_name\":\"Text &lt;div&gt;\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"div\",\"isDisabled\":false,\"id\":\"div_ws1_text\",\"hash\":\"ba8fad6da8a3de340eafa25c987f7cee\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>10</order>
+        <snapshot/>
+        <step_config display_value="Component State Validation (Custom UI)">38907e937322130007d738682bf6a742</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 14:59:05</sys_created_on>
+        <sys_id>8a1379ab0746f4105740f96d7c1ed0fc</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Component State Validation (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_8a1379ab0746f4105740f96d7c1ed0fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 17:52:08</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_message">061379ab0746f4105740f96d7c1ed0ce</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=8a1379ab0746f4105740f96d7c1ed0fc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8a1379ab0746f4105740f96d7c1ed0fc</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 14:59:05</sys_created_on>
+        <sys_id>021379ab0746f4105740f96d7c1ed0fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 14:59:05</sys_updated_on>
+        <value>enabled</value>
+        <variable display_value="Assert type">cd3c61c07372130007d738682bf6a743</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>8a1379ab0746f4105740f96d7c1ed0fc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 14:59:05</sys_created_on>
+        <sys_id>c21379ab0746f4105740f96d7c1ed0fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 14:59:05</sys_updated_on>
+        <value>ba8fad6da8a3de340eafa25c987f7cee</value>
+        <variable display_value="Component">134b69807372130007d738682bf6a7d8</variable>
+    </sys_variable_value>
+</record_update>

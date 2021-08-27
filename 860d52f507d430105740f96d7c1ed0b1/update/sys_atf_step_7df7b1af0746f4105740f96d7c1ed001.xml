@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Set the components on the page as follows:
+'Textarea &lt;textarea&gt; [input_ws1_message]' = WS1 Connector / ServiceNow test value
+</description>
+        <display_name>Set Component Values (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"f11950d377d31032fe4daf476f6c69de":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Textarea &lt;textarea&gt; [input_ws1_message]\",\"sn_atf_mugshot_long_description\":\"Textarea &lt;textarea&gt; [input_ws1_message]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"input_ws1_message\",\"type\":\"textarea\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Textarea &lt;textarea&gt;\",\"name\":\"input_ws1_message\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"textarea\",\"isDisabled\":false,\"id\":\"input_ws1_message\",\"hash\":\"f11950d377d31032fe4daf476f6c69de\",\"html_value\":\"\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>20</order>
+        <snapshot/>
+        <step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 15:20:49</sys_created_on>
+        <sys_id>7df7b1af0746f4105740f96d7c1ed001</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_7df7b1af0746f4105740f96d7c1ed001</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-27 17:52:07</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_message">061379ab0746f4105740f96d7c1ed0ce</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=7df7b1af0746f4105740f96d7c1ed001"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>7df7b1af0746f4105740f96d7c1ed001</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 15:20:49</sys_created_on>
+        <sys_id>e41831af0746f4105740f96d7c1ed0de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 15:20:49</sys_updated_on>
+        <value>f11950d377d31032fe4daf476f6c69de=WS1 Connector / ServiceNow test value^EQ</value>
+        <variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable>
+    </sys_variable_value>
+</record_update>

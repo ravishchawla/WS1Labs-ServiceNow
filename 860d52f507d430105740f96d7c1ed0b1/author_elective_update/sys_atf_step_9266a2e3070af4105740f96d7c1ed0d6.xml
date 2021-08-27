@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from display_value="Set Component Values (Custom UI)">77d8dea707c6f4105740f96d7c1ed093</copied_from>
+        <description>Set the components on the page as follows:
+'Password &lt;input&gt; [input_ws1_passcode]' = 1234
+</description>
+        <display_name>Set Component Values (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"8aa1456f6a414136f0cca40e2b69bfca":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Password &lt;input&gt; [input_ws1_passcode]\",\"sn_atf_mugshot_long_description\":\"Password &lt;input&gt; [input_ws1_passcode]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"input_ws1_passcode\",\"index\":0,\"type\":\"password\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Password &lt;input&gt;\",\"name\":\"input_ws1_passcode\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"input\",\"isDisabled\":false,\"id\":\"input_ws1_passcode\",\"hash\":\"8aa1456f6a414136f0cca40e2b69bfca\",\"html_value\":\"\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>14</order>
+        <snapshot/>
+        <step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:16</sys_created_on>
+        <sys_id>9266a2e3070af4105740f96d7c1ed0d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_9266a2e3070af4105740f96d7c1ed0d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:16</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_changepasscode copy">f966a2e3070af4105740f96d7c1ed04a</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=9266a2e3070af4105740f96d7c1ed0d6"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>9266a2e3070af4105740f96d7c1ed0d6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:16</sys_created_on>
+        <sys_id>1666a2e3070af4105740f96d7c1ed0d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:16</sys_updated_on>
+        <value>8aa1456f6a414136f0cca40e2b69bfca=1234^EQ</value>
+        <variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_atf_step_9266a2e3070af4105740f96d7c1ed0d6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from display_value="Set Component Values (Custom UI)">77d8dea707c6f4105740f96d7c1ed093</copied_from><description>Set the components on the page as follows:
+'Password &lt;input&gt; [input_ws1_passcode]' = 1234
+</description><display_name>Set Component Values (Custom UI)</display_name><inputs/><mugshots_cache_json>{"8aa1456f6a414136f0cca40e2b69bfca":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Password &lt;input&gt; [input_ws1_passcode]\",\"sn_atf_mugshot_long_description\":\"Password &lt;input&gt; [input_ws1_passcode]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"input_ws1_passcode\",\"index\":0,\"type\":\"password\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Password &lt;input&gt;\",\"name\":\"input_ws1_passcode\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"input\",\"isDisabled\":false,\"id\":\"input_ws1_passcode\",\"hash\":\"8aa1456f6a414136f0cca40e2b69bfca\",\"html_value\":\"\"}"}</mugshots_cache_json><notes/><order>14</order><snapshot/><step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-24 18:43:16</sys_created_on><sys_id>9266a2e3070af4105740f96d7c1ed0d6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Component Values (Custom UI)</sys_name><sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_atf_step_9266a2e3070af4105740f96d7c1ed0d6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-24 18:43:16</sys_updated_on><table/><test display_value="WS1UEmTestPopup_changepasscode copy">f966a2e3070af4105740f96d7c1ed04a</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=9266a2e3070af4105740f96d7c1ed0d6"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>9266a2e3070af4105740f96d7c1ed0d6</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-24 18:43:16</sys_created_on><sys_id>1666a2e3070af4105740f96d7c1ed0d7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-24 18:43:16</sys_updated_on><value>8aa1456f6a414136f0cca40e2b69bfca=1234^EQ</value><variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-386472509</payload_hash>
+        <record_name>Set Component Values (Custom UI)</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:43:16</sys_created_on>
+        <sys_id>1666a2e3070af4105740f96d7c1ed0d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b7979493b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:43:16</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>1e66a2e31f0af410a0d68c1eb4a9dad8</update_guid>
+        <update_guid_history>1e66a2e31f0af410a0d68c1eb4a9dad8:-386472509</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 18:47:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>85bc11237a4e41f891f49eaf00ccfe40</sys_id>
+        <sys_metadata>9266a2e3070af4105740f96d7c1ed0d6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_atf_step_9266a2e3070af4105740f96d7c1ed0d6</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_9266a2e3070af4105740f96d7c1ed0d6">1666a2e3070af4105740f96d7c1ed0d9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 18:47:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
