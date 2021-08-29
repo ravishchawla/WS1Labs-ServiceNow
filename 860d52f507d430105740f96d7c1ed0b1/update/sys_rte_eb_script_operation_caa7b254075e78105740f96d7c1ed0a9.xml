@@ -34,8 +34,11 @@
     gr.addQuery('name', 'STARTSWITH', input);
     gr.query();
     gr.next();
-    output[i] = gr.sys_id;
-     
+    if (gr.sys_id){
+       output[i] = gr.sys_id;
+     } else {
+       output[i] = "";
+     }
 		// Set each output element below
 		//output[i] = output_variable_name;
 	}
@@ -47,7 +50,7 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-27 03:54:05</sys_created_on>
         <sys_id>caa7b254075e78105740f96d7c1ed0a9</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Script Operation - u_model_identifier</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
@@ -56,7 +59,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_rte_eb_script_operation_caa7b254075e78105740f96d7c1ed0a9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 04:00:25</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:18:13</sys_updated_on>
         <target_sys_rte_eb_field display_value="u_model_identifier_1">8ea7b254075e78105740f96d7c1ed0a6</target_sys_rte_eb_field>
         <target_sys_rte_eb_fields/>
         <type display_value="Script Operation">941f88e273b333002b6265a751ab9e84</type>

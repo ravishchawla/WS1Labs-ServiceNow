@@ -13,7 +13,7 @@
         <ih_action>true</ih_action>
         <internal_name>ws1uemimport</internal_name>
         <label_cache>[{"name":"{{action.limit}}","label":"action➛Limit","type":"action","ref":""},{"name":"{{action.offset}}","label":"action➛Offset","type":"action","ref":""},{"name":"{{action.attachment_name}}","label":"action➛Attachment Name","type":"action","ref":""},{"name":"{{action.last_success_import_time}}","label":"action➛Last Success Import Time","type":"action","ref":""},{"name":"{{action.import_start_time}}","label":"action➛Import Start Time","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛username","type":"action","ref":""},{"name":"{{step[b4ba3ab5-01f8-493e-8f62-74507c74cd70].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[b4ba3ab5-01f8-493e-8f62-74507c74cd70].username}}","label":"step➛Script step➛username","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>5e5c9f9007de78105740f96d7c1ed0f1</latest_snapshot>
+        <latest_snapshot>1b9ecba8079ab8105740f96d7c1ed055</latest_snapshot>
         <master_snapshot>2145a073078ef4105740f96d7c1ed0cf</master_snapshot>
         <name>WS1UEMImport</name>
         <natlang/>
@@ -26,7 +26,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8f342033078ef4105740f96d7c1ed05e</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>WS1UEMImport</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -34,7 +34,7 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_8f342033078ef4105740f96d7c1ed05e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:23</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:52</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -118,10 +118,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:53</sys_created_on>
         <sys_id>12a4a433078ef4105740f96d7c1ed0ce</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:12</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:37</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=12a4a433078ef4105740f96d7c1ed0ce"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -188,10 +188,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:53</sys_created_on>
         <sys_id>a6a4e433078ef4105740f96d7c1ed01b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-25 03:54:53</sys_updated_on>
-        <value>https://assistrm.ssdevrd.com:443/api</value>
+        <sys_updated_on>2021-08-28 00:12:37</sys_updated_on>
+        <value>https://cn135.awmdm.com:443/api</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -494,10 +494,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-27 06:34:11</sys_created_on>
         <sys_id>2b4c1f9007de78105740f96d7c1ed01c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:18</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:37</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2b4c1f9007de78105740f96d7c1ed01c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -522,13 +522,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-27 06:34:11</sys_created_on>
         <sys_id>2b4c1f9007de78105740f96d7c1ed03a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:11</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:37</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 // ... code ...
   
-  outputs.username = "wsa";
+  outputs.username = "rmtest";
   
 })(inputs, outputs);
 </value>
@@ -1150,14 +1150,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:54</sys_created_on>
         <sys_id>22a4e433078ef4105740f96d7c1ed020</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:19</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1233,14 +1233,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:54</sys_created_on>
         <sys_id>2aa4e433078ef4105740f96d7c1ed034</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:19</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1316,14 +1316,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:54</sys_created_on>
         <sys_id>62a4e433078ef4105740f96d7c1ed03b</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:19</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1399,14 +1399,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:54</sys_created_on>
         <sys_id>a6a4e433078ef4105740f96d7c1ed027</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:19</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1482,14 +1482,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:54:54</sys_created_on>
         <sys_id>eea4e433078ef4105740f96d7c1ed02d</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:19</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:48</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1737,17 +1737,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMImport">8f342033078ef4105740f96d7c1ed05e</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"26452473078ef4105740f96d7c1ed010","name":"plan"}}</plan>
-        <snapshot>5e5c9f9007de78105740f96d7c1ed0f1</snapshot>
+        <snapshot>1b9ecba8079ab8105740f96d7c1ed055</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:37</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>26452473078ef4105740f96d7c1ed010</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:26</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:55</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1899,10 +1899,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-27 06:34:22</sys_created_on>
         <sys_id>ca5c9f9007de78105740f96d7c1ed096</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:22</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ca5c9f9007de78105740f96d7c1ed096"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1955,13 +1955,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-27 06:34:22</sys_created_on>
         <sys_id>ce5c9f9007de78105740f96d7c1ed0a4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:22</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 // ... code ...
   
-  outputs.username = "wsa";
+  outputs.username = "rmtest";
   
 })(inputs, outputs);
 </value>
@@ -2065,10 +2065,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:33</sys_created_on>
         <sys_id>e545a073078ef4105740f96d7c1ed0f8</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:22</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e545a073078ef4105740f96d7c1ed0f8"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2135,10 +2135,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:34</sys_created_on>
         <sys_id>6d45e073078ef4105740f96d7c1ed01a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-25 03:57:34</sys_updated_on>
-        <value>https://assistrm.ssdevrd.com:443/api</value>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
+        <value>https://cn135.awmdm.com:443/api</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2897,14 +2897,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:34</sys_created_on>
         <sys_id>3545e073078ef4105740f96d7c1ed026</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:23</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2980,14 +2980,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:34</sys_created_on>
         <sys_id>7945e073078ef4105740f96d7c1ed039</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:23</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3063,14 +3063,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:34</sys_created_on>
         <sys_id>b145e073078ef4105740f96d7c1ed033</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:23</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3146,14 +3146,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:34</sys_created_on>
         <sys_id>b545e073078ef4105740f96d7c1ed01f</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:22</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3229,14 +3229,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-25 03:57:34</sys_created_on>
         <sys_id>f945e073078ef4105740f96d7c1ed02c</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-27 06:34:23</sys_updated_on>
+        <sys_updated_on>2021-08-28 00:12:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
