@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>Create scheduled import(s) to import data from the new connection.</p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents>2139da88530e201056a2ddeeff7b129e</dependent_on_contents>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier>sn_vmwoneuem_integ_new_scheduled_imports</embedded_help_qualifier>
+        <end_point>sn_vmwoneuem_integ_$create_scheduled_import.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on>eb5fb5095398201091b8ddeeff7b124e</implicit_dependent_on>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>300</order>
+        <parent display_value="Create another connection">b455d208530e201056a2ddeeff7b12aa</parent>
+        <parents>b455d208530e201056a2ddeeff7b12aa,291d71855398201091b8ddeeff7b12c9</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="Service Graph Connector for VMware Workspace ONE UEM">291d71855398201091b8ddeeff7b12c9</root_parent>
+        <skippable>false</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-27 00:54:00</sys_created_on>
+        <sys_id>46bcde0c530e201056a2ddeeff7b1286</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Create scheduled import jobs</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_46bcde0c530e201056a2ddeeff7b1286</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-15 19:05:03</sys_updated_on>
+        <table/>
+        <title>Create scheduled import jobs</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=46bcde0c530e201056a2ddeeff7b1286"/>
+</record_update>

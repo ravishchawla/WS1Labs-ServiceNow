@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from display_value="Assert Text on Page (Custom UI)">9d54b25407f578105740f96d7c1ed087</copied_from>
+        <description>Assert that the text 'Workspace' is on the page.
+With a failure timeout of 5 Seconds</description>
+        <display_name>Assert Text on Page (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <snapshot/>
+        <step_config display_value="Assert Text on Page (Custom UI)">475e0de3d732130089fca2285e610361</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>944eb6dc07f578105740f96d7c1ed0c2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Assert Text on Page (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_944eb6dc07f578105740f96d7c1ed0c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:52:13</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEMSendMessage2">4c4eb2dc07f578105740f96d7c1ed0a4</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=944eb6dc07f578105740f96d7c1ed0c2"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>944eb6dc07f578105740f96d7c1ed0c2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>5c4eb6dc07f578105740f96d7c1ed0c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:51:31</sys_updated_on>
+        <value>Workspace</value>
+        <variable display_value="Text">1c267c5cd703130089fca2285e61035b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>944eb6dc07f578105740f96d7c1ed0c2</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>984eb6dc07f578105740f96d7c1ed0c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:51:31</sys_updated_on>
+        <value>19.0</value>
+        <variable display_value="Custom UI version">4a49b1d3b700101044026848ee11a980</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>944eb6dc07f578105740f96d7c1ed0c2</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:51:31</sys_created_on>
+        <sys_id>d44eb6dc07f578105740f96d7c1ed0c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:51:31</sys_updated_on>
+        <value>text_on_page</value>
+        <variable display_value="Assert Type">86e4f05cd703130089fca2285e610307</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_atf_step_944eb6dc07f578105740f96d7c1ed0c2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from display_value="Assert Text on Page (Custom UI)">9d54b25407f578105740f96d7c1ed087</copied_from><description>Assert that the text 'Workspace' is on the page.
+With a failure timeout of 5 Seconds</description><display_name>Assert Text on Page (Custom UI)</display_name><inputs/><mugshots_cache_json/><notes/><order>2</order><snapshot/><step_config display_value="Assert Text on Page (Custom UI)">475e0de3d732130089fca2285e610361</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>944eb6dc07f578105740f96d7c1ed0c2</sys_id><sys_mod_count>8</sys_mod_count><sys_name>Assert Text on Page (Custom UI)</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_atf_step_944eb6dc07f578105740f96d7c1ed0c2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:52:13</sys_updated_on><table/><test display_value="WS1UEMSendMessage2">4c4eb2dc07f578105740f96d7c1ed0a4</test><timeout>1970-01-01 00:00:05</timeout><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=944eb6dc07f578105740f96d7c1ed0c2"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>944eb6dc07f578105740f96d7c1ed0c2</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>5c4eb6dc07f578105740f96d7c1ed0c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:51:31</sys_updated_on><value>Workspace</value><variable display_value="Text">1c267c5cd703130089fca2285e61035b</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>944eb6dc07f578105740f96d7c1ed0c2</document_key><order>300</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>984eb6dc07f578105740f96d7c1ed0c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:51:31</sys_updated_on><value>19.0</value><variable display_value="Custom UI version">4a49b1d3b700101044026848ee11a980</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>944eb6dc07f578105740f96d7c1ed0c2</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-02 07:51:31</sys_created_on><sys_id>d44eb6dc07f578105740f96d7c1ed0c3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-02 07:51:31</sys_updated_on><value>text_on_page</value><variable display_value="Assert Type">86e4f05cd703130089fca2285e610307</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-2086333566</payload_hash>
+        <record_name>Assert Text on Page (Custom UI)</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:52:13</sys_created_on>
+        <sys_id>3e6ebadc07f578105740f96d7c1ed04d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b05d952fa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:52:13</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>366ebadc94f57810d5ba633839ebd74d</update_guid>
+        <update_guid_history>366ebadc94f57810d5ba633839ebd74d:-2086333566,a26ebadca6f578101574bfe256a46641:-1099880317,266ebadcecf578104d3f0792e64eba35:-113427068,1a6e7adc96f5781051b652cf6ba91ce6:873026181,984eb6dca4f57810c89b1b73d6f87ec5:383208745</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-02 07:55:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>40454edfd3a148c1b1ac483ca00196e9</sys_id>
+        <sys_metadata>944eb6dc07f578105740f96d7c1ed0c2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assert Text on Page (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_atf_step_944eb6dc07f578105740f96d7c1ed0c2</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_944eb6dc07f578105740f96d7c1ed0c2">3e6ebadc07f578105740f96d7c1ed04d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-02 07:55:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

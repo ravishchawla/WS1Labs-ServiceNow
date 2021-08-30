@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_vmw_uemconn_0.HelloWorld</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>HelloWorld</name>
+        <script><![CDATA[var HelloWorld = Class.create();
+HelloWorld.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+   helloWorld:function() { return "Hello " + this.getParameter('sysparm_user_name') + "!"; } ,
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-06 21:42:06</sys_created_on>
+        <sys_id>9b926ab90771f0105740f96d7c1ed06f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HelloWorld</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_include_9b926ab90771f0105740f96d7c1ed06f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-06 21:42:06</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_script_include_9b926ab90771f0105740f96d7c1ed06f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_vmw_uemconn_0.HelloWorld&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;HelloWorld&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var HelloWorld = Class.create();
+HelloWorld.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+   helloWorld:function() { return "Hello " + this.getParameter('sysparm_user_name') + "!"; } ,
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-06 21:42:06&lt;/sys_created_on&gt;&lt;sys_id&gt;9b926ab90771f0105740f96d7c1ed06f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;HelloWorld&lt;/sys_name&gt;&lt;sys_package display_value="WS1UEM" source="x_vmw_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="WS1UEM"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_9b926ab90771f0105740f96d7c1ed06f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-06 21:42:06&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1880299176</payload_hash>
+        <record_name>HelloWorld</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-06 21:42:06</sys_created_on>
+        <sys_id>dab2eeb90771f0105740f96d7c1ed0b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b1d6a8a6c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-06 21:42:06</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>16b2eeb9d971f010ccbe61d0d113c6b2</update_guid>
+        <update_guid_history>16b2eeb9d971f010ccbe61d0d113c6b2:-1880299176</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-06 22:23:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>180a4fa67cc44240bc4466329f69e400</sys_id>
+        <sys_metadata>9b926ab90771f0105740f96d7c1ed06f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HelloWorld</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_script_include_9b926ab90771f0105740f96d7c1ed06f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_9b926ab90771f0105740f96d7c1ed06f">dab2eeb90771f0105740f96d7c1ed0b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-06 22:23:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

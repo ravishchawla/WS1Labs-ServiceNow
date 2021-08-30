@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="u_imp_tmpl_x_vmw_uemconn_0_ws1_action_os_mapping">ac3bb0251bde3410a76c0dc0604bcb84</map>
+        <reference_value_field/>
+        <source_field>u_assist__screen_share_</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>u_imp_tmpl_x_vmw_uemconn_0_ws1_action_os_mapping</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-30 16:02:42</sys_created_on>
+        <sys_id>ec3bb0251bde3410a76c0dc0604bcb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_assist__screen_share_</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_transform_entry_ec3bb0251bde3410a76c0dc0604bcb8e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-30 16:02:42</sys_updated_on>
+        <target_field>assist_screenshare</target_field>
+        <target_table>x_vmw_uemconn_0_ws1_action_os_mapping</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+</record_update>

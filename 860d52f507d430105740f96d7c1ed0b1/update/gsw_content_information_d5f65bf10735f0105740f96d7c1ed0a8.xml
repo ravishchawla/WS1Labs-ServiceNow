@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>In order to complete this step, you will need following information from your VMware Workspace One UEM administrator.</p>
+<ul style="list-style-position: inside;"><li>Host</li><li>Client ID</li><li>Client Secret</li><li>Token URL</li></ul>
+<p>To get the OAuth credentials please refer VMware <a title="" href="https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/UEM_ConsoleBasics/GUID-BF20C949-5065-4DCF-889D-1E0151016B5A.html#create-an-oauth-client-to-use-for-api-commands-3" rel="nofollow">documentation</a>.</p>
+<p>For further information about the Token URL please refer to VMware <a title="" href="https://kb.vmware.com/s/article/76967" rel="nofollow">documentation</a>. </p>
+<p>For more information about the VMware Workspace ONE UEM API, see the VMware Workspace ONE UEM documentation.</p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>x_vmw_uemconn_0_WS1UEMConfigureConnection.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>100</order>
+        <parent display_value="Configure the connection">368bb55f07e5b4105740f96d7c1ed035</parent>
+        <parents>368bb55f07e5b4105740f96d7c1ed035,b51b3d1f07e5b4105740f96d7c1ed08b</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="Welcome to VMware Workspace ONE ITSM Connector Guided Setup">b51b3d1f07e5b4105740f96d7c1ed08b</root_parent>
+        <skippable>false</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-07 01:31:47</sys_created_on>
+        <sys_id>d5f65bf10735f0105740f96d7c1ed0a8</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Configure connection details</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_d5f65bf10735f0105740f96d7c1ed0a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-07 01:37:27</sys_updated_on>
+        <table/>
+        <title>Configure connection details</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=d5f65bf10735f0105740f96d7c1ed0a8"/>
+</record_update>

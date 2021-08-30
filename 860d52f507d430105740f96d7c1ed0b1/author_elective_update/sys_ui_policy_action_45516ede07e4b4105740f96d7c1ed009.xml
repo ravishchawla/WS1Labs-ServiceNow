@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>x_vmw_uemconn_0_ws1user</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 07:35:11</sys_created_on>
+        <sys_id>45516ede07e4b4105740f96d7c1ed009</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_vmw_uemconn_0_ws1user</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_ui_policy_action_45516ede07e4b4105740f96d7c1ed009</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 07:40:18</sys_updated_on>
+        <table>incident</table>
+        <ui_policy display_value="Buttons visible in WS1 UEM set">edd026de07e4b4105740f96d7c1ed04b</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_ui_policy_action_45516ede07e4b4105740f96d7c1ed009</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>x_vmw_uemconn_0_ws1user</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-07 07:35:11</sys_created_on><sys_id>45516ede07e4b4105740f96d7c1ed009</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_vmw_uemconn_0_ws1user</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_ui_policy_action_45516ede07e4b4105740f96d7c1ed009</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-07 07:40:18</sys_updated_on><table>incident</table><ui_policy display_value="Buttons visible in WS1 UEM set">edd026de07e4b4105740f96d7c1ed04b</ui_policy><visible>false</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>342957824</payload_hash>
+        <record_name>x_vmw_uemconn_0_ws1user</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 07:40:18</sys_created_on>
+        <sys_id>8aa26e120728b4105740f96d7c1ed03c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179e56a48910000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 07:40:18</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>06a26e12b928b4109225c790554f083c</update_guid>
+        <update_guid_history>06a26e12b928b4109225c790554f083c:342957824,2322ea12ec28b4105fb15f05d0f64110:-411329785,d2d12ede4ce4b41014e4e62f15aaaba8:342957824,1f7126de73e4b4109d3bc9d77f14c4bc:-1977407078</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-08 06:53:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>68ba841767e9467ca5a6d5a5286fe884</sys_id>
+        <sys_metadata>45516ede07e4b4105740f96d7c1ed009</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_uemconn_0_ws1user</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="Fields visible in WS1 UEM set">edd026de07e4b4105740f96d7c1ed04b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_45516ede07e4b4105740f96d7c1ed009</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_45516ede07e4b4105740f96d7c1ed009">8aa26e120728b4105740f96d7c1ed03c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-08 06:53:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

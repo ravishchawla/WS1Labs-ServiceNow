@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="DELETE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>x_vmw_uemconn_0.gitlab</id>
+        <multiple_connections>false</multiple_connections>
+        <name>gitlab</name>
+        <parent/>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-29 16:36:51</sys_created_on>
+        <sys_id>0740316d078930105740f96d7c1ed0a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_uemconn_0.gitlab</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_alias_0740316d078930105740f96d7c1ed0a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-29 16:36:51</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_alias_0740316d078930105740f96d7c1ed0a8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias"><sys_alias action="INSERT_OR_UPDATE"><configuration_template/><connection_type>http_connection</connection_type><id>x_vmw_uemconn_0.gitlab</id><multiple_connections>false</multiple_connections><name>gitlab</name><parent/><retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy><sys_class_name>sys_alias</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-29 16:36:51</sys_created_on><sys_id>0740316d078930105740f96d7c1ed0a8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_vmw_uemconn_0.gitlab</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_alias_0740316d078930105740f96d7c1ed0a8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-29 16:36:51</sys_updated_on><type>connection</type></sys_alias></record_update>]]></payload>
+        <payload_hash>-180567547</payload_hash>
+        <record_name>x_vmw_uemconn_0.gitlab</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-29 16:36:51</sys_created_on>
+        <sys_id>dc70b16d078930105740f96d7c1ed047</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a58a16c000000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-29 16:36:51</sys_updated_on>
+        <type>Connection &amp; Credential Aliases</type>
+        <update_guid>d470b16dad89301047c043469fb03e47</update_guid>
+        <update_guid_history>d470b16dad89301047c043469fb03e47:-180567547</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-29 16:53:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_alias">sys_alias</sys_db_object>
+        <sys_id>1808cfe6d1d3491a84033fd92bbe8304</sys_id>
+        <sys_metadata>0740316d078930105740f96d7c1ed0a8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_uemconn_0.gitlab</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_alias_0740316d078930105740f96d7c1ed0a8</sys_update_name>
+        <sys_update_version display_value="sys_alias_0740316d078930105740f96d7c1ed0a8">dc70b16d078930105740f96d7c1ed047</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-29 16:53:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

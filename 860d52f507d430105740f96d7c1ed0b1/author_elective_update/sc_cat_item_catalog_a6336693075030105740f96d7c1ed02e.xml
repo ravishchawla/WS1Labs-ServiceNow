@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="WS1 Devices">9e332693075030105740f96d7c1ed0bd</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-29 00:01:01</sys_created_on>
+        <sys_id>a6336693075030105740f96d7c1ed02e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.WS1 Devices</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_a6336693075030105740f96d7c1ed02e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-29 00:01:01</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sc_cat_item_catalog_a6336693075030105740f96d7c1ed02e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="WS1 Devices">9e332693075030105740f96d7c1ed0bd</sc_cat_item><sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-05-29 00:01:01</sys_created_on><sys_id>a6336693075030105740f96d7c1ed02e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Service Catalog.WS1 Devices</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sc_cat_item_catalog_a6336693075030105740f96d7c1ed02e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-05-29 00:01:01</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1034411583</payload_hash>
+        <record_name>Service Catalog.WS1 Devices</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-29 00:01:01</sys_created_on>
+        <sys_id>6a336693075030105740f96d7c1ed030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179b56c8fa30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-29 00:01:01</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>ee3366937c50301039e09e7ffece552f</update_guid>
+        <update_guid_history>ee3366937c50301039e09e7ffece552f:1034411583</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">63ffdbcd07c230105740f96d7c1ed0cc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-17 04:30:03</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>122f8c4ec40b4fd085109ca83ba36100</sys_id>
+        <sys_metadata>a6336693075030105740f96d7c1ed02e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.WS1 Devices</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="">f0eac24f075030105740f96d7c1ed0a9</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_a6336693075030105740f96d7c1ed02e</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_a6336693075030105740f96d7c1ed02e">6a336693075030105740f96d7c1ed030</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-17 04:30:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

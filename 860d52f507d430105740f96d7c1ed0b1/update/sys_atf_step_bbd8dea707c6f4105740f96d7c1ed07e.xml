@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Component State Validation (Custom UI)">9613b9ab0746f4105740f96d7c1ed026</copied_from>
+        <description>Confirm that the 'Password &lt;input&gt; [input_ws1_passcode]' component is editable</description>
+        <display_name>Component State Validation (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"8aa1456f6a414136f0cca40e2b69bfca":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Password &lt;input&gt; [input_ws1_passcode]\",\"sn_atf_mugshot_long_description\":\"Password &lt;input&gt; [input_ws1_passcode]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"input_ws1_passcode\",\"index\":0,\"type\":\"password\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Password &lt;input&gt;\",\"name\":\"input_ws1_passcode\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"input\",\"isDisabled\":false,\"id\":\"input_ws1_passcode\",\"hash\":\"8aa1456f6a414136f0cca40e2b69bfca\",\"html_value\":\"\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>12</order>
+        <snapshot/>
+        <step_config display_value="Component State Validation (Custom UI)">38907e937322130007d738682bf6a742</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 17:44:07</sys_created_on>
+        <sys_id>bbd8dea707c6f4105740f96d7c1ed07e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Component State Validation (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_bbd8dea707c6f4105740f96d7c1ed07e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 17:52:01</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_changepasscode">5bd89aa707c6f4105740f96d7c1ed08e</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=bbd8dea707c6f4105740f96d7c1ed07e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>bbd8dea707c6f4105740f96d7c1ed07e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 17:44:07</sys_created_on>
+        <sys_id>bbd8dea707c6f4105740f96d7c1ed07f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 17:44:07</sys_updated_on>
+        <value>8aa1456f6a414136f0cca40e2b69bfca</value>
+        <variable display_value="Component">134b69807372130007d738682bf6a7d8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>bbd8dea707c6f4105740f96d7c1ed07e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 17:44:07</sys_created_on>
+        <sys_id>f7d8dea707c6f4105740f96d7c1ed07f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 17:52:01</sys_updated_on>
+        <value>editable</value>
+        <variable display_value="Assert type">cd3c61c07372130007d738682bf6a743</variable>
+    </sys_variable_value>
+</record_update>

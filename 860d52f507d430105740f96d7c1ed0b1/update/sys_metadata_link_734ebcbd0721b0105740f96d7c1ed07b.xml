@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>4de8a6f27f413200feedb0d8adfa91ce</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;checksum&gt;zhWDDKH4QVnRsLinP0VjY5bAWIM=&lt;/checksum&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;1&lt;/children_layout&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins&gt;com.snc.sa.metric&lt;/dependent_on_plugins&gt;
+        &lt;dependent_on_plugins_ids&gt;com.snc.sa.metric&lt;/dependent_on_plugins_ids&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;p&gt;IT can use Operational Intelligence to identify potential service outages and prevent them from occurring. Operational Intelligence, based on historical threshold data, indicates anomalous behavior of CIs which may not be captured by events. High anomaly scores for CI attributes can indicate that a CI is at risk of causing a service outage. Anomaly alerts can be promoted to regular alerts and appear on the Alert Console and service health dashboard for preventive action.&lt;/p&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;350&lt;/order&gt;
+        &lt;parent display_value="IT Operations Management Guided Setup"&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/parent&gt;
+        &lt;parents&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="IT Operations Management Guided Setup"&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;true&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-24 00:27:33&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;4de8a6f27f413200feedb0d8adfa91ce&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Operational Intelligence&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITOM Guided Setup" source="com.snc.guided_setup_metadata.itom"&gt;3454c50f6da620100acb70b3534330b0&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_4de8a6f27f413200feedb0d8adfa91ce&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-09-06 22:25:55&lt;/sys_updated_on&gt;
+        &lt;title&gt;Operational Intelligence&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=4de8a6f27f413200feedb0d8adfa91ce"/&gt;
+    &lt;sys_attachment action="INSERT_OR_UPDATE"&gt;
+        &lt;average_image_color&gt;#0&lt;/average_image_color&gt;
+        &lt;chunk_size_bytes/&gt;
+        &lt;compressed&gt;true&lt;/compressed&gt;
+        &lt;content_type&gt;image/png&lt;/content_type&gt;
+        &lt;file_name&gt;icon&lt;/file_name&gt;
+        &lt;hash/&gt;
+        &lt;image_height&gt;42&lt;/image_height&gt;
+        &lt;image_width&gt;42&lt;/image_width&gt;
+        &lt;size_bytes&gt;1077&lt;/size_bytes&gt;
+        &lt;size_compressed&gt;1100&lt;/size_compressed&gt;
+        &lt;state/&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-24 00:27:56&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;6b29e2b27f413200feedb0d8adfa91a2&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-02-24 00:27:56&lt;/sys_updated_on&gt;
+        &lt;table_name&gt;ZZ_YYgsw_content_group&lt;/table_name&gt;
+        &lt;table_sys_id&gt;4de8a6f27f413200feedb0d8adfa91ce&lt;/table_sys_id&gt;
+    &lt;/sys_attachment&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;H4sIAAAAAAAAAA==&lt;/data&gt;
+        &lt;length&gt;16&lt;/length&gt;
+        &lt;position&gt;0&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="6b29e2b27f413200feedb0d8adfa91a2"&gt;6b29e2b27f413200feedb0d8adfa91a2&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-24 00:27:56&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;6329e2b27f413200feedb0d8adfa91a3&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;ATUEyvuJUE5HDQoaCgAAAA1JSERSAAAAKgAAACoIBgAAAMXDyVsAAAP8SURBVFiF7ZhdiFVVFMd/jjORSYlSzWRQsZIgFrF9qLCyApOcog8qNXIk0QfNsFIofBD6Ishe0pK+7CXItNEZEcwcs5GxHPUh0oVufGpTOk1aQUxGMFNZD3tfONW5t3vHOTOQ84cLl3vWXufHvvus9V8HRnWuy0Tnmmi/ia4caZY81WW+TwbOA1ab6BsmOnaEmHJVl/PbGeBxoN1ELxhmnrLKA10BeOB+oNNELxlepHzlgR4HbgE6gWnAfhO9elipcpQHigu+D7gbeA+YAhw00RurTWqi9SZaPySESbmgAC74ARf8QuA54GKgy0TvrQA3wUQfNtGNwI/ACROdUjhoBvhF4FGgHthmoo9l4K4w0WUmujvBfQg8AlwENAG7TLRxWEAT7PvAncBp4C0TbTXRw8A3wDpgJtALrAceAiYmaAE6THTC2YJWfY5c8F0mehOwE5gL9AOfAB1Ahwv+WDbeRBcQj8xMYKuJ3uWCHxgsaFU7moE9BjhgOjDRBT/LBb/mn5ApdgB4EPgSmAFsMNGa7pdVzU9mqgjdVcaeNtFm4AAwBzgJPFnrPaHGHR2MXPA/ALOA74EnTHTVYPIUDgrggv8KaAZ+Bl4y0UW15sgDHXO2YHlywR8intnfgHdN9J5ysSbaYKLNJrrcRMeVA11tolcVBNsJzCduxmYTvTkDN9ZE7zDRt4FTxOqyhvgg5oJeA3Sb6HUFwW4GlgPjgO2pm60DeoBPgSXAhcCJtKShHOhBojfdZ6K3FQT7OvAyMInYGJYBlwJ7gKVAI/Bqdk1eeXoFuDIF7jLRFhf81gJ4VxGN+vVAO9Dugu8tXTTRvwXn1lEX/Gsm2gtsALaY6FIX/Ppyd0w28AbAu+CPVEPpgv8TeLqa2LKgKdEWEz0FbAfeMdHLXPAvpBFlKrE7lT5NaVm/ic53wbdVC1CtKtZRF/xnRBP9LfC8iR4C+oAvgLXAbGK52QQ8SxxjWk30qaEG/c8W6oI/aqLTgI+Jff4osA/4HOh2wR8vxZpoJ7ADWGuilwMr019cPGiC7THRqcD5LvhfK8TtT5ViJ/AMMNlEF9Ximkx0EtGdLawZNEGcAcpCZuKOmOh0YDfQAjSa6OxkZsrBjQfuA+YRW+2/uIZ0rsnAfp26TgfRj+5NfvS7DFwD0Yy3JMjx6dJPQBuxdC0oxRdmSpJrmgF0Ec/2ARO91kRvTW3yJPARcXSpA1qJI3qTC34xcDibr5AdzcD2JT+6CXiA+L6gZHp+J57ljcA2F/wvlXIVCgrggu830TnAm8Bioun+AGhLu16VCgcFcMH/ASwx0RWVqkYlZc9oD7CXOPYWohohC+c5tzXGRLtGGqIa1QO3jzTEqEb1f9BfNg1kHbMZD3MAAAAASUVORK5CYIK6kuIxNQQAAA==&lt;/data&gt;
+        &lt;length&gt;1456&lt;/length&gt;
+        &lt;position&gt;1&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="6b29e2b27f413200feedb0d8adfa91a2"&gt;6b29e2b27f413200feedb0d8adfa91a2&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-24 00:27:56&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;e329e2b27f413200feedb0d8adfa91a3&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:42</sys_created_on>
+        <sys_id>734ebcbd0721b0105740f96d7c1ed07b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Operational Intelligence</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_734ebcbd0721b0105740f96d7c1ed07b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:42</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

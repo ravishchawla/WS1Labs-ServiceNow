@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>false</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Initiate WS1 UEM Action</comments>
+        <condition>current.subcategory=='internal application'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Initiate WS1 UEM Action</hint>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages>Initiate Action</messages>
+        <name>WS1Action</name>
+        <onclick>onaction()</onclick>
+        <order>100</order>
+        <script><![CDATA[// Get the value from the fields on the form
+//var incidentnumber = current.number;
+//var ws1devicename = current.x_vmw_uemconn_0_ws1device;
+//var ws1username = current.x_vmw_uemconn_0_ws1user;
+var ws1action = current.x_vmw_uemconn_0_ws1command;
+var ws1text = current.x_vmw_uemconn_0_ws1_send_message;
+var ws1passcode = current.x_vmw_uemconn_0_ws1_passcode;
+
+// only works as a client action
+// alert('Sending action to device');
+
+// Update message on screen
+current.x_vmw_uemconn_0_ws1uem = "Queuing action to be sent to the device";
+
+// create a new record in the ws1actions table with the values from the fields
+//var ws1Act = new GlideRecord("x_vmw_uemconn_0_ws1actions");
+//ws1Act.setValue('username', ws1username.getDisplayValue());
+//ws1Act.setValue('devicename', ws1devicename.getDisplayValue());
+//ws1Act.setValue('ws1action', ws1action);
+//ws1Act.setValue('incident', incidentnumber.getDisplayValue());
+//ws1Act.setValue('ws1message', ws1text);
+//ws1Act.setValue('ws1passcode', ws1passcode);
+
+gs.info("Running action flow");
+
+// If using the actions table uncomment this line and comment out the try block as that runs the flow from this script instead of a table trigger
+//ws1Act.insert();
+	
+	try {
+		var inputs = {};
+		inputs['current'] = current; // GlideRecord of table:  
+		inputs['table_name'] = 'incident';
+
+		// Start Asynchronously: Uncomment to run in background.
+		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inBackground().withInputs(inputs).run();
+				
+		// Execute Synchronously: Run in foreground.
+		//sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+
+
+current.update();
+action.setRedirectURL(current);
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-18 06:37:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>17bd3ef907fc70105740f96d7c1ed0f9</sys_id>
+        <sys_mod_count>118</sys_mod_count>
+        <sys_name>WS1Action</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_ui_action_17bd3ef907fc70105740f96d7c1ed0f9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-23 04:29:12</sys_updated_on>
+        <table>incident</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_ui_action_17bd3ef907fc70105740f96d7c1ed0f9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;false&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;Initiate WS1 UEM Action&lt;/comments&gt;&lt;condition&gt;current.subcategory=='internal application'&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint&gt;Initiate WS1 UEM Action&lt;/hint&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages&gt;Initiate Action&lt;/messages&gt;&lt;name&gt;WS1Action&lt;/name&gt;&lt;onclick&gt;onaction()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[// Get the value from the fields on the form
+//var incidentnumber = current.number;
+//var ws1devicename = current.x_vmw_uemconn_0_ws1device;
+//var ws1username = current.x_vmw_uemconn_0_ws1user;
+var ws1action = current.x_vmw_uemconn_0_ws1command;
+var ws1text = current.x_vmw_uemconn_0_ws1_send_message;
+var ws1passcode = current.x_vmw_uemconn_0_ws1_passcode;
+
+// only works as a client action
+// alert('Sending action to device');
+
+// Update message on screen
+current.x_vmw_uemconn_0_ws1uem = "Queuing action to be sent to the device";
+
+// create a new record in the ws1actions table with the values from the fields
+//var ws1Act = new GlideRecord("x_vmw_uemconn_0_ws1actions");
+//ws1Act.setValue('username', ws1username.getDisplayValue());
+//ws1Act.setValue('devicename', ws1devicename.getDisplayValue());
+//ws1Act.setValue('ws1action', ws1action);
+//ws1Act.setValue('incident', incidentnumber.getDisplayValue());
+//ws1Act.setValue('ws1message', ws1text);
+//ws1Act.setValue('ws1passcode', ws1passcode);
+
+gs.info("Running action flow");
+
+// If using the actions table uncomment this line and comment out the try block as that runs the flow from this script instead of a table trigger
+//ws1Act.insert();
+	
+	try {
+		var inputs = {};
+		inputs['current'] = current; // GlideRecord of table:  
+		inputs['table_name'] = 'incident';
+
+		// Start Asynchronously: Uncomment to run in background.
+		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inBackground().withInputs(inputs).run();
+				
+		// Execute Synchronously: Run in foreground.
+		//sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
+
+
+current.update();
+action.setRedirectURL(current);
+]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-18 06:37:58&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;17bd3ef907fc70105740f96d7c1ed0f9&lt;/sys_id&gt;&lt;sys_mod_count&gt;118&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1Action&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="WS1UEM" source="x_vmw_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="WS1UEM"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_17bd3ef907fc70105740f96d7c1ed0f9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-07-23 04:29:12&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>229145771</payload_hash>
+        <record_name>WS1Action</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-23 04:29:12</sys_created_on>
+        <sys_id>9b003281072530105740f96d7c1ed060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ad19fdce00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-23 04:29:12</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>930032817125301027901a392794d560</update_guid>
+        <update_guid_history>930032817125301027901a392794d560:229145771,fef5e3c3595db810a64c123676695b0e:1161577022,1c51274fd41db8102b7c4e087309e52e:534109726,801e1387ee1db8103613cb7d02708cdc:-2090840233,496349957491741023856f96bfd2e97d:-137356096,648dffa00559f01056b66290317750ea:1454108675,949833684f19f010acfe8996f7a78a54:1242448573,88b50ee49551f0101307095918b964b5:1454108675,3a408ae43d51f0107381d86b8c0f75d3:102542819,83ff7564e051f01046203334c70632d4:-820079704,c3dfb9a0f751f01081aac85c0a4b5b8d:-1497921528,06b9f920d651f0104fcc2325b19c17d7:-1963179544,69093d609251f010c76cc7ba5008434a:195366392,71f2fd6c5511f010833060d358314ba3:1248307538,31d2f1ac1d11f010338a81c2f37ffc1a:294356786,a0927d6ce911f01030219d640945bfd8:-203462462,ff32316c4611f0109d9d0f09ccd26e45:-30803789,96e1316cbf11f010481dec42cd415740:1624117523,ddf0fde8a011f010d93b2879eddc8920:602012970,4a7079e88011f010dc2cecfdb908a06e:1074666146,68ce69283511f0106fa457797aa76f73:1843273858,e1e429ac2dddb010a412061e36f4da5a:-1804210626,bba4e1ac3cddb010471ed82176e749e1:914885662,d8de81282e9db010fc50e0a3fd500614:2121581494,5a51fa905ad5b010b12749b06ebbb748:-1737071749,a87d8e583555b010e7a7882fdf70a54b:1270934876,c28cf550ee15b0106d22e3b55df657df:705793994,ebd7f998fad1b010f5055b65f7a04df4:-1428646129,03333590b1d1b010763cc0010492fcc1:1588409871,a1b9add89391b010f6a62fad7872aa54:1966791261,b747e5581291b010c35a48ae2f5dd77e:1642888791,f91769188091b0106b4f024b45eb858b:-1093710263,d9b661584b91b010e89e274402072e57:-2109910986,d7c5a5d48091b010ab747cb049baa8b0:1510116216,b06bdb3b42417010b0a19079e3fe36cc:812407243,eafdc37b8401701020403a8be56eeeb2:1640054377,21ea6b9c494578102a94a2fc321f3f5e:283655375,d79ae39c1e457810e0f6052ddc639c89:-1187302799,a5610f5ce9c17810ffcf12a4d575b670:283655375,d6c55988ac0138105f3c89ab156d7c3d:-2022767039,5c95d948f60138100e790c86044fe251:-619528375,3f906e0302387410e92ce7f1f2a563e7:-2022767039,0bee4dee7d3cf01065ee2ab98018351d:-1075473658,053b5ce240b8f0109285feedcc01c3b2:331865581,d5ca9ca28cb8f010ef06ddfb1db0d3cd:1754737294,ad7adb465a3cb010fd64be7cb8f251c9:-1937786597,110797026b3cb010c1c7375d43d7451f:967331085,20c35b023b3cb010f57b5c1ab5b91259:-1937786597,78a3d702963cb0108108817515f77b03:1491505431,0e5e520e8e78b0102c8aaf16818c3a24:58007127,a70d1a8ae478b010a6a1f9dfb4f52c4d:-441962309,9b6c5e4af978b0109b06ef0820def53d:186238932,2064c0465cf0b0103ba9df47687799d5:-1076954843,f52308064df0b010e0bcb8d6eecee26b:-196902407,2ab244060df0b010bb63670d8f8ecb79:254382089,5c728006f8f0b010988ac5def0d1869d:669870271,afd188c29ff0b010e2e07408c6830008:1331720774,aea100c2e2f0b0105cf5cbe8d5be018f:1146683108,e211408224f0b010dadfabc6c45c70ab:2142237701,93b00882b8f0b01092bd4b50c5c4e701:-1603010886,1580cc4207f0b010e62f8cd6031fc079:-1585446064,c30008420ef0b010607083997fa47982:-801510629,efbef3319af0b0105dc31df5a9f39d32:2013374111,0b4ef7fd26b0b0100476c229585a6d17:-99108435,637db7fd44b0b01051451acf053885fb:1783659766,6c5d7fbde3b0b01059e3dc637191406c:-1688363250,68acb3bd85b0b0101d40cd98016fb304:-236825932,49db7f7d82b0b01008d6aff5ff6b8f43:-1214158708,2f4b7b3d23b0b0108f03b1e730c8b63e:-24246651,a17a7b3d4bb0b01007bc454836af6422:-1558492285,2fe9b73d3ab0b010241520ddb0b24f21:-390804279,55a9733dd7b0b010765b030aa74e3f9e:1977700721,9e69bbb9cdb0b010b0b20161c6586c00:310157449,bc093bf98cb0b010fe4f4633b4c438b1:1362971971,4148ffb91ab0b01093697489f2009a5b:-1585489667,10f77bb933b0b010c2b5acf927dc59f7:-103416314,eda777b953b0b0100516fa82e5747099:44445720,3447bb7954b0b01000be6e907bd95841:-2018572215,c7a6737974b0b010dc0fe156107da7ab:457328654,0e1677394eb0b010113a309d4ef029cc:-502356306,3b45373986b0b01094aab19c5ea22268:-384900640,4435bff57bb0b01045db87075a6ab881:11594858,4305fbf594b0b010a5b1fc052c7c6258:-1339612186,c5b43bf5c9b0b010f733023c1920d736:1547103713,804433f5f5b0b0100d1b0f305da38e36:1165211109,7814f3b5d3b0b010a6354e624a8dd697:739941061,d493b7752db0b010dcbadefae5c36dc4:71835890,622333b5c6b0b0108ae24e5a9c86038e:1812332187,94a2377563b0b010535f38b90783dd6a:1120456315,63523f35b8b0b0105750099a0a4a4cf3:-1171382821,87223b35a6b0b0106366f3c5ab8e1614:-590798896,33913bf1a2b0b01056a6d017d6d7b614:60713000,9821fbf144b0b010c7dc4e7f6236edac:-697879337,ccb0b7f1d7b0b0103a23cc52e930e06f:-884068797,b94033f1d1b0b010b99302e1c5b3245b:1888762401,448e6b719bb0b0104a0724644a86b827:-287019657,010e673144b0b010b9666dd3bc06a8a0:-303840356,b3b15f3d3930b0106d370f3ae8346dd9:243245419,a28d0f792930b010a0629f1826ed707c:1854853997,d54d8b39bf30b01007c2cd3eefdcc1bc:-1703712915,b51c4bb5ee30b010f38b01713bc3e8c1:-1983226357,71eb47399430b010278939c87bf91ca5:-1703712915,e75b0fb58f30b0102905e40e84018e82:-633505882,97ba47f5db30b010c926aa93540cace9:-814107964,82a90bb5ec30b0100d279d5446b458cb:968247544,d2f84f753530b01082d209ab27db948c:-551271175,bda88b758830b010a84c618bfa599bcd:-2047800605,40c78f354530b01015c73a9d97caaecb:-100333831,8b5707f16c30b01097094339cad75c1d:-426366397,54d643f15530b010c50ea37fd9ad6e68:712725830,ae0607b12130b010da9c2a8778ec3f80:1873383762,cec583b13230b010ca23130c6c0fbaed:1343995186,3ff4c7713830b010011df9b4bc7e9e9a:1128153448,8e8403714930b01074b46193b7a07ef1:-1334904953,426403bdabfc70107fc13e00f636a861:-25637001,9ca08f7d75fc7010bf9c6fec4f8d1fff:-1163130805,37de7e3df9fc7010f6a980a504bd60f4:486476661,b1beba3d24fc7010c292914c96d2ad50:470092203,20edbaf9e7fc7010f3db4db902c61259:2101537074</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-30 10:08:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>bd4b55eee96247248f01c746b69da4f9</sys_id>
+        <sys_metadata>17bd3ef907fc70105740f96d7c1ed0f9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1Action</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="Incident">aee0858b6d2620100acb70b353433075</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_ui_action_17bd3ef907fc70105740f96d7c1ed0f9</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_17bd3ef907fc70105740f96d7c1ed0f9">9b003281072530105740f96d7c1ed060</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-30 10:08:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments>Lock Device comment</comments>
+        <condition>current.subcategory=='WS1UEM'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Lock Device Hint</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages>Lock Device message</messages>
+        <name>Lock Device</name>
+        <onclick>lockdevice()</onclick>
+        <order>100</order>
+        <script><![CDATA[function lockdevice(){	
+	g_form.setValue('x_vmw_uemconn_0_ws1uem', 'locking device');	
+	g_form.setValue('x_vmw_uemconn_0_ws1command', 'lock');
+	alert('Locking Device');
+}
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-01 01:19:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c951d6dc07ac30105740f96d7c1ed070</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Lock Device</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_ui_action_c951d6dc07ac30105740f96d7c1ed070</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 03:35:05</sys_updated_on>
+        <table>incident</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_ui_action_c951d6dc07ac30105740f96d7c1ed070</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;Lock Device comment&lt;/comments&gt;&lt;condition&gt;current.subcategory=='WS1UEM'&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint&gt;Lock Device Hint&lt;/hint&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages&gt;Lock Device message&lt;/messages&gt;&lt;name&gt;Lock Device&lt;/name&gt;&lt;onclick&gt;lockdevice()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function lockdevice(){	
+	g_form.setValue('x_vmw_uemconn_0_ws1uem', 'locking device');	
+	g_form.setValue('x_vmw_uemconn_0_ws1command', 'lock');
+	alert('Locking Device');
+}
+]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-01 01:19:00&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c951d6dc07ac30105740f96d7c1ed070&lt;/sys_id&gt;&lt;sys_mod_count&gt;31&lt;/sys_mod_count&gt;&lt;sys_name&gt;Lock Device&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="WS1UEM" source="x_vmw_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="WS1UEM"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_c951d6dc07ac30105740f96d7c1ed070&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-16 03:35:05&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1369475572</payload_hash>
+        <record_name>Lock Device</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-16 03:35:05</sys_created_on>
+        <sys_id>f9d088dd077030105740f96d7c1ed06a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a12e304ac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-16 03:35:05</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>75d088ddd07030106933133ba5949d6a</update_guid>
+        <update_guid_history>75d088ddd07030106933133ba5949d6a:-1369475572,51af7b8d8c7030104be7b277880e568a:252796650,808f778db170301074e6255795dc3aca:-268011509,fc9cbfc9bc703010d4614adc787be592:-1369475572,5584d5cd3dacb010861cbbb8616e5ee9:1623871904,b5e7fc85896cb010f06be71b07709f61:-651247850,651774856a6cb01010802932a44fe92f:-2074671418,c955bc45696cb01015b94738d85ccdd8:927048202,268f9041f72cb01057e7628a5e9f77d0:-651247850,d9d06dbc8de0b01065374455a8257708:-803663174,7e90e5bc8de0b010a3b0e4270fbec7dc:1473702285,ae50ed7cade0b01011a74d6f9edfa2f9:-2102336081,3effd17ca3e0b0105cde75414470a7c7:1875225831,a81f993c8ce0b010da388d34a9c3f054:1473702285,d9ae153c25e0b0100c88c1903ff3922f:-803520903,895ed9f8a6e0b010fa6599f544fe1ab9:-803663174,2c150db406a0b010a0a40b4a822663bf:319857128,7a14857488a0b0105cbd8deda1cc1974:1468553106,3425e728656c7010408e679bec70d81c:790882025,73a4afe4256c701053e83adfc2187ea0:1137426505,dea3e7e4ed6c7010064c8818881594ff:-1936794366,2133e3e4406c70103848db4af1007a54:-1466021630,a7b99fecad2c70106b267ef16a23827a:-1805410591,517857e4002c70108821a793076186f2:1520480825,4e775f6c762c7010d705c7f0cde1eea4:425315578,5e3cc3a46c2c701050f2c160c789031c:2076017626,798b4fe0012c701016abbe204fc81488:1260545903,bc11eed46cec30106ddbb75fdd4831f1:1101818742,fcc856147bec3010ffc10242b2fffc9d:1561076564,8777ded019ec3010d172619ea3c04d7e:1392202639,7416de50f2ec3010a9ac4df5a21ad0af:339471154,52d15edc2cac30100022e6a5961c1c15:-1207181433</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-19 02:49:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>4642d1739c324de8a1678e2c22abf104</sys_id>
+        <sys_metadata>c951d6dc07ac30105740f96d7c1ed070</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lock Device</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="Incident">aee0858b6d2620100acb70b353433075</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_ui_action_c951d6dc07ac30105740f96d7c1ed070</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_c951d6dc07ac30105740f96d7c1ed070">f9d088dd077030105740f96d7c1ed06a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-19 02:49:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

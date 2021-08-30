@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Set the components on the page as follows:
+'Choice list &lt;select&gt;: -- None -- Device Wipe Remote Assist Request Logs Send Message Soft Reset Change Passcode Lock Device' = message
+'Text &lt;input&gt; [my_message]' = WS1 UEM admin calling
+</description>
+        <display_name>Set Component Values (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"521d740956a93d27e388f4252df93d8a":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Text &lt;input&gt; [my_message]\",\"sn_atf_mugshot_long_description\":\"Text &lt;input&gt; [my_message]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"my_message\",\"type\":\"text\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Text &lt;input&gt;\",\"name\":\"my_message\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"input\",\"isDisabled\":false,\"id\":\"my_message\",\"hash\":\"521d740956a93d27e388f4252df93d8a\",\"html_value\":\"\"}","8c433aba42793cedc374f15b352d9c45":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Choice list &lt;select&gt;: -- None -- Device Wipe Remote Assist Request Logs Send Message Soft Reset Change Passcode Lock Device\",\"inner_text\":\"-- None --\\nDevice Wipe\\nRemote Assist\\nRequest Logs\\nSend Message\\nSoft Reset\\nChange Passcode\\nLock Device\",\"sn_atf_mugshot_long_description\":\"Choice list &lt;select&gt; [my_action]: -- None -- Device Wipe Remote Assist Request Lo...\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"-- None --\\nDevice Wipe\\nRemote Assist\\nRequest Logs\\nSend Message\\nSoft Reset\\nChange Passcode\\nLock Device\",\"type\":\"select-one\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Choice list &lt;select&gt;\",\"name\":\"my_action\",\"sn_atf_mugshot_value\":\"\",\"options\":[{\"label\":\"-- None --\",\"value\":\"\"},{\"label\":\"Device Wipe\",\"value\":\"DeviceWipe\"},{\"label\":\"Remote Assist\",\"value\":\"assist\"},{\"label\":\"Request Logs\",\"value\":\"devicelogs\"},{\"label\":\"Send Message\",\"value\":\"message\"},{\"label\":\"Soft Reset\",\"value\":\"SoftReset\"},{\"label\":\"Change Passcode\",\"value\":\"changepasscode\"},{\"label\":\"Lock Device\",\"value\":\"Lock\"}],\"tag\":\"select\",\"isDisabled\":false,\"id\":\"my_action\",\"hash\":\"8c433aba42793cedc374f15b352d9c45\",\"html_value\":\"\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>3</order>
+        <snapshot/>
+        <step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:29:51</sys_created_on>
+        <sys_id>381ebae4073930105740f96d7c1ed03f</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_atf_step_381ebae4073930105740f96d7c1ed03f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 18:23:43</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEMPopupTest">c13d2990073578105740f96d7c1ed05b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=381ebae4073930105740f96d7c1ed03f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>381ebae4073930105740f96d7c1ed03f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-03 02:29:51</sys_created_on>
+        <sys_id>d63eb6e4073930105740f96d7c1ed064</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-03 04:13:00</sys_updated_on>
+        <value>8c433aba42793cedc374f15b352d9c45=message^521d740956a93d27e388f4252df93d8a=WS1 UEM admin calling^EQ</value>
+        <variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable>
+    </sys_variable_value>
+</record_update>

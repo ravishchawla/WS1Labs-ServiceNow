@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_vmw_uemconn_0.ws1_get_table</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ws1_get_table</name>
+        <script><![CDATA[var ws1_get_table = Class.create();
+ws1_get_table.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	serverCheck: function() {
+		
+		// check if the CMDB connector is installed
+		var ts = new GlideRecord("sys_store_app"); 				
+		ts.addQuery("name","Service Graph Connector for VMware Workspace ONE UEM");
+		ts.query();
+		ts.next();
+
+		if (ts.name) {
+			return true;
+		}
+		
+		return false;
+	},
+    type: 'ws1_get_table'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-21 10:24:57</sys_created_on>
+        <sys_id>8857d5e2078634105740f96d7c1ed00e</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name>ws1_get_table</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_include_8857d5e2078634105740f96d7c1ed00e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-21 12:02:22</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_script_include_8857d5e2078634105740f96d7c1ed00e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_vmw_uemconn_0.ws1_get_table&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;ws1_get_table&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var ws1_get_table = Class.create();
+ws1_get_table.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	serverCheck: function() {
+		
+		// check if the CMDB connector is installed
+		var ts = new GlideRecord("sys_store_app"); 				
+		ts.addQuery("name","Service Graph Connector for VMware Workspace ONE UEM");
+		ts.query();
+		ts.next();
+
+		if (ts.name) {
+			return true;
+		}
+		
+		return false;
+	},
+    type: 'ws1_get_table'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-21 10:24:57&lt;/sys_created_on&gt;&lt;sys_id&gt;8857d5e2078634105740f96d7c1ed00e&lt;/sys_id&gt;&lt;sys_mod_count&gt;33&lt;/sys_mod_count&gt;&lt;sys_name&gt;ws1_get_table&lt;/sys_name&gt;&lt;sys_package display_value="WS1UEM" source="x_vmw_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="WS1UEM"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_8857d5e2078634105740f96d7c1ed00e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-21 12:02:22&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-279612619</payload_hash>
+        <record_name>ws1_get_table</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-21 12:02:22</sys_created_on>
+        <sys_id>54ed21a607c634105740f96d7c1ed03d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b68972acb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-21 12:02:22</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>d8ed21a61dc63410a40da16df21b3c3c</update_guid>
+        <update_guid_history>d8ed21a61dc63410a40da16df21b3c3c:-279612619,e7ad61a603c63410e06e4389866eccf9:1526323338,699d61a6b0c63410250251e3a2fa1805:1488800656,717ded66a7c6341042db068193958348:1526323338,252be12660c63410d08312c04862e683:-23828231,980ba1268ac63410c2ec0e5406c5b6c1:-234808519,868a29e2bfc634102e23021056908c0c:-969966,2f3a69e242c6341044d344d5e9a8a62f:-2027725298,001aa5e299c634103fcb2a8477ef5f92:55625740,4b392da20ec63410e7608fa6833946e6:1496270053,4be8ed6299c634106143b368d349979f:-1126705979,4a18ad6218c63410a52da7b9a6d96cc2:-408339445,e108a9627cc63410acfc5795155e7605:1507269321,9a8725624cc63410a9518bf64cf965dd:-1628316759,1426e522d1c63410ff5c721cba8bf6bb:1753684402,75e5a12276c63410f4058d83293bddaa:664769682,1e9569eeea86341034d93167b549fedc:-1268952036,0e31a92e2e863410398992d05e9fca46:-431783740,a001652e1b8634101b311814f2c16a25:-1530011856,b9d0652e8f86341033e4d248b51c4716:723148176,97a0e12e4986341008afece32875c220:619681229,0f5f956ad6863410663d6093e4696d8e:636960101,3bde1d2a54863410fab06118fa939e4c:-528691564,39dd592a7d863410aaec3f3f42ab8a6b:-1201231319,cefcd9e6958634108d9c515759b37897:1018479753,96bc95e61e863410502b5b85b54bf333:-1931423327,fdeb51e62986341032049dae298e569a:-391862819,8f2b19a6178634109e22084f8f1a8747:-669408791,38d919661d86341061706fe86ff4b77d:-1053434174,f679d1669b8634107e24bad96dec53f8:-2068163454,9f599166a886341096763f4ff024505b:-1199599902,7da899e299863410ca593b4c2bddb303:2029093278,01385126528634100b5e9666bfed7e5c:820181742,519759e20c863410d02ec5784ad448f8:1885426423</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-22 10:29:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>4f92033c18d842cfa25b7fd19c860d11</sys_id>
+        <sys_metadata>8857d5e2078634105740f96d7c1ed00e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws1_get_table</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_script_include_8857d5e2078634105740f96d7c1ed00e</sys_update_name>
+        <sys_update_version display_value="sys_script_include_8857d5e2078634105740f96d7c1ed00e">54ed21a607c634105740f96d7c1ed03d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-22 10:29:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

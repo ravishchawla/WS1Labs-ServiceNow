@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_template">
+    <sys_template action="DELETE">
+        <active>true</active>
+        <global>false</global>
+        <group/>
+        <groups/>
+        <link_element/>
+        <name>WS1_UEM</name>
+        <next/>
+        <next_child/>
+        <roles/>
+        <short_description/>
+        <show_on_template_bar>true</show_on_template_bar>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>sys_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-31 02:47:20</sys_created_on>
+        <sys_id>355c150c076030105740f96d7c1ed019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1_UEM</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_template_355c150c076030105740f96d7c1ed019</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-31 02:47:20</sys_updated_on>
+        <table>incident</table>
+        <template>caller_id=6816f79cc0a8016401c5a33be04be441^category=inquiry^impact=3^knowledge=false^short_description=ATF : Test1^state=1^subcategory=WS1 UEM^urgency=3^EQ</template>
+        <user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user>
+        <view/>
+    </sys_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_template_355c150c076030105740f96d7c1ed019</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_template"><sys_template action="INSERT_OR_UPDATE"><active>true</active><global>false</global><group/><groups/><link_element/><name>WS1_UEM</name><next/><next_child/><roles/><short_description/><show_on_template_bar>true</show_on_template_bar><stand_alone>false</stand_alone><sys_class_name>sys_template</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-05-31 02:47:20</sys_created_on><sys_id>355c150c076030105740f96d7c1ed019</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WS1_UEM</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_template_355c150c076030105740f96d7c1ed019</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-05-31 02:47:20</sys_updated_on><table>incident</table><template>caller_id=6816f79cc0a8016401c5a33be04be441^category=inquiry^impact=3^knowledge=false^short_description=ATF : Test1^state=1^subcategory=WS1 UEM^urgency=3^EQ</template><user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user><view/></sys_template></record_update>]]></payload>
+        <payload_hash>1474488982</payload_hash>
+        <record_name>WS1_UEM</record_name>
+        <reverted_from/>
+        <source>020d52f507d430105740f96d7c1ed0b4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-31 02:47:20</sys_created_on>
+        <sys_id>227c110c076030105740f96d7c1ed0f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179c0518e600000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-31 02:47:20</sys_updated_on>
+        <type>Template</type>
+        <update_guid>6a7c110cef60301037f87a6bfb054bf2</update_guid>
+        <update_guid_history>6a7c110cef60301037f87a6bfb054bf2:1474488982</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-10 04:19:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_template">sys_template</sys_db_object>
+        <sys_id>0e053cc409954a78980fcb2be7a21c90</sys_id>
+        <sys_metadata>355c150c076030105740f96d7c1ed019</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1_UEM</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_template_355c150c076030105740f96d7c1ed019</sys_update_name>
+        <sys_update_version display_value="sys_template_355c150c076030105740f96d7c1ed019">227c110c076030105740f96d7c1ed0f3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-10 04:19:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

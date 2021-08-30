@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>cmdb_ci</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>WS1UEMActions</name>
+        <order/>
+        <script><![CDATA[function onLoad() {	
+	//remove tab is WS1 UEM role is not enabled
+	var isStandard = g_user.hasRole('x_vmw_uemconn_0.WS1UEMStandard');
+	if (!isStandard){	
+		g_form.setSectionDisplay('workspace_oneuem', false);
+		
+		// Hide the section using English name so will work when translated
+//		var section = $$('span[tab_caption_raw="workspace_oneuem"]')[0].select('span[id*=section.]')[0];
+//		section.hide();	
+	}
+	else {
+		// Reset the action 
+//		g_form.setValue('x_vmw_uemconn_0_ws1command', '');
+		
+		// If the user has the standard WS1 UEM rights then check if advanced
+		// and remove destructive actions from list if not
+		var isAdvanced = g_user.hasRole('x_vmw_uemconn_0.WS1UEMAdvanced');
+		if (!isAdvanced){
+			g_form.removeOption('x_vmw_uemconn_0_ws1command', 'DeviceWipe');
+			g_form.removeOption('x_vmw_uemconn_0_ws1command', 'EnterpriseWipe');
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-30 05:22:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ae8e3adf07a9b4105740f96d7c1ed0be</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>WS1UEMActions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_client_ae8e3adf07a9b4105740f96d7c1ed0be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-06 00:17:13</sys_updated_on>
+        <table>incident</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_script_client_ae8e3adf07a9b4105740f96d7c1ed0be</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;cmdb_ci&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;WS1UEMActions&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {	
+	//remove tab is WS1 UEM role is not enabled
+	var isStandard = g_user.hasRole('x_vmw_uemconn_0.WS1UEMStandard');
+	if (!isStandard){	
+		g_form.setSectionDisplay('workspace_oneuem', false);
+		
+		// Hide the section using English name so will work when translated
+//		var section = $$('span[tab_caption_raw="workspace_oneuem"]')[0].select('span[id*=section.]')[0];
+//		section.hide();	
+	}
+	else {
+		// Reset the action 
+//		g_form.setValue('x_vmw_uemconn_0_ws1command', '');
+		
+		// If the user has the standard WS1 UEM rights then check if advanced
+		// and remove destructive actions from list if not
+		var isAdvanced = g_user.hasRole('x_vmw_uemconn_0.WS1UEMAdvanced');
+		if (!isAdvanced){
+			g_form.removeOption('x_vmw_uemconn_0_ws1command', 'DeviceWipe');
+			g_form.removeOption('x_vmw_uemconn_0_ws1command', 'EnterpriseWipe');
+		}
+	}
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-07-30 05:22:24&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ae8e3adf07a9b4105740f96d7c1ed0be&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEMActions&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="WS1UEM" source="x_vmw_uemconn_0"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="WS1UEM"&gt;860d52f507d430105740f96d7c1ed0b1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_ae8e3adf07a9b4105740f96d7c1ed0be&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-06 00:17:13&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>282600446</payload_hash>
+        <record_name>WS1UEMActions</record_name>
+        <reverted_from/>
+        <source>11481de907b1b0105740f96d7c1ed0e0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-06 00:17:14</sys_created_on>
+        <sys_id>bcacb5a50735b0105740f96d7c1ed010</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b18d2334a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-06 00:17:14</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>f4acb5a5f035b010d4796ed158010910</update_guid>
+        <update_guid_history>f4acb5a5f035b010d4796ed158010910:282600446,2ae0d84d5ef530103e0c67fd713e2e2b:660486168,33aecc49c5f5301043d2ef0559fa61d8:646796472,de5ec449fcf53010765f269d42ae9af9:-1849482512,efae3fe477f93010cd0e062b6877b50f:1988993218,949e4dcc29f53810c50accc0817c6c63:1506102114,39bd45ccf0f53810c227933a5cb66f85:-135902669,163a850cf3f538108afceaa6c503f9ce:1585092409,159989c873f53810ba8ffab723b785ba:1930660332,36084d8827f538109a128790eba1840a:-993919772,65920584a1f538109fcee6c7309c2635:-1922341121,f2b08104bcf53810584c3c1761cd1a14:740533912,45cdb7d373adb410201623d70ba2e67b:1483863183,73dcf39348adb4105a80b402ea09c1e5:1295806042,f8b4a313c56db410b2e9e4675cd81dba:-504505147,9824a313876db410978eae243ea7da05:-1926750434,78a36f9f012db4109d7070df9df17e73:-1199141045,cd416f5fcf2db4105bd336de9256be18:-1467433969,95dc1f5b822db4107b35bc02e47fbc73:615713950,5340c79333e9b4109dcb6d7ed9e4fba6:1662079652,7e5f325335e9b410ad96587722059f9a:976222050</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-06 00:24:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>34da004c46c44f72bf644b473bc32bc1</sys_id>
+        <sys_metadata>ae8e3adf07a9b4105740f96d7c1ed0be</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMActions</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent display_value="Incident">aee0858b6d2620100acb70b353433075</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_script_client_ae8e3adf07a9b4105740f96d7c1ed0be</sys_update_name>
+        <sys_update_version display_value="sys_script_client_ae8e3adf07a9b4105740f96d7c1ed0be">bcacb5a50735b0105740f96d7c1ed010</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-06 00:24:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

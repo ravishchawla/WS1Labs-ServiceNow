@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>c214b5d025913200964f48ca4b89e844</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;Emergency changes are required for two use cases.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;Fix ON fail&lt;/strong&gt; – When a service is currently being impacted and a fix has to be applied without delay. In this case, there is no time to wait for a change to be raised and approved. Therefore, an emergency change request is created retroactively to track what happened.&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Fix OR fail&lt;/strong&gt; – In this case, an impact to a service is imminent unless preventative action is taken immediately. There is time to raise a change and get it approved, however, the process for approval is extremely quick and designed to get the change through without delay.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;In both cases an incident already exists as the issue that has drawn attention to the need for a change. Therefore, the change is raised from the incident.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;Configure the emergency change process recommendations to ensure that this type of change is not misused.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier/&gt;
+        &lt;end_point&gt;/workflow_ide.do?sysparm_wf_id=34451ec2cb200200d71cb9c0c24c9c66&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;2&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;true&lt;/more_info_available&gt;
+        &lt;more_info_html&gt;&lt;![CDATA[&lt;p&gt;It is recommended that emergency changes are raised only from an incident. This recommendation prevents abuse of the faster approval route, and ensures that the root cause is easily tracked. In addition to the emergency change approval board (ECAB), a group manager approval is requested. This approval ensures that a senior person who is associated with the change is aware of it and wants it to be implemented.&lt;/p&gt;
+&lt;p&gt;To configure the emergency change process based on recommendations:&lt;/p&gt;
+&lt;ol id="c_MI_CM_EmergencyChanges__ul_nyb_d3y_dz" style="list-style-position: inside;"&gt;&lt;li&gt;Remove the option to create an emergency change via the interceptor that displays when a new change is requested. This causes the emergency change request to be originated from an incident using Create Emergency Change UI action.&lt;/li&gt;&lt;li&gt;Add a client script to ensure that for emergency changes there is at least one incident record listed in the Incidents Fixed by Change related list.&lt;/li&gt;&lt;li&gt;Within the emergency change workflow, add an Approval – User activity at the Authorize state that generates an approval request for the manager of the assignment group the change is assigned to. This should be approved before the ECAB approval is requested.&lt;/li&gt;&lt;/ol&gt;]]&gt;&lt;/more_info_html&gt;
+        &lt;order&gt;900&lt;/order&gt;
+        &lt;parent display_value="Change Management"&gt;acc0759025913200964f48ca4b89e8cc&lt;/parent&gt;
+        &lt;parents&gt;acc0759025913200964f48ca4b89e8cc,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-28 12:27:06&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;c214b5d025913200964f48ca4b89e844&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;39&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Handle emergency changes&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_c214b5d025913200964f48ca4b89e844&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-03-23 12:01:02&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Handle emergency changes&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=c214b5d025913200964f48ca4b89e844"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:09:09</sys_created_on>
+        <sys_id>8dae7c310761b0105740f96d7c1ed096</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Handle emergency changes</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_8dae7c310761b0105740f96d7c1ed096</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:09:09</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

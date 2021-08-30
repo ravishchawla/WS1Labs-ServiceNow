@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>0145b771c32312007bf1bea192d3ae1d</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;checksum/&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;1&lt;/children_layout&gt;
+        &lt;dependent_on_contents&gt;743013dac39312007bf1bea192d3aea8&lt;/dependent_on_contents&gt;
+        &lt;dependent_on_plugins&gt;com.snc.discovery&lt;/dependent_on_plugins&gt;
+        &lt;dependent_on_plugins_ids&gt;com.snc.discovery&lt;/dependent_on_plugins_ids&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;p&gt;Discovery finds computers and other devices connected to an enterprise&amp;#39;s network and populates the CMDB with such things as hardware attributes, software data, active business services, and the relationships between these configuration items. Complete the activities in this category to create the credentials Discovery needs to gain access to a computer or network device and to create the schedule that determines when Discovery runs and what MID Server it uses.&lt;/p&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;200&lt;/order&gt;
+        &lt;parent display_value="IT Operations Management Guided Setup"&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/parent&gt;
+        &lt;parents&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="IT Operations Management Guided Setup"&gt;f52f9c00c31022007bf1bea192d3aef8&lt;/root_parent&gt;
+        &lt;skippable&gt;false&lt;/skippable&gt;
+        &lt;supports_child_content&gt;true&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2016-05-23 17:41:27&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;0145b771c32312007bf1bea192d3ae1d&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Discovery&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITOM Guided Setup" source="com.snc.guided_setup_metadata.itom"&gt;3454c50f6da620100acb70b3534330b0&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_0145b771c32312007bf1bea192d3ae1d&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-03-27 21:52:12&lt;/sys_updated_on&gt;
+        &lt;title&gt;Discovery&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=0145b771c32312007bf1bea192d3ae1d"/&gt;
+    &lt;sys_attachment action="INSERT_OR_UPDATE"&gt;
+        &lt;average_image_color&gt;#0&lt;/average_image_color&gt;
+        &lt;chunk_size_bytes/&gt;
+        &lt;compressed&gt;true&lt;/compressed&gt;
+        &lt;content_type&gt;image/png&lt;/content_type&gt;
+        &lt;file_name&gt;icon&lt;/file_name&gt;
+        &lt;hash/&gt;
+        &lt;image_height&gt;42&lt;/image_height&gt;
+        &lt;image_width&gt;42&lt;/image_width&gt;
+        &lt;size_bytes&gt;1086&lt;/size_bytes&gt;
+        &lt;size_compressed&gt;1109&lt;/size_compressed&gt;
+        &lt;state/&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-15 18:05:09&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;12d4cc1c93813200bebe7344967ffb1c&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2017-02-15 18:05:09&lt;/sys_updated_on&gt;
+        &lt;table_name&gt;ZZ_YYgsw_content_group&lt;/table_name&gt;
+        &lt;table_sys_id&gt;0145b771c32312007bf1bea192d3ae1d&lt;/table_sys_id&gt;
+    &lt;/sys_attachment&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;H4sIAAAAAAAAAA==&lt;/data&gt;
+        &lt;length&gt;16&lt;/length&gt;
+        &lt;position&gt;0&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="12d4cc1c93813200bebe7344967ffb1c"&gt;12d4cc1c93813200bebe7344967ffb1c&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-15 18:05:09&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;52d4cc1c93813200bebe7344967ffb1c&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;AT4EwfuJUE5HDQoaCgAAAA1JSERSAAAAKgAAACoIBgAAAMXDyVsAAAQFSURBVFiFzdlviFRVGMfxz66tmEmpRb2poEuWeqmLEoYSSmYWYolhGaWEQWBBRWRg/4QgMNQioT9KvYqgsAKhehGhUZSVYHWrq2lwUiwMqRTJUkvtxbmz7I4zO7Pu3vQHMw9z59znfOe55zznnGc6DLLyJB2N8bgIw3Acf+AnbMtC8e/J+O0YJLjLcBfmIO2j6UF8inVYl4Xiz3b7GBBonqRjsbwE7MCv2IAt2Il9GILzcDmmYJoY6X1YjZVZKP6qBDRP0k48hmXowgd4FhuzUBxtce8IzMfDGIfdWJSFYsOgguZJOhzv4EbswL1ZKDaehJ8hWIxnMBxPZKFYPiigZTQ2YBLewt39GWdNfI7BenECrspC8Uijdp39cHiGGMlJWIP5A4WELBQ/Yio2Y0mepI8OCBRPYSZew31ZKI4PFLKmLBS/Yxa24uk8SafXt2nr0edJepX4i7/GlCwUhwcLsq6fMfhKzLvjemaDdiO6GkexsCpIuofBUlyMXmO1JWiepNPE/Lc2C8XWSgh7aw224cFy8qK9iC4Wl8GVFYH1UpmHn8Mo3Fq73idonqTDcJOYyHdVSthbb+IQ5tUutIro1TgL71UIdYLKtPcxppVpsSXoxNJ+XiVYE20SgzSW1qCXlnZHlURNVOszoTXoSMhCsa9KoibaW9rRtAYdhiOV4jTXsdJ2dr/1oQMYmifp0EqRGuvs0h6iNejPpU0qw2muS0r7C61BfyjthMpwmqvW5zZag35W2hmV4TRQnqQduA7bs1DspQVoFoqd+B5z/+dxOgUX4v3ahXbW+tfFdXdBRVCNdH+PvtHGfjRP0pHipNqL8VkoDlXD1t3fleKe9JMsFN0b6JYRzUKxHyvEWbi0MkLdB76XxSP24z2/a3fjvALb8WS5P61Ky8Tx+UoWil77i7ZAy8d9Ow5jfZ6kVww2YZ6ki0rQbXio/vu2D3dZKL7BHeKKsTFP0smDCPkAXsUezMpCcbC+zckUIG4TZ+NxsVryfKvqSB++RuEFMQC7cEMWiu2N2rZ7Cr0Gm7NQHCk/X4s3cAG+FR/Zu1kojjX30svfCNwjTphzsRELslDsaXZPO+npZrxdvu6snefzJD0fq7CwbLpTrNJtwJbyrF7z0SmWISeLpaC54hDaX/7Il1o9lT5Be0B24TdMzEKxu67NBCzBLeK2sKaDYsWuS1wweq5su7EWL5bpr6WagjaAnJ6F4rs+2p+D68XyTCpG8EyxHrAPQSxHfoQv+ltpaQhaB3kAU7NQ5P1xPNg6IT01gJx5qiGpi2gTyC9PBVi9ukHrIP/GjCwUm04VWL06aQg5+3SChI4mkP0udVetTrG814V/MOd0hCSCzhb/+5mXheLDU8zTVP8BqyVQgsFjuQcAAAAASUVORK5CYIKuDI2cPgQAAA==&lt;/data&gt;
+        &lt;length&gt;1468&lt;/length&gt;
+        &lt;position&gt;1&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="12d4cc1c93813200bebe7344967ffb1c"&gt;12d4cc1c93813200bebe7344967ffb1c&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2017-02-15 18:05:09&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;d2d4cc1c93813200bebe7344967ffb1c&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:12</sys_created_on>
+        <sys_id>603ef4bd0721b0105740f96d7c1ed05a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Discovery</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_603ef4bd0721b0105740f96d7c1ed05a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:12</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

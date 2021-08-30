@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>a439ed830b3312001e684ac3b6673a3d</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_group"&gt;
+    &lt;gsw_content_group action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;checksum/&gt;
+        &lt;child_can_have_roles&gt;false&lt;/child_can_have_roles&gt;
+        &lt;children_layout&gt;1&lt;/children_layout&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins&gt;com.snc.pa.sla&lt;/dependent_on_plugins&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description&gt;&lt;![CDATA[&lt;p class="p1"&gt;&lt;span class="s1"&gt;Activate the &lt;span style="color: #343d47; font-size: 13px;"&gt;Performance Analytics - Content Pack - Incident SLA Management &lt;/span&gt;plugin to add Performance Analytics configuration records to your instance.&lt;/span&gt; &lt;/p&gt;
+&lt;p class="p1"&gt;&lt;span class="s1"&gt;Content packs contain preconfigured records to allow you to collect data on key metrics and visualize that data on dashboards with minimal setup.&lt;/span&gt;&lt;/p&gt;]]&gt;&lt;/description&gt;
+        &lt;display_child_max_num/&gt;
+        &lt;done_status_text/&gt;
+        &lt;hide_getting_started&gt;false&lt;/hide_getting_started&gt;
+        &lt;icon/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_root_content&gt;false&lt;/is_root_content&gt;
+        &lt;order&gt;9&lt;/order&gt;
+        &lt;parent display_value="Welcome to Performance Analytics Guided Setup"&gt;8de556090b0212001e684ac3b6673ae7&lt;/parent&gt;
+        &lt;parents&gt;8de556090b0212001e684ac3b6673ae7&lt;/parents&gt;
+        &lt;progress_text/&gt;
+        &lt;roles/&gt;
+        &lt;root_intro_frame_link/&gt;
+        &lt;root_parent display_value="Welcome to Performance Analytics Guided Setup"&gt;8de556090b0212001e684ac3b6673ae7&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;true&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_group&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2016-06-08 14:57:12&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a439ed830b3312001e684ac3b6673a3d&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Incident SLA Management&lt;/sys_name&gt;
+        &lt;sys_package display_value="Guided Setup for Performance Analytics" source="com.snc.pa.guided_setup"&gt;6544410f6da620100acb70b3534330eb&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_group_a439ed830b3312001e684ac3b6673a3d&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2016-07-06 11:44:08&lt;/sys_updated_on&gt;
+        &lt;title&gt;Incident SLA Management&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_group&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=a439ed830b3312001e684ac3b6673a3d"/&gt;
+    &lt;sys_attachment action="INSERT_OR_UPDATE"&gt;
+        &lt;average_image_color/&gt;
+        &lt;chunk_size_bytes/&gt;
+        &lt;compressed&gt;true&lt;/compressed&gt;
+        &lt;content_type&gt;image/svg+xml&lt;/content_type&gt;
+        &lt;file_name&gt;icon&lt;/file_name&gt;
+        &lt;hash/&gt;
+        &lt;image_height/&gt;
+        &lt;image_width/&gt;
+        &lt;size_bytes&gt;5469&lt;/size_bytes&gt;
+        &lt;size_compressed&gt;1901&lt;/size_compressed&gt;
+        &lt;state/&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2016-07-06 14:35:06&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;29a0b1800b2022001e684ac3b6673ae5&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2016-07-06 14:35:06&lt;/sys_updated_on&gt;
+        &lt;table_name&gt;ZZ_YYgsw_content_group&lt;/table_name&gt;
+        &lt;table_sys_id&gt;a439ed830b3312001e684ac3b6673a3d&lt;/table_sys_id&gt;
+    &lt;/sys_attachment&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;H4sIAAAAAAAAAA==&lt;/data&gt;
+        &lt;length&gt;16&lt;/length&gt;
+        &lt;position&gt;0&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="29a0b1800b2022001e684ac3b6673ae5"&gt;29a0b1800b2022001e684ac3b6673ae5&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2016-07-06 14:35:06&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;69a0b1800b2022001e684ac3b6673ae5&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+    &lt;sys_attachment_doc action="INSERT_OR_UPDATE"&gt;
+        &lt;data&gt;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&lt;/data&gt;
+        &lt;length&gt;2524&lt;/length&gt;
+        &lt;position&gt;1&lt;/position&gt;
+        &lt;sys_attachment display_value="icon" sys_id="29a0b1800b2022001e684ac3b6673ae5"&gt;29a0b1800b2022001e684ac3b6673ae5&lt;/sys_attachment&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2016-07-06 14:35:06&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a9a0b1800b2022001e684ac3b6673ae5&lt;/sys_id&gt;
+    &lt;/sys_attachment_doc&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:08:34</sys_created_on>
+        <sys_id>2c8e38310761b0105740f96d7c1ed090</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Incident SLA Management</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_2c8e38310761b0105740f96d7c1ed090</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:08:34</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

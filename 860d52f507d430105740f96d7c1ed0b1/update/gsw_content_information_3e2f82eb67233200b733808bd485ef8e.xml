@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div>
+<p>Review the criteria that define the weighting of attributes for the spotlight group. Based on these criteria, every record in the spotlight group is given a score. If an incident&#39;s spotlight score exceeds the spotlight group&#39;s threshold, a spotlight record is created.</p>
+</div>
+<div>
+<p>Some criteria may be more important than others and have a higher weight. For example, the priority <strong>P3 - Moderate</strong> has a weight of 10, the priority <strong>P4 - Low</strong> has a weight of 1, and <strong>Open incidents not updated 30 days</strong> have a weight of 1000. In this example, an open P3 incident that has not been updated in 30 days has a total score of 1010 and would be prioritized above an open P4 incident that has not been updated in 30 days that has a total score of 1001.</p>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins>com.snc.pa.spotlight.incident</dependent_on_plugins>
+        <dependent_on_plugins_ids>com.snc.pa.spotlight.incident</dependent_on_plugins_ids>
+        <description/>
+        <embedded_help_qualifier>spotlight_criteria_list</embedded_help_qualifier>
+        <end_point>spotlight_criteria_list.do?sysparm_query=spotlight_groups%3D7c4a936393102200eaaeb01f457ffb16</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies>a5ddbda767233200b733808bd485ef95</implicit_plugin_dependencies>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>2</order>
+        <parent display_value="Incident Spotlight">a5ddbda767233200b733808bd485ef95</parent>
+        <parents>a5ddbda767233200b733808bd485ef95,c2726d6767233200b733808bd485ef49</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>true</quick_startable>
+        <root_parent display_value="Welcome to Spotlight Guided Setup">c2726d6767233200b733808bd485ef49</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-06-30 13:15:33</sys_created_on>
+        <sys_id>3e2f82eb67233200b733808bd485ef8e</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Spotlight Criteria</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_3e2f82eb67233200b733808bd485ef8e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-07-14 12:44:53</sys_updated_on>
+        <table/>
+        <title>Spotlight Criteria</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=3e2f82eb67233200b733808bd485ef8e"/>
+</record_update>

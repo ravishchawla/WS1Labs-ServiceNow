@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile">
+    <oauth_entity_profile action="DELETE">
+        <default>true</default>
+        <grant_type>client_credentials</grant_type>
+        <jwt_provider/>
+        <name>WorkspaceOneUEM Assist OAuth Provider default_profile</name>
+        <oauth_entity display_value="WorkspaceOneUEM Assist OAuth Provider">51e77127070130105740f96d7c1ed001</oauth_entity>
+        <sys_class_name>oauth_entity_profile</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-05 22:19:53</sys_created_on>
+        <sys_id>6b78f527070130105740f96d7c1ed079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WorkspaceOneUEM Assist OAuth Provider default_profile</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>oauth_entity_profile_6b78f527070130105740f96d7c1ed079</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-05 22:19:53</sys_updated_on>
+    </oauth_entity_profile>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>oauth_entity_profile_6b78f527070130105740f96d7c1ed079</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile"><oauth_entity_profile action="INSERT_OR_UPDATE"><default>true</default><grant_type>client_credentials</grant_type><jwt_provider/><name>WorkspaceOneUEM Assist OAuth Provider default_profile</name><oauth_entity display_value="WorkspaceOneUEM Assist OAuth Provider">51e77127070130105740f96d7c1ed001</oauth_entity><sys_class_name>oauth_entity_profile</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-07-05 22:19:53</sys_created_on><sys_id>6b78f527070130105740f96d7c1ed079</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WorkspaceOneUEM Assist OAuth Provider default_profile</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>oauth_entity_profile_6b78f527070130105740f96d7c1ed079</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-07-05 22:19:53</sys_updated_on></oauth_entity_profile></record_update>]]></payload>
+        <payload_hash>1931066561</payload_hash>
+        <record_name>WorkspaceOneUEM Assist OAuth Provider default_profile</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-05 22:19:53</sys_created_on>
+        <sys_id>af78f527070130105740f96d7c1ed07b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a78c1a0b10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-05 22:19:53</sys_updated_on>
+        <type>OAuth Entity Profile</type>
+        <update_guid>e778f5271401301046e10a6b3614887b</update_guid>
+        <update_guid_history>e778f5271401301046e10a6b3614887b:1931066561</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a3851ea90751b4105740f96d7c1ed048</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 05:34:42</sys_created_on>
+        <sys_db_object display_value="" name="oauth_entity_profile">oauth_entity_profile</sys_db_object>
+        <sys_id>0cbc74a3285f466da0782555c6a2bad1</sys_id>
+        <sys_metadata>6b78f527070130105740f96d7c1ed079</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WorkspaceOneUEM Assist OAuth Provider default_profile</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>oauth_entity_profile_6b78f527070130105740f96d7c1ed079</sys_update_name>
+        <sys_update_version display_value="oauth_entity_profile_6b78f527070130105740f96d7c1ed079">af78f527070130105740f96d7c1ed07b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-12 05:34:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

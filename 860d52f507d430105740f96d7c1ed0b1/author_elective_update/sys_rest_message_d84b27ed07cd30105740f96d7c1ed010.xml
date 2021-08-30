@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="DELETE">
+        <access>package_private</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="WS1UEMRest">076ba7ed07cd30105740f96d7c1ed029</basic_auth_profile>
+        <basic_auth_user/>
+        <description/>
+        <name>WS1UEMRest</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://mondecorp.ssdevrd.com</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-30 01:35:12</sys_created_on>
+        <sys_id>d84b27ed07cd30105740f96d7c1ed010</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMRest</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_rest_message_d84b27ed07cd30105740f96d7c1ed010</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-30 01:35:12</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</application>
+        <file_path/>
+        <instance_id>3cc72800dbd6ec10f492c59705961995</instance_id>
+        <instance_name>dev106506</instance_name>
+        <name>sys_rest_message_d84b27ed07cd30105740f96d7c1ed010</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>basic</authentication_type><basic_auth_password/><basic_auth_profile display_value="WS1UEMRest">076ba7ed07cd30105740f96d7c1ed029</basic_auth_profile><basic_auth_user/><description/><name>WS1UEMRest</name><oauth2_profile/><protocol_name/><rest_endpoint>https://mondecorp.ssdevrd.com</rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-30 01:35:12</sys_created_on><sys_id>d84b27ed07cd30105740f96d7c1ed010</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WS1UEMRest</sys_name><sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package><sys_policy/><sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope><sys_update_name>sys_rest_message_d84b27ed07cd30105740f96d7c1ed010</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-30 01:35:12</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+        <payload_hash>-955372072</payload_hash>
+        <record_name>WS1UEMRest</record_name>
+        <reverted_from/>
+        <source>52031ea1070d30105740f96d7c1ed0ec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-30 01:35:13</sys_created_on>
+        <sys_id>56aba3ed07cd30105740f96d7c1ed0cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a5a8e4ce20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-30 01:35:13</sys_updated_on>
+        <type>REST Message</type>
+        <update_guid>5eaba3edd7cd301033c4ce3314c833ca</update_guid>
+        <update_guid_history>5eaba3edd7cd301033c4ce3314c833ca:-955372072</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-30 01:37:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message">sys_rest_message</sys_db_object>
+        <sys_id>01010ca6b5534ac880022a2e31ee3211</sys_id>
+        <sys_metadata>d84b27ed07cd30105740f96d7c1ed010</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMRest</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_scope_delete display_value="">b9f2a502508d4d2c95f09a1b5f7a9784</sys_scope_delete>
+        <sys_update_name>sys_rest_message_d84b27ed07cd30105740f96d7c1ed010</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_d84b27ed07cd30105740f96d7c1ed010">56aba3ed07cd30105740f96d7c1ed0cb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-30 01:37:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

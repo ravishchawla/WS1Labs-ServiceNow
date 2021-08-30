@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>WS1UEMAction</name>
+        <order/>
+        <script><![CDATA[function onLoad() {	
+	//
+	// remove tab if WS1 UEM role is not enabled
+	var isStandard = g_user.hasRole('x_vmw_uemconn_0.WS1UEMStandard');
+	g_form.setValue('x_vmw_uemconn_0_ws1command', '');
+	
+	var ga_version = new GlideAjax('x_vmw_uemconn_0.ws1_get_platform');
+	ga_version.addParam('sysparm_name', 'get_platform');
+	var version = null;
+	ga_version.getXML(function parse_response(response) {
+		version = response.responseXML.documentElement.getAttribute('answer');
+	
+		if (!isStandard || !version) {	
+			g_form.setSectionDisplay('workspace_oneuem', false);
+
+			// also make the command read only
+			g_form.setReadOnly('x_vmw_uemconn_0_ws1command',true);			
+		}
+		else {
+			var currentstate = g_form.getValue('state');
+			if (currentstate == 1 || currentstate == 2){
+				g_form.setReadOnly('x_vmw_uemconn_0_ws1command',false);
+
+				// var console_version = gs.getProperty('x_vmw_uemconn_0.WS1UEM Platform');
+				// console.log('> console version ' + console_version)
+				var sid = g_form.getUniqueValue();
+				var ga = new GlideAjax('x_vmw_uemconn_0.ws1_get_action_from_os');
+				ga.addParam('sysparm_name', 'get_action');
+				ga.addParam('sysparm_sid', sid);
+				ga.getXML(parse_os_name);
+
+				// The user has the standard WS1 UEM rights so check if advanced
+				// and remove destructive actions from list if not
+				var isAdvanced = g_user.hasRole('x_vmw_uemconn_0.WS1UEMAdvanced');
+				if (!isAdvanced){
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'devicewipe');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'enterprisewipe');
+				}
+
+				var configItem = g_form.getValue('cmdb_ci');
+				if (!configItem){
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'devicewipe');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'enterprisewipe');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'lock');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'assist');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'message');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'syncdevice');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'devicelogs');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'changepasscode');
+					g_form.removeOption('x_vmw_uemconn_0_ws1command', 'softreset');
+				}
+			}
+			else {
+				g_form.setReadOnly('x_vmw_uemconn_0_ws1command',true);
+			}
+		}
+	});
+
+	function parse_os_name(response) {
+		response = response.responseXML.documentElement.getAttribute("answer");
+		jslog('Received response from request ' + response);
+		$("incident.x_vmw_uemconn_0_u_string_1").value = response;
+
+		response = JSON.parse(response);
+		for (var key in response) {
+			if (response[key] == false && key != "") {
+				g_form.removeOption('x_vmw_uemconn_0_ws1command', key);
+				jslog('Removing option from dropdown: ' + key);
+			}
+
+		}
+
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-06 00:24:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>653eb1290735b0105740f96d7c1ed0fd</sys_id>
+        <sys_mod_count>75</sys_mod_count>
+        <sys_name>WS1UEMAction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_script_client_653eb1290735b0105740f96d7c1ed0fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 15:43:30</sys_updated_on>
+        <table>incident</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

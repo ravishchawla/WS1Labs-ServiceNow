@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>4fb865bdf9989300964fd82f4d2b2d25</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="gsw_content_information"&gt;
+    &lt;gsw_content_information action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article&gt;&lt;![CDATA[&lt;p&gt;During a major incident, it is crucial to keep impacted users, business stakeholders, and incident response teams informed. You can Define the target audience for a communication plan by configuring communication contact definitions.&lt;/p&gt;]]&gt;&lt;/article&gt;
+        &lt;best_practice_acceptable&gt;false&lt;/best_practice_acceptable&gt;
+        &lt;dependent_on_contents/&gt;
+        &lt;dependent_on_plugins/&gt;
+        &lt;dependent_on_plugins_ids/&gt;
+        &lt;description/&gt;
+        &lt;embedded_help_qualifier&gt;comm_plan_definitions&lt;/embedded_help_qualifier&gt;
+        &lt;end_point&gt;/comm_plan_definition_list.do?sysparm_query=table=incident&lt;/end_point&gt;
+        &lt;end_point_open_mode&gt;3&lt;/end_point_open_mode&gt;
+        &lt;end_point_type&gt;1&lt;/end_point_type&gt;
+        &lt;field/&gt;
+        &lt;filter/&gt;
+        &lt;filter_result/&gt;
+        &lt;implicit_dependent_on/&gt;
+        &lt;implicit_plugin_dependencies/&gt;
+        &lt;is_dynamic&gt;false&lt;/is_dynamic&gt;
+        &lt;more_info_available&gt;true&lt;/more_info_available&gt;
+        &lt;more_info_html&gt;&lt;![CDATA[&lt;p&gt;Communication contact definitions are configured when you create a communication plan definition. Contact definitions allow the major incident manager or the incident response teams to focus on incident resolution and not spend time identifying stakeholders and impacted users who need to receive communications.&lt;/p&gt;
+&lt;p&gt;Three types of communication contact definitions can be defined for a communication plan:&lt;/p&gt;
+&lt;ul id="c_MI_MIM_CreateCommContactDefs__ul_zz3_vp4_2db" style="list-style-position: inside;"&gt;&lt;li&gt;User: Depending on the communication plan, you can add individual users to receive communications for a major incident. For example, a duty manager and an incident manager should always get an initial notification when a major incident is created.&lt;/li&gt;&lt;li&gt;Group: Identifying groups that should be involved or informed for various types of incidents can now be predefined so that the members can be notified automatically when a major incident occurs. An example would be to notify Service Desk about all major incidents as they are created and to send them regular status updates. In some cases, it can be helpful to involve other teams, such as Legal, Compliance, and so on.&lt;/li&gt;&lt;li&gt;Recipient list: With recipient lists, you can create a static or dynamic list of users who should be notified as per the communication plan. Examples of recipient lists include:
+&lt;ul id="c_MI_MIM_CreateCommContactDefs__ul_dhr_xq4_2db" style="list-style-position: inside;"&gt;&lt;li&gt;Impacted users by location: A recipient list to notify impacted users based on a location. This dynamic list is created using a condition builder.&lt;/li&gt;&lt;li&gt;Business stakeholders: A recipient list to notify service owners of impacted services. This is another example of a dynamic list that is created using a script.&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;&lt;/ul&gt;]]&gt;&lt;/more_info_html&gt;
+        &lt;order&gt;200&lt;/order&gt;
+        &lt;parent display_value="Incident communication plans"&gt;bf87e97df9989300964fd82f4d2b2de4&lt;/parent&gt;
+        &lt;parents&gt;bf87e97df9989300964fd82f4d2b2de4,5e9d3555f9149300964fd82f4d2b2ddd,01c6e55c25513200964f48ca4b89e87a&lt;/parents&gt;
+        &lt;plugin_id/&gt;
+        &lt;property_name/&gt;
+        &lt;property_value/&gt;
+        &lt;quick_startable&gt;false&lt;/quick_startable&gt;
+        &lt;root_parent display_value="ITSM Guided Setup"&gt;01c6e55c25513200964f48ca4b89e87a&lt;/root_parent&gt;
+        &lt;skippable&gt;true&lt;/skippable&gt;
+        &lt;supports_child_content&gt;false&lt;/supports_child_content&gt;
+        &lt;sys_class_name&gt;gsw_content_information&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;maint&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2018-02-16 02:47:40&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;4fb865bdf9989300964fd82f4d2b2d25&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Add contacts&lt;/sys_name&gt;
+        &lt;sys_package display_value="ITSM Guided Setup" source="com.snc.guided_setup_metadata.itsm"&gt;aae3050b6da620100acb70b3534330cc&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;gsw_content_information_4fb865bdf9989300964fd82f4d2b2d25&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;maint&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2018-04-05 07:25:18&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;title&gt;Add contacts&lt;/title&gt;
+        &lt;weight&gt;1&lt;/weight&gt;
+    &lt;/gsw_content_information&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=4fb865bdf9989300964fd82f4d2b2d25"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-25 04:07:42</sys_created_on>
+        <sys_id>bf4efcbd0721b0105740f96d7c1ed053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add contacts</sys_name>
+        <sys_package display_value="WS1UEM" source="x_vmw_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEM">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>sys_metadata_link_bf4efcbd0721b0105740f96d7c1ed053</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-25 04:07:42</sys_updated_on>
+        <tablename>gsw_content</tablename>
+    </sys_metadata_link>
+</record_update>

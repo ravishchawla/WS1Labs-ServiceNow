@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="66" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="ws1_actions_response" max_length="40" name="x_vmw_uemconn_0_u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Workspace ONE UEM Action" max_length="40" name="x_vmw_uemconn_0_ws1command" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="-- None --" sequence="0" value="none"/>
+                <element inactive_on_update="false" label="Change Passcode" sequence="1" value="changepasscode"/>
+                <element inactive_on_update="false" label="Device Wipe" sequence="2" value="devicewipe"/>
+                <element inactive_on_update="false" label="Enterprise Wipe" sequence="3" value="enterprisewipe"/>
+                <element inactive_on_update="false" label="Lock Device" sequence="4" value="lock"/>
+                <element inactive_on_update="false" label="Refresh Devices" sequence="5" value="refreshdevices"/>
+                <element inactive_on_update="false" label="Remote Assist" sequence="6" value="assist"/>
+                <element inactive_on_update="false" label="Request Logs" sequence="7" value="devicelogs"/>
+                <element inactive_on_update="false" label="Send Message" sequence="8" value="message"/>
+                <element inactive_on_update="false" label="Soft Reset" sequence="9" value="softreset"/>
+                <element inactive_on_update="false" label="Sync Device" sequence="10" value="syncdevice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Workspace ONE UEM response" max_length="40" name="x_vmw_uemconn_0_ws1uem" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="WS1 Assist URL" max_length="1024" name="x_vmw_uemconn_0_ws1_assist_url" type="url"/>
+        <element attributes="edge_encryption_enabled=true" label="WS1 Passcode" max_length="40" name="x_vmw_uemconn_0_ws1_passcode" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="WS1 Send Message" max_length="4000" name="x_vmw_uemconn_0_ws1_send_message" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="ScreenShare" label="WS1 UEM Assist Type" max_length="40" name="x_vmw_uemconn_0_ws1_uem_assist_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Screen Share" sequence="0" value="ScreenShare"/>
+                <element inactive_on_update="false" label="Remote Shell" sequence="1" value="RemoteShell"/>
+                <element inactive_on_update="false" label="File Manager" sequence="2" value="FileManager"/>
+                <element inactive_on_update="false" label="Registry Editor" sequence="3" value="RegistryEditor"/>
+            </choice>
+        </element>
+        <element label="WS1 Unlock Pin" max_length="40" name="x_vmw_uemconn_0_ws1_unlock_pin" type="integer"/>
+    </element>
+</database>
