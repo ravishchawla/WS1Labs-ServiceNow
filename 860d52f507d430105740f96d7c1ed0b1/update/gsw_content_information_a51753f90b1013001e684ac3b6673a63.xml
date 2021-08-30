@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>Review the database view. This database view is required to do reporting with Spotlight. A database view is auto-generated for each Spotlight Group. It joins the facts table of the Spotlight group with the spotlight table. </p>
+<ul style="list-style-position: inside;"><li>Set a default list layout on the database view to show only the columns that you want to see. Add ACLs to the database view if you have any extra security requirements not already implemented on the facts table.</li><li> You can access the database view through a related link on the Spotlight group form.</li></ul>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/sys_db_view_list.do?sysparm_query=name%3Dchange_request_spotlight</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies>f7ea268067000300b733808bd485efda</implicit_plugin_dependencies>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>3</order>
+        <parent display_value="">f7ea268067000300b733808bd485efda</parent>
+        <parents>f7ea268067000300b733808bd485efda,c2726d6767233200b733808bd485ef49</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>true</quick_startable>
+        <root_parent display_value="Welcome to Spotlight Guided Setup">c2726d6767233200b733808bd485ef49</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-16 10:49:48</sys_created_on>
+        <sys_id>a51753f90b1013001e684ac3b6673a63</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Database View (requires ADMIN role)</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_a51753f90b1013001e684ac3b6673a63</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-19 14:15:41</sys_updated_on>
+        <table/>
+        <title>Database View (requires ADMIN role)</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=a51753f90b1013001e684ac3b6673a63"/>
+</record_update>

@@ -21,7 +21,6 @@ function onLoad() {
 				
 				ga_test_json.getXML(function parse_json_response(response) {
 					ws1_actions_response = response.responseXML.documentElement.getAttribute('answer');
-
 					try {
 						ws1_actions_response = JSON.parse(ws1_actions_response);
 					} catch(e) {
@@ -551,13 +550,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-10 00:49:49</sys_created_on>
         <sys_id>3cc0c3bc075134105740f96d7c1ed0f0</sys_id>
-        <sys_mod_count>725</sys_mod_count>
+        <sys_mod_count>728</sys_mod_count>
         <sys_name>WS1UEM popup</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_ui_page_3cc0c3bc075134105740f96d7c1ed0f0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-25 21:34:42</sys_updated_on>
+        <sys_updated_on>2021-08-30 19:35:36</sys_updated_on>
     </sys_ui_page>
 </record_update>

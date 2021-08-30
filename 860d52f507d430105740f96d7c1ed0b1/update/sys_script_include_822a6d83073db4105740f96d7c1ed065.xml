@@ -19,7 +19,6 @@
 	if (config_table.next()) {
 
 		var class_name = config_table.sys_class_name;
-
 			var child_table;
 			if (class_name == 'cmdb_ci_computer') {
 				child_table = new GlideRecord("cmdb_ci_computer");
@@ -27,9 +26,9 @@
 				child_table = new GlideRecord("cmdb_ci_handheld_computing");
 			} else {
 				error_log = 'OS for device ' + device_id + ' not found in type ' + class_name;
-				jslog(error_log);
+				gs.info(error_log);
 				
-				return '';
+				return {'os_name' : os_name, 'os_version' : os_version};
 			}
 			
 			child_table.addQuery("sys_id", device_id);
@@ -46,9 +45,8 @@
 		} else {
 
 		error_log = 'Error with request ' + 'ws1_uem_get_os_field' + ' when querying device ' + device_id;
-		jslog(error_log);
-
-		return '';
+		gs.info(error_log);
+		return {'os_name' : '', 'os_version' : ''};
 	}
    }
 
@@ -86,7 +84,7 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
    get_action:function() {
 		var session_id = this.getParameter('sysparm_sid');
 		var uem_version = gs.getProperty('x_646971_uemconn_0.WS1UEM Platform');
-
+		
 		var INCIDENT_TABLE_NAME = "incident";
 
 		var DEVICE_TABLE_NAME = "cmdb_ci";
@@ -106,11 +104,22 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
 			os_name = os_json['os_name'];
 			os_version = os_json['os_version'];
 
-			os_name = os_name.toLowerCase();
+			
+			var action_visibility_conditions = {};
 
-			if (os_name == '') {
-				return '';
+			var fields = new GlideRecord('sys_dictionary');
+			fields.addQuery('name', TABLE_NAME);
+			fields.query();
+			while(fields.next())
+			{
+				action_visibility_conditions[fields.element.toString()] = false;
 			}
+
+			if ((os_name == '') || (os_name == null)) {
+				return JSON.stringify(action_visibility_conditions);
+			}
+			
+			os_name = os_name.toLowerCase();
 
 			if (os_name.includes('mac')) {
 				os_name = 'mac';
@@ -135,16 +144,6 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
 					os_name = 'winrt';
 				}
 			}
-		}
-
-		var action_visibility_conditions = {};
-	
-		var fields = new GlideRecord('sys_dictionary');
-		fields.addQuery('name', TABLE_NAME);
-		fields.query();
-		while(fields.next())
-		{
-			action_visibility_conditions[fields.element.toString()] = false;
 		}
 
 		var mapTable = new GlideRecord(TABLE_NAME);
@@ -191,13 +190,13 @@ ws1_get_action_from_os.prototype = Object.extendsObject(global.AbstractAjaxProce
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-10 14:50:09</sys_created_on>
         <sys_id>822a6d83073db4105740f96d7c1ed065</sys_id>
-        <sys_mod_count>131</sys_mod_count>
+        <sys_mod_count>145</sys_mod_count>
         <sys_name>ws1_get_action_from_os</sys_name>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_script_include_822a6d83073db4105740f96d7c1ed065</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-18 18:03:06</sys_updated_on>
+        <sys_updated_on>2021-08-30 20:06:05</sys_updated_on>
     </sys_script_include>
 </record_update>
