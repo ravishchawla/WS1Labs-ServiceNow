@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="67" text_index="true" type="collection">
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="210" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" label="ws1_actions_response" max_length="40" name="x_646971_uemconn_0_u_string_1" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Workspace ONE UEM Action" max_length="40" name="x_646971_uemconn_0_ws1command" type="choice">
             <choice>

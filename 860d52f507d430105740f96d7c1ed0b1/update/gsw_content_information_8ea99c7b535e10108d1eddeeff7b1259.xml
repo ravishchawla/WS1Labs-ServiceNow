@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p><span style="color: #dd9122;"><strong>Required</strong></span></p>
+<p>To enable prebuilt Virtual Agent conversations for IT Service Management, activate the ITSM Virtual Agent Conversations store application.</p>
+<p>Click the &#39;Configure&#39; button to get started. From the store application page, select ‘View Products’ and &#39;Opt-in&#39; to complete this task.</p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>https://store.servicenow.com/sn_appstore_store.do#!/store/application/134450a0b3781300787162ac16a8dc1e</end_point>
+        <end_point_open_mode>2</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html><![CDATA[<p>Download the ITSM NLU Model for Virtual Agent Conversations plugin (com.snc.itsm.nlu) from the ServiceNow Store if you plan to use Natural Language Understanding (NLU) for all your ITSM Virtual Agent topic conversation flows. ITSM Virtual Agent uses NLU to comprehend word meanings and recognize word contexts to better infer user or system actions.</p>
+<p>Install the Virtual Agent Analytics Dashboard plugin (com.glide.cs.pa) to enable the Virtual Agent out-of-box analytics dashboard for monitoring conversations and topic usage. Navigate to System Definition &gt; Plugins, search for plugins using the search bar, and click Install.</p>]]></more_info_html>
+        <order>5</order>
+        <parent display_value="Plugins and store applications">ad85584fdb0adc10ab1354e4dc961957</parent>
+        <parents>ad85584fdb0adc10ab1354e4dc961957,f40027b2dbc6dc10ab1354e4dc96194b</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="">f40027b2dbc6dc10ab1354e4dc96194b</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-04 21:01:07</sys_created_on>
+        <sys_id>8ea99c7b535e10108d1eddeeff7b1259</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>ITSM Virtual Agent Conversations*</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_8ea99c7b535e10108d1eddeeff7b1259</sys_update_name>
+        <sys_updated_by>samantha.santo@snc</sys_updated_by>
+        <sys_updated_on>2020-10-27 00:46:54</sys_updated_on>
+        <table/>
+        <title>ITSM Virtual Agent Conversations*</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=8ea99c7b535e10108d1eddeeff7b1259"/>
+</record_update>

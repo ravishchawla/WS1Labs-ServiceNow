@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_property">
     <sys_ux_page_property action="INSERT_OR_UPDATE">
         <choices/>
         <description>Contains references to global search configurations to be consumed by search components</description>
         <name>global_search_configurations</name>
         <page display_value="WS1UEMSpoke">f7e717ab32e5f41086262f4e8213d23b</page>
-        <required_translations>[]</required_translations>
-        <route/>
         <suffix/>
         <sys_class_name>sys_ux_page_property</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-31 01:48:16</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>global</sys_domain_path>
         <sys_id>ffe717abbce5f410c32bcfff7063f63b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>global_search_configurations</sys_name>
@@ -25,8 +21,7 @@
         <unique_name>x_646971_uemconn_0.f7e717ab32e5f41086262f4e8213d23b.root.global_search_configurations</unique_name>
         <value>{&#13;
     "globalSearchViewConfigId": "97a574ea53c0130084acddeeff7b12a6",&#13;
-"globalSearchRoute": "search"&#13;
-}</value>
+"globalSearchRoute": "search</value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=ffe717abbce5f410c32bcfff7063f63b"/>
 </record_update>

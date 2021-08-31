@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p>Chat Setup is your hub to configure Workspace Agent Chat capabilities. You can enable the following capabilities to further enhance your users experience with Workspace Agent Chat.</p>
+<ul><li style="list-style-type: none;">
+<ul style="list-style-position: inside;"><li><strong>Agent Settings</strong> control how agent names and avatars are displayed in the chat window.</li><li><strong>Agent Whisper</strong> gives managers access to assist agents in customer conversations without the end user&#39;s knowledge.</li><li><strong>Estimated Wait Time</strong> automatically informs customers of their place within the queue after a live agent transfer.</li><li><strong>Transcript Download</strong> allows end users to download a copy of the conversation text from the web chat client.</li><li><strong>Transfer Messages</strong> automatically inform customers that they are being transferred to another agent.</li><li><strong>Dynamic Translation for Agent Chat</strong> automatically translates messages so that agents and end users can engage in conversations even in the absence of a common language.</li></ul>
+</li></ul>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins>com.glide.interaction.awa</dependent_on_plugins>
+        <dependent_on_plugins_ids>com.glide.interaction.awa</dependent_on_plugins_ids>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/sys_cs_live_agent_setup.do?sys_id=f0acbc4c5f091300e6333654de7313c8</end_point>
+        <end_point_open_mode>2</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>1</order>
+        <parent display_value="Workspace Agent Chat">a0c1f603db1523004bccd4f3ce96199e</parent>
+        <parents>a0c1f603db1523004bccd4f3ce96199e,a869052fdb081300c47f5f135e961910</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="Agent Workspace Guided Setup">a869052fdb081300c47f5f135e961910</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>samantha.santo@snc</sys_created_by>
+        <sys_created_on>2020-09-24 01:02:25</sys_created_on>
+        <sys_id>413036b3db175c5048cdd3fa5e9619ad</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Chat Setup</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_413036b3db175c5048cdd3fa5e9619ad</sys_update_name>
+        <sys_updated_by>samantha.santo@snc</sys_updated_by>
+        <sys_updated_on>2020-10-12 22:49:42</sys_updated_on>
+        <table/>
+        <title>Chat Setup</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=413036b3db175c5048cdd3fa5e9619ad"/>
+</record_update>

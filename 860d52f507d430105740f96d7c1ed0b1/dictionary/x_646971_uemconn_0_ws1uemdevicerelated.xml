@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="WS1UEMDeviceRelated" max_length="40" name="x_646971_uemconn_0_ws1uemdevicerelated" sizeclass="0" type="collection">
+    <element label="WS1UEMDeviceRelated" max_length="40" name="x_646971_uemconn_0_ws1uemdevicerelated" type="collection">
         <element label="Device Ownership" max_length="100" name="device_ownership" type="string"/>
         <element label="Hardware Item" max_length="32" name="hardware_item" reference="cmdb_ci_hardware" type="reference"/>
         <element label="Udid" max_length="255" name="udid" type="string"/>

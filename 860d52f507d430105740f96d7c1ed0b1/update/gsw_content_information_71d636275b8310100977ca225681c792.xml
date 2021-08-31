@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div class="body conbody">
+<div class="p">Block specific results for a search using result improvement rules linked to a search profile.
+<ol id="block-search-result-documents__ol_yxf_tbs_cnb" class="ol"><li class="li">Edit the search profile that you want to create a result improvement rule for.</li><li class="li">In the Result Improvement Rules related list, click <strong><span class="ph uicontrol">Create</span></strong>.</li><li class="li">On the <span class="ph">AI Search</span> Results Improvement Rule form, fill in the fields.
+<dl class="dl"><dt class="dt dlterm"><strong>Label</strong></dt><dd class="dd">Unique label for the result improvement rule.</dd><dt class="dt dlterm"><strong>Start Date</strong></dt><dd class="dd">First date on which the rule can activate. If left empty, uses current date.</dd><dt class="dt dlterm"><strong>End Date</strong></dt><dd class="dd">Late date on which the rule can activate. If left empty, uses 30 days from <span class="ph uicontrol">Start Date</span>.</dd><dt class="dt dlterm"><strong>Activate on all queries</strong></dt><dd class="dd">Option to activate the rule for every search query that satisfies its date and language constraints.</dd><dt class="dt dlterm"><strong>Language</strong></dt><dd class="dd">Limits activation to search queries in the selected language. Leave empty to activate for searches in any language.</dd><dt class="dt dlterm"><strong>Expand Synonyms For Query Conditions</strong></dt><dd class="dd">Option to enable expansion of Query condition arguments using synonyms defined in the same search profile and with the same language.</dd><dt class="dt dlterm"><strong>Triggers</strong></dt><dd class="dd">List of filters describing conditions for activating the rule. This field appears only when <span class="ph uicontrol">Activate on all queries</span> is deselected.</dd></dl>
+</li><li class="li">Click <strong><span class="ph uicontrol">Submit</span></strong>.</li><li class="li">In the Actions related list, click <strong><span class="ph uicontrol">Block Documents</span></strong>.</li><li class="li">In the Select Documents To Block form, search for documents that you want to block when this rule triggers.</li><li class="li">Click the plus icon next to a result document to select it for blocking.</li><li class="li">Click <strong><span class="ph uicontrol">Add Documents and Close</span></strong>.</li></ol>
+</div>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>ais_search_profile_list.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>200</order>
+        <parent display_value="Fine-tune AI Search results">649636275b8310100977ca225681c734</parent>
+        <parents>649636275b8310100977ca225681c734,d585222f5b4310100977ca225681c72f</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="AI Search Guided Setup">d585222f5b4310100977ca225681c72f</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-10 20:37:10</sys_created_on>
+        <sys_id>71d636275b8310100977ca225681c792</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Block search result documents</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_71d636275b8310100977ca225681c792</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 04:12:11</sys_updated_on>
+        <table/>
+        <title>Block search result documents</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=71d636275b8310100977ca225681c792"/>
+</record_update>

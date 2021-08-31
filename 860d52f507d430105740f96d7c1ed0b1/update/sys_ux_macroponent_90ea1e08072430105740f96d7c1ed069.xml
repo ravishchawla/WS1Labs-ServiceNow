@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
     <sys_ux_macroponent action="INSERT_OR_UPDATE">
         <associated_types/>
-        <category>page</category>
         <component_dependencies/>
         <composition>[ {
   "elementId" : "dashboard_viewport_1",
@@ -52,15 +51,10 @@
   "isNonDestructive" : false,
   "styles" : { }
 } ]</composition>
-        <da_relay_models/>
         <data>[ ]</data>
-        <dispatched_events/>
         <events/>
-        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
-        <handled_events/>
+        <extends display_value="Landing Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <interactions/>
-        <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
@@ -86,12 +80,9 @@
   "readOnly" : true,
   "selectable" : false
 } ]</props>
-        <required_translations>[]</required_translations>
         <root_component/>
         <root_component_config>{ }</root_component_config>
-        <root_component_definition/>
         <schema_version>1.0.0</schema_version>
-        <state_properties>[ ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-05-31 07:19:59</sys_created_on>

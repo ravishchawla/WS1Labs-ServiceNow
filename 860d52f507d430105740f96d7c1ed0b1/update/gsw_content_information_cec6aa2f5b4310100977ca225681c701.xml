@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div class="body conbody">
+<div class="p">An indexed source specifies a <span class="ph">Now Platform</span> table with content that you want to make searchable.
+<ol id="define-indexed-sources__ol_gz4_13j_2nb" class="ol"><li class="li">Review the default indexed sources by following these steps.<br />
+<ol id="define-indexed-sources__ol_lx5_pyj_2nb" class="ol" type="a"><li class="li">Edit an indexed source.</li><li class="li">Review the settings on the Indexed Source form and its related lists.</li><li class="li">To return to the list of indexed sources, click the Back icon.</li></ol>
+</li><li class="li">Optionally, define new indexed sources as needed for your <span class="ph">AI Search</span> implementation by following these steps.<br />
+<ol id="define-indexed-sources__ol_ncq_ljj_2nb" class="ol" type="a"><li class="li">Click <strong><span class="ph uicontrol">New</span></strong>.</li><li class="li">On the Indexed Source form, fill in the fields.
+<dl class="dl"><dt class="dt dlterm"><strong>Name</strong></dt><dd class="dd">Unique name for the indexed source.</dd></dl>
+<dl class="dl"><dt class="dt dlterm"><strong>Source</strong></dt><dd class="dd">The <span class="ph">Now Platform</span> table with content that you want to make searchable.
+<div class="note note"><span class="notetitle">Note:</span> Child tables of the selected table will also be indexed.</div>
+</dd></dl>
+</li><li class="li">Click <strong><span class="ph uicontrol">Submit</span></strong>.
+<div class="note note"><strong><span class="notetitle">Note:</span></strong> The new indexed source displays an alert triangle icon indicating that its content has never been indexed.</div>
+</li><li class="li">Edit the indexed source.</li><li class="li">Queue an indexing task for the source table and its child tables by clicking <strong><span class="ph uicontrol">Index All Tables</span></strong>.</li><li class="li">Refresh the Indexed Source History form until the source&#39;s <span class="ph uicontrol">Ingestion State</span> changes to ready, indicating completion of the indexing run.</li><li class="li">To return to the list of indexed sources, click the Back icon.</li></ol>
+</li></ol>
+</div>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>ais_datasource_list.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>100</order>
+        <parent display_value="Define searchable content">6d86e62f5b4310100977ca225681c793</parent>
+        <parents>6d86e62f5b4310100977ca225681c793,d585222f5b4310100977ca225681c72f</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="AI Search Guided Setup">d585222f5b4310100977ca225681c72f</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-10 19:28:29</sys_created_on>
+        <sys_id>cec6aa2f5b4310100977ca225681c701</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Define indexed sources</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_cec6aa2f5b4310100977ca225681c701</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-02 20:02:14</sys_updated_on>
+        <table/>
+        <title>Define indexed sources</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=cec6aa2f5b4310100977ca225681c701"/>
+</record_update>

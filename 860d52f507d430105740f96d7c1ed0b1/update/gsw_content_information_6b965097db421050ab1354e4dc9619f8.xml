@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p><em>Activation of the Virtual Agent or Virtual Agent Lite plugin is required in order to access the configuration page for this task.</em></p>
+<p>You can use the default survey or create your own to collect end user feedback at the end of a chat session.</p>
+<p>To enable a custom feedback survey, you can duplicate the &#39;Provide Virtual Agent&#39; setup topic and provide the ID of your desired survey. From the Custom Greetings &amp; Setup page, select your newly created setup topic for the experience of your choice.</p>
+<p>The post-chat setting runs the survey setup topic 33% of the time. You can access the results of your survey in the survey responses module under survey.</p>
+<p><em>If you&#39;re setting up Virtual Agent Lite, you can use the default &#39;Provide Virtual Agent&#39; setup topic but won&#39;t be able to use a custom survey. </em></p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/sys_cs_context_profile_list.do</end_point>
+        <end_point_open_mode>2</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>3</order>
+        <parent display_value="Surveys">7a8c7b87db021050ab1354e4dc9619f2</parent>
+        <parents>7a8c7b87db021050ab1354e4dc9619f2,f40027b2dbc6dc10ab1354e4dc96194b</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="">f40027b2dbc6dc10ab1354e4dc96194b</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>qianyi.xu@snc</sys_created_by>
+        <sys_created_on>2020-07-21 21:14:48</sys_created_on>
+        <sys_id>6b965097db421050ab1354e4dc9619f8</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>Post-chat Surveys for Virtual Agent</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_6b965097db421050ab1354e4dc9619f8</sys_update_name>
+        <sys_updated_by>vivien.leong@snc</sys_updated_by>
+        <sys_updated_on>2020-10-20 04:05:28</sys_updated_on>
+        <table/>
+        <title>Post-chat Surveys for Virtual Agent</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=6b965097db421050ab1354e4dc9619f8"/>
+</record_update>

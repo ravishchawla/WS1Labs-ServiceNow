@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div class="body conbody">
+<div class="p">Synonyms are terms with similar meanings or usage that <span class="ph">AI Search</span> treats as equivalent. Create dictionaries to store synonyms, and link them to search profiles for inclusion in your search experiences.
+<ol id="create-synonym-dictionaries-ais__ol_jt1_prj_2nb" class="ol"><li class="li">Review the existing synonym dictionary for the default search profile by following these steps.<br />
+<ol id="create-synonym-dictionaries-ais__ol_alx_msj_2nb" class="ol" type="a"><li class="li">Edit the search profile.</li><li class="li">In the Synonyms related list, edit the synonym dictionary.</li><li class="li">Examine the settings on the Dictionary form.</li><li class="li">Return to the search profile list by clicking the Back icon.</li></ol>
+</li><li class="li">Optionally, define and link your own synonym dictionaries as needed for your <span class="ph">AI Search</span> implementation by following these steps.<br />
+<ol id="create-synonym-dictionaries-ais__ol_apl_dpj_2nb" class="ol" type="a"><li class="li">Edit the search profile that you want to define a synonym dictionary for.</li><li class="li">In the Synonyms related list, click <strong><span class="ph uicontrol">Create and Link</span></strong>.</li><li class="li">On the Dictionary form, fill in the fields.
+<dl class="dl"><dt class="dt dlterm"><strong>Label</strong></dt><dd class="dd">Unique label for the synonym dictionary.</dd><dt class="dt dlterm"><strong>Language</strong></dt><dd class="dd">Language for the synonym dictionary. <span class="ph">AI Search</span> only considers synonyms from dictionaries with the same language as the user&#39;s search query.</dd></dl>
+</li><li class="li">Click <strong><span class="ph uicontrol">Submit</span></strong>.</li><li class="li">To make the new synonym dictionary active, click <strong><span class="ph uicontrol">Publish</span></strong>.</li><li class="li">To make the updated search profile settings take effect, click <strong><span class="ph uicontrol">Publish</span></strong>.</li></ol>
+</li></ol>
+</div>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>ais_search_profile_list.do</end_point>
+        <end_point_open_mode>2</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>200</order>
+        <parent display_value="Configure AI Search experiences">afcaaaaf5b4310100977ca225681c7e6</parent>
+        <parents>afcaaaaf5b4310100977ca225681c7e6,d585222f5b4310100977ca225681c72f</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="AI Search Guided Setup">d585222f5b4310100977ca225681c72f</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-10 19:54:32</sys_created_on>
+        <sys_id>bb9c6aef5b4310100977ca225681c7aa</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Create synonym dictionaries</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_bb9c6aef5b4310100977ca225681c7aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 04:12:12</sys_updated_on>
+        <table/>
+        <title>Create synonym dictionaries</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb9c6aef5b4310100977ca225681c7aa"/>
+</record_update>

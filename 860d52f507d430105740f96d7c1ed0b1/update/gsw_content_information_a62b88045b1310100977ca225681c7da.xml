@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div class="body conbody">
+<div class="p">A search application configuration includes all search settings for a specific <span class="ph">Now Platform</span> application.
+<ol id="define-search-app-config__ol_wpm_4lk_2nb" class="ol"><li class="li">Review the default search application configurations by following these steps.<br />
+<ol id="define-search-app-config__ol_lx5_pyj_2nb" class="ol" type="a"><li class="li">Edit a search application configuration.</li><li class="li">Review the settings on the Search Application Configuration form and its related lists.</li><li class="li">To return to the list of search application configurations, click the Back icon.</li></ol>
+</li><li class="li">Optionally, define new search application configurations as needed for your <span class="ph">AI Search</span> implementation by following these steps.<br />
+<ol id="define-search-app-config__ol_a2x_5lk_2nb" class="ol" type="a"><li class="li">Click <strong><span class="ph uicontrol">New</span></strong>.</li><li class="li">On the Search Application Configuration form, fill in the fields.
+<dl class="dl"><dt class="dt dlterm"><strong>Name</strong></dt><dd class="dd">Unique name for this search application configuration.</dd><dt class="dt dlterm"><strong>Application ID</strong></dt><dd class="dd">ID for a <span class="ph">Now Platform</span> application.
+<div class="note note"><strong><span class="notetitle">Note:</span></strong> In <span class="ph">Quebec</span>, only the following applications support <span class="ph">AI Search</span>: <span class="ph">Service Portal</span>, <span class="ph">Now Mobile</span>, and <span class="ph">Virtual Agent</span>.</div>
+</dd><dt class="dt dlterm"><strong>Search Profile</strong></dt><dd class="dd">Profile with the search experience you want to provide for users of the application.</dd></dl>
+</li><li class="li">Click <strong><span class="ph uicontrol">Submit</span></strong>.</li></ol>
+</li></ol>
+</div>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>sys_search_context_config_list.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>100</order>
+        <parent display_value="Configure AI Search applications">02e6c4805b1310100977ca225681c792</parent>
+        <parents>02e6c4805b1310100977ca225681c792,d585222f5b4310100977ca225681c72f</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="AI Search Guided Setup">d585222f5b4310100977ca225681c72f</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-11 21:22:26</sys_created_on>
+        <sys_id>a62b88045b1310100977ca225681c7da</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Define search application configurations</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_a62b88045b1310100977ca225681c7da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 04:12:12</sys_updated_on>
+        <table/>
+        <title>Define search application configurations</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=a62b88045b1310100977ca225681c7da"/>
+</record_update>

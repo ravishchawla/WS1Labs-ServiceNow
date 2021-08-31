@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div class="body conbody">
+<div class="p">Stop words are overly frequent terms that <span class="ph">AI Search</span> ignores in searches. Create dictionaries to store stop words, and link them to search profiles for inclusion in your search experiences.
+<ol class="ol"><li class="li">Review the existing stop word dictionary for the default search profile by following these steps.<br />
+<ol id="create-stop-word-dictionaries__ol_alx_msj_2nb" class="ol" type="a"><li class="li">Edit the search profile.</li><li class="li">In the Stop Words related list, edit the stop word dictionary.</li><li class="li">Examine the settings on the Dictionary form.</li><li class="li">Return to the search profile list by clicking the Back icon.</li></ol>
+</li><li class="li">Optionally, define and link your own stop word dictionaries as needed for your <span class="ph">AI Search</span> implementation by following these steps.<br />
+<ol id="create-stop-word-dictionaries__ol_apl_dpj_2nb" class="ol" type="a"><li class="li">Edit the search profile that you want to define a stop word dictionary for.</li><li class="li">In the Stop Words related list, click <strong><span class="ph uicontrol">Create and Link</span></strong>.</li><li class="li">On the Dictionary form, fill in the fields.
+<dl class="dl"><dt class="dt dlterm"><strong>Label</strong></dt><dd class="dd">Unique label for the stop word dictionary.</dd><dt class="dt dlterm"><strong>Language</strong></dt><dd class="dd">Language for the stop word dictionary. <span class="ph">AI Search</span> only considers stop words from dictionaries with the same language as the user&#39;s search query.</dd></dl>
+</li><li class="li">Click <strong><span class="ph uicontrol">Submit</span></strong>.</li><li class="li">To make the new stop word dictionary active, click <strong><span class="ph uicontrol">Publish</span></strong>.</li><li class="li">To make the updated search profile settings take effect, click <strong><span class="ph uicontrol">Publish</span></strong>.</li></ol>
+</li></ol>
+</div>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>ais_search_profile_list.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>300</order>
+        <parent display_value="Configure AI Search experiences">afcaaaaf5b4310100977ca225681c7e6</parent>
+        <parents>afcaaaaf5b4310100977ca225681c7e6,d585222f5b4310100977ca225681c72f</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="AI Search Guided Setup">d585222f5b4310100977ca225681c72f</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-10 19:56:23</sys_created_on>
+        <sys_id>11ad22235b8310100977ca225681c7cd</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Create stop word dictionaries</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_11ad22235b8310100977ca225681c7cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 04:12:12</sys_updated_on>
+        <table/>
+        <title>Create stop word dictionaries</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=11ad22235b8310100977ca225681c7cd"/>
+</record_update>

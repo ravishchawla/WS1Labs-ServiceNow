@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_property">
     <sys_ux_page_property action="INSERT_OR_UPDATE">
         <choices/>
         <description>Tabs Configuration</description>
         <name>chrome_tab</name>
         <page display_value="WS1UEMSpoke">08638f57d434b410efbf3280d7384464</page>
-        <required_translations>[{"message":"New Incident","comment":""},{"message":"New Interaction","comment":""}]</required_translations>
-        <route/>
         <suffix/>
         <sys_class_name>sys_ux_page_property</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-06-22 22:52:53</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>global</sys_domain_path>
         <sys_id>c4638f575634b4105bc0da87a5053864</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>chrome_tab</sys_name>
@@ -30,42 +26,7 @@
    "newTabMenu":[&#13;
       {&#13;
          "label":{&#13;
-            "translatable":true,&#13;
-            "message":"New Interaction"&#13;
-         },&#13;
-         "routeInfo":{&#13;
-            "route":"record",&#13;
-            "fields":{&#13;
-               "table":"interaction",&#13;
-               "sysId":"-1"&#13;
-            },&#13;
-            "multiInstField":"sysId"&#13;
-         },&#13;
-         "condition":{&#13;
-            "tableDescription":{&#13;
-               "table":"interaction",&#13;
-               "canCreate":true&#13;
-            }&#13;
-         }&#13;
-      },&#13;
-      {&#13;
-         "label":{&#13;
-            "translatable":true,&#13;
-            "message":"New Incident"&#13;
-         },&#13;
-         "routeInfo":{&#13;
-            "route":"record",&#13;
-            "fields":{&#13;
-               "table":"incident",&#13;
-               "sysId":"-1"&#13;
-            },&#13;
-            "multiInstField":"sysId"&#13;
-         }&#13;
-      }&#13;
-   ],&#13;
-   "maxMainTabLimit":10,&#13;
-   "maxTotalSubTabLimit":30&#13;
-}</value>
+       </value>
     </sys_ux_page_property>
     <sys_translated_text action="delete_multiple" query="documentkey=c4638f575634b4105bc0da87a5053864"/>
 </record_update>

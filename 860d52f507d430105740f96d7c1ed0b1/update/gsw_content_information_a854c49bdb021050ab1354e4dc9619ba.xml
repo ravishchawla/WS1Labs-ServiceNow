@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p><span style="color: #dd9122;"><strong>Required</strong></span></p>
+<p><em>Activation of the Virtual Agent or Virtual Agent Lite plugins are required in order to access the Conversation Builder page for this task.</em></p>
+<p>Virtual Agent Designer is the core location where you can manage your conversations. You can modify prebuilt topics and even create your own topics as needed.</p>
+<p>You can develop five types of conversation content in Virtual Agent Designer:</p>
+<ul style="list-style-position: inside;"><li><strong>Topics</strong> define the conversations between Virtual Agent and your end users.</li><li><strong>Topic Blocks</strong> serve as reusable components for common functions across conversations, saving your designers time and effort.</li><li><strong>Custom Controls</strong> can be built by developers and used by topic authors for custom input and output controls.</li><li><strong>Setup Topics</strong> are reusable elements within in a topic, such as greeting and closing messages.</li><li><strong>Small Talk Topics</strong> are responses to casual questions that your end users might ask during a conversation, such as the time or date.<br /></li></ul>
+<p><em>If you&#39;re setting up Virtual Agent Lite, you won&#39;t be able to create your own topics, but you can duplicate prebuilt topics and edit the name, description, keywords, and roles to fit your company needs.</em></p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/$conversation-builder.do</end_point>
+        <end_point_open_mode>2</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html><![CDATA[<p><span style="font-size: 12pt;"><strong>Before you begin</strong></span></p>
+<ul style="list-style-position: inside;"><li style="font-size: 12pt;"><span style="font-size: 12pt;">To create a topic, you should have a basic knowledge of the Now Platform and application table structures, scripting (JavaScript), HTML, and REST integrations. If you enabled Natural Language Understanding for your instance, you should be familiar with the intents, entities, and utterances defined in your NLU models before creating or updating topics.</span></li><li style="font-size: 12pt;"><span style="font-size: 12pt;">If you&#39;re using Natural Language Understanding, be sure that you enabled NLU and selected an NLU service provider (General Settings).</span></li><li style="font-size: 12pt;"><span style="font-size: 12pt;">Review the predefined topics and topic blocks available and the functions that they perform. Determine whether you and your topic authors would like to use them in Virtual Agent conversations. To use predefined topics and topic blocks, you must first duplicate them and if needed, customize them.</span></li><li style="font-size: 12pt;"><span style="font-size: 12pt;">Verify that you are in the appropriate application scope before you create or update a topic. For example, if you are creating ITSM topics, verify that you are in the <strong>ITSM Virtual Agent Conversations</strong> scope (and not the scope for the ITSM NLU Model for Virtual Agent Conversations).</span></li></ul>]]></more_info_html>
+        <order>2</order>
+        <parent display_value="Virtual Agent">21fd1b87dbcedc10ab1354e4dc961938</parent>
+        <parents>21fd1b87dbcedc10ab1354e4dc961938,f40027b2dbc6dc10ab1354e4dc96194b</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="">f40027b2dbc6dc10ab1354e4dc96194b</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>qianyi.xu@snc</sys_created_by>
+        <sys_created_on>2020-07-21 19:59:52</sys_created_on>
+        <sys_id>a854c49bdb021050ab1354e4dc9619ba</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>Virtual Agent Designer *</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_a854c49bdb021050ab1354e4dc9619ba</sys_update_name>
+        <sys_updated_by>samantha.santo@snc</sys_updated_by>
+        <sys_updated_on>2020-11-11 23:18:33</sys_updated_on>
+        <table/>
+        <title>Virtual Agent Designer *</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=a854c49bdb021050ab1354e4dc9619ba"/>
+</record_update>

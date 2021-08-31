@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<div class="body conbody">
+<div class="p">A search source represents a set of searchable content that you can make available to users in a search experience. You define a search source by applying filter conditions to an indexed source. Only indexed content that passes all filter conditions is accessible through the search source.
+<ol id="define-search-sources__ol_bzw_dkj_2nb" class="ol"><li class="li">Review the search sources defined in the Search Source Mappings related list for each of the default indexed sources.</li><li class="li">Optionally, define new search sources as needed for your <span class="ph">AI Search</span> implementation by following these steps.<br />
+<ol id="define-search-sources__ol_p34_rkj_2nb" class="ol" type="a"><li class="li">In the Search Source Mappings related list for an indexed source, click <strong><span class="ph uicontrol">New</span></strong>.</li><li class="li">On the Search Source form, fill in the fields.
+<dl class="dl"><dt class="dt dlterm"><strong>Name</strong></dt><dd class="dd">Unique name for the search source.</dd><dt class="dt dlterm"><strong>Conditions</strong></dt><dd class="dd">Optional list of filter conditions specifying what content from the indexed source is accessible through the search source.</dd></dl>
+</li><li class="li">Click <strong><span class="ph uicontrol">Submit</span></strong>.</li></ol>
+</li></ol>
+</div>
+</div>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>ais_datasource_list.do</end_point>
+        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html/>
+        <order>200</order>
+        <parent display_value="Define searchable content">6d86e62f5b4310100977ca225681c793</parent>
+        <parents>6d86e62f5b4310100977ca225681c793,d585222f5b4310100977ca225681c72f</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="AI Search Guided Setup">d585222f5b4310100977ca225681c72f</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-10 19:39:18</sys_created_on>
+        <sys_id>d0a962af5b4310100977ca225681c779</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Define search sources</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_d0a962af5b4310100977ca225681c779</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 04:12:12</sys_updated_on>
+        <table/>
+        <title>Define search sources</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=d0a962af5b4310100977ca225681c779"/>
+</record_update>

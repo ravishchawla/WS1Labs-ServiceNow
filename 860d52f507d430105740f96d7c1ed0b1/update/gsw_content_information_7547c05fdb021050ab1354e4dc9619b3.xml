@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_information">
+    <gsw_content_information action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <article><![CDATA[<p><span style="color: #dd9122;"><strong>Required</strong></span></p>
+<p><em>Activation of the Agent Chat plugin is required in order to access the configuration page for this task.</em></p>
+<p>Queues group together live agents who handle conversations based on routing conditions you define. You can review the prebuilt Queues and create your own if needed.</p>]]></article>
+        <best_practice_acceptable>false</best_practice_acceptable>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description/>
+        <embedded_help_qualifier/>
+        <end_point>/awa_queue_list.do</end_point>
+        <end_point_open_mode>2</end_point_open_mode>
+        <end_point_type>1</end_point_type>
+        <field/>
+        <filter/>
+        <filter_result/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_dynamic>false</is_dynamic>
+        <more_info_available>false</more_info_available>
+        <more_info_html><![CDATA[<h2 id="d1792929e83"><span style="font-size: 10pt;">Configure routing rules that use chat context variables</span></h2>
+<p><span style="font-size: 8pt;">You can specify queue routing rules that use chat context variables in the condition builder. You <a href="https://docs.servicenow.com/bundle/paris-performance-analytics-and-reporting/page/administer/virtual-agent/task/define-context-variable.html" target="_blank" rel="noopener noreferrer nofollow">define chat context variables</a> in Chat Setup. These variables can store contextual information that can be used in routing conditions that control where chat work items are routed.</span></p>
+<h2 id="d1792929e129"><span style="font-size: 10pt;">Assign pools of agents eligible to work on a queue</span></h2>
+<p><span style="font-size: 8pt;">Assign one or more agent groups to a queue using the Eligibility Assignment related list. These groups are eligible to receive work items from the queue, which allows work to get prioritized to eligible agents.</span></p>
+<h2 id="d1792929e153"><span style="font-size: 10pt;">Create a sort order for a queue</span></h2>
+<p><span style="font-size: 8pt;">Use the Work Item Sort Order related list to create one or more sort conditions for work items in a queue. For each sort condition, specify a field from the selected service channel table and the direction to sort, either ascending or descending. Items in the queue are sorted and assigned to agents based on these conditions.</span></p>]]></more_info_html>
+        <order>2</order>
+        <parent display_value="Advanced Work Assignment">203cf787db021050ab1354e4dc96199d</parent>
+        <parents>203cf787db021050ab1354e4dc96199d,f40027b2dbc6dc10ab1354e4dc96194b</parents>
+        <plugin_id/>
+        <property_name/>
+        <property_value/>
+        <quick_startable>false</quick_startable>
+        <root_parent display_value="">f40027b2dbc6dc10ab1354e4dc96194b</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>false</supports_child_content>
+        <sys_class_name>gsw_content_information</sys_class_name>
+        <sys_created_by>qianyi.xu@snc</sys_created_by>
+        <sys_created_on>2020-07-21 20:07:31</sys_created_on>
+        <sys_id>7547c05fdb021050ab1354e4dc9619b3</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Queues*</sys_name>
+        <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_update_name>gsw_content_information_7547c05fdb021050ab1354e4dc9619b3</sys_update_name>
+        <sys_updated_by>vivien.leong@snc</sys_updated_by>
+        <sys_updated_on>2020-10-19 21:20:06</sys_updated_on>
+        <table/>
+        <title>Queues*</title>
+        <weight>1</weight>
+    </gsw_content_information>
+    <sys_translated_text action="delete_multiple" query="documentkey=7547c05fdb021050ab1354e4dc9619b3"/>
+</record_update>

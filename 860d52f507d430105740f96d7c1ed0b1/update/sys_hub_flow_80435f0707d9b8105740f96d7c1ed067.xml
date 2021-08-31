@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>80435f0707d9b8105740f96d7c1ed067</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>WS1UEMChangePasscode</sys_name>
         <sys_overrides/>
         <sys_package display_value="WS1UEMSpoke" source="x_646971_uemconn_0">860d52f507d430105740f96d7c1ed0b1</sys_package>
@@ -37,11 +37,251 @@
         <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
         <sys_update_name>sys_hub_flow_80435f0707d9b8105740f96d7c1ed067</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-07-18 00:13:17</sys_updated_on>
+        <sys_updated_on>2021-08-31 19:21:24</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=80435f0707d9b8105740f96d7c1ed067"/>
     <sys_variable_value action="delete_multiple" query="document_key=80435f0707d9b8105740f96d7c1ed067"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=80435f0707d9b8105740f96d7c1ed067^sys_idNOT IN18435f0707d9b8105740f96d7c1ed0ae,35d3974707d9b8105740f96d7c1ed033,54435f0707d9b8105740f96d7c1ed0aa,5c435f0707d9b8105740f96d7c1ed0a1,5c435f0707d9b8105740f96d7c1ed0a6"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">81c4f42f0778b4105740f96d7c1ed0d2</block>
+        <comment>Set the response and message to return</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned>ws1error</outputs_assigned>
+        <outputs_to_assign/>
+        <parent_ui_id>04360741-3b45-499e-aeef-e62aefec5292</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>18435f0707d9b8105740f96d7c1ed0ae</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:17</sys_updated_on>
+        <ui_id>b1159351-a4ce-4bc1-948d-687e0020c94d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=18435f0707d9b8105740f96d7c1ed0ae"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="UEMChangePasscode">12cc078b0799b8105740f96d7c1ed02d</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>12cc078b0799b8105740f96d7c1ed02d</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:43</sys_created_on>
+        <sys_id>35d3974707d9b8105740f96d7c1ed033</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-16 05:53:52</sys_updated_on>
+        <ui_id>428ca9c4-e219-4e2a-a1f0-c322f94c7b9f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=35d3974707d9b8105740f96d7c1ed033"/>
+    <sys_element_mapping action="delete_multiple" query="id=35d3974707d9b8105740f96d7c1ed033"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>udid</field>
+        <id>35d3974707d9b8105740f96d7c1ed033</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:43</sys_created_on>
+        <sys_id>8ad3974707d9b8105740f96d7c1ed034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_12cc078b0799b8105740f96d7c1ed02d</table>
+        <value>{{subflow.ws1udid}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1passcode</field>
+        <id>35d3974707d9b8105740f96d7c1ed033</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:43</sys_created_on>
+        <sys_id>4ed3974707d9b8105740f96d7c1ed034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_12cc078b0799b8105740f96d7c1ed02d</table>
+        <value>{{subflow.ws1passcode}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6e9e1184074138105740f96d7c1ed073</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>54435f0707d9b8105740f96d7c1ed0aa</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:17</sys_updated_on>
+        <ui_id>04360741-3b45-499e-aeef-e62aefec5292</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=54435f0707d9b8105740f96d7c1ed0aa"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>54435f0707d9b8105740f96d7c1ed0aa</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>98435f0707d9b8105740f96d7c1ed0ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:55:09</sys_updated_on>
+        <value>the call succeeded</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=54435f0707d9b8105740f96d7c1ed0aa"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>54435f0707d9b8105740f96d7c1ed0aa</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>18435f0707d9b8105740f96d7c1ed0ad</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:44</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{428ca9c4-e219-4e2a-a1f0-c322f94c7b9f.status}}=202</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>54435f0707d9b8105740f96d7c1ed0aa</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>54435f0707d9b8105740f96d7c1ed0ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:55:09</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">fcc4f42f0778b4105740f96d7c1ed0ad</block>
+        <comment>Set the initial error state</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned>ws1error</outputs_assigned>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>5c435f0707d9b8105740f96d7c1ed0a1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:16</sys_updated_on>
+        <ui_id>0104d1d2-d295-491a-9ec7-964d9f529764</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5c435f0707d9b8105740f96d7c1ed0a1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>5c435f0707d9b8105740f96d7c1ed0a1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>58435f0707d9b8105740f96d7c1ed0a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:55:09</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">40435f0707d9b8105740f96d7c1ed082</variable>
+    </sys_variable_value>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">329e1184074138105740f96d7c1ed0b9</block>
+        <comment>Set the response and message to return</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned>ws1response,ws1errormessage</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>5c435f0707d9b8105740f96d7c1ed0a6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:16</sys_updated_on>
+        <ui_id>2ab367f0-78ab-40d5-b795-00e15658a274</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5c435f0707d9b8105740f96d7c1ed0a6"/>
+    <sys_element_mapping action="delete_multiple" query="id=5c435f0707d9b8105740f96d7c1ed0a6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1errormessage</field>
+        <id>5c435f0707d9b8105740f96d7c1ed0a6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>98435f0707d9b8105740f96d7c1ed0a9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:44</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_80435f0707d9b8105740f96d7c1ed067</table>
+        <value>{{428ca9c4-e219-4e2a-a1f0-c322f94c7b9f.variable}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1response</field>
+        <id>5c435f0707d9b8105740f96d7c1ed0a6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:55:09</sys_created_on>
+        <sys_id>d4435f0707d9b8105740f96d7c1ed0a9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:44</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_80435f0707d9b8105740f96d7c1ed067</table>
+        <value>{{428ca9c4-e219-4e2a-a1f0-c322f94c7b9f.response}}</value>
+    </sys_element_mapping>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=80435f0707d9b8105740f96d7c1ed067^sys_idNOT IN88435f0707d9b8105740f96d7c1ed068"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
         <id>80435f0707d9b8105740f96d7c1ed067</id>
@@ -519,8 +759,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>5</order>
@@ -549,8 +787,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -583,7 +819,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-07-17 01:55:09</sys_updated_on>
         <value>the call succeeded</value>
-        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=54435f0707d9b8105740f96d7c1ed0aa"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
@@ -619,8 +855,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>1</order>
@@ -652,7 +886,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-07-17 01:55:09</sys_updated_on>
         <value>1</value>
-        <variable display_value="WS1Error">40435f0707d9b8105740f96d7c1ed082</variable>
+        <variable display_value="">40435f0707d9b8105740f96d7c1ed082</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">329e1184074138105740f96d7c1ed0b9</block>
@@ -663,8 +897,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">80435f0707d9b8105740f96d7c1ed067</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>3</order>
@@ -884,6 +1116,246 @@
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=00e3d74707d9b8105740f96d7c1ed0f3"/>
     <sys_variable_value action="delete_multiple" query="document_key=00e3d74707d9b8105740f96d7c1ed0f3"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=00e3d74707d9b8105740f96d7c1ed0f3^sys_idNOT IN94e31b4707d9b8105740f96d7c1ed07e,94e31b4707d9b8105740f96d7c1ed086,9ce31b4707d9b8105740f96d7c1ed082,a0e31b4707d9b8105740f96d7c1ed09e,e4e31b4707d9b8105740f96d7c1ed08a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">fcc4f42f0778b4105740f96d7c1ed0ad</block>
+        <comment>Set the initial error state</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned>ws1error</outputs_assigned>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:53</sys_created_on>
+        <sys_id>94e31b4707d9b8105740f96d7c1ed07e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:12</sys_updated_on>
+        <ui_id>0104d1d2-d295-491a-9ec7-964d9f529764</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=94e31b4707d9b8105740f96d7c1ed07e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>94e31b4707d9b8105740f96d7c1ed07e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>10e31b4707d9b8105740f96d7c1ed082</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">10e31b4707d9b8105740f96d7c1ed04d</variable>
+    </sys_variable_value>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6e9e1184074138105740f96d7c1ed073</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>94e31b4707d9b8105740f96d7c1ed086</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:12</sys_updated_on>
+        <ui_id>04360741-3b45-499e-aeef-e62aefec5292</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=94e31b4707d9b8105740f96d7c1ed086"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>94e31b4707d9b8105740f96d7c1ed086</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>e8e31b4707d9b8105740f96d7c1ed089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <value>the call succeeded</value>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=94e31b4707d9b8105740f96d7c1ed086"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>94e31b4707d9b8105740f96d7c1ed086</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>68e31b4707d9b8105740f96d7c1ed089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{428ca9c4-e219-4e2a-a1f0-c322f94c7b9f.status}}=202</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>94e31b4707d9b8105740f96d7c1ed086</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>a4e31b4707d9b8105740f96d7c1ed089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">329e1184074138105740f96d7c1ed0b9</block>
+        <comment>Set the response and message to return</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned>ws1response,ws1errormessage</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>9ce31b4707d9b8105740f96d7c1ed082</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:12</sys_updated_on>
+        <ui_id>2ab367f0-78ab-40d5-b795-00e15658a274</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9ce31b4707d9b8105740f96d7c1ed082"/>
+    <sys_element_mapping action="delete_multiple" query="id=9ce31b4707d9b8105740f96d7c1ed082"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1errormessage</field>
+        <id>9ce31b4707d9b8105740f96d7c1ed082</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>d8e31b4707d9b8105740f96d7c1ed085</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_00e3d74707d9b8105740f96d7c1ed0f3</table>
+        <value>{{428ca9c4-e219-4e2a-a1f0-c322f94c7b9f.variable}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1response</field>
+        <id>9ce31b4707d9b8105740f96d7c1ed082</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>18e31b4707d9b8105740f96d7c1ed085</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_00e3d74707d9b8105740f96d7c1ed0f3</table>
+        <value>{{428ca9c4-e219-4e2a-a1f0-c322f94c7b9f.response}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="UEMChangePasscode">12cc078b0799b8105740f96d7c1ed02d</action_type>
+        <action_type_parent display_value="UEMChangePasscode">c32c8b4b0799b8105740f96d7c1ed051</action_type_parent>
+        <comment/>
+        <compiled_snapshot>12cc078b0799b8105740f96d7c1ed02d</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>a0e31b4707d9b8105740f96d7c1ed09e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:12</sys_updated_on>
+        <ui_id>428ca9c4-e219-4e2a-a1f0-c322f94c7b9f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a0e31b4707d9b8105740f96d7c1ed09e"/>
+    <sys_element_mapping action="delete_multiple" query="id=a0e31b4707d9b8105740f96d7c1ed09e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>udid</field>
+        <id>a0e31b4707d9b8105740f96d7c1ed09e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>60e31b4707d9b8105740f96d7c1ed09f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_12cc078b0799b8105740f96d7c1ed02d</table>
+        <value>{{subflow.ws1udid}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1passcode</field>
+        <id>a0e31b4707d9b8105740f96d7c1ed09e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>24e31b4707d9b8105740f96d7c1ed09f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_12cc078b0799b8105740f96d7c1ed02d</table>
+        <value>{{subflow.ws1passcode}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">81c4f42f0778b4105740f96d7c1ed0d2</block>
+        <comment>Set the response and message to return</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned>ws1error</outputs_assigned>
+        <outputs_to_assign/>
+        <parent_ui_id>04360741-3b45-499e-aeef-e62aefec5292</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-17 01:57:54</sys_created_on>
+        <sys_id>e4e31b4707d9b8105740f96d7c1ed08a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="WS1UEMSpoke">860d52f507d430105740f96d7c1ed0b1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-18 00:13:12</sys_updated_on>
+        <ui_id>b1159351-a4ce-4bc1-948d-687e0020c94d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e4e31b4707d9b8105740f96d7c1ed08a"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=00e3d74707d9b8105740f96d7c1ed0f3^sys_idNOT IN4ce3d74707d9b8105740f96d7c1ed0f3"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
         <id>00e3d74707d9b8105740f96d7c1ed0f3</id>
@@ -1361,8 +1833,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>1</order>
@@ -1394,7 +1864,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
         <value>1</value>
-        <variable display_value="WS1Error">10e31b4707d9b8105740f96d7c1ed04d</variable>
+        <variable display_value="">10e31b4707d9b8105740f96d7c1ed04d</variable>
     </sys_variable_value>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <block display_value="">6e9e1184074138105740f96d7c1ed073</block>
@@ -1405,8 +1875,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -1439,7 +1907,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-07-17 01:57:54</sys_updated_on>
         <value>the call succeeded</value>
-        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+        <variable display_value="">f0af19c1c32632002841b63b12d3aea3</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=94e31b4707d9b8105740f96d7c1ed086"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
@@ -1475,8 +1943,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>3</order>
@@ -1531,8 +1997,6 @@
         <display_text/>
         <extended_inputs/>
         <flow display_value="WS1UEMChangePasscode">00e3d74707d9b8105740f96d7c1ed0f3</flow>
-        <flow_variable/>
-        <flow_variables_assigned/>
         <inputs/>
         <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
         <order>5</order>
