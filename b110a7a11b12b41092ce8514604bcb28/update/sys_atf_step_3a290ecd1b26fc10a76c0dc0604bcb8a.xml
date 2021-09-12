@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Run Server Side Script">81eb79051b26fc10a76c0dc0604bcbcb</copied_from>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>7</order>
+        <snapshot/>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>3a290ecd1b26fc10a76c0dc0604bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_atf_step_3a290ecd1b26fc10a76c0dc0604bcb8a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_assist">6a29cacd1b26fc10a76c0dc0604bcb95</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=3a290ecd1b26fc10a76c0dc0604bcb8a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3a290ecd1b26fc10a76c0dc0604bcb8a</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>b6290ecd1b26fc10a76c0dc0604bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual) {&#13;
+    // add test script here&#13;
+	&#13;
+	var gr = new GlideRecord('incident');&#13;
+	&#13;
+	var num = 'INC0011024';&#13;
+	gr.addQuery('number', num);&#13;
+	gr.query();&#13;
+&#13;
+	gs.info('demo rows : ' + gr.getRowCount());&#13;
+	while(gr.next())&#13;
+	{&#13;
+		gs.info(gr.number);&#13;
+&#13;
+		var sys_id = gr.getValue('sys_id');&#13;
+		&#13;
+		var notes = gr.work_notes.getJournalEntry(-1);&#13;
+		&#13;
+		gs.info('demo notes : ' + notes);&#13;
+		&#13;
+		if (notes) {&#13;
+			var na = notes.split("\n\n");&#13;
+			&#13;
+			if (na.length &gt; 0) {&#13;
+				var last_note = na[0];&#13;
+				&#13;
+				var gr_notes = new GlideRecord('x_vmw_ws1uem_ws1_testing');&#13;
+				gr_notes.addActiveQuery();&#13;
+				gr_notes.addQuery('name', 'test_incident_notes');&#13;
+				gr_notes.query();&#13;
+&#13;
+				if (gr_notes.next()) {&#13;
+					gr_notes.value = last_note;&#13;
+					gr_notes.update();&#13;
+&#13;
+					gs.info('Updated sys property with ' + gr_notes.value);&#13;
+					return true;&#13;
+				} else {&#13;
+					gs.info("Can't update sys property");&#13;
+					return false;&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+		&#13;
+		gs.info('sys property of ' + num + ' = ' + sys_id);&#13;
+		var gr = new GlideRecord('x_vmw_ws1uem_ws1_testing');&#13;
+		gr.addActiveQuery();&#13;
+		gr.addQuery('name', 'test_incident_record');&#13;
+		gr.query();&#13;
+&#13;
+		if (gr.next()) {&#13;
+			gr.value = sys_id;&#13;
+			gr.update();&#13;
+&#13;
+			gs.info('Updated sys property with ' + gr.value);&#13;
+			return true;&#13;
+		} else {&#13;
+			gs.info("Can't update sys property");&#13;
+			return false;&#13;
+		}&#13;
+		&#13;
+		gs.info('demo journal : ' + journal)&#13;
+		&#13;
+	}&#13;
+	&#13;
+})(outputs, steps, stepResult, assertEqual);&#13;
+// uncomment the next line to execute this script as a jasmine test&#13;
+//jasmine.getEnv().execute();&#13;
+</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3a290ecd1b26fc10a76c0dc0604bcb8a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>f2290ecd1b26fc10a76c0dc0604bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>

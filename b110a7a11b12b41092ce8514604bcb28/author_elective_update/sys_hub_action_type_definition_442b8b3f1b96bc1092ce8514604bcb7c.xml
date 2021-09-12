@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="DELETE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>ws1uemimporter</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>WS1UEMImporter</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-07 02:17:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>442b8b3f1b96bc1092ce8514604bcb7c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>WS1UEMImporter</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_442b8b3f1b96bc1092ce8514604bcb7c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-07 02:18:59</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="DELETE" query="documentkey=442b8b3f1b96bc1092ce8514604bcb7c"/>
+    <sys_variable_value action="DELETE" query="document_key=442b8b3f1b96bc1092ce8514604bcb7c"/>
+    <sys_hub_step_instance action="DELETE" query="action=442b8b3f1b96bc1092ce8514604bcb7c^sys_idNOT IN146bcf3f1b96bc1092ce8514604bcbd5"/>
+    <sys_hub_step_instance action="DELETE">
+        <action display_value="WS1UEMImporter">442b8b3f1b96bc1092ce8514604bcb7c</action>
+        <cid>b932c0a1-efcf-40a7-9dbc-cfbf639f9962</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-07 02:18:59</sys_created_on>
+        <sys_id>146bcf3f1b96bc1092ce8514604bcbd5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-07 02:18:59</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="DELETE" query="document_key=146bcf3f1b96bc1092ce8514604bcbd5"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>146bcf3f1b96bc1092ce8514604bcbd5</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-07 02:18:59</sys_created_on>
+        <sys_id>1c6b837f1b96bc1092ce8514604bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-07 02:18:59</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>146bcf3f1b96bc1092ce8514604bcbd5</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-07 02:18:59</sys_created_on>
+        <sys_id>dc6b837f1b96bc1092ce8514604bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-07 02:18:59</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+// ... code ...
+  
+  
+	var loader = new GlideImportSetRun();
+	var importSetRec = loader.getImportSetGr('VMware Workspace ONE ITSM Connector');
+	var ranload = loader.loadImportSetTable(importSetRec, 'VMware Workspace ONE ITSM Connector');
+	importSetRec.state = "loaded";
+	importSetRec.update();
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_hub_action_type_definition_442b8b3f1b96bc1092ce8514604bcb7c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition"><sys_hub_action_type_definition action="INSERT_OR_UPDATE"><access>public</access><acls/><action_template/><active>true</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><copied_from/><copied_from_name/><description/><ih_action>false</ih_action><internal_name>ws1uemimporter</internal_name><label_cache>[]</label_cache><latest_snapshot/><master_snapshot/><name>WS1UEMImporter</name><natlang/><outputs/><state>draft</state><sys_class_name>sys_hub_action_type_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-07 02:17:52</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>442b8b3f1b96bc1092ce8514604bcb7c</sys_id><sys_mod_count>2</sys_mod_count><sys_name>WS1UEMImporter</sys_name><sys_overrides/><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_hub_action_type_definition_442b8b3f1b96bc1092ce8514604bcb7c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-07 02:18:59</sys_updated_on><system_level>false</system_level><type/></sys_hub_action_type_definition><sys_translated_text action="delete_multiple" query="documentkey=442b8b3f1b96bc1092ce8514604bcb7c"/><sys_variable_value action="delete_multiple" query="document_key=442b8b3f1b96bc1092ce8514604bcb7c"/><sys_hub_step_instance action="delete_multiple" query="action=442b8b3f1b96bc1092ce8514604bcb7c^sys_idNOT IN146bcf3f1b96bc1092ce8514604bcbd5"/><sys_hub_step_instance action="INSERT_OR_UPDATE"><action display_value="WS1UEMImporter">442b8b3f1b96bc1092ce8514604bcb7c</action><cid>b932c0a1-efcf-40a7-9dbc-cfbf639f9962</cid><extended_inputs/><extended_outputs/><icon/><inputs/><label>Script step</label><order>1</order><outputs/><section/><step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-07 02:18:59</sys_created_on><sys_id>146bcf3f1b96bc1092ce8514604bcbd5</sys_id><sys_mod_count>1</sys_mod_count><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-07 02:18:59</sys_updated_on></sys_hub_step_instance><sys_variable_value action="delete_multiple" query="document_key=146bcf3f1b96bc1092ce8514604bcbd5"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_hub_step_instance</document><document_key>146bcf3f1b96bc1092ce8514604bcbd5</document_key><order>400</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-07 02:18:59</sys_created_on><sys_id>1c6b837f1b96bc1092ce8514604bcb97</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-07 02:18:59</sys_updated_on><value>35aa573fd7802200bdbaee5b5e610375</value><variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_hub_step_instance</document><document_key>146bcf3f1b96bc1092ce8514604bcbd5</document_key><order>600</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-07 02:18:59</sys_created_on><sys_id>dc6b837f1b96bc1092ce8514604bcb97</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-07 02:18:59</sys_updated_on><value>(function execute(inputs, outputs) {
+// ... code ...
+  
+  
+	var loader = new GlideImportSetRun();
+	var importSetRec = loader.getImportSetGr('VMware Workspace ONE ITSM Connector');
+	var ranload = loader.loadImportSetTable(importSetRec, 'VMware Workspace ONE ITSM Connector');
+	importSetRec.state = "loaded";
+	importSetRec.update();
+  
+})(inputs, outputs);
+</value><variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-250460981</payload_hash>
+        <record_name>WS1UEMImporter</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-07 02:18:59</sys_created_on>
+        <sys_id>546b837f1b96bc1092ce8514604bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bbe0d2b540000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-07 02:18:59</sys_updated_on>
+        <type>Action Type</type>
+        <update_guid>9c6b837f1a96bc1067eeb51bf0e64ba4</update_guid>
+        <update_guid_history>9c6b837f1a96bc1067eeb51bf0e64ba4:-250460981,842bcf3f2696bc10b5ec5e4afda4c7cb:1453420016</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-07 02:22:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_action_type_definition">sys_hub_action_type_definition</sys_db_object>
+        <sys_id>023fad6671034bf480f662a743b37f64</sys_id>
+        <sys_metadata>442b8b3f1b96bc1092ce8514604bcb7c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMImporter</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_hub_action_type_definition_442b8b3f1b96bc1092ce8514604bcb7c</sys_update_name>
+        <sys_update_version display_value="sys_hub_action_type_definition_442b8b3f1b96bc1092ce8514604bcb7c">546b837f1b96bc1092ce8514604bcba5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-07 02:22:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

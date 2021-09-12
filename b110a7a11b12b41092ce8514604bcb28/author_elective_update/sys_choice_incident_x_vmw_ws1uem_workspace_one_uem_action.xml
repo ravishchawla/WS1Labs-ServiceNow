@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_vmw_ws1uem_workspace_one_uem_action" table="incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <name>incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:03:56</sys_created_on>
+            <sys_id>43b9cfb51b52b410a76c0dc0604bcbd9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vmw_ws1uem_workspace_one_uem_action</sys_name>
+            <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+            <sys_update_name>sys_choice_incident_x_vmw_ws1uem_workspace_one_uem_action</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:03:56</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Remote Assist</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:04:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a7d943f51b52b410a76c0dc0604bcb61</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:04:50</sys_updated_on>
+            <value>assist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Change Passcode</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:03:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>83a9cf751b52b410a76c0dc0604bcb69</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:04:02</sys_updated_on>
+            <value>changepasscode</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Request Logs</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:04:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4be94bb51b52b410a76c0dc0604bcbc3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:05:00</sys_updated_on>
+            <value>devicelogs</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Device Wipe</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:04:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>03b9cfb51b52b410a76c0dc0604bcbe5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:04:09</sys_updated_on>
+            <value>devicewipe</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Enterprise Wipe</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:04:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e1c90bb51b52b410a76c0dc0604bcb2e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:04:19</sys_updated_on>
+            <value>enterprisewipe</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Lock Device</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:04:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a3c90bb51b52b410a76c0dc0604bcb2f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:04:26</sys_updated_on>
+            <value>lock</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Send Message</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:05:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>19f9c3f51b52b410a76c0dc0604bcb27</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:05:09</sys_updated_on>
+            <value>message</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Refresh Devices</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:04:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>75d943b11b52b410a76c0dc0604bcb54</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:04:40</sys_updated_on>
+            <value>refreshdevices</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Soft Reset</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:05:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3bf9cfb51b52b410a76c0dc0604bcb19</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:05:20</sys_updated_on>
+            <value>softreset</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_workspace_one_uem_action</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Sync Device</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-08-31 21:05:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c60acfb51b52b410a76c0dc0604bcb1a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-08-31 21:05:30</sys_updated_on>
+            <value>syncdevice</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

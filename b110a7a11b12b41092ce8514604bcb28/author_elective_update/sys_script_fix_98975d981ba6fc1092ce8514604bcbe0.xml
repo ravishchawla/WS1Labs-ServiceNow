@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="DELETE">
+        <before>false</before>
+        <description>Adds the Workspace ONE UEM value to the cmdb_ci discovery source choice list</description>
+        <name>Register WorkspaceONEUEM DiscoverySource</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var source_name = 'ws1uemimport';
+var dsUtil = new global.CMDBDataSourceUtil(); 
+dsUtil.addDataSource(source_name);
+var util = new sn_itom_license.ITOMLicensingUtils();
+util.addDiscoverySource(source_name);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-08 07:11:09</sys_created_on>
+        <sys_id>98975d981ba6fc1092ce8514604bcbe0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Register WorkspaceONEUEM DiscoverySource</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_script_fix_98975d981ba6fc1092ce8514604bcbe0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 07:20:31</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_script_fix_98975d981ba6fc1092ce8514604bcbe0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;&lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;&lt;before&gt;false&lt;/before&gt;&lt;description&gt;Adds the Workspace ONE UEM value to the cmdb_ci discovery source choice list&lt;/description&gt;&lt;name&gt;Register WorkspaceONEUEM DiscoverySource&lt;/name&gt;&lt;record_for_rollback&gt;false&lt;/record_for_rollback&gt;&lt;script&gt;&lt;![CDATA[var source_name = 'ws1uemimport';
+var dsUtil = new global.CMDBDataSourceUtil(); 
+dsUtil.addDataSource(source_name);
+var util = new sn_itom_license.ITOMLicensingUtils();
+util.addDiscoverySource(source_name);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-08 07:11:09&lt;/sys_created_on&gt;&lt;sys_id&gt;98975d981ba6fc1092ce8514604bcbe0&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Register WorkspaceONEUEM DiscoverySource&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fix_98975d981ba6fc1092ce8514604bcbe0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-08 07:20:31&lt;/sys_updated_on&gt;&lt;unloadable&gt;false&lt;/unloadable&gt;&lt;/sys_script_fix&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-45551527</payload_hash>
+        <record_name>Register WorkspaceONEUEM DiscoverySource</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-08 07:20:31</sys_created_on>
+        <sys_id>9bf9195c1ba6fc1092ce8514604bcb94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bc447993d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 07:20:31</sys_updated_on>
+        <type>Fix Script</type>
+        <update_guid>93f9195ca6a6fc10b8607dbe05881994</update_guid>
+        <update_guid_history>93f9195ca6a6fc10b8607dbe05881994:-45551527,cad7111cfda6fc10288471ba9d52f8c0:-1559388799</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-08 07:23:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_fix">sys_script_fix</sys_db_object>
+        <sys_id>0b89d392a1854c008f6fbdac55bfefa4</sys_id>
+        <sys_metadata>98975d981ba6fc1092ce8514604bcbe0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Register WorkspaceONEUEM DiscoverySource</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_script_fix_98975d981ba6fc1092ce8514604bcbe0</sys_update_name>
+        <sys_update_version display_value="sys_script_fix_98975d981ba6fc1092ce8514604bcbe0">9bf9195c1ba6fc1092ce8514604bcb94</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 07:23:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

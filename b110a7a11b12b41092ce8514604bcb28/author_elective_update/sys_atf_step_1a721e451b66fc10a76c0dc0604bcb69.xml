@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from display_value="Set Component Values (Custom UI)">07294ecd1b26fc10a76c0dc0604bcb07</copied_from>
+        <description>Set the components on the page as follows:
+'Choice list &lt;select&gt;: -- None --File ManagerRegistry EditorRemote ShellScreen Share' = ScreenShare
+</description>
+        <display_name>Set Component Values (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"f4095977f90fb76e40e12a0347079233":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Choice list &lt;select&gt;: -- None --File ManagerRegistry EditorRemote ShellScreen Share\",\"inner_text\":\"-- None --File ManagerRegistry EditorRemote ShellScreen Share\",\"sn_atf_mugshot_long_description\":\"Choice list &lt;select&gt; [input_ws1_assist_type]: -- None --File ManagerRegistry EditorRemote She...\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"-- None --File ManagerRegistry EditorRemote ShellScreen Share\",\"type\":\"select-one\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Choice list &lt;select&gt;\",\"name\":\"input_ws1_assist_type\",\"sn_atf_mugshot_value\":\"\",\"options\":[{\"label\":\"-- None --\",\"value\":\"\"},{\"label\":\"File Manager\",\"value\":\"FileManager\"},{\"label\":\"Registry Editor\",\"value\":\"RegistryEditor\"},{\"label\":\"Remote Shell\",\"value\":\"RemoteShell\"},{\"label\":\"Screen Share\",\"value\":\"ScreenShare\"}],\"tag\":\"select\",\"isDisabled\":false,\"id\":\"input_ws1_assist_type\",\"hash\":\"f4095977f90fb76e40e12a0347079233\",\"html_value\":\"\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>22</order>
+        <snapshot/>
+        <step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 19:22:45</sys_created_on>
+        <sys_id>1a721e451b66fc10a76c0dc0604bcb69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_atf_step_1a721e451b66fc10a76c0dc0604bcb69</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 19:22:45</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_assist copy">7d7256051b66fc10a76c0dc0604bcb0e</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=1a721e451b66fc10a76c0dc0604bcb69"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>1a721e451b66fc10a76c0dc0604bcb69</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 19:22:45</sys_created_on>
+        <sys_id>9a721e451b66fc10a76c0dc0604bcb6a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 19:22:45</sys_updated_on>
+        <value>f4095977f90fb76e40e12a0347079233=ScreenShare^EQ</value>
+        <variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_atf_step_1a721e451b66fc10a76c0dc0604bcb69</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from display_value="Set Component Values (Custom UI)">07294ecd1b26fc10a76c0dc0604bcb07</copied_from><description>Set the components on the page as follows:
+'Choice list &lt;select&gt;: -- None --File ManagerRegistry EditorRemote ShellScreen Share' = ScreenShare
+</description><display_name>Set Component Values (Custom UI)</display_name><inputs/><mugshots_cache_json>{"f4095977f90fb76e40e12a0347079233":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Choice list &lt;select&gt;: -- None --File ManagerRegistry EditorRemote ShellScreen Share\",\"inner_text\":\"-- None --File ManagerRegistry EditorRemote ShellScreen Share\",\"sn_atf_mugshot_long_description\":\"Choice list &lt;select&gt; [input_ws1_assist_type]: -- None --File ManagerRegistry EditorRemote She...\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"-- None --File ManagerRegistry EditorRemote ShellScreen Share\",\"type\":\"select-one\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Choice list &lt;select&gt;\",\"name\":\"input_ws1_assist_type\",\"sn_atf_mugshot_value\":\"\",\"options\":[{\"label\":\"-- None --\",\"value\":\"\"},{\"label\":\"File Manager\",\"value\":\"FileManager\"},{\"label\":\"Registry Editor\",\"value\":\"RegistryEditor\"},{\"label\":\"Remote Shell\",\"value\":\"RemoteShell\"},{\"label\":\"Screen Share\",\"value\":\"ScreenShare\"}],\"tag\":\"select\",\"isDisabled\":false,\"id\":\"input_ws1_assist_type\",\"hash\":\"f4095977f90fb76e40e12a0347079233\",\"html_value\":\"\"}"}</mugshots_cache_json><notes/><order>22</order><snapshot/><step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-10 19:22:45</sys_created_on><sys_id>1a721e451b66fc10a76c0dc0604bcb69</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Component Values (Custom UI)</sys_name><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_atf_step_1a721e451b66fc10a76c0dc0604bcb69</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-10 19:22:45</sys_updated_on><table/><test display_value="WS1UEmTestPopup_assist copy">7d7256051b66fc10a76c0dc0604bcb0e</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=1a721e451b66fc10a76c0dc0604bcb69"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>1a721e451b66fc10a76c0dc0604bcb69</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-10 19:22:45</sys_created_on><sys_id>9a721e451b66fc10a76c0dc0604bcb6a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-10 19:22:45</sys_updated_on><value>f4095977f90fb76e40e12a0347079233=ScreenShare^EQ</value><variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-397853291</payload_hash>
+        <record_name>Set Component Values (Custom UI)</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 19:22:45</sys_created_on>
+        <sys_id>5a721e451b66fc10a76c0dc0604bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bd129896b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 19:22:45</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>92721e45fb66fc10d911e163ee57a36c</update_guid>
+        <update_guid_history>92721e45fb66fc10d911e163ee57a36c:-397853291</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 20:09:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>2b6b82a1d9a340d698bb651b70bfb039</sys_id>
+        <sys_metadata>1a721e451b66fc10a76c0dc0604bcb69</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_atf_step_1a721e451b66fc10a76c0dc0604bcb69</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_1a721e451b66fc10a76c0dc0604bcb69">5a721e451b66fc10a76c0dc0604bcb6c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 20:09:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

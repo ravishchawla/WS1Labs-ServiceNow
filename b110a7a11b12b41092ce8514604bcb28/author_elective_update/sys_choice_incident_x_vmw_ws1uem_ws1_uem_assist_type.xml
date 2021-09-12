@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_vmw_ws1uem_ws1_uem_assist_type" table="incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_vmw_ws1uem_ws1_uem_assist_type</element>
+            <name>incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-09-01 17:03:46</sys_created_on>
+            <sys_id>225c1b821b5eb410a76c0dc0604bcb4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vmw_ws1uem_ws1_uem_assist_type</sys_name>
+            <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+            <sys_update_name>sys_choice_incident_x_vmw_ws1uem_ws1_uem_assist_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-09-01 17:03:46</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>File Manager</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-09-01 17:04:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>916cdb821b5eb410a76c0dc0604bcb32</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-09-01 17:04:13</sys_updated_on>
+            <value>FileManager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Registry Editor</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-09-01 17:04:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>447c9b821b5eb410a76c0dc0604bcb1d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-09-01 17:04:32</sys_updated_on>
+            <value>RegistryEditor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Remote Shell</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-09-01 17:03:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ee5c17821b5eb410a76c0dc0604bcb27</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-09-01 17:04:02</sys_updated_on>
+            <value>RemoteShell</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_vmw_ws1uem_ws1_uem_assist_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Screen Share</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-09-01 17:03:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e94cdb421b5eb410a76c0dc0604bcbf2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-09-01 17:03:51</sys_updated_on>
+            <value>ScreenShare</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

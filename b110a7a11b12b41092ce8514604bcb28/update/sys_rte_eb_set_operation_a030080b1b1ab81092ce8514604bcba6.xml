@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_set_operation">
+    <sys_rte_eb_set_operation action="INSERT_OR_UPDATE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>type of serial number</name>
+        <operation_group/>
+        <order>1</order>
+        <overwrite_existing_value>true</overwrite_existing_value>
+        <set_value>system</set_value>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields/>
+        <sys_class_name>sys_rte_eb_set_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-04 03:35:48</sys_created_on>
+        <sys_id>a030080b1b1ab81092ce8514604bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>type of serial number</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ee2ff3f61b1ab81092ce8514604bcbc3</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">513ff33a1b1ab81092ce8514604bcb5c</sys_rte_eb_entity>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_set_operation_a030080b1b1ab81092ce8514604bcba6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-04 03:35:48</sys_updated_on>
+        <target_sys_rte_eb_field display_value="serial_number_type">ec30080b1b1ab81092ce8514604bcba3</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Set">c588011e730000102b6265a751ab9e4a</type>
+    </sys_rte_eb_set_operation>
+</record_update>

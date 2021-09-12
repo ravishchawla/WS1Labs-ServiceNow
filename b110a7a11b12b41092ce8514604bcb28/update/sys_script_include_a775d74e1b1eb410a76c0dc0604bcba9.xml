@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_vmw_ws1uem.WS1GetActionFromOS</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>WS1GetActionFromOS</name>
+        <script><![CDATA[function get_os_field(device_id) {  
+	var config_table = new GlideRecordSecure("cmdb_ci");
+	config_table.addQuery("sys_id", device_id);
+	
+	var status_code;
+	var error_log;
+	var res;
+	config_table.query();
+	
+	if (config_table.next()) {
+
+		var class_name = config_table.sys_class_name;
+			var child_table;
+			if (class_name == 'cmdb_ci_computer') {
+				child_table = new GlideRecordSecure("cmdb_ci_computer");				
+			} else if (class_name == 'cmdb_ci_handheld_computing') {
+				child_table = new GlideRecordSecure("cmdb_ci_handheld_computing");
+			} else if (class_name == 'cmdb_ci_linux_server') {
+				child_table = new GlideRecordSecure("cmdb_ci_linux_server");
+			} else {
+				error_log = 'OS for device ' + device_id + ' not found in type ' + class_name;
+				gs.info(error_log);
+				
+				return {'os_name' : os_name, 'os_version' : os_version};
+			}
+			
+			child_table.addQuery("sys_id", device_id);
+
+			child_table.query();
+
+			if (child_table.next()) {
+				var os_name = child_table.os;
+				var os_version = child_table.os_version;
+				
+				return {'os_name' : os_name, 'os_version' : os_version};
+			}
+
+		} else {
+
+		error_log = 'Error with request ' + 'ws1_uem_get_os_field' + ' when querying device ' + device_id;
+		gs.info(error_log);
+		return {'os_name' : '', 'os_version' : ''};
+	}
+   }
+
+function util_compare_versions(version_a, version_b) {
+	
+	if ((!version_a) || (!version_b)) {
+		return 0;
+	}
+	
+	var sub_versions_a = version_a.split(".").map(Number);
+	
+	var sub_versions_b = version_b.split(".").map(Number);
+	
+	if (sub_versions_a.length < sub_versions_b.length) {
+		sub_versions_a = sub_versions_a.concat(Array.apply(null, Array(sub_versions_b.length - sub_versions_a.length)).map(function(){return 0;}));
+	} else 	if (sub_versions_b.length < sub_versions_a.length) {
+		sub_versions_b = sub_versions_b.concat(Array.apply(null, Array(sub_versions_a.length - sub_versions_b.length)).map(function(){return 0;}));
+	}
+	
+	for (var i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i++) {
+		if (sub_versions_a[i] > sub_versions_b[i]) {
+			return 1;
+		}
+		
+		if (sub_versions_a[i] < sub_versions_b[i]) {
+			return -1;
+		}
+	}
+	
+	return 0;
+}
+
+var WS1GetActionFromOS = Class.create();
+WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+   get_action:function() {
+		var session_id = this.getParameter('sysparm_sid');
+		var uem_version = gs.getProperty('x_vmw_ws1uem.WS1UEM Platform');
+		
+		var INCIDENT_TABLE_NAME = "incident";
+
+		var DEVICE_TABLE_NAME = "cmdb_ci";
+
+		var TABLE_NAME = "x_vmw_ws1uem_ws1_action_os_mapping";
+
+		var app = new GlideRecordSecure(INCIDENT_TABLE_NAME);
+		app.addQuery('sys_id', session_id);
+		app.query();
+
+		var os_name;
+		var os_version;
+		if (app.next()) {
+			var device_id = app.getValue(DEVICE_TABLE_NAME);
+
+			var os_json = get_os_field(device_id);
+			os_name = os_json['os_name'];
+			os_version = os_json['os_version'];
+
+			
+			var action_visibility_conditions = {};
+
+			var fields = new GlideRecordSecure('sys_dictionary');
+			fields.addQuery('name', TABLE_NAME);
+			fields.query();
+			while(fields.next())
+			{
+				action_visibility_conditions[fields.element.toString()] = false;
+			}
+
+			if ((os_name == '') || (os_name == null)) {
+				return JSON.stringify(action_visibility_conditions);
+			}
+			
+			os_name = os_name.toLowerCase();
+
+			if (os_name.includes('mac')) {
+				os_name = 'mac';
+			} else if (os_name.includes('android')) {
+				os_name = 'android';
+			} else if (os_name.includes('ios')) {
+				os_name = 'ios';
+			} else if (os_name.includes('linux')) {
+				os_name = 'linux';
+			} else if (os_name.includes('windows')) {
+				if (os_name.includes('10')) {
+					if (os_name.includes('home')) {
+						os_name = 'windows10_home';
+					} else if (os_name.includes('education')) {
+						os_name = 'windows10_education';
+					} else if (os_name.includes('pro')) {
+						os_name = 'windows10_pro';
+					} else if (os_name.endsWith('s')) {
+						os_name = 'windows10_s';
+					} else {
+						os_name = 'windows10_enterprise';
+					}
+				} else if (os_name.includes('windows')) {
+					os_name = 'winrt';
+				}
+			}
+		}
+
+		var mapTable = new GlideRecordSecure(TABLE_NAME);
+		mapTable.addQuery("os_action", os_name);
+		mapTable.orderByDesc("precedent");
+		mapTable.query();
+
+		gs.info("Querying WS1 actions for OS " + os_name + ' : ' + os_version + " - UEM : " + uem_version);
+
+		try {
+			while(mapTable.next()) {
+				
+				var min_os = mapTable.getValue('min_os');
+				var max_os = mapTable.getValue('max_os');
+				
+				var min_uem = mapTable.getValue('min_uem');
+				var max_uem = mapTable.getValue('max_uem');		
+				
+				if ((util_compare_versions(os_version, min_os) >= 0) && 
+					(util_compare_versions(os_version, max_os) <= 0) && 
+					(util_compare_versions(uem_version, min_uem) >= 0) &&
+					(util_compare_versions(uem_version, max_uem) <= 0)) {
+
+					for (var key in action_visibility_conditions) {
+						var actionValue = mapTable.getValue(key);
+
+						if (actionValue == 'true') {
+							action_visibility_conditions[key] = true;
+						}
+					}
+				}
+			}
+
+			gs.info('OS based actions: ' + JSON.stringify(action_visibility_conditions));
+			return JSON.stringify(action_visibility_conditions);
+	} catch (err) {
+		return "Error: " + err + " when querying WS! actions for OS " + os_name + "";
+	}
+   } ,
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:34:18</sys_created_on>
+        <sys_id>a775d74e1b1eb410a76c0dc0604bcba9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>WS1GetActionFromOS</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_script_include_a775d74e1b1eb410a76c0dc0604bcba9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 18:31:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

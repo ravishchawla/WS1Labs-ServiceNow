@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[onLoad();
+
+function onLoad() {	
+	var stringText = getMessage('WS1UEMCMDBIntegration');
+	$("div_ws1_cmdb_text").innerHTML = getMessage(stringText);
+		
+	// check if the CMDB connector is installed
+	var ts = new GlideRecord("sys_store_app"); 	
+	stringText = getMessage('WS1UEMCMDBConnector');
+	ts.addQuery("name", stringText);
+	ts.query();
+	ts.next();
+
+	//get the integration system parameter 
+	var action_table = new GlideRecord('sys_properties');
+	action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMCMDBIntegration");	
+	action_table.query();
+	action_table.next();
+	
+	// if installed get the state of our system parameter
+	if (ts.name) {
+		$("input_ws1_cmdb_integration").disabled = false;
+	
+		if (action_table.value == "true") {
+			$("input_ws1_cmdb_integration").checked = true;
+		}
+		else {
+			$("input_ws1_cmdb_integration").checked = false;
+		}
+	}
+	else {
+		action_table.value = "false";
+		$("input_ws1_cmdb_integration").disabled = true;
+	}
+}
+
+
+// update system paramter when the checkbox being changed
+function updateValue(cb) {
+	var action_table = new GlideRecord('sys_properties');
+	action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMCMDBIntegration");
+	action_table.query();
+	action_table.next();
+	
+	if (cb.checked) {
+		action_table.value = "true";
+	}
+	else {
+		action_table.value = "false";
+	}
+	
+	action_table.update();
+}
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_vmw_ws1uem_WS1UEMCMDBIntegration.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:ui_form>
+	
+	<div style="margin:10px; width:40%" id="div_ws1_cmdb_text">
+		<p> </p>
+	</div>
+
+		
+	<div style="margin-left:10px; margin-bottom:30px;">
+			<input type="checkbox" name="input_ws1_cmdb_integration" id="input_ws1_cmdb_integration" onclick = "updateValue(this)"/>
+	</div>
+
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>WS1UEMCMDBIntegration</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:31:15</sys_created_on>
+        <sys_id>c2d4530e1b1eb410a76c0dc0604bcb0c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>WS1UEMCMDBIntegration</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_page_c2d4530e1b1eb410a76c0dc0604bcb0c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 00:31:04</sys_updated_on>
+    </sys_ui_page>
+</record_update>

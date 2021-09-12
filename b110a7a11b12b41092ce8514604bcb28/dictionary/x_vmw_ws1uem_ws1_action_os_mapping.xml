@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WS1 Action OS Mapping" max_length="40" name="x_vmw_ws1uem_ws1_action_os_mapping" sizeclass="21" type="collection">
+        <element label="Remote Assist" max_length="40" name="assist" type="string"/>
+        <element label="Assist (File Manager)" max_length="40" name="assist_filemanager" type="string"/>
+        <element label="Assist (Registry Editor)" max_length="40" name="assist_registryeditor" type="string"/>
+        <element label="Assist (Remote Shell)" max_length="40" name="assist_remoteshell" type="string"/>
+        <element label="Assist (Screen Share)" max_length="40" name="assist_screenshare" type="string"/>
+        <element label="Change Passcode" max_length="40" name="changepasscode" type="string"/>
+        <element label="Change Passcode (Win RT)" max_length="40" name="changepasscode_winrt" type="string"/>
+        <element label="Device Logs" max_length="40" name="devicelogs" type="string"/>
+        <element label="Device Wipe" max_length="40" name="devicewipe" type="string"/>
+        <element label="Device Wipe (mac)" max_length="40" name="devicewipe_mac" type="string"/>
+        <element label="Enterprise Wipe" max_length="40" name="enterprisewipe" type="string"/>
+        <element label="Lock Device" max_length="40" name="lock" type="string"/>
+        <element label="Lock Device (mac)" max_length="40" name="lock_mac" type="string"/>
+        <element label="Max OS" max_length="40" name="max_os" type="string"/>
+        <element label="Max UEM" max_length="40" name="max_uem" type="string"/>
+        <element label="Send Message" max_length="40" name="message" type="string"/>
+        <element label="Min OS" max_length="40" name="min_os" type="string"/>
+        <element label="Min UEM" max_length="40" name="min_uem" type="string"/>
+        <element label="OS Action" max_length="40" name="os_action" type="string"/>
+        <element label="Precedence" max_length="40" name="precedent" type="string"/>
+        <element label="Soft Reset" max_length="40" name="softreset" type="string"/>
+        <element label="Sync Device" max_length="40" name="syncdevice" type="string"/>
+    </element>
+</database>

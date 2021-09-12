@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_entity_mapping">
+    <sys_rte_eb_entity_mapping action="INSERT_OR_UPDATE">
+        <condition_script><![CDATA[/*  Example Script  (function() {          //step1: access the input variables         if (input && input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]></condition_script>
+        <encoded_query/>
+        <entity_mapping_group>ec2ebf6f1b5e3c1092ce8514604bcb76</entity_mapping_group>
+        <ignore>false</ignore>
+        <is_conditional>false</is_conditional>
+        <name>tempToSoftware Installation 2</name>
+        <order>100</order>
+        <source_sys_rte_eb_entity display_value="temp">513ff33a1b1ab81092ce8514604bcb5c</source_sys_rte_eb_entity>
+        <sys_class_name>sys_rte_eb_entity_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-06 11:22:15</sys_created_on>
+        <sys_id>202ebf6f1b5e3c1092ce8514604bcb79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>tempToSoftware Installation 2</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ee2ff3f61b1ab81092ce8514604bcbc3</sys_rte_eb_definition>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_entity_mapping_202ebf6f1b5e3c1092ce8514604bcb79</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-06 11:23:29</sys_updated_on>
+        <target_sys_rte_eb_entity display_value="Software Installation 2">602ebf6f1b5e3c1092ce8514604bcb77</target_sys_rte_eb_entity>
+    </sys_rte_eb_entity_mapping>
+</record_update>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Make the WS1 UEM action read only if the Incidedent state is not New or Open.</description>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>WS1UEMState</name>
+        <order/>
+        <script><![CDATA[function onChange() {
+	var actionNotEditable = true;
+	
+	// if the user has a WS1UEM role then set action to read only if not in progress
+	var isStandard = g_user.hasRole('x_vmw_ws1uem.ws1uemstandard');
+	if (isStandard){	
+		var currentstate = g_form.getValue('state');
+		if (currentstate == 2){ // In progress
+			var caller = g_form.getValue('caller_id');
+			if (caller){ // caller exists
+				actionNotEditable = false;	
+			}
+		}	
+	}
+	g_form.setReadOnly('x_vmw_ws1uem_ws1action', actionNotEditable);	
+}		
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-08 20:00:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c6b7c4ac1b2e7c10a76c0dc0604bcb1d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>WS1UEMState</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_script_client_c6b7c4ac1b2e7c10a76c0dc0604bcb1d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 21:23:24</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_script_client_c6b7c4ac1b2e7c10a76c0dc0604bcb1d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Make the WS1 UEM action read only if the Incidedent state is not New or Open.&lt;/description&gt;&lt;field&gt;active&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;WS1UEMState&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange() {
+	var actionNotEditable = true;
+	
+	// if the user has a WS1UEM role then set action to read only if not in progress
+	var isStandard = g_user.hasRole('x_vmw_ws1uem.ws1uemstandard');
+	if (isStandard){	
+		var currentstate = g_form.getValue('state');
+		if (currentstate == 2){ // In progress
+			var caller = g_form.getValue('caller_id');
+			if (caller){ // caller exists
+				actionNotEditable = false;	
+			}
+		}	
+	}
+	g_form.setReadOnly('x_vmw_ws1uem_ws1action', actionNotEditable);	
+}		
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-08 20:00:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c6b7c4ac1b2e7c10a76c0dc0604bcb1d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEMState&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_c6b7c4ac1b2e7c10a76c0dc0604bcb1d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-08 21:23:24&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1567418347</payload_hash>
+        <record_name>WS1UEMState</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-08 21:23:24</sys_created_on>
+        <sys_id>4aeadcec1b6efc1092ce8514604bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bc74b44fb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 21:23:24</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>82eadceca56efc109c5555f33826099e</update_guid>
+        <update_guid_history>82eadceca56efc109c5555f33826099e:1567418347,17f784ec662e7c1001c376e9f227dfa2:91531358</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-08 21:25:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>9fec82053a9b4f70a41387af04440810</sys_id>
+        <sys_metadata>c6b7c4ac1b2e7c10a76c0dc0604bcb1d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMState</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent display_value="Incident">d9df48271b172010a76c0dc0604bcb85</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_script_client_c6b7c4ac1b2e7c10a76c0dc0604bcb1d</sys_update_name>
+        <sys_update_version display_value="sys_script_client_c6b7c4ac1b2e7c10a76c0dc0604bcb1d">4aeadcec1b6efc1092ce8514604bcb9e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-08 21:25:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

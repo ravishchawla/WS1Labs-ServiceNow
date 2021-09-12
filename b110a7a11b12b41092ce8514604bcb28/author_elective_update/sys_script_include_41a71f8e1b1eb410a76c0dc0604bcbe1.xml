@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_vmw_ws1uem.ws1_get_platform</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>ws1_get_platform</name>
+        <script><![CDATA[var ws1_get_platform = Class.create();
+ws1_get_platform.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+   get_platform:function() {
+		var uem_version = gs.getProperty('x_646971_uemconn_0.WS1UEM Platform');
+
+		gs.info('UEM version : ' + uem_version);
+		return uem_version;
+   } ,
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:43:55</sys_created_on>
+        <sys_id>41a71f8e1b1eb410a76c0dc0604bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws1_get_platform</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_script_include_41a71f8e1b1eb410a76c0dc0604bcbe1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 16:43:55</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_script_include_41a71f8e1b1eb410a76c0dc0604bcbe1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_vmw_ws1uem.ws1_get_platform&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;ws1_get_platform&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var ws1_get_platform = Class.create();
+ws1_get_platform.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+   get_platform:function() {
+		var uem_version = gs.getProperty('x_646971_uemconn_0.WS1UEM Platform');
+
+		gs.info('UEM version : ' + uem_version);
+		return uem_version;
+   } ,
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 16:43:55&lt;/sys_created_on&gt;&lt;sys_id&gt;41a71f8e1b1eb410a76c0dc0604bcbe1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;ws1_get_platform&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_41a71f8e1b1eb410a76c0dc0604bcbe1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 16:43:55&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1116551421</payload_hash>
+        <record_name>ws1_get_platform</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:43:55</sys_created_on>
+        <sys_id>7bc75b4e1b1eb410a76c0dc0604bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba23ee4460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 16:43:55</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>b3c75b4e941eb4105f03bb94d952eb31</update_guid>
+        <update_guid_history>b3c75b4e941eb4105f03bb94d952eb31:-1116551421</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:46:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>2f3d357d34724e739110fcae3490b721</sys_id>
+        <sys_metadata>41a71f8e1b1eb410a76c0dc0604bcbe1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws1_get_platform</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_script_include_41a71f8e1b1eb410a76c0dc0604bcbe1</sys_update_name>
+        <sys_update_version display_value="sys_script_include_41a71f8e1b1eb410a76c0dc0604bcbe1">7bc75b4e1b1eb410a76c0dc0604bcb31</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 16:46:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

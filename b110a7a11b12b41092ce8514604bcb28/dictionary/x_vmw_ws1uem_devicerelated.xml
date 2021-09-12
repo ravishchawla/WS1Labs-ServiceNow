@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WS1UEMDeviceRelated" max_length="40" name="x_vmw_ws1uem_devicerelated" sizeclass="3" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Device Ownership" max_length="100" name="device_ownership" type="string"/>
+        <element attributes="encode_utf8=false" label="Hardware Item" max_length="32" name="hardware_item" reference="cmdb_ci_hardware" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Udid" max_length="255" name="udid" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="User Email" max_length="255" name="user_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="User Name" max_length="255" name="user_name" type="string"/>
+        <index name="index">
+            <element name="hardware_item"/>
+        </index>
+    </element>
+</database>

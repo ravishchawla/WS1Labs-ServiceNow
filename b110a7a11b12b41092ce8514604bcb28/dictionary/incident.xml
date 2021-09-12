@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="70" text_index="true" type="collection">
+        <element label="Workspace ONE UEM response" max_length="255" name="x_vmw_ws1uem_response" type="string"/>
+        <element choice="1" label="Workspace ONE UEM Action" max_length="40" name="x_vmw_ws1uem_ws1action" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Change Passcode" value="changepasscode"/>
+                <element inactive_on_update="false" label="Device Wipe" value="devicewipe"/>
+                <element inactive_on_update="false" label="Enterprise Wipe" value="enterprisewipe"/>
+                <element inactive_on_update="false" label="Lock Device" value="lock"/>
+                <element inactive_on_update="false" label="Refresh Devices" value="refreshdevices"/>
+                <element inactive_on_update="false" label="Remote Assist" value="assist"/>
+                <element inactive_on_update="false" label="Request Logs" value="devicelogs"/>
+                <element inactive_on_update="false" label="Send Message" value="message"/>
+                <element inactive_on_update="false" label="Soft Reset" value="softreset"/>
+                <element inactive_on_update="false" label="Sync Device" value="syncdevice"/>
+            </choice>
+        </element>
+        <element label="WS1 Actions Response" max_length="40" name="x_vmw_ws1uem_ws1_actions_response" type="string"/>
+        <element label="WS1 Assist URL" max_length="255" name="x_vmw_ws1uem_ws1_assist_url" type="string"/>
+        <element label="WS1 Passcode" max_length="40" name="x_vmw_ws1uem_ws1_passcode" type="string"/>
+        <element label="WS1 Send Message" max_length="4000" name="x_vmw_ws1uem_ws1_send_message" type="string"/>
+        <element choice="3" default="ScreenShare" label="WS1 UEM Assist Type" max_length="40" name="x_vmw_ws1uem_ws1_uem_assist_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="File Manager" value="FileManager"/>
+                <element inactive_on_update="false" label="Registry Editor" value="RegistryEditor"/>
+                <element inactive_on_update="false" label="Remote Shell" value="RemoteShell"/>
+                <element inactive_on_update="false" label="Screen Share" value="ScreenShare"/>
+            </choice>
+        </element>
+        <element label="WS1 Unlock Pin" max_length="40" name="x_vmw_ws1uem_ws1_unlock_pin" type="integer"/>
+    </element>
+</database>
