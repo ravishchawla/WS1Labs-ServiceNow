@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_set_operation">
+    <sys_rte_eb_set_operation action="DELETE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>related key</name>
+        <operation_group/>
+        <order>1</order>
+        <overwrite_existing_value>true</overwrite_existing_value>
+        <set_value>software</set_value>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields/>
+        <sys_class_name>sys_rte_eb_set_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 03:47:41</sys_created_on>
+        <sys_id>e96ce4e21b2a745092ce8514604bcb4d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>related key</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">beebcc5a1bea345092ce8514604bcbb2</sys_rte_eb_entity>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_set_operation_e96ce4e21b2a745092ce8514604bcb4d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:54:06</sys_updated_on>
+        <target_sys_rte_eb_field display_value="related_handheld_1">296ca0a21b2a745092ce8514604bcb8c</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Set">c588011e730000102b6265a751ab9e4a</type>
+    </sys_rte_eb_set_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_rte_eb_set_operation_e96ce4e21b2a745092ce8514604bcb4d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_set_operation"&gt;&lt;sys_rte_eb_set_operation action="INSERT_OR_UPDATE"&gt;&lt;conditional_fields/&gt;&lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;related key&lt;/name&gt;&lt;operation_group/&gt;&lt;order&gt;1&lt;/order&gt;&lt;overwrite_existing_value&gt;true&lt;/overwrite_existing_value&gt;&lt;set_value&gt;software&lt;/set_value&gt;&lt;source_sys_rte_eb_field/&gt;&lt;source_sys_rte_eb_fields/&gt;&lt;sys_class_name&gt;sys_rte_eb_set_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-15 03:47:41&lt;/sys_created_on&gt;&lt;sys_id&gt;e96ce4e21b2a745092ce8514604bcb4d&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;related key&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;ecabc85a1bea345092ce8514604bcb31&lt;/sys_rte_eb_definition&gt;&lt;sys_rte_eb_entity display_value="temp"&gt;beebcc5a1bea345092ce8514604bcbb2&lt;/sys_rte_eb_entity&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_set_operation_e96ce4e21b2a745092ce8514604bcb4d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-15 06:54:06&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_field display_value="related_handheld_1"&gt;296ca0a21b2a745092ce8514604bcb8c&lt;/target_sys_rte_eb_field&gt;&lt;target_sys_rte_eb_fields/&gt;&lt;type display_value="Set"&gt;c588011e730000102b6265a751ab9e4a&lt;/type&gt;&lt;/sys_rte_eb_set_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1574263053</payload_hash>
+        <record_name>related key</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:54:06</sys_created_on>
+        <sys_id>68179d621baa745092ce8514604bcbee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be83bec5f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:54:06</sys_updated_on>
+        <type>RTE Entity Set Operation</type>
+        <update_guid>60179d62b8aa74505381b0c23dbbd9ee</update_guid>
+        <update_guid_history>60179d62b8aa74505381b0c23dbbd9ee:1574263053,fb8ce4e2852a74504dbf9235613f12cf:-676143621,316ce4e2662a745098c41508b7d79350:-145722887</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:57:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_set_operation">sys_rte_eb_set_operation</sys_db_object>
+        <sys_id>0d78f6e24ac2485a80de1b7916763921</sys_id>
+        <sys_metadata>e96ce4e21b2a745092ce8514604bcb4d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>related key</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_set_operation_e96ce4e21b2a745092ce8514604bcb4d</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_set_operation_e96ce4e21b2a745092ce8514604bcb4d">68179d621baa745092ce8514604bcbee</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:57:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

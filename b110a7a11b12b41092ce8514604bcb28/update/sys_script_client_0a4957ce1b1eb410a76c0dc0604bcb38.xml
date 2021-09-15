@@ -61,14 +61,12 @@
 	function parse_os_name(response) {
 		response = response.responseXML.documentElement.getAttribute("answer");
 
-		jslog('Received response from request ' + response);
 		$("incident.x_vmw_ws1uem_ws1_actions_response").value = response;
 
 		response = JSON.parse(response);
 		for (var key in response) {
 			if (response[key] == false && key != "") {
 				g_form.removeOption('x_vmw_ws1uem_ws1action', key);
-				jslog('Removing option from dropdown: ' + key);
 			}
 		}
 	}
@@ -79,7 +77,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a4957ce1b1eb410a76c0dc0604bcb38</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -87,7 +85,7 @@
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_0a4957ce1b1eb410a76c0dc0604bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-07 20:04:06</sys_updated_on>
+        <sys_updated_on>2021-09-13 19:46:22</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

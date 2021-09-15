@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_multi_in_script_operation">
+    <sys_rte_eb_multi_in_script_operation action="DELETE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>Multiple Input Script - u_oem_info,u_device_type</name>
+        <operation_group/>
+        <order>401</order>
+        <script><![CDATA[(function(batch, output) {
+	for (var i = 0; i < batch.length; i++) {
+		var input = batch[i].input; // Value of the input columns concatenated with '|'. 
+		// Access input column values by their names, ex: batch[i]column_name
+
+     var array = input.split("|");
+
+     if (array[0] == "") {
+        if (array[1] == "APPLE_OS_X") {
+           output[i] = "Apple";
+        } else {
+           output[i] = array[1];
+        }
+     } else {
+        output[i] = array[0];
+     }
+     
+		// Set each output element below
+		//output[i] = output_variable_name;
+	}
+})(batch, output);
+]]></script>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields>393f373a1b1ab81092ce8514604bcb5e,6d3ff33a1b1ab81092ce8514604bcbe3</source_sys_rte_eb_fields>
+        <sys_class_name>sys_rte_eb_multi_in_script_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-04 03:41:41</sys_created_on>
+        <sys_id>e281008b1b1ab81092ce8514604bcbc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Multiple Input Script - u_oem_info,u_device_type</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ee2ff3f61b1ab81092ce8514604bcbc3</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">513ff33a1b1ab81092ce8514604bcb5c</sys_rte_eb_entity>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_multi_in_script_operation_e281008b1b1ab81092ce8514604bcbc8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-04 03:41:41</sys_updated_on>
+        <target_sys_rte_eb_field display_value="u_oem_info_u_device_type_1">2281008b1b1ab81092ce8514604bcbc6</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Multiple Input Script">a5584ee4739000102b6265a751ab9eae</type>
+        <use_unique_input_sets>true</use_unique_input_sets>
+    </sys_rte_eb_multi_in_script_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_rte_eb_multi_in_script_operation_e281008b1b1ab81092ce8514604bcbc8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_multi_in_script_operation"&gt;&lt;sys_rte_eb_multi_in_script_operation action="INSERT_OR_UPDATE"&gt;&lt;conditional_fields/&gt;&lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;Multiple Input Script - u_oem_info,u_device_type&lt;/name&gt;&lt;operation_group/&gt;&lt;order&gt;401&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function(batch, output) {
+	for (var i = 0; i &lt; batch.length; i++) {
+		var input = batch[i].input; // Value of the input columns concatenated with '|'. 
+		// Access input column values by their names, ex: batch[i]column_name
+
+     var array = input.split("|");
+
+     if (array[0] == "") {
+        if (array[1] == "APPLE_OS_X") {
+           output[i] = "Apple";
+        } else {
+           output[i] = array[1];
+        }
+     } else {
+        output[i] = array[0];
+     }
+     
+		// Set each output element below
+		//output[i] = output_variable_name;
+	}
+})(batch, output);
+]]&gt;&lt;/script&gt;&lt;source_sys_rte_eb_field/&gt;&lt;source_sys_rte_eb_fields&gt;393f373a1b1ab81092ce8514604bcb5e,6d3ff33a1b1ab81092ce8514604bcbe3&lt;/source_sys_rte_eb_fields&gt;&lt;sys_class_name&gt;sys_rte_eb_multi_in_script_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-04 03:41:41&lt;/sys_created_on&gt;&lt;sys_id&gt;e281008b1b1ab81092ce8514604bcbc8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Multiple Input Script - u_oem_info,u_device_type&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;ee2ff3f61b1ab81092ce8514604bcbc3&lt;/sys_rte_eb_definition&gt;&lt;sys_rte_eb_entity display_value="temp"&gt;513ff33a1b1ab81092ce8514604bcb5c&lt;/sys_rte_eb_entity&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_multi_in_script_operation_e281008b1b1ab81092ce8514604bcbc8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-04 03:41:41&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_field display_value="u_oem_info_u_device_type_1"&gt;2281008b1b1ab81092ce8514604bcbc6&lt;/target_sys_rte_eb_field&gt;&lt;target_sys_rte_eb_fields/&gt;&lt;type display_value="Multiple Input Script"&gt;a5584ee4739000102b6265a751ab9eae&lt;/type&gt;&lt;use_unique_input_sets&gt;true&lt;/use_unique_input_sets&gt;&lt;/sys_rte_eb_multi_in_script_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>66803876</payload_hash>
+        <record_name>Multiple Input Script - u_oem_info,u_device_type</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-04 03:41:41</sys_created_on>
+        <sys_id>a681008b1b1ab81092ce8514604bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17baee5cf3d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-04 03:41:41</sys_updated_on>
+        <type>RTE Entity Multiple Input Script Operati</type>
+        <update_guid>ee81008bba1ab810c08de44b355a92c9</update_guid>
+        <update_guid_history>ee81008bba1ab810c08de44b355a92c9:66803876</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 06:42:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_multi_in_script_operation">sys_rte_eb_multi_in_script_operation</sys_db_object>
+        <sys_id>37a0a189f6f14f609ce989d95e6a8900</sys_id>
+        <sys_metadata>e281008b1b1ab81092ce8514604bcbc8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Multiple Input Script - u_oem_info,u_device_type</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_multi_in_script_operation_e281008b1b1ab81092ce8514604bcbc8</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_multi_in_script_operation_e281008b1b1ab81092ce8514604bcbc8">a681008b1b1ab81092ce8514604bcbca</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 06:42:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

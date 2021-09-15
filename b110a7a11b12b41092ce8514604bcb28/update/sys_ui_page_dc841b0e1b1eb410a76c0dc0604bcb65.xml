@@ -8,7 +8,6 @@ function onLoad() {
 	
 	var action = $("ws1_action");
 
-	jslog('demo action ' + action.value);
 	if ((!action) || (action.value.includes("Undefined"))) {
 			var ga_test_action = new GlideAjax('x_vmw_ws1uem.WS1GetTestAction');
 			var ga_test_json = new GlideAjax('x_vmw_ws1uem.WS1TestOSActionsJSON');
@@ -24,9 +23,7 @@ function onLoad() {
 					ws1_actions_response = response.responseXML.documentElement.getAttribute('answer');
 
 					try {
-						jslog('Receiving test JSON response ' + ws1_actions_response);
 						ws1_actions_response = JSON.parse(ws1_actions_response);
-						jslog('Receiving test JSON parsed response ' + ws1_actions_response);
 					} catch(e) {
 						ws1_actions_response = {};
 					}
@@ -44,7 +41,6 @@ function onLoad() {
 }
 
 function loadPopupContents(action, ws1_actions_response) {
-	jslog('Loading popup with action = ' + action + ' and JSON ' + ws1_actions_response);
 	var stringText;
 
 	set_message_state(true);
@@ -65,7 +61,7 @@ function loadPopupContents(action, ws1_actions_response) {
 
 		var select_dropdown_id = "input_ws1_assist_type";
 
-		var input_options = []
+		var input_options = [];
 		for (var key in ws1_actions_response) {
 			if (key.includes('assist_')) {
 				if (ws1_actions_response[key] == false) {
@@ -77,7 +73,7 @@ function loadPopupContents(action, ws1_actions_response) {
 		}
 
 		input_options.sort().reverse();
-		jslog('DEMO INPUT_OPTIONS ' + input_options);
+
 		if ($("input_ws1_assist_type").length == 0) {
 			$("div_ws1_assist_type").hidden = true;
 		} else {
@@ -106,7 +102,6 @@ function loadPopupContents(action, ws1_actions_response) {
 		// Information message text
 		stringText = getMessage('WS1UEMLockInfo');
 		
-		//TODO
 		if (ws1_actions_response["lock_mac"] == true) {
 			$("submitData").disabled = true;
 
@@ -166,7 +161,7 @@ function continueOK() {
 	
 	var action_inputs = {};
 	
-	action_inputs['action'] =gel('ws1_action').value;
+	action_inputs['action'] = gel('ws1_action').value;
 	
 	var unlockpin = "";
 	for (var i=0; i<6; i++) {
@@ -194,12 +189,7 @@ function continueCancel() {
 }
 
 function execute_action(sid, action_inputs, set_form) {
-
-	jslog('set_form ' + set_form);
-	
 	var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
-
-	jslog(action_inputs);
 	
 	if (set_form == true) {
 		// Set the values back to the incident form
@@ -237,14 +227,12 @@ function execute_action(sid, action_inputs, set_form) {
 }
 
 function get_test_incident_record(action_inputs) {
-	jslog('Session ID being loaded from test input');
     var ga_test_incident = new GlideAjax('x_vmw_ws1uem.WS1GetIncidentRecord');
     ga_test_incident.addParam('sysparm_name', 'get_incident');
 
     var incident_record = null;
     ga_test_incident.getXML(function parse_response(response) {
         incident_record = response.responseXML.documentElement.getAttribute('answer');
-        jslog('Session ID from test input ' + incident_record);
         execute_action(incident_record, action_inputs, false);
     });
 }
@@ -302,10 +290,8 @@ function remove_actions_from_select_input(select_input, option_name) {
 
 function set_action_as_main_select_input(select_input, option_name) {
 	var selectobject = $(select_input);
-	jslog('DEMO SET_ACTION option_name ' + option_name);
 	
 	for (var i=0; i<selectobject.length; i++) {
-		jslog('DEMO SET_OBJ ' + selectobject.options[i].value);
 		
 		if (selectobject.options[i].value.toLowerCase() == option_name) {
 			selectobject.value  = selectobject.options[i].value;
@@ -512,7 +498,6 @@ function set_ws1_check_state(state) {
 	
     gs.info("Running action flow from UI Page");
     gs.info("sid value " + sid);
-    gs.info("current value " + current);
 
 	var session = gs.getSession();
 	var addr = session.getUrlOnStack();
@@ -521,7 +506,6 @@ function set_ws1_check_state(state) {
 	var util = new GlideRecord('incident');
 	if(util.get(sid)) {
 		try {
-			gs.info("util = " + util);
 			var inputs = {};
 			inputs['current'] = util; // GlideRecord of table:  
 			inputs['table_name'] = 'incident';
@@ -546,7 +530,6 @@ function set_ws1_check_state(state) {
 
 if(runprocessingscript == 'refreshdevices'){
 	// Update message on screen
-//	current.x_646971_uemconn_0_ws1uem = "Checking for new devices in WS1 UEM";
 
 	util = new GlideRecordSecure('incident');
 	if(util.get(sid)) {
@@ -571,7 +554,6 @@ if(runprocessingscript == 'refreshdevices'){
 
 		session = gs.getSession();
 		addr = session.getUrlOnStack();
-		gs.info("URL " + addr);
 	}
 	response.sendRedirect(addr);
 }
@@ -582,13 +564,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>75</sys_mod_count>
+        <sys_mod_count>77</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-11 05:05:58</sys_updated_on>
+        <sys_updated_on>2021-09-13 19:41:16</sys_updated_on>
     </sys_ui_page>
 </record_update>

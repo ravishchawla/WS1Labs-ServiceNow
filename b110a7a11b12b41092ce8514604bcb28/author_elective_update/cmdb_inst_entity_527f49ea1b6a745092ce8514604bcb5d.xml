@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_entity">
+    <cmdb_inst_entity action="DELETE">
+        <child_id_field/>
+        <lookup_for_entity/>
+        <name>Computer 2</name>
+        <parent_entity/>
+        <parent_id_field/>
+        <path>cmdb_ci_computer_2</path>
+        <related_for_entity/>
+        <relationship_type/>
+        <sys_class_name>cmdb_inst_entity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:20:55</sys_created_on>
+        <sys_id>527f49ea1b6a745092ce8514604bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Computer 2</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>cmdb_inst_entity_527f49ea1b6a745092ce8514604bcb5d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:20:55</sys_updated_on>
+        <table>cmdb_ci_computer</table>
+    </cmdb_inst_entity>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>cmdb_inst_entity_527f49ea1b6a745092ce8514604bcb5d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_entity"><cmdb_inst_entity action="INSERT_OR_UPDATE"><child_id_field/><lookup_for_entity/><name>Computer 2</name><parent_entity/><parent_id_field/><path>cmdb_ci_computer_2</path><related_for_entity/><relationship_type/><sys_class_name>cmdb_inst_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-15 06:20:55</sys_created_on><sys_id>527f49ea1b6a745092ce8514604bcb5d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Computer 2</sys_name><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>cmdb_inst_entity_527f49ea1b6a745092ce8514604bcb5d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-15 06:20:55</sys_updated_on><table>cmdb_ci_computer</table></cmdb_inst_entity></record_update>]]></payload>
+        <payload_hash>850713866</payload_hash>
+        <record_name>Computer 2</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:20:55</sys_created_on>
+        <sys_id>9a7f49ea1b6a745092ce8514604bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be81d8ad10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:20:55</sys_updated_on>
+        <type>CMDB Integration Studio Entity</type>
+        <update_guid>d27f49ea326a74508a8f1a7d9a388f60</update_guid>
+        <update_guid_history>d27f49ea326a74508a8f1a7d9a388f60:850713866</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Computer 2">6b61516e1b6a745092ce8514604bcba0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:29:28</sys_created_on>
+        <sys_db_object display_value="" name="cmdb_inst_entity">cmdb_inst_entity</sys_db_object>
+        <sys_id>15a2a4e30d2e4f62a721fa34f8440844</sys_id>
+        <sys_metadata>527f49ea1b6a745092ce8514604bcb5d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Computer 2</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>cmdb_inst_entity_527f49ea1b6a745092ce8514604bcb5d</sys_update_name>
+        <sys_update_version display_value="cmdb_inst_entity_527f49ea1b6a745092ce8514604bcb5d">9a7f49ea1b6a745092ce8514604bcb60</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:29:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

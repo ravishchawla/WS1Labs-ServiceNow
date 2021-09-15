@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_entity_mapping">
+    <sys_rte_eb_entity_mapping action="DELETE">
+        <condition_script><![CDATA[/*  Example Script  (function() {          //step1: access the input variables         if (input && input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]></condition_script>
+        <encoded_query/>
+        <entity_mapping_group>465c089a1bea345092ce8514604bcbfe</entity_mapping_group>
+        <ignore>false</ignore>
+        <is_conditional>false</is_conditional>
+        <name>tempToSG-Workspace ONE UEM Device Related 1</name>
+        <order>100</order>
+        <source_sys_rte_eb_entity display_value="temp">beebcc5a1bea345092ce8514604bcbb2</source_sys_rte_eb_entity>
+        <sys_class_name>sys_rte_eb_entity_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 06:49:09</sys_created_on>
+        <sys_id>465c489a1bea345092ce8514604bcb00</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>tempToSG-Workspace ONE UEM Device Related 1</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_entity_mapping_465c489a1bea345092ce8514604bcb00</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 06:49:30</sys_updated_on>
+        <target_sys_rte_eb_entity display_value="SG-Workspace ONE UEM Device Related 1">c65c089a1bea345092ce8514604bcbfe</target_sys_rte_eb_entity>
+    </sys_rte_eb_entity_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_rte_eb_entity_mapping_465c489a1bea345092ce8514604bcb00</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_entity_mapping"&gt;&lt;sys_rte_eb_entity_mapping action="INSERT_OR_UPDATE"&gt;&lt;condition_script&gt;&lt;![CDATA[/*  Example Script  (function() {          //step1: access the input variables         if (input &amp;&amp; input.temp.u_type == 'Disk') {         //step2: return true/false             return true;         }         return false;  })(); */  (function(input) {     // Add your code here. })(input);]]&gt;&lt;/condition_script&gt;&lt;encoded_query/&gt;&lt;entity_mapping_group&gt;465c089a1bea345092ce8514604bcbfe&lt;/entity_mapping_group&gt;&lt;ignore&gt;false&lt;/ignore&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;tempToSG-Workspace ONE UEM Device Related 1&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;source_sys_rte_eb_entity display_value="temp"&gt;beebcc5a1bea345092ce8514604bcbb2&lt;/source_sys_rte_eb_entity&gt;&lt;sys_class_name&gt;sys_rte_eb_entity_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-14 06:49:09&lt;/sys_created_on&gt;&lt;sys_id&gt;465c489a1bea345092ce8514604bcb00&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;tempToSG-Workspace ONE UEM Device Related 1&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;ecabc85a1bea345092ce8514604bcb31&lt;/sys_rte_eb_definition&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_entity_mapping_465c489a1bea345092ce8514604bcb00&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-14 06:49:30&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_entity display_value="SG-Workspace ONE UEM Device Related 1"&gt;c65c089a1bea345092ce8514604bcbfe&lt;/target_sys_rte_eb_entity&gt;&lt;/sys_rte_eb_entity_mapping&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2121608383</payload_hash>
+        <record_name>tempToSG-Workspace ONE UEM Device Related 1</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 06:49:30</sys_created_on>
+        <sys_id>5f6c889a1bea345092ce8514604bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be3115a940000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 06:49:30</sys_updated_on>
+        <type>RTE Entity Mapping</type>
+        <update_guid>576c889a39ea3450f0d8b2ef26740e3d</update_guid>
+        <update_guid_history>576c889a39ea3450f0d8b2ef26740e3d:2121608383,865c489a4aea3450d17398470b6c0801:1321374018</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:42:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_entity_mapping">sys_rte_eb_entity_mapping</sys_db_object>
+        <sys_id>25bbcbbb72f240dc88d0135c04875690</sys_id>
+        <sys_metadata>465c489a1bea345092ce8514604bcb00</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tempToSG-Workspace ONE UEM Device Related 1</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_entity_mapping_465c489a1bea345092ce8514604bcb00</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_entity_mapping_465c489a1bea345092ce8514604bcb00">5f6c889a1bea345092ce8514604bcb3d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:42:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

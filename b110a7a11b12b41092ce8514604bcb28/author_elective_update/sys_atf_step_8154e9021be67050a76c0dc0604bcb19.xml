@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from display_value="Set Component Values (Custom UI)">d176064d1b26fc10a76c0dc0604bcbcb</copied_from>
+        <description>Set the components on the page as follows:
+'Textarea &lt;textarea&gt; [input_ws1_message]' = WS1 Connector / ServiceNow test value
+</description>
+        <display_name>Set Component Values (Custom UI)</display_name>
+        <inputs/>
+        <mugshots_cache_json>{"dc02da78323361abb8c8a76360fbd722":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Textarea &lt;textarea&gt; [input_ws1_message]\",\"sn_atf_mugshot_long_description\":\"Textarea &lt;textarea&gt; [input_ws1_message]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"input_ws1_message\",\"type\":\"textarea\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Textarea &lt;textarea&gt;\",\"name\":\"input_ws1_message\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"textarea\",\"isDisabled\":true,\"id\":\"input_ws1_message\",\"hash\":\"dc02da78323361abb8c8a76360fbd722\",\"html_value\":\"\"}"}</mugshots_cache_json>
+        <notes/>
+        <order>22</order>
+        <snapshot/>
+        <step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-13 18:35:05</sys_created_on>
+        <sys_id>8154e9021be67050a76c0dc0604bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_atf_step_8154e9021be67050a76c0dc0604bcb19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-13 18:35:05</sys_updated_on>
+        <table/>
+        <test display_value="WS1UEmTestPopup_message copy">a054694e1ba67050a76c0dc0604bcbc2</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=8154e9021be67050a76c0dc0604bcb19"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>8154e9021be67050a76c0dc0604bcb19</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-13 18:35:05</sys_created_on>
+        <sys_id>4954e9021be67050a76c0dc0604bcb1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-13 18:35:05</sys_updated_on>
+        <value>dc02da78323361abb8c8a76360fbd722=WS1 Connector / ServiceNow test value^EQ</value>
+        <variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_atf_step_8154e9021be67050a76c0dc0604bcb19</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from display_value="Set Component Values (Custom UI)">d176064d1b26fc10a76c0dc0604bcbcb</copied_from><description>Set the components on the page as follows:
+'Textarea &lt;textarea&gt; [input_ws1_message]' = WS1 Connector / ServiceNow test value
+</description><display_name>Set Component Values (Custom UI)</display_name><inputs/><mugshots_cache_json>{"dc02da78323361abb8c8a76360fbd722":"{\"area\":\"default\",\"sn_atf_mugshot_short_description\":\"Textarea &lt;textarea&gt; [input_ws1_message]\",\"sn_atf_mugshot_long_description\":\"Textarea &lt;textarea&gt; [input_ws1_message]\",\"methods\":[\"setValue\"],\"sn_atf_mugshot_label\":\"input_ws1_message\",\"type\":\"textarea\",\"version\":\"19.0\",\"get_value_result\":\"\",\"sn_atf_mugshot_tag_display_name\":\"Textarea &lt;textarea&gt;\",\"name\":\"input_ws1_message\",\"sn_atf_mugshot_value\":\"\",\"tag\":\"textarea\",\"isDisabled\":true,\"id\":\"input_ws1_message\",\"hash\":\"dc02da78323361abb8c8a76360fbd722\",\"html_value\":\"\"}"}</mugshots_cache_json><notes/><order>22</order><snapshot/><step_config display_value="Set Component Values (Custom UI)">e5dd168473330300c79260bdfaf6a794</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-13 18:35:05</sys_created_on><sys_id>8154e9021be67050a76c0dc0604bcb19</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Set Component Values (Custom UI)</sys_name><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_atf_step_8154e9021be67050a76c0dc0604bcb19</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-13 18:35:05</sys_updated_on><table/><test display_value="WS1UEmTestPopup_message copy">a054694e1ba67050a76c0dc0604bcbc2</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=8154e9021be67050a76c0dc0604bcb19"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>8154e9021be67050a76c0dc0604bcb19</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-13 18:35:05</sys_created_on><sys_id>4954e9021be67050a76c0dc0604bcb1a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-13 18:35:05</sys_updated_on><value>dc02da78323361abb8c8a76360fbd722=WS1 Connector / ServiceNow test value^EQ</value><variable display_value="Component values">d12fde8473330300c79260bdfaf6a7b5</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-1568786795</payload_hash>
+        <record_name>Set Component Values (Custom UI)</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-13 18:35:05</sys_created_on>
+        <sys_id>5954e9021be67050a76c0dc0604bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be070f8b80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-13 18:35:05</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>8154e90245e67050beea30f27159021c</update_guid>
+        <update_guid_history>8154e90245e67050beea30f27159021c:-1568786795</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-13 18:44:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>48a80b0b103e44cda0a14317f4cdb0a1</sys_id>
+        <sys_metadata>8154e9021be67050a76c0dc0604bcb19</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Component Values (Custom UI)</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_atf_step_8154e9021be67050a76c0dc0604bcb19</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_8154e9021be67050a76c0dc0604bcb19">5954e9021be67050a76c0dc0604bcb1c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-13 18:44:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a8033ba11b52b41092ce8514604bcb5b</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>WS1UEMGetAllDevices</sys_name>
         <sys_overrides/>
         <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a8033ba11b52b41092ce8514604bcb5b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:23</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:27</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -105,10 +105,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:25:47</sys_created_on>
         <sys_id>60033ba11b52b41092ce8514604bcb83</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 05:25:48</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:25</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=60033ba11b52b41092ce8514604bcb83"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -133,41 +133,38 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:25:48</sys_created_on>
         <sys_id>78033ba11b52b41092ce8514604bcbba</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 05:25:48</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:25</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-    var devices = [];
-    
-    if (inputs.responseBody) {
-
-  	var returnedObject = JSON.parse(inputs.responseBody);
+  var devices = [];
+  if (inputs.responseBody) {
+    var returnedObject = JSON.parse(inputs.responseBody);
     var deviceArray = returnedObject.devices;
     if (deviceArray) {
-    for (var i=0; i&lt;deviceArray.length; i++) {
-      var deviceObject = deviceArray[i];
-      var device = {};
-      device.uuid = deviceObject.Uuid;
-      device.username = deviceObject.enrollment_user_name;
-      device.useremailaddress = deviceObject.enrollment_user_email_address;
-      device.devicereportedname = deviceObject.device_reported_name;
-      device.locationgroupname =  deviceObject.organization_group_name;
-      device.Udid = deviceObject.udid;
-      device.platform = deviceObject.platform_name;
-      device.id = deviceObject.Id.Value;
-      device.serial_number = deviceObject.serial_number;
-      device.imei = deviceObject.imei;
-      device.model_identifier = deviceObject.model_identifier;
-      device.model = deviceObject.model;
-      device.operating_system = deviceObject.operating_system;
-      device.compliance_status = deviceObject.compliance_status;
-      device.ownership = deviceObject.ownership;
-      device.enrollment_status = deviceObject.enrollment_status;
-      
-      devices.push(device);
+      for (var i=0; i&lt;deviceArray.length; i++) {
+        var deviceObject = deviceArray[i];
+        var device = {};
+        device.uuid = deviceObject.Uuid;
+        device.username = deviceObject.enrollment_user_name;
+        device.useremailaddress = deviceObject.enrollment_user_email_address;
+        device.devicereportedname = deviceObject.device_reported_name;
+        device.locationgroupname =  deviceObject.organization_group_name;
+        device.Udid = deviceObject.udid;
+        device.platform = deviceObject.platform_name;
+        device.id = deviceObject.Id.Value;
+        device.serial_number = deviceObject.serial_number;
+        device.imei = deviceObject.imei;
+        device.model_identifier = deviceObject.model_identifier;
+        device.model = deviceObject.model;
+        device.operating_system = deviceObject.operating_system;
+        device.compliance_status = deviceObject.compliance_status;
+        device.ownership = deviceObject.ownership;
+        device.enrollment_status = deviceObject.enrollment_status;
+        devices.push(device);
+      }
     }
-    }
-    }
+  }
   outputs.devices = devices;
 })(inputs, outputs);</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -1114,14 +1111,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:25:48</sys_created_on>
         <sys_id>34033ba11b52b41092ce8514604bcbd4</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:21</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1197,14 +1194,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:25:48</sys_created_on>
         <sys_id>b8033ba11b52b41092ce8514604bcbe0</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:21</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1363,14 +1360,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:25:48</sys_created_on>
         <sys_id>f4033ba11b52b41092ce8514604bcbda</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:21</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1503,17 +1500,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMGetAllDevices">a8033ba11b52b41092ce8514604bcb5b</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"61237fa11b52b41092ce8514604bcb7c","name":"plan"}}</plan>
-        <snapshot>15addb2a1b5a781092ce8514604bcbea</snapshot>
+        <snapshot>674ff9b11baaf05092ce8514604bcbf0</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:26:24</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>61237fa11b52b41092ce8514604bcb7c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:24</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:29</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1619,10 +1616,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:26:21</sys_created_on>
         <sys_id>b0233fa11b52b41092ce8514604bcb67</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 05:26:21</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:27</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b0233fa11b52b41092ce8514604bcb67"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1633,41 +1630,38 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:26:21</sys_created_on>
         <sys_id>3c233fa11b52b41092ce8514604bcb90</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 05:26:21</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:27</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-    var devices = [];
-    
-    if (inputs.responseBody) {
-
-  	var returnedObject = JSON.parse(inputs.responseBody);
+  var devices = [];
+  if (inputs.responseBody) {
+    var returnedObject = JSON.parse(inputs.responseBody);
     var deviceArray = returnedObject.devices;
     if (deviceArray) {
-    for (var i=0; i&lt;deviceArray.length; i++) {
-      var deviceObject = deviceArray[i];
-      var device = {};
-      device.uuid = deviceObject.Uuid;
-      device.username = deviceObject.enrollment_user_name;
-      device.useremailaddress = deviceObject.enrollment_user_email_address;
-      device.devicereportedname = deviceObject.device_reported_name;
-      device.locationgroupname =  deviceObject.organization_group_name;
-      device.Udid = deviceObject.udid;
-      device.platform = deviceObject.platform_name;
-      device.id = deviceObject.Id.Value;
-      device.serial_number = deviceObject.serial_number;
-      device.imei = deviceObject.imei;
-      device.model_identifier = deviceObject.model_identifier;
-      device.model = deviceObject.model;
-      device.operating_system = deviceObject.operating_system;
-      device.compliance_status = deviceObject.compliance_status;
-      device.ownership = deviceObject.ownership;
-      device.enrollment_status = deviceObject.enrollment_status;
-      
-      devices.push(device);
+      for (var i=0; i&lt;deviceArray.length; i++) {
+        var deviceObject = deviceArray[i];
+        var device = {};
+        device.uuid = deviceObject.Uuid;
+        device.username = deviceObject.enrollment_user_name;
+        device.useremailaddress = deviceObject.enrollment_user_email_address;
+        device.devicereportedname = deviceObject.device_reported_name;
+        device.locationgroupname =  deviceObject.organization_group_name;
+        device.Udid = deviceObject.udid;
+        device.platform = deviceObject.platform_name;
+        device.id = deviceObject.Id.Value;
+        device.serial_number = deviceObject.serial_number;
+        device.imei = deviceObject.imei;
+        device.model_identifier = deviceObject.model_identifier;
+        device.model = deviceObject.model;
+        device.operating_system = deviceObject.operating_system;
+        device.compliance_status = deviceObject.compliance_status;
+        device.ownership = deviceObject.ownership;
+        device.enrollment_status = deviceObject.enrollment_status;
+        devices.push(device);
+      }
     }
-    }
-    }
+  }
   outputs.devices = devices;
 })(inputs, outputs);</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
@@ -2628,14 +2622,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:26:22</sys_created_on>
         <sys_id>0d233fa11b52b41092ce8514604bcba3</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:23</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2711,14 +2705,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:26:22</sys_created_on>
         <sys_id>49233fa11b52b41092ce8514604bcb9d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:23</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2877,14 +2871,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 05:26:22</sys_created_on>
         <sys_id>cd233fa11b52b41092ce8514604bcba9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 06:26:23</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:54:27</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4d26e3e51b12b41092ce8514604bcb2f</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>WS1UEMMessageTranslator</sys_name>
         <sys_overrides/>
         <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_4d26e3e51b12b41092ce8514604bcb2f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 03:41:08</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:46:55</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -69,10 +69,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 04:29:34</sys_created_on>
         <sys_id>0926e3e51b12b41092ce8514604bcb3e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 04:29:34</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:46:54</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0926e3e51b12b41092ce8514604bcb3e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -83,9 +83,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 04:29:35</sys_created_on>
         <sys_id>0926e3e51b12b41092ce8514604bcb55</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 04:29:35</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:46:55</sys_updated_on>
         <value>(function execute(inputs, outputs) {
  
   // translate the message
@@ -93,10 +93,6 @@
   if (inputs.messagetotranslate == outputs.message) {
     	gs.info("Translation missing? : " + inputs.messagetotranslate + " = " + outputs.message);
   }
-
-  // For testing
-//  var str = gs.getMessage(inputs.messagetotranslate);
-//  outputs.message = str.toUpperCase();
   
 })(inputs, outputs);
 </value>
@@ -587,17 +583,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMMessageTranslator">4d26e3e51b12b41092ce8514604bcb2f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"cd46a7e51b12b41092ce8514604bcb7b","name":"plan"}}</plan>
-        <snapshot>59a4acc21bd6f41092ce8514604bcb78</snapshot>
+        <snapshot>959d71711baaf05092ce8514604bcbbd</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 04:30:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cd46a7e51b12b41092ce8514604bcb7b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 03:41:09</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:46:56</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -667,10 +663,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 04:30:06</sys_created_on>
         <sys_id>3c46a7e51b12b41092ce8514604bcb12</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 04:30:06</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:46:55</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3c46a7e51b12b41092ce8514604bcb12"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -709,9 +705,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 04:30:06</sys_created_on>
         <sys_id>b046a7e51b12b41092ce8514604bcb27</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 04:30:06</sys_updated_on>
+        <sys_updated_on>2021-09-13 01:46:55</sys_updated_on>
         <value>(function execute(inputs, outputs) {
  
   // translate the message
@@ -719,10 +715,6 @@
   if (inputs.messagetotranslate == outputs.message) {
     	gs.info("Translation missing? : " + inputs.messagetotranslate + " = " + outputs.message);
   }
-
-  // For testing
-//  var str = gs.getMessage(inputs.messagetotranslate);
-//  outputs.message = str.toUpperCase();
   
 })(inputs, outputs);
 </value>

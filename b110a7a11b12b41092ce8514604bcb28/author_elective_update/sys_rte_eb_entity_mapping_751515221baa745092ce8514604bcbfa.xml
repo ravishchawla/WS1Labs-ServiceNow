@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_entity_mapping">
+    <sys_rte_eb_entity_mapping action="DELETE">
+        <condition_script><![CDATA[(function() {
+    if (((input.temp.u_enrollment_status === 'ENROLLED') && (input.temp.u_device_type_record))) {
+        return true;
+    }
+    return false;
+})();]]></condition_script>
+        <encoded_query>u_enrollment_status=ENROLLED^u_device_type_recordISNOTEMPTY</encoded_query>
+        <entity_mapping_group>351515221baa745092ce8514604bcbf8</entity_mapping_group>
+        <ignore>false</ignore>
+        <is_conditional>true</is_conditional>
+        <name>tempToHardware 2</name>
+        <order>100</order>
+        <source_sys_rte_eb_entity display_value="temp">beebcc5a1bea345092ce8514604bcbb2</source_sys_rte_eb_entity>
+        <sys_class_name>sys_rte_eb_entity_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:45:27</sys_created_on>
+        <sys_id>751515221baa745092ce8514604bcbfa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>tempToHardware 2</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_entity_mapping_751515221baa745092ce8514604bcbfa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 07:19:09</sys_updated_on>
+        <target_sys_rte_eb_entity display_value="Hardware 2">b51515221baa745092ce8514604bcbf8</target_sys_rte_eb_entity>
+    </sys_rte_eb_entity_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_rte_eb_entity_mapping_751515221baa745092ce8514604bcbfa</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_entity_mapping"&gt;&lt;sys_rte_eb_entity_mapping action="INSERT_OR_UPDATE"&gt;&lt;condition_script&gt;&lt;![CDATA[(function() {
+    if (((input.temp.u_enrollment_status === 'ENROLLED') &amp;&amp; (input.temp.u_device_type_record))) {
+        return true;
+    }
+    return false;
+})();]]&gt;&lt;/condition_script&gt;&lt;encoded_query&gt;u_enrollment_status=ENROLLED^u_device_type_recordISNOTEMPTY&lt;/encoded_query&gt;&lt;entity_mapping_group&gt;351515221baa745092ce8514604bcbf8&lt;/entity_mapping_group&gt;&lt;ignore&gt;false&lt;/ignore&gt;&lt;is_conditional&gt;true&lt;/is_conditional&gt;&lt;name&gt;tempToHardware 2&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;source_sys_rte_eb_entity display_value="temp"&gt;beebcc5a1bea345092ce8514604bcbb2&lt;/source_sys_rte_eb_entity&gt;&lt;sys_class_name&gt;sys_rte_eb_entity_mapping&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-15 06:45:27&lt;/sys_created_on&gt;&lt;sys_id&gt;751515221baa745092ce8514604bcbfa&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;tempToHardware 2&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;ecabc85a1bea345092ce8514604bcb31&lt;/sys_rte_eb_definition&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_entity_mapping_751515221baa745092ce8514604bcbfa&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-15 07:19:09&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_entity display_value="Hardware 2"&gt;b51515221baa745092ce8514604bcbf8&lt;/target_sys_rte_eb_entity&gt;&lt;/sys_rte_eb_entity_mapping&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-390948953</payload_hash>
+        <record_name>tempToHardware 2</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 07:19:09</sys_created_on>
+        <sys_id>a7cc15e61bea745092ce8514604bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be852dd6b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 07:19:09</sys_updated_on>
+        <type>RTE Entity Mapping</type>
+        <update_guid>afcc91e6f7ea7450c5db0c4c0cef3ac7</update_guid>
+        <update_guid_history>afcc91e6f7ea7450c5db0c4c0cef3ac7:-390948953,fd5519227baa74504c7ba7ab0e3558e8:-53951908,f51515229faa7450e34aa08ee85a86fb:-1663521721</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 08:08:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_entity_mapping">sys_rte_eb_entity_mapping</sys_db_object>
+        <sys_id>6abd22d7578240b2be1a88029418f709</sys_id>
+        <sys_metadata>751515221baa745092ce8514604bcbfa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>tempToHardware 2</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_entity_mapping_751515221baa745092ce8514604bcbfa</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_entity_mapping_751515221baa745092ce8514604bcbfa">a7cc15e61bea745092ce8514604bcb56</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 08:08:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

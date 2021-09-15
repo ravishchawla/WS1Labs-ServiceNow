@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_entity">
+    <cmdb_inst_entity action="DELETE">
+        <child_id_field/>
+        <lookup_for_entity/>
+        <name>SG-Workspace ONE UEM Device Related 1</name>
+        <parent_entity/>
+        <parent_id_field/>
+        <path>sn_vmwoneuem_integ_device_related_1</path>
+        <related_for_entity display_value="Handheld Computing Device 1">fb1c449a1bea345092ce8514604bcba9</related_for_entity>
+        <relationship_type/>
+        <sys_class_name>cmdb_inst_entity</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 06:49:09</sys_created_on>
+        <sys_id>c65c089a1bea345092ce8514604bcbfe</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SG-Workspace ONE UEM Device Related 1</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>cmdb_inst_entity_c65c089a1bea345092ce8514604bcbfe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 06:49:30</sys_updated_on>
+        <table>sn_vmwoneuem_integ_device_related</table>
+    </cmdb_inst_entity>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>cmdb_inst_entity_c65c089a1bea345092ce8514604bcbfe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_inst_entity"><cmdb_inst_entity action="INSERT_OR_UPDATE"><child_id_field/><lookup_for_entity/><name>SG-Workspace ONE UEM Device Related 1</name><parent_entity/><parent_id_field/><path>sn_vmwoneuem_integ_device_related_1</path><related_for_entity display_value="Handheld Computing Device 1">fb1c449a1bea345092ce8514604bcba9</related_for_entity><relationship_type/><sys_class_name>cmdb_inst_entity</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-14 06:49:09</sys_created_on><sys_id>c65c089a1bea345092ce8514604bcbfe</sys_id><sys_mod_count>1</sys_mod_count><sys_name>SG-Workspace ONE UEM Device Related 1</sys_name><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>cmdb_inst_entity_c65c089a1bea345092ce8514604bcbfe</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-14 06:49:30</sys_updated_on><table>sn_vmwoneuem_integ_device_related</table></cmdb_inst_entity></record_update>]]></payload>
+        <payload_hash>1798869533</payload_hash>
+        <record_name>SG-Workspace ONE UEM Device Related 1</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 06:49:30</sys_created_on>
+        <sys_id>976c889a1bea345092ce8514604bcb3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17be3115a780000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 06:49:30</sys_updated_on>
+        <type>CMDB Integration Studio Entity</type>
+        <update_guid>9f6c889ad8ea3450dd4ca47e4eccd63a</update_guid>
+        <update_guid_history>9f6c889ad8ea3450dd4ca47e4eccd63a:1798869533,4a5c089a09ea34503bf38558b77181ff:-1969717959</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="SG-Workspace ONE UEM Device Related 1">9b4459ee1b6a745092ce8514604bcb8d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-15 06:42:00</sys_created_on>
+        <sys_db_object display_value="" name="cmdb_inst_entity">cmdb_inst_entity</sys_db_object>
+        <sys_id>a028a342b3d64d6eb727927ba0c246b9</sys_id>
+        <sys_metadata>c65c089a1bea345092ce8514604bcbfe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SG-Workspace ONE UEM Device Related 1</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>cmdb_inst_entity_c65c089a1bea345092ce8514604bcbfe</sys_update_name>
+        <sys_update_version display_value="cmdb_inst_entity_c65c089a1bea345092ce8514604bcbfe">976c889a1bea345092ce8514604bcb3b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-15 06:42:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
