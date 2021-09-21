@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[onLoad();
+
+function onLoad() {
+    var stringText = getMessage('WS1UEMConfigureDefaults');
+    $("div_ws1_url_text").innerHTML = getMessage(stringText);
+
+    //get the system parameter 
+    var action_table = new GlideRecord('sys_properties');
+    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
+    action_table.query();
+    action_table.next();
+
+    // if installed get the state of our system parameter
+    if (action_table.value == "true") {
+        $("input_ws1_url").checked = true;
+    } else {
+        $("input_ws1_url").checked = false;
+    }
+
+}
+
+
+// update system paramter when the checkbox being changed
+function updateValue(cb) {
+    var action_table = new GlideRecord('sys_properties');
+    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
+    action_table.query();
+    action_table.next();
+
+    if (cb.checked) {
+        action_table.value = "true";
+    } else {
+        action_table.value = "false";
+    }
+
+    action_table.update();
+}]]></client_script>
+        <description>Display the WS1 UEM Console URL on every Incident form</description>
+        <direct>false</direct>
+        <endpoint>x_vmw_ws1uem_WS1UEMURLDisplay.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:ui_form>
+	
+	<div style="margin:10px; width:40%" id="div_ws1_url_text">
+		<p> </p>
+	</div>
+
+		
+	<div style="margin-left:10px; margin-bottom:30px;">
+			<input type="checkbox" name="input_ws1_url" id="input_ws1_url" onclick = "updateValue(this)"/>
+	</div>
+
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>WS1UEMURLDisplay</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-20 05:26:15</sys_created_on>
+        <sys_id>4ab276c81b32b85092ce8514604bcb0a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>WS1UEMURLDisplay</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_page_4ab276c81b32b85092ce8514604bcb0a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-20 06:22:27</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_ui_page_4ab276c81b32b85092ce8514604bcb0a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[onLoad();
+
+function onLoad() {
+    var stringText = getMessage('WS1UEMConfigureDefaults');
+    $("div_ws1_url_text").innerHTML = getMessage(stringText);
+
+    //get the system parameter 
+    var action_table = new GlideRecord('sys_properties');
+    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
+    action_table.query();
+    action_table.next();
+
+    // if installed get the state of our system parameter
+    if (action_table.value == "true") {
+        $("input_ws1_url").checked = true;
+    } else {
+        $("input_ws1_url").checked = false;
+    }
+
+}
+
+
+// update system paramter when the checkbox being changed
+function updateValue(cb) {
+    var action_table = new GlideRecord('sys_properties');
+    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
+    action_table.query();
+    action_table.next();
+
+    if (cb.checked) {
+        action_table.value = "true";
+    } else {
+        action_table.value = "false";
+    }
+
+    action_table.update();
+}]]&gt;&lt;/client_script&gt;&lt;description&gt;Display the WS1 UEM Console URL on every Incident form&lt;/description&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_vmw_ws1uem_WS1UEMURLDisplay.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;g:ui_form&gt;
+	
+	&lt;div style="margin:10px; width:40%" id="div_ws1_url_text"&gt;
+		&lt;p&gt; &lt;/p&gt;
+	&lt;/div&gt;
+
+		
+	&lt;div style="margin-left:10px; margin-bottom:30px;"&gt;
+			&lt;input type="checkbox" name="input_ws1_url" id="input_ws1_url" onclick = "updateValue(this)"/&gt;
+	&lt;/div&gt;
+
+	&lt;/g:ui_form&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;WS1UEMURLDisplay&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-20 05:26:15&lt;/sys_created_on&gt;&lt;sys_id&gt;4ab276c81b32b85092ce8514604bcb0a&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEMURLDisplay&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_4ab276c81b32b85092ce8514604bcb0a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-20 06:22:27&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-784412740</payload_hash>
+        <record_name>WS1UEMURLDisplay</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-20 06:22:27</sys_created_on>
+        <sys_id>21cfb2041b72b85092ce8514604bcb58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c01debf6b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-20 06:22:27</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>29cfb2042572b850f30295d42715dd57</update_guid>
+        <update_guid_history>29cfb2042572b850f30295d42715dd57:-784412740,43c3760cda32b850f85a5a4ca2574a44:-250848244,e913fec85132b850307289b04a6bd3b5:540520724,9ee2b6881f32b850133b68db2505de63:-1679749077</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-21 01:24:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>1f1a80e0ca2f4b1d846894fd339a47b9</sys_id>
+        <sys_metadata>4ab276c81b32b85092ce8514604bcb0a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMURLDisplay</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_4ab276c81b32b85092ce8514604bcb0a</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_4ab276c81b32b85092ce8514604bcb0a">21cfb2041b72b85092ce8514604bcb58</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-21 01:24:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

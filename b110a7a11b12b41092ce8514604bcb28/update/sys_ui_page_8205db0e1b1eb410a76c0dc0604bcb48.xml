@@ -6,7 +6,7 @@
 function onLoad() {
 	//set the value in the fields to existing values
 	var oauth_table = new GlideRecord('oauth_entity');
-	oauth_table.addQuery('name', "WorkspaceOneUEM Assist OAuth Provider");
+	oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
 	oauth_table.query();
 	if (oauth_table.next()) {
 		var clientid = oauth_table.client_id;
@@ -20,7 +20,7 @@ function onLoad() {
 	}	
 	
 	var http_table = new GlideRecord('http_connection');
-	http_table.addQuery('name', "WorkspaceOneUEM Assist OAuth Credentials");
+	http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
 	http_table.query();
 	if (http_table.next()) {
 		var hostid = http_table.host;	
@@ -48,7 +48,7 @@ function setValues() {
 	var hostid = gel('input_ws1_hostid').value;
 	
 	var oauth_table = new GlideRecord('oauth_entity');
-	oauth_table.addQuery('name', "WorkspaceOneUEM Assist OAuth Provider");
+	oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
 	oauth_table.query();
 	if (oauth_table.next()) {
 		oauth_table.client_id = clientid;
@@ -63,7 +63,7 @@ function setValues() {
 	}
 	
 	var http_table = new GlideRecord('http_connection');
-	http_table.addQuery('name', "WorkspaceOneUEM Assist OAuth Credentials");
+	http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
 	http_table.query();
 	if (http_table.next()) {
 		http_table.host = hostid;		
@@ -79,7 +79,7 @@ function setValues() {
 function testoauth () {
 	var oauth_initiator_url = '';
 	var oauth_table = new GlideRecord('oauth_2_0_credentials');
-	oauth_table.addQuery('name', "WorkspaceOneUEM Assist OAuth Credentails");
+	oauth_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
 	oauth_table.query();
 	if (oauth_table.next()) {
 		var oauthProfileId = oauth_table.oauth_entity_profile;	
@@ -167,13 +167,13 @@ function testoauth () {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-17 20:05:42</sys_updated_on>
+        <sys_updated_on>2021-09-19 23:34:10</sys_updated_on>
     </sys_ui_page>
 </record_update>
