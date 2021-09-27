@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[function testConnection() {
+	document.getElementById("runprocessingscript").value = "testconnection";
+}
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_vmw_ws1uem_WS1UEMVerifyConnection.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:ui_form>
+		
+	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
+		 	
+		<div style="margin:10px;margin-top:15px">
+		<span style="display:inline-block; width:40%">
+		<g:form_label>
+			${gs.getMessage('WS1UEMTestMessage')}
+		</g:form_label>
+		</span>
+		</div>	
+	    <button type="submit" onclick="testConnection()">${gs.getMessage('WS1UEMTestButton')}</button>
+
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>WS1UEMVerifyConnection</name>
+        <processing_script><![CDATA[if(runprocessingscript == "testconnection"){
+	
+    gs.info("Running verify action flow from UI Page");
+		
+	try {
+		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+		// sn_fd.FlowAPI.getRunner().action('x_vmw_uemconn_0.uemversion').inBackground().run();
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().run();
+		var outputs = result.getOutputs();
+
+		// Get Outputs:
+		// Note: outputs can only be retrieved when executing synchronously.
+		var variable = outputs['variable']; // String
+		var status = outputs['status']; // String
+		var response = outputs['response']; // String
+		var ws1productpersion = outputs['ws1productpersion']; // String
+		
+		gs.info("Workspace ONE UEM Platform Version: " + ws1productpersion);
+				
+		gs.setProperty('x_vmw_ws1uem.WS1UEM Platform', ws1productpersion);
+	
+		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productpersion);
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
+		gs.error(message);
+	}
+} else {
+	
+//	gs.addInfoMessage("processing");
+
+}
+
+	
+]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:33:07</sys_created_on>
+        <sys_id>65459f0e1b1eb410a76c0dc0604bcb89</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>WS1UEMVerifyConnection</sys_name>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_page_65459f0e1b1eb410a76c0dc0604bcb89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 01:25:17</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_ui_page_65459f0e1b1eb410a76c0dc0604bcb89</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function testConnection() {
+	document.getElementById("runprocessingscript").value = "testconnection";
+}
+]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_vmw_ws1uem_WS1UEMVerifyConnection.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;g:ui_form&gt;
+		
+	&lt;input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/&gt;
+		 	
+		&lt;div style="margin:10px;margin-top:15px"&gt;
+		&lt;span style="display:inline-block; width:40%"&gt;
+		&lt;g:form_label&gt;
+			${gs.getMessage('WS1UEMTestMessage')}
+		&lt;/g:form_label&gt;
+		&lt;/span&gt;
+		&lt;/div&gt;	
+	    &lt;button type="submit" onclick="testConnection()"&gt;${gs.getMessage('WS1UEMTestButton')}&lt;/button&gt;
+
+	&lt;/g:ui_form&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;WS1UEMVerifyConnection&lt;/name&gt;&lt;processing_script&gt;&lt;![CDATA[if(runprocessingscript == "testconnection"){
+	
+    gs.info("Running verify action flow from UI Page");
+		
+	try {
+		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+		// sn_fd.FlowAPI.getRunner().action('x_vmw_uemconn_0.uemversion').inBackground().run();
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().run();
+		var outputs = result.getOutputs();
+
+		// Get Outputs:
+		// Note: outputs can only be retrieved when executing synchronously.
+		var variable = outputs['variable']; // String
+		var status = outputs['status']; // String
+		var response = outputs['response']; // String
+		var ws1productpersion = outputs['ws1productpersion']; // String
+		
+		gs.info("Workspace ONE UEM Platform Version: " + ws1productpersion);
+				
+		gs.setProperty('x_vmw_ws1uem.WS1UEM Platform', ws1productpersion);
+	
+		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productpersion);
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
+		gs.error(message);
+	}
+} else {
+	
+//	gs.addInfoMessage("processing");
+
+}
+
+	
+]]&gt;&lt;/processing_script&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 16:33:07&lt;/sys_created_on&gt;&lt;sys_id&gt;65459f0e1b1eb410a76c0dc0604bcb89&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEMVerifyConnection&lt;/sys_name&gt;&lt;sys_package display_value="ws1uem" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_65459f0e1b1eb410a76c0dc0604bcb89&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-02 01:25:17&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>775227198</payload_hash>
+        <record_name>WS1UEMVerifyConnection</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-02 01:25:17</sys_created_on>
+        <sys_id>4d2f09de1b56381092ce8514604bcbec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba41c37d00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-02 01:25:17</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>852f09de0b563810894aeda86f594dec</update_guid>
+        <update_guid_history>852f09de0b563810894aeda86f594dec:775227198,7b4e05decc5638102ffa2de1d0061195:-1215761094,021bc0524bdeb4109b5bc512914d8e08:1788878938,a155574ef11eb410261f4930f171f79c:-2073792299</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-21 06:55:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>5381217ed60c4a16971beeb0ea347a31</sys_id>
+        <sys_metadata>65459f0e1b1eb410a76c0dc0604bcb89</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMVerifyConnection</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_65459f0e1b1eb410a76c0dc0604bcb89</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_65459f0e1b1eb410a76c0dc0604bcb89">4d2f09de1b56381092ce8514604bcbec</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-21 06:55:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

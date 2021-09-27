@@ -5,9 +5,13 @@
         <api_name>x_vmw_ws1uem.WS1GetActionFromOS</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
-        <description/>
+        <description>Return OS to Action mapping by a provided device ID.</description>
         <name>WS1GetActionFromOS</name>
-        <script><![CDATA[function get_os_field(device_id) {  
+        <script><![CDATA[/**
+Return the OS of a device given its Device ID,
+from the inherited class of the device.
+**/
+function get_os_field(device_id) {  
 	var config_table = new GlideRecordSecure("cmdb_ci");
 	config_table.addQuery("sys_id", device_id);
 	
@@ -30,7 +34,7 @@
 				error_log = 'OS for device ' + device_id + ' not found in type ' + class_name;
 				gs.info(error_log);
 				
-				return {'os_name' : os_name, 'os_version' : os_version};
+				return {'os_name' : '', 'os_version' : ''};
 			}
 			
 			child_table.addQuery("sys_id", device_id);
@@ -52,6 +56,9 @@
 	}
    }
 
+/**
+Compare OS versions by checking for version substrings
+**/
 function util_compare_versions(version_a, version_b) {
 	
 	if ((!version_a) || (!version_b)) {
@@ -81,6 +88,14 @@ function util_compare_versions(version_a, version_b) {
 	return 0;
 }
 
+/**
+Return a map of action states for a given device ID.
+The OS and OS Version are queried in the Ws1 Action OS Mapping
+table for action states, ordered by precedence.
+
+OS version strings are mapped to Mac, Windows, Linux, Android and iOS
+platforms. For Windows, sub-versions are mapped.
+**/
 var WS1GetActionFromOS = Class.create();
 WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
    get_action:function() {
@@ -120,7 +135,11 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 			if ((os_name == '') || (os_name == null)) {
 				return JSON.stringify(action_visibility_conditions);
 			}
-			
+
+			/**
+			OS Names are mapped to one of known operating systems
+			that are on the Action OS Mapping table.
+			**/
 			os_name = os_name.toLowerCase();
 
 			if (os_name.includes('mac')) {
@@ -144,12 +163,17 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 					} else {
 						os_name = 'windows10_enterprise';
 					}
-				} else if (os_name.includes('windows')) {
+				} else if (os_name.includes('xp')) {
+					os_name = 'windows_xp';
+				} else {
 					os_name = 'winrt';
 				}
 			}
 		}
 
+		/**
+		The OS Action table is queried for OS, and ranked by precedence.
+		**/
 		var mapTable = new GlideRecordSecure(TABLE_NAME);
 		mapTable.addQuery("os_action", os_name);
 		mapTable.orderByDesc("precedent");
@@ -160,6 +184,10 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 		try {
 			while(mapTable.next()) {
 				
+				/**
+				OS Version is compared against the Min and Max OS values
+				in the table.
+				**/
 				var min_os = mapTable.getValue('min_os');
 				var max_os = mapTable.getValue('max_os');
 				
@@ -193,13 +221,13 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:34:18</sys_created_on>
         <sys_id>a775d74e1b1eb410a76c0dc0604bcba9</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>WS1GetActionFromOS</sys_name>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_a775d74e1b1eb410a76c0dc0604bcba9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-13 19:42:27</sys_updated_on>
+        <sys_updated_on>2021-09-22 19:01:18</sys_updated_on>
     </sys_script_include>
 </record_update>

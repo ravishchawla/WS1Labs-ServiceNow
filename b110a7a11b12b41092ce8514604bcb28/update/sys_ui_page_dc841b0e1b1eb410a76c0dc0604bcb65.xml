@@ -3,11 +3,20 @@
         <category>general</category>
         <client_script><![CDATA[onLoad();
 
+/**
+WS1UEMPopup renders the dialog popup fields based on the UEM action
+passed in from the calling page.
+**/
 function onLoad() {
+	
 	var ws1_actions_response;
 	
 	var action = $("ws1_action");
 
+	/**
+	For debugging purposes, if an action is not provided,
+	Test values are loaded in from the WS1 Testing table.
+	**/
 	if ((!action) || (action.value.includes("Undefined"))) {
 			var ga_test_action = new GlideAjax('x_vmw_ws1uem.WS1GetTestAction');
 			var ga_test_json = new GlideAjax('x_vmw_ws1uem.WS1TestOSActionsJSON');
@@ -32,6 +41,10 @@ function onLoad() {
 				});
 			});
 	} else {
+		/**
+		A JSON containing UEM configurations for an OS will be loaded in 
+		from the incidents page, previously stored by the the loading method.
+		**/
 		ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
 		
 		ws1_actions_response = JSON.parse(ws1_actions_response.value);
@@ -40,6 +53,10 @@ function onLoad() {
 	}
 }
 
+/**
+Based on the provided UEM Action configuration, set the state of
+specific fields and as hidden or visible.
+**/
 function loadPopupContents(action, ws1_actions_response) {
 	var stringText;
 
@@ -74,11 +91,13 @@ function loadPopupContents(action, ws1_actions_response) {
 
 		input_options.sort().reverse();
 
+		
 		if ($("input_ws1_assist_type").length == 0) {
 			$("div_ws1_assist_type").hidden = true;
 		} else {
 			set_action_as_main_select_input(select_dropdown_id, input_options[0]);
 		}
+		
 		
 	} else if (action == "message") {
 		// Information message text
@@ -226,6 +245,10 @@ function execute_action(sid, action_inputs, set_form) {
 	}
 }
 
+/**
+A test incident record will need to be obtained
+if the application is being debugged with ATF tests.
+**/
 function get_test_incident_record(action_inputs) {
     var ga_test_incident = new GlideAjax('x_vmw_ws1uem.WS1GetIncidentRecord');
     ga_test_incident.addParam('sysparm_name', 'get_incident');
@@ -237,6 +260,10 @@ function get_test_incident_record(action_inputs) {
     });
 }
 
+/**
+Version strings are compared level-by-level
+between sub-versions strings in each.
+**/
 function util_compare_versions(version_a, version_b) {
 	var sub_versions_a = version_a.split(".").map(Number);
 	var sub_versions_b = version_b.split(".").map(Number);
@@ -278,6 +305,9 @@ function parse_actions_as_json(response) {
 	}
 }
 
+/**
+Remove dropdown menu items by option name
+**/
 function remove_actions_from_select_input(select_input, option_name) {
 	var selectobject = $(select_input);
 	
@@ -288,6 +318,9 @@ function remove_actions_from_select_input(select_input, option_name) {
 	}
 }
 
+/**
+Set a dropdown menu item as default
+**/
 function set_action_as_main_select_input(select_input, option_name) {
 	var selectobject = $(select_input);
 	
@@ -299,7 +332,10 @@ function set_action_as_main_select_input(select_input, option_name) {
 	}
 }
 
-// validate the entered pin is valid
+/**
+Validate that a 6-pin field has
+non-empty values within valid range.
+**/
 function validatePin(pin,order) {
 	
 	var validPin = true;
@@ -333,7 +369,9 @@ function validatePin(pin,order) {
 }
 
 
-// validate the entered passcodes match
+/**
+Validate that the passcode and confirm-passcode fields match
+**/
 function validatePasscode() {
 	var passcode = gel('input_ws1_passcode').value;
 	var passcodeConfirm = gel('input_ws1_passcode_confirm').value;
@@ -347,7 +385,9 @@ function validatePasscode() {
 }
 
 
-// validate the message is greater than 1 character
+/**
+Validate that the message field is non-empty
+**/
 function checkMessage() {
 	var message = gel('input_ws1_message').value;
 
@@ -360,7 +400,9 @@ function checkMessage() {
 }
 
 
-
+/**
+Set the state of fields on the UEM dialog popup
+**/
 function checkStatus(cb) {
 	$("submitData").disabled = !cb.checked;
 }
@@ -462,12 +504,12 @@ function set_ws1_check_state(state) {
 				${gs.getMessage('WS1UEMUnlockPin')}
 			</g:form_label>
 		</span>	
-        <input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'1')" onchange = "validatePin(this,'1')"/>
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'2')" onchange = "validatePin(this,'1')"/>
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'3')" onchange = "validatePin(this,'1')"/>
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'4')" onchange = "validatePin(this,'1')"/>
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" onchange = "validatePin(this,'1')"/>
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" onchange = "validatePin(this,'1')"/>
+        <input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'1')" />
+		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'2')" />
+		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'3')" />
+		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'4')" />
+		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" />
+		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" />
 	</div>
 	
 	<div style="margin:10px" id="div_ws1_assist_type" hidden="false">
@@ -489,7 +531,7 @@ function set_ws1_check_state(state) {
 		</span>
 	</div>
 			   
-    <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit"  ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+    <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit"  ok_style_class="btn btn-primary"  cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
 
 	</g:ui_form>
 </j:jelly>]]></html>
@@ -564,13 +606,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>77</sys_mod_count>
+        <sys_mod_count>85</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-13 19:41:16</sys_updated_on>
+        <sys_updated_on>2021-09-24 05:57:56</sys_updated_on>
     </sys_ui_page>
 </record_update>

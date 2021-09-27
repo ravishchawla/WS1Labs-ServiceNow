@@ -3,10 +3,8 @@
         <category>general</category>
         <client_script><![CDATA[onLoad();
 
-function onLoad() {	
-	var stringText = getMessage('WS1UEMCMDBIntegration');
-	$("div_ws1_cmdb_text").innerHTML = getMessage(stringText);
-		
+function onLoad() {
+	
 	// check if the CMDB connector is installed
 	var ts = new GlideRecord("sys_store_app"); 	
 	stringText = getMessage('WS1UEMCMDBConnector');
@@ -36,25 +34,19 @@ function onLoad() {
 		$("input_ws1_cmdb_integration").disabled = true;
 	}
 	
-	
-	stringText = getMessage('WS1UEMConfigureDefaults');
-    $("div_ws1_url_text").innerHTML = getMessage(stringText);
-
-    //get the system parameter 
+    //get the system parameter whether to display the URL 
     action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
     action_table.query();
     action_table.next();
-
+	
     // if installed get the state of our system parameter
     if (action_table.value == "true") {
         $("input_ws1_url").checked = true;
     } else {
         $("input_ws1_url").checked = false;
     }
-	
 }
-
 
 // update system paramter when the checkbox being changed
 function updateValue(cb) {
@@ -73,45 +65,93 @@ function updateValue(cb) {
 	action_table.update();
 }
 
-// update system paramter when the checkbox being changed
-function updateURL(cb) {
+// update system parameter when the checkbox being changed
+function updateURLDisplay(cb) {
     var action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
     action_table.query();
     action_table.next();
-
-    if (cb.checked) {
+    
+	if (cb.checked) {
         action_table.value = "true";
     } else {
         action_table.value = "false";
     }
-
     action_table.update();
 }
 ]]></client_script>
-        <description/>
+        <description>CMDB Configuration validation page</description>
         <direct>false</direct>
         <endpoint>x_vmw_ws1uem_WS1UEMCMDBIntegration.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
     <g:ui_form>
-	
-	<div style="margin:10px; width:40%" id="div_ws1_cmdb_text">
-		<p> </p>
-	</div>
-
 		
-	<div style="margin-left:10px; margin-bottom:30px;">
-			<input type="checkbox" name="input_ws1_cmdb_integration" id="input_ws1_cmdb_integration" onclick = "updateValue(this)"/>
-	</div>
-
-	<div style="margin:10px; width:40%" id="div_ws1_url_text">
-		<p> </p>
-	</div>
-
+	<style>
+		.section {
+			margin: 0 0 10px 10px;
+			width: 40%;
+		}
 		
-	<div style="margin-left:10px; margin-bottom:30px;">
-			<input type="checkbox" name="input_ws1_url" id="input_ws1_url" onclick = "updateURL(this)"/>
+		.section-title {
+			font-size: medium;
+			margin-bottom: 5px;
+		}
+		
+		.checkbox-table {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 5px;
+		}
+		
+		.checkbox-cell {
+			margin: 0 1em;
+		}
+		
+		.centered {
+			text-align: center;
+		}
+	</style>
+		
+	<div class="section">
+		<div class="section-title">
+			<strong>Service Graph connector</strong>
+		</div>
+		<div class="checkbox-table">
+			<div class="checkbox-cell centered">
+				<input
+					type="checkbox"
+					name="input_ws1_cmdb_integration"
+					id="input_ws1_cmdb_integration"
+					onclick="updateValue(this)"
+					style="margin: 0;"/>
+			</div>
+			
+			<div>
+				${gs.getMessage('WS1UEMCMDBIntegration')} 
+			</div>
+		</div>
+	</div>
+		
+	<div class="section">
+		<div class="section-title">
+			<strong>Workspace ONE UEM Console URL</strong>
+		</div>
+		<div class="checkbox-table">
+			<div class="checkbox-cell centered">
+				<input
+					type="checkbox"
+					name="input_ws1_url"
+					id="input_ws1_url"
+					onclick="updateURLDisplay(this)"
+					style="margin: 0;"/>
+			</div>
+			
+			<div>
+				${gs.getMessage('WS1UEMConfigureDefaults')} 
+			</div>
+		</div>
 	</div>
 		
 	</g:ui_form>
@@ -122,13 +162,13 @@ function updateURL(cb) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:31:15</sys_created_on>
         <sys_id>c2d4530e1b1eb410a76c0dc0604bcb0c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>67</sys_mod_count>
         <sys_name>WS1UEMCMDBIntegration</sys_name>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_c2d4530e1b1eb410a76c0dc0604bcb0c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-21 01:22:24</sys_updated_on>
+        <sys_updated_on>2021-09-27 04:44:22</sys_updated_on>
     </sys_ui_page>
 </record_update>

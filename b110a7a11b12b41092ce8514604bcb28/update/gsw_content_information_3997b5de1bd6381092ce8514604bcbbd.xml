@@ -5,7 +5,8 @@
 <ul style="list-style-position: inside;"><li>Host</li><li>Client ID</li><li>Client Secret</li><li>Token URL</li></ul>
 <p>To get the OAuth credentials please refer VMware <a title="" href="https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/UEM_ConsoleBasics/GUID-BF20C949-5065-4DCF-889D-1E0151016B5A.html#create-an-oauth-client-to-use-for-api-commands-3" rel="nofollow">documentation</a>.</p>
 <p>For further information about the Token URL please refer to VMware <a title="" href="https://kb.vmware.com/s/article/76967" rel="nofollow">documentation</a>. </p>
-<p>For more information about the VMware Workspace ONE UEM API, see the VMware Workspace ONE UEM documentation.</p>]]></article>
+<p>For more information about the VMware Workspace ONE UEM API, see the VMware Workspace ONE UEM documentation.</p>
+<p>Then click the <strong>Test</strong> <strong>Connection</strong> button to test the connection to the VMware Workspace ONE UEM API. Testing the connection takes a few moments, after which the page refreshes to show the test results. </p>]]></article>
         <best_practice_acceptable>false</best_practice_acceptable>
         <dependent_on_contents/>
         <dependent_on_plugins/>
@@ -13,7 +14,7 @@
         <description/>
         <embedded_help_qualifier/>
         <end_point>x_vmw_ws1uem_WS1UEMConfigureConnection.do</end_point>
-        <end_point_open_mode>3</end_point_open_mode>
+        <end_point_open_mode>1</end_point_open_mode>
         <end_point_type>1</end_point_type>
         <field/>
         <filter/>
@@ -37,14 +38,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-02 04:23:16</sys_created_on>
         <sys_id>3997b5de1bd6381092ce8514604bcbbd</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Configure connection details</sys_name>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>gsw_content_information_3997b5de1bd6381092ce8514604bcbbd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-02 04:23:16</sys_updated_on>
+        <sys_updated_on>2021-09-22 05:01:56</sys_updated_on>
         <table/>
         <title>Configure connection details</title>
         <weight>1</weight>

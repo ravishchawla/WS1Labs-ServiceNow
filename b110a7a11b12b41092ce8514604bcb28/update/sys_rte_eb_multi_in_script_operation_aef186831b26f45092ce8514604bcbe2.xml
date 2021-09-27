@@ -30,7 +30,7 @@
 		// Access input column values by their names, ex: batch[i]column_name
 
     var array = input.split("|");
-    output[i] = array[0] + "|" + array[1];
+    output[i] = array[0] + "|||" + array[1];
 	}
 })(batch, output);
 ]]></script>
@@ -40,16 +40,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-16 23:18:32</sys_created_on>
         <sys_id>aef186831b26f45092ce8514604bcbe2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Multiple Input Script - u_device_reported_name,u_serial_number</sys_name>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
         <sys_rte_eb_entity display_value="temp">beebcc5a1bea345092ce8514604bcbb2</sys_rte_eb_entity>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_rte_eb_multi_in_script_operation_aef186831b26f45092ce8514604bcbe2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-16 23:18:55</sys_updated_on>
+        <sys_updated_on>2021-09-22 02:26:08</sys_updated_on>
         <target_sys_rte_eb_field display_value="device_key">aaf186831b26f45092ce8514604bcbdf</target_sys_rte_eb_field>
         <target_sys_rte_eb_fields/>
         <type display_value="Multiple Input Script">a5584ee4739000102b6265a751ab9eae</type>

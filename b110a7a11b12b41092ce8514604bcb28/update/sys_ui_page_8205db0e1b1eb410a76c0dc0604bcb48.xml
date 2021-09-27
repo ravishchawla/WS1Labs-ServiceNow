@@ -5,97 +5,116 @@
 
 function onLoad() {
 	//set the value in the fields to existing values
-	var oauth_table = new GlideRecord('oauth_entity');
-	oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
-	oauth_table.query();
-	if (oauth_table.next()) {
-		var clientid = oauth_table.client_id;
-//		don't retrieve the existing client secret but just set it to a temp value;
-		var clientsecret = "********************";
-		var tokenurl = oauth_table.token_url;
+    var oauth_table = new GlideRecord('oauth_entity');
+    oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
+    oauth_table.query();
+    if (oauth_table.next()) {
+        var clientid = oauth_table.client_id;
+        //		don't retrieve the existing client secret but just set it to a temp value;
+        var clientsecret = "********************";
+        var tokenurl = oauth_table.token_url;
 
-		$("input_ws1_clientid").value = clientid;
-		$("input_ws1_clientsecret").value = clientsecret;
-		$("input_ws1_tokenurl").value = tokenurl;
-	}	
-	
-	var http_table = new GlideRecord('http_connection');
-	http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
-	http_table.query();
-	if (http_table.next()) {
-		var hostid = http_table.host;	
-		$("input_ws1_hostid").value = hostid;
-	}
-	
-	var new_install_script = new GlideAjax('x_vmw_ws1uem.FixScript');
-	new_install_script.addParam('sysparm_name', 'new_install');
-	
-	new_install_script.getXML(function parse_response(response) {
-		var result = response.responseXML.documentElement.getAttribute('answer');
-		
-		if (result == true) {
-			jslog('Running Fix script after installation');
-		}
-	});
+        $("input_ws1_clientid").value = clientid;
+        $("input_ws1_clientsecret").value = clientsecret;
+        $("input_ws1_tokenurl").value = tokenurl;
+    }
+
+    var http_table = new GlideRecord('http_connection');
+    http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
+    http_table.query();
+    if (http_table.next()) {
+        var hostid = http_table.host;
+        $("input_ws1_hostid").value = hostid;
+    }
+
 }
 
 // function to get the values from the existing oauth record
 // the aim is to collect these in the HTML and update them here
 function setValues() {
-	var clientid = gel('input_ws1_clientid').value;
-	var clientsecret = gel('input_ws1_clientsecret').value;
-	var tokenurl = gel('input_ws1_tokenurl').value;
-	var hostid = gel('input_ws1_hostid').value;
+    var clientid = gel('input_ws1_clientid').value;
+    var clientsecret = gel('input_ws1_clientsecret').value;
+    var tokenurl = gel('input_ws1_tokenurl').value;
+    var hostid = gel('input_ws1_hostid').value;
 	
-	var oauth_table = new GlideRecord('oauth_entity');
-	oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
-	oauth_table.query();
-	if (oauth_table.next()) {
-		oauth_table.client_id = clientid;
+	updateConsoleUrl(hostid);
 
-		// if the client secret hasn't changed then don't update it
-		if (clientsecret != "********************") {
-			oauth_table.client_secret = clientsecret;
-		}
-		
-		oauth_table.token_url = tokenurl;
-		oauth_table.update();
-	}
-	
-	var http_table = new GlideRecord('http_connection');
-	http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
-	http_table.query();
-	if (http_table.next()) {
-		http_table.host = hostid;		
-		http_table.update();
-	}
-	
-	// get the oauth token
-	testoauth();
+    var oauth_table = new GlideRecord('oauth_entity');
+    oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
+    oauth_table.query();
+    if (oauth_table.next()) {
+        oauth_table.client_id = clientid;
+
+        // if the client secret hasn't changed then don't update it
+        if (clientsecret != "********************") {
+            oauth_table.client_secret = clientsecret;
+        }
+
+        oauth_table.token_url = tokenurl;
+        oauth_table.update();
+    }
+
+    var http_table = new GlideRecord('http_connection');
+    http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
+    http_table.query();
+    if (http_table.next()) {
+        http_table.host = hostid;
+        http_table.update();
+    }
+
+    var new_install_script = new GlideAjax('x_vmw_ws1uem.FixScript');
+    new_install_script.addParam('sysparm_name', 'new_install');
+
+    new_install_script.getXML(function parse_response(response) {
+        var result = response.responseXML.documentElement.getAttribute('answer');
+
+        if (result == true) {
+            jslog('Running Fix script after installation');
+        }
+    });
+
+    // get the oauth token
+    testoauth();
 }
 
 
 // test the details are correct by getting the OAuth token
-function testoauth () {
-	var oauth_initiator_url = '';
-	var oauth_table = new GlideRecord('oauth_2_0_credentials');
-	oauth_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
-	oauth_table.query();
-	if (oauth_table.next()) {
-		var oauthProfileId = oauth_table.oauth_entity_profile;	
-		var oauthRequestorSysId = oauth_table.sys_id;
-		var oauthRequestorContext = 'oauth_2_0_credentials';
+function testoauth() {
+    var oauth_initiator_url = '';
+    var oauth_table = new GlideRecord('oauth_2_0_credentials');
+    oauth_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
+    oauth_table.query();
+    if (oauth_table.next()) {
+        var oauthProfileId = oauth_table.oauth_entity_profile;
+        var oauthRequestorSysId = oauth_table.sys_id;
+        var oauthRequestorContext = 'oauth_2_0_credentials';
 
-		oauth_initiator_url = '/oauth_client_credentials_input.do' +
-		'?sysparm_oauth_requestor_context=' + oauthRequestorContext +
-		'&sysparm_oauth_requestor=' + oauthRequestorSysId +
-		'&sysparm_oauth_provider_profile=' + oauthProfileId;
-		
-		window.open(oauth_initiator_url, '', 'height=500,width=800'); // pops up window
-	}
+        oauth_initiator_url = '/oauth_client_credentials_input.do' +
+            '?sysparm_oauth_requestor_context=' + oauthRequestorContext +
+            '&sysparm_oauth_requestor=' + oauthRequestorSysId +
+            '&sysparm_oauth_provider_profile=' + oauthProfileId;
+
+        window.open(oauth_initiator_url, '', 'height=500,width=800'); // pops up window
+    }
 }
 
-]]></client_script>
+function testConnection() {
+    document.getElementById("runprocessingscript").value = "testconnection";
+}
+
+// update the WS1 UEM Console URL
+function updateConsoleUrl(hostname) {
+	var consoleUrl = "https://" + hostname;
+
+    var action_table = new GlideRecord('sys_properties');
+    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURL");
+    action_table.query();
+    action_table.next();
+
+    action_table.value = consoleUrl;
+
+    action_table.update();
+}]]></client_script>
         <description>Configure the connection to Workspace ONE UEM</description>
         <direct>false</direct>
         <endpoint>x_vmw_ws1uem_WS1UEMConfigureConnection.do</endpoint>
@@ -103,77 +122,182 @@ function testoauth () {
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
     <g:ui_form>
 		
+	<style>
+		.content {
+			margin-left: 10px;
+			width: 40%;
+		}		
+		
+		.input-label {
+			font-size: medium;
+		}
+		
+		.input-wrapper {
+			margin-bottom: 30px;
+		}
+		
+		.button-wrapper {
+			margin-bottom: 15px;
+		}
+		
+		.test-message-wrapper {
+			margin-bottom: 10px;
+		}
+		
+		.test-connection-heading {
+			margin-bottom: 5px;
+		}
+	</style>
+		
 	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
-	<div style="margin-left:10px; margin-top:10px" id="div_ws1_hostid" >
-		<span style="display:inline-block; width:40%">
+	
+	<div class="content">
+		<div id="div_ws1_hostid" >
 			<g:form_label>
-				${gs.getMessage('WS1UEMHostnameAPI')}
+				<span class="input-label">${gs.getMessage('WS1UEMHostnameAPI')}</span>
 			</g:form_label>
-		</span>	
-	</div>
-	<div style="margin-left:10px; margin-bottom:30px;" id="div_ws1_hostid_input" >
-		<input type="text" name="input_ws1_hostid" id="input_ws1_hostid" table="http_connection" field="host" query="active=true" minlength="1" size="50"/>	
-	</div>
-		
-				
-	<div style="margin-left:10px" id="div_ws1_clientid" >
-		<span style="display:inline-block; width:40%">
+		</div>
+		<div class="input-wrapper" id="div_ws1_hostid_input" >
+			<input
+				type="text"
+				name="input_ws1_hostid"
+				id="input_ws1_hostid"
+				table="http_connection"
+				field="host"
+				query="active=true"
+				minlength="1"
+				size="50"/>	
+		</div>
+
+		<div id="div_ws1_clientid" >
 			<g:form_label>
-				${gs.getMessage('WS1UEMClientId')}
+				<span class="input-label">${gs.getMessage('WS1UEMClientId')}</span>
 			</g:form_label>
-		</span>	
-	</div>
-	<div style="margin-left:10px; margin-bottom:30px" id="div_ws1_clientid_input" >
-		<input type="text" name="input_ws1_clientid" id="input_ws1_clientid" table="oauth_table" field="client_id" query="active=true" minlength="1" size="50"/>	
-	</div>
-		
-		
-	<div style="margin-left:10px" id="div_ws1_clientsecret" >
-		<span style="display:inline-block; width:40%">
+		</div>
+		<div class="input-wrapper" id="div_ws1_clientid_input" >
+			<input
+				type="text"
+				name="input_ws1_clientid"
+				id="input_ws1_clientid"
+				table="oauth_table"
+				field="client_id"
+				query="active=true"
+				minlength="1"
+				size="50"/>	
+		</div>
+
+		<div id="div_ws1_clientsecret" >
 			<g:form_label>
-				${gs.getMessage('WS1UEMClientSecret')}
+				<span class="input-label">${gs.getMessage('WS1UEMClientSecret')}</span>
 			</g:form_label>
-		</span>	
-	</div>
-	<div style="margin-left:10px; margin-bottom:30px" id="div_ws1_clientsecret_input" >
-		<input type="password" name="input_ws1_clientsecret" id="input_ws1_clientsecret" table="oauth_table" field="client_secret" query="active=true" minlength="1" size="50"/>	</div>
-		
-		
-	<div style="margin-left:10px" id="div_ws1_tokenurl" >
-		<span style="display:inline-block; width:40%">
+		</div>
+		<div class="input-wrapper" id="div_ws1_clientsecret_input" >
+			<input
+				type="password"
+				name="input_ws1_clientsecret"
+				id="input_ws1_clientsecret"
+				table="oauth_table"
+				field="client_secret"
+				query="active=true"
+				minlength="1"
+				size="50"/>
+		</div>
+
+		<div id="div_ws1_tokenurl" >
 			<g:form_label>
-				${gs.getMessage('WS1UEMTokenURL')}
+				<span class="input-label">${gs.getMessage('WS1UEMTokenURL')}</span>
 			</g:form_label>
-		</span>	
-	</div>
-	<div style="margin-left:10px; margin-bottom:30px" id="div_ws1_token_input_input" >
-		<input type="text" name="input_ws1_tokenurl" id="input_ws1_tokenurl" table="oauth_table" field="token_url" query="active=true" minlength="1" size="50"/>		
-	</div>
+		</div>
+		<div class="input-wrapper" id="div_ws1_token_input_input" >
+			<input
+				type="text"
+				name="input_ws1_tokenurl"
+				id="input_ws1_tokenurl"
+				table="oauth_table"
+				field="token_url"
+				query="active=true"
+				minlength="1"
+				size="50"/>		
+		</div>
 		
-		
-	<div style="margin:10px" id="div_ws1_test" >
-		<span style="display:inline-block; width:40%">
+		<div class="button-wrapper" id="div_ws1_test" >
 			<g:form_label>
 				<button type="submit" onclick="setValues()">${gs.getMessage('WS1UEMGetToken')}</button>
 			</g:form_label>
-		</span>	
+		</div>
+		
+		<div class="test-connection-heading">
+			<span class="input-label">${gs.getMessage('WS1UEMITSMConnector')}</span>
+		</div>
+
+		<div class="test-message-wrapper">
+			<g:form_label>
+				${gs.getMessage('WS1UEMTestMessage')}
+			</g:form_label>
+		</div>	
+
+		<div id="div_ws1_testconnection" >
+			<g:form_label>
+				<button type="submit" id="div_ws1_testconnection_button" onclick="testConnection()">
+					${gs.getMessage('WS1UEMTestButton')}
+				</button>
+			</g:form_label>
+		</div>
+
 	</div>
 
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEMConfigureConnection</name>
-        <processing_script/>
+        <processing_script><![CDATA[if(runprocessingscript == "testconnection"){
+	
+    gs.info("Running verify action flow from UI Page");
+		
+	try {
+		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+		// sn_fd.FlowAPI.getRunner().action('x_vmw_uemconn_0.uemversion').inBackground().run();
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+		var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().run();
+		var outputs = result.getOutputs();
+
+		// Get Outputs:
+		// Note: outputs can only be retrieved when executing synchronously.
+		var variable = outputs['variable']; // String
+		var status = outputs['status']; // String
+		var response = outputs['response']; // String
+		var ws1productpersion = outputs['ws1productpersion']; // String
+		
+		gs.info("Workspace ONE UEM Platform Version: " + ws1productpersion);
+				
+		gs.setProperty('x_vmw_ws1uem.WS1UEM Platform', ws1productpersion);
+	
+		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productpersion);
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
+		gs.error(message);
+	}
+} else {
+	
+//	gs.addInfoMessage("processing");
+
+}
+
+	
+]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-19 23:34:10</sys_updated_on>
+        <sys_updated_on>2021-09-27 03:07:26</sys_updated_on>
     </sys_ui_page>
 </record_update>

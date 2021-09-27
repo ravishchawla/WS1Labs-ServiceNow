@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_vmw_ws1uem.WS1GGetUemAction</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>WS1GGetUemAction</name>
+        <script><![CDATA[var WS1GGetUemAction = Class.create();
+WS1GGetUemAction.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+   get_value:function() {
+		var action_table = new GlideRecordSecure('sys_choice');
+
+		action_table.addQuery('element', 'x_vmw_ws1uem_ws1action');
+		action_table.query();
+		
+		var value = '';
+		var inactive = '';
+
+		var return_value = [];
+		while (action_table.next()) {
+			value = action_table.getValue('value');
+			inactive = action_table.getValue('inactive');
+			
+            var json_obj =  JSON.stringify({'value' : value, 'inactive' : inactive});
+			
+			return_value.push(json_obj);
+		}
+
+		var answer = JSON.stringify(return_value);
+
+		gs.info('WS1GetUemAction return value ' + answer);
+
+		return answer;
+   } ,
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-24 18:47:14</sys_created_on>
+        <sys_id>f46e8e651bb67850a76c0dc0604bcbdd</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>WS1GGetUemAction</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-24 20:52:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

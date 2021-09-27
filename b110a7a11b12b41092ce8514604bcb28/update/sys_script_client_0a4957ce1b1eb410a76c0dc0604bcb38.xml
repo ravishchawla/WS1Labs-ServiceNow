@@ -10,11 +10,21 @@
         <messages/>
         <name>WS1UEMAction</name>
         <order/>
-        <script><![CDATA[function onLoad() {
-    //
-    // remove tab if WS1 UEM role is not enabled
+        <script><![CDATA[/**
+WS1UEMAction onLoad script runs when the Incident page
+opens, setting the default actions available to the user
+and obtaining UEM configurations for further customizability.
+**/
+function onLoad() {
+
+    /**
+    Obtain the User's authentication as either a standard or advanced
+    **/
     var isStandard = g_user.hasRole('x_vmw_ws1uem.ws1uemstandard');
     g_form.setValue('x_vmw_ws1uem_ws1action', '');
+
+    $("incident.x_vmw_ws1uem_ws1action").disabled = true;
+    //g_form.setReadOnly("x_vmw_ws1uem_ws1action", true);
 
     var ga_version = new GlideAjax('x_vmw_ws1uem.WS1GetPlatform');
     ga_version.addParam('sysparm_name', 'get_platform');
@@ -31,6 +41,7 @@
                 var ga = new GlideAjax('x_vmw_ws1uem.WS1GetActionFromOS');
                 ga.addParam('sysparm_name', 'get_action');
                 ga.addParam('sysparm_sid', sid);
+
                 ga.getXML(parse_os_name);
 
                 // The user has the standard WS1 UEM rights so check if advanced
@@ -40,8 +51,35 @@
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'enterprisewipe');
                 }
+/*
+                // get the WS1UEM URL system parameter 
+                var gadisplay = new GlideAjax('x_vmw_ws1uem.WS1UEMURLDisplay');
+                gadisplay.addParam('sysparm_name', 'get_url_display');
+                gadisplay.getXML(function parse_response(response) {
+                    var urldisplay = response.responseXML.documentElement.getAttribute('answer');
 
+                    // get the WS1UEM URL system parameter 
+                    if (urldisplay == "true") {
+                        var gaurl = new GlideAjax('x_vmw_ws1uem.WS1UEMURL');
+                        gaurl.addParam('sysparm_name', 'get_url');
+                        gaurl.addParam('sysparm_sid', sid);
+                        gaurl.getXML(function parse_response(response) {
+                            var url = response.responseXML.documentElement.getAttribute('answer');
+                            if (g_form.getValue('x_vmw_ws1uem_workspace_one_uem_console') == "") {
+                                g_form.setValue('x_vmw_ws1uem_workspace_one_uem_console', url);
+                           //     g_form.save();
+                            }
+                        });
+                    } else {
+                         g_form.setDisplay('x_vmw_ws1uem_workspace_one_uem_console', false);
 
+                        // if (g_form.getValue('x_vmw_ws1uem_workspace_one_uem_console') != "") {
+                        //    g_form.setValue('x_vmw_ws1uem_workspace_one_uem_console', "");
+                        //  g_form.save();
+                    }
+                    //}
+                });
+*/
                 var configItem = g_form.getValue('cmdb_ci');
                 if (!configItem) {
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
@@ -54,38 +92,17 @@
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'changepasscode');
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'softreset');
 
-
-                    // get the WS1UEM URL system parameter 
-                    var gadisplay = new GlideAjax('x_vmw_ws1uem.WS1UEMURLDisplay');
-                    gadisplay.addParam('sysparm_name', 'get_url_display');
-                    gadisplay.getXML(function parse_response(response) {
-                        var urldisplay = response.responseXML.documentElement.getAttribute('answer');
-
-                        // get the WS1UEM URL system parameter 
-                        if (urldisplay == "true") {
-                            var gaurl = new GlideAjax('x_vmw_ws1uem.WS1UEMURL');
-                            gaurl.addParam('sysparm_name', 'get_url');
-                            gaurl.addParam('sysparm_sid', sid);
-                            gaurl.getXML(function parse_response(response) {
-                                var url = response.responseXML.documentElement.getAttribute('answer');
-								if (g_form.getValue('x_vmw_ws1uem_workspace_one_uem_console') != url) {
-									g_form.setValue('x_vmw_ws1uem_workspace_one_uem_console', url);
-									g_form.save();
-								}
-                            });
-                        }
-						else {
-							if (g_form.getValue('x_vmw_ws1uem_workspace_one_uem_console') != "") {
-								g_form.setValue('x_vmw_ws1uem_workspace_one_uem_console', "");
-								g_form.save();
-							}
-						}
-                    });
                 }
             }
         }
     });
 
+    /**
+    Response callback from WS1GetActionFromOS to parse JSON configuration of UEM
+    Actions based on the current device's OS and version. Value is updated onto
+    the incident page via a field that can be read by the dialog popup when it
+    renders.
+    **/
     function parse_os_name(response) {
         response = response.responseXML.documentElement.getAttribute("answer");
 
@@ -97,6 +114,9 @@
                 g_form.removeOption('x_vmw_ws1uem_ws1action', key);
             }
         }
+        //g_form.setReadOnly("x_vmw_ws1uem_ws1action", false);
+        $("incident.x_vmw_ws1uem_ws1action").disabled = false;
+
     }
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -105,15 +125,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a4957ce1b1eb410a76c0dc0604bcb38</sys_id>
-        <sys_mod_count>57</sys_mod_count>
+        <sys_mod_count>86</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
-        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
-        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_0a4957ce1b1eb410a76c0dc0604bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-20 06:30:20</sys_updated_on>
+        <sys_updated_on>2021-09-26 02:30:56</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
