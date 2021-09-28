@@ -4,7 +4,7 @@
         <client_script><![CDATA[onLoad();
 
 function onLoad() {
-	//set the value in the fields to existing values
+    //set the value in the fields to existing values
     var oauth_table = new GlideRecord('oauth_entity');
     oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
     oauth_table.query();
@@ -25,6 +25,9 @@ function onLoad() {
     if (http_table.next()) {
         var hostid = http_table.host;
         $("input_ws1_hostid").value = hostid;
+    } else {
+        // create the http connection as it doesn't exist
+        createConnection();
     }
 
 }
@@ -36,8 +39,8 @@ function setValues() {
     var clientsecret = gel('input_ws1_clientsecret').value;
     var tokenurl = gel('input_ws1_tokenurl').value;
     var hostid = gel('input_ws1_hostid').value;
-	
-	updateConsoleUrl(hostid);
+
+    updateConsoleUrl(hostid);
 
     var oauth_table = new GlideRecord('oauth_entity');
     oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
@@ -104,7 +107,7 @@ function testConnection() {
 
 // update the WS1 UEM Console URL
 function updateConsoleUrl(hostname) {
-	var consoleUrl = "https://" + hostname;
+    var consoleUrl = "https://" + hostname;
 
     var action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURL");
@@ -114,6 +117,53 @@ function updateConsoleUrl(hostname) {
     action_table.value = consoleUrl;
 
     action_table.update();
+}
+
+
+// create connection records
+function createConnection() {
+
+	
+	alert ('Here');
+	
+    // get the connection alias
+    var connection = new GlideRecord('sys_alias');
+    connection.addQuery('name', "Workspace ONE UEM Connection");
+    connection.query();
+    connection.next();
+
+
+    var credential = new GlideRecord('oauth_2_0_credentials');
+    credential.addQuery('name', "Workspace ONE UEM OAuth Credentials info");
+    credential.query();
+    if (!credential.next()) {
+        
+		var provider = new GlideRecord('oauth_entity_profile');
+		provider.addQuery('name', "Workspace ONE UEM OAuth Provider");
+		provider.query();
+		provider.next();
+		
+		credential.initialize();
+        credential.name = 'Workspace ONE UEM OAuth Credentials info';
+        credential.active = 'true';
+        credential.oauth_entity_profile = provider.sys_id;
+		credential.insert();
+    }
+
+
+    // create the http record
+    var http_table = new GlideRecord('http_connection');
+    http_table.initialize();
+    http_table.name = 'Workspace ONE UEM OAuth Credentials';
+    http_table.port = '443';
+    http_table.base_path = '/api';
+    http_table.protocol = 'https';
+    http_table.url_builder = 'true';
+    http_table.connection_alias = connection.sys_id;
+    http_table.credential = credential.sys_id;
+
+    http_table.insert();
+
 }]]></client_script>
         <description>Configure the connection to Workspace ONE UEM</description>
         <direct>false</direct>
@@ -286,13 +336,13 @@ function updateConsoleUrl(hostname) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-27 08:02:58</sys_updated_on>
+        <sys_updated_on>2021-09-28 04:13:57</sys_updated_on>
     </sys_ui_page>
 </record_update>
