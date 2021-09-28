@@ -27,8 +27,10 @@ function onLoad() {
 	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
 	action_query.addParam('sysparm_name', 'get_value');
 	action_query.getXML(function parse_response(response) {
+		
 		$("div_ws1_WS1UEMSelectStandardActions").style.display = "";
 		$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "";
+		
 		var actions = response.responseXML.documentElement.getAttribute('answer');
 		var actions_json = JSON.parse(actions);
 		
@@ -45,10 +47,8 @@ function onLoad() {
 				}
 			}
 		}
-	}
-);
+	});
 }
-
 
 // update checked box
 function updateValue(cb, actionType) {
@@ -129,8 +129,6 @@ function updateValue(cb, actionType) {
 			border-right: 1px solid lightgrey;
 		}
 	</style>
-		
-	<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
 		
 	<div class="content-wrapper">
 
@@ -293,13 +291,13 @@ function updateValue(cb, actionType) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:30:38</sys_created_on>
         <sys_id>1ba4130e1b1eb410a76c0dc0604bcb37</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>85</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-27 20:23:05</sys_updated_on>
+        <sys_updated_on>2021-09-28 06:57:31</sys_updated_on>
     </sys_ui_page>
 </record_update>
