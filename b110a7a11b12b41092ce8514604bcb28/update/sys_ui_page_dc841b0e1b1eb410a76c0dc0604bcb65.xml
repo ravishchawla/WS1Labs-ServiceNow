@@ -345,31 +345,33 @@ function set_action_as_main_select_input(select_input, option_name) {
 Validate that a 6-pin field has
 non-empty values within valid range.
 **/
-function validatePin(pin,order) {
+function validatePin(pin, nextIndex) {
 	
 	var validPin = true;
-	for (var i=0; i<6; i++) {
-		var pinid = 'input_ws1_unlock_pin' + i;
-		unlockpin = gel(pinid).value;
-		if (unlockpin == "") {
+	for (var i = 0; i < 6; i++) {
+		
+		var currentPinId = 'input_ws1_unlock_pin' + i;
+		
+		currentPinValue = gel(currentPinId).value;
+		
+		if (currentPinValue === "") {
 			validPin = false;
 		}
 		else {
-			var unlockpinInt = parseInt(unlockpin);
-			if (isNaN(unlockpin) || (unlockpinInt < 0 || unlockpinInt > 9)) {
+			var pinInt = parseInt(currentPinValue);
+			if (isNaN(currentPinValue) || (pinInt < 0 || pinInt > 9)) {
 				validPin = false;
-				gel(pinid).value = "";
+				gel(currentPinId).value = "";
 			}
-			else {				
-				if (pin.id == pinid){
-					var pinfocus = 'input_ws1_unlock_pin' + order;
-					gel(pinfocus).focus();
+			else {
+				if (pin.id === currentPinId) {
+					var nextPin = 'input_ws1_unlock_pin' + nextIndex;
+					gel(nextPin).focus();
 				}
 			}
 		}
 	}
-	
-	if (validPin == true) {
+	if (validPin === true) {
 		$("submitData").disabled = false;
 	}
 	else {
@@ -459,9 +461,28 @@ function set_ws1_check_state(state) {
 			margin: 10px 0;
 		}
 		
+		.passcode-field {
+			display: flex;
+			align-items: center;
+			margin-top: 0.5em;
+		}
+		
 		.passcode-label {
-			display: inline-block;
-			min-width: 40%;
+			min-width: 30%;
+		}
+		
+		.pin-field {
+			display: flex;
+			align-items: center;
+		}
+		
+		.pin-digit {
+			text-align: center;
+			margin: 0 2px;
+		}
+		
+		.no-margin {
+			margin: 0;
 		}
 	</style>
 
@@ -475,51 +496,77 @@ function set_ws1_check_state(state) {
 	</div>
 	
 	<div class="body">
-		<div id="div_ws1_text" hidden="true">
-		</div>
+		<div id="div_ws1_text" hidden="true" />
 
-		<div id="div_ws1_caption" class="caption-section" hidden="true">
-		</div>
+		<div id="div_ws1_caption" class="caption-section" hidden="true" />
 
 		<div id="div_ws1_message" class="section" hidden="true">
 			<g:form_label>
 				${gs.getMessage('WS1UEMMessageToSend')}
 			</g:form_label>
-			<br>
-				<textarea rows = "5" cols = "60" name="input_ws1_message" id="input_ws1_message" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_send_message" query="active=true" oninput = "checkMessage()" onchange = "checkMessage()">
-				</textarea>
-			</br>
+			<textarea
+				id="input_ws1_message"
+				name="input_ws1_message"
+				field="x_vmw_ws1uem_ws1_send_message"
+				rows="5"
+				cols="60"
+				table="incident"
+				mandatory="true"
+				query="active=true"
+				oninput="checkMessage()"
+				onchange="checkMessage()">
+			</textarea>
 		</div>
 		
 		<div id="div_ws1_passcode" class="section" hidden="true">
-			<div class="passcode-label">
-				<g:form_label>
-					${gs.getMessage('WS1UEMPasscode')}
-				</g:form_label>
-			</div>	
-			<input type="password" name="input_ws1_passcode" id="input_ws1_passcode" table="incident"    field="x_vmw_ws1uem_ws1_passcode" query="active=true" size="10" oninput = "validatePasscode()" onchange = "validatePasscode()"/>
-			<div>
-			<span style="display:inline-block; width:40%">
-				<g:form_label>
-					${gs.getMessage('WS1UEMConfirmPasscode')}
-				</g:form_label>
-			</span>	
-			<input type="password" name="input_ws1_passcode_confirm" id="input_ws1_passcode_confirm" table="incident"    field="x_vmw_ws1uem_ws1_passcode" query="active=true" size="10" oninput = "validatePasscode()" onchange = "validatePasscode()"/>
+			<div class="passcode-field">
+				<div class="passcode-label">
+					<g:form_label class="no-margin">
+						${gs.getMessage('WS1UEMPasscode')}
+					</g:form_label>
+				</div>	
+				<input
+					id="input_ws1_passcode"
+					name="input_ws1_passcode"
+					field="x_vmw_ws1uem_ws1_passcode"
+					type="password"
+					table="incident"
+					query="active=true"
+					size="20"
+					oninput="validatePasscode()"
+					onchange="validatePasscode()"/>
+			</div>
+			<div class="passcode-field">
+				<div class="passcode-label">
+					<g:form_label class="no-margin">
+						${gs.getMessage('WS1UEMConfirmPasscode')}
+					</g:form_label>
+				</div>	
+				<input
+					id="input_ws1_passcode_confirm"
+					name="input_ws1_passcode_confirm"
+					field="x_vmw_ws1uem_ws1_passcode"
+					type="password"
+					table="incident"
+					query="active=true"
+					size="20"
+					oninput="validatePasscode()"
+					onchange="validatePasscode()"/>
 			</div>
 		</div>
 		
-		<div id="div_ws1_unlock_pin" class="section" hidden="true">
-			<span style="display:inline-block; width:40%">
-				<g:form_label>
+		<div id="div_ws1_unlock_pin" class="section pin-field" hidden="true">
+			<div class="passcode-label">
+				<g:form_label class="no-margin">
 					${gs.getMessage('WS1UEMUnlockPin')}
 				</g:form_label>
-			</span>	
-			<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'1')" />
-			<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'2')" />
-			<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'3')" />
-			<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'4')" />
-			<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" />
-			<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" />
+			</div>	
+			<input class="pin-digit" type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 1)" />
+			<input class="pin-digit" type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 2)" />
+			<input class="pin-digit" type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 3)" />
+			<input class="pin-digit" type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 4)" />
+			<input class="pin-digit" type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 5)" />
+			<input class="pin-digit" type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, '5')" />
 		</div>
 		
 		<div id="div_ws1_assist_type" class="section" hidden="false">
@@ -619,13 +666,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>99</sys_mod_count>
+        <sys_mod_count>116</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-27 07:55:50</sys_updated_on>
+        <sys_updated_on>2021-09-28 01:33:14</sys_updated_on>
     </sys_ui_page>
 </record_update>
