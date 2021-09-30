@@ -7,7 +7,7 @@
 WS1UEM Actions renders the Guided Setup fields for the user.
 **/
 function onLoad() {
-	
+
 	var action_item_map = {
 		"devicelogs" : "input_ws1_requestlogs",
 		"enterprisewipe" : "input_ws1_enterprisewipe",
@@ -20,27 +20,29 @@ function onLoad() {
 		"lock" : "input_ws1_lock",
 		"refreshdevices" : "input_ws1_refreshdevices"
 	};
-	
+
 	$("div_ws1_WS1UEMSelectStandardActions").style.display = "none";
 	$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "none";
 
 	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
 	action_query.addParam('sysparm_name', 'get_value');
 	action_query.getXML(function parse_response(response) {
-		
+
 		$("div_ws1_WS1UEMSelectStandardActions").style.display = "";
 		$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "";
-		
+
 		var actions = response.responseXML.documentElement.getAttribute('answer');
 		var actions_json = JSON.parse(actions);
-		
+
 		for (var i = 0; i < actions_json.length; i++) {
 			var action_item = JSON.parse(actions_json[i]);
-			
+
 			if (action_item.value in action_item_map) {
 				var item_element = action_item_map[action_item.value];
 				
-				if (action_item.inactive == 'true') {
+				console.log(action_item);
+
+				if (action_item.inactive === '1') {
 					$(item_element).checked = false;
 				} else {
 					$(item_element).checked = true;
@@ -56,29 +58,13 @@ function updateValue(cb, actionType) {
 	action_table.addQuery('element', "x_vmw_ws1uem_ws1action");
 	action_table.addQuery('value', actionType);
 	action_table.query();
-	
+
 	while (action_table.next()) {
 		action_table.inactive = !cb.checked;
 		action_table.update();
 		return;
 	}
-	
-// 	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
-// 	action_query.addParam('sysparm_name', 'set_value');
-// 	action_query.addParam('sysparm_new_value', !cb.checked);
-	
-// 	action_query.addParam('sysparm_actiontype', actionType);
-	
-// 	action_query.getXML(function parse_response(response) {
-// 		var result = response.responseXML.documentElement.getAttribute('answer');
-// 		if (result == true) {
-// 			return;
-// 		}
-// 	});
-}
-
-
-]]></client_script>
+}]]></client_script>
         <description>Configure the actions available in the guided setup&#13;
 </description>
         <direct>false</direct>
@@ -86,50 +72,50 @@ function updateValue(cb, actionType) {
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
     <g:ui_form>
-		
+
 	<style>
 		.content-wrapper {
 			display: flex;
 		}
-		
+
 		.actions-group {
 			display: flex;
 			flex-direction: column;
 		}
-		
+
 		.actions-table {
 			margin: 5px 20px;
 		}
-		
+
 		.actions-table tr {
 			border-bottom: 1px solid lightgrey;
 		}
-		
+
 		.actions-table tr:last-child {
 			border-bottom: none;
 		}
-		
+
 		.actions-title {
 			font-size: medium;
 		}
-		
+
 		.table-heading {
 			font-size: medium;
 		}
-		
+
 		.cell {
 			padding: 5px;
 		}
-		
+
 		.centered {
 			text-align: center;
 		}
-		
+
 		.right-border {
 			border-right: 1px solid lightgrey;
 		}
 	</style>
-		
+
 	<div class="content-wrapper">
 
 		<div id="div_ws1_WS1UEMSelectStandardActions" class="actions-group right-border" style="padding-right: 15px">
@@ -150,96 +136,128 @@ function updateValue(cb, actionType) {
 				</tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMChangePasscode')} 
+					${gs.getMessage('WS1UEMChangePasscode')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_changepasscode"
-						id="input_ws1_changepasscode"
-						onclick="updateValue(this, 'changepasscode')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_changepasscode"
+							id="input_ws1_changepasscode"
+							onclick="updateValue(this, 'changepasscode')"
+							style="margin: 0"/>
+						<label for="input_ws1_changepasscode" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMLockDevice')}  
+					${gs.getMessage('WS1UEMLockDevice')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_lock"
-						id="input_ws1_lock"
-						onclick="updateValue(this, 'lock')"
-						style="margin: 0"/>
-				</td></tr>	
-
-				<tr><td class="cell">
-					${gs.getMessage('WS1UEMRefresh')}  
-					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_refreshdevices"
-						id="input_ws1_refreshdevices"
-						onclick="updateValue(this, 'refreshdevices')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_lock"
+							id="input_ws1_lock"
+							onclick="updateValue(this, 'lock')"
+							style="margin: 0"/>
+						<label for="input_ws1_lock" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMRemoteAssist')}  
+					${gs.getMessage('WS1UEMRefresh')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_remoteassist"
-						id="input_ws1_remoteassist"
-						onclick="updateValue(this, 'assist')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_refreshdevices"
+							id="input_ws1_refreshdevices"
+							onclick="updateValue(this, 'refreshdevices')"
+							style="margin: 0"/>
+						<label for="input_ws1_refreshdevices" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMRemoteAssist')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_remoteassist"
+							id="input_ws1_remoteassist"
+							onclick="updateValue(this, 'assist')"
+							style="margin: 0"/>
+						<label for="input_ws1_remoteassist" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
 					${gs.getMessage('WS1UEMRequestLogs')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_requestlogs"
-						id="input_ws1_requestlogs"
-						onclick="updateValue(this, 'devicelogs')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_requestlogs"
+							id="input_ws1_requestlogs"
+							onclick="updateValue(this, 'devicelogs')"
+							style="margin: 0"/>
+						<label for="input_ws1_requestlogs" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMSendMessage')} 
+					${gs.getMessage('WS1UEMSendMessage')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_message"
-						id="input_ws1_message"
-						onclick="updateValue(this, 'message')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_message"
+							id="input_ws1_message"
+							onclick="updateValue(this, 'message')"
+							style="margin: 0"/>
+						<label for="input_ws1_message" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMSoftReset')} 
+					${gs.getMessage('WS1UEMSoftReset')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_softreset"
-						id="input_ws1_softreset"
-						onclick="updateValue(this, 'softreset')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_softreset"
+							id="input_ws1_softreset"
+							onclick="updateValue(this, 'softreset')"
+							style="margin: 0"/>
+						<label for="input_ws1_softreset" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMSyncDevice')} 
+					${gs.getMessage('WS1UEMSyncDevice')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_syncdevice"
-						id="input_ws1_syncdevice"
-						onclick="updateValue(this, 'syncdevice')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_syncdevice"
+							id="input_ws1_syncdevice"
+							onclick="updateValue(this, 'syncdevice')"
+							style="margin: 0"/>
+						<label for="input_ws1_syncdevice" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 			</table>
 		</div>
-		
-		
+
+
 		<div id="div_ws1_WS1UEMSelectAdvancedActions" class="actions-group" style="padding-left: 15px;">
 			<div class="actions-title">
 				<g:form_label>
@@ -260,29 +278,37 @@ function updateValue(cb, actionType) {
 				<tr><td class="cell">
 					${gs.getMessage('WS1UEMDeviceWipe')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_devicewipe"
-						id="input_ws1_devicewipe"
-						onclick="updateValue(this, 'devicewipe')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_devicewipe"
+							id="input_ws1_devicewipe"
+							onclick="updateValue(this, 'devicewipe')"
+							style="margin: 0"/>
+						<label for="input_ws1_devicewipe" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 
 				<tr><td class="cell">
-					${gs.getMessage('WS1UEMEnterpriseWipe')}  
+					${gs.getMessage('WS1UEMEnterpriseWipe')}
 					</td><td class="cell centered">
-					<input
-						type="checkbox"
-						name="input_ws1_enterprisewipe"
-						id="input_ws1_enterprisewipe"
-						onclick="updateValue(this, 'enterprisewipe')"
-						style="margin: 0"/>
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_enterprisewipe"
+							id="input_ws1_enterprisewipe"
+							onclick="updateValue(this, 'enterprisewipe')"
+							style="margin: 0"/>
+						<label for="input_ws1_enterprisewipe" class="checkbox-label"></label>
+					</span>
 				</td></tr>
 			</table>
 		</div>
-		
+
 	</div>
-	
+
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEMActions</name>
@@ -291,13 +317,13 @@ function updateValue(cb, actionType) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:30:38</sys_created_on>
         <sys_id>1ba4130e1b1eb410a76c0dc0604bcb37</sys_id>
-        <sys_mod_count>85</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-28 06:57:31</sys_updated_on>
+        <sys_updated_on>2021-09-30 00:07:44</sys_updated_on>
     </sys_ui_page>
 </record_update>

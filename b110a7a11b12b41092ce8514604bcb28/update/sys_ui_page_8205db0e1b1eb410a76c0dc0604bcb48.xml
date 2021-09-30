@@ -6,7 +6,7 @@
 function onLoad() {
     //set the value in the fields to existing values
     var oauth_table = new GlideRecord('oauth_entity');
-    oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
+    oauth_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Provider");
     oauth_table.query();
     if (oauth_table.next()) {
         var clientid = oauth_table.client_id;
@@ -20,7 +20,7 @@ function onLoad() {
     }
 
     var http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
+    http_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
     http_table.query();
     if (http_table.next()) {
         var hostid = http_table.host;
@@ -43,7 +43,7 @@ function setValues() {
     updateConsoleUrl(hostid);
 
     var oauth_table = new GlideRecord('oauth_entity');
-    oauth_table.addQuery('name', "Workspace ONE UEM OAuth Provider");
+    oauth_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Provider");
     oauth_table.query();
     if (oauth_table.next()) {
         oauth_table.client_id = clientid;
@@ -58,7 +58,7 @@ function setValues() {
     }
 
     var http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
+    http_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
     http_table.query();
     if (http_table.next()) {
         http_table.host = hostid;
@@ -85,7 +85,7 @@ function setValues() {
 function testoauth() {
     var oauth_initiator_url = '';
     var oauth_table = new GlideRecord('oauth_2_0_credentials');
-    oauth_table.addQuery('name', "Workspace ONE UEM OAuth Credentials");
+    oauth_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
     oauth_table.query();
     if (oauth_table.next()) {
         var oauthProfileId = oauth_table.oauth_entity_profile;
@@ -97,7 +97,7 @@ function testoauth() {
             '&sysparm_oauth_requestor=' + oauthRequestorSysId +
             '&sysparm_oauth_provider_profile=' + oauthProfileId;
 
-        window.open(oauth_initiator_url, '', 'height=500,width=800'); // pops up window
+        window.open(oauth_initiator_url, '', 'height=200,width=800'); // pops up window
     }
 }
 
@@ -122,43 +122,47 @@ function updateConsoleUrl(hostname) {
 
 // create connection records
 function createConnection() {
-	
+
     // get the connection alias
     var connection = new GlideRecord('sys_alias');
-    connection.addQuery('name', "Workspace ONE UEM Connection");
+    connection.addQuery('name', "Workspace ONE UEM ITSM Connection");
     connection.query();
-    connection.next();
 
-
-    var credential = new GlideRecord('oauth_2_0_credentials');
-    credential.addQuery('name', "Workspace ONE UEM OAuth Credentials info");
-    credential.query();
-    if (!credential.next()) {
-        
-		var provider = new GlideRecord('oauth_entity_profile');
-		provider.addQuery('name', "Workspace ONE UEM OAuth Provider");
-		provider.query();
-		provider.next();
-		
-		credential.initialize();
-        credential.name = 'Workspace ONE UEM OAuth Credentials info';
-        credential.active = 'true';
-        credential.oauth_entity_profile = provider.sys_id;
-		credential.insert();
+    if (!connection.next()) {
+        jslog('Credential missing');
+        return;
     }
 
+    var credential = new GlideRecord('oauth_2_0_credentials');
+    credential.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
+    credential.query();
+    if (!credential.next()) {
+        var provider = new GlideRecord('oauth_entity_profile');
+        provider.addQuery('name', "Workspace ONE UEM ITSM OAuth Provider");
+        provider.query();
+        provider.next();
+
+        credential.initialize();
+        credential.name = 'Workspace ONE UEM ITSM OAuth Credentials';
+        credential.oauth_entity_profile = provider.sys_id;
+        credential.insert();
+		
+		// query to get the new record
+		credential.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
+		credential.query();
+		credential.next();
+    }
 
     // create the http record
     var http_table = new GlideRecord('http_connection');
     http_table.initialize();
-    http_table.name = 'Workspace ONE UEM OAuth Credentials';
+    http_table.name = 'Workspace ONE UEM ITSM OAuth Credentials';
     http_table.port = '443';
     http_table.base_path = '/api';
     http_table.protocol = 'https';
     http_table.url_builder = 'true';
     http_table.connection_alias = connection.sys_id;
     http_table.credential = credential.sys_id;
-
     http_table.insert();
 
 }]]></client_script>
@@ -269,7 +273,9 @@ function createConnection() {
 		
 		<div class="button-wrapper" id="div_ws1_test" >
 			<g:form_label>
-				<button type="submit" onclick="setValues()">${gs.getMessage('WS1UEMGetToken')}</button>
+				<button type="submit" class="btn btn-primary" onclick="setValues()">
+					${gs.getMessage('WS1UEMGetToken')}
+				</button>
 			</g:form_label>
 		</div>
 		
@@ -298,7 +304,7 @@ function createConnection() {
         <name>WS1UEMConfigureConnection</name>
         <processing_script><![CDATA[if(runprocessingscript == "testconnection"){
 	
-    gs.info("Running verify action flow from UI Page");
+    gs.info("Running get platform action flow from UI Page");
 		
 	try {
 		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
@@ -324,7 +330,7 @@ function createConnection() {
 	} catch (ex) {
 		var message = ex.getMessage();
 		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
-		gs.error(message);
+//		gs.error(message);
 	}
 } 
 	
@@ -333,13 +339,13 @@ function createConnection() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-28 05:09:10</sys_updated_on>
+        <sys_updated_on>2021-09-29 22:51:23</sys_updated_on>
     </sys_ui_page>
 </record_update>
