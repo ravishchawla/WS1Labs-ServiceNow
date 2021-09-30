@@ -9,48 +9,48 @@ passed in from the calling page.
 **/
 function onLoad() {
 
-	var ws1_actions_response;
+    var ws1_actions_response;
 
-	var action = $("ws1_action");
+    var action = $("ws1_action");
 
-	/**
-	For debugging purposes, if an action is not provided,
-	Test values are loaded in from the WS1 Testing table.
-	**/
-	if ((!action) || (action.value.includes("Undefined"))) {
-			var ga_test_action = new GlideAjax('x_vmw_ws1uem.WS1GetTestAction');
-			var ga_test_json = new GlideAjax('x_vmw_ws1uem.WS1TestOSActionsJSON');
+    /**
+    For debugging purposes, if an action is not provided,
+    Test values are loaded in from the WS1 Testing table.
+    **/
+    if ((!action) || (action.value.includes("Undefined"))) {
+        var ga_test_action = new GlideAjax('x_vmw_ws1uem.WS1GetTestAction');
+        var ga_test_json = new GlideAjax('x_vmw_ws1uem.WS1TestOSActionsJSON');
 
-			ga_test_action.addParam('sysparm_name', 'get_test_action');
-			ga_test_json.addParam('sysparm_name', 'get_test_json');
+        ga_test_action.addParam('sysparm_name', 'get_test_action');
+        ga_test_json.addParam('sysparm_name', 'get_test_json');
 
-			ga_test_action.getXML(function parse_response(response) {
-				action = response.responseXML.documentElement.getAttribute('answer');
-				ws1_actions_response = {};
+        ga_test_action.getXML(function parse_response(response) {
+            action = response.responseXML.documentElement.getAttribute('answer');
+            ws1_actions_response = {};
 
-				ga_test_json.getXML(function parse_json_response(response) {
-					ws1_actions_response = response.responseXML.documentElement.getAttribute('answer');
+            ga_test_json.getXML(function parse_json_response(response) {
+                ws1_actions_response = response.responseXML.documentElement.getAttribute('answer');
 
-					try {
-						ws1_actions_response = JSON.parse(ws1_actions_response);
-					} catch(e) {
-						ws1_actions_response = {};
-					}
+                try {
+                    ws1_actions_response = JSON.parse(ws1_actions_response);
+                } catch (e) {
+                    ws1_actions_response = {};
+                }
 
-					loadPopupContents(action, ws1_actions_response);
-				});
-			});
-	} else {
-		/**
-		A JSON containing UEM configurations for an OS will be loaded in
-		from the incidents page, previously stored by the the loading method.
-		**/
-		ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
+                loadPopupContents(action, ws1_actions_response);
+            });
+        });
+    } else {
+        /**
+        A JSON containing UEM configurations for an OS will be loaded in
+        from the incidents page, previously stored by the the loading method.
+        **/
+        ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
 
-		ws1_actions_response = JSON.parse(ws1_actions_response.value);
+        ws1_actions_response = JSON.parse(ws1_actions_response.value);
 
-		loadPopupContents(action.value, ws1_actions_response);
-	}
+        loadPopupContents(action.value, ws1_actions_response);
+    }
 }
 
 /**
@@ -58,199 +58,214 @@ Based on the provided UEM Action configuration, set the state of
 specific fields and as hidden or visible.
 **/
 function loadPopupContents(action, ws1_actions_response) {
-	var stringText;
+    var stringText;
 
-	show_message(false);
-	show_unlock_passcode(false);
-	show_unlock_pin(false);
-	$("div_ws1_alert").hidden = true;
-	show_check(false);
+    show_message(false);
+    show_unlock_passcode(false);
+    show_unlock_pin(false);
+    $("div_ws1_alert").hidden = true;
+    show_check(false);
 
-	action = action.trim();
+    action = action.trim();
 
-	if (action === "assist") {
+    if (action === "assist") {
 
         stringText = getMessage('WS1UEMAssistInfo');
 
-		$("div_ws1_assist_type").hidden = false;
+        $("div_ws1_assist_type").hidden = false;
 
-		var select_dropdown_id = "input_ws1_assist_type";
+        var select_dropdown_id = "input_ws1_assist_type";
 
-		var input_options = [];
-		for (var key in ws1_actions_response) {
+        var input_options = [];
+        for (var key in ws1_actions_response) {
 
-			if (key.includes('assist_')) {
+            if (key.includes('assist_')) {
 
-				if (!ws1_actions_response[key]) {
+                if (!ws1_actions_response[key]) {
 
-					remove_actions_from_select_input(select_dropdown_id, key.substring(7));
+                    remove_actions_from_select_input(select_dropdown_id, key.substring(7));
 
-				} else {
-					input_options.push(key.substring(7));
-				}
-			}
-		}
-		input_options.sort().reverse();
+                } else {
+                    input_options.push(key.substring(7));
+                }
+            }
+        }
+        input_options.sort().reverse();
 
-		if ($("input_ws1_assist_type").length === 0) {
-			$("div_ws1_assist_type").hidden = true;
-		} else {
-			set_action_as_main_select_input(select_dropdown_id, input_options[0]);
-		}
-	} else if (action === "message") {
+        if ($("input_ws1_assist_type").length === 0) {
+            $("div_ws1_assist_type").hidden = true;
+        } else {
+            set_action_as_main_select_input(select_dropdown_id, input_options[0]);
+        }
+    } else if (action === "message") {
 
-		stringText = getMessage('WS1UEMMessageInfo');
+        stringText = getMessage('WS1UEMMessageInfo');
 
-		$("submitData").disabled = true;
+        $("submitData").disabled = true;
 
-		show_message(true);
+        show_message(true);
 
-	} else if (action === "devicelogs") {
+    } else if (action === "devicelogs") {
 
-		stringText = getMessage('WS1UEMDeviceLogsInfo');
+        stringText = getMessage('WS1UEMDeviceLogsInfo');
 
-	} else if (action === "changepasscode") {
+    } else if (action === "changepasscode") {
 
-		stringText = getMessage('WS1UEMPasscodeInfo');
+        stringText = getMessage('WS1UEMPasscodeInfo');
 
-		$("submitData").disabled = true;
+        $("submitData").disabled = true;
 
-		show_unlock_passcode(true);
+        show_unlock_passcode(true);
 
-	} else if (action === "lock") {
+    } else if (action === "lock") {
 
-		stringText = getMessage('WS1UEMLockInfo');
+        stringText = getMessage('WS1UEMLockInfo');
 
-		if (ws1_actions_response["lock_mac"]) {
-			$("submitData").disabled = true;
+        if (ws1_actions_response["lock_mac"]) {
+            $("submitData").disabled = true;
 
-			show_unlock_pin(true);
-			$("div_ws1_alert").hidden = false;
-			$("label_ws1_alert_text").innerHTML = getMessage('WS1UEMRememberPin');
-		}
-	} else if (action === "enterprisewipe") {
+            show_unlock_pin(true);
+            $("div_ws1_alert").hidden = false;
+            $("label_ws1_alert_text").innerHTML = getMessage('WS1UEMRememberPin');
+        }
+    } else if (action === "enterprisewipe") {
 
-		stringText = getMessage('WS1UEMEnterpriseWipeInfo');
+        stringText = getMessage('WS1UEMEnterpriseWipeInfo');
 
-		show_check(true);
+        show_check(true);
 
-		$("submitData").disabled = true;
-		$("div_ws1_alert").hidden = false;
-		$("label_ws1_alert_text").innerHTML = getMessage('WS1UEMWarningEnterpriseWipe');
+        $("submitData").disabled = true;
+        $("div_ws1_alert").hidden = false;
+        $("label_ws1_alert_text").innerHTML = getMessage('WS1UEMWarningEnterpriseWipe');
 
-	} else if (action === "softreset") {
+    } else if (action === "softreset") {
 
-		stringText = getMessage('WS1UEMSoftResetInfo');
+        stringText = getMessage('WS1UEMSoftResetInfo');
 
-	} else if (action === "syncdevice") {
+    } else if (action === "syncdevice") {
 
-		stringText = getMessage('WS1UEMSyncDeviceInfo');
+        stringText = getMessage('WS1UEMSyncDeviceInfo');
 
-	} else if (action === "devicewipe") {
+    } else if (action === "devicewipe") {
 
-		stringText = getMessage('WS1UEMDeviceWipeInfo');
+        stringText = getMessage('WS1UEMDeviceWipeInfo');
 
-		var warningMessage = getMessage('WS1UEMWarningDeviceWipe');
+        var warningMessage = getMessage('WS1UEMWarningDeviceWipe');
 
-		if (ws1_actions_response["devicewipe_mac"] == true) {
+        if (ws1_actions_response["devicewipe_mac"] == true) {
 
-			$("submitData").disabled = true;
+            $("submitData").disabled = true;
 
-			show_unlock_pin(true);
+            show_unlock_pin(true);
 
-			warningMessage = warningMessage + " " + getMessage('WS1UEMRememberPin');
+            warningMessage = warningMessage + " " + getMessage('WS1UEMRememberPin');
 
-		} else {
+        } else {
 
-			show_ws1_check(true);
+            show_ws1_check(true);
 
-			$("submitData").disabled = true;
-		}
+            $("submitData").disabled = true;
+        }
 
-		$("div_ws1_alert").hidden = false;
-		$("label_ws1_alert_text").innerHTML = warningMessage;
-	}
-	else if (action === "refreshdevices") {
+        $("div_ws1_alert").hidden = false;
+        $("label_ws1_alert_text").innerHTML = warningMessage;
+    } else if (action === "refreshdevices") {
 
-		stringText = getMessage('WS1UEMRefreshDevices');
-	}
+        stringText = getMessage('WS1UEMRefreshDevices');
+    }
 
-	// display informational message for action type
-	$("div_ws1_text").innerHTML = stringText;
-	$("div_ws1_text").hidden = false;
+    // display informational message for action type
+    $("div_ws1_text").innerHTML = stringText;
+    $("div_ws1_text").hidden = false;
 }
 
 function continueOK() {
 
-	var action_inputs = {};
+    var action_inputs = {};
 
-	action_inputs['action'] = gel('ws1_action').value;
+    action_inputs['action'] = gel('ws1_action').value;
 
-	var unlock_pin = "";
-	for (var i = 0; i < 6; i++) {
+    var unlock_pin = "";
+    for (var i = 0; i < 6; i++) {
 
-		var pin_id = 'input_ws1_unlock_pin' + i;
+        var pin_id = 'input_ws1_unlock_pin' + i;
 
-		var pin_value = gel(pin_id).value;
+        var pin_value = gel(pin_id).value;
 
-		unlock_pin = unlock_pin + pin_value;
-	}
+        unlock_pin = unlock_pin + pin_value;
+    }
 
-	action_inputs['unlockpin'] = unlock_pin;
-	action_inputs['passcode'] = gel('input_ws1_passcode').value;
-	action_inputs['message'] = gel('input_ws1_message').value;
-	action_inputs['assisttype'] = gel('input_ws1_assist_type').value;
-	var sid = gel('sid').value;
+    action_inputs['unlockpin'] = unlock_pin;
+    action_inputs['passcode'] = gel('input_ws1_passcode').value;
+    action_inputs['message'] = gel('input_ws1_message').value;
+    action_inputs['assisttype'] = gel('input_ws1_assist_type').value;
+    var sid = gel('sid').value;
 
-	try {
-		sid = g_form.getUniqueValue();
-		execute_action(sid, action_inputs, true);
-	} catch(e) {
-			sid = get_test_incident_record(action_inputs);
-	}
+    try {
+        sid = g_form.getUniqueValue();
+        execute_action(sid, action_inputs, true);
+    } catch (e) {
+        sid = get_test_incident_record(action_inputs);
+    }
 }
 
 function continueCancel() {
-	GlideDialogWindow.get().destroy();
+    GlideDialogWindow.get().destroy();
 }
 
 function execute_action(sid, action_inputs, set_form) {
-	var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
-	
-	if (set_form == true) {
-		// Set the values back to the incident form
-		g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs['message']);
-		g_form.setValue("x_vmw_ws1uem_ws1_passcode", action_inputs['passcode']);
-		g_form.setValue("x_vmw_ws1uem_ws1_unlock_pin", action_inputs['unlockpin']);
-		g_form.setValue("x_vmw_ws1uem_ws1action", action_inputs['action']);
-		g_form.setValue("x_vmw_ws1uem_ws1_uem_assist_type", action_inputs['assisttype']);
-		g_form.setValue("x_vmw_ws1uem_response", str);
-		g_form.save();
-	}
+    var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
 
-	var app = new GlideRecord("incident");
-	if(app.get(sid)){
-		app.x_vmw_ws1uem_ws1action = action_inputs['action'];
-		app.x_vmw_ws1uem_ws1_passcode = action_inputs['passcode'];
-		app.x_vmw_ws1uem_ws1_unlock_pin = action_inputs['unlockpin'];
-		app.x_vmw_ws1uem_ws1_send_message = action_inputs['message'];
-		app.x_vmw_ws1uem_ws1_uem_assist_type = action_inputs['assisttype'];
-		app.x_vmw_ws1uem_response = str;
-		app.update();
-	}
+    if (set_form == true) {
+        // Set the values back to the incident form
+        g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs['message']);
+        g_form.setValue("x_vmw_ws1uem_ws1_passcode", action_inputs['passcode']);
+        g_form.setValue("x_vmw_ws1uem_ws1_unlock_pin", action_inputs['unlockpin']);
+        g_form.setValue("x_vmw_ws1uem_ws1action", action_inputs['action']);
+        g_form.setValue("x_vmw_ws1uem_ws1_uem_assist_type", action_inputs['assisttype']);
+        g_form.setValue("x_vmw_ws1uem_response", str);
+        g_form.save();
+    }
 
-	if (action_inputs['action'] === 'refreshdevices') {
-		document.getElementById("runprocessingscript").value = "refreshdevices";
-	}
-	else {
-		document.getElementById("runprocessingscript").value = "actionflow";
-	}
-	document.getElementById("sid").value = sid;
+    var app = new GlideRecord("incident");
+    if (app.get(sid)) {
+        app.x_vmw_ws1uem_ws1action = action_inputs['action'];
+        app.x_vmw_ws1uem_ws1_passcode = action_inputs['passcode'];
+        app.x_vmw_ws1uem_ws1_unlock_pin = action_inputs['unlockpin'];
+        app.x_vmw_ws1uem_ws1_send_message = action_inputs['message'];
+        app.x_vmw_ws1uem_ws1_uem_assist_type = action_inputs['assisttype'];
+        app.x_vmw_ws1uem_response = str;
+        app.update();
+    }
 
-	if (set_form) {
-		GlideDialogWindow.get().destroy();
-	}
+    if (action_inputs['action'] === 'refreshdevices') {
+        document.getElementById("runprocessingscript").value = "refreshdevices";
+    } else {
+        document.getElementById("runprocessingscript").value = "actionflow";
+    }
+    document.getElementById("sid").value = sid;
+
+    // test to call action from script include 
+    var action_result = new GlideAjax('x_vmw_ws1uem.WS1UEMActions');
+    action_result.addParam('sysparm_name', 'call_action');
+    action_result.addParam('sysparm_sid', sid);
+    action_result.getXML(function parse_response(response) {
+        var result = response.responseXML.documentElement.getAttribute('answer');
+    });
+
+
+
+    if (set_form) {
+        GlideDialogWindow.get().destroy();
+    }
 }
+
+
+function actioncallback(response) {
+    alert("here");
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+}
+
 
 /**
 A test incident record will need to be obtained
@@ -272,71 +287,71 @@ Version strings are compared level-by-level
 between sub-versions strings in each.
 **/
 function util_compare_versions(version_a, version_b) {
-	var sub_versions_a = version_a.split(".").map(Number);
-	var sub_versions_b = version_b.split(".").map(Number);
+    var sub_versions_a = version_a.split(".").map(Number);
+    var sub_versions_b = version_b.split(".").map(Number);
 
-	if (sub_versions_a.length < sub_versions_b.length) {
-		sub_versions_a = sub_versions_a.concat(Array(sub_versions_b.length - sub_versions_a.length).fill(0));
-	} else 	if (sub_versions_b.length < sub_versions_a.length) {
-		sub_versions_b = sub_versions_b.concat(Array(sub_versions_a.length - sub_versions_b.length).fill(0));
-	}
+    if (sub_versions_a.length < sub_versions_b.length) {
+        sub_versions_a = sub_versions_a.concat(Array(sub_versions_b.length - sub_versions_a.length).fill(0));
+    } else if (sub_versions_b.length < sub_versions_a.length) {
+        sub_versions_b = sub_versions_b.concat(Array(sub_versions_a.length - sub_versions_b.length).fill(0));
+    }
 
-	for (var i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i++) {
-		if (sub_versions_a[i] > sub_versions_b[i]) {
-			return 1;
-		}
+    for (var i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i++) {
+        if (sub_versions_a[i] > sub_versions_b[i]) {
+            return 1;
+        }
 
-		if (sub_versions_a[i] < sub_versions_b[i]) {
-			return -1;
-		}
-	}
+        if (sub_versions_a[i] < sub_versions_b[i]) {
+            return -1;
+        }
+    }
 
-	return 0;
+    return 0;
 }
 
 function parse_actions_as_json(response) {
-	var answer = response.responseXML.documentElement.getAttribute("answer");
+    var answer = response.responseXML.documentElement.getAttribute("answer");
 
-	var actions = JSON.parse(answer);
+    var actions = JSON.parse(answer);
 
-	if (actions['devicewipe_mac']) {
-		show_unlock_pin(true);
-	} else {
-		show_unlock_pin(false);
-	}
+    if (actions['devicewipe_mac']) {
+        show_unlock_pin(true);
+    } else {
+        show_unlock_pin(false);
+    }
 
-	if (actions['changepasscode_winrt']) {
-		show_unlock_pin(true);
-	} else {
-		show_unlock_pin(false);
-	}
+    if (actions['changepasscode_winrt']) {
+        show_unlock_pin(true);
+    } else {
+        show_unlock_pin(false);
+    }
 }
 
 /**
 Remove dropdown menu items by option name
 **/
 function remove_actions_from_select_input(select_input, option_name) {
-	var select_object = $(select_input);
+    var select_object = $(select_input);
 
-	for (var i = 0; i < selectobject.length; i++) {
-		if (select_object.options[i].value.toLowerCase() === option_name) {
-			select_object.remove(i);
-		}
-	}
+    for (var i = 0; i < selectobject.length; i++) {
+        if (select_object.options[i].value.toLowerCase() === option_name) {
+            select_object.remove(i);
+        }
+    }
 }
 
 /**
 Set a dropdown menu item as default
 **/
 function set_action_as_main_select_input(select_input, option_name) {
-	var select_object = $(select_input);
+    var select_object = $(select_input);
 
-	for (var i = 0; i < select_object.length; i++) {
+    for (var i = 0; i < select_object.length; i++) {
 
-		if (select_object.options[i].value.toLowerCase() === option_name) {
-			select_object.value = select_object.options[i].value;
-		}
-	}
+        if (select_object.options[i].value.toLowerCase() === option_name) {
+            select_object.value = select_object.options[i].value;
+        }
+    }
 }
 
 /**
@@ -345,101 +360,96 @@ non-empty values within valid range.
 **/
 function validatePin(pin, nextIndex) {
 
-	var validPin = true;
-	for (var i = 0; i < 6; i++) {
+    var validPin = true;
+    for (var i = 0; i < 6; i++) {
 
-		var currentPinId = 'input_ws1_unlock_pin' + i;
+        var currentPinId = 'input_ws1_unlock_pin' + i;
 
-		currentPinValue = gel(currentPinId).value;
+        currentPinValue = gel(currentPinId).value;
 
-		if (currentPinValue === "") {
-			validPin = false;
-		}
-		else {
-			var pinInt = parseInt(currentPinValue);
-			if (isNaN(currentPinValue) || (pinInt < 0 || pinInt > 9)) {
-				validPin = false;
-				gel(currentPinId).value = "";
-			}
-			else {
-				if (pin.id === currentPinId) {
-					var nextPin = 'input_ws1_unlock_pin' + nextIndex;
-					gel(nextPin).focus();
-				}
-			}
-		}
-	}
-	if (validPin === true) {
-		$("submitData").disabled = false;
-	}
-	else {
-		$("submitData").disabled = true;
-	}
+        if (currentPinValue === "") {
+            validPin = false;
+        } else {
+            var pinInt = parseInt(currentPinValue);
+            if (isNaN(currentPinValue) || (pinInt < 0 || pinInt > 9)) {
+                validPin = false;
+                gel(currentPinId).value = "";
+            } else {
+                if (pin.id === currentPinId) {
+                    var nextPin = 'input_ws1_unlock_pin' + nextIndex;
+                    gel(nextPin).focus();
+                }
+            }
+        }
+    }
+    if (validPin === true) {
+        $("submitData").disabled = false;
+    } else {
+        $("submitData").disabled = true;
+    }
 }
 
 /**
 Validate that the passcode and confirm-passcode fields match
 **/
 function validatePasscode() {
-	var passcode = gel('input_ws1_passcode').value;
-	var passcodeConfirm = gel('input_ws1_passcode_confirm').value;
+    var passcode = gel('input_ws1_passcode').value;
+    var passcodeConfirm = gel('input_ws1_passcode_confirm').value;
 
-	if (passcode.length > 0 && passcode === passcodeConfirm) {
-		$("submitData").disabled = false;
-	}
-	else {
-		$("submitData").disabled = true;
-	}
+    if (passcode.length > 0 && passcode === passcodeConfirm) {
+        $("submitData").disabled = false;
+    } else {
+        $("submitData").disabled = true;
+    }
 }
 
 /**
 Validate that the message field is non-empty
 **/
 function checkMessage() {
-	var message = gel('input_ws1_message').value;
+    var message = gel('input_ws1_message').value;
 
-	if (message.length > 0) {
-		$("submitData").disabled = false;
-	}
-	else {
-		$("submitData").disabled = true;
-	}
+    if (message.length > 0) {
+        $("submitData").disabled = false;
+    } else {
+        $("submitData").disabled = true;
+    }
 }
 
 /**
 Set the state of fields on the UEM dialog popup
 **/
 function checkStatus(checkbox) {
-	$("submitData").disabled = !checkbox.checked;
+    $("submitData").disabled = !checkbox.checked;
 }
 
 function show_unlock_pin(showFlag) {
-	$("div_ws1_unlock_pin").hidden = !showFlag;
-	var inputs = document.querySelector('#div_ws1_unlock_pin').getElementsByTagName('input');
-	for(var i = 0; i < inputs.length; i++) {
-		inputs[i].readOnly = !showFlag;
-	}
+    $("div_ws1_unlock_pin").hidden = !showFlag;
+    var inputs = document.querySelector('#div_ws1_unlock_pin').getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].readOnly = !showFlag;
+    }
 }
 
 function show_unlock_passcode(showFlag) {
-	$("div_ws1_passcode").hidden = !showFlag;
-	var inputs = document.querySelector('#div_ws1_passcode').getElementsByTagName('input');
-	for(var i = 0; i < inputs.length; i++) {
-		inputs[i].readOnly = !showFlag;
-	}
+    $("div_ws1_passcode").hidden = !showFlag;
+    var inputs = document.querySelector('#div_ws1_passcode').getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].readOnly = !showFlag;
+    }
 }
 
 function show_message(showFlag) {
-	$("div_ws1_message").hidden = !showFlag;
-	var textareas = document.querySelector('#div_ws1_message').getElementsByTagName('textarea');
+    $("div_ws1_message").hidden = !showFlag;
+    var textareas = document.querySelector('#div_ws1_message').getElementsByTagName('textarea');
     if (textareas.length > 0) {
         textareas[0].readOnly = !showFlag;
     }
 }
 
 function show_check(showFlag) {
-	$("div_ws1_check").hidden = !showFlag;
-	var inputs = document.querySelector("#div_ws1_check").getElementsByTagName('input');
+    $("div_ws1_check").hidden = !showFlag;
+    var inputs = document.querySelector("#div_ws1_check").getElementsByTagName('input');
     if (inputs.length > 0) {
         inputs[0].readOnly = !showFlag;
     }
@@ -646,78 +656,83 @@ function show_check(showFlag) {
 </j:jelly>]]></html>
         <name>WS1UEMPopup</name>
         <processing_script><![CDATA[gs.info("Running processing script " + runprocessingscript);
+var currentSession = gs.getSession();
+var locationAddr = currentSession.getUrlOnStack();
+gs.info("URL " + locationAddr);
+response.sendRedirect(locationAddr);
 
 
-if(runprocessingscript == 'actionflow'){
-	
+// TODO - have added 1111111 to test the script include
+if (runprocessingscript == 'actionflow11111111') {
+
     gs.info("Running action flow from UI Page");
     gs.info("sid value " + sid);
 
-	var session = gs.getSession();
-	var addr = session.getUrlOnStack();
-	gs.info("URL " + addr);
-		
-	var util = new GlideRecord('incident');
-	if(util.get(sid)) {
-		try {
-			var inputs = {};
-			inputs['current'] = util; // GlideRecord of table:  
-			inputs['table_name'] = 'incident';
+    var session = gs.getSession();
+    var addr = session.getUrlOnStack();
+    gs.info("URL " + addr);
 
-			// Start Asynchronously: Uncomment to run in background.
-			sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemactionflow').inBackground().withInputs(inputs).run();
-				
-			// Execute Synchronously: Run in foreground.
-	//		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
-		
-		} catch (ex) {
-			var messages = ex.getMessage();
-			gs.info('Error in processing script ' + messages);
-		}
-	}
-   response.sendRedirect(addr);
+    var util = new GlideRecord('incident');
+    if (util.get(sid)) {
+        try {
+            var inputs = {};
+            inputs['current'] = util; // GlideRecord of table:  
+            inputs['table_name'] = 'incident';
+
+            // Start Asynchronously: Uncomment to run in background.
+            sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemactionflow').inBackground().withInputs(inputs).run();
+
+            // Execute Synchronously: Run in foreground.
+            //		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
+
+        } catch (ex) {
+            var messages = ex.getMessage();
+            gs.info('Error in processing script ' + messages);
+        }
+    }
+    response.sendRedirect(addr);
 }
 
-if(runprocessingscript == 'refreshdevices'){
-	// Update message on screen
+if (runprocessingscript == 'refreshdevices') {
+    // Update message on screen
 
-	util = new GlideRecordSecure('incident');
-	if(util.get(sid)) {
-		gs.info("Refreshdevices ");
+    util = new GlideRecordSecure('incident');
+    if (util.get(sid)) {
+        gs.info("Refreshdevices ");
 
-		// call the flow to get all devices for this caller and add them if they don't exist
-		try {
-			inputs = {};
-			inputs['current'] = util; // GlideRecord of table:  
-			inputs['table_name'] = 'incident';
-	
-			// Start Asynchronously: Uncomment to run in background.
-			sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inBackground().withInputs(inputs).run();
-				
-			// Execute Synchronously: Run in foreground.
-			// sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inForeground().withInputs(inputs).run();
-		
-		} catch (ex) {
-			var message = ex.getMessage();
-			gs.error(message);
-		}
+        // call the flow to get all devices for this caller and add them if they don't exist
+        try {
+            inputs = {};
+            inputs['current'] = util; // GlideRecord of table:  
+            inputs['table_name'] = 'incident';
 
-		session = gs.getSession();
-		addr = session.getUrlOnStack();
-	}
-	response.sendRedirect(addr);
+            // Start Asynchronously: Uncomment to run in background.
+            sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inBackground().withInputs(inputs).run();
+
+            // Execute Synchronously: Run in foreground.
+            // sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inForeground().withInputs(inputs).run();
+
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+
+        session = gs.getSession();
+        addr = session.getUrlOnStack();
+    }
+    response.sendRedirect(addr);
 }]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>163</sys_mod_count>
+        <sys_mod_count>174</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 02:02:12</sys_updated_on>
+        <sys_updated_on>2021-09-30 09:59:41</sys_updated_on>
     </sys_ui_page>
 </record_update>
