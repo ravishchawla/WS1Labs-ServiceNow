@@ -216,7 +216,7 @@ function continueCancel() {
 
 function execute_action(sid, action_inputs, set_form) {
 	var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
-
+	
 	if (set_form == true) {
 		// Set the values back to the incident form
 		g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs['message']);
@@ -645,7 +645,10 @@ function show_check(showFlag) {
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEMPopup</name>
-        <processing_script><![CDATA[if(runprocessingscript == 'actionflow'){
+        <processing_script><![CDATA[gs.info("Running processing script " + runprocessingscript);
+
+
+if(runprocessingscript == 'actionflow'){
 	
     gs.info("Running action flow from UI Page");
     gs.info("sid value " + sid);
@@ -663,8 +666,6 @@ function show_check(showFlag) {
 
 			// Start Asynchronously: Uncomment to run in background.
 			sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemactionflow').inBackground().withInputs(inputs).run();
-//		var outputs = sn_fd.FlowAPI.executeFlow('x_vmw_ws1uem.ws1uemactionflow', inputs, 60000);
-//		var output = outputs['output'];
 				
 			// Execute Synchronously: Run in foreground.
 	//		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
@@ -710,13 +711,13 @@ if(runprocessingscript == 'refreshdevices'){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>161</sys_mod_count>
+        <sys_mod_count>163</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:48:27</sys_updated_on>
+        <sys_updated_on>2021-09-30 02:02:12</sys_updated_on>
     </sys_ui_page>
 </record_update>

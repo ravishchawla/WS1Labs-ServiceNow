@@ -22,7 +22,7 @@ function onLoad() {
 	if (ts.name) {
 		$("input_ws1_cmdb_integration").disabled = false;
 	
-		if (action_table.value == "true") {
+		if (action_table.value === "true") {
 			$("input_ws1_cmdb_integration").checked = true;
 		}
 		else {
@@ -41,7 +41,7 @@ function onLoad() {
     action_table.next();
 	
     // if installed get the state of our system parameter
-    if (action_table.value == "true") {
+    if (action_table.value === "true") {
         $("input_ws1_url").checked = true;
     } else {
         $("input_ws1_url").checked = false;
@@ -49,13 +49,13 @@ function onLoad() {
 }
 
 // update system paramter when the checkbox being changed
-function updateValue(cb) {
+function updateValue(checkbox) {
 	var action_table = new GlideRecord('sys_properties');
 	action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMCMDBIntegration");
 	action_table.query();
 	action_table.next();
 	
-	if (cb.checked) {
+	if (checkbox.checked) {
 		action_table.value = "true";
 	}
 	else {
@@ -66,13 +66,13 @@ function updateValue(cb) {
 }
 
 // update system parameter when the checkbox being changed
-function updateURLDisplay(cb) {
+function updateURLDisplay(checkbox) {
     var action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMURLDisplay");
     action_table.query();
     action_table.next();
     
-	if (cb.checked) {
+	if (checkbox.checked) {
         action_table.value = "true";
     } else {
         action_table.value = "false";
@@ -120,12 +120,16 @@ function updateURLDisplay(cb) {
 		</div>
 		<div class="checkbox-table">
 			<div class="checkbox-cell centered">
-				<input
-					type="checkbox"
-					name="input_ws1_cmdb_integration"
-					id="input_ws1_cmdb_integration"
-					onclick="updateValue(this)"
-					style="margin: 0;"/>
+				<span class="input-group-checkbox">
+					<input
+						   type="checkbox"
+						   class="checkbox"
+						   name="input_ws1_cmdb_integration"
+						   id="input_ws1_cmdb_integration"
+						   onclick="updateValue(this)"
+						   style="margin: 0"/>
+					<label for="input_ws1_cmdb_integration" class="checkbox-label"></label>
+				</span>
 			</div>
 			
 			<div>
@@ -140,12 +144,16 @@ function updateURLDisplay(cb) {
 		</div>
 		<div class="checkbox-table">
 			<div class="checkbox-cell centered">
-				<input
-					type="checkbox"
-					name="input_ws1_url"
-					id="input_ws1_url"
-					onclick="updateURLDisplay(this)"
-					style="margin: 0;"/>
+				<span class="input-group-checkbox">
+					<input
+						   type="checkbox"
+						   class="checkbox"
+						   name="input_ws1_url"
+						   id="input_ws1_url"
+						   onclick="updateURLDisplay(this)"
+						   style="margin: 0"/>
+					<label for="input_ws1_url" class="checkbox-label"></label>
+				</span>
 			</div>
 			
 			<div>
@@ -162,13 +170,13 @@ function updateURLDisplay(cb) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:31:15</sys_created_on>
         <sys_id>c2d4530e1b1eb410a76c0dc0604bcb0c</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>WS1UEMCMDBIntegration</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_c2d4530e1b1eb410a76c0dc0604bcb0c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-27 04:44:22</sys_updated_on>
+        <sys_updated_on>2021-09-30 01:34:34</sys_updated_on>
     </sys_ui_page>
 </record_update>
