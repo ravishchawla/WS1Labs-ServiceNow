@@ -20,11 +20,12 @@ function onLoad() {
     /**
     Obtain the User's authentication as either a standard or advanced
     **/
+	
+	var IN_PROGRESS_STATE = 2;
     var isStandard = g_user.hasRole('x_vmw_ws1uem.ws1uemstandard');
     g_form.setValue('x_vmw_ws1uem_ws1action', '');
 
     $("incident.x_vmw_ws1uem_ws1action").disabled = true;
-    //g_form.setReadOnly("x_vmw_ws1uem_ws1action", true);
 
     var ga_version = new GlideAjax('x_vmw_ws1uem.WS1GetPlatform');
     ga_version.addParam('sysparm_name', 'get_platform');
@@ -36,7 +37,7 @@ function onLoad() {
             g_form.setSectionDisplay('workspace_oneuem', false);
         } else {
             var currentstate = g_form.getValue('state');
-            if (currentstate == 2) { // In progress
+            if (currentstate == IN_PROGRESS_STATE) {
                 var sid = g_form.getUniqueValue();
                 var ga = new GlideAjax('x_vmw_ws1uem.WS1GetActionFromOS');
                 ga.addParam('sysparm_name', 'get_action');
@@ -51,35 +52,7 @@ function onLoad() {
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'enterprisewipe');
                 }
-/*
-                // get the WS1UEM URL system parameter 
-                var gadisplay = new GlideAjax('x_vmw_ws1uem.WS1UEMURLDisplay');
-                gadisplay.addParam('sysparm_name', 'get_url_display');
-                gadisplay.getXML(function parse_response(response) {
-                    var urldisplay = response.responseXML.documentElement.getAttribute('answer');
-
-                    // get the WS1UEM URL system parameter 
-                    if (urldisplay == "true") {
-                        var gaurl = new GlideAjax('x_vmw_ws1uem.WS1UEMURL');
-                        gaurl.addParam('sysparm_name', 'get_url');
-                        gaurl.addParam('sysparm_sid', sid);
-                        gaurl.getXML(function parse_response(response) {
-                            var url = response.responseXML.documentElement.getAttribute('answer');
-                            if (g_form.getValue('x_vmw_ws1uem_workspace_one_uem_console') == "") {
-                                g_form.setValue('x_vmw_ws1uem_workspace_one_uem_console', url);
-                           //     g_form.save();
-                            }
-                        });
-                    } else {
-                         g_form.setDisplay('x_vmw_ws1uem_workspace_one_uem_console', false);
-
-                        // if (g_form.getValue('x_vmw_ws1uem_workspace_one_uem_console') != "") {
-                        //    g_form.setValue('x_vmw_ws1uem_workspace_one_uem_console', "");
-                        //  g_form.save();
-                    }
-                    //}
-                });
-*/
+				
                 var configItem = g_form.getValue('cmdb_ci');
                 if (!configItem) {
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
@@ -114,7 +87,6 @@ function onLoad() {
                 g_form.removeOption('x_vmw_ws1uem_ws1action', key);
             }
         }
-        //g_form.setReadOnly("x_vmw_ws1uem_ws1action", false);
         $("incident.x_vmw_ws1uem_ws1action").disabled = false;
 
     }
@@ -125,7 +97,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a4957ce1b1eb410a76c0dc0604bcb38</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -133,7 +105,7 @@ function onLoad() {
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_0a4957ce1b1eb410a76c0dc0604bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-26 02:30:56</sys_updated_on>
+        <sys_updated_on>2021-09-30 18:45:59</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
