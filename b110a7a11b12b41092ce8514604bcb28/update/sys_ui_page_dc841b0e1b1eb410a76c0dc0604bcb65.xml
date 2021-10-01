@@ -181,7 +181,7 @@ function loadPopupContents(action, ws1_actions_response) {
 
 function continueOK() {
 
-	jslog("continueOK");
+	jslog("WS1UEM: continueOK");
 	
     var action_inputs = {};
 
@@ -204,6 +204,7 @@ function continueOK() {
     var sid = gel('sid').value;
 
     try {
+		jslog("WS1UEM: sid " + sid);
         sid = g_form.getUniqueValue();
         execute_action(sid, action_inputs, true);
     } catch (e) {
@@ -218,7 +219,11 @@ function continueCancel() {
 function execute_action(sid, action_inputs, set_form) {
     var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
 
+	jslog("WS1UEM: execute_action ");
+
     if (set_form == true) {
+		jslog("WS1UEM: set_form " + set_form);
+
         // Set the values back to the incident form
         g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs['message']);
         g_form.setValue("x_vmw_ws1uem_ws1_passcode", action_inputs['passcode']);
@@ -231,6 +236,8 @@ function execute_action(sid, action_inputs, set_form) {
 
     var app = new GlideRecord("incident");
     if (app.get(sid)) {
+		jslog("WS1UEM: updating incident ");
+
         app.x_vmw_ws1uem_ws1action = action_inputs['action'];
         app.x_vmw_ws1uem_ws1_passcode = action_inputs['passcode'];
         app.x_vmw_ws1uem_ws1_unlock_pin = action_inputs['unlockpin'];
@@ -240,6 +247,8 @@ function execute_action(sid, action_inputs, set_form) {
         app.update();
     }
 
+	jslog("WS1UEM: after updating incident ");
+
     if (action_inputs['action'] === 'refreshdevices') {
         document.getElementById("runprocessingscript").value = "refreshdevices";
     } else {
@@ -247,7 +256,7 @@ function execute_action(sid, action_inputs, set_form) {
     }
     document.getElementById("sid").value = sid;
 
-	jslog("call_action");
+	jslog("WS1UEM: call_action");
     // test to call action from script include 
     var action_result = new GlideAjax('x_vmw_ws1uem.WS1UEMActions');
     action_result.addParam('sysparm_name', 'call_action');
@@ -730,13 +739,13 @@ if (runprocessingscript == 'refreshdevices') {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>178</sys_mod_count>
+        <sys_mod_count>179</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-01 00:21:35</sys_updated_on>
+        <sys_updated_on>2021-10-01 01:41:06</sys_updated_on>
     </sys_ui_page>
 </record_update>
