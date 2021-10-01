@@ -25,11 +25,11 @@ function get_os_field(device_id) {
 		var class_name = config_table.sys_class_name;
 			var child_table;
 			if (class_name == 'cmdb_ci_computer') {
-				child_table = new GlideRecordSecure("cmdb_ci_computer");				
+				child_table = new GlideRecordSecure('cmdb_ci_computer');				
 			} else if (class_name == 'cmdb_ci_handheld_computing') {
-				child_table = new GlideRecordSecure("cmdb_ci_handheld_computing");
+				child_table = new GlideRecordSecure('cmdb_ci_handheld_computing');
 			} else if (class_name == 'cmdb_ci_linux_server') {
-				child_table = new GlideRecordSecure("cmdb_ci_linux_server");
+				child_table = new GlideRecordSecure('cmdb_ci_linux_server');
 			} else {
 				error_log = 'OS for device ' + device_id + ' not found in type ' + class_name;
 				gs.info(error_log);
@@ -108,14 +108,14 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 
 		var TABLE_NAME = "x_vmw_ws1uem_ws1_action_os_mapping";
 
-		var app = new GlideRecordSecure(INCIDENT_TABLE_NAME);
+		var app = new GlideRecordSecure('incident');
 		app.addQuery('sys_id', session_id);
 		app.query();
 
 		var os_name;
 		var os_version;
 		if (app.next()) {
-			var device_id = app.getValue(DEVICE_TABLE_NAME);
+			var device_id = app.getValue('cmdb_ci');
 
 			var os_json = get_os_field(device_id);
 			os_name = os_json['os_name'];
@@ -174,7 +174,7 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 		/**
 		The OS Action table is queried for OS, and ranked by precedence.
 		**/
-		var mapTable = new GlideRecordSecure(TABLE_NAME);
+		var mapTable = new GlideRecordSecure('x_vmw_ws1uem_ws1_action_os_mapping');
 		mapTable.addQuery("os_action", os_name);
 		mapTable.orderByDesc("precedent");
 		mapTable.query();
@@ -221,13 +221,13 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:34:18</sys_created_on>
         <sys_id>a775d74e1b1eb410a76c0dc0604bcba9</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>WS1GetActionFromOS</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_a775d74e1b1eb410a76c0dc0604bcba9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-22 19:01:18</sys_updated_on>
+        <sys_updated_on>2021-10-01 03:29:14</sys_updated_on>
     </sys_script_include>
 </record_update>
