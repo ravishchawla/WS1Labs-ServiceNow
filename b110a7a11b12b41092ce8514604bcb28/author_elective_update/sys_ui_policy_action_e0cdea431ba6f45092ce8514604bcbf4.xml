@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>x_vmw_ws1uem_workspace_one_uem_console</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-17 02:30:20</sys_created_on>
+        <sys_id>e0cdea431ba6f45092ce8514604bcbf4</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>x_vmw_ws1uem_workspace_one_uem_console</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_policy_action_e0cdea431ba6f45092ce8514604bcbf4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-01 08:31:13</sys_updated_on>
+        <table>incident</table>
+        <ui_policy display_value="Hide all WS1 UEM fields except for action and response. Response is set to read only">6b8ed7061b5eb410a76c0dc0604bcbbb</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_ui_policy_action_e0cdea431ba6f45092ce8514604bcbf4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>x_vmw_ws1uem_workspace_one_uem_console</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-17 02:30:20</sys_created_on><sys_id>e0cdea431ba6f45092ce8514604bcbf4</sys_id><sys_mod_count>15</sys_mod_count><sys_name>x_vmw_ws1uem_workspace_one_uem_console</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_ui_policy_action_e0cdea431ba6f45092ce8514604bcbf4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-01 08:31:13</sys_updated_on><table>incident</table><ui_policy display_value="Hide all WS1 UEM fields except for action and response. Response is set to read only">6b8ed7061b5eb410a76c0dc0604bcbbb</ui_policy><visible>false</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-673198418</payload_hash>
+        <record_name>x_vmw_ws1uem_workspace_one_uem_console</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-01 08:31:13</sys_created_on>
+        <sys_id>8bb600331b72349092ce8514604bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c3afa94c90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-01 08:31:13</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>83b60033ae72349014c52117e32b4b17</update_guid>
+        <update_guid_history>83b60033ae72349014c52117e32b4b17:-673198418,c998fba3d43234906adc35dead2b7dc2:-859751015,59dee65d47f67c506f995df4902215bc:1328775736,7a6d6ed96ef67c5061ef8c448266ea18:-859751015,125aae1511f67c5065224ae1e87a0f96:1328775736,a45a6e15a7f67c5066df5c5d9943b2eb:-859751015,9ff9221584f67c50a70fd6baf71be1d3:-673198418,34320384e772b850b184811dd83e1b5e:-1320585224,ec26fd73ca26785084a4b3853ed5b8c1:-2077325973,7016f573ca267850c092845f5c05fe19:-1320585224,7945bd33aa267850cc645f01487018c9:-2077325973,61ef50bbf22278501a4ffc63c39d5aaf:-627950788,3dbe6683a1a6f450f302a403ac699b75:-2077325973,f79e668363a6f4505c0b0c1233972eee:-1251460625,71fdae43e4a6f450664aefd8166b2667:-2077325973,d4ed6a43ada6f45049a5225be239e6f3:-1251460625</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-01 21:58:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>0485388ad7ea425081ec0586920c3900</sys_id>
+        <sys_metadata>e0cdea431ba6f45092ce8514604bcbf4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_ws1uem_workspace_one_uem_console</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent display_value="Hide all WS1 UEM fields except for action and response. Response is set to read only">6b8ed7061b5eb410a76c0dc0604bcbbb</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_e0cdea431ba6f45092ce8514604bcbf4</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_e0cdea431ba6f45092ce8514604bcbf4">8bb600331b72349092ce8514604bcb17</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-01 21:58:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

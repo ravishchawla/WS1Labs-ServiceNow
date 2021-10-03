@@ -20,8 +20,8 @@ function onLoad() {
     /**
     Obtain the User's authentication as either a standard or advanced
     **/
-	
-	var IN_PROGRESS_STATE = 2;
+
+    var IN_PROGRESS_STATE = 2;
     var isStandard = g_user.hasRole('x_vmw_ws1uem.ws1uemstandard');
     g_form.setValue('x_vmw_ws1uem_ws1action', '');
 
@@ -52,7 +52,7 @@ function onLoad() {
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'enterprisewipe');
                 }
-				
+
                 var configItem = g_form.getValue('cmdb_ci');
                 if (!configItem) {
                     g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
@@ -97,7 +97,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a4957ce1b1eb410a76c0dc0604bcb38</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -105,7 +105,7 @@ function onLoad() {
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_0a4957ce1b1eb410a76c0dc0604bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 18:45:59</sys_updated_on>
+        <sys_updated_on>2021-10-01 21:37:30</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

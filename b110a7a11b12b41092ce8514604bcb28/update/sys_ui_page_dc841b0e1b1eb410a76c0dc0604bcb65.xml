@@ -9,12 +9,13 @@ passed in from the calling page.
 **/
 function onLoad() {
 
+	
     var ws1_actions_response;
 
     var action = $("ws1_action");
 
     /**
-    For debugging purposes, if an action is not provided,
+    For unit testing purposes, if an action is not provided,
     Test values are loaded in from the WS1 Testing table.
     **/
     if ((!action) || (action.value.includes("Undefined"))) {
@@ -206,6 +207,7 @@ function continueOK() {
     try {
 		jslog("WS1UEM: sid " + sid);
         sid = g_form.getUniqueValue();
+		jslog("WS1UEM: sid check " + sid);
         execute_action(sid, action_inputs, true);
     } catch (e) {
         sid = get_test_incident_record(action_inputs);
@@ -221,7 +223,7 @@ function execute_action(sid, action_inputs, set_form) {
 
 	jslog("WS1UEM: execute_action ");
 
-/*
+
     if (set_form == true) {
 		jslog("WS1UEM: set_form " + set_form);
 
@@ -234,7 +236,6 @@ function execute_action(sid, action_inputs, set_form) {
         g_form.setValue("x_vmw_ws1uem_response", str);
         g_form.save();
     }
-*/
 
     var app = new GlideRecord('incident');
     if (app.get(sid)) {
@@ -251,24 +252,8 @@ function execute_action(sid, action_inputs, set_form) {
 
 	jslog("WS1UEM: after updating incident ");
 
-    if (action_inputs['action'] === 'refreshdevices') {
-        document.getElementById("runprocessingscript").value = "refreshdevices";
-    } else {
-        document.getElementById("runprocessingscript").value = "actionflow";
-    }
+    document.getElementById("runprocessingscript").value = "actionflow";
     document.getElementById("sid").value = sid;
-
-	/*
-	jslog("WS1UEM: call_action");
-    // test to call action from script include 
-    var action_result = new GlideAjax('x_vmw_ws1uem.WS1UEMActions');
-    action_result.addParam('sysparm_name', 'call_action');
-    action_result.addParam('sysparm_sid', sid);
-    action_result.getXML(function parse_response(response) {
-        var result = response.responseXML.documentElement.getAttribute('answer');
-    });
-*/
-
 
     if (set_form) {
         GlideDialogWindow.get().destroy();
@@ -671,16 +656,11 @@ function show_check(showFlag) {
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEMPopup</name>
-        <processing_script><![CDATA[gs.info("Running processing script " + runprocessingscript);
+        <processing_script><![CDATA[/**
+Run the UEM Action Flow when an action is selected
+**/
+gs.info("Running processing script " + runprocessingscript);
 
-/*
-var currentSession = gs.getSession();
-var locationAddr = currentSession.getUrlOnStack();
-gs.info("URL " + locationAddr);
-response.sendRedirect(locationAddr);
-*/
-
-// TODO - have added 1111111 to test the script include
 if (runprocessingscript == 'actionflow') {
 
     gs.info("Running action flow from UI Page");
@@ -697,60 +677,28 @@ if (runprocessingscript == 'actionflow') {
             inputs['current'] = util; // GlideRecord of table:  
             inputs['table_name'] = 'incident';
 
-            // Start Asynchronously: Uncomment to run in background.
+            gs.info("calling action flow ");
             sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemactionflow').inBackground().withInputs(inputs).run();
-
-            // Execute Synchronously: Run in foreground.
-            //		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
 
         } catch (ex) {
             var messages = ex.getMessage();
-            gs.info('Error in processing script ' + messages);
+            //            gs.info('Error in processing script ' + messages);
         }
     }
     response.sendRedirect(addr);
 }
-
-if (runprocessingscript == 'refreshdevices') {
-    // Update message on screen
-
-    util = new GlideRecordSecure('incident');
-    if (util.get(sid)) {
-        gs.info("Refreshdevices ");
-
-        // call the flow to get all devices for this caller and add them if they don't exist
-        try {
-            inputs = {};
-            inputs['current'] = util; // GlideRecord of table:  
-            inputs['table_name'] = 'incident';
-
-            // Start Asynchronously: Uncomment to run in background.
-            sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inBackground().withInputs(inputs).run();
-
-            // Execute Synchronously: Run in foreground.
-            // sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inForeground().withInputs(inputs).run();
-
-        } catch (ex) {
-            var message = ex.getMessage();
-            gs.error(message);
-        }
-
-        session = gs.getSession();
-        addr = session.getUrlOnStack();
-    }
-    response.sendRedirect(addr);
-}]]></processing_script>
+]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>187</sys_mod_count>
+        <sys_mod_count>195</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-01 04:43:25</sys_updated_on>
+        <sys_updated_on>2021-10-01 21:57:37</sys_updated_on>
     </sys_ui_page>
 </record_update>

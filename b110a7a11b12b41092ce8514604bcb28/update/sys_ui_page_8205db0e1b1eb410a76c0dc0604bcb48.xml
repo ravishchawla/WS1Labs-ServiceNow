@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[onLoad();
+        <client_script><![CDATA[/**
+OnLoad page that updates the contents of
+Configure Connections page, where the user
+can test the credentials used to authenticate
+WS1 Console.
+**/
+onLoad();
 
 function onLoad() {
     //set the value in the fields to existing values
@@ -307,15 +313,10 @@ function createConnection() {
     gs.info("Running get platform action flow from UI Page");
 		
 	try {
-		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
-		// sn_fd.FlowAPI.getRunner().action('x_vmw_uemconn_0.uemversion').inBackground().run();
 				
-		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
 		var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().run();
 		var outputs = result.getOutputs();
 
-		// Get Outputs:
-		// Note: outputs can only be retrieved when executing synchronously.
 		var variable = outputs['variable']; // String
 		var status = outputs['status']; // String
 		var response = outputs['response']; // String
@@ -330,7 +331,6 @@ function createConnection() {
 	} catch (ex) {
 		var message = ex.getMessage();
 		gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
-//		gs.error(message);
 	}
 } 
 	
@@ -339,13 +339,13 @@ function createConnection() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>70</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-30 01:15:03</sys_updated_on>
+        <sys_updated_on>2021-10-01 19:21:02</sys_updated_on>
     </sys_ui_page>
 </record_update>
