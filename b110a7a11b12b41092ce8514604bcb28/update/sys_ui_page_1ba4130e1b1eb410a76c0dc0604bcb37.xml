@@ -17,8 +17,7 @@ function onLoad() {
 		"message" : "input_ws1_message",
 		"softreset" : "input_ws1_softreset",
 		"changepasscode" : "input_ws1_changepasscode",
-		"lock" : "input_ws1_lock",
-		"refreshdevices" : "input_ws1_refreshdevices"
+		"lock" : "input_ws1_lock"
 	};
 
 	$("div_ws1_WS1UEMSelectStandardActions").style.display = "none";
@@ -68,7 +67,7 @@ function updateValue(cb, actionType) {
 		}
 	});
 }]]></client_script>
-        <description>Configure the actions available in the guided setup&#13;
+        <description>Configure the actions available in the guided setup  &#13;
 </description>
         <direct>false</direct>
         <endpoint>x_vmw_ws1uem_WS1UEMActions.do</endpoint>
@@ -165,21 +164,6 @@ function updateValue(cb, actionType) {
 							onclick="updateValue(this, 'lock')"
 							style="margin: 0"/>
 						<label for="input_ws1_lock" class="checkbox-label"></label>
-					</span>
-				</td></tr>
-
-				<tr><td class="cell">
-					${gs.getMessage('WS1UEMRefresh')}
-					</td><td class="cell centered">
-					<span class="input-group-checkbox">
-						<input
-							type="checkbox"
-							class="checkbox"
-							name="input_ws1_refreshdevices"
-							id="input_ws1_refreshdevices"
-							onclick="updateValue(this, 'refreshdevices')"
-							style="margin: 0"/>
-						<label for="input_ws1_refreshdevices" class="checkbox-label"></label>
 					</span>
 				</td></tr>
 
@@ -320,13 +304,13 @@ function updateValue(cb, actionType) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:30:38</sys_created_on>
         <sys_id>1ba4130e1b1eb410a76c0dc0604bcb37</sys_id>
-        <sys_mod_count>127</sys_mod_count>
+        <sys_mod_count>129</sys_mod_count>
         <sys_name>WS1UEMActions</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-01 19:20:18</sys_updated_on>
+        <sys_updated_on>2021-10-05 04:32:09</sys_updated_on>
     </sys_ui_page>
 </record_update>
