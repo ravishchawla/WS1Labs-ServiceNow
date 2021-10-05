@@ -700,35 +700,26 @@ if (runprocessingscript == 'actionflow') {
         }
     */
 
-    try {
-        var inputs = {};
-        inputs['ws1message'] = "test"; // String 
-        inputs['ws1udid'] = "4455677888999"; // String 
-        inputs['ws1platform'] = "windows"; // String 
+	util.next();
+	try {
+		var inputs = {};
+		inputs['ws1incidentnumber'] = util.number; // String 
 
-        // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
-        // sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemmessagedevice').inBackground().withInputs(inputs).run();
+		                gs.info('WS1UEM: calling subflow ' + util.number);
 
-        gs.info("WS1UEM: calling test subflow  ");
+		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+		sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inBackground().withInputs(inputs).run();
+				
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+//		var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(inputs).run();
+//		var outputs = result.getOutputs();
+		                gs.info('WS1UEM: calledsubflow ' );
 
-        // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-        var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemmessagedevice').inForeground().withInputs(inputs).run();
-        var outputs = result.getOutputs();
-
-        gs.info("WS1UEM: called test subflow  ");
-
-        // Get Outputs:
-        // Note: outputs can only be retrieved when executing synchronously.
-        var ws1error = outputs['ws1error']; // True/False
-        var ws1response = outputs['ws1response']; // String
-        var ws1errormessage = outputs['ws1errormessage']; // String
-
-    } catch (ex) {
-        var message = ex.getMessage();
-        gs.info("WS1UEM: error in test subflow  ");
-
-        gs.error(message);
-    }
+		// Current subflow has no outputs defined.		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+	}
 
 
 
@@ -740,13 +731,13 @@ if (runprocessingscript == 'actionflow') {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>211</sys_mod_count>
+        <sys_mod_count>213</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-05 20:59:38</sys_updated_on>
+        <sys_updated_on>2021-10-05 21:39:14</sys_updated_on>
     </sys_ui_page>
 </record_update>
