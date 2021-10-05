@@ -9,7 +9,7 @@ passed in from the calling page.
 **/
 function onLoad() {
 
-	
+
     var ws1_actions_response;
 
     var action = $("ws1_action");
@@ -73,8 +73,8 @@ function loadPopupContents(action, ws1_actions_response) {
 
         stringText = getMessage('WS1UEMAssistInfo');
 
-		$("div_ws1_assist_type").hidden = false;		
-		
+        $("div_ws1_assist_type").hidden = false;
+
         var select_dropdown_id = "input_ws1_assist_type";
 
         var input_options = [];
@@ -98,7 +98,7 @@ function loadPopupContents(action, ws1_actions_response) {
         } else {
             set_action_as_main_select_input(select_dropdown_id, input_options[0]);
         }
-		
+
     } else if (action === "message") {
 
         stringText = getMessage('WS1UEMMessageInfo');
@@ -183,8 +183,8 @@ function loadPopupContents(action, ws1_actions_response) {
 
 function continueOK() {
 
-	jslog("WS1UEM: continueOK");
-	
+    jslog("WS1UEM: continueOK");
+
     var action_inputs = {};
 
     action_inputs['action'] = gel('ws1_action').value;
@@ -206,9 +206,9 @@ function continueOK() {
     var sid = gel('sid').value;
 
     try {
-		jslog("WS1UEM: sid " + sid);
+        jslog("WS1UEM: sid " + sid);
         sid = g_form.getUniqueValue();
-		jslog("WS1UEM: sid check " + sid);
+        jslog("WS1UEM: sid check " + sid);
         execute_action(sid, action_inputs, true);
     } catch (e) {
         sid = get_test_incident_record(action_inputs);
@@ -222,11 +222,11 @@ function continueCancel() {
 function execute_action(sid, action_inputs, set_form) {
     var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
 
-	jslog("WS1UEM: execute_action ");
+    jslog("WS1UEM: execute_action ");
 
 
     if (set_form == true) {
-		jslog("WS1UEM: set_form " + set_form);
+        jslog("WS1UEM: set_form " + set_form);
 
         // Set the values back to the incident form
         g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs['message']);
@@ -238,20 +238,25 @@ function execute_action(sid, action_inputs, set_form) {
         g_form.save();
     }
 
-    var app = new GlideRecord('incident');
-    if (app.get(sid)) {
-		jslog("WS1UEM: updating incident " + action_inputs['action'] + " | " + action_inputs['passcode'] + " | "+ action_inputs['unlockpin'] + " | "+ action_inputs['message'] + " | "+ action_inputs['assisttype'] + " | " + str);
+    var incident_table = new GlideRecord('incident');
+    incident_table.addQuery('sys_id', sid);
+    incident_table.query();
 
-        app.x_vmw_ws1uem_ws1action = action_inputs['action'];
-        app.x_vmw_ws1uem_ws1_passcode = action_inputs['passcode'];
-        app.x_vmw_ws1uem_ws1_unlock_pin = action_inputs['unlockpin'];
-        app.x_vmw_ws1uem_ws1_send_message = action_inputs['message'];
-        app.x_vmw_ws1uem_ws1_uem_assist_type = action_inputs['assisttype'];
-        app.x_vmw_ws1uem_response = str;
-        app.update();
+    if (incident_table.next()) {
+        jslog("WS1UEM: updating incident " + action_inputs['action'] + " | " + action_inputs['passcode'] + " | " + action_inputs['unlockpin'] + " | " + action_inputs['message'] + " | " + action_inputs['assisttype'] + " | " + str);
+
+        incident_table.x_vmw_ws1uem_ws1action = action_inputs['action'];
+        incident_table.x_vmw_ws1uem_ws1_passcode = action_inputs['passcode'];
+        incident_table.x_vmw_ws1uem_ws1_unlock_pin = action_inputs['unlockpin'];
+        incident_table.x_vmw_ws1uem_ws1_send_message = action_inputs['message'];
+        incident_table.x_vmw_ws1uem_ws1_uem_assist_type = action_inputs['assisttype'];
+        incident_table.x_vmw_ws1uem_response = str;
+        incident_table.update();
+    } else {
+        jslog("WS1UEM: didn't find incident");
     }
 
-	jslog("WS1UEM: after updating incident ");
+    jslog("WS1UEM: after updating incident ");
 
     document.getElementById("runprocessingscript").value = "actionflow";
     document.getElementById("sid").value = sid;
@@ -333,8 +338,8 @@ Remove dropdown menu items by option name
 **/
 function remove_actions_from_select_input(select_input, option_name) {
     var select_object = $(select_input);
-	//var select_object = document.getElementById(select_input);
-	
+    //var select_object = document.getElementById(select_input);
+
     for (var i = 0; i < select_object.length; i++) {
         if (select_object.options[i].value.toLowerCase() === option_name) {
             select_object.remove(i);
@@ -694,13 +699,13 @@ if (runprocessingscript == 'actionflow') {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>206</sys_mod_count>
+        <sys_mod_count>208</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-04 18:27:20</sys_updated_on>
+        <sys_updated_on>2021-10-05 06:32:39</sys_updated_on>
     </sys_ui_page>
 </record_update>
