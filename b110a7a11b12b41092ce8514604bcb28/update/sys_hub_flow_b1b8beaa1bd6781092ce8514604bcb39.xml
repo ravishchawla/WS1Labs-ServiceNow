@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b1b8beaa1bd6781092ce8514604bcb39</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>WS1UEMActionFlow</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -37,7 +37,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_flow_b1b8beaa1bd6781092ce8514604bcb39</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-05 08:25:05</sys_updated_on>
+        <sys_updated_on>2021-10-06 01:02:25</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=b1b8beaa1bd6781092ce8514604bcb39"/>
@@ -69,16 +69,16 @@
         <table>incident</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <data>{"table":"sys_trigger_runner_mapping","id":"67fde7e71bbef09092ce8514604bcb5d","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>b1b8beaa1bd6781092ce8514604bcb39</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-01 06:43:07</sys_created_on>
         <sys_id>67fde7e71bbef09092ce8514604bcb5d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-01 06:43:07</sys_updated_on>
+        <sys_updated_on>2021-10-06 01:02:35</sys_updated_on>
         <trigger display_value="">8e0eeeea1b96781092ce8514604bcba4</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
