@@ -10,26 +10,30 @@
         <messages/>
         <name>WS1UEMActionPopup</name>
         <order/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-   if (isLoading || newValue === '') {
-      return;
-   }
+        <script><![CDATA[/**
+On Change method that is called when the UEM Action dropdown field
+changes. Renders the Dialog Flow for the Popup.
+**/
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    var dialog;
+    if (isLoading || newValue === "") {
+       return;
+    }
 
-	var dialog = new GlideDialogWindow('x_vmw_ws1uem_WS1UEMPopup'); 
-    dialog.setTitle(getMessage('WS1UEMPopupDialogTitle')); 
-    dialog.setSize(550, 800); 
-    dialog.setPreference('si', g_form.getUniqueValue());
-    dialog.setPreference('actionvalue', newValue);
-    dialog.render(); 
-}
-]]></script>
+    dialog = new GlideDialogWindow("x_vmw_ws1uem_WS1UEMPopup");
+    dialog.setTitle(getMessage("WS1UEMPopupDialogTitle"));
+    dialog.setSize(575, 800);
+    dialog.setPreference("si", g_form.getUniqueValue());
+    dialog.setPreference("actionvalue", newValue);
+    dialog.render();
+}]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 17:08:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4a89d7021b5eb410a76c0dc0604bcb03</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>WS1UEMActionPopup</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -37,7 +41,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_4a89d7021b5eb410a76c0dc0604bcb03</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-22 19:28:04</sys_updated_on>
+        <sys_updated_on>2021-10-06 17:56:06</sys_updated_on>
         <table>incident</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

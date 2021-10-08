@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>x_vmw_ws1uem_workspace_one_uem_console</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-17 02:43:44</sys_created_on>
+        <sys_id>8ce076071ba6f45092ce8514604bcbc2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_vmw_ws1uem_workspace_one_uem_console</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_policy_action_8ce076071ba6f45092ce8514604bcbc2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-01 08:21:40</sys_updated_on>
+        <table>incident</table>
+        <ui_policy display_value="Make workspace ONE UEM console link visible">2190b2071ba6f45092ce8514604bcb2b</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_ui_policy_action_8ce076071ba6f45092ce8514604bcbc2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>x_vmw_ws1uem_workspace_one_uem_console</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-17 02:43:44</sys_created_on><sys_id>8ce076071ba6f45092ce8514604bcbc2</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_vmw_ws1uem_workspace_one_uem_console</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_ui_policy_action_8ce076071ba6f45092ce8514604bcbc2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-01 08:21:40</sys_updated_on><table>incident</table><ui_policy display_value="Make workspace ONE UEM console link visible">2190b2071ba6f45092ce8514604bcb2b</ui_policy><visible>false</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-735095714</payload_hash>
+        <record_name>x_vmw_ws1uem_workspace_one_uem_console</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-01 08:21:40</sys_created_on>
+        <sys_id>db84c0bf1b32349092ce8514604bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c3af1d92c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-01 08:21:40</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>1784c0bf033234901ab7716a86de238f</update_guid>
+        <update_guid_history>1784c0bf033234901ab7716a86de238f:-735095714,c4047dff64e2785033b26519306018a4:-1295448858,a8cf9c7b71227850b0cc09b4f457dc90:1458863906,60f0b607f5a6f4500b59f1de13219a60:-1295448858</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-01 08:32:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>c291aa46c49d4abb971f86ef5196ca51</sys_id>
+        <sys_metadata>8ce076071ba6f45092ce8514604bcbc2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_ws1uem_workspace_one_uem_console</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_8ce076071ba6f45092ce8514604bcbc2</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_8ce076071ba6f45092ce8514604bcbc2">db84c0bf1b32349092ce8514604bcb8f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-01 08:32:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

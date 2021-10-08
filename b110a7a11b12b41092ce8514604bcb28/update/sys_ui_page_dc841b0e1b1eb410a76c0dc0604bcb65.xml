@@ -8,49 +8,51 @@ WS1UEMPopup renders the dialog popup fields based on the UEM action
 passed in from the calling page.
 **/
 function onLoad() {
-	
-	var ws1_actions_response;
-	
-	var action = $("ws1_action");
 
-	/**
-	For debugging purposes, if an action is not provided,
-	Test values are loaded in from the WS1 Testing table.
-	**/
-	if ((!action) || (action.value.includes("Undefined"))) {
-			var ga_test_action = new GlideAjax('x_vmw_ws1uem.WS1GetTestAction');
-			var ga_test_json = new GlideAjax('x_vmw_ws1uem.WS1TestOSActionsJSON');
-		
-			ga_test_action.addParam('sysparm_name', 'get_test_action');
-			ga_test_json.addParam('sysparm_name', 'get_test_json');
-		
-			ga_test_action.getXML(function parse_response(response) {
-				action = response.responseXML.documentElement.getAttribute('answer');
-				ws1_actions_response = {};
-				
-				ga_test_json.getXML(function parse_json_response(response) {
-					ws1_actions_response = response.responseXML.documentElement.getAttribute('answer');
 
-					try {
-						ws1_actions_response = JSON.parse(ws1_actions_response);
-					} catch(e) {
-						ws1_actions_response = {};
-					}
-					
-					loadPopupContents(action, ws1_actions_response);
-				});
-			});
-	} else {
-		/**
-		A JSON containing UEM configurations for an OS will be loaded in 
-		from the incidents page, previously stored by the the loading method.
-		**/
-		ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
-		
-		ws1_actions_response = JSON.parse(ws1_actions_response.value);
-		
-		loadPopupContents(action.value, ws1_actions_response);
-	}
+    var ws1_actions_response;
+    var action = $("ws1_action");
+    var ga_test_action;
+    var ga_test_json;
+
+    /**
+    For unit testing purposes, if an action is not provided,
+    Test values are loaded in from the WS1 Testing table.
+    **/
+    if ((!action) || (action.value.includes("Undefined"))) {
+        ga_test_action = new GlideAjax("x_vmw_ws1uem.WS1GetTestAction");
+        ga_test_json = new GlideAjax("x_vmw_ws1uem.WS1TestOSActionsJSON");
+
+        ga_test_action.addParam("sysparm_name", "get_test_action");
+        ga_test_json.addParam("sysparm_name", "get_test_json");
+
+        ga_test_action.getXML(function parse_response(response) {
+            action = response.responseXML.documentElement.getAttribute("answer");
+            ws1_actions_response = {};
+
+            ga_test_json.getXML(function parse_json_response(response) {
+                ws1_actions_response = response.responseXML.documentElement.getAttribute("answer");
+
+                try {
+                    ws1_actions_response = JSON.parse(ws1_actions_response);
+                } catch (e) {
+                    ws1_actions_response = {};
+                }
+
+                loadPopupContents(action, ws1_actions_response);
+            });
+        });
+    } else {
+        /**
+        A JSON containing UEM configurations for an OS will be loaded in
+        from the incidents page, previously stored by the the loading method.
+        **/
+        ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
+
+        ws1_actions_response = JSON.parse(ws1_actions_response.value);
+
+        loadPopupContents(action.value, ws1_actions_response);
+    }
 }
 
 /**
@@ -58,204 +60,233 @@ Based on the provided UEM Action configuration, set the state of
 specific fields and as hidden or visible.
 **/
 function loadPopupContents(action, ws1_actions_response) {
-	var stringText;
+    var stringText;
+    var select_dropdown_id;
+    var input_options = [];
+    var key;
+    var warningMessage;
 
-	set_message_state(true);
-	set_unlock_passcode_state(true);
-	set_unlock_pin_state(true);
-	$("div_ws1_caption").hidden = true;
-	set_ws1_check_state(true);
+    show_message(false);
+    show_unlock_passcode(false);
+    show_unlock_pin(false);
+    $("div_ws1_alert").hidden = true;
+    show_check(false);
 
-	action = action.trim();
+    action = action.trim();
 
-	if (action == "assist") {
-		// Information message text
-		stringText = getMessage('WS1UEMAssistInfo');
-		
-		var console_version = $("ws1_version");
-						
-		$("div_ws1_assist_type").hidden = false;
+    if (action == "assist") {
 
-		var select_dropdown_id = "input_ws1_assist_type";
+        stringText = getMessage("WS1UEMAssistInfo");
 
-		var input_options = [];
-		for (var key in ws1_actions_response) {
-			if (key.includes('assist_')) {
-				if (ws1_actions_response[key] == false) {
-					remove_actions_from_select_input(select_dropdown_id, key.substring(7));
-				} else {
-					input_options.push(key.substring(7));
-				}
-			}
-		}
+        $("div_ws1_assist_type").hidden = false;
 
-		input_options.sort().reverse();
+        select_dropdown_id = "input_ws1_assist_type";
 
-		
-		if ($("input_ws1_assist_type").length == 0) {
-			$("div_ws1_assist_type").hidden = true;
-		} else {
-			set_action_as_main_select_input(select_dropdown_id, input_options[0]);
-		}
-		
-		
-	} else if (action == "message") {
-		// Information message text
-		stringText = getMessage('WS1UEMMessageInfo');
-		$("submitData").disabled = true;
-		
-		set_message_state(false);
+        for (key in ws1_actions_response) {
 
-	} else if (action == "devicelogs") {
-		// Information message text
-		stringText = getMessage('WS1UEMDeviceLogsInfo');
-	
-	} else if (action == "changepasscode") {
-		// Information message text
-		stringText = getMessage('WS1UEMPasscodeInfo');
-		$("submitData").disabled = true;
-	
-		set_unlock_passcode_state(false);
-	
-	} else if (action == "lock") {
-		// Information message text
-		stringText = getMessage('WS1UEMLockInfo');
-		
-		if (ws1_actions_response["lock_mac"] == true) {
-			$("submitData").disabled = true;
+            if (key.includes("assist_")) {
 
-			set_unlock_pin_state(false);
-			$("div_ws1_caption").hidden = false;
-			$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMRememberPin')  + '</g:form_label>';
-		}
-		
-			
-	} else if (action == "enterprisewipe") {
+                if (!ws1_actions_response[key]) {
 
-		// Information message text
-		stringText = getMessage('WS1UEMEnterpriseWipeInfo');
-		set_ws1_check_state(false);
-		$("submitData").disabled = true;
-		$("div_ws1_caption").hidden = false;
-		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + getMessage('WS1UEMWarningEnterpriseWipe')  + '</g:form_label>';
-	
-	} else if (action == "softreset") {
-		// Information message text
-		stringText = getMessage('WS1UEMSoftResetInfo');
-	
-	} else if (action == "syncdevice") {
-		// Information message text
-		stringText = getMessage('WS1UEMSyncDeviceInfo');
-		
-	} else if (action == "devicewipe") {
-		// Information message text
-		stringText = getMessage('WS1UEMDeviceWipeInfo');
+                    remove_actions_from_select_input(select_dropdown_id, key.substring(7));
 
-		var warningMessage = getMessage('WS1UEMWarningDeviceWipe');		
-		if (ws1_actions_response["devicewipe_mac"] == true) {
-			$("submitData").disabled = true;
-			set_unlock_pin_state(false);
-			warningMessage = warningMessage + " " + getMessage('WS1UEMRememberPin');
-		}
-		else {
-			set_ws1_check_state(false);
-			$("submitData").disabled = true;
-		}
-		
-		$("div_ws1_caption").hidden = false;
-		$("div_ws1_caption").innerHTML = '<g:form_label style="color:red;">' + warningMessage  + '</g:form_label>';
-	}
-	else if (action == "refreshdevices") {
-		// Information message text
-		stringText = getMessage('WS1UEMRefreshDevices');
-	}
-	
-	// display informational message for action type
-	$("div_ws1_text").innerHTML = stringText;
-	$("div_ws1_text").hidden = false;
+                } else {
+                    input_options.push(key.substring(7));
+                }
+            }
+        }
+        input_options.sort().reverse();
+
+        if ($("input_ws1_assist_type").length == 0) {
+            $("div_ws1_assist_type").hidden = true;
+        } else {
+            set_action_as_main_select_input(select_dropdown_id, input_options[0]);
+        }
+
+    } else if (action == "message") {
+
+        stringText = getMessage("WS1UEMMessageInfo");
+
+        $("submitData").disabled = true;
+
+        show_message(true);
+
+    } else if (action == "devicelogs") {
+
+        stringText = getMessage("WS1UEMDeviceLogsInfo");
+
+    } else if (action == "changepasscode") {
+
+        stringText = getMessage("WS1UEMPasscodeInfo");
+
+        $("submitData").disabled = true;
+
+        show_unlock_passcode(true);
+
+    } else if (action == "lock") {
+
+        stringText = getMessage("WS1UEMLockInfo");
+
+        if (ws1_actions_response.lock_mac) {
+            $("submitData").disabled = true;
+
+            show_unlock_pin(true);
+            $("div_ws1_alert").hidden = false;
+            $("label_ws1_alert_text").innerHTML = getMessage("WS1UEMRememberPin");
+        }
+    } else if (action == "enterprisewipe") {
+
+        stringText = getMessage("WS1UEMEnterpriseWipeInfo");
+
+        show_check(true);
+
+        $("submitData").disabled = true;
+        $("div_ws1_alert").hidden = false;
+        $("label_ws1_alert_text").innerHTML = getMessage("WS1UEMWarningEnterpriseWipe");
+
+    } else if (action == "softreset") {
+
+        stringText = getMessage("WS1UEMSoftResetInfo");
+
+    } else if (action == "syncdevice") {
+
+        stringText = getMessage("WS1UEMSyncDeviceInfo");
+
+    } else if (action == "devicewipe") {
+
+        stringText = getMessage("WS1UEMDeviceWipeInfo");
+
+        warningMessage = getMessage("WS1UEMWarningDeviceWipe");
+
+        if (ws1_actions_response.devicewipe_mac == true) {
+
+            $("submitData").disabled = true;
+
+            show_unlock_pin(true);
+
+            warningMessage = warningMessage + " " + getMessage("WS1UEMRememberPin");
+
+        } else {
+
+            show_check(true);
+
+            $("submitData").disabled = true;
+        }
+
+        $("div_ws1_alert").hidden = false;
+        $("label_ws1_alert_text").innerHTML = warningMessage;
+    } else if (action == "refreshdevices") {
+
+        stringText = getMessage("WS1UEMRefreshDevices");
+    }
+
+    // display informational message for action type
+    $("div_ws1_text").innerHTML = stringText;
+    $("div_ws1_text").hidden = false;
 }
 
-
 function continueOK() {
-	
-	var action_inputs = {};
-	
-	action_inputs['action'] = gel('ws1_action').value;
-	
-	var unlockpin = "";
-	for (var i=0; i<6; i++) {
-		var pinid = 'input_ws1_unlock_pin' + i;
-		var unlockpinitem = gel(pinid).value;
-		unlockpin = unlockpin + unlockpinitem;
-	}
-	
-	action_inputs['unlockpin'] = unlockpin;
-	action_inputs['passcode'] = gel('input_ws1_passcode').value;
-	action_inputs['message'] = gel('input_ws1_message').value;
-	action_inputs['assisttype'] = gel('input_ws1_assist_type').value;
-	var sid = gel('sid').value;
 
-	try {
-		sid = g_form.getUniqueValue();
-		execute_action(sid, action_inputs, true);
-	} catch(e) {
-			sid = get_test_incident_record(action_inputs);
-	}
+    var action_inputs;
+    var unlock_pin;
+    var i;
+    var pin_id;
+    var pin_value;
+    var sid;
+
+    jslog("WS1UEM: continueOK");
+
+    action_inputs = {};
+
+    action_inputs.action = gel("ws1_action").value;
+
+    unlock_pin = "";
+    for (i = 0; i < 6; i+=1) {
+
+        pin_id = "input_ws1_unlock_pin" + i;
+
+        pin_value = gel(pin_id).value;
+
+        unlock_pin = unlock_pin + pin_value;
+    }
+
+    action_inputs.unlockpin = unlock_pin;
+    action_inputs.passcode = gel("input_ws1_passcode").value;
+    action_inputs.message = gel("input_ws1_message").value;
+    action_inputs.assisttype = gel("input_ws1_assist_type").value;
+    sid = gel("sid").value;
+
+    try {
+        jslog("WS1UEM: sid " + sid);
+        sid = g_form.getUniqueValue();
+        jslog("WS1UEM: sid check " + sid);
+        execute_action(sid, action_inputs, true);
+    } catch (e) {
+        sid = get_test_incident_record(action_inputs);
+    }
 }
 
 function continueCancel() {
-	GlideDialogWindow.get().destroy();
+    GlideDialogWindow.get().destroy();
 }
 
 function execute_action(sid, action_inputs, set_form) {
-	var str = getMessage('WS1UEMQueuing') + " " + getMessage('WS1UEMAction');
-	
-	if (set_form == true) {
-		// Set the values back to the incident form
-		g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs['message']); 
-		g_form.setValue("x_vmw_ws1uem_ws1_passcode", action_inputs['passcode']); 
-		g_form.setValue("x_vmw_ws1uem_ws1_unlock_pin", action_inputs['unlockpin']); 
-		g_form.setValue("x_vmw_ws1uem_ws1action", action_inputs['action']); 
-		g_form.setValue("x_vmw_ws1uem_ws1_uem_assist_type", action_inputs['assisttype']); 
-		g_form.setValue("x_vmw_ws1uem_response", str); 
-		g_form.save();
-	}
-	
-	var app = new GlideRecord("incident");
-	if(app.get(sid)){
-		app.x_vmw_ws1uem_ws1action = action_inputs['action'];
-		app.x_vmw_ws1uem_ws1_passcode = action_inputs['passcode'];
-		app.x_vmw_ws1uem_ws1_unlock_pin = action_inputs['unlockpin'];
-		app.x_vmw_ws1uem_ws1_send_message = action_inputs['message'];
-		app.x_vmw_ws1uem_ws1_uem_assist_type = action_inputs['assisttype'];
-		app.x_vmw_ws1uem_response = str;
-		app.update();
-	}
+    var str;
+    str = getMessage("WS1UEMQueuing") + " " + getMessage("WS1UEMAction");
 
-	if (action_inputs['action'] == 'refreshdevices') {
-		document.getElementById("runprocessingscript").value = "refreshdevices";
-	}
-	else {
-		document.getElementById("runprocessingscript").value = "actionflow";
-	}
-	document.getElementById("sid").value = sid;
-	
-	if (set_form == true) {
-		GlideDialogWindow.get().destroy();
-	}
+    jslog("WS1UEM: execute_action ");
+
+
+    if (set_form == true) {
+        jslog("WS1UEM: set_form " + set_form);
+
+        // Set the values back to the incident form
+        g_form.setValue("x_vmw_ws1uem_ws1_send_message", action_inputs.message);
+        g_form.setValue("x_vmw_ws1uem_ws1_passcode", action_inputs.passcode);
+        g_form.setValue("x_vmw_ws1uem_ws1_unlock_pin", action_inputs.unlockpin);
+        g_form.setValue("x_vmw_ws1uem_ws1action", action_inputs.action);
+        g_form.setValue("x_vmw_ws1uem_ws1_uem_assist_type", action_inputs.assisttype);
+        g_form.setValue("x_vmw_ws1uem_response", str);
+        g_form.save();
+    }
+
+    document.getElementById("runprocessingscript").value = "actionflow";
+    document.getElementById("sid").value = sid;
+
+    gel("jvar_action").value = action_inputs.action;
+    gel("jvar_passcode").value = action_inputs.passcode;
+    gel("jvar_unlockpin").value = action_inputs.unlockpin;
+    gel("jvar_messagetext").value = action_inputs.message;
+    gel("jvar_assisttype").value = action_inputs.assisttype;
+    gel("jvar_string").value = str;
+
+
+    if (set_form) {
+        GlideDialogWindow.get().destroy();
+    }
 }
+
+
+function actioncallback(response) {
+    var answer;
+    alert("here");
+    answer = response.responseXML.documentElement.getAttribute("answer");
+}
+
 
 /**
 A test incident record will need to be obtained
 if the application is being debugged with ATF tests.
 **/
 function get_test_incident_record(action_inputs) {
-    var ga_test_incident = new GlideAjax('x_vmw_ws1uem.WS1GetIncidentRecord');
-    ga_test_incident.addParam('sysparm_name', 'get_incident');
-
+    var ga_test_incident = new GlideAjax("x_vmw_ws1uem.WS1GetIncidentRecord");
     var incident_record = null;
+
+    ga_test_incident.addParam("sysparm_name", "get_incident");
+
+
     ga_test_incident.getXML(function parse_response(response) {
-        incident_record = response.responseXML.documentElement.getAttribute('answer');
+        incident_record = response.responseXML.documentElement.getAttribute("answer");
         execute_action(incident_record, action_inputs, false);
     });
 }
@@ -265,182 +296,252 @@ Version strings are compared level-by-level
 between sub-versions strings in each.
 **/
 function util_compare_versions(version_a, version_b) {
-	var sub_versions_a = version_a.split(".").map(Number);
-	var sub_versions_b = version_b.split(".").map(Number);
-			
-	if (sub_versions_a.length < sub_versions_b.length) {
-		sub_versions_a = sub_versions_a.concat(Array(sub_versions_b.length - sub_versions_a.length).fill(0));
-	} else 	if (sub_versions_b.length < sub_versions_a.length) {
-		sub_versions_b = sub_versions_b.concat(Array(sub_versions_a.length - sub_versions_b.length).fill(0));
-	}
-	
-	for (var i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i++) {
-		if (sub_versions_a[i] > sub_versions_b[i]) {
-			return 1;
-		}
-		
-		if (sub_versions_a[i] < sub_versions_b[i]) {
-			return -1;
-		}
-	}
-	
-	return 0;
+    var i;
+    var sub_versions_a = version_a.split(".").map(Number);
+    var sub_versions_b = version_b.split(".").map(Number);
+
+    if (sub_versions_a.length < sub_versions_b.length) {
+        sub_versions_a = sub_versions_a.concat(Array(sub_versions_b.length - sub_versions_a.length).fill(0));
+    } else if (sub_versions_b.length < sub_versions_a.length) {
+        sub_versions_b = sub_versions_b.concat(Array(sub_versions_a.length - sub_versions_b.length).fill(0));
+    }
+
+    for (i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i+=1) {
+        if (sub_versions_a[i] > sub_versions_b[i]) {
+            return 1;
+        }
+
+        if (sub_versions_a[i] < sub_versions_b[i]) {
+            return -1;
+        }
+    }
+
+    return 0;
 }
 
 function parse_actions_as_json(response) {
-	var answer = response.responseXML.documentElement.getAttribute("answer");
-	
-	var actions = JSON.parse(answer);
-	
-	if (actions['devicewipe_mac'] == true) {
-		set_unlock_pin_state(false);
-	} else {
-		set_unlock_pin_state(true);
-	}
-	
-	if (actions['changepasscode_winrt'] == true) {
-		set_unlock_pin_state(false);
-	} else {
-		set_unlock_pin_state(true);
-	}
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+
+    var actions = JSON.parse(answer);
+
+    if (actions.devicewipe_mac) {
+        show_unlock_pin(true);
+    } else {
+        show_unlock_pin(false);
+    }
+
+    if (actions.changepasscode_winrt) {
+        show_unlock_pin(true);
+    } else {
+        show_unlock_pin(false);
+    }
 }
 
 /**
 Remove dropdown menu items by option name
 **/
 function remove_actions_from_select_input(select_input, option_name) {
-	var selectobject = $(select_input);
-	
-	for (var i=0; i<selectobject.length; i++) {
-		if (selectobject.options[i].value.toLowerCase() == option_name) {
-			selectobject.remove(i);
-		}
-	}
+    var select_object = $(select_input);
+    var i;
+
+    for (i = 0; i < select_object.length; i+=1) {
+        if (select_object.options[i].value.toLowerCase() == option_name) {
+            select_object.remove(i);
+        }
+    }
 }
 
 /**
 Set a dropdown menu item as default
 **/
 function set_action_as_main_select_input(select_input, option_name) {
-	var selectobject = $(select_input);
-	
-	for (var i=0; i<selectobject.length; i++) {
-		
-		if (selectobject.options[i].value.toLowerCase() == option_name) {
-			selectobject.value  = selectobject.options[i].value;
-		}
-	}
+    var i;
+    var select_object = $(select_input);
+
+    for (i = 0; i < select_object.length; i+=1) {
+
+        if (select_object.options[i].value.toLowerCase() == option_name) {
+            select_object.value = select_object.options[i].value;
+        }
+    }
 }
 
 /**
 Validate that a 6-pin field has
 non-empty values within valid range.
 **/
-function validatePin(pin,order) {
-	
-	var validPin = true;
-	for (var i=0; i<6; i++) {
-		var pinid = 'input_ws1_unlock_pin' + i;
-		unlockpin = gel(pinid).value;
-		if (unlockpin == "") {
-			validPin = false;
-		}
-		else {
-			var unlockpinInt = parseInt(unlockpin);
-			if (isNaN(unlockpin) || (unlockpinInt < 0 || unlockpinInt > 9)) {
-				validPin = false;
-				gel(pinid).value = "";
-			}
-			else {				
-				if (pin.id == pinid){
-					var pinfocus = 'input_ws1_unlock_pin' + order;
-					gel(pinfocus).focus();
-				}
-			}
-		}
-	}
-	
-	if (validPin == true) {
-		$("submitData").disabled = false;
-	}
-	else {
-		$("submitData").disabled = true;
-	}
-}
+function validatePin(pin, nextIndex) {
 
+    var validPin = true;
+    var i;
+    var currentPinId;
+    var currentPinValue;
+    var pinInt;
+    var nextPin;
+
+    for (i = 0; i < 6; i+=1) {
+
+        currentPinId = "input_ws1_unlock_pin" + i;
+
+        currentPinValue = gel(currentPinId).value;
+
+        if (currentPinValue == "") {
+            validPin = false;
+        } else {
+            pinInt = parseInt(currentPinValue);
+            if (Number.isNaN(currentPinValue) || (pinInt < 0 || pinInt > 9)) {
+                validPin = false;
+                gel(currentPinId).value = "";
+            } else {
+                if (pin.id == currentPinId) {
+                    nextPin = "input_ws1_unlock_pin" + nextIndex;
+                    gel(nextPin).focus();
+                }
+            }
+        }
+    }
+    if (validPin == true) {
+        $("submitData").disabled = false;
+    } else {
+        $("submitData").disabled = true;
+    }
+}
 
 /**
 Validate that the passcode and confirm-passcode fields match
 **/
 function validatePasscode() {
-	var passcode = gel('input_ws1_passcode').value;
-	var passcodeConfirm = gel('input_ws1_passcode_confirm').value;
+    var passcode = gel("input_ws1_passcode").value;
+    var passcodeConfirm = gel("input_ws1_passcode_confirm").value;
 
-	if (passcode.length > 0 && passcode == passcodeConfirm) {
-		$("submitData").disabled = false;
-	}
-	else {
-		$("submitData").disabled = true;
-	}
+    if (passcode.length > 0 && passcode == passcodeConfirm) {
+        $("submitData").disabled = false;
+    } else {
+        $("submitData").disabled = true;
+    }
 }
-
 
 /**
 Validate that the message field is non-empty
 **/
 function checkMessage() {
-	var message = gel('input_ws1_message').value;
+    var message = gel("input_ws1_message").value;
 
-	if (message.length > 0) {
-		$("submitData").disabled = false;
-	}
-	else {
-		$("submitData").disabled = true;
-	}
+    if (message.length > 0) {
+        $("submitData").disabled = false;
+    } else {
+        $("submitData").disabled = true;
+    }
 }
-
 
 /**
 Set the state of fields on the UEM dialog popup
 **/
-function checkStatus(cb) {
-	$("submitData").disabled = !cb.checked;
+function checkStatus(checkbox) {
+    $("submitData").disabled = !checkbox.checked;
 }
 
-function set_unlock_pin_state(state) {
-	$("div_ws1_unlock_pin").hidden = state;
-	var inputs = document.querySelector('#div_ws1_unlock_pin').getElementsByTagName('input');
-	for(var i = 0; i < inputs.length; i++) {
-		inputs[i].readOnly = state;
-	}
+function show_unlock_pin(showFlag) {
+    var inputs;
+    var i;
+    $("div_ws1_unlock_pin").hidden = !showFlag;
+
+    inputs = document.querySelector("#div_ws1_unlock_pin").getElementsByTagName("input");
+
+    for (i = 0; i < inputs.length; i+=1) {
+        inputs[i].readOnly = !showFlag;
+    }
 }
 
-function set_unlock_passcode_state(state) {
-	$("div_ws1_passcode").hidden = state;
-	var inputs = document.querySelector('#div_ws1_passcode').getElementsByTagName('input');
-	for(var i = 0; i < inputs.length; i++) {
-		inputs[i].readOnly = state;
-	}
+function show_unlock_passcode(showFlag) {
+    var inputs;
+    var i;
+    $("div_ws1_passcode").hidden = !showFlag;
+
+    inputs = document.querySelector("#div_ws1_passcode").getElementsByTagName("input");
+    for (i = 0; i < inputs.length; i+=1) {
+        inputs[i].readOnly = !showFlag;
+    }
 }
 
-function set_message_state(state) {
-	$("div_ws1_message").hidden = state;
-	var inputs = document.querySelector('#div_ws1_message').getElementsByTagName('textarea');
-	inputs[0].readOnly = state;
+function show_message(showFlag) {
+    var textareas;
+
+    $("div_ws1_message").hidden = !showFlag;
+    textareas = document.querySelector("#div_ws1_message").getElementsByTagName("textarea");
+    if (textareas.length > 0) {
+        textareas[0].readOnly = !showFlag;
+    }
 }
 
-function set_ws1_check_state(state) {
-	$("div_ws1_check").hidden = state;
-	var inputs = document.querySelector("#div_ws1_check").getElementsByTagName('input');
-	inputs[0].readOnly = state;
-}
-]]></client_script>
+function show_check(showFlag) {
+    var inputs;
+
+    $("div_ws1_check").hidden = !showFlag;
+    inputs = document.querySelector("#div_ws1_check").getElementsByTagName("input");
+    if (inputs.length > 0) {
+        inputs[0].readOnly = !showFlag;
+    }
+}]]></client_script>
         <description>Popup to enable WS1 UEM details to be captured</description>
         <direct>false</direct>
         <endpoint>x_vmw_ws1uem_WS1UEMPopup.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 <g:ui_form>
+	<style>
+		.body {
+			margin: 15px 10px;
+		}
+		
+		.alert-section {
+			margin: 15px 0;
+			border: 1px solid red;
+			border-radius: 0.3em;
+			padding: 5px;
+		}
+		
+		.section {
+			margin: 10px 0;
+		}
+		
+		.passcode-field {
+			margin-top: 0.5em;
+		}
+		
+		.assist-label {
+			margin-right: 1em;
+		}
+		
+		.passcode-label {
+			min-width: 30%;
+		}
+		
+		.confirm-field,
+		.passcode-field,
+		.assist-field,
+		.pin-field {
+			display: flex;
+			align-items: center;
+		}
+		
+		.pin-digit {
+			text-align: center;
+			margin: 0 2px;
+		}
+		
+		.no-margin {
+			margin: 0;
+		}
+		
+		.warning-text {
+			color: red;
+		}
+		
+		.warning-icon {
+			padding-right: 5px;
+		}
+	</style>
 
 	<g:evaluate var="jvar_ws1_action" expression="RP.getWindowProperties().actionvalue" />
 	<g:evaluate var="jvar_si" expression="RP.getWindowProperties().si" />
@@ -448,171 +549,235 @@ function set_ws1_check_state(state) {
 		<input sn-atf-settable="true" type="hidden" id="ws1_action" name="ws1_action" value="${jvar_ws1_action}" />
 		<input sn-atf-settable="true" type="hidden" id="sid" name="sid" value="${jvar_si}" />		
 		<input type="hidden" id="runprocessingscript" name="runprocessingscript" value=""/>
+		<input type="hidden" id="jvar_action" name="jvar_action" value=""/>
+		<input type="hidden" id="jvar_passcode" name="jvar_passcode" value=""/>
+		<input type="hidden" id="jvar_unlockpin" name="jvar_unlockpin" value=""/>
+		<input type="hidden" id="jvar_messagetext" name="jvar_messagetext" value=""/>
+		<input type="hidden" id="jvar_assisttype" name="jvar_assisttype" value=""/>
+		<input type="hidden" id="jvar_string" name="jvar_string" value=""/>
 		<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_vmw_ws1uem.WS1UEM Platform')}"/>
 	</div>
 	
-	<div style="margin:10px;margin-top:15px" hidden="true">
-		<span style="display:inline-block; width:40%">
-		</span>
-	</div>
-	
-	<div id="div_ws1_text" style="margin:10px;margin-top:15px" hidden="true">
-		<span style="display:inline-block; width:40%">
-			<p> </p>
-		</span>
-	</div>
+	<div class="body">
+		<div id="div_ws1_text" hidden="true" />
 
-	<div id="div_ws1_caption" style="margin:10px;margin-top:15px" hidden="true">
-		<span style="display:inline-block; width:40%">
-			<p> </p>
-		</span>
-	</div>
-	
-	<div style="margin:10px" id="div_ws1_message" hidden="true">
-		<span style="display:inline-block; width:40%">
+		<div id="div_ws1_alert" class="alert-section" hidden="true" >
+			<span class="warning-icon">
+				<img src="indicator-incident.svg" width="15" height="15"/>
+			</span>
+			<span id="label_ws1_alert_text" class="warning-text"/>
+		</div>
+
+		<div id="div_ws1_message" class="section" hidden="true">
 			<g:form_label>
 				${gs.getMessage('WS1UEMMessageToSend')}
 			</g:form_label>
-		</span>
-		<br>
-			<textarea rows = "5" cols = "60" name="input_ws1_message" id="input_ws1_message" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_send_message" query="active=true" oninput = "checkMessage()" onchange = "checkMessage()">
+			<textarea
+				id="input_ws1_message"
+				name="input_ws1_message"
+				field="x_vmw_ws1uem_ws1_send_message"
+				rows="5"
+				cols="85"
+				table="incident"
+				mandatory="true"
+				query="active=true"
+				oninput="checkMessage()"
+				onchange="checkMessage()">
 			</textarea>
-		</br>
+		</div>
+		
+		<div id="div_ws1_passcode" class="section" hidden="true">
+			<div class="passcode-field">
+				<div class="passcode-label">
+					<g:form_label class="no-margin">
+						${gs.getMessage('WS1UEMPasscode')}
+					</g:form_label>
+				</div>	
+				<input
+					id="input_ws1_passcode"
+					name="input_ws1_passcode"
+					field="x_vmw_ws1uem_ws1_passcode"
+					type="password"
+					table="incident"
+					query="active=true"
+					size="20"
+					oninput="validatePasscode()"
+					onchange="validatePasscode()"/>
+			</div>
+			<div class="passcode-field">
+				<div class="passcode-label">
+					<g:form_label class="no-margin">
+						${gs.getMessage('WS1UEMConfirmPasscode')}
+					</g:form_label>
+				</div>	
+				<input
+					id="input_ws1_passcode_confirm"
+					name="input_ws1_passcode_confirm"
+					field="x_vmw_ws1uem_ws1_passcode"
+					type="password"
+					table="incident"
+					query="active=true"
+					size="20"
+					oninput="validatePasscode()"
+					onchange="validatePasscode()"/>
+			</div>
+		</div>
+		
+		<div id="div_ws1_unlock_pin" class="section" hidden="true">
+			<div class="pin-field">
+				<div class="passcode-label">
+					<g:form_label class="passcode-label no-margin">
+						${gs.getMessage('WS1UEMUnlockPin')}
+					</g:form_label>
+				</div>
 
-	</div>
-
-	<div style="margin:10px" id="div_ws1_passcode" hidden="true">
-		<span style="display:inline-block; width:40%">
-			<g:form_label>
-				${gs.getMessage('WS1UEMPasscode')}
-			</g:form_label>
-		</span>	
-		<input type="password" name="input_ws1_passcode" id="input_ws1_passcode" table="incident"    field="x_vmw_ws1uem_ws1_passcode" query="active=true" size="10" oninput = "validatePasscode()" onchange = "validatePasscode()"/>
-		<div>
-		<span style="display:inline-block; width:40%">
-			<g:form_label>
-				${gs.getMessage('WS1UEMConfirmPasscode')}
-			</g:form_label>
-		</span>	
-		<input type="password" name="input_ws1_passcode_confirm" id="input_ws1_passcode_confirm" table="incident"    field="x_vmw_ws1uem_ws1_passcode" query="active=true" size="10" oninput = "validatePasscode()" onchange = "validatePasscode()"/>
+				<input class="pin-digit" type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true" field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 1)" />
+				<input class="pin-digit" type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true" field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 2)" />
+				<input class="pin-digit" type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true" field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 3)" />
+				<input class="pin-digit" type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true" field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 4)" />
+				<input class="pin-digit" type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true" field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, 5)" />
+				<input class="pin-digit" type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true" field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this, '5')" />
+			</div>
+		</div>
+		
+		<div id="div_ws1_assist_type" class="section" hidden="false">
+			<div class="assist-field">
+				<div class="assist-label">
+					<g:form_label class="no-margin">
+						${gs.getMessage('WS1UEMAssistType')}
+					</g:form_label>
+				</div>	
+				<g:ui_choicelist
+					name="input_ws1_assist_type"
+					id="input_ws1_assist_type"
+					table="incident"
+					mandatory="true"
+					field="x_vmw_ws1uem_ws1_uem_assist_type"
+					query="active=true"
+					size="10"/>
+			</div>
+		</div>
+		
+		<div id="div_ws1_check" class="section" hidden="false">
+			<div class="confirm-field">
+				<g:form_label class="no-margin">
+					<strong>${gs.getMessage('WS1UEMConfirm')}</strong>
+				</g:form_label>
+				<span class="input-group-checkbox">
+					<input
+						   type="checkbox"
+						   class="checkbox"
+						   name="input_ws1_check"
+						   id="input_ws1_check"
+						   onclick="checkStatus(this)"
+						   style="margin: 0"/>
+					<label for="input_ws1_check" class="checkbox-label"></label>
+				</span>
+			</div>
+			
 		</div>
 	</div>
-	
-	<div style="margin:10px" id="div_ws1_unlock_pin" hidden="true">
-		<span style="display:inline-block; width:40%">
-			<g:form_label>
-				${gs.getMessage('WS1UEMUnlockPin')}
-			</g:form_label>
-		</span>	
-        <input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin0" id="input_ws1_unlock_pin0" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'1')" />
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin1" id="input_ws1_unlock_pin1" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'2')" />
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin2" id="input_ws1_unlock_pin2" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'3')" />
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin3" id="input_ws1_unlock_pin3" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'4')" />
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin4" id="input_ws1_unlock_pin4" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" />
-		<input style="text-align: center; margin:0 2px" type="text" name="input_ws1_unlock_pin5" id="input_ws1_unlock_pin5" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_unlock_pin" query="active=true" size="1" maxlength="1" oninput = "validatePin(this,'5')" />
-	</div>
-	
-	<div style="margin:10px" id="div_ws1_assist_type" hidden="false">
-		<span style="display:inline-block; width:40%">
-			<g:form_label>
-				${gs.getMessage('WS1UEMAssistType')}
-			</g:form_label>
-		</span>	
-        <g:ui_choicelist name="input_ws1_assist_type" id="input_ws1_assist_type" table="incident" mandatory="true"   field="x_vmw_ws1uem_ws1_uem_assist_type" query="active=true" size="10"/>
-	
-	</div>
-		
-	<div style="margin:10px" id="div_ws1_check" hidden="false">
-		<span style="display:inline-block; width:40%">
-			<g:form_label>
-				${gs.getMessage('WS1UEMConfirm')}
-			</g:form_label>
-			<input style="margin:10px" type="checkbox" name="input_ws1_check" id="input_ws1_check" onclick = "checkStatus(this)"/>
-		</span>
-	</div>
 			   
-    <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="submit"  ok_style_class="btn btn-primary"  cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+    <g:dialog_buttons_ok_cancel
+		ok_id="submitData"
+		ok="return continueOK()"
+		ok_type="submit" 
+		ok_style_class="btn btn-primary"
+		cancel_type="button"
+		cancel_id="cancelData"
+		cancel_style_class="btn btn-default"
+		cancel="return continueCancel()"/>
 
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>WS1UEMPopup</name>
-        <processing_script><![CDATA[if(runprocessingscript == 'actionflow'){
-	
+        <processing_script><![CDATA[/**
+Run the UEM Action Flow when an action is selected
+**/
+
+var session;
+var addr;
+var util;
+var inputs;
+var message;
+
+gs.info("Running processing script " + runprocessingscript);
+
+if (runprocessingscript === "actionflow") {
+
     gs.info("Running action flow from UI Page");
     gs.info("sid value " + sid);
 
-	var session = gs.getSession();
-	var addr = session.getUrlOnStack();
-	gs.info("URL " + addr);
-		
-	var util = new GlideRecord('incident');
-	if(util.get(sid)) {
-		try {
-			var inputs = {};
-			inputs['current'] = util; // GlideRecord of table:  
-			inputs['table_name'] = 'incident';
+    session = gs.getSession();
+    addr = session.getUrlOnStack();
+    gs.info("URL " + addr);
 
-			// Start Asynchronously: Uncomment to run in background.
-			sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemactionflow').inBackground().withInputs(inputs).run();
-//		var outputs = sn_fd.FlowAPI.executeFlow('x_vmw_ws1uem.ws1uemactionflow', inputs, 60000);
-//		var output = outputs['output'];
-				
-			// Execute Synchronously: Run in foreground.
-	//		sn_fd.FlowAPI.getRunner().flow('x_vmw_uemconn_0.ws1uemactionfromscript').inForeground().withInputs(inputs).run();
-		
-		} catch (ex) {
-			var messages = ex.getMessage();
-			gs.info('Error in processing script ' + messages);
-		}
-	}
-   response.sendRedirect(addr);
-}
+    util = new GlideRecord("incident");
+    util.addQuery("sys_id", sid);
+    util.query();
+    if (util.next()) {
 
+		gs.info("jvar_action " + jvar_action);
+		gs.info("jvar_passcode " + jvar_passcode);
+		gs.info("jvar_unlockpin " + jvar_unlockpin);
+		gs.info("jvar_messagetext " + jvar_messagetext);
+		gs.info("jvar_assisttype " + jvar_assisttype);
+		gs.info("jvar_assisttype " + jvar_assisttype);
+		gs.info("jvar_string " + jvar_string);
 
+        util.x_vmw_ws1uem_ws1action = jvar_action;
+        util.x_vmw_ws1uem_ws1_passcode = jvar_passcode;
+        util.x_vmw_ws1uem_ws1_unlock_pin = jvar_unlockpin;
+        util.x_vmw_ws1uem_ws1_send_message = jvar_messagetext;
+        util.x_vmw_ws1uem_ws1_uem_assist_type = jvar_assisttype;
+        util.x_vmw_ws1uem_response = jvar_string;
 
-if(runprocessingscript == 'refreshdevices'){
-	// Update message on screen
+        if (util.update() === null) {
+            gs.info("WS1UEM: update failed");
 
-	util = new GlideRecordSecure('incident');
-	if(util.get(sid)) {
-		gs.info("Refreshdevices ");
-
-		// call the flow to get all devices for this caller and add them if they don't exist
-		try {
-			inputs = {};
-			inputs['current'] = util; // GlideRecord of table:  
-			inputs['table_name'] = 'incident';
-	
-			// Start Asynchronously: Uncomment to run in background.
-			sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inBackground().withInputs(inputs).run();
-				
-			// Execute Synchronously: Run in foreground.
-			// sn_fd.FlowAPI.getRunner().flow('x_vmw_ws1uem.ws1uemrefreshdevices').inForeground().withInputs(inputs).run();
-		
-		} catch (ex) {
-			var message = ex.getMessage();
-			gs.error(message);
-		}
-
-		session = gs.getSession();
-		addr = session.getUrlOnStack();
-	}
-	response.sendRedirect(addr);
-}
+        } else {
+            gs.info("WS1UEM: update succeeded");
+        }
 
 
-]]></processing_script>
+        try {
+            inputs = {};
+            inputs.ws1incidentnumber = util.number; // String
+
+            gs.info("WS1UEM: calling subflow " + util.number);
+
+            // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+            sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemactionsubflow").inBackground().withInputs(inputs).run();
+
+            gs.info("WS1UEM: calledsubflow ");
+
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            //var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(inputs).run();
+            //var outputs = result.getOutputs();
+
+            // Current subflow has no outputs defined.
+        } catch (ex) {
+            message = ex.getMessage();
+            gs.error(message);
+        }
+    } else {
+        gs.info("WS1UEM: failed to call subflow ");
+    }
+
+
+    response.sendRedirect(addr);
+}]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>85</sys_mod_count>
+        <sys_mod_count>240</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-24 05:57:56</sys_updated_on>
+        <sys_updated_on>2021-10-07 20:10:06</sys_updated_on>
     </sys_ui_page>
 </record_update>

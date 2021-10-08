@@ -7,36 +7,42 @@
         <client_callable>true</client_callable>
         <description>Return a test Incident Record from the WS1 Testing table, used for debugging.</description>
         <name>WS1GetIncidentRecord</name>
-        <script><![CDATA[var WS1GetIncidentRecord = Class.create();
+        <script><![CDATA[/**
+Query for obtaining a testable incident record
+from the WS1 Testing table. These fields are used for
+unit tests in which the popup can't access parent records.
+**/
+var WS1GetIncidentRecord = Class.create();
 WS1GetIncidentRecord.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-   get_incident:function() {
-		var gr_properties = new GlideRecordSecure('x_vmw_ws1uem_ws1_testing');
+    get_incident:function() {
+        var test_value;
+        var gr_properties = new GlideRecordSecure("x_vmw_ws1uem_ws1_testing");
 
-		gr_properties.addQuery('name', 'test_incident_record');
-		gr_properties.query();
-		
-		var test_value = '';
-		if (gr_properties.next()) {
-			test_value = gr_properties.getValue('value');
-		}
+        gr_properties.addQuery("name", "test_incident_record");
+        gr_properties.query();
 
-		return test_value;
-
-   } ,
-   _privateFunction: function() { // this function is not client callable     
+        test_value = "";
+        if (gr_properties.next()) {
+            test_value = gr_properties.getValue("value");
     }
- });]]></script>
+
+    return test_value;
+
+    } ,
+    _privateFunction: function() { // this function is not client callable
+    }
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:35:34</sys_created_on>
         <sys_id>bcb5df0e1b1eb410a76c0dc0604bcb75</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>WS1GetIncidentRecord</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_bcb5df0e1b1eb410a76c0dc0604bcb75</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-22 19:03:15</sys_updated_on>
+        <sys_updated_on>2021-10-07 18:26:59</sys_updated_on>
     </sys_script_include>
 </record_update>

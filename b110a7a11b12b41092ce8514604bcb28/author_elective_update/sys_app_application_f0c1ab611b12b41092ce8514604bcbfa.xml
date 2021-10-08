@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="">Custom Applications</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order/>
+        <roles>x_vmw_ws1uem.ws1uemadvanced,x_vmw_ws1uem.ws1uemstandard</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 04:10:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f0c1ab611b12b41092ce8514604bcbfa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws1uem</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_app_application_f0c1ab611b12b41092ce8514604bcbfa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 04:10:27</sys_updated_on>
+        <title>ws1uem</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_app_application_f0c1ab611b12b41092ce8514604bcbfa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="">Custom Applications</category><description/><device_type>browser</device_type><hint/><name/><order/><roles>x_vmw_ws1uem.ws1uemadvanced,x_vmw_ws1uem.ws1uemstandard</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-08-31 04:10:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f0c1ab611b12b41092ce8514604bcbfa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ws1uem</sys_name><sys_overrides/><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_app_application_f0c1ab611b12b41092ce8514604bcbfa</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-08-31 04:10:27</sys_updated_on><title>ws1uem</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>1847226227</payload_hash>
+        <record_name>ws1uem</record_name>
+        <reverted_from/>
+        <source>3910a7a11b12b41092ce8514604bcb2a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 04:10:27</sys_created_on>
+        <sys_id>b0c1ebe11b12b41092ce8514604bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17b9a66b3c90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 04:10:27</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>f8c1ebe10e12b4103370c52e762db8ee</update_guid>
+        <update_guid_history>f8c1ebe10e12b4103370c52e762db8ee:1847226227</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ws1uem">b5b196951b87389092ce8514604bcbb1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-06 10:29:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>04ebb75035a0412884391fd18527e840</sys_id>
+        <sys_metadata>f0c1ab611b12b41092ce8514604bcbfa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ws1uem</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_app_application_f0c1ab611b12b41092ce8514604bcbfa</sys_update_name>
+        <sys_update_version display_value="sys_app_application_f0c1ab611b12b41092ce8514604bcbfa">b0c1ebe11b12b41092ce8514604bcbef</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-06 10:29:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
