@@ -22,48 +22,57 @@ function onLoad() {
     **/
 
     var IN_PROGRESS_STATE = 2;
-    var isStandard = g_user.hasRole('x_vmw_ws1uem.ws1uemstandard');
-    g_form.setValue('x_vmw_ws1uem_ws1action', '');
+    var isStandard = g_user.hasRole("x_vmw_ws1uem.ws1uemstandard");
+    var ga_version;
+    var version;
+    var currentstate;
+    var sid;
+    var ga;
+    var isAdvanced;
+    var configItem;
+
+    g_form.setValue("x_vmw_ws1uem_ws1action", "");
 
     $("incident.x_vmw_ws1uem_ws1action").disabled = true;
 
-    var ga_version = new GlideAjax('x_vmw_ws1uem.WS1GetPlatform');
-    ga_version.addParam('sysparm_name', 'get_platform');
-    var version = null;
+    ga_version = new GlideAjax("x_vmw_ws1uem.WS1GetPlatform");
+    ga_version.addParam("sysparm_name", "get_platform");
+    version = null;
+	
     ga_version.getXML(function parse_response(response) {
-        version = response.responseXML.documentElement.getAttribute('answer');
+        version = response.responseXML.documentElement.getAttribute("answer");
 
         if (!isStandard || !version) {
-            g_form.setSectionDisplay('workspace_oneuem', false);
+            g_form.setSectionDisplay("workspace_oneuem", false);
         } else {
-            var currentstate = g_form.getValue('state');
+            currentstate = g_form.getValue("state");
             if (currentstate == IN_PROGRESS_STATE) {
-                var sid = g_form.getUniqueValue();
-                var ga = new GlideAjax('x_vmw_ws1uem.WS1GetActionFromOS');
-                ga.addParam('sysparm_name', 'get_action');
-                ga.addParam('sysparm_sid', sid);
+                sid = g_form.getUniqueValue();
+                ga = new GlideAjax("x_vmw_ws1uem.WS1GetActionFromOS");
+                ga.addParam("sysparm_name", "get_action");
+                ga.addParam("sysparm_sid", sid);
 
                 ga.getXML(parse_os_name);
 
                 // The user has the standard WS1 UEM rights so check if advanced
                 // and remove destructive actions from list if not
-                var isAdvanced = g_user.hasRole('x_vmw_ws1uem.ws1uemadvanced');
+                isAdvanced = g_user.hasRole("x_vmw_ws1uem.ws1uemadvanced");
                 if (!isAdvanced) {
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'enterprisewipe');
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "devicewipe");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "enterprisewipe");
                 }
 
-                var configItem = g_form.getValue('cmdb_ci');
+                configItem = g_form.getValue("cmdb_ci");
                 if (!configItem) {
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicewipe');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'enterprisewipe');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'lock');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'assist');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'message');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'syncdevice');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'devicelogs');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'changepasscode');
-                    g_form.removeOption('x_vmw_ws1uem_ws1action', 'softreset');
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "devicewipe");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "enterprisewipe");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "lock");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "assist");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "message");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "syncdevice");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "devicelogs");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "changepasscode");
+                    g_form.removeOption("x_vmw_ws1uem_ws1action", "softreset");
 
                 }
             }
@@ -77,14 +86,16 @@ function onLoad() {
     renders.
     **/
     function parse_os_name(response) {
+        var key;
         response = response.responseXML.documentElement.getAttribute("answer");
-		jslog("DEMO OUTPUT = " + response);
+        jslog("DEMO OUTPUT = " + response);
+
         $("incident.x_vmw_ws1uem_ws1_actions_response").value = response;
 
         response = JSON.parse(response);
-        for (var key in response) {
+        for (key in response) {
             if (response[key] == false && key != "") {
-                g_form.removeOption('x_vmw_ws1uem_ws1action', key);
+                g_form.removeOption("x_vmw_ws1uem_ws1action", key);
             }
         }
         $("incident.x_vmw_ws1uem_ws1action").disabled = false;
@@ -97,7 +108,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a4957ce1b1eb410a76c0dc0604bcb38</sys_id>
-        <sys_mod_count>96</sys_mod_count>
+        <sys_mod_count>105</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -105,7 +116,7 @@ function onLoad() {
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_0a4957ce1b1eb410a76c0dc0604bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-04 20:53:56</sys_updated_on>
+        <sys_updated_on>2021-10-07 20:01:22</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

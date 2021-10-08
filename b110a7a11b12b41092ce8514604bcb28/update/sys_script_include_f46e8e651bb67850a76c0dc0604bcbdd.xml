@@ -16,49 +16,54 @@ accessible by the app for different roles.
 
 var WS1GGetUemAction = Class.create();
 WS1GGetUemAction.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-   get_value:function() {
-		var action_table = new GlideRecordSecure('sys_choice');
+    get_value:function() {
+        var action_table;
+        var value = "";
+        var inactive = "";
+        var return_value = [];
+        var json_obj;
+        var answer;
 
-		action_table.addQuery('element', 'x_vmw_ws1uem_ws1action');
-		action_table.query();
-		
-		var value = '';
-		var inactive = '';
+        action_table = new GlideRecordSecure('sys_choice');
 
-		var return_value = [];
-		while (action_table.next()) {
-			value = action_table.getValue('value');
-			inactive = action_table.getValue('inactive');
-			
-            var json_obj =  JSON.stringify({'value' : value, 'inactive' : inactive});
-			
-			return_value.push(json_obj);
-		}
+        action_table.addQuery('element', 'x_vmw_ws1uem_ws1action');
+        action_table.query();
 
-		var answer = JSON.stringify(return_value);
+        return_value = [];
+        while (action_table.next()) {
+            value = action_table.getValue("value");
+            inactive = action_table.getValue("inactive");
 
-		gs.info('WS1GetUemAction return value ' + answer);
+            json_obj =  JSON.stringify({"value" : value, "inactive" : inactive});
 
-		return answer;
-   } ,
-	
+            return_value.push(json_obj);
+        }
+
+        answer = JSON.stringify(return_value);
+
+        gs.info("WS1GetUemAction return value " + answer);
+
+        return answer;
+    } ,
+
 set_value:function() {
-	
-	var actionType = this.getParameter('sysparm_actiontype');
-	gs.info('WS1GetUemAction set action type ' + actionType);
-	
-	var newValue = this.getParameter('sysparm_new_value');
-	
-	var action_table = new GlideRecord('sys_choice');
-	action_table.addQuery('element', "x_vmw_ws1uem_ws1action");
-	action_table.addQuery('value', actionType);
-	action_table.query();
-	
-	while (action_table.next()) {
-		action_table.inactive = newValue;
-		action_table.update();
-		return true;
-	}
+    var newValue;
+    var action_table;
+    var actionType = this.getParameter("sysparm_actiontype");
+    gs.info("WS1GetUemAction set action type " + actionType);
+
+    newValue = this.getParameter("sysparm_new_value");
+
+    action_table = new GlideRecord("sys_choice");
+    action_table.addQuery("element", "x_vmw_ws1uem_ws1action");
+    action_table.addQuery("value", actionType);
+    action_table.query();
+
+    while (action_table.next()) {
+        action_table.inactive = newValue;
+        action_table.update();
+        return true;
+    }
 },
    _privateFunction: function() { // this function is not client callable     
     }
@@ -67,13 +72,13 @@ set_value:function() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-24 18:47:14</sys_created_on>
         <sys_id>f46e8e651bb67850a76c0dc0604bcbdd</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>WS1GGetUemAction</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-03 21:37:44</sys_updated_on>
+        <sys_updated_on>2021-10-07 18:37:42</sys_updated_on>
     </sys_script_include>
 </record_update>
