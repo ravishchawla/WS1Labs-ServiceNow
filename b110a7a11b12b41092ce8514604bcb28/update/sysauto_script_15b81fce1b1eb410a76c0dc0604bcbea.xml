@@ -24,21 +24,36 @@ the WS1 UEM Version.
 gs.info("Checking platform version");
 
 try {
-    var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().run();
+    var tenantcode = "";
+    var properties_table = new GlideRecord('sys_properties');
+    properties_table.addQuery('name', "x_vmw_ws1uem.WS1UEMTenantCode");
+    properties_table.query();
+    if (properties_table.next()) {
+        tenantcode = properties_table.value;
+    }
+
+    var inputs = {};
+    inputs['tenantcode'] = tenantcode; // String 
+
+    // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+    var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().withInputs(inputs).run();
     var outputs = result.getOutputs();
 
+    // Get Outputs:
+    // Note: outputs can only be retrieved when executing synchronously.
     var variable = outputs['variable']; // String
     var status = outputs['status']; // String
     var response = outputs['response']; // String
     var ws1productpersion = outputs['ws1productpersion']; // String
 
 
-    var properties_table = new GlideRecord('sys_properties');
+
+    properties_table = new GlideRecord('sys_properties');
     properties_table.addQuery('name', "x_vmw_ws1uem.WS1UEM Platform");
     properties_table.query();
     if (properties_table.next()) {
         properties_table.value = ws1productpersion;
-		properties_table.update();
+        properties_table.update();
         gs.info("Workspace ONE UEM Platform Version: " + ws1productpersion);
         gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productpersion);
     } else {
@@ -53,14 +68,14 @@ try {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:48:33</sys_created_on>
         <sys_id>15b81fce1b1eb410a76c0dc0604bcbea</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>WS1UEM check platform version</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sysauto_script_15b81fce1b1eb410a76c0dc0604bcbea</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-05 02:59:26</sys_updated_on>
+        <sys_updated_on>2021-10-10 04:18:31</sys_updated_on>
         <time_zone>floating</time_zone>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>

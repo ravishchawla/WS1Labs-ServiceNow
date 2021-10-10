@@ -201,7 +201,7 @@ function continueOK() {
     action_inputs.action = gel("ws1_action").value;
 
     unlock_pin = "";
-    for (i = 0; i < 6; i+=1) {
+    for (i = 0; i < 6; i += 1) {
 
         pin_id = "input_ws1_unlock_pin" + i;
 
@@ -250,9 +250,9 @@ function execute_action(sid, action_inputs, set_form) {
         g_form.save();
     }
 
-    document.getElementById("runprocessingscript").value = "actionflow";
-    document.getElementById("sid").value = sid;
-
+    // Pass the values into the processing script
+    gel("runprocessingscript").value = "actionflow";
+    gel("sid").value = sid;
     gel("jvar_action").value = action_inputs.action;
     gel("jvar_passcode").value = action_inputs.passcode;
     gel("jvar_unlockpin").value = action_inputs.unlockpin;
@@ -306,7 +306,7 @@ function util_compare_versions(version_a, version_b) {
         sub_versions_b = sub_versions_b.concat(Array(sub_versions_a.length - sub_versions_b.length).fill(0));
     }
 
-    for (i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i+=1) {
+    for (i = 0; i < Math.min(sub_versions_a.length, sub_versions_b.length); i += 1) {
         if (sub_versions_a[i] > sub_versions_b[i]) {
             return 1;
         }
@@ -344,7 +344,7 @@ function remove_actions_from_select_input(select_input, option_name) {
     var select_object = $(select_input);
     var i;
 
-    for (i = 0; i < select_object.length; i+=1) {
+    for (i = 0; i < select_object.length; i += 1) {
         if (select_object.options[i].value.toLowerCase() == option_name) {
             select_object.remove(i);
         }
@@ -358,7 +358,7 @@ function set_action_as_main_select_input(select_input, option_name) {
     var i;
     var select_object = $(select_input);
 
-    for (i = 0; i < select_object.length; i+=1) {
+    for (i = 0; i < select_object.length; i += 1) {
 
         if (select_object.options[i].value.toLowerCase() == option_name) {
             select_object.value = select_object.options[i].value;
@@ -379,7 +379,7 @@ function validatePin(pin, nextIndex) {
     var pinInt;
     var nextPin;
 
-    for (i = 0; i < 6; i+=1) {
+    for (i = 0; i < 6; i += 1) {
 
         currentPinId = "input_ws1_unlock_pin" + i;
 
@@ -448,7 +448,7 @@ function show_unlock_pin(showFlag) {
 
     inputs = document.querySelector("#div_ws1_unlock_pin").getElementsByTagName("input");
 
-    for (i = 0; i < inputs.length; i+=1) {
+    for (i = 0; i < inputs.length; i += 1) {
         inputs[i].readOnly = !showFlag;
     }
 }
@@ -459,7 +459,7 @@ function show_unlock_passcode(showFlag) {
     $("div_ws1_passcode").hidden = !showFlag;
 
     inputs = document.querySelector("#div_ws1_passcode").getElementsByTagName("input");
-    for (i = 0; i < inputs.length; i+=1) {
+    for (i = 0; i < inputs.length; i += 1) {
         inputs[i].readOnly = !showFlag;
     }
 }
@@ -771,13 +771,13 @@ if (runprocessingscript === "actionflow") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>240</sys_mod_count>
+        <sys_mod_count>241</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-07 20:10:06</sys_updated_on>
+        <sys_updated_on>2021-10-09 03:03:00</sys_updated_on>
     </sys_ui_page>
 </record_update>

@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5387573d1b92f41092ce8514604bcb5a</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>WS1UEMCMDBIntegration</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_5387573d1b92f41092ce8514604bcb5a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -82,10 +82,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 22:04:19</sys_created_on>
         <sys_id>97879b3d1b92f41092ce8514604bcb09</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <sys_updated_on>2021-10-10 01:31:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=97879b3d1b92f41092ce8514604bcb09"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -138,14 +138,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-08-31 22:04:19</sys_created_on>
         <sys_id>e3879b3d1b92f41092ce8514604bcb17</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <sys_updated_on>2021-10-10 01:31:44</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   	outputs.ws1integration = false;
   
   	var rec = new GlideRecord('sys_properties');
-  	rec.addQuery('name', 'x_646971_uemconn_0.WS1UEMCMDBIntegration');
+  	rec.addQuery('name', 'x_vmw_ws1uem.WS1UEMCMDBIntegration');
 	rec.query();
 	if(rec.next()){
 		outputs.ws1integration = rec.value;
@@ -348,17 +348,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMCMDBIntegration">5387573d1b92f41092ce8514604bcb5a</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ce842cc21bd6f41092ce8514604bcb6d","name":"plan"}}</plan>
-        <snapshot>f5842cc21bd6f41092ce8514604bcb44</snapshot>
+        <snapshot>1a0d70ae1bcb3010a76c0dc0604bcb20</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 03:40:38</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ce842cc21bd6f41092ce8514604bcb6d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <sys_updated_on>2021-10-10 01:31:46</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -441,10 +441,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 03:40:37</sys_created_on>
         <sys_id>71842cc21bd6f41092ce8514604bcb2b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=71842cc21bd6f41092ce8514604bcb2b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -483,14 +483,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 03:40:38</sys_created_on>
         <sys_id>bd842cc21bd6f41092ce8514604bcb38</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   	outputs.ws1integration = false;
   
   	var rec = new GlideRecord('sys_properties');
-  	rec.addQuery('name', 'x_646971_uemconn_0.WS1UEMCMDBIntegration');
+  	rec.addQuery('name', 'x_vmw_ws1uem.WS1UEMCMDBIntegration');
 	rec.query();
 	if(rec.next()){
 		outputs.ws1integration = rec.value;

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="DELETE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation>Script to carry out import</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>5387573d1b92f41092ce8514604bcb5a</copied_from>
+        <copied_from_name>WS1UEMCMDBIntegration</copied_from_name>
+        <description>Script to carry out import</description>
+        <ih_action>false</ih_action>
+        <internal_name>ws1uemexecuteimport</internal_name>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1udid}}","label":"action➛WS1Udid","type":"action","ref":""},{"name":"{{action.ws1messagetotranslate}}","label":"action➛ws1Messagetotranslate","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child8}}","label":"step➛Script step➛Devices➛Device➛Device_child8","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.platform}}","label":"step➛Script step➛Devices➛Device➛platform","type":"step","ref":""},{"name":"{{step[61e10f46-c45b-42f2-bee3-722ccc122f3c].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.id}}","label":"step➛Script step➛Devices➛Device➛id","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1uuid}}","label":"step➛Script step➛ws1uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1id}}","label":"step➛Script step➛ws1id","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1platform}}","label":"step➛Script step➛ws1platform","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1enrollmentstatus}}","label":"step➛Script step➛ws1enrollmentstatus","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1user}}","label":"step➛Script step➛Ws1user","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].userid}}","label":"step➛Script step➛ws1userid","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1userid}}","label":"step➛Script step➛message","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].message}}","label":"step➛Script step➛ws1integration","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}","label":"step➛Script step➛ws1integration","type":"step","ref":""}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>WS1UEMExecuteImport</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:13:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e29299761b66b45092ce8514604bcbde</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>WS1UEMExecuteImport</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_e29299761b66b45092ce8514604bcbde</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:38:44</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="DELETE" query="documentkey=e29299761b66b45092ce8514604bcbde"/>
+    <sys_variable_value action="DELETE" query="document_key=e29299761b66b45092ce8514604bcbde"/>
+    <sys_hub_step_instance action="DELETE" query="action=e29299761b66b45092ce8514604bcbde^sys_idNOT IN6a9299761b66b45092ce8514604bcbe6"/>
+    <sys_hub_step_instance action="DELETE">
+        <action display_value="WS1UEMExecuteImport">e29299761b66b45092ce8514604bcbde</action>
+        <cid>e5303c2c-3faf-4b47-ba10-1d1faedad494</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:13:04</sys_created_on>
+        <sys_id>6a9299761b66b45092ce8514604bcbe6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:38:44</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="DELETE" query="document_key=6a9299761b66b45092ce8514604bcbe6"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a9299761b66b45092ce8514604bcbe6</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:13:04</sys_created_on>
+        <sys_id>2a9299761b66b45092ce8514604bcbf9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:13:04</sys_updated_on>
+        <value/>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a9299761b66b45092ce8514604bcbe6</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:13:04</sys_created_on>
+        <sys_id>629299761b66b45092ce8514604bcbf9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:13:04</sys_updated_on>
+        <value/>
+        <variable display_value="MID Selection">cbd1070373531010791f94596bf6a776</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a9299761b66b45092ce8514604bcbe6</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:13:04</sys_created_on>
+        <sys_id>ae9299761b66b45092ce8514604bcbf9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:38:44</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+ /*
+    var import_GR = new GlideRecord('scheduled_import_set');
+	import_GR.addQuery('Name','WS1UEMImportSchedule');
+	import_GR.query();
+	if(import_GR.next()){
+      	gs.executeNow(import_GR);
+    }
+*/
+
+  // run data source
+    var import_GR = new GlideRecord('sys_data_source');
+	import_GR.addQuery('Name','VMware Workspace ONE ITSM Connector');
+	import_GR.query();
+	if(import_GR.next()){
+      	gs.executeNow(import_GR);
+      
+      	// carry out transform
+        var transform_GR = new GlideRecord('sys_robust_import_set_transformer');
+		transform_GR.addQuery('Name','VMware Workspace ONE ITSM Connector');
+		transform_GR.query();
+		if(transform_GR.next()){
+      		gs.executeNow(transform_GR);
+        }
+    }
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6a9299761b66b45092ce8514604bcbe6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:13:04</sys_created_on>
+        <sys_id>ea9299761b66b45092ce8514604bcbf9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:13:04</sys_updated_on>
+        <value/>
+        <variable display_value="Select MID Server">2c226939b3101300176b051a16a8dc83</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_hub_action_type_definition_e29299761b66b45092ce8514604bcbde</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition"><sys_hub_action_type_definition action="INSERT_OR_UPDATE"><access>public</access><acls/><action_template/><active>true</active><annotation>Script to carry out import</annotation><callable_by_client_api>false</callable_by_client_api><category/><copied_from>5387573d1b92f41092ce8514604bcb5a</copied_from><copied_from_name>WS1UEMCMDBIntegration</copied_from_name><description>Script to carry out import</description><ih_action>false</ih_action><internal_name>ws1uemexecuteimport</internal_name><label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1udid}}","label":"action➛WS1Udid","type":"action","ref":""},{"name":"{{action.ws1messagetotranslate}}","label":"action➛ws1Messagetotranslate","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child8}}","label":"step➛Script step➛Devices➛Device➛Device_child8","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.platform}}","label":"step➛Script step➛Devices➛Device➛platform","type":"step","ref":""},{"name":"{{step[61e10f46-c45b-42f2-bee3-722ccc122f3c].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.id}}","label":"step➛Script step➛Devices➛Device➛id","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1uuid}}","label":"step➛Script step➛ws1uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1id}}","label":"step➛Script step➛ws1id","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1platform}}","label":"step➛Script step➛ws1platform","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1enrollmentstatus}}","label":"step➛Script step➛ws1enrollmentstatus","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1user}}","label":"step➛Script step➛Ws1user","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].userid}}","label":"step➛Script step➛ws1userid","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1userid}}","label":"step➛Script step➛message","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].message}}","label":"step➛Script step➛ws1integration","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}","label":"step➛Script step➛ws1integration","type":"step","ref":""}]</label_cache><latest_snapshot/><master_snapshot/><name>WS1UEMExecuteImport</name><natlang/><outputs/><state>draft</state><sys_class_name>sys_hub_action_type_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 01:13:03</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>e29299761b66b45092ce8514604bcbde</sys_id><sys_mod_count>7</sys_mod_count><sys_name>WS1UEMExecuteImport</sys_name><sys_overrides/><sys_package display_value="ws1uem" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_hub_action_type_definition_e29299761b66b45092ce8514604bcbde</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-16 01:38:44</sys_updated_on><system_level>false</system_level><type/></sys_hub_action_type_definition><sys_translated_text action="delete_multiple" query="documentkey=e29299761b66b45092ce8514604bcbde"/><sys_variable_value action="delete_multiple" query="document_key=e29299761b66b45092ce8514604bcbde"/><sys_hub_step_instance action="delete_multiple" query="action=e29299761b66b45092ce8514604bcbde^sys_idNOT IN6a9299761b66b45092ce8514604bcbe6"/><sys_hub_step_instance action="INSERT_OR_UPDATE"><action display_value="WS1UEMExecuteImport">e29299761b66b45092ce8514604bcbde</action><cid>e5303c2c-3faf-4b47-ba10-1d1faedad494</cid><extended_inputs/><extended_outputs/><icon/><inputs/><label>Script step</label><order>1</order><outputs/><section/><step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 01:13:04</sys_created_on><sys_id>6a9299761b66b45092ce8514604bcbe6</sys_id><sys_mod_count>4</sys_mod_count><sys_scope display_value="ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-16 01:38:44</sys_updated_on></sys_hub_step_instance><sys_variable_value action="delete_multiple" query="document_key=6a9299761b66b45092ce8514604bcbe6"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_hub_step_instance</document><document_key>6a9299761b66b45092ce8514604bcbe6</document_key><order>400</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 01:13:04</sys_created_on><sys_id>2a9299761b66b45092ce8514604bcbf9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-16 01:13:04</sys_updated_on><value/><variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_hub_step_instance</document><document_key>6a9299761b66b45092ce8514604bcbe6</document_key><order>350</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 01:13:04</sys_created_on><sys_id>629299761b66b45092ce8514604bcbf9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-16 01:13:04</sys_updated_on><value/><variable display_value="MID Selection">cbd1070373531010791f94596bf6a776</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_hub_step_instance</document><document_key>6a9299761b66b45092ce8514604bcbe6</document_key><order>600</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 01:13:04</sys_created_on><sys_id>ae9299761b66b45092ce8514604bcbf9</sys_id><sys_mod_count>3</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-16 01:38:44</sys_updated_on><value>(function execute(inputs, outputs) {
+ /*
+    var import_GR = new GlideRecord('scheduled_import_set');
+	import_GR.addQuery('Name','WS1UEMImportSchedule');
+	import_GR.query();
+	if(import_GR.next()){
+      	gs.executeNow(import_GR);
+    }
+*/
+
+  // run data source
+    var import_GR = new GlideRecord('sys_data_source');
+	import_GR.addQuery('Name','VMware Workspace ONE ITSM Connector');
+	import_GR.query();
+	if(import_GR.next()){
+      	gs.executeNow(import_GR);
+      
+      	// carry out transform
+        var transform_GR = new GlideRecord('sys_robust_import_set_transformer');
+		transform_GR.addQuery('Name','VMware Workspace ONE ITSM Connector');
+		transform_GR.query();
+		if(transform_GR.next()){
+      		gs.executeNow(transform_GR);
+        }
+    }
+  
+})(inputs, outputs);
+</value><variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_hub_step_instance</document><document_key>6a9299761b66b45092ce8514604bcbe6</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 01:13:04</sys_created_on><sys_id>ea9299761b66b45092ce8514604bcbf9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-16 01:13:04</sys_updated_on><value/><variable display_value="Select MID Server">2c226939b3101300176b051a16a8dc83</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>278671471</payload_hash>
+        <record_name>WS1UEMExecuteImport</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 01:38:45</sys_created_on>
+        <sys_id>3e7895ba1b66b45092ce8514604bcbd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17bec4190d10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-16 01:38:45</sys_updated_on>
+        <type>Action Type</type>
+        <update_guid>367895ba8e66b450cd0346a5c3f7ffd8</update_guid>
+        <update_guid_history>367895ba8e66b450cd0346a5c3f7ffd8:278671471,82c7dd7a3766b450aa3ed2c8f79a3b38:1781958559,c537197af766b4503171b4fd114c29c8:-1500741373,9a17d57ac566b4500aa9fcbb78caf477:-1124251959,fbf6957a5a66b45092ea1be6e64af8a9:1169274845,2292d9763a66b45057eadc40badbd430:1163961942,e69299760a66b450e89965eb0913ade4:-489003929</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-10 03:59:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_action_type_definition">sys_hub_action_type_definition</sys_db_object>
+        <sys_id>b44537ec2f884420981b94ed5e62f190</sys_id>
+        <sys_metadata>e29299761b66b45092ce8514604bcbde</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMExecuteImport</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_hub_action_type_definition_e29299761b66b45092ce8514604bcbde</sys_update_name>
+        <sys_update_version display_value="sys_hub_action_type_definition_e29299761b66b45092ce8514604bcbde">3e7895ba1b66b45092ce8514604bcbd8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 03:59:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

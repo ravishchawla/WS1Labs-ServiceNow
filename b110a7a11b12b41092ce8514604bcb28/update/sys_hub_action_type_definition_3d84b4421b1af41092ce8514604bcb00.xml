@@ -12,7 +12,7 @@
         <description>Call the assist api and return the assist URL</description>
         <ih_action>true</ih_action>
         <internal_name>ws1uemassist</internal_name>
-        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1apiversion}}","label":"action➛ws1apiversion","type":"action","ref":""},{"name":"{{action.ws1body}}","label":"action➛ws1body","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[6bd62abe-9e31-4ddf-a416-04d9b161708e].assisturl}}","label":"step➛Script step➛assistUrl","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root.session_url}}","label":"step➛JSON Parser step➛root➛session_url","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1apiversion}}","label":"action➛ws1apiversion","type":"action","ref":""},{"name":"{{action.ws1body}}","label":"action➛ws1body","type":"action","ref":""},{"name":"{{action.tenantcode}}","label":"action➛tenantcode","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[6bd62abe-9e31-4ddf-a416-04d9b161708e].assisturl}}","label":"step➛Script step➛assistUrl","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root.session_url}}","label":"step➛JSON Parser step➛root➛session_url","type":"step","ref":""}]</label_cache>
         <master_snapshot>7fb574c21b1af41092ce8514604bcb08</master_snapshot>
         <name>WS1UEMAssist</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3d84b4421b1af41092ce8514604bcb00</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>WS1UEMAssist</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_3d84b4421b1af41092ce8514604bcb00</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:16</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -416,10 +416,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:50:32</sys_created_on>
         <sys_id>3d84b4421b1af41092ce8514604bcb13</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:13</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3d84b4421b1af41092ce8514604bcb13"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -444,10 +444,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:50:32</sys_created_on>
         <sys_id>3984b4421b1af41092ce8514604bcb35</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 04:50:32</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"accept","value":"application/json;"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"}]}</value>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
+        <value>{}</value>
         <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -603,11 +603,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:50:32</sys_created_on>
         <sys_id>7184b4421b1af41092ce8514604bcb34</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 04:50:32</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
+        <value>{"type":"ADV_NV","value":[{"name":"accept","value":"application/json;","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"aw-tenant-code","value":"{{action.tenantcode}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>http_method</field>
@@ -753,7 +753,88 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 04:50:32</sys_updated_on>
     </sys_hub_input_scripts>
-    <sys_hub_action_input action="delete_multiple" query="model=3d84b4421b1af41092ce8514604bcb00^sys_idNOT INb984b4421b1af41092ce8514604bcb0c,f984b4421b1af41092ce8514604bcb05"/>
+    <sys_hub_action_input action="delete_multiple" query="model=3d84b4421b1af41092ce8514604bcb00^sys_idNOT INb09d152a1b4f3010a76c0dc0604bcbf2,b984b4421b1af41092ce8514604bcb0c,f984b4421b1af41092ce8514604bcb05"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0dcc4173-7c98-41b5-8e85-fc50c92e2bdc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenantcode</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>tenantcode</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMAssist">3d84b4421b1af41092ce8514604bcb00</model>
+        <model_id>3d84b4421b1af41092ce8514604bcb00</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_3d84b4421b1af41092ce8514604bcb00</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-10 03:53:55</sys_created_on>
+        <sys_id>b09d152a1b4f3010a76c0dc0604bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -981,14 +1062,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:50:32</sys_created_on>
         <sys_id>0684b4421b1af41092ce8514604bcb6b</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:14</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1147,14 +1228,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:50:32</sys_created_on>
         <sys_id>8a84b4421b1af41092ce8514604bcb78</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:14</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1230,14 +1311,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:50:32</sys_created_on>
         <sys_id>c684b4421b1af41092ce8514604bcb72</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:14</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1249,7 +1330,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_3d84b4421b1af41092ce8514604bcb00^sys_idNOT IN3584b4421b1af41092ce8514604bcb0b,b584b4421b1af41092ce8514604bcb11"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_3d84b4421b1af41092ce8514604bcb00^sys_idNOT IN3584b4421b1af41092ce8514604bcb0b,7c9d152a1b4f3010a76c0dc0604bcbf6,b584b4421b1af41092ce8514604bcb11"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>udid</element>
         <help/>
@@ -1270,6 +1351,29 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 04:50:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>tenantcode</element>
+        <help/>
+        <hint/>
+        <label>tenantcode</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_3d84b4421b1af41092ce8514604bcb00</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-10 03:53:55</sys_created_on>
+        <sys_id>7c9d152a1b4f3010a76c0dc0604bcbf6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 03:53:55</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1393,17 +1497,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMAssist">3d84b4421b1af41092ce8514604bcb00</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"10c5b4c21b1af41092ce8514604bcb30","name":"plan"}}</plan>
-        <snapshot>6c90e18b1b32b09092ce8514604bcb9f</snapshot>
+        <snapshot>dd9d952a1b4f3010a76c0dc0604bcb27</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:53</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>10c5b4c21b1af41092ce8514604bcb30</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:18</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:59</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1416,7 +1520,7 @@
         <copied_from_name/>
         <description>Call the assist api and return the assist URL</description>
         <internal_name>ws1uemassist</internal_name>
-        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1apiversion}}","label":"action➛ws1apiversion","type":"action","ref":""},{"name":"{{action.ws1body}}","label":"action➛ws1body","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[6bd62abe-9e31-4ddf-a416-04d9b161708e].assisturl}}","label":"step➛Script step➛assistUrl","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root.session_url}}","label":"step➛JSON Parser step➛root➛session_url","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1apiversion}}","label":"action➛ws1apiversion","type":"action","ref":""},{"name":"{{action.ws1body}}","label":"action➛ws1body","type":"action","ref":""},{"name":"{{action.tenantcode}}","label":"action➛tenantcode","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[6bd62abe-9e31-4ddf-a416-04d9b161708e].assisturl}}","label":"step➛Script step➛assistUrl","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":""},{"name":"{{step[2639ff5b-4336-4c1b-9734-3edeceff2c2b].root.session_url}}","label":"step➛JSON Parser step➛root➛session_url","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>WS1UEMAssist</name>
         <natlang/>
@@ -1429,7 +1533,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7fb574c21b1af41092ce8514604bcb08</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1437,7 +1541,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 04:55:51</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:56</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1820,10 +1924,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:51</sys_created_on>
         <sys_id>77b574c21b1af41092ce8514604bcb19</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:16</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=77b574c21b1af41092ce8514604bcb19"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1890,10 +1994,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:51</sys_created_on>
         <sys_id>b3b574c21b1af41092ce8514604bcb2e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 04:55:51</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"accept","value":"application/json;"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"}]}</value>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
+        <value>{}</value>
         <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2007,11 +2111,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:51</sys_created_on>
         <sys_id>fbb574c21b1af41092ce8514604bcb2c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-01 04:55:51</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value/>
+        <value>{"type":"ADV_NV","value":[{"name":"accept","value":"application/json;","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"aw-tenant-code","value":"{{action.tenantcode}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>http_method</field>
@@ -2157,7 +2261,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 04:55:51</sys_updated_on>
     </sys_hub_input_scripts>
-    <sys_hub_action_input action="delete_multiple" query="model=7fb574c21b1af41092ce8514604bcb08^sys_idNOT IN3bb574c21b1af41092ce8514604bcb0b,f3b574c21b1af41092ce8514604bcb12"/>
+    <sys_hub_action_input action="delete_multiple" query="model=7fb574c21b1af41092ce8514604bcb08^sys_idNOT IN3bb574c21b1af41092ce8514604bcb0b,959d552a1b4f3010a76c0dc0604bcbbd,f3b574c21b1af41092ce8514604bcb12"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2228,6 +2332,87 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 04:55:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0dcc4173-7c98-41b5-8e85-fc50c92e2bdc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenantcode</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>tenantcode</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMAssist">7fb574c21b1af41092ce8514604bcb08</model>
+        <model_id>7fb574c21b1af41092ce8514604bcb08</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_7fb574c21b1af41092ce8514604bcb08</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-10 03:53:57</sys_created_on>
+        <sys_id>959d552a1b4f3010a76c0dc0604bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2468,14 +2653,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:51</sys_created_on>
         <sys_id>37b574c21b1af41092ce8514604bcb4a</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:16</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2551,14 +2736,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:52</sys_created_on>
         <sys_id>7fb574c21b1af41092ce8514604bcb63</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:16</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2634,14 +2819,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 04:55:52</sys_created_on>
         <sys_id>f3b574c21b1af41092ce8514604bcb51</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-29 07:08:16</sys_updated_on>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2653,7 +2838,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7fb574c21b1af41092ce8514604bcb08^sys_idNOT IN7fb574c21b1af41092ce8514604bcb10,ffb574c21b1af41092ce8514604bcb16"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7fb574c21b1af41092ce8514604bcb08^sys_idNOT IN7fb574c21b1af41092ce8514604bcb10,dd9d552a1b4f3010a76c0dc0604bcbc1,ffb574c21b1af41092ce8514604bcb16"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>udid</element>
         <help/>
@@ -2674,6 +2859,29 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 04:55:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>tenantcode</element>
+        <help/>
+        <hint/>
+        <label>tenantcode</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_7fb574c21b1af41092ce8514604bcb08</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-10 03:53:57</sys_created_on>
+        <sys_id>dd9d552a1b4f3010a76c0dc0604bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 03:53:57</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
