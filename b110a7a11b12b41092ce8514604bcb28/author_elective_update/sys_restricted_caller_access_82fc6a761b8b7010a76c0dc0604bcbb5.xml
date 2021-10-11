@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="DELETE">
+        <operation>write</operation>
+        <source/>
+        <source_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</source_scope>
+        <source_table/>
+        <source_type>5</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 04:21:48</sys_created_on>
+        <sys_id>82fc6a761b8b7010a76c0dc0604bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b110a7a11b12b41092ce8514604bcb28</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_82fc6a761b8b7010a76c0dc0604bcbb5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 04:21:48</sys_updated_on>
+        <target>3a60f0a61bcb3010a76c0dc0604bcb07</target>
+        <target_scope display_value="Global">global</target_scope>
+        <target_table>http_connection</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_restricted_caller_access_82fc6a761b8b7010a76c0dc0604bcbb5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access"><sys_restricted_caller_access action="INSERT_OR_UPDATE"><operation>write</operation><source/><source_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</source_scope><source_table/><source_type>5</source_type><status>2</status><sys_class_name>sys_restricted_caller_access</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-11 04:21:48</sys_created_on><sys_id>82fc6a761b8b7010a76c0dc0604bcbb5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>b110a7a11b12b41092ce8514604bcb28</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_restricted_caller_access_82fc6a761b8b7010a76c0dc0604bcbb5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-11 04:21:48</sys_updated_on><target>3a60f0a61bcb3010a76c0dc0604bcb07</target><target_scope display_value="Global">global</target_scope><target_table>http_connection</target_table><target_type>1</target_type></sys_restricted_caller_access></record_update>]]></payload>
+        <payload_hash>-1382934572</payload_hash>
+        <record_name>b110a7a11b12b41092ce8514604bcb28</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 04:21:48</sys_created_on>
+        <sys_id>0b8d2a761b8b7010a76c0dc0604bcba8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c6d95d5650000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 04:21:48</sys_updated_on>
+        <type>Restricted Caller Access Privilege</type>
+        <update_guid>438d2a76428b7010efb9e979401fd7a8</update_guid>
+        <update_guid_history>438d2a76428b7010efb9e979401fd7a8:-1382934572</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-11 04:22:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_restricted_caller_access">sys_restricted_caller_access</sys_db_object>
+        <sys_id>15369bd2621c4e74b02246fc4f5a3cc4</sys_id>
+        <sys_metadata>82fc6a761b8b7010a76c0dc0604bcbb5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b110a7a11b12b41092ce8514604bcb28</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_restricted_caller_access_82fc6a761b8b7010a76c0dc0604bcbb5</sys_update_name>
+        <sys_update_version display_value="sys_restricted_caller_access_82fc6a761b8b7010a76c0dc0604bcbb5">0b8d2a761b8b7010a76c0dc0604bcba8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 04:22:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
