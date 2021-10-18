@@ -19,15 +19,17 @@ function onLoad() {
     For unit testing purposes, if an action is not provided,
     Test values are loaded in from the WS1 Testing table.
     **/
+	jslog('demo onload');
     if ((!action) || (action.value.includes("Undefined"))) {
         ga_test_action = new GlideAjax("x_vmw_ws1uem.WS1GetTestAction");
         ga_test_json = new GlideAjax("x_vmw_ws1uem.WS1TestOSActionsJSON");
 
         ga_test_action.addParam("sysparm_name", "get_test_action");
         ga_test_json.addParam("sysparm_name", "get_test_json");
-
+		jslog('demo no action defined');
         ga_test_action.getXML(function parse_response(response) {
             action = response.responseXML.documentElement.getAttribute("answer");
+			jslog('demo action response = ' + action);
             ws1_actions_response = {};
 
             ga_test_json.getXML(function parse_json_response(response) {
@@ -35,6 +37,7 @@ function onLoad() {
 
                 try {
                     ws1_actions_response = JSON.parse(ws1_actions_response);
+					jslog('demo action json = ' + ws1_actions_response);
                 } catch (e) {
                     ws1_actions_response = {};
                 }
@@ -60,6 +63,7 @@ Based on the provided UEM Action configuration, set the state of
 specific fields and as hidden or visible.
 **/
 function loadPopupContents(action, ws1_actions_response) {
+	alert('demo load popup contents action = ' + action);
     var stringText;
     var select_dropdown_id;
     var input_options = [];
@@ -773,13 +777,13 @@ if (runprocessingscript === "actionflow") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>248</sys_mod_count>
+        <sys_mod_count>253</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-12 06:26:30</sys_updated_on>
+        <sys_updated_on>2021-10-13 20:40:37</sys_updated_on>
     </sys_ui_page>
 </record_update>
