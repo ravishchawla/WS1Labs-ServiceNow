@@ -50,10 +50,10 @@ function onLoad() {
         A JSON containing UEM configurations for an OS will be loaded in
         from the incidents page, previously stored by the the loading method.
         **/
-        ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
+		ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
 
         ws1_actions_response = JSON.parse(ws1_actions_response.value);
-
+//		alert('else clause');
         loadPopupContents(action.value, ws1_actions_response);
     }
 }
@@ -63,7 +63,7 @@ Based on the provided UEM Action configuration, set the state of
 specific fields and as hidden or visible.
 **/
 function loadPopupContents(action, ws1_actions_response) {
-	alert('demo load popup contents action = ' + action);
+//	alert('demo action = ' + action);
     var stringText;
     var select_dropdown_id;
     var input_options = [];
@@ -77,7 +77,7 @@ function loadPopupContents(action, ws1_actions_response) {
     show_check(false);
 
     action = action.trim();
-
+	
     if (action == "assist") {
 
         stringText = getMessage("WS1UEMAssistInfo");
@@ -711,8 +711,7 @@ gs.info("Running processing script " + runprocessingscript);
 
 if (runprocessingscript === "actionflow") {
 
-    gs.info("Running action flow from UI Page");
-    gs.info("sid value " + sid);
+    gs.info("Running action flow from UI Page, sid = " + sid);
 
     session = gs.getSession();
     addr = session.getUrlOnStack();
@@ -722,15 +721,6 @@ if (runprocessingscript === "actionflow") {
     util.addQuery("sys_id", sid);
     util.query();
     if (util.next()) {
-
-		gs.info("jvar_action " + jvar_action);
-		gs.info("jvar_passcode " + jvar_passcode);
-		gs.info("jvar_unlockpin " + jvar_unlockpin);
-		gs.info("jvar_messagetext " + jvar_messagetext);
-		gs.info("jvar_assisttype " + jvar_assisttype);
-		gs.info("jvar_assisttype " + jvar_assisttype);
-		gs.info("jvar_string " + jvar_string);
-
         util.x_vmw_ws1uem_ws1action = jvar_action;
         util.x_vmw_ws1uem_ws1_passcode = jvar_passcode;
         util.x_vmw_ws1uem_ws1_unlock_pin = jvar_unlockpin;
@@ -755,7 +745,7 @@ if (runprocessingscript === "actionflow") {
             // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
             sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemactionsubflow").inBackground().withInputs(inputs).run();
 
-            gs.info("WS1UEM: calledsubflow ");
+            gs.info("WS1UEM: called subflow ");
 
             // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
             //var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(inputs).run();
@@ -763,13 +753,13 @@ if (runprocessingscript === "actionflow") {
 
             // Current subflow has no outputs defined.
         } catch (ex) {
-            message = ex.getMessage();
+			gs.info("WS1UEM: called subflow failed");
+			message = ex.getMessage();
             gs.error(message);
         }
     } else {
-        gs.info("WS1UEM: failed to call subflow ");
+        gs.info("WS1UEM: failed to call subflow as cannot find incident ");
     }
-
 
     response.sendRedirect(addr);
 }]]></processing_script>
@@ -777,13 +767,13 @@ if (runprocessingscript === "actionflow") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>253</sys_mod_count>
+        <sys_mod_count>262</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-13 20:40:37</sys_updated_on>
+        <sys_updated_on>2021-10-19 04:29:12</sys_updated_on>
     </sys_ui_page>
 </record_update>
