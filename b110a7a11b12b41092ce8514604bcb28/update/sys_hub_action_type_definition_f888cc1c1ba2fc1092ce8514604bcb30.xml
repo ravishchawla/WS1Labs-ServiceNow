@@ -12,7 +12,7 @@
         <description>Get a device using its serial number from WS1 UEM</description>
         <ih_action>true</ih_action>
         <internal_name>ws1uemsearchbyserialnumber</internal_name>
-        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.message}}","label":"action➛message","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.application}}","label":"action➛Application","type":"action","ref":""},{"name":"{{action.messagetype}}","label":"action➛MessageType","type":"action","ref":""},{"name":"{{action.ws1serialnumber}}","label":"action➛WS1SerialNumber","type":"action","ref":""},{"name":"{{action.ws1tenantcode}}","label":"action➛WS1TenantCode","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1productpersion}}","label":"step➛Script step➛ws1productpersion","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_code}}","label":"step➛REST step➛Error Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.devices}}","label":"step➛Script step➛devices➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device}}","label":"step➛Script step➛devices➛device","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child1}}","label":"step➛Script step➛devices➛device➛device_child1","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.username}}","label":"step➛Script step➛devices➛device➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child2}}","label":"step➛Script step➛devices➛device➛device_child2","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.useremailaddress}}","label":"step➛Script step➛devices➛device➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child3}}","label":"step➛Script step➛devices➛device➛device_child3","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child4}}","label":"step➛Script step➛devices➛device➛device_child4","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicereportedname}}","label":"step➛Script step➛devices➛device➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicefriendlyname}}","label":"step➛Script step➛devices➛device➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child5}}","label":"step➛Script step➛devices➛device➛device_child5","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.Udid}}","label":"step➛Script step➛devices➛device➛Udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child6}}","label":"step➛Script step➛devices➛device➛device_child6","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.platform}}","label":"step➛Script step➛devices➛device➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child7}}","label":"step➛Script step➛devices➛device➛device_child7","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child8}}","label":"step➛Script step➛devices➛device➛device_child8","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.serial_number}}","label":"step➛Script step➛devices➛device➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.imei}}","label":"step➛Script step➛devices➛device➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child9}}","label":"step➛Script step➛devices➛device➛device_child9","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.operating_system}}","label":"step➛Script step➛devices➛device➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child10}}","label":"step➛Script step➛devices➛device➛device_child10","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.ownership}}","label":"step➛Script step➛devices➛device➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child11}}","label":"step➛Script step➛devices➛device➛device_child11","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.enrollment_status}}","label":"step➛Script step➛devices➛device➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].username}}","label":"step➛Script step➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].useremailaddress}}","label":"step➛Script step➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicereportedname}}","label":"step➛Script step➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicefriendlyname}}","label":"step➛Script step➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].udid}}","label":"step➛Script step➛udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].serial_number}}","label":"step➛Script step➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].imei}}","label":"step➛Script step➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].operating_system}}","label":"step➛Script step➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ownership}}","label":"step➛Script step➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].enrollment_status}}","label":"step➛Script step➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].compliance_status}}","label":"step➛Script step➛compliance_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform6}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033]._}}","label":"step➛Script step➛","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].uuid}}","label":"step➛Script step➛uuid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].id}}","label":"step➛Script step➛id","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.message}}","label":"action➛message","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.application}}","label":"action➛Application","type":"action","ref":""},{"name":"{{action.messagetype}}","label":"action➛MessageType","type":"action","ref":""},{"name":"{{action.ws1serialnumber}}","label":"action➛WS1SerialNumber","type":"action","ref":""},{"name":"{{action.ws1tenantcode}}","label":"action➛WS1TenantCode","type":"action","ref":""},{"name":"{{action.ws1tentantname}}","label":"action➛WS1TentantName","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1productpersion}}","label":"step➛Script step➛ws1productpersion","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_code}}","label":"step➛REST step➛Error Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.devices}}","label":"step➛Script step➛devices➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device}}","label":"step➛Script step➛devices➛device","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child1}}","label":"step➛Script step➛devices➛device➛device_child1","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.username}}","label":"step➛Script step➛devices➛device➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child2}}","label":"step➛Script step➛devices➛device➛device_child2","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.useremailaddress}}","label":"step➛Script step➛devices➛device➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child3}}","label":"step➛Script step➛devices➛device➛device_child3","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child4}}","label":"step➛Script step➛devices➛device➛device_child4","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicereportedname}}","label":"step➛Script step➛devices➛device➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicefriendlyname}}","label":"step➛Script step➛devices➛device➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child5}}","label":"step➛Script step➛devices➛device➛device_child5","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.Udid}}","label":"step➛Script step➛devices➛device➛Udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child6}}","label":"step➛Script step➛devices➛device➛device_child6","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.platform}}","label":"step➛Script step➛devices➛device➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child7}}","label":"step➛Script step➛devices➛device➛device_child7","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child8}}","label":"step➛Script step➛devices➛device➛device_child8","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.serial_number}}","label":"step➛Script step➛devices➛device➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.imei}}","label":"step➛Script step➛devices➛device➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child9}}","label":"step➛Script step➛devices➛device➛device_child9","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.operating_system}}","label":"step➛Script step➛devices➛device➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child10}}","label":"step➛Script step➛devices➛device➛device_child10","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.ownership}}","label":"step➛Script step➛devices➛device➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child11}}","label":"step➛Script step➛devices➛device➛device_child11","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.enrollment_status}}","label":"step➛Script step➛devices➛device➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].username}}","label":"step➛Script step➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].useremailaddress}}","label":"step➛Script step➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicereportedname}}","label":"step➛Script step➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicefriendlyname}}","label":"step➛Script step➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].udid}}","label":"step➛Script step➛udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].serial_number}}","label":"step➛Script step➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].imei}}","label":"step➛Script step➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].operating_system}}","label":"step➛Script step➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ownership}}","label":"step➛Script step➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].enrollment_status}}","label":"step➛Script step➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].compliance_status}}","label":"step➛Script step➛compliance_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform6}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033]._}}","label":"step➛Script step➛","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].uuid}}","label":"step➛Script step➛uuid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].id}}","label":"step➛Script step➛id","type":"step","ref":""},{"name":"{{step[35720e79-13ca-4041-8761-8352dfb794dd].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[35720e79-13ca-4041-8761-8352dfb794dd].tenanttext}}","label":"step➛Script step➛tenantText","type":"step","ref":""}]</label_cache>
         <master_snapshot>7929485c1ba2fc1092ce8514604bcb85</master_snapshot>
         <name>WS1UEMSearchBySerialNumber</name>
         <natlang/>
@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f888cc1c1ba2fc1092ce8514604bcb30</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>114</sys_mod_count>
         <sys_name>WS1UEMSearchBySerialNumber</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f888cc1c1ba2fc1092ce8514604bcb30</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:38</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:06</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -239,10 +239,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:24:33</sys_created_on>
         <sys_id>3488cc1c1ba2fc1092ce8514604bcb58</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-16 07:26:09</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:20</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3488cc1c1ba2fc1092ce8514604bcb58"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1711,10 +1711,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:24:33</sys_created_on>
         <sys_id>7088cc1c1ba2fc1092ce8514604bcb39</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:52</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:20</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7088cc1c1ba2fc1092ce8514604bcb39"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1914,11 +1914,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:24:33</sys_created_on>
         <sys_id>b488cc1c1ba2fc1092ce8514604bcb51</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:52</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:20</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>{"type":"ADV_NV","value":[{"name":"accept","value":"application/json;version=1","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"aw-tenant-code","value":"{{action.ws1tenantcode}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
+        <value>{"type":"ADV_NV","value":[{"name":"accept","value":"application/json;version=1","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"{{action.ws1tentantname}}","value":"{{action.ws1tenantcode}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>query_params</field>
@@ -2038,7 +2038,88 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=f888cc1c1ba2fc1092ce8514604bcb30^sys_idNOT IN8d9ffc221b0f3010a76c0dc0604bcb07,e019845c1ba2fc1092ce8514604bcb85"/>
+    <sys_hub_action_input action="delete_multiple" query="model=f888cc1c1ba2fc1092ce8514604bcb30^sys_idNOT IN73ad2fe11b1b381092ce8514604bcb94,8d9ffc221b0f3010a76c0dc0604bcb07,e019845c1ba2fc1092ce8514604bcb85"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7c0b99b0-1ecb-4544-a566-d858b3774d0f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1tentantname</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>WS1TentantName</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMSearchBySerialNumber">f888cc1c1ba2fc1092ce8514604bcb30</model>
+        <model_id>f888cc1c1ba2fc1092ce8514604bcb30</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_f888cc1c1ba2fc1092ce8514604bcb30</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 22:05:19</sys_created_on>
+        <sys_id>73ad2fe11b1b381092ce8514604bcb94</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 22:10:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2101,14 +2182,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-10 01:42:51</sys_created_on>
         <sys_id>8d9ffc221b0f3010a76c0dc0604bcb07</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:51</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2266,14 +2347,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:24:34</sys_created_on>
         <sys_id>0988cc1c1ba2fc1092ce8514604bcbc3</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:35</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2432,14 +2513,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:24:34</sys_created_on>
         <sys_id>4d88cc1c1ba2fc1092ce8514604bcbc9</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:35</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3262,14 +3343,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:24:33</sys_created_on>
         <sys_id>fc88cc1c1ba2fc1092ce8514604bcbbb</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:35</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3281,7 +3362,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_f888cc1c1ba2fc1092ce8514604bcb30^sys_idNOT IN2019845c1ba2fc1092ce8514604bcb8b,459ffc221b0f3010a76c0dc0604bcb0d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_f888cc1c1ba2fc1092ce8514604bcb30^sys_idNOT IN2019845c1ba2fc1092ce8514604bcb8b,459ffc221b0f3010a76c0dc0604bcb0d,bfad2fe11b1b381092ce8514604bcb98"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>ws1serialnumber</element>
         <help/>
@@ -3325,6 +3406,29 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-10 01:42:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ws1tentantname</element>
+        <help/>
+        <hint/>
+        <label>WS1TentantName</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_f888cc1c1ba2fc1092ce8514604bcb30</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 22:05:19</sys_created_on>
+        <sys_id>bfad2fe11b1b381092ce8514604bcb98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 22:05:19</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -3632,17 +3736,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMSearchBySerialNumber">f888cc1c1ba2fc1092ce8514604bcb30</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"6229885c1ba2fc1092ce8514604bcbb7","name":"plan"}}</plan>
-        <snapshot>1e29d1261b4f3010a76c0dc0604bcb68</snapshot>
+        <snapshot>39cea3651b1b381092ce8514604bcb86</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:24</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6229885c1ba2fc1092ce8514604bcbb7</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:40</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:09</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -3655,7 +3759,7 @@
         <copied_from_name/>
         <description>Get a device using its serial number from WS1 UEM</description>
         <internal_name>ws1uemsearchbyserialnumber</internal_name>
-        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.message}}","label":"action➛message","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.application}}","label":"action➛Application","type":"action","ref":""},{"name":"{{action.messagetype}}","label":"action➛MessageType","type":"action","ref":""},{"name":"{{action.ws1serialnumber}}","label":"action➛WS1SerialNumber","type":"action","ref":""},{"name":"{{action.ws1tenantcode}}","label":"action➛WS1TenantCode","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1productpersion}}","label":"step➛Script step➛ws1productpersion","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_code}}","label":"step➛REST step➛Error Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.devices}}","label":"step➛Script step➛devices➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device}}","label":"step➛Script step➛devices➛device","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child1}}","label":"step➛Script step➛devices➛device➛device_child1","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.username}}","label":"step➛Script step➛devices➛device➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child2}}","label":"step➛Script step➛devices➛device➛device_child2","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.useremailaddress}}","label":"step➛Script step➛devices➛device➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child3}}","label":"step➛Script step➛devices➛device➛device_child3","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child4}}","label":"step➛Script step➛devices➛device➛device_child4","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicereportedname}}","label":"step➛Script step➛devices➛device➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicefriendlyname}}","label":"step➛Script step➛devices➛device➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child5}}","label":"step➛Script step➛devices➛device➛device_child5","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.Udid}}","label":"step➛Script step➛devices➛device➛Udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child6}}","label":"step➛Script step➛devices➛device➛device_child6","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.platform}}","label":"step➛Script step➛devices➛device➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child7}}","label":"step➛Script step➛devices➛device➛device_child7","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child8}}","label":"step➛Script step➛devices➛device➛device_child8","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.serial_number}}","label":"step➛Script step➛devices➛device➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.imei}}","label":"step➛Script step➛devices➛device➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child9}}","label":"step➛Script step➛devices➛device➛device_child9","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.operating_system}}","label":"step➛Script step➛devices➛device➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child10}}","label":"step➛Script step➛devices➛device➛device_child10","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.ownership}}","label":"step➛Script step➛devices➛device➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child11}}","label":"step➛Script step➛devices➛device➛device_child11","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.enrollment_status}}","label":"step➛Script step➛devices➛device➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].username}}","label":"step➛Script step➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].useremailaddress}}","label":"step➛Script step➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicereportedname}}","label":"step➛Script step➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicefriendlyname}}","label":"step➛Script step➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].udid}}","label":"step➛Script step➛udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].serial_number}}","label":"step➛Script step➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].imei}}","label":"step➛Script step➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].operating_system}}","label":"step➛Script step➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ownership}}","label":"step➛Script step➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].enrollment_status}}","label":"step➛Script step➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].compliance_status}}","label":"step➛Script step➛compliance_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform6}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033]._}}","label":"step➛Script step➛","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].uuid}}","label":"step➛Script step➛uuid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].id}}","label":"step➛Script step➛id","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.command}}","label":"action➛command","type":"action","ref":""},{"name":"{{action.udid}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.message}}","label":"action➛message","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.application}}","label":"action➛Application","type":"action","ref":""},{"name":"{{action.messagetype}}","label":"action➛MessageType","type":"action","ref":""},{"name":"{{action.ws1serialnumber}}","label":"action➛WS1SerialNumber","type":"action","ref":""},{"name":"{{action.ws1tenantcode}}","label":"action➛WS1TenantCode","type":"action","ref":""},{"name":"{{action.ws1tentantname}}","label":"action➛WS1TentantName","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ws1productpersion}}","label":"step➛Script step➛ws1productpersion","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_code}}","label":"step➛REST step➛Error Code","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.devices}}","label":"step➛Script step➛devices➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device}}","label":"step➛Script step➛devices➛device","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child1}}","label":"step➛Script step➛devices➛device➛device_child1","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.username}}","label":"step➛Script step➛devices➛device➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child2}}","label":"step➛Script step➛devices➛device➛device_child2","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.useremailaddress}}","label":"step➛Script step➛devices➛device➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child3}}","label":"step➛Script step➛devices➛device➛device_child3","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child4}}","label":"step➛Script step➛devices➛device➛device_child4","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicereportedname}}","label":"step➛Script step➛devices➛device➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.devicefriendlyname}}","label":"step➛Script step➛devices➛device➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child5}}","label":"step➛Script step➛devices➛device➛device_child5","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.Udid}}","label":"step➛Script step➛devices➛device➛Udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child6}}","label":"step➛Script step➛devices➛device➛device_child6","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.platform}}","label":"step➛Script step➛devices➛device➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child7}}","label":"step➛Script step➛devices➛device➛device_child7","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child8}}","label":"step➛Script step➛devices➛device➛device_child8","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.serial_number}}","label":"step➛Script step➛devices➛device➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.imei}}","label":"step➛Script step➛devices➛device➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child9}}","label":"step➛Script step➛devices➛device➛device_child9","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.operating_system}}","label":"step➛Script step➛devices➛device➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child10}}","label":"step➛Script step➛devices➛device➛device_child10","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.ownership}}","label":"step➛Script step➛devices➛device➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.device_child11}}","label":"step➛Script step➛devices➛device➛device_child11","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devices.device.enrollment_status}}","label":"step➛Script step➛devices➛device➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].username}}","label":"step➛Script step➛username","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].useremailaddress}}","label":"step➛Script step➛useremailaddress","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicereportedname}}","label":"step➛Script step➛devicereportedname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].devicefriendlyname}}","label":"step➛Script step➛devicefriendlyname","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].udid}}","label":"step➛Script step➛udid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].serial_number}}","label":"step➛Script step➛serial_number","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].imei}}","label":"step➛Script step➛imei","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].operating_system}}","label":"step➛Script step➛operating_system","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].ownership}}","label":"step➛Script step➛ownership","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].enrollment_status}}","label":"step➛Script step➛enrollment_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].compliance_status}}","label":"step➛Script step➛compliance_status","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].platform6}}","label":"step➛Script step➛platform","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033]._}}","label":"step➛Script step➛","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].uuid}}","label":"step➛Script step➛uuid","type":"step","ref":""},{"name":"{{step[9a8b9f05-216a-4a9b-b621-783b0ba01033].id}}","label":"step➛Script step➛id","type":"step","ref":""},{"name":"{{step[35720e79-13ca-4041-8761-8352dfb794dd].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[35720e79-13ca-4041-8761-8352dfb794dd].tenanttext}}","label":"step➛Script step➛tenantText","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>WS1UEMSearchBySerialNumber</name>
         <natlang/>
@@ -3668,7 +3772,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7929485c1ba2fc1092ce8514604bcb85</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -3676,7 +3780,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:55</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:24</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -3870,10 +3974,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:22</sys_created_on>
         <sys_id>0629485c1ba2fc1092ce8514604bcbb6</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-16 07:26:19</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:24</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0629485c1ba2fc1092ce8514604bcbb6"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5342,10 +5446,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:21</sys_created_on>
         <sys_id>8a29485c1ba2fc1092ce8514604bcb90</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:55</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:24</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8a29485c1ba2fc1092ce8514604bcb90"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5531,11 +5635,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:22</sys_created_on>
         <sys_id>c229485c1ba2fc1092ce8514604bcbb0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:55</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:05:24</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>{"type":"ADV_NV","value":[{"name":"accept","value":"application/json;version=1","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"aw-tenant-code","value":"{{action.ws1tenantcode}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
+        <value>{"type":"ADV_NV","value":[{"name":"accept","value":"application/json;version=1","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"{{action.ws1tentantname}}","value":"{{action.ws1tenantcode}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>query_params</field>
@@ -5655,7 +5759,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=7929485c1ba2fc1092ce8514604bcb85^sys_idNOT IN399f30621b0f3010a76c0dc0604bcb2f,fd29485c1ba2fc1092ce8514604bcb88"/>
+    <sys_hub_action_input action="delete_multiple" query="model=7929485c1ba2fc1092ce8514604bcb85^sys_idNOT IN399f30621b0f3010a76c0dc0604bcb2f,c9bdafe11b1b381092ce8514604bcb1c,fd29485c1ba2fc1092ce8514604bcb88"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -5718,14 +5822,95 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-10 01:42:55</sys_created_on>
         <sys_id>399f30621b0f3010a76c0dc0604bcb2f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 01:42:55</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7c0b99b0-1ecb-4544-a566-d858b3774d0f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1tentantname</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>WS1TentantName</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMSearchBySerialNumber">7929485c1ba2fc1092ce8514604bcb85</model>
+        <model_id>7929485c1ba2fc1092ce8514604bcb85</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_7929485c1ba2fc1092ce8514604bcb85</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 22:05:24</sys_created_on>
+        <sys_id>c9bdafe11b1b381092ce8514604bcb1c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 22:10:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -5883,14 +6068,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:22</sys_created_on>
         <sys_id>0229885c1ba2fc1092ce8514604bcb07</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:37</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -6464,14 +6649,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:22</sys_created_on>
         <sys_id>8a29485c1ba2fc1092ce8514604bcbf9</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:37</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -6796,14 +6981,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-08 01:27:22</sys_created_on>
         <sys_id>ca29885c1ba2fc1092ce8514604bcb00</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 03:34:37</sys_updated_on>
+        <sys_updated_on>2021-10-19 22:10:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -6898,7 +7083,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7929485c1ba2fc1092ce8514604bcb85^sys_idNOT IN399f30621b0f3010a76c0dc0604bcb40,4629485c1ba2fc1092ce8514604bcb8e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7929485c1ba2fc1092ce8514604bcb85^sys_idNOT IN399f30621b0f3010a76c0dc0604bcb40,4629485c1ba2fc1092ce8514604bcb8e,85bdafe11b1b381092ce8514604bcb21"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>ws1tenantcode</element>
         <help/>
@@ -6942,6 +7127,29 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-08 01:27:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ws1tentantname</element>
+        <help/>
+        <hint/>
+        <label>WS1TentantName</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_7929485c1ba2fc1092ce8514604bcb85</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 22:05:24</sys_created_on>
+        <sys_id>85bdafe11b1b381092ce8514604bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 22:05:24</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
