@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices>NULL</choices>
+        <description>Whether to use the CDMB connector integration for storing additional Workspace ONE UEM data</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_vmw_ws1uem.WS1UEMCMDBIntegration</name>
+        <read_roles>NULL</read_roles>
+        <suffix>WS1UEMCMDBIntegration</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 17:24:06</sys_created_on>
+        <sys_id>c1f023861b5eb410a76c0dc0604bcb1d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMCMDBIntegration</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy>NULL</sys_policy>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_properties_c1f023861b5eb410a76c0dc0604bcb1d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-30 01:23:19</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles>NULL</write_roles>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=c1f023861b5eb410a76c0dc0604bcb1d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_properties_c1f023861b5eb410a76c0dc0604bcb1d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices>NULL</choices><description>Whether to use the CDMB connector integration for storing additional Workspace ONE UEM data</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_vmw_ws1uem.WS1UEMCMDBIntegration</name><read_roles>NULL</read_roles><suffix>WS1UEMCMDBIntegration</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-01 17:24:06</sys_created_on><sys_id>c1f023861b5eb410a76c0dc0604bcb1d</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_vmw_ws1uem.WS1UEMCMDBIntegration</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy>NULL</sys_policy><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_properties_c1f023861b5eb410a76c0dc0604bcb1d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-09-30 01:23:19</sys_updated_on><type>boolean</type><value>true</value><write_roles>NULL</write_roles></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=c1f023861b5eb410a76c0dc0604bcb1d"/></record_update>]]></payload>
+        <payload_hash>67749017</payload_hash>
+        <record_name>x_vmw_ws1uem.WS1UEMCMDBIntegration</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-30 01:23:19</sys_created_on>
+        <sys_id>513b9d131b367c50a76c0dc0604bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c344c7ac40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-30 01:23:19</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>593b9d13de367c5029c9d813bde9e4d8</update_guid>
+        <update_guid_history>593b9d13de367c5029c9d813bde9e4d8:67749017,2f1b5d1321367c50cc1052ac915d3da0:-757506232,28012786af5eb410a6a96325710570dc:1540210865</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 10:06:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>83f02d06d78f43c29f331492257c7af1</sys_id>
+        <sys_metadata>c1f023861b5eb410a76c0dc0604bcb1d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMCMDBIntegration</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_properties_c1f023861b5eb410a76c0dc0604bcb1d</sys_update_name>
+        <sys_update_version display_value="sys_properties_c1f023861b5eb410a76c0dc0604bcb1d">513b9d131b367c50a76c0dc0604bcbd9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 10:06:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="DELETE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation>Retrieve the status of the CMDB Integration</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>5b744a4607ceb0105740f96d7c1ed09b</copied_from>
+        <copied_from_name>UEMCMDBIntegration</copied_from_name>
+        <description>Retrieve the status of the CMDB Integration</description>
+        <ih_action>false</ih_action>
+        <internal_name>uemcmdbintegration</internal_name>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1udid}}","label":"action➛WS1Udid","type":"action","ref":""},{"name":"{{action.ws1messagetotranslate}}","label":"action➛ws1Messagetotranslate","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child8}}","label":"step➛Script step➛Devices➛Device➛Device_child8","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.platform}}","label":"step➛Script step➛Devices➛Device➛platform","type":"step","ref":""},{"name":"{{step[61e10f46-c45b-42f2-bee3-722ccc122f3c].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.id}}","label":"step➛Script step➛Devices➛Device➛id","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1uuid}}","label":"step➛Script step➛ws1uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1id}}","label":"step➛Script step➛ws1id","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1platform}}","label":"step➛Script step➛ws1platform","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1enrollmentstatus}}","label":"step➛Script step➛ws1enrollmentstatus","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1user}}","label":"step➛Script step➛Ws1user","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].userid}}","label":"step➛Script step➛ws1userid","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1userid}}","label":"step➛Script step➛message","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].message}}","label":"step➛Script step➛ws1integration","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}","label":"step➛Script step➛ws1integration","type":"step","ref":""}]</label_cache>
+        <master_snapshot>7d842cc21bd6f41092ce8514604bcb27</master_snapshot>
+        <name>WS1UEMCMDBIntegration</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5387573d1b92f41092ce8514604bcb5a</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>WS1UEMCMDBIntegration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_5387573d1b92f41092ce8514604bcb5a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="DELETE" query="documentkey=5387573d1b92f41092ce8514604bcb5a"/>
+    <sys_variable_value action="DELETE" query="document_key=5387573d1b92f41092ce8514604bcb5a"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>5387573d1b92f41092ce8514604bcb5a</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>2b879b3d1b92f41092ce8514604bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <value>0</value>
+        <variable display_value="WS1CMDBIntegration">a7879b3d1b92f41092ce8514604bcb19</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=5387573d1b92f41092ce8514604bcb5a"/>
+    <sys_element_mapping action="DELETE">
+        <field>ws1cmdbintegration</field>
+        <id>5387573d1b92f41092ce8514604bcb5a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>a7879b3d1b92f41092ce8514604bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a</table>
+        <value>{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="DELETE" query="action=5387573d1b92f41092ce8514604bcb5a^sys_idNOT IN97879b3d1b92f41092ce8514604bcb09"/>
+    <sys_hub_step_instance action="DELETE">
+        <action display_value="WS1UEMCMDBIntegration">5387573d1b92f41092ce8514604bcb5a</action>
+        <cid>e5303c2c-3faf-4b47-ba10-1d1faedad494</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>97879b3d1b92f41092ce8514604bcb09</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 01:31:44</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="DELETE" query="document_key=97879b3d1b92f41092ce8514604bcb09"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>97879b3d1b92f41092ce8514604bcb09</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>23879b3d1b92f41092ce8514604bcb17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <value/>
+        <variable display_value="Select MID Server">2c226939b3101300176b051a16a8dc83</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>97879b3d1b92f41092ce8514604bcb09</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>6f879b3d1b92f41092ce8514604bcb16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <value/>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>97879b3d1b92f41092ce8514604bcb09</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>ab879b3d1b92f41092ce8514604bcb16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <value/>
+        <variable display_value="MID Selection">cbd1070373531010791f94596bf6a776</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>97879b3d1b92f41092ce8514604bcb09</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>e3879b3d1b92f41092ce8514604bcb17</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 01:31:44</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  	outputs.ws1integration = false;
+  
+  	var rec = new GlideRecord('sys_properties');
+  	rec.addQuery('name', 'x_vmw_ws1uem.WS1UEMCMDBIntegration');
+	rec.query();
+	if(rec.next()){
+		outputs.ws1integration = rec.value;
+	}
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="DELETE" query="model=97879b3d1b92f41092ce8514604bcb09^sys_idNOT IN93879b3d1b92f41092ce8514604bcb0d"/>
+    <sys_hub_step_ext_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=dbe15d5b-4e74-4792-820a-d017d6236cbe</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1integration</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>ws1integration</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">97879b3d1b92f41092ce8514604bcb09</model>
+        <model_id>97879b3d1b92f41092ce8514604bcb09</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_97879b3d1b92f41092ce8514604bcb09</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>93879b3d1b92f41092ce8514604bcb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_output action="DELETE" query="model=5387573d1b92f41092ce8514604bcb5a^sys_idNOT INa7879b3d1b92f41092ce8514604bcb19"/>
+    <sys_hub_action_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=352c98dd-cc1b-46b4-be5a-47745547a562</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1cmdbintegration</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>WS1CMDBIntegration</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="WS1UEMCMDBIntegration">5387573d1b92f41092ce8514604bcb5a</model>
+        <model_id>5387573d1b92f41092ce8514604bcb5a</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>a7879b3d1b92f41092ce8514604bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a^sys_idNOT IN6b879b3d1b92f41092ce8514604bcb1e"/>
+    <sys_documentation action="DELETE">
+        <element>ws1cmdbintegration</element>
+        <help/>
+        <hint/>
+        <label>WS1CMDBIntegration</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 22:04:19</sys_created_on>
+        <sys_id>6b879b3d1b92f41092ce8514604bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 22:04:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="DELETE" query="action_id=5387573d1b92f41092ce8514604bcb5a^sys_idNOT INce842cc21bd6f41092ce8514604bcb6d"/>
+    <sys_hub_action_plan action="DELETE">
+        <action_id display_value="WS1UEMCMDBIntegration">5387573d1b92f41092ce8514604bcb5a</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ce842cc21bd6f41092ce8514604bcb6d","name":"plan"}}</plan>
+        <snapshot>f5842cc21bd6f41092ce8514604bcb44</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ce842cc21bd6f41092ce8514604bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <annotation>Retrieve the status of the CMDB Integration</annotation>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Retrieve the status of the CMDB Integration</description>
+        <internal_name>ws1uemcmdbintegration</internal_name>
+        <label_cache>[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1udid}}","label":"action➛WS1Udid","type":"action","ref":""},{"name":"{{action.ws1messagetotranslate}}","label":"action➛ws1Messagetotranslate","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child8}}","label":"step➛Script step➛Devices➛Device➛Device_child8","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.platform}}","label":"step➛Script step➛Devices➛Device➛platform","type":"step","ref":""},{"name":"{{step[61e10f46-c45b-42f2-bee3-722ccc122f3c].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.id}}","label":"step➛Script step➛Devices➛Device➛id","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1uuid}}","label":"step➛Script step➛ws1uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1id}}","label":"step➛Script step➛ws1id","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1platform}}","label":"step➛Script step➛ws1platform","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1enrollmentstatus}}","label":"step➛Script step➛ws1enrollmentstatus","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1user}}","label":"step➛Script step➛Ws1user","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].userid}}","label":"step➛Script step➛ws1userid","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1userid}}","label":"step➛Script step➛message","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].message}}","label":"step➛Script step➛ws1integration","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}","label":"step➛Script step➛ws1integration","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>WS1UEMCMDBIntegration</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="WS1UEMCMDBIntegration">5387573d1b92f41092ce8514604bcb5a</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7d842cc21bd6f41092ce8514604bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:37</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=7d842cc21bd6f41092ce8514604bcb27"/>
+    <sys_variable_value action="DELETE" query="document_key=7d842cc21bd6f41092ce8514604bcb27"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>7d842cc21bd6f41092ce8514604bcb27</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>f1842cc21bd6f41092ce8514604bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <value>0</value>
+        <variable display_value="WS1CMDBIntegration">71842cc21bd6f41092ce8514604bcb3b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=7d842cc21bd6f41092ce8514604bcb27"/>
+    <sys_element_mapping action="DELETE">
+        <field>ws1cmdbintegration</field>
+        <id>7d842cc21bd6f41092ce8514604bcb27</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>71842cc21bd6f41092ce8514604bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <table>var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27</table>
+        <value>{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="DELETE" query="action=7d842cc21bd6f41092ce8514604bcb27^sys_idNOT IN71842cc21bd6f41092ce8514604bcb2b"/>
+    <sys_hub_step_instance action="DELETE">
+        <action display_value="WS1UEMCMDBIntegration">7d842cc21bd6f41092ce8514604bcb27</action>
+        <cid>e5303c2c-3faf-4b47-ba10-1d1faedad494</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:37</sys_created_on>
+        <sys_id>71842cc21bd6f41092ce8514604bcb2b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="DELETE" query="document_key=71842cc21bd6f41092ce8514604bcb2b"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71842cc21bd6f41092ce8514604bcb2b</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>39842cc21bd6f41092ce8514604bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <value/>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71842cc21bd6f41092ce8514604bcb2b</document_key>
+        <order>350</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>75842cc21bd6f41092ce8514604bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <value/>
+        <variable display_value="MID Selection">cbd1070373531010791f94596bf6a776</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71842cc21bd6f41092ce8514604bcb2b</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>bd842cc21bd6f41092ce8514604bcb38</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  	outputs.ws1integration = false;
+  
+  	var rec = new GlideRecord('sys_properties');
+  	rec.addQuery('name', 'x_vmw_ws1uem.WS1UEMCMDBIntegration');
+	rec.query();
+	if(rec.next()){
+		outputs.ws1integration = rec.value;
+	}
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71842cc21bd6f41092ce8514604bcb2b</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>f9842cc21bd6f41092ce8514604bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <value/>
+        <variable display_value="Select MID Server">2c226939b3101300176b051a16a8dc83</variable>
+    </sys_variable_value>
+    <sys_hub_step_ext_output action="DELETE" query="model=71842cc21bd6f41092ce8514604bcb2b^sys_idNOT IN7d842cc21bd6f41092ce8514604bcb2e"/>
+    <sys_hub_step_ext_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=dbe15d5b-4e74-4792-820a-d017d6236cbe</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1integration</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>ws1integration</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">71842cc21bd6f41092ce8514604bcb2b</model>
+        <model_id>71842cc21bd6f41092ce8514604bcb2b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_71842cc21bd6f41092ce8514604bcb2b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>7d842cc21bd6f41092ce8514604bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_output action="DELETE" query="model=7d842cc21bd6f41092ce8514604bcb27^sys_idNOT IN71842cc21bd6f41092ce8514604bcb3b"/>
+    <sys_hub_action_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=352c98dd-cc1b-46b4-be5a-47745547a562</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1cmdbintegration</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>WS1CMDBIntegration</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="WS1UEMCMDBIntegration">7d842cc21bd6f41092ce8514604bcb27</model>
+        <model_id>7d842cc21bd6f41092ce8514604bcb27</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>71842cc21bd6f41092ce8514604bcb3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27^sys_idNOT IN75842cc21bd6f41092ce8514604bcb40"/>
+    <sys_documentation action="DELETE">
+        <element>ws1cmdbintegration</element>
+        <help/>
+        <hint/>
+        <label>WS1CMDBIntegration</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 03:40:38</sys_created_on>
+        <sys_id>75842cc21bd6f41092ce8514604bcb40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 03:40:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_type_definition action="DELETE">
+        <sys_id>5387573d1b92f41092ce8514604bcb5a</sys_id>
+        <latest_snapshot>7d842cc21bd6f41092ce8514604bcb27</latest_snapshot>
+    </sys_hub_action_type_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_hub_action_type_definition_5387573d1b92f41092ce8514604bcb5a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_action_type_definition"&gt;&lt;sys_hub_action_type_definition action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;action_template/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation&gt;Retrieve the status of the CMDB Integration&lt;/annotation&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from&gt;5b744a4607ceb0105740f96d7c1ed09b&lt;/copied_from&gt;&lt;copied_from_name&gt;UEMCMDBIntegration&lt;/copied_from_name&gt;&lt;description&gt;Retrieve the status of the CMDB Integration&lt;/description&gt;&lt;ih_action&gt;false&lt;/ih_action&gt;&lt;internal_name&gt;uemcmdbintegration&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1udid}}","label":"action➛WS1Udid","type":"action","ref":""},{"name":"{{action.ws1messagetotranslate}}","label":"action➛ws1Messagetotranslate","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child8}}","label":"step➛Script step➛Devices➛Device➛Device_child8","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.platform}}","label":"step➛Script step➛Devices➛Device➛platform","type":"step","ref":""},{"name":"{{step[61e10f46-c45b-42f2-bee3-722ccc122f3c].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.id}}","label":"step➛Script step➛Devices➛Device➛id","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1uuid}}","label":"step➛Script step➛ws1uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1id}}","label":"step➛Script step➛ws1id","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1platform}}","label":"step➛Script step➛ws1platform","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1enrollmentstatus}}","label":"step➛Script step➛ws1enrollmentstatus","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1user}}","label":"step➛Script step➛Ws1user","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].userid}}","label":"step➛Script step➛ws1userid","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1userid}}","label":"step➛Script step➛message","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].message}}","label":"step➛Script step➛ws1integration","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}","label":"step➛Script step➛ws1integration","type":"step","ref":""}]&lt;/label_cache&gt;&lt;master_snapshot&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/master_snapshot&gt;&lt;name&gt;WS1UEMCMDBIntegration&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;outputs/&gt;&lt;state&gt;published&lt;/state&gt;&lt;sys_class_name&gt;sys_hub_action_type_definition&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5387573d1b92f41092ce8514604bcb5a&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEMCMDBIntegration&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_action_type_definition_5387573d1b92f41092ce8514604bcb5a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-10 01:31:45&lt;/sys_updated_on&gt;&lt;system_level&gt;false&lt;/system_level&gt;&lt;type/&gt;&lt;/sys_hub_action_type_definition&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5387573d1b92f41092ce8514604bcb5a"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=5387573d1b92f41092ce8514604bcb5a"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_type_definition&lt;/document&gt;&lt;document_key&gt;5387573d1b92f41092ce8514604bcb5a&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;2b879b3d1b92f41092ce8514604bcb21&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="WS1CMDBIntegration"&gt;a7879b3d1b92f41092ce8514604bcb19&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=5387573d1b92f41092ce8514604bcb5a"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ws1cmdbintegration&lt;/field&gt;&lt;id&gt;5387573d1b92f41092ce8514604bcb5a&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;a7879b3d1b92f41092ce8514604bcb21&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a&lt;/table&gt;&lt;value&gt;{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_step_instance action="delete_multiple" query="action=5387573d1b92f41092ce8514604bcb5a^sys_idNOT IN97879b3d1b92f41092ce8514604bcb09"/&gt;&lt;sys_hub_step_instance action="INSERT_OR_UPDATE"&gt;&lt;action display_value="WS1UEMCMDBIntegration"&gt;5387573d1b92f41092ce8514604bcb5a&lt;/action&gt;&lt;cid&gt;e5303c2c-3faf-4b47-ba10-1d1faedad494&lt;/cid&gt;&lt;extended_inputs/&gt;&lt;extended_outputs/&gt;&lt;icon/&gt;&lt;inputs/&gt;&lt;label&gt;Script step&lt;/label&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs/&gt;&lt;section/&gt;&lt;step_type display_value="Script"&gt;106afb6647032200b4fad7527c9a71e7&lt;/step_type&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;97879b3d1b92f41092ce8514604bcb09&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-10 01:31:44&lt;/sys_updated_on&gt;&lt;/sys_hub_step_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=97879b3d1b92f41092ce8514604bcb09"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;97879b3d1b92f41092ce8514604bcb09&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;23879b3d1b92f41092ce8514604bcb17&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Select MID Server"&gt;2c226939b3101300176b051a16a8dc83&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;97879b3d1b92f41092ce8514604bcb09&lt;/document_key&gt;&lt;order&gt;400&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;6f879b3d1b92f41092ce8514604bcb16&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="MID Application"&gt;f5e56d79b3101300176b051a16a8dce4&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;97879b3d1b92f41092ce8514604bcb09&lt;/document_key&gt;&lt;order&gt;350&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;ab879b3d1b92f41092ce8514604bcb16&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="MID Selection"&gt;cbd1070373531010791f94596bf6a776&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;97879b3d1b92f41092ce8514604bcb09&lt;/document_key&gt;&lt;order&gt;600&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;e3879b3d1b92f41092ce8514604bcb17&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-10 01:31:44&lt;/sys_updated_on&gt;&lt;value&gt;(function execute(inputs, outputs) {
+  	outputs.ws1integration = false;
+  
+  	var rec = new GlideRecord('sys_properties');
+  	rec.addQuery('name', 'x_vmw_ws1uem.WS1UEMCMDBIntegration');
+	rec.query();
+	if(rec.next()){
+		outputs.ws1integration = rec.value;
+	}
+})(inputs, outputs);
+&lt;/value&gt;&lt;variable display_value="Script"&gt;71aa7f6647032200b4fad7527c9a719b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_hub_step_ext_output action="delete_multiple" query="model=97879b3d1b92f41092ce8514604bcb09^sys_idNOT IN93879b3d1b92f41092ce8514604bcb0d"/&gt;&lt;sys_hub_step_ext_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=dbe15d5b-4e74-4792-820a-d017d6236cbe&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;ws1integration&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;ws1integration&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Script step"&gt;97879b3d1b92f41092ce8514604bcb09&lt;/model&gt;&lt;model_id&gt;97879b3d1b92f41092ce8514604bcb09&lt;/model_id&gt;&lt;model_table&gt;sys_hub_step_instance&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_step_ext_output_97879b3d1b92f41092ce8514604bcb09&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_step_ext_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;93879b3d1b92f41092ce8514604bcb0d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_step_ext_output&gt;&lt;sys_hub_action_output action="delete_multiple" query="model=5387573d1b92f41092ce8514604bcb5a^sys_idNOT INa7879b3d1b92f41092ce8514604bcb19"/&gt;&lt;sys_hub_action_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=352c98dd-cc1b-46b4-be5a-47745547a562&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;ws1cmdbintegration&lt;/element&gt;&lt;element_prototype/&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;WS1CMDBIntegration&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="WS1UEMCMDBIntegration"&gt;5387573d1b92f41092ce8514604bcb5a&lt;/model&gt;&lt;model_id&gt;5387573d1b92f41092ce8514604bcb5a&lt;/model_id&gt;&lt;model_table&gt;sys_hub_action_type_definition&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_action_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;a7879b3d1b92f41092ce8514604bcb19&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_action_output&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a^sys_idNOT IN6b879b3d1b92f41092ce8514604bcb1e"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;ws1cmdbintegration&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;WS1CMDBIntegration&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_action_output_5387573d1b92f41092ce8514604bcb5a&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-31 22:04:19&lt;/sys_created_on&gt;&lt;sys_id&gt;6b879b3d1b92f41092ce8514604bcb1e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-31 22:04:19&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_hub_action_plan action="delete_multiple" query="action_id=5387573d1b92f41092ce8514604bcb5a^sys_idNOT INce842cc21bd6f41092ce8514604bcb6d"/&gt;&lt;sys_hub_action_plan action="INSERT_OR_UPDATE"&gt;&lt;action_id display_value="WS1UEMCMDBIntegration"&gt;5387573d1b92f41092ce8514604bcb5a&lt;/action_id&gt;&lt;plan&gt;{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ce842cc21bd6f41092ce8514604bcb6d","name":"plan"}}&lt;/plan&gt;&lt;snapshot&gt;f5842cc21bd6f41092ce8514604bcb44&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ce842cc21bd6f41092ce8514604bcb6d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;/sys_hub_action_plan&gt;&lt;sys_hub_action_type_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;action_template/&gt;&lt;annotation&gt;Retrieve the status of the CMDB Integration&lt;/annotation&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Retrieve the status of the CMDB Integration&lt;/description&gt;&lt;internal_name&gt;ws1uemcmdbintegration&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"{{action.modes}}","label":"action➛username","type":"action","ref":""},{"name":"{{action.username}}","label":"action➛udid","type":"action","ref":""},{"name":"{{action.ws1apikey}}","label":"action➛WS1APIKey","type":"action","ref":""},{"name":"{{action.ws1udid}}","label":"action➛WS1Udid","type":"action","ref":""},{"name":"{{action.ws1messagetotranslate}}","label":"action➛ws1Messagetotranslate","type":"action","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices}}","label":"step➛Script step➛devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devicefriendlyname}}","label":"step➛Script step➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.devices_child0}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.device}}","label":"step➛Script step➛Devices➛device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child1}}","label":"step➛Script step➛Devices➛Device➛device_child1","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛DeviceFriendlyName","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.device_child2}}","label":"step➛Script step➛Devices➛Device➛device_child2","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.UUID}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device}}","label":"step➛Script step➛Devices➛Device","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices}}","label":"step➛Script step➛Devices","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].Devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Uuid}}","label":"step➛Script step➛Devices➛Device➛use","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.DeviceFriendlyName}}","label":"step➛Script step➛Devices➛Device➛Uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.Udid}}","label":"step➛Script step➛Devices➛Device➛Udid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.username}}","label":"step➛Script step➛Devices➛Device➛username","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child3}}","label":"step➛Script step➛Devices➛Device➛Device_child3","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.useremailaddress}}","label":"step➛Script step➛Devices➛Device➛useremailaddress","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child4}}","label":"step➛Script step➛Devices➛Device➛Device_child4","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.devicereportedname}}","label":"step➛Script step➛Devices➛Device➛devicereportedname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child5}}","label":"step➛Script step➛Devices➛Device➛Device_child5","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.locationgroupname}}","label":"step➛Script step➛Devices➛Device➛locationgroupname","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].total}}","label":"step➛Script step➛total","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].page}}","label":"step➛Script step➛page","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].pagesize}}","label":"step➛Script step➛pagesize","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child6}}","label":"step➛Script step➛Devices➛Device➛Device_child6","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.uuid}}","label":"step➛Script step➛Devices➛Device➛uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].webpage}}","label":"step➛Script step➛webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child7}}","label":"step➛Script step➛Devices➛Device➛Device_child7","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.ws1webpage}}","label":"step➛Script step➛Devices➛Device➛ws1webpage","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.device_child8}}","label":"step➛Script step➛Devices➛Device➛Device_child8","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.platform}}","label":"step➛Script step➛Devices➛Device➛platform","type":"step","ref":""},{"name":"{{step[61e10f46-c45b-42f2-bee3-722ccc122f3c].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].devices.Device.id}}","label":"step➛Script step➛Devices➛Device➛id","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":""},{"name":"{{step[cd04a545-d7c1-43cb-8341-668ea3f91362].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1uuid}}","label":"step➛Script step➛ws1uuid","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1id}}","label":"step➛Script step➛ws1id","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1errorcode}}","label":"step➛Script step➛ws1errorcode","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1message}}","label":"step➛Script step➛ws1message","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1platform}}","label":"step➛Script step➛ws1platform","type":"step","ref":""},{"name":"{{step[cd4cc0d4-ef49-44d4-8085-e3a7411912fa].ws1enrollmentstatus}}","label":"step➛Script step➛ws1enrollmentstatus","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].variable}}","label":"step➛Script step➛variable","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1user}}","label":"step➛Script step➛Ws1user","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].userid}}","label":"step➛Script step➛ws1userid","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1userid}}","label":"step➛Script step➛message","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].message}}","label":"step➛Script step➛ws1integration","type":"step","ref":""},{"name":"{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}","label":"step➛Script step➛ws1integration","type":"step","ref":""}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;WS1UEMCMDBIntegration&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;outputs/&gt;&lt;parent_action display_value="WS1UEMCMDBIntegration"&gt;5387573d1b92f41092ce8514604bcb5a&lt;/parent_action&gt;&lt;sys_class_name&gt;sys_hub_action_type_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:37&lt;/sys_updated_on&gt;&lt;system_level&gt;false&lt;/system_level&gt;&lt;type/&gt;&lt;/sys_hub_action_type_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=7d842cc21bd6f41092ce8514604bcb27"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=7d842cc21bd6f41092ce8514604bcb27"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_type_snapshot&lt;/document&gt;&lt;document_key&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;f1842cc21bd6f41092ce8514604bcb43&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="WS1CMDBIntegration"&gt;71842cc21bd6f41092ce8514604bcb3b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=7d842cc21bd6f41092ce8514604bcb27"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ws1cmdbintegration&lt;/field&gt;&lt;id&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;71842cc21bd6f41092ce8514604bcb43&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27&lt;/table&gt;&lt;value&gt;{{step[e5303c2c-3faf-4b47-ba10-1d1faedad494].ws1integration}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_step_instance action="delete_multiple" query="action=7d842cc21bd6f41092ce8514604bcb27^sys_idNOT IN71842cc21bd6f41092ce8514604bcb2b"/&gt;&lt;sys_hub_step_instance action="INSERT_OR_UPDATE"&gt;&lt;action display_value="WS1UEMCMDBIntegration"&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/action&gt;&lt;cid&gt;e5303c2c-3faf-4b47-ba10-1d1faedad494&lt;/cid&gt;&lt;extended_inputs/&gt;&lt;extended_outputs/&gt;&lt;icon/&gt;&lt;inputs/&gt;&lt;label&gt;Script step&lt;/label&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs/&gt;&lt;section/&gt;&lt;step_type display_value="Script"&gt;106afb6647032200b4fad7527c9a71e7&lt;/step_type&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:37&lt;/sys_created_on&gt;&lt;sys_id&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-10 01:31:45&lt;/sys_updated_on&gt;&lt;/sys_hub_step_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=71842cc21bd6f41092ce8514604bcb2b"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/document_key&gt;&lt;order&gt;400&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;39842cc21bd6f41092ce8514604bcb38&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="MID Application"&gt;f5e56d79b3101300176b051a16a8dce4&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/document_key&gt;&lt;order&gt;350&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;75842cc21bd6f41092ce8514604bcb38&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="MID Selection"&gt;cbd1070373531010791f94596bf6a776&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/document_key&gt;&lt;order&gt;600&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;bd842cc21bd6f41092ce8514604bcb38&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-10 01:31:45&lt;/sys_updated_on&gt;&lt;value&gt;(function execute(inputs, outputs) {
+  	outputs.ws1integration = false;
+  
+  	var rec = new GlideRecord('sys_properties');
+  	rec.addQuery('name', 'x_vmw_ws1uem.WS1UEMCMDBIntegration');
+	rec.query();
+	if(rec.next()){
+		outputs.ws1integration = rec.value;
+	}
+})(inputs, outputs);
+&lt;/value&gt;&lt;variable display_value="Script"&gt;71aa7f6647032200b4fad7527c9a719b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_step_instance&lt;/document&gt;&lt;document_key&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;f9842cc21bd6f41092ce8514604bcb38&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Select MID Server"&gt;2c226939b3101300176b051a16a8dc83&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_hub_step_ext_output action="delete_multiple" query="model=71842cc21bd6f41092ce8514604bcb2b^sys_idNOT IN7d842cc21bd6f41092ce8514604bcb2e"/&gt;&lt;sys_hub_step_ext_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=dbe15d5b-4e74-4792-820a-d017d6236cbe&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;ws1integration&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;ws1integration&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Script step"&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/model&gt;&lt;model_id&gt;71842cc21bd6f41092ce8514604bcb2b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_step_instance&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_step_ext_output_71842cc21bd6f41092ce8514604bcb2b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_step_ext_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;7d842cc21bd6f41092ce8514604bcb2e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_step_ext_output&gt;&lt;sys_hub_action_output action="delete_multiple" query="model=7d842cc21bd6f41092ce8514604bcb27^sys_idNOT IN71842cc21bd6f41092ce8514604bcb3b"/&gt;&lt;sys_hub_action_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=352c98dd-cc1b-46b4-be5a-47745547a562&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;ws1cmdbintegration&lt;/element&gt;&lt;element_prototype/&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;WS1CMDBIntegration&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="WS1UEMCMDBIntegration"&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/model&gt;&lt;model_id&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/model_id&gt;&lt;model_table&gt;sys_hub_action_type_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_action_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;71842cc21bd6f41092ce8514604bcb3b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_action_output&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27^sys_idNOT IN75842cc21bd6f41092ce8514604bcb40"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;ws1cmdbintegration&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;WS1CMDBIntegration&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_action_output_7d842cc21bd6f41092ce8514604bcb27&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 03:40:38&lt;/sys_created_on&gt;&lt;sys_id&gt;75842cc21bd6f41092ce8514604bcb40&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-09-01 03:40:38&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_hub_action_type_definition action="update"&gt;&lt;sys_id&gt;5387573d1b92f41092ce8514604bcb5a&lt;/sys_id&gt;&lt;latest_snapshot&gt;7d842cc21bd6f41092ce8514604bcb27&lt;/latest_snapshot&gt;&lt;/sys_hub_action_type_definition&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>946291544</payload_hash>
+        <record_name>WS1UEMCMDBIntegration</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-10 01:31:45</sys_created_on>
+        <sys_id>560d70ae1bcb3010a76c0dc0604bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c67d3cb3d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-10 01:31:45</sys_updated_on>
+        <type>Action Type</type>
+        <update_guid>5e0d70aedccb3010a4e6b092d280783b</update_guid>
+        <update_guid_history>5e0d70aedccb3010a4e6b092d280783b:946291544,5a0d70ae84cb30100bfadbeafd8b7408:416367478,82842cc2e4d6f410a5279ee67308555f:1705761597,5084e8c2b7d6f410fb25c50466ccf49e:-1260771690,6f879b3d8e92f4108a92758fbe73be63:-1495760546,5b879b3d0792f41056962fd03e732407:1825461839</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 10:19:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_action_type_definition">sys_hub_action_type_definition</sys_db_object>
+        <sys_id>621c5e22c2ea435c8c3afbce00e0d1a1</sys_id>
+        <sys_metadata>5387573d1b92f41092ce8514604bcb5a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMCMDBIntegration</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_hub_action_type_definition_5387573d1b92f41092ce8514604bcb5a</sys_update_name>
+        <sys_update_version display_value="sys_hub_action_type_definition_5387573d1b92f41092ce8514604bcb5a">560d70ae1bcb3010a76c0dc0604bcb3c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 10:19:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
