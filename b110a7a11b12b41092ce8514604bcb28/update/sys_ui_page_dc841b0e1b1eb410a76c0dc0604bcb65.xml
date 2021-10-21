@@ -19,26 +19,24 @@ function onLoad() {
     For unit testing purposes, if an action is not provided,
     Test values are loaded in from the WS1 Testing table.
     **/
-	jslog('demo onload');
     if ((!action) || (action.value.includes("Undefined"))) {
         ga_test_action = new GlideAjax("x_vmw_ws1uem.WS1GetTestAction");
         ga_test_json = new GlideAjax("x_vmw_ws1uem.WS1TestOSActionsJSON");
 
         ga_test_action.addParam("sysparm_name", "get_test_action");
         ga_test_json.addParam("sysparm_name", "get_test_json");
-		jslog('demo no action defined');
-        ga_test_action.getXML(function parse_response(response) {
+
+		ga_test_action.getXML(function parse_response(response) {
             action = response.responseXML.documentElement.getAttribute("answer");
-			jslog('demo action response = ' + action);
-            ws1_actions_response = {};
+
+			ws1_actions_response = {};
 
             ga_test_json.getXML(function parse_json_response(response) {
                 ws1_actions_response = response.responseXML.documentElement.getAttribute("answer");
 
                 try {
                     ws1_actions_response = JSON.parse(ws1_actions_response);
-					jslog('demo action json = ' + ws1_actions_response);
-                } catch (e) {
+				} catch (e) {
                     ws1_actions_response = {};
                 }
 
@@ -53,7 +51,6 @@ function onLoad() {
 		ws1_actions_response = $("incident.x_vmw_ws1uem_ws1_actions_response");
 
         ws1_actions_response = JSON.parse(ws1_actions_response.value);
-//		alert('else clause');
         loadPopupContents(action.value, ws1_actions_response);
     }
 }
@@ -63,24 +60,41 @@ Based on the provided UEM Action configuration, set the state of
 specific fields and as hidden or visible.
 **/
 function loadPopupContents(action, ws1_actions_response) {
-//	alert('demo action = ' + action);
     var stringText;
     var select_dropdown_id;
     var input_options = [];
     var key;
     var warningMessage;
+    var actionMessage;
+    var action_item_map;
 
     show_message(false);
     show_unlock_passcode(false);
     show_unlock_pin(false);
-    $("div_ws1_alert").hidden = true;
+    show_ws1_alert(false);
     show_check(false);
 
     action = action.trim();
-	
-    if (action == "assist") {
 
-        stringText = getMessage("WS1UEMAssistInfo");
+    action_item_map = {
+		"assist" : "WS1UEMAssistInfo",
+		"message" : "WS1UEMMessageInfo",
+		"devicelogs" : "WS1UEMDeviceLogsInfo",
+		"changepasscode" : "WS1UEMPasscodeInfo",
+		"lock" : "WS1UEMLockInfo",
+		"enterprisewipe" : "WS1UEMEnterpriseWipeInfo",
+		"softreset" : "WS1UEMSoftResetInfo",
+		"syncdevice" : "WS1UEMSyncDeviceInfo",
+		"devicewipe" : "WS1UEMDeviceWipeInfo",
+        "refreshdevices" : "WS1UEMRefreshDevices"
+	};
+
+    if (action in action_item_map) {
+        actionMessage = action_item_map[action];
+        stringText = getMessage(actionMessage);
+    }
+
+    if (action == "assist") {
 
         $("div_ws1_assist_type").hidden = false;
 
@@ -91,7 +105,7 @@ function loadPopupContents(action, ws1_actions_response) {
             if (key.includes("assist_")) {
 
                 if (!ws1_actions_response[key]) {
-
+ 
                     remove_actions_from_select_input(select_dropdown_id, key.substring(7));
 
                 } else {
@@ -109,62 +123,40 @@ function loadPopupContents(action, ws1_actions_response) {
 
     } else if (action == "message") {
 
-        stringText = getMessage("WS1UEMMessageInfo");
-
-        $("submitData").disabled = true;
+        show_submitdata(false);
 
         show_message(true);
 
-    } else if (action == "devicelogs") {
-
-        stringText = getMessage("WS1UEMDeviceLogsInfo");
-
     } else if (action == "changepasscode") {
 
-        stringText = getMessage("WS1UEMPasscodeInfo");
-
-        $("submitData").disabled = true;
+        show_submitdata(false);
 
         show_unlock_passcode(true);
 
     } else if (action == "lock") {
 
-        stringText = getMessage("WS1UEMLockInfo");
-
         if (ws1_actions_response.lock_mac) {
-            $("submitData").disabled = true;
+            show_submitdata(false);
 
             show_unlock_pin(true);
-            $("div_ws1_alert").hidden = false;
-            $("label_ws1_alert_text").innerHTML = getMessage("WS1UEMRememberPin");
+            show_ws1_alert(true);
+            set_alert_text(getMessage("WS1UEMRememberPin"));
         }
     } else if (action == "enterprisewipe") {
 
-        stringText = getMessage("WS1UEMEnterpriseWipeInfo");
-
         show_check(true);
 
-        $("submitData").disabled = true;
-        $("div_ws1_alert").hidden = false;
-        $("label_ws1_alert_text").innerHTML = getMessage("WS1UEMWarningEnterpriseWipe");
-
-    } else if (action == "softreset") {
-
-        stringText = getMessage("WS1UEMSoftResetInfo");
-
-    } else if (action == "syncdevice") {
-
-        stringText = getMessage("WS1UEMSyncDeviceInfo");
+        show_submitdata(false);
+        show_ws1_alert(true);
+        set_alert_text(getMessage("WS1UEMWarningEnterpriseWipe"));
 
     } else if (action == "devicewipe") {
-
-        stringText = getMessage("WS1UEMDeviceWipeInfo");
 
         warningMessage = getMessage("WS1UEMWarningDeviceWipe");
 
         if (ws1_actions_response.devicewipe_mac == true) {
 
-            $("submitData").disabled = true;
+            show_submitdata(false);
 
             show_unlock_pin(true);
 
@@ -174,14 +166,11 @@ function loadPopupContents(action, ws1_actions_response) {
 
             show_check(true);
 
-            $("submitData").disabled = true;
+            show_submitdata(false);
         }
 
-        $("div_ws1_alert").hidden = false;
-        $("label_ws1_alert_text").innerHTML = warningMessage;
-    } else if (action == "refreshdevices") {
-
-        stringText = getMessage("WS1UEMRefreshDevices");
+        show_ws1_alert(true);
+        set_alert_text(warningMessage);
     }
 
     // display informational message for action type
@@ -240,7 +229,6 @@ function execute_action(sid, action_inputs, set_form) {
 
     jslog("WS1UEM: execute_action ");
 
-
     if (set_form == true) {
         jslog("WS1UEM: set_form " + set_form);
 
@@ -270,13 +258,11 @@ function execute_action(sid, action_inputs, set_form) {
     }
 }
 
-
 function actioncallback(response) {
     var answer;
     alert("here");
     answer = response.responseXML.documentElement.getAttribute("answer");
 }
-
 
 /**
 A test incident record will need to be obtained
@@ -407,9 +393,9 @@ function validatePin(pin, nextIndex) {
         }
     }
     if (validPin == true) {
-        $("submitData").disabled = false;
+        show_submitdata(true);
     } else {
-        $("submitData").disabled = true;
+        show_submitdata(false);
     }
 }
 
@@ -421,9 +407,9 @@ function validatePasscode() {
     var passcodeConfirm = gel("input_ws1_passcode_confirm").value;
 
     if (passcode.length > 0 && passcode == passcodeConfirm) {
-        $("submitData").disabled = false;
+        show_submitdata(true);
     } else {
-        $("submitData").disabled = true;
+        show_submitdata(false);
     }
 }
 
@@ -434,9 +420,9 @@ function checkMessage() {
     var message = gel("input_ws1_message").value;
 
     if (message.length > 0) {
-        $("submitData").disabled = false;
+        show_submitdata(true);
     } else {
-        $("submitData").disabled = true;
+        show_submitdata(false);
     }
 }
 
@@ -444,7 +430,7 @@ function checkMessage() {
 Set the state of fields on the UEM dialog popup
 **/
 function checkStatus(checkbox) {
-    $("submitData").disabled = !checkbox.checked;
+    show_submitdata(checkbox.checked);
 }
 
 function show_unlock_pin(showFlag) {
@@ -480,6 +466,17 @@ function show_message(showFlag) {
     }
 }
 
+function show_ws1_alert(showFlag) {
+    $("div_ws1_alert").hidden = !showFlag;
+}
+
+function show_submitdata(showFlag) {
+    $("submitData").disabled = !showFlag;
+}
+
+function set_alert_text(text) {
+    $("label_ws1_alert_text").innerHTML = text;
+}
 function show_check(showFlag) {
     var inputs;
 
@@ -561,7 +558,7 @@ function show_check(showFlag) {
 		<input type="hidden" id="jvar_messagetext" name="jvar_messagetext" value=""/>
 		<input type="hidden" id="jvar_assisttype" name="jvar_assisttype" value=""/>
 		<input type="hidden" id="jvar_string" name="jvar_string" value=""/>
-		<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_vmw_ws1uem.WS1UEM Platform')}"/>
+		<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_vmw_ws1uem.WS1UEMPlatform')}"/>
 	</div>
 	
 	<div class="body">
@@ -741,17 +738,10 @@ if (runprocessingscript === "actionflow") {
             inputs.ws1incidentnumber = util.number; // String
 
             gs.info("WS1UEM: calling subflow " + util.number);
-
-            // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
             sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemactionsubflow").inBackground().withInputs(inputs).run();
 
-            gs.info("WS1UEM: called subflow ");
-
-            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-            //var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(inputs).run();
-            //var outputs = result.getOutputs();
-
-            // Current subflow has no outputs defined.
+            gs.info("WS1UEM: called subflow ");	
+			
         } catch (ex) {
 			gs.info("WS1UEM: called subflow failed");
 			message = ex.getMessage();
@@ -767,13 +757,13 @@ if (runprocessingscript === "actionflow") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>262</sys_mod_count>
+        <sys_mod_count>274</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-19 04:29:12</sys_updated_on>
+        <sys_updated_on>2021-10-20 18:41:56</sys_updated_on>
     </sys_ui_page>
 </record_update>

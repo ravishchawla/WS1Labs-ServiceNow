@@ -234,7 +234,8 @@ function authmethod(oath_switch) {
 						   id="input_ws1_url" 
 						   type="checkbox"
 						   name="input_ws1_url" 
-						   onclick="authmethod(this)"/>
+						   onclick="authmethod(this)"
+						   disabled="true"/>
 					<label aria-hidden="true" class="switch" for="input_ws1_url" style="height: 21px; margin-bottom: 0;"></label>
 				</div>
 				<label for="input_ws1_url" class="auth-switch-label">${gs.getMessage('WS1UEMAuthMethodDescription')}</label>
@@ -260,7 +261,8 @@ function authmethod(oath_switch) {
 					   field="host"
 					   query="active=true"
 					   minlength="1"
-					   size="55"/>	
+					   size="55"
+					   disabled="true"/>	
 			</div>
 
 			<div id="div_ws1_clientid" >
@@ -350,7 +352,8 @@ function authmethod(oath_switch) {
 					field="host"
 					query="active=true"
 					minlength="1"
-					size="55"/>	
+					size="55"
+					disabled="true"/>	
 			</div>
 
 			<div id="div_ws1_username" >
@@ -444,21 +447,19 @@ function authmethod(oath_switch) {
         <name>WS1UEMConfigureConnection</name>
         <processing_script><![CDATA[if (runprocessingscript == "testconnection") {
 
-    gs.info("Running get platform action flow from UI Page");
+    try {
+        // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+        var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemtennantcode').inForeground().run();
+        var outputs = result.getOutputs();
 
-    try {				
-		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-		var result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemtennantcode').inForeground().run();
-		var outputs = result.getOutputs();
+        // Get Outputs:
+        // Note: outputs can only be retrieved when executing synchronously.
+        var ws1tenantcode = outputs['ws1tenantcode']; // String
+        var ws1tenantname = outputs['ws1tenantname']; // String
 
-		// Get Outputs:
-		// Note: outputs can only be retrieved when executing synchronously.
-		var ws1tenantcode = outputs['ws1tenantcode']; // String
-		var ws1tenantname = outputs['ws1tenantname']; // String
-		
         var inputs = {};
         inputs['tenantcode'] = ws1tenantcode; // String 
-		inputs['ws1tentantname'] = ws1tenantname; // String 
+        inputs['ws1tentantname'] = ws1tenantname; // String 
 
         // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
         result = sn_fd.FlowAPI.getRunner().action('x_vmw_ws1uem.ws1uemversion').inForeground().withInputs(inputs).run();
@@ -470,17 +471,17 @@ function authmethod(oath_switch) {
         var status = outputs['status']; // String
         var response = outputs['response']; // String
         var ws1productversion = outputs['ws1productpersion']; // String
-		gs.info("WS1UEM: Test Connection version " + ws1productversion + " and call status " + status);
+        gs.info("WS1UEM: Test Connection version " + ws1productversion + " and call status " + status);
 
-		if (status == "200") {
-			gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productversion);
-		} else if (status == "401") {
-			gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailedAuthenticationError'));
-		} else {
-			gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
-		}
-		
-	
+        if (status == "200") {
+            gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productversion);
+        } else if (status == "401") {
+            gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailedAuthenticationError'));
+        } else {
+            gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
+        }
+
+
     } catch (ex) {
         var message = ex.getMessage();
         gs.addInfoMessage(gs.getMessage('WS1UEMConnectionFailed'));
@@ -489,259 +490,126 @@ function authmethod(oath_switch) {
 
 
 if (runprocessingscript == "setoauthvalues") {
-    gs.info("Running setvalues UI Page");
 
     var clientid = input_ws1_clientid;
     var clientsecret = input_ws1_clientsecret;
     var tokenurl = input_ws1_tokenurl;
-    var hostid = input_ws1_hostid;
 
-    var action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMAuth");
-    action_table.query();
-    if (action_table.next()) {
-        action_table.value = "oauth";
-        action_table.update();
-    }
-
-
-    // create the http record if it doesn't exist
-    var http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Credentials');
+    // get the hostname
+    http_table = new GlideRecord('http_connection');
+    http_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
     http_table.query();
-    if (!http_table.next()) {
-        createOAuthConnection();
+    if (http_table.next()) {
+        var hostid = http_table.host;
     }
 
-
-    // update the WS1 UEM Console URL
+    // update the WS1 UEM Console URL if it has changed
     var consoleUrl = "https://" + hostid;
     action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMURL');
     action_table.query();
     action_table.next();
-    action_table.value = consoleUrl;
-    action_table.update();
+    if (action_table.value != consoleUrl) {
+        action_table.value = consoleUrl;
+        action_table.update();
+    }
 
+    // update the WS1 UEM tokenURL, clientID and Client secret if they have changed
     var oauth_table = new GlideRecord('oauth_entity');
     oauth_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Provider');
     oauth_table.query();
     if (oauth_table.next()) {
-        oauth_table.client_id = clientid;
+        var requiresupdate = false;
 
-        // if the client secret hasn't changed then don't update it
-        if (clientsecret != "********************") {
-            oauth_table.client_secret = clientsecret;
+        if (oauth_table.client_id != clientid) {
+            oauth_table.client_id = clientid;
+            requiresupdate = true;
         }
 
-        oauth_table.token_url = tokenurl;
-        oauth_table.update();
-    }
+        if (clientsecret != "********************") {
+            oauth_table.client_secret = clientsecret;
+            requiresupdate = true;
+        }
 
-    http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
-    http_table.query();
-    if (http_table.next()) {
-        http_table.active = false;
-        http_table.update();
-    }
+        if (oauth_table.token_url != tokenurl) {
+            oauth_table.token_url = tokenurl;
+            requiresupdate = true;
+        }
 
-    http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Credentials');
-    http_table.query();
-    if (http_table.next()) {
-        http_table.host = hostid;
-        http_table.active = true;
-        http_table.update();
+        if (requiresupdate) {
+            oauth_table.update();
+        } 
     }
-
 }
 
 
 if (runprocessingscript == "setbasicvalues") {
-    gs.info("Running setbasicvalues UI Page");
 
-    clientid = input_ws1_username;
-    clientsecret = input_ws1_clientpassword;
-    tokenurl = input_ws1_tenant_code;
-    hostid = input_ws1_basic_hostid;
+    ws1username = input_ws1_username;
+    ws1password = input_ws1_clientpassword;
+    ws1tenantcode = input_ws1_tenant_code;
 
-    action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMAuth');
-    action_table.query();
-    if (action_table.next()) {
-        action_table.value = "basic";
-        action_table.update();
-    }
 
-    // create the http record if it doesn't exist
+    // get the hostname
     http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
+    http_table.addQuery('name', "Workspace ONE UEM ITSM Basic Credentials");
     http_table.query();
-    if (!http_table.next()) {
-        createBasicConnection();
+    if (http_table.next()) {
+        hostid = http_table.host;
     }
 
-    // update the WS1 UEM Console URL
+    // update the WS1 UEM Console URL if needed
     consoleUrl = "https://" + hostid;
     action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMURL');
     action_table.query();
     action_table.next();
-    action_table.value = consoleUrl;
-    action_table.update();
+    if (action_table.value != consoleUrl) {
+        action_table.value = consoleUrl;
+        action_table.update();
+    }
 
+    // update the WS1 UEM token url if needed
     action_table = new GlideRecord('sys_properties');
     action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMTenantCode');
     action_table.query();
     action_table.next();
-    action_table.value = tokenurl;
-    action_table.update();
+    if (action_table.value != ws1tenantcode) {
+        action_table.value = ws1tenantcode;
+        action_table.update();
+    }
 
-    oauth_table = new GlideRecord('basic_auth_credentials');
-    oauth_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
-    oauth_table.query();
-    if (oauth_table.next()) {
-        oauth_table.user_name = clientid;
-
-        // if the client secret hasn't changed then don't update it
-        if (clientsecret != "********************") {
-            oauth_table.password = clientsecret;
+    // update the WS1 UEM username and password if needed
+    var basic_table = new GlideRecord('basic_auth_credentials');
+    basic_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
+    basic_table.query();
+    if (basic_table.next()) {
+        requiresupdate = false;
+        if (basic_table.user_name != ws1username) {
+            basic_table.user_name = ws1username;
+            requiresupdate = true;
         }
 
-        oauth_table.update();
+        if (ws1password != "********************") {
+            basic_table.password = ws1password;
+            requiresupdate = true;
+        }
+        if (requiresupdate) {
+            basic_table.update();
+        }
     }
-
-    http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Credentials');
-    http_table.query();
-    if (http_table.next()) {
-        http_table.active = false;
-        http_table.update();
-    }
-
-
-    http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
-    http_table.query();
-    if (http_table.next()) {
-        http_table.host = hostid;
-        http_table.active = true;
-        http_table.update();
-    }
-}
-
-
-// create connection records
-function createOAuthConnection() {
-
-    // we need to set the Basic connection to inactive if it exists
-    var http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
-    http_table.query();
-    if (http_table.next()) {
-        http_table.active = false;
-        http_table.update();
-    }
-
-    // get the connection alias
-    var connection = new GlideRecord('sys_alias');
-    connection.addQuery('name', 'Workspace ONE UEM ITSM Connection');
-    connection.query();
-
-    if (!connection.next()) {
-        gs.info("Credential missing");
-        return;
-    }
-
-    // create the OAuth 2.0 records
-    var credential = new GlideRecord('oauth_2_0_credentials');
-    credential.addQuery('name', 'Workspace ONE UEM ITSM OAuth Credentials');
-    credential.query();
-    if (!credential.next()) {
-        var provider = new GlideRecord('oauth_entity_profile');
-        provider.addQuery('name', 'Workspace ONE UEM ITSM OAuth Provider');
-        provider.query();
-        provider.next();
-
-        credential.initialize();
-        credential.name = 'Workspace ONE UEM ITSM OAuth Credentials';
-        credential.oauth_entity_profile = provider.sys_id;
-        credential.insert();
-
-        // query to get the new record
-        credential.addQuery('name', 'Workspace ONE UEM ITSM OAuth Credentials');
-        credential.query();
-        credential.next();
-    }
-
-    // create the http record
-    http_table = new GlideRecord('http_connection');
-    http_table.initialize();
-    http_table.name = 'Workspace ONE UEM ITSM OAuth Credentials';
-    http_table.port = '443';
-    http_table.base_path = '/api';
-    http_table.protocol = 'https';
-    http_table.url_builder = true;
-    http_table.active = false;
-    http_table.connection_alias = connection.sys_id;
-    http_table.credential = credential.sys_id;
-    http_table.insert();
-}
-
-// create connection records
-function createBasicConnection() {
-
-    // we need to set the OAuth connection to inactive if it exists
-    var http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Credentials');
-    http_table.query();
-    if (http_table.next()) {
-        http_table.active = false;
-        http_table.update();
-    }
-
-
-    // get the connection alias
-    connection = new GlideRecord('sys_alias');
-    connection.addQuery('name', 'Workspace ONE UEM ITSM Connection');
-    connection.query();
-
-    if (!connection.next()) {
-        gs.info("Credential missing");
-        return;
-    }
-
-    // create the Basic auth records
-    credential = new GlideRecord('basic_auth_credentials');
-    credential.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
-    credential.query();
-    credential.next();
-
-    // create the http record
-    http_table = new GlideRecord('http_connection');
-    http_table.initialize();
-    http_table.name = 'Workspace ONE UEM ITSM Basic Credentials';
-    http_table.port = '443';
-    http_table.base_path = '/api';
-    http_table.protocol = 'https';
-    http_table.url_builder = true;
-    http_table.active = false;
-    http_table.connection_alias = connection.sys_id;
-    http_table.credential = credential.sys_id;
-    http_table.insert();
 }]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>178</sys_mod_count>
+        <sys_mod_count>192</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-20 10:29:17</sys_updated_on>
+        <sys_updated_on>2021-10-21 04:16:45</sys_updated_on>
     </sys_ui_page>
 </record_update>
