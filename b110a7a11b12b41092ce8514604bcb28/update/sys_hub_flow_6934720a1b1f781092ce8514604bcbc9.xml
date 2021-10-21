@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-quebec-12-09-2020__patch7-hotfix2-09-15-2021_09-16-2021_0748.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>ws1uemflowwrapper</internal_name>
+        <label_cache>[{"name":"562374ad-2536-424c-aa37-febfe2a6598a.ws1user","label":"5➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"subflow.ws1incidentnumber","label":"Input➛ws1incidentnumber","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"131d32ec-52a9-44df-b25f-809da1c809da","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.ws1incidentnumber1","label":"Input➛ws1incidentnumber","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"96358be6-8900-48d9-978a-2ab925d49d3d"}},{"name":"691c858b-748d-403d-93a7-6dd204df349f.ws1errorstate","label":"1➛ws1errorstate","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9b15e60e-af32-40de-9283-8e97e80b3128"}},{"name":"2d024d1d-1585-4ca1-adfb-bd33e6f7d360.record","label":"2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2d024d1d-1585-4ca1-adfb-bd33e6f7d360.table_name","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.Record","label":"3➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.Table","label":"3➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"73ec1a95-0cf6-433e-a7dd-0066be181ab9.record","label":"6➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"73ec1a95-0cf6-433e-a7dd-0066be181ab9.table_name","label":"6➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>d274fa0a1b1f781092ce8514604bcb6b</master_snapshot>
+        <name>WS1UEMFlowWrapper</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:11:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6934720a1b1f781092ce8514604bcbc9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>WS1UEMFlowWrapper</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_hub_flow_6934720a1b1f781092ce8514604bcbc9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:09</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=6934720a1b1f781092ce8514604bcbc9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6934720a1b1f781092ce8514604bcbc9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6934720a1b1f781092ce8514604bcbc9^sys_idNOT IN6134720a1b1f781092ce8514604bcbcb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6934720a1b1f781092ce8514604bcbc9</id>
+        <name>WS1UEMFlowWrapper</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:11:11</sys_created_on>
+        <sys_id>6134720a1b1f781092ce8514604bcbcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:11:11</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=6934720a1b1f781092ce8514604bcbc9^sys_idNOT INe4a47e0a1b1f781092ce8514604bcbac"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=131d32ec-52a9-44df-b25f-809da1c809da</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1incidentnumber</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ws1incidentnumber</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</model>
+        <model_id>6934720a1b1f781092ce8514604bcbc9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_6934720a1b1f781092ce8514604bcbc9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:13:01</sys_created_on>
+        <sys_id>e4a47e0a1b1f781092ce8514604bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:13:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=6934720a1b1f781092ce8514604bcbc9^sys_idNOT IN7486b68a1b1f781092ce8514604bcba1,7c86b68a1b1f781092ce8514604bcbac,cbf7baca1b1f781092ce8514604bcb26,ce74fa0a1b1f781092ce8514604bcb3d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</flow>
+        <order>3</order>
+        <parent_ui_id>4b90f845-2ea3-42a6-8595-07ce63d3a13e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>7486b68a1b1f781092ce8514604bcba1</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:25</sys_updated_on>
+        <ui_id>4f315a04-be1f-4948-88fd-e04940af882d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7486b68a1b1f781092ce8514604bcba1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7486b68a1b1f781092ce8514604bcba1</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>b886b68a1b1f781092ce8514604bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7486b68a1b1f781092ce8514604bcba1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>7486b68a1b1f781092ce8514604bcba1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>7486b68a1b1f781092ce8514604bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>number={{subflow.ws1incidentnumber}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>7486b68a1b1f781092ce8514604bcba1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>3886b68a1b1f781092ce8514604bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</flow>
+        <order>6</order>
+        <parent_ui_id>39b4a35e-f83d-48c6-87b6-60de69782e1f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>7c86b68a1b1f781092ce8514604bcbac</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:25</sys_updated_on>
+        <ui_id>73ec1a95-0cf6-433e-a7dd-0066be181ab9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7c86b68a1b1f781092ce8514604bcbac"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7c86b68a1b1f781092ce8514604bcbac</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>bc86b68a1b1f781092ce8514604bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7c86b68a1b1f781092ce8514604bcbac</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>f886b68a1b1f781092ce8514604bcbae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:27:40</sys_updated_on>
+        <value/>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7c86b68a1b1f781092ce8514604bcbac"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>7c86b68a1b1f781092ce8514604bcbac</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>b486b68a1b1f781092ce8514604bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{4f315a04-be1f-4948-88fd-e04940af882d.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>7c86b68a1b1f781092ce8514604bcbac</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>f086b68a1b1f781092ce8514604bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>7c86b68a1b1f781092ce8514604bcbac</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>7886b68a1b1f781092ce8514604bcbae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:27:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>x_vmw_ws1uem_response={{562374ad-2536-424c-aa37-febfe2a6598a.ws1user}}^work_notes={{562374ad-2536-424c-aa37-febfe2a6598a.ws1user}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="WS1UEMMessageTranslator">7c46a7e51b12b41092ce8514604bcb07</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>7c46a7e51b12b41092ce8514604bcb07</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</flow>
+        <order>5</order>
+        <parent_ui_id>39b4a35e-f83d-48c6-87b6-60de69782e1f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:27:40</sys_created_on>
+        <sys_id>cbf7baca1b1f781092ce8514604bcb26</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:25</sys_updated_on>
+        <ui_id>562374ad-2536-424c-aa37-febfe2a6598a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cbf7baca1b1f781092ce8514604bcb26"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cbf7baca1b1f781092ce8514604bcb26</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:27:40</sys_created_on>
+        <sys_id>cff7baca1b1f781092ce8514604bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:27:40</sys_updated_on>
+        <value>WS1UEMFlowError</value>
+        <variable display_value="ws1Messagetotranslate">f046a7e51b12b41092ce8514604bcb0b</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="WS1UEMRunFlow">c6eee6c21b1f781092ce8514604bcbf6</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c6eee6c21b1f781092ce8514604bcbf6</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:19</sys_created_on>
+        <sys_id>ce74fa0a1b1f781092ce8514604bcb3d</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:25</sys_updated_on>
+        <ui_id>691c858b-748d-403d-93a7-6dd204df349f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ce74fa0a1b1f781092ce8514604bcb3d"/>
+    <sys_element_mapping action="delete_multiple" query="id=ce74fa0a1b1f781092ce8514604bcb3d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1incidentnumber</field>
+        <id>ce74fa0a1b1f781092ce8514604bcb3d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:19</sys_created_on>
+        <sys_id>8e74fa0a1b1f781092ce8514604bcb3f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:13:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c6eee6c21b1f781092ce8514604bcbf6</table>
+        <value>{{subflow.ws1incidentnumber}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=6934720a1b1f781092ce8514604bcbc9^sys_idNOT IN57a9b64e1b1f781092ce8514604bcbc3,f886b68a1b1f781092ce8514604bcba4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9ba9b64e1b1f781092ce8514604bcbc2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:04</sys_created_on>
+        <sys_id>57a9b64e1b1f781092ce8514604bcbc3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:09</sys_updated_on>
+        <ui_id>4b90f845-2ea3-42a6-8595-07ce63d3a13e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=57a9b64e1b1f781092ce8514604bcbc3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>57a9b64e1b1f781092ce8514604bcbc3</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:04</sys_created_on>
+        <sys_id>53a9b64e1b1f781092ce8514604bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:04</sys_updated_on>
+        <value>flow error occurred</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=57a9b64e1b1f781092ce8514604bcbc3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>57a9b64e1b1f781092ce8514604bcbc3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:04</sys_created_on>
+        <sys_id>dfa9b64e1b1f781092ce8514604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{691c858b-748d-403d-93a7-6dd204df349f.ws1errorstate}}=true</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>57a9b64e1b1f781092ce8514604bcbc3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:04</sys_created_on>
+        <sys_id>1ba9b64e1b1f781092ce8514604bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">3086b68a1b1f781092ce8514604bcba4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>4b90f845-2ea3-42a6-8595-07ce63d3a13e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>f886b68a1b1f781092ce8514604bcba4</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:09</sys_updated_on>
+        <ui_id>39b4a35e-f83d-48c6-87b6-60de69782e1f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f886b68a1b1f781092ce8514604bcba4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>f886b68a1b1f781092ce8514604bcba4</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>bc86b68a1b1f781092ce8514604bcba8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <value>found incident</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f886b68a1b1f781092ce8514604bcba4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>f886b68a1b1f781092ce8514604bcba4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>3c86b68a1b1f781092ce8514604bcba8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{4f315a04-be1f-4948-88fd-e04940af882d.status}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>f886b68a1b1f781092ce8514604bcba4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:14</sys_created_on>
+        <sys_id>7886b68a1b1f781092ce8514604bcba8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_6934720a1b1f781092ce8514604bcbc9^sys_idNOT INeca47e0a1b1f781092ce8514604bcbb0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ws1incidentnumber</element>
+        <help/>
+        <hint/>
+        <label>ws1incidentnumber</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6934720a1b1f781092ce8514604bcbc9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:13:01</sys_created_on>
+        <sys_id>eca47e0a1b1f781092ce8514604bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:13:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=6934720a1b1f781092ce8514604bcbc9^sys_idNOT INae74fa0a1b1f781092ce8514604bcbde"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"ae74fa0a1b1f781092ce8514604bcbde","name":"plan"}}</plan>
+        <plan_id display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</plan_id>
+        <snapshot>14c9ba4e1b1f781092ce8514604bcb54</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ae74fa0a1b1f781092ce8514604bcbde</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:09</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>ws1uemflowwrapper</internal_name>
+        <label_cache>[{"name":"562374ad-2536-424c-aa37-febfe2a6598a.ws1user","label":"5➛ws1message","reference_display":"ws1message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"352c98dd-cc1b-46b4-be5a-47745547a562"}},{"name":"subflow.ws1incidentnumber","label":"Input➛ws1incidentnumber","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"131d32ec-52a9-44df-b25f-809da1c809da","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.ws1incidentnumber1","label":"Input➛ws1incidentnumber","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"96358be6-8900-48d9-978a-2ab925d49d3d"}},{"name":"691c858b-748d-403d-93a7-6dd204df349f.ws1errorstate","label":"1➛ws1errorstate","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9b15e60e-af32-40de-9283-8e97e80b3128"}},{"name":"2d024d1d-1585-4ca1-adfb-bd33e6f7d360.record","label":"2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2d024d1d-1585-4ca1-adfb-bd33e6f7d360.table_name","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.Record","label":"3➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.Table","label":"3➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"4f315a04-be1f-4948-88fd-e04940af882d.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"73ec1a95-0cf6-433e-a7dd-0066be181ab9.record","label":"6➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"73ec1a95-0cf6-433e-a7dd-0066be181ab9.table_name","label":"6➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>WS1UEMFlowWrapper</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="WS1UEMFlowWrapper">6934720a1b1f781092ce8514604bcbc9</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d274fa0a1b1f781092ce8514604bcb6b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=d274fa0a1b1f781092ce8514604bcb6b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d274fa0a1b1f781092ce8514604bcb6b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d274fa0a1b1f781092ce8514604bcb6b^sys_idNOT INde74fa0a1b1f781092ce8514604bcb6b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d274fa0a1b1f781092ce8514604bcb6b</id>
+        <name>WS1UEMFlowWrapper</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:19</sys_created_on>
+        <sys_id>de74fa0a1b1f781092ce8514604bcb6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:12:19</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=d274fa0a1b1f781092ce8514604bcb6b^sys_idNOT IN38a47e0a1b1f781092ce8514604bcbed"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=131d32ec-52a9-44df-b25f-809da1c809da</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ws1incidentnumber</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ws1incidentnumber</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</model>
+        <model_id>d274fa0a1b1f781092ce8514604bcb6b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d274fa0a1b1f781092ce8514604bcb6b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:13:02</sys_created_on>
+        <sys_id>38a47e0a1b1f781092ce8514604bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:13:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d274fa0a1b1f781092ce8514604bcb6b^sys_idNOT IN1186f68a1b1f781092ce8514604bcb48,67f7baca1b1f781092ce8514604bcbd6,9d86f68a1b1f781092ce8514604bcb4e,9e74fa0a1b1f781092ce8514604bcbc3"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</flow>
+        <order>3</order>
+        <parent_ui_id>4b90f845-2ea3-42a6-8595-07ce63d3a13e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>1186f68a1b1f781092ce8514604bcb48</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <ui_id>4f315a04-be1f-4948-88fd-e04940af882d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1186f68a1b1f781092ce8514604bcb48"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1186f68a1b1f781092ce8514604bcb48</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>1d86f68a1b1f781092ce8514604bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1186f68a1b1f781092ce8514604bcb48"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>1186f68a1b1f781092ce8514604bcb48</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>d586f68a1b1f781092ce8514604bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>number={{subflow.ws1incidentnumber}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>1186f68a1b1f781092ce8514604bcb48</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>9986f68a1b1f781092ce8514604bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="WS1UEMMessageTranslator">7c46a7e51b12b41092ce8514604bcb07</action_type>
+        <action_type_parent display_value="WS1UEMMessageTranslator">4d26e3e51b12b41092ce8514604bcb2f</action_type_parent>
+        <comment/>
+        <compiled_snapshot>7c46a7e51b12b41092ce8514604bcb07</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</flow>
+        <order>5</order>
+        <parent_ui_id>39b4a35e-f83d-48c6-87b6-60de69782e1f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:27:42</sys_created_on>
+        <sys_id>67f7baca1b1f781092ce8514604bcbd6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <ui_id>562374ad-2536-424c-aa37-febfe2a6598a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=67f7baca1b1f781092ce8514604bcbd6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>67f7baca1b1f781092ce8514604bcbd6</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:27:42</sys_created_on>
+        <sys_id>27f7baca1b1f781092ce8514604bcbd7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:27:42</sys_updated_on>
+        <value>WS1UEMFlowError</value>
+        <variable display_value="ws1Messagetotranslate">f046a7e51b12b41092ce8514604bcb0b</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</flow>
+        <order>6</order>
+        <parent_ui_id>39b4a35e-f83d-48c6-87b6-60de69782e1f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>9d86f68a1b1f781092ce8514604bcb4e</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <ui_id>73ec1a95-0cf6-433e-a7dd-0066be181ab9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9d86f68a1b1f781092ce8514604bcb4e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9d86f68a1b1f781092ce8514604bcb4e</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>9986f68a1b1f781092ce8514604bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9d86f68a1b1f781092ce8514604bcb4e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>d586f68a1b1f781092ce8514604bcb50</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:27:42</sys_updated_on>
+        <value/>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9d86f68a1b1f781092ce8514604bcb4e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>9d86f68a1b1f781092ce8514604bcb4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>9186f68a1b1f781092ce8514604bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{4f315a04-be1f-4948-88fd-e04940af882d.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9d86f68a1b1f781092ce8514604bcb4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>dd86f68a1b1f781092ce8514604bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9d86f68a1b1f781092ce8514604bcb4e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>5586f68a1b1f781092ce8514604bcb50</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:27:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>x_vmw_ws1uem_response={{562374ad-2536-424c-aa37-febfe2a6598a.ws1user}}^work_notes={{562374ad-2536-424c-aa37-febfe2a6598a.ws1user}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="WS1UEMRunFlow">c6eee6c21b1f781092ce8514604bcbf6</action_type>
+        <action_type_parent display_value="WS1UEMRunFlow">2d8ee2c21b1f781092ce8514604bcbc3</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c6eee6c21b1f781092ce8514604bcbf6</compiled_snapshot>
+        <display_text/>
+        <flow display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:20</sys_created_on>
+        <sys_id>9e74fa0a1b1f781092ce8514604bcbc3</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <ui_id>691c858b-748d-403d-93a7-6dd204df349f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9e74fa0a1b1f781092ce8514604bcbc3"/>
+    <sys_element_mapping action="delete_multiple" query="id=9e74fa0a1b1f781092ce8514604bcbc3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ws1incidentnumber</field>
+        <id>9e74fa0a1b1f781092ce8514604bcbc3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:12:20</sys_created_on>
+        <sys_id>da74fa0a1b1f781092ce8514604bcbc4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:13:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c6eee6c21b1f781092ce8514604bcbf6</table>
+        <value>{{subflow.ws1incidentnumber}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=d274fa0a1b1f781092ce8514604bcb6b^sys_idNOT INc0b9f64e1b1f781092ce8514604bcb93,d986f68a1b1f781092ce8514604bcb51"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9ba9b64e1b1f781092ce8514604bcbc2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:06</sys_created_on>
+        <sys_id>c0b9f64e1b1f781092ce8514604bcb93</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <ui_id>4b90f845-2ea3-42a6-8595-07ce63d3a13e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c0b9f64e1b1f781092ce8514604bcb93"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c0b9f64e1b1f781092ce8514604bcb93</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:06</sys_created_on>
+        <sys_id>0cb9f64e1b1f781092ce8514604bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:06</sys_updated_on>
+        <value>flow error occurred</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c0b9f64e1b1f781092ce8514604bcb93"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c0b9f64e1b1f781092ce8514604bcb93</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:06</sys_created_on>
+        <sys_id>88b9f64e1b1f781092ce8514604bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{691c858b-748d-403d-93a7-6dd204df349f.ws1errorstate}}=true</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>c0b9f64e1b1f781092ce8514604bcb93</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:35:06</sys_created_on>
+        <sys_id>c4b9f64e1b1f781092ce8514604bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:06</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">3086b68a1b1f781092ce8514604bcba4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="WS1UEMFlowWrapper">d274fa0a1b1f781092ce8514604bcb6b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>4b90f845-2ea3-42a6-8595-07ce63d3a13e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>d986f68a1b1f781092ce8514604bcb51</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:35:07</sys_updated_on>
+        <ui_id>39b4a35e-f83d-48c6-87b6-60de69782e1f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d986f68a1b1f781092ce8514604bcb51"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d986f68a1b1f781092ce8514604bcb51</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>5586f68a1b1f781092ce8514604bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <value>found incident</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d986f68a1b1f781092ce8514604bcb51"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>d986f68a1b1f781092ce8514604bcb51</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>d186f68a1b1f781092ce8514604bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{4f315a04-be1f-4948-88fd-e04940af882d.status}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>d986f68a1b1f781092ce8514604bcb51</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:21:16</sys_created_on>
+        <sys_id>1186f68a1b1f781092ce8514604bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:21:16</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d274fa0a1b1f781092ce8514604bcb6b^sys_idNOT INf4a4be0a1b1f781092ce8514604bcb03"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ws1incidentnumber</element>
+        <help/>
+        <hint/>
+        <label>ws1incidentnumber</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d274fa0a1b1f781092ce8514604bcb6b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 07:13:02</sys_created_on>
+        <sys_id>f4a4be0a1b1f781092ce8514604bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 07:13:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_flow action="update">
+        <sys_id>6934720a1b1f781092ce8514604bcbc9</sys_id>
+        <latest_snapshot>d274fa0a1b1f781092ce8514604bcb6b</latest_snapshot>
+    </sys_hub_flow>
+</record_update>
