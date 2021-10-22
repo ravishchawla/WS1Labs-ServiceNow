@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices>oauth|basic</choices>
+        <description>The type of authentication to use to Workspace ONE UEM, please enter either oauth or basic in the Value section.</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_vmw_ws1uem.WS1UEMAuth</name>
+        <read_roles/>
+        <suffix>WS1UEMAuth</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-09 23:01:31</sys_created_on>
+        <sys_id>358a98aa1b8b3010a76c0dc0604bcb81</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMAuth</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_properties_358a98aa1b8b3010a76c0dc0604bcb81</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 21:57:43</sys_updated_on>
+        <type>string</type>
+        <value>basic</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=358a98aa1b8b3010a76c0dc0604bcb81"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_properties_358a98aa1b8b3010a76c0dc0604bcb81</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices>oauth|basic</choices><description>The type of authentication to use to Workspace ONE UEM, please enter either oauth or basic in the Value section.</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_vmw_ws1uem.WS1UEMAuth</name><read_roles/><suffix>WS1UEMAuth</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-09 23:01:31</sys_created_on><sys_id>358a98aa1b8b3010a76c0dc0604bcb81</sys_id><sys_mod_count>47</sys_mod_count><sys_name>x_vmw_ws1uem.WS1UEMAuth</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_properties_358a98aa1b8b3010a76c0dc0604bcb81</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-21 21:57:43</sys_updated_on><type>string</type><value>basic</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=358a98aa1b8b3010a76c0dc0604bcb81"/></record_update>]]></payload>
+        <payload_hash>3779359</payload_hash>
+        <record_name>x_vmw_ws1uem.WS1UEMAuth</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 21:57:43</sys_created_on>
+        <sys_id>f71ffdde1b9f7010a76c0dc0604bcbf5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ca4dc25f20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 21:57:43</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>331ffddef39f701015d31b2631b661f5</update_guid>
+        <update_guid_history>331ffddef39f701015d31b2631b661f5:3779359,1eccca4ac29b7810af774a78e6284896:196161174,02ab860a229b7810bdff89397175d989:-551748183,696a020ae59b78102533cde48933d8cb:-744129998,cd2e514ea71b7810bd23e551e73c43ef:-551748183,888a1a75ec537810f948631437b7711e:1455160931,1e929efdbb137810470fdbaa476cb632:1262779116,fe2f4e7d56137810627103181cc2c0e2:1455160931,71b2d0f9599b3810b79cf736e3562462:1262779116,1051d0b9ff9b38105b29925d6f337f82:1455160931,253114b96b9b38100668b7ec5bd1dfa5:1262779116,dde09079469b381028add4b94cc36bbf:1455160931,aba0d479a79b381014b7dc727f78624d:1262779116,2c20d839499b3810a4100d0eec5f824f:1455160931,673fc439749b381096a53356cf61594d:1262779116,e53fc0398e9b381077cdc819c17d4540:1455160931,4bce4039b09b3810e5ccf8f73a6c6a86:1262779116,a48ccc75109b3810ff5b841e17f006db:1455160931,5ebbc835099b381068d02c21f9d07934:1262779116,22e80cb1aa9b3810287fc371fcce6395:1455160931,a168c071039b3810b11d730c182ed945:1262779116,db484071349b38104a0fbf8efe2281b7:1455160931,ddceff65ce5b3810e2f6e558507494ff:1262779116,022dbb65905b3810d48d1c63964593c9:1455160931,dc5e9be1d1d73810bff795b498f5cfcf:1262779116,f4cd53e1d6d73810a310f8d047f837c1:1455160931,0bbd17e1f9d73810c29dc7a637c81672:1262779116,9758dbe94897381015e3e9defd2981c5:1455160931,fa0ebb5dce1ff41085ea9674075dfaa7:1262779116,afcc9a4bda83b010af948c6eec6a4d48:1455160931,cb12cfb22ccb7010c3544e4bb33399dd:1262779116,ddb7fabafc8b7010cc999a99ea418dec:1455160931,f094ba7a758b7010b686efa82281f83c:1262779116,7a34faf6c88b70101d7eec640b671f99:1455160931,7824b27acd8b7010c3af21b331b97351:1262779116,c1b9aaf2588b701079ea4e961b171a93:1455160931,f1146efee04b70102345d5cac2c92714:1262779116,1c49097edd8770105e4de0cce7aff573:1455160931,1ba26922eb8f30107bf2a56a589571b0:1262779116,240a1526d74f30108c889afbc97ef141:1455160931,8de219ee8e0f30100a737b83412a2d1b:1262779116,2c3215ae7e0f3010173c9c347175dcdd:1455160931,2b3d45ea150f301045ba6adf851ceab2:1262779116,983d85eaf40f30101946e052a7f9b134:1455160931,a02d01eaa90f3010133752ba1f337e82:1262779116,e47bf82e32cb301002e4080dd6320e40:1455160931,5dba58aa428b30108ee2e19cff8041b6:1202625132,a9aad0aa9b8b3010bae927efdcb8e437:-2124215801</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-22 00:40:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>00ccd7db89bc453ab08137cb39ce0c04</sys_id>
+        <sys_metadata>358a98aa1b8b3010a76c0dc0604bcb81</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMAuth</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_properties_358a98aa1b8b3010a76c0dc0604bcb81</sys_update_name>
+        <sys_update_version display_value="sys_properties_358a98aa1b8b3010a76c0dc0604bcb81">f71ffdde1b9f7010a76c0dc0604bcbf5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-22 00:40:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

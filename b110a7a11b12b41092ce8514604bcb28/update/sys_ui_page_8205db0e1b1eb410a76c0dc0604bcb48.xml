@@ -10,21 +10,8 @@ WS1 Console.
 onLoad();
 
 function onLoad() {
-    //get the system parameter whether to use oauth or not 
-    var action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMAuth");
-    action_table.query();
-    action_table.next();
-
-    if (action_table.value == "oauth") {
-        $("div_ws1_oauth").hidden = false;
-        $("div_ws1_basic").hidden = true;
-        $("input_ws1_url").checked = true;
-    } else {
-        $("div_ws1_oauth").hidden = true;
-        $("div_ws1_basic").hidden = false;
-        $("input_ws1_url").checked = false;
-    }
+    var basicactive = false;
+	var oauthactive = false;
 
     //set the value in the fields to existing values
     var oauth_table = new GlideRecord('oauth_entity');
@@ -47,6 +34,7 @@ function onLoad() {
     http_table.query();
     if (http_table.next()) {
         var hostid = http_table.host;
+		oauthactive = http_table.active;
         $("input_ws1_hostid").value = hostid;
     } else {
         // default the http connection as it doesn't exist
@@ -58,12 +46,13 @@ function onLoad() {
     http_table.query();
     if (http_table.next()) {
         hostid = http_table.host;
+		basicactive = http_table.active;
         $("input_ws1_basic_hostid").value = hostid;
     } else {
         // default the http connection as it doesn't exist
         $("input_ws1_basic_hostid").value = "";
     }
-
+	
     var basic_table = new GlideRecord('basic_auth_credentials');
     basic_table.addQuery('name', "Workspace ONE UEM ITSM Basic Credentials");
     basic_table.query();
@@ -80,6 +69,20 @@ function onLoad() {
         $("input_ws1_tenant_code").value = action_table.value;
     }
 
+	// set the inputs based on auth type 
+    if (oauthactive == "true") {
+		$("div_ws1_oauth").hidden = false;
+        $("div_ws1_basic").hidden = true;
+		$("div_ws1_error").hidden = true;
+    } else if (basicactive == "true") {
+        $("div_ws1_oauth").hidden = true;
+        $("div_ws1_basic").hidden = false;
+		$("div_ws1_error").hidden = true;
+    } else {
+		$("div_ws1_error").hidden = false;
+        $("div_ws1_oauth").hidden = true;
+        $("div_ws1_basic").hidden = true;
+	}
 }
 
 // function to get the values from the existing oauth record
@@ -139,19 +142,6 @@ function testoauth() {
 
 function testConnection() {
     gel("runprocessingscript").value = "testconnection";
-}
-
-
-function authmethod(oath_switch) {
-
-    // enable the oauth or the basic authentication UI elements
-    if (oath_switch.checked) {
-        $("div_ws1_oauth").hidden = false;
-        $("div_ws1_basic").hidden = true;
-    } else {
-        $("div_ws1_oauth").hidden = true;
-        $("div_ws1_basic").hidden = false;
-    }
 }]]></client_script>
         <description>Configure the connection to Workspace ONE UEM</description>
         <direct>false</direct>
@@ -172,15 +162,15 @@ function authmethod(oath_switch) {
 		
 		.left-panel {
 			margin-left: 10px;
+			max-width: 40%;
 		}
 		
 		.right-panel {
 			margin-left: 3em;
 		}
 		
-		.auth-switch-label {
-			margin-left: 0.8em;
-			margin-bottom: 0;
+		.heading {
+			text-align: center;
 		}
 		
 		.input-label {
@@ -204,18 +194,16 @@ function authmethod(oath_switch) {
 			margin-bottom: 5px;
 		}
 		
-		.toggle-section {
-			display: flex;
-			align-items: center;
-			margin: 10px 0 20px;
-		}
-		
 		.auth-method-description {
 			margin-bottom: 20px;
 		}
 		
 		.auth-method-section {
-			margin-left: 10px;
+			margin-top: 20px;
+		}
+				
+		.error-method-section {
+			margin: 20px 0;
 		}
 	</style>
 		
@@ -225,22 +213,16 @@ function authmethod(oath_switch) {
 		
 	<div id="credentials-panel" class="left-panel right-border">	
 		<div>
-			<div class="input-label">
+			<div class="heading input-label">
 				<strong>${gs.getMessage('WS1UEMAuthMethod')}</strong>
 			</div>
-			<div class="toggle-section">
-				<div class="input-switch" style="height: 21px;">
-					<input 
-						   id="input_ws1_url" 
-						   type="checkbox"
-						   name="input_ws1_url" 
-						   onclick="authmethod(this)"
-						   disabled="true"/>
-					<label aria-hidden="true" class="switch" for="input_ws1_url" style="height: 21px; margin-bottom: 0;"></label>
-				</div>
-				<label for="input_ws1_url" class="auth-switch-label">${gs.getMessage('WS1UEMAuthMethodDescription')}</label>
+		</div>	
+		
+		<div id="div_ws1_error" class="error-method-section" hidden="true">
+			<div class="input-label error-method-description">
+				${gs.getMessage('WS1UEMAuthError')}
 			</div>
-		</div>
+		</div>	
 		
 		<div id="div_ws1_oauth" class="auth-method-section" hidden="true">
 			<div class="input-label auth-method-description">
@@ -603,13 +585,13 @@ if (runprocessingscript == "setbasicvalues") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>193</sys_mod_count>
+        <sys_mod_count>216</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 09:00:03</sys_updated_on>
+        <sys_updated_on>2021-10-22 01:37:18</sys_updated_on>
     </sys_ui_page>
 </record_update>
