@@ -11,8 +11,12 @@
 <table style="height: 39px; width: 56.4574%;" border="2"><tbody><tr style="height: 13px;"><td style="width: 100%; height: 13px;"><strong> WS1UEMAdvanced Role Actions</strong></td></tr><tr style="height: 13px;"><td style="width: 100%; height: 13px;"> Device Wipe</td></tr><tr style="height: 13px;"><td style="width: 100%; height: 13px;"> Enterprise Wipe</td></tr></tbody></table>
 <p><br /></p>
 <table style="height: 117px; width: 56.0715%;" border="2"><tbody><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"><strong> WS1UEMStandard Role Actions</strong></td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Change Passcode</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Lock Device</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Remote Assist</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Request Logs</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Send Message</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Soft Reset</td></tr><tr style="height: 13px;"><td style="width: 50.5368%; height: 13px;"> Sync Device</td></tr></tbody></table>
-<p><br /></p>
-<p>For further information and the details of each action please refer to the <a title="documentation" href="https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2105/UEM_Managing_Devices/GUID-AWT-DEVICEACTIONDESCRIPTIONS-MDM.html" rel="nofollow">documentation</a>. The Refresh Devices action can be used to locate and create records present in VMware Workspace ONE UEM.</p>]]></description>
+<p>For further information and the details of each action please refer to the <a title="documentation" href="https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2105/UEM_Managing_Devices/GUID-AWT-DEVICEACTIONDESCRIPTIONS-MDM.html" rel="nofollow">documentation</a>.</p>
+<p> </p>
+<p><strong><span id="concept_pgc_5rc_n4b__d151e77">Workspace ONE UEM Console</span></strong></p>
+<p>Along with the two core roles described above an additional role (<strong><em>ws1consoleviewer</em></strong>) is provided which enables a button on the Incident form allowing the ITSM agent to open a Workspace ONE UEM Console window.</p>
+<p> </p>
+<p> </p>]]></description>
         <display_child_max_num/>
         <done_status_text/>
         <hide_getting_started>false</hide_getting_started>
@@ -33,14 +37,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-02 04:27:13</sys_created_on>
         <sys_id>7b8839de1bd6381092ce8514604bcbc4</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Configure the actions</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>gsw_content_group_7b8839de1bd6381092ce8514604bcbc4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-22 02:33:42</sys_updated_on>
+        <sys_updated_on>2021-10-23 05:12:22</sys_updated_on>
         <title>Configure the actions</title>
         <weight>1</weight>
     </gsw_content_group>
