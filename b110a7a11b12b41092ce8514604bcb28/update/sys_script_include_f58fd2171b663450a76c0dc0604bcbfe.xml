@@ -22,14 +22,14 @@ FixScript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
     main_keys = ["assist", "assist_filemanager", "assist_registryeditor", "assist_remoteshell", "assist_screenshare", "changepasscode", "changepasscode_winrt", "devicelogs", "devicewipe", "devicewipe_mac", "enterprisewipe", "lock", "lock_mac", "max_os", "max_uem", "message", "min_os", "min_uem", "os_action", "precedent", "softreset", "syncdevice"];
 
-    delete_mapping_table = new GlideRecordSecure("x_vmw_ws1uem_ws1_action_os_mapping");
+    delete_mapping_table = new GlideRecord("x_vmw_ws1uem_ws1_action_os_mapping");
     delete_mapping_table.query();
     delete_mapping_table.deleteMultiple();
 
     for (i = 0; i < records.records.length; i+=1) {
 
     record = records.records[i];
-    gr_mapping_table = new GlideRecordSecure("x_vmw_ws1uem_ws1_action_os_mapping");
+    gr_mapping_table = new GlideRecord("x_vmw_ws1uem_ws1_action_os_mapping");
         gr_mapping_table.initialize();
 
         for (j = 0; j < main_keys.length; j+=1) {
@@ -52,13 +52,13 @@ FixScript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-17 20:06:35</sys_created_on>
         <sys_id>f58fd2171b663450a76c0dc0604bcbfe</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>FixScript</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_f58fd2171b663450a76c0dc0604bcbfe</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-23 23:08:16</sys_updated_on>
+        <sys_updated_on>2021-10-23 23:33:22</sys_updated_on>
     </sys_script_include>
 </record_update>
