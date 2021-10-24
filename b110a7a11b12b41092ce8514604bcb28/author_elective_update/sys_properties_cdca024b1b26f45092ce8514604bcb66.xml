@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>The URL for Workspace ONE Console access</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_vmw_ws1uem.WS1UEMURL</name>
+        <read_roles/>
+        <suffix>WS1UEMURL</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-16 23:58:02</sys_created_on>
+        <sys_id>cdca024b1b26f45092ce8514604bcb66</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMURL</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_properties_cdca024b1b26f45092ce8514604bcb66</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-20 10:40:00</sys_updated_on>
+        <type>string</type>
+        <value>https://cn135.awmdm.com</value>
+        <write_roles>admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=cdca024b1b26f45092ce8514604bcb66"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_properties_cdca024b1b26f45092ce8514604bcb66</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>The URL for Workspace ONE Console access</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_vmw_ws1uem.WS1UEMURL</name><read_roles/><suffix>WS1UEMURL</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-09-16 23:58:02</sys_created_on><sys_id>cdca024b1b26f45092ce8514604bcb66</sys_id><sys_mod_count>47</sys_mod_count><sys_name>x_vmw_ws1uem.WS1UEMURL</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_properties_cdca024b1b26f45092ce8514604bcb66</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-20 10:40:00</sys_updated_on><type>string</type><value>https://cn135.awmdm.com</value><write_roles>admin</write_roles></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=cdca024b1b26f45092ce8514604bcb66"/></record_update>]]></payload>
+        <payload_hash>-1301685848</payload_hash>
+        <record_name>x_vmw_ws1uem.WS1UEMURL</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-20 10:40:01</sys_created_on>
+        <sys_id>7a6a1a351b53781092ce8514604bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c9d49546d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-20 10:40:01</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>726a1a35df537810a9197ea3c8c041ed</update_guid>
+        <update_guid_history>726a1a35df537810a9197ea3c8c041ed:-1301685848,6e48daf1cf5378109f1568f92a5f1ecd:1317458123,b517d6f105537810a9d3a4fb54496b05:-1301685848,34079eb1a5537810f057cd5ba3423e8d:1317458123,16f4de71cb53781046545af020e87436:-1301685848,99641a71965378105ba706e7a7caff6a:1317458123,b1a092bd1f137810f5c9f62d4475583e:-1301685848,b62f4e7da713781064671750523618e6:1317458123,db58dbe9e5973810bb0df106cfabacc8:-1301685848,be0ebb5df61ff4108378df0ae85792aa:1346015839,c0261ce6fe8b30100ac29e785c1752e4:-1301685848,b516dce6da8b30103c1648c55f24fa7a:-1646674904,ceaee8dab58330103b9ad965e723c513:-1301685848,533ad8de3c4330109c52e286d04d4416:-238423362,213a94de8e43301040853cac247deed7:3602127,dfc954de99433010ecc7043b77cb654d:-238423362,907950de614330100b0a79a82fd951a7:3602127,fa595c9eca433010cfd52bb902c97a2a:-238423362,65f7109ecf433010f834b2031d6833a8:3602127,7ae7109e76433010e589c08ac9078a2d:-238423362,b967585ee8433010dee1841ab63701ee:3602127,2857585ef9433010801ac4848d0555b7:-238423362,5a65d01e5e43301065ce3ab2333a18d4:3602127,7b23189a2d43301076f3822b49fba353:-646857,f123dc9aff43301054d35f378ec836b9:942463494,3b139c9ab243301001babd7b843b30de:-646857,b9a19896154330109a6af86ae67cab65:942463494,25615416f4433010961a28ee80fba7b9:-646857,3d809cda9dcbb89058255f1d931a4430:942463494,47a296d55987389042b3792d03700928:-646857,5ad50591a9cb709019013fd20c6e271f:942463494,5696ffef4cfef0900ef123958b79669a:-646857,c996bfef1cfef090ff0c99b28c987859:942463494,e84533abb4fef090ed5d94852582f632:-314102298,a2357f2b94fef09062cbe1385eb47168:942463494,fa15376ba2fef0900ab33b90b9d03b21:-314102298,5a6faf6b26bef0903e5724c63a16e6bf:3602127,d6e7abebb07ef090083bbca946e5f977:-238423362,3d98b8d3efbab090ae8ce292f356fa46:-1484009564,b82b67f660fa7090b8e695d32aaa8d8e:-646857,7ddae3f609fa7090940ee81fe2dd23af:1202039750,77e7161abc72309043ba5b1abb57b97e:-646857,a4d7921ab27230908abf381908d768fc:-2106535806,4a05dfa9cb36bc5013d1e7a9b26650b8:-646857,13e45fa94e36bc5071200cfea1cac9b7:-30839554,402d6acfc466f450b4a5d60f1ff0a612:303091431,f67ad6c35a66f4503825a00d78d86c2a:-962078632,d50b8a0baa26f450dea5298cca7d0336:1216434360</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-24 21:43:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>2226907f5b3440ca85af18d1c0996889</sys_id>
+        <sys_metadata>cdca024b1b26f45092ce8514604bcb66</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMURL</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_properties_cdca024b1b26f45092ce8514604bcb66</sys_update_name>
+        <sys_update_version display_value="sys_properties_cdca024b1b26f45092ce8514604bcb66">7a6a1a351b53781092ce8514604bcbed</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-24 21:43:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

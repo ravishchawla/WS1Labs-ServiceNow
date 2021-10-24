@@ -61,9 +61,8 @@ function onLoad() {
         $("input_ws1_clientpassword").value = "********************";
     }
 
-
-    action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', "x_vmw_ws1uem.WS1UEMTenantCode");
+	action_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
+	action_table.addQuery('name', "WS1UEMTenantCode");
     action_table.query();
     if (action_table.next()) {
         $("input_ws1_tenant_code").value = action_table.value;
@@ -453,7 +452,6 @@ function testConnection() {
         var status = outputs['status']; // String
         var response = outputs['response']; // String
         var ws1productversion = outputs['ws1productversion']; // String
-        gs.info("WS1UEM: Test Connection version " + ws1productversion + " and call status " + status);
 
         if (status == "200") {
             gs.addInfoMessage(gs.getMessage('WS1UEMConnectionVerfied') + ws1productversion);
@@ -484,18 +482,7 @@ if (runprocessingscript == "setoauthvalues") {
     if (http_table.next()) {
         var hostid = http_table.host;
     }
-
-    // update the WS1 UEM Console URL if it has changed
-    var consoleUrl = "https://" + hostid;
-    action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMURL');
-    action_table.query();
-    action_table.next();
-    if (action_table.value != consoleUrl) {
-        action_table.value = consoleUrl;
-        action_table.update();
-    }
-
+	
     // update the WS1 UEM tokenURL, clientID and Client secret if they have changed
     var oauth_table = new GlideRecord('oauth_entity');
     oauth_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Provider');
@@ -540,20 +527,9 @@ if (runprocessingscript == "setbasicvalues") {
         hostid = http_table.host;
     }
 
-    // update the WS1 UEM Console URL if needed
-    consoleUrl = "https://" + hostid;
-    action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMURL');
-    action_table.query();
-    action_table.next();
-    if (action_table.value != consoleUrl) {
-        action_table.value = consoleUrl;
-        action_table.update();
-    }
-
     // update the WS1 UEM token url if needed
-    action_table = new GlideRecord('sys_properties');
-    action_table.addQuery('name', 'x_vmw_ws1uem.WS1UEMTenantCode');
+	var action_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
+	action_table.addQuery('name', "WS1UEMTenantCode");
     action_table.query();
     action_table.next();
     if (action_table.value != ws1tenantcode) {
@@ -585,13 +561,13 @@ if (runprocessingscript == "setbasicvalues") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>218</sys_mod_count>
+        <sys_mod_count>222</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-23 23:34:49</sys_updated_on>
+        <sys_updated_on>2021-10-24 22:17:51</sys_updated_on>
     </sys_ui_page>
 </record_update>

@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>336878861b1af41092ce8514604bcb5f</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>WS1UEMVersion</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_336878861b1af41092ce8514604bcb5f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:35</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:45</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -117,10 +117,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>376878861b1af41092ce8514604bcb64</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-19 22:26:34</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:42</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=376878861b1af41092ce8514604bcb64"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -173,10 +173,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>7f6878861b1af41092ce8514604bcb85</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 08:59:30</sys_updated_on>
-        <value>https://cn135.awmdm.com:443/api</value>
+        <sys_updated_on>2021-10-24 23:09:42</sys_updated_on>
+        <value>https://cn135.awmdm.com/api</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -460,10 +460,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>736878861b1af41092ce8514604bcb8a</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:31</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:42</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=736878861b1af41092ce8514604bcb8a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -516,9 +516,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>f36878861b1af41092ce8514604bcbb7</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:31</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:42</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   if (inputs.responseBody) {
@@ -526,8 +526,8 @@
      if (returnedObject) {
        outputs.ws1productversion = returnedObject.ProductVersion;
        
-       var properties_table = new GlideRecord('sys_properties');
-       properties_table.addQuery('name', "x_vmw_ws1uem.WS1UEMPlatform");
+       var properties_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
+       properties_table.addQuery('name', "WS1UEMPlatform");
        properties_table.query();
        if (properties_table.next()) {
          if (returnedObject.ProductVersion != properties_table.value ) {
@@ -996,14 +996,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>487878861b1af41092ce8514604bcbc7</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:32</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:43</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1079,14 +1079,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>847878861b1af41092ce8514604bcbc1</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:32</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1162,14 +1162,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:07:36</sys_created_on>
         <sys_id>c47878861b1af41092ce8514604bcbba</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:32</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1408,17 +1408,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMVersion">336878861b1af41092ce8514604bcb5f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"e598bc861b1af41092ce8514604bcbad","name":"plan"}}</plan>
-        <snapshot>510dc34e1b1b7010a76c0dc0604bcb51</snapshot>
+        <snapshot>c86ce9971bd33410a76c0dc0604bcb3a</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:16</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e598bc861b1af41092ce8514604bcbad</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:37</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:46</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1536,10 +1536,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>09987c861b1af41092ce8514604bcbaf</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:34</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=09987c861b1af41092ce8514604bcbaf"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1592,9 +1592,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>d1987c861b1af41092ce8514604bcbd0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:34</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   if (inputs.responseBody) {
@@ -1602,8 +1602,8 @@
      if (returnedObject) {
        outputs.ws1productversion = returnedObject.ProductVersion;
        
-       var properties_table = new GlideRecord('sys_properties');
-       properties_table.addQuery('name', "x_vmw_ws1uem.WS1UEMPlatform");
+       var properties_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
+       properties_table.addQuery('name', "WS1UEMPlatform");
        properties_table.query();
        if (properties_table.next()) {
          if (returnedObject.ProductVersion != properties_table.value ) {
@@ -1860,10 +1860,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>81987c861b1af41092ce8514604bcb96</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-19 22:26:37</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=81987c861b1af41092ce8514604bcb96"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1874,10 +1874,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>05987c861b1af41092ce8514604bcbab</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-09-03 08:59:37</sys_updated_on>
-        <value>https://cn135.awmdm.com:443/api</value>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
+        <value>https://cn135.awmdm.com/api</value>
         <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2415,14 +2415,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>59987c861b1af41092ce8514604bcbe0</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:35</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2581,14 +2581,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>95987c861b1af41092ce8514604bcbda</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:35</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2664,14 +2664,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:08:14</sys_created_on>
         <sys_id>d5987c861b1af41092ce8514604bcbd3</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 08:59:35</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:09:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

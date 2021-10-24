@@ -558,7 +558,7 @@ function show_check(showFlag) {
 		<input type="hidden" id="jvar_messagetext" name="jvar_messagetext" value=""/>
 		<input type="hidden" id="jvar_assisttype" name="jvar_assisttype" value=""/>
 		<input type="hidden" id="jvar_string" name="jvar_string" value=""/>
-		<input type="hidden" id="ws1_version" name="ws1_version" value="${gs.getProperty('x_vmw_ws1uem.WS1UEMPlatform')}"/>
+		<input type="hidden" id="ws1_version" name="ws1_version" value=""/>
 	</div>
 	
 	<div class="body">
@@ -704,15 +704,15 @@ var util;
 var inputs;
 var message;
 
-gs.info("Running processing script " + runprocessingscript);
+// gs.info("Running processing script " + runprocessingscript);
 
 if (runprocessingscript === "actionflow") {
 
-    gs.info("Running action flow from UI Page, sid = " + sid);
+//    gs.info("Running action flow from UI Page, sid = " + sid);
 
     session = gs.getSession();
     addr = session.getUrlOnStack();
-    gs.info("URL " + addr);
+//    gs.info("URL " + addr);
 
     util = new GlideRecord("incident");
     util.addQuery("sys_id", sid);
@@ -728,21 +728,18 @@ if (runprocessingscript === "actionflow") {
         if (util.update() === null) {
             gs.info("WS1UEM: update failed");
 
-        } else {
-            gs.info("WS1UEM: update succeeded");
-        }
-
+        } 
 
         try {
             inputs = {};
             inputs.ws1incidentnumber = util.number; // String
 
-            gs.info("WS1UEM: calling subflow " + util.number);
+//            gs.info("WS1UEM: calling subflow " + util.number);
 //            sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemactionsubflow").inBackground().withInputs(inputs).run();
 
 			sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemflowwrapper").inBackground().withInputs(inputs).run();
 
-            gs.info("WS1UEM: called subflow ");	
+//            gs.info("WS1UEM: called subflow ");	
 			
         } catch (ex) {
 			gs.info("WS1UEM: called subflow failed");
@@ -760,13 +757,13 @@ if (runprocessingscript === "actionflow") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>295</sys_mod_count>
+        <sys_mod_count>298</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-23 23:33:05</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:02:48</sys_updated_on>
     </sys_ui_page>
 </record_update>

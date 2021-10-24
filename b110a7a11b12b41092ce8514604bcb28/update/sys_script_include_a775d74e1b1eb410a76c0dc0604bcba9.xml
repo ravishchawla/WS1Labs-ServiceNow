@@ -127,8 +127,14 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         var DEVICE_TABLE_NAME = "cmdb_ci";
 
         session_id = this.getParameter("sysparm_sid");
-        uem_version = gs.getProperty("x_vmw_ws1uem.WS1UEMPlatform");
 
+		var action_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
+        action_table.addQuery('name', "WS1UEMPlatform");
+        action_table.query();
+        if (action_table.next()) {
+            uem_version = action_table.value;
+        }
+		
         app = new GlideRecordSecure("incident");
         app.addQuery("sys_id", session_id);
         app.query();
@@ -199,7 +205,7 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         mapTable.orderByDesc("precedent");
         mapTable.query();
 
-        gs.info("Querying WS1 actions for OS " + os_name + " : " + os_version + " - UEM : " + uem_version);
+//        gs.info("Querying WS1 actions for OS " + os_name + " : " + os_version + " - UEM : " + uem_version);
 
         try {
             while(mapTable.next()) {
@@ -241,13 +247,13 @@ _privateFunction: function() { // this function is not client callable
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:34:18</sys_created_on>
         <sys_id>a775d74e1b1eb410a76c0dc0604bcba9</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>WS1GetActionFromOS</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_a775d74e1b1eb410a76c0dc0604bcba9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-20 02:14:23</sys_updated_on>
+        <sys_updated_on>2021-10-24 23:06:16</sys_updated_on>
     </sys_script_include>
 </record_update>

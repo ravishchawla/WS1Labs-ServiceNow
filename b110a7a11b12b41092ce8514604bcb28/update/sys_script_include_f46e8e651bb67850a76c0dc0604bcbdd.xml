@@ -41,7 +41,7 @@ WS1GGetUemAction.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
 
         answer = JSON.stringify(return_value);
 
-        gs.info("WS1GetUemAction return value " + answer);
+//        gs.info("WS1GetUemAction return value " + answer);
 
         return answer;
     } ,
@@ -50,7 +50,7 @@ set_value:function() {
     var newValue;
     var action_table;
     var actionType = this.getParameter("sysparm_actiontype");
-    gs.info("WS1GetUemAction set action type " + actionType);
+//    gs.info("WS1GetUemAction set action type " + actionType);
 
     newValue = this.getParameter("sysparm_new_value");
 
@@ -72,13 +72,13 @@ set_value:function() {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-24 18:47:14</sys_created_on>
         <sys_id>f46e8e651bb67850a76c0dc0604bcbdd</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>WS1GGetUemAction</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-23 23:35:14</sys_updated_on>
+        <sys_updated_on>2021-10-24 03:31:05</sys_updated_on>
     </sys_script_include>
 </record_update>

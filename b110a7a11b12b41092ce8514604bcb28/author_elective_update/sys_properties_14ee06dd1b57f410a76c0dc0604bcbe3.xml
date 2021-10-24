@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>Property to specifiy if a note should be added to a device in WS1 UEM for each action</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_vmw_ws1uem.WS1UEMAddNote</name>
+        <read_roles/>
+        <suffix>WS1UEMAddNote</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-18 20:33:45</sys_created_on>
+        <sys_id>14ee06dd1b57f410a76c0dc0604bcbe3</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMAddNote</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_properties_14ee06dd1b57f410a76c0dc0604bcbe3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-23 23:24:06</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=14ee06dd1b57f410a76c0dc0604bcbe3"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_properties_14ee06dd1b57f410a76c0dc0604bcbe3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Property to specifiy if a note should be added to a device in WS1 UEM for each action</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_vmw_ws1uem.WS1UEMAddNote</name><read_roles/><suffix>WS1UEMAddNote</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-18 20:33:45</sys_created_on><sys_id>14ee06dd1b57f410a76c0dc0604bcbe3</sys_id><sys_mod_count>8</sys_mod_count><sys_name>x_vmw_ws1uem.WS1UEMAddNote</sys_name><sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package><sys_policy/><sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope><sys_update_name>sys_properties_14ee06dd1b57f410a76c0dc0604bcbe3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-23 23:24:06</sys_updated_on><type>boolean</type><value>true</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=14ee06dd1b57f410a76c0dc0604bcbe3"/></record_update>]]></payload>
+        <payload_hash>275617105</payload_hash>
+        <record_name>x_vmw_ws1uem.WS1UEMAddNote</record_name>
+        <reverted_from/>
+        <source>895112a21b93701092ce8514604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-23 23:24:06</sys_created_on>
+        <sys_id>b416200b1b97f010a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17caf77f5720000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-23 23:24:06</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>fc16200b1397f01000254512f166c48f</update_guid>
+        <update_guid_history>fc16200b1397f01000254512f166c48f:275617105,752d335d061ff410a3f96c3648c80dab:1671917022,a02d7f1da11ff410a743021ff060724b:275617105,90a596556897f410b989cf6922b8be39:1671917022,78959655ff97f41028755783cb9cf8fc:275617105,4ce49e156e97f4104a3f9b887aa8a3d8:1671917022,1bc45e15c097f4100ae72915efaf94f5:275617105,489fcadd7757f410864fd9ec7083f0c5:1671917022,3c2f0e9d5957f410bc5e28a7ac906407:275617105</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-24 22:08:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>20f874323d01493b9a50a9083c65a1b1</sys_id>
+        <sys_metadata>14ee06dd1b57f410a76c0dc0604bcbe3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_vmw_ws1uem.WS1UEMAddNote</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_properties_14ee06dd1b57f410a76c0dc0604bcbe3</sys_update_name>
+        <sys_update_version display_value="sys_properties_14ee06dd1b57f410a76c0dc0604bcbe3">b416200b1b97f010a76c0dc0604bcb90</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-24 22:08:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
