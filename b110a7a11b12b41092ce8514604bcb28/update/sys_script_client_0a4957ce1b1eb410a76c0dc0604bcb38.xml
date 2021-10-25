@@ -51,12 +51,13 @@ function onLoad() {
                 ga = new GlideAjax("x_vmw_ws1uem.WS1GetActionFromOS");
                 ga.addParam("sysparm_name", "get_action");
                 ga.addParam("sysparm_sid", sid);
-
+				
                 ga.getXML(parse_os_name);
 
                 // The user has the standard WS1 UEM rights so check if advanced
                 // and remove destructive actions from list if not
                 isAdvanced = g_user.hasRole("x_vmw_ws1uem.ws1uemadvanced");
+				jslog('demo isAdvanced = ' + isAdvanced);
                 if (!isAdvanced) {
                     g_form.removeOption("x_vmw_ws1uem_ws1action", "devicewipe");
                     g_form.removeOption("x_vmw_ws1uem_ws1action", "enterprisewipe");
@@ -89,7 +90,7 @@ function onLoad() {
         var key;
         response = response.responseXML.documentElement.getAttribute("answer");
         jslog("DEMO OUTPUT = " + response);
-
+		
         $("incident.x_vmw_ws1uem_ws1_actions_response").value = response;
 
         response = JSON.parse(response);
@@ -108,7 +109,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a4957ce1b1eb410a76c0dc0604bcb38</sys_id>
-        <sys_mod_count>117</sys_mod_count>
+        <sys_mod_count>122</sys_mod_count>
         <sys_name>WS1UEMAction</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -116,7 +117,7 @@ function onLoad() {
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_client_0a4957ce1b1eb410a76c0dc0604bcb38</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-12 05:09:06</sys_updated_on>
+        <sys_updated_on>2021-10-25 18:04:49</sys_updated_on>
         <table>incident</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
