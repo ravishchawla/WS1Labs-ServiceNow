@@ -4,22 +4,22 @@
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
         <condition/>
-        <description/>
-        <name>x_vmw_ws1uem_ws1_action_os_mapping.*</name>
-        <operation display_value="read">read</operation>
+        <description>Enable execute for WS1 UEM Standard user</description>
+        <name>WS1UEMURL</name>
+        <operation display_value="execute">execute</operation>
         <script/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-10-25 22:11:11</sys_created_on>
-        <sys_id>3468662f1bdf3410a76c0dc0604bcb7c</sys_id>
+        <sys_created_on>2021-10-26 04:57:49</sys_created_on>
+        <sys_id>b565c0371bd37410a76c0dc0604bcbe4</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_vmw_ws1uem_ws1_action_os_mapping.*</sys_name>
+        <sys_name>WS1UEMURL</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name>sys_security_acl_3468662f1bdf3410a76c0dc0604bcb7c</sys_update_name>
+        <sys_update_name>sys_security_acl_b565c0371bd37410a76c0dc0604bcbe4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-25 22:11:11</sys_updated_on>
-        <type display_value="record">record</type>
+        <sys_updated_on>2021-10-26 04:57:49</sys_updated_on>
+        <type display_value="client_callable_script_include">client_callable_script_include</type>
     </sys_security_acl>
 </record_update>

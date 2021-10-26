@@ -27,5 +27,4 @@ If you find yourself unable to import your repository due to the presence of fil
    * ServiceNow IntegrationHub Action Step - JSON Parser
    * System Import Sets
    * Incident
-   * ServiceNow IntegrationHub Starter Pack Installer
    * Configuration Management (CMDB)
