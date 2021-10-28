@@ -9,19 +9,19 @@ Fix Script to be run as part of post-installation,
 to update the contents of table "WS1 Action OS Mapping".
 **/
 
-new WS1FixScript().new_install();]]></script>
+new WS1SetActionDefaults().new_install();]]></script>
         <sys_class_name>sys_script_fix</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-17 20:06:54</sys_created_on>
         <sys_id>0faf56171b663450a76c0dc0604bcb98</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>New Installation update</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_fix_0faf56171b663450a76c0dc0604bcb98</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-27 17:32:21</sys_updated_on>
+        <sys_updated_on>2021-10-28 00:32:36</sys_updated_on>
         <unloadable>false</unloadable>
     </sys_script_fix>
 </record_update>
