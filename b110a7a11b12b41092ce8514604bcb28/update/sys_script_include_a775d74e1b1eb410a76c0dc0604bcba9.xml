@@ -113,6 +113,8 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         var os_version;
         var device_id;
         var os_json;
+		var config;
+		var field_pos;
         var fields;
         var mapTable;
         var min_os;
@@ -122,7 +124,7 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         var key;
         var actionValue;
         var TABLE_NAME = "x_vmw_ws1uem_ws1_action_os_mapping";
-		var ACTIONS_FIELD = "x_vmw_ws1uem_ws1action";
+		var ACTIONS_FIELD = "WS1UEMActionsList";
         var action_visibility_conditions;
         var INCIDENT_TABLE_NAME = "incident";
         var DEVICE_TABLE_NAME = "cmdb_ci";
@@ -149,12 +151,12 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 
             action_visibility_conditions = {};
 
-			fields = new GlideRecordSecure("sys_choice");
-			fields.addQuery("element", ACTIONS_FIELD);
-            fields.query();
-            while(fields.next())
-            {              
-				action_visibility_conditions[fields.value.toString()] = false;
+			config = new GlideRecordSecure("x_vmw_ws1uem_ws1uemappconfig");
+			config.addQuery("name", ACTIONS_FIELD);
+            config.query();
+            if (config.next())
+            {
+				action_visibility_conditions = JSON.parse(config.value);
             }
 			
 			if ((Object.keys(action_visibility_conditions).length) === 0) {
@@ -209,9 +211,7 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         mapTable.addQuery("os_action", os_name);
         mapTable.orderByDesc("precedent");
         mapTable.query();
-
-        gs.info("Querying WS1 actions for OS " + os_name + " : " + os_version + " - UEM : " + uem_version);
-
+		
         try {
             while(mapTable.next()) {
                 /**
@@ -241,7 +241,7 @@ WS1GetActionFromOS.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 
             return JSON.stringify(action_visibility_conditions);
     } catch (err) {
-        return "Error: " + err + " when querying WS! actions for OS " + os_name + "";
+        return "Error: " + err + " when querying WS! actions for OS " + os_name + ":" + os_version + " - UEM: " + uem_version;
     }
 } ,
 _privateFunction: function() { // this function is not client callable
@@ -251,13 +251,13 @@ _privateFunction: function() { // this function is not client callable
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:34:18</sys_created_on>
         <sys_id>a775d74e1b1eb410a76c0dc0604bcba9</sys_id>
-        <sys_mod_count>59</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name>WS1GetActionFromOS</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_a775d74e1b1eb410a76c0dc0604bcba9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-27 23:37:00</sys_updated_on>
+        <sys_updated_on>2021-10-29 18:13:19</sys_updated_on>
     </sys_script_include>
 </record_update>
