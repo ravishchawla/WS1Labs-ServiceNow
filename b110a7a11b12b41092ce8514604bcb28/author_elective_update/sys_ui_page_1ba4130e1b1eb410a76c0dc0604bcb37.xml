@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[onLoad();
+
+/**
+WS1UEM Actions renders the Guided Setup fields for the user.
+**/
+function onLoad() {
+
+	var action_item_map = {
+		"devicelogs" : "input_ws1_requestlogs",
+		"enterprisewipe" : "input_ws1_enterprisewipe",
+		"devicewipe" : "input_ws1_devicewipe",
+		"syncdevice" : "input_ws1_syncdevice",
+		"assist" : "input_ws1_remoteassist",
+		"message" : "input_ws1_message",
+		"softreset" : "input_ws1_softreset",
+		"changepasscode" : "input_ws1_changepasscode",
+		"lock" : "input_ws1_lock"
+	};
+
+	$("div_ws1_WS1UEMSelectStandardActions").style.display = "none";
+	$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "none";
+
+	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
+	action_query.addParam('sysparm_name', 'get_value');
+	action_query.getXML(function parse_response(response) {
+
+		$("div_ws1_WS1UEMSelectStandardActions").style.display = "";
+		$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "";
+
+		var actions = response.responseXML.documentElement.getAttribute('answer');
+		var actions_json = JSON.parse(actions);
+
+		for (var i = 0; i < actions_json.length; i++) {
+			var action_item = JSON.parse(actions_json[i]);
+
+			if (action_item.value in action_item_map) {
+				var item_element = action_item_map[action_item.value];
+
+				if (action_item.inactive === '1') {
+					$(item_element).checked = false;
+				} else {
+					$(item_element).checked = true;
+				}
+			}
+		}
+	});
+}
+
+// update the state of a checkbox for WS1 UEM Actions as part of guided setup
+function updateValue(cb, actionType) {
+	
+	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
+	action_query.addParam('sysparm_name', 'set_value');
+	action_query.addParam('sysparm_actiontype', actionType);
+	action_query.addParam('sysparm_new_value', !cb.checked);
+	
+	action_query.getXML(function parse_response(response) {
+
+		var actions = response.responseXML.documentElement.getAttribute('answer');
+		if (actions == true) {
+			return;
+		} else{
+			jslog('Unable to update state of choice field WS1GetUemAction value ' + actionType);
+		}
+	});
+}]]></client_script>
+        <description>Configure the actions available in the guided setup  &#13;
+</description>
+        <direct>false</direct>
+        <endpoint>x_vmw_ws1uem_WS1UEMActions.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <g:ui_form>
+
+	<style>
+		.content-wrapper {
+			display: flex;
+		}
+
+		.actions-group {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.actions-table {
+			margin: 5px 20px;
+		}
+
+		.actions-table tr {
+			border-bottom: 1px solid lightgrey;
+		}
+
+		.actions-table tr:last-child {
+			border-bottom: none;
+		}
+
+		.actions-title {
+			font-size: medium;
+		}
+
+		.table-heading {
+			font-size: medium;
+		}
+
+		.cell {
+			padding: 5px;
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		.right-border {
+			border-right: 1px solid lightgrey;
+		}
+	</style>
+
+	<div class="content-wrapper">
+
+		<div id="div_ws1_WS1UEMSelectStandardActions" class="actions-group right-border" style="padding-right: 15px">
+			<div class="actions-title">
+				<g:form_label>
+					<strong>${gs.getMessage('WS1UEMSelectStandardActions')}</strong>
+				</g:form_label>
+			</div>
+
+			<table class="actions-table">
+				<tr>
+					<td class="table-heading cell">
+						<strong>${gs.getMessage('WS1UEMActionTitle')}</strong>
+					</td>
+					<td class="table-heading cell centered">
+						<strong>${gs.getMessage('WS1UEMEnabled')}</strong>
+					</td>
+				</tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMChangePasscode')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_changepasscode"
+							id="input_ws1_changepasscode"
+							onclick="updateValue(this, 'changepasscode')"
+							style="margin: 0"/>
+						<label for="input_ws1_changepasscode" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMLockDevice')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_lock"
+							id="input_ws1_lock"
+							onclick="updateValue(this, 'lock')"
+							style="margin: 0"/>
+						<label for="input_ws1_lock" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMRemoteAssist')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_remoteassist"
+							id="input_ws1_remoteassist"
+							onclick="updateValue(this, 'assist')"
+							style="margin: 0"/>
+						<label for="input_ws1_remoteassist" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMRequestLogs')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_requestlogs"
+							id="input_ws1_requestlogs"
+							onclick="updateValue(this, 'devicelogs')"
+							style="margin: 0"/>
+						<label for="input_ws1_requestlogs" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMSendMessage')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_message"
+							id="input_ws1_message"
+							onclick="updateValue(this, 'message')"
+							style="margin: 0"/>
+						<label for="input_ws1_message" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMSoftReset')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_softreset"
+							id="input_ws1_softreset"
+							onclick="updateValue(this, 'softreset')"
+							style="margin: 0"/>
+						<label for="input_ws1_softreset" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMSyncDevice')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_syncdevice"
+							id="input_ws1_syncdevice"
+							onclick="updateValue(this, 'syncdevice')"
+							style="margin: 0"/>
+						<label for="input_ws1_syncdevice" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+			</table>
+		</div>
+
+
+		<div id="div_ws1_WS1UEMSelectAdvancedActions" class="actions-group" style="padding-left: 15px;">
+			<div class="actions-title">
+				<g:form_label>
+					<strong>${gs.getMessage('WS1UEMSelectAdvancedActions')}</strong>
+				</g:form_label>
+			</div>
+
+			<table class="actions-table">
+				<tr>
+					<td class="table-heading cell">
+						<strong>${gs.getMessage('WS1UEMActionTitle')}</strong>
+					</td>
+					<td class="table-heading cell centered">
+						<strong>${gs.getMessage('WS1UEMEnabled')}</strong>
+					</td>
+				</tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMDeviceWipe')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_devicewipe"
+							id="input_ws1_devicewipe"
+							onclick="updateValue(this, 'devicewipe')"
+							style="margin: 0"/>
+						<label for="input_ws1_devicewipe" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+
+				<tr><td class="cell">
+					${gs.getMessage('WS1UEMEnterpriseWipe')}
+					</td><td class="cell centered">
+					<span class="input-group-checkbox">
+						<input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_enterprisewipe"
+							id="input_ws1_enterprisewipe"
+							onclick="updateValue(this, 'enterprisewipe')"
+							style="margin: 0"/>
+						<label for="input_ws1_enterprisewipe" class="checkbox-label"></label>
+					</span>
+				</td></tr>
+			</table>
+		</div>
+
+	</div>
+
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>WS1UEMActions</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 16:30:38</sys_created_on>
+        <sys_id>1ba4130e1b1eb410a76c0dc0604bcb37</sys_id>
+        <sys_mod_count>133</sys_mod_count>
+        <sys_name>WS1UEMActions</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-13 20:34:10</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[onLoad();
+
+/**
+WS1UEM Actions renders the Guided Setup fields for the user.
+**/
+function onLoad() {
+
+	var action_item_map = {
+		"devicelogs" : "input_ws1_requestlogs",
+		"enterprisewipe" : "input_ws1_enterprisewipe",
+		"devicewipe" : "input_ws1_devicewipe",
+		"syncdevice" : "input_ws1_syncdevice",
+		"assist" : "input_ws1_remoteassist",
+		"message" : "input_ws1_message",
+		"softreset" : "input_ws1_softreset",
+		"changepasscode" : "input_ws1_changepasscode",
+		"lock" : "input_ws1_lock"
+	};
+
+	$("div_ws1_WS1UEMSelectStandardActions").style.display = "none";
+	$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "none";
+
+	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
+	action_query.addParam('sysparm_name', 'get_value');
+	action_query.getXML(function parse_response(response) {
+
+		$("div_ws1_WS1UEMSelectStandardActions").style.display = "";
+		$("div_ws1_WS1UEMSelectAdvancedActions").style.display = "";
+
+		var actions = response.responseXML.documentElement.getAttribute('answer');
+		var actions_json = JSON.parse(actions);
+
+		for (var i = 0; i &lt; actions_json.length; i++) {
+			var action_item = JSON.parse(actions_json[i]);
+
+			if (action_item.value in action_item_map) {
+				var item_element = action_item_map[action_item.value];
+
+				if (action_item.inactive === '1') {
+					$(item_element).checked = false;
+				} else {
+					$(item_element).checked = true;
+				}
+			}
+		}
+	});
+}
+
+// update the state of a checkbox for WS1 UEM Actions as part of guided setup
+function updateValue(cb, actionType) {
+	
+	var action_query = new GlideAjax('x_vmw_ws1uem.WS1GGetUemAction');
+	action_query.addParam('sysparm_name', 'set_value');
+	action_query.addParam('sysparm_actiontype', actionType);
+	action_query.addParam('sysparm_new_value', !cb.checked);
+	
+	action_query.getXML(function parse_response(response) {
+
+		var actions = response.responseXML.documentElement.getAttribute('answer');
+		if (actions == true) {
+			return;
+		} else{
+			jslog('Unable to update state of choice field WS1GetUemAction value ' + actionType);
+		}
+	});
+}]]&gt;&lt;/client_script&gt;&lt;description&gt;Configure the actions available in the guided setup  &amp;#13;
+&lt;/description&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_vmw_ws1uem_WS1UEMActions.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;g:ui_form&gt;
+
+	&lt;style&gt;
+		.content-wrapper {
+			display: flex;
+		}
+
+		.actions-group {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.actions-table {
+			margin: 5px 20px;
+		}
+
+		.actions-table tr {
+			border-bottom: 1px solid lightgrey;
+		}
+
+		.actions-table tr:last-child {
+			border-bottom: none;
+		}
+
+		.actions-title {
+			font-size: medium;
+		}
+
+		.table-heading {
+			font-size: medium;
+		}
+
+		.cell {
+			padding: 5px;
+		}
+
+		.centered {
+			text-align: center;
+		}
+
+		.right-border {
+			border-right: 1px solid lightgrey;
+		}
+	&lt;/style&gt;
+
+	&lt;div class="content-wrapper"&gt;
+
+		&lt;div id="div_ws1_WS1UEMSelectStandardActions" class="actions-group right-border" style="padding-right: 15px"&gt;
+			&lt;div class="actions-title"&gt;
+				&lt;g:form_label&gt;
+					&lt;strong&gt;${gs.getMessage('WS1UEMSelectStandardActions')}&lt;/strong&gt;
+				&lt;/g:form_label&gt;
+			&lt;/div&gt;
+
+			&lt;table class="actions-table"&gt;
+				&lt;tr&gt;
+					&lt;td class="table-heading cell"&gt;
+						&lt;strong&gt;${gs.getMessage('WS1UEMActionTitle')}&lt;/strong&gt;
+					&lt;/td&gt;
+					&lt;td class="table-heading cell centered"&gt;
+						&lt;strong&gt;${gs.getMessage('WS1UEMEnabled')}&lt;/strong&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMChangePasscode')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_changepasscode"
+							id="input_ws1_changepasscode"
+							onclick="updateValue(this, 'changepasscode')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_changepasscode" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMLockDevice')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_lock"
+							id="input_ws1_lock"
+							onclick="updateValue(this, 'lock')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_lock" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMRemoteAssist')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_remoteassist"
+							id="input_ws1_remoteassist"
+							onclick="updateValue(this, 'assist')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_remoteassist" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMRequestLogs')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_requestlogs"
+							id="input_ws1_requestlogs"
+							onclick="updateValue(this, 'devicelogs')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_requestlogs" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMSendMessage')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_message"
+							id="input_ws1_message"
+							onclick="updateValue(this, 'message')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_message" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMSoftReset')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_softreset"
+							id="input_ws1_softreset"
+							onclick="updateValue(this, 'softreset')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_softreset" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMSyncDevice')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_syncdevice"
+							id="input_ws1_syncdevice"
+							onclick="updateValue(this, 'syncdevice')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_syncdevice" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+
+
+		&lt;div id="div_ws1_WS1UEMSelectAdvancedActions" class="actions-group" style="padding-left: 15px;"&gt;
+			&lt;div class="actions-title"&gt;
+				&lt;g:form_label&gt;
+					&lt;strong&gt;${gs.getMessage('WS1UEMSelectAdvancedActions')}&lt;/strong&gt;
+				&lt;/g:form_label&gt;
+			&lt;/div&gt;
+
+			&lt;table class="actions-table"&gt;
+				&lt;tr&gt;
+					&lt;td class="table-heading cell"&gt;
+						&lt;strong&gt;${gs.getMessage('WS1UEMActionTitle')}&lt;/strong&gt;
+					&lt;/td&gt;
+					&lt;td class="table-heading cell centered"&gt;
+						&lt;strong&gt;${gs.getMessage('WS1UEMEnabled')}&lt;/strong&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMDeviceWipe')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_devicewipe"
+							id="input_ws1_devicewipe"
+							onclick="updateValue(this, 'devicewipe')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_devicewipe" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+
+				&lt;tr&gt;&lt;td class="cell"&gt;
+					${gs.getMessage('WS1UEMEnterpriseWipe')}
+					&lt;/td&gt;&lt;td class="cell centered"&gt;
+					&lt;span class="input-group-checkbox"&gt;
+						&lt;input
+							type="checkbox"
+							class="checkbox"
+							name="input_ws1_enterprisewipe"
+							id="input_ws1_enterprisewipe"
+							onclick="updateValue(this, 'enterprisewipe')"
+							style="margin: 0"/&gt;
+						&lt;label for="input_ws1_enterprisewipe" class="checkbox-label"&gt;&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/td&gt;&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+
+	&lt;/g:ui_form&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;WS1UEMActions&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-01 16:30:38&lt;/sys_created_on&gt;&lt;sys_id&gt;1ba4130e1b1eb410a76c0dc0604bcb37&lt;/sys_id&gt;&lt;sys_mod_count&gt;133&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1UEMActions&lt;/sys_name&gt;&lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-13 20:34:10&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>436559454</payload_hash>
+        <record_name>WS1UEMActions</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-13 20:34:10</sys_created_on>
+        <sys_id>1a4f90371b8bf010a76c0dc0604bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c7b5cc9010000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-13 20:34:10</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>de4f9037818bf010513f06bc44e67b27</update_guid>
+        <update_guid_history>de4f9037818bf010513f06bc44e67b27:436559454,e93f98b32d8bf010e841562ac7456928:-1112816963,2435b2bacb8b70102361860e06b096e1:436559454,3615b2ba058b7010b9a5df119d0dde85:-2093889708,0066f7f8fa83f49051f81b4b979f0c5f:436559454,2246f7f8fd83f490b66571e50e07d069:-78353378,4b4b1efff4b634901d7ea7d6748cb08f:812697706,d1fe81a3b77e7c5051f28a68b307b5e5:-8811924,67a245eba23e7c501ddb10341313e034:-692155359,154281eb0a3e7c504442f4dc6c398893:-1267280635,c2e94d5796f27c500d051cb33fd1390c:-1666604246,50b9c59785f27c50bcf69c46d368cb79:830464933,03490d574ff27c50ef0f96f493a9969d:-1271499832,f9f7c5574ef27c502b90d1dcafb47070:1125155561,04a64d1791f27c50b22cfcfedf50a678:-260307040,073309933cf27c5097fb64dec6bc01b1:789109248,94663d436f3e3c5031200bb23b4a59da:1125155561,4f353183163e3c503acebbd220d4da8c:1868877467,17c43583b23e3c5046165086af2f1f99:624470565,d373b9438b3e3c50e1ccbd7457925d72:838302758,dc71b503743e3c50d9873498ecac967a:1868877467,0e11b1cfe4fa3c50ccbb4bdcc2ae9384:1025529305,56e0f98ff6fa3c50abb398c3db96783d:149541435,77ae21cfdefa3c50c5e0e7a581cc20cc:1649409246,161e2d4f81fa3c50f699546f4c718ea6:234898213,4644f04fab7a3c507a420027609a6661:46698037,6604f80f7d7a3c501474cb62a5e4364e:271000534,3d03b4cb307a3c50121defed0022d818:1642661328,c360344b767a3c500f270def846803c8:-947531856,6f9f208b477a3c500c54a72bb68d3a42:182191372,b07f644bd97a3c50743e431b4d729779:-1104441061,5bcda44b277a3c50803d3d46933549f0:182191372,5e9d244b057a3c5014a0923de76ab1a9:-134907653,ae3c988f673a3c500ef6dfc640417e2f:182191372,a3f8984fd43a3c507a89a8d660c10c0a:-1132819493,d8089c0f7a3a3c50d0f3d9862a21ece3:826672660,79c79c0f993a3c508a519cebc63de8dd:1781421739,1387188b393a3c50a2a13c74b5165454:-266618617,8bb6140f903a3c50632b302a5f87ceea:517327395,eb551c8b7d3a3c500bdac9c6cc1d01c7:-1204572189,071554cb003a3c50b31fb9598331976c:-731895620,dab21b3653b63c50d71e59725ac72951:721015937,4bc157f2e9b63c5002633d8f953e3f7f:-1031410565,6c009bb279b63c50245660fb2a56c480:-2036677517,da7f0bb24fb63c5095fd0d37242fdefb:-1971307161,562f83b299b63c50a8763d334d50e5d7:-1031410565,292e0372d6b63c5004bcd50aa15927d8:721015937,f82b87fe5e763c5072174c1efaa9fb73:-2087138047,9d841cfa59fef8507e06a506f70fb628:721015937,4c74d03e7cfef850fcafe2ae06d5028e:-86920026,ff43caea82baf85060342b43ec0c7644:1088892518,4242ceaabdbaf850f737aaa51634f441:-1628139254,d29146aacdbaf8502ca87779e9b29ff9:1959825042,6660c66a9abaf850628058f69ae5c113:-672165399,4eaff92aefbaf850353a307d769ff2a6:-2121957638,583ffde698baf850743bcc47bf5e5790:-407183430,cbadf9e611baf850f9c96450d4cd778f:1200741660,6c8fa2e90df67850bc57a9173bbf57bd:-480677154,656f6ea91ef678508e222d986a3ee647:-1967973948,ba5feea94ef67850c0f54faa1ca21d75:-1145970338,8b3f6ea96cf67850595f6adce474b1cc:1619540062,501feaa9bff67850419bac97692b38b9:-1284662774,1cde6aa9e3f67850a76ee0d5931cf5da:1440793672,21be62a9f1f67850ac16184ea3c42be8:-908384395,740e2e696df6785000afb82f5ca2b9df:562202280,7bdd2a69d3f678508120097065d265ee:2082130524,53bde669a6f678501a25d7221e3033c6:-1862186672,207d2a69f0f678503b7685e21332e119:1831163552,631d66699cf678504058603de5eb70bc:38201827,2a0d226908f67850a6842a4a2fdd29eb:-653024057,0c9cae291af678500edb68f3920239b4:1812303740,da4c2a2958f67850be30638fdc41946a:-1861575794,5eeb6a2933f67850da39978a4aa44871:38201827,65bb622954f678509a950737d3eb78b1:623737331,d75aaae5ccf6785019d9b498a73015bb:-372543989,27392ea550f67850718a74f26de14742:-1180651864,57f8a6a5a2f67850a01133e6b961a30c:-740355165,d6776e65fef67850f71123bb9bf3bc93:350744801,5a072e251cf678502e060fb2c146a75e:-590150081,b344eee11ef67850b77eb09c2f29604f:1933054549,d521ae61aaf678501fc696648adf238a:966473572,dcf0ea218cf67850f1e5dba24b0dd850:254735684,335e52ed40b67850b04975858ba81c97:-1391016534,3cdbdead4db678501382a3a25e42c898:-640096552,aa67122db2b67850d20b7000c3ee8247:1141879113,a007dae954b67850bdc140e86e65561b:-1411600214,9bb69ae946b6785016bed612bdf53c8d:956189497,bb9696a9e7b67850f73b02c500dd3f98:1950451201,a924d2a9a7b67850fcc67506eb92edc9:943310730,6e0207c9be7638506e9d89bbc507183f:-1239537422,9d10c749bd7638506fb82e59b71d4769:379187168,bcff7e49b376385051e392a38aa65f48:-1136322456,1cdf3e4958763850fc0b51702eb490bc:1952653206,362efe09b1763850fe893286a46cef16:-1529432916,d9ab3e455e7638500cd058a112748658:481555813,856bb6c58576385085eeeacaab5f615c:-408529419,4126b60524763850a5ebb1801eead5ce:241138784,51543ac173763850cf8e0d8ebfcd36ce:557769525,7024b6c142763850b7f86f1848e42dc3:1118159324,c9a92e0d75f2385096354f796c00700e:1744886910,2b33ae8529f2385057e3b7e0eaf0ede6:2083925081,28716ec111f23850bd856b627d49678e:-169757858,b73126458cf23850196bc95e259efe4f:705791034,d006d28db0b238502ef8998e71331256:-92308886,79b5168dd4b2385061bbbbc468f5198b:1309782846,34f49e4de1b238501cacd3972668d3ba:-1883419486,f6545e4df8b23850ab941245d38bda71:-352211920,3c83924d79b23850ee76a4a8b68970e9:-1485258709,ccc21e0d84b2385082e322b8b5706564:-1360574962,2c921e0d14b23850bf1559315560cc24:91226667,d5b1520da3b23850810d4b2353a61b6a:1240416502,a9a05e8925b238509d0236bd43615faa:-1575858607,ab9f02c9ebb238507deb076d36554ee4:696498928,ab3f4e8912b238503178de1d64d97595:-1172288149,526e428981b238505bee6ca4c7e63eef:1060112710,da54350dea723850bbeb9fe02f6b05cf:15429240,968375c95c72385021c91646918eacd3:-121742132,24327d898272385056175858f4bfc0fe:2065013493,5541f5896d72385035070682eff69161:1782897656,a7ee6d09e47238503e3395fd61270875:-1216573212,41be6d09e47238508bee4f8c669ad871:1812115603,ec8ee1095872385083ec8a60229446df:2121441351,146ee109c87238509c3e8756faf9e3d9:-282025503,c82e690964723850ac64e90bfe250514:2121441351,75fd2909217238508db1ba6d56f7fcb9:1598841261,6f6de1090d723850725720230fcfe2c3:818736765,5a998f24fbf2f450b9dafa63885dc924:739180529,9d480724aef2f450e607e79981dbe1e6:-1332814263,36d9b296eae274504164e82a4fa40ca0:1465315582,2e0c7904db6e3c103ecc3832d22ba6ed:-1099347848,ca98b580f66e3c1029bc5be1b2078895:570940384,f2883d40b86e3c10d6d10c36aebceb88:1938969873,1c5680ded39eb410a004793e23580e3b:-1886519140,19c4db0e0d1eb4106a5dbaa4edf7d346:452963946</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-01 06:07:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>708bb0f953f84dd295df0ae6a58a2bc4</sys_id>
+        <sys_metadata>1ba4130e1b1eb410a76c0dc0604bcb37</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1UEMActions</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_1ba4130e1b1eb410a76c0dc0604bcb37">1a4f90371b8bf010a76c0dc0604bcb28</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-01 06:07:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

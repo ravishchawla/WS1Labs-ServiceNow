@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_vmw_ws1uem.WS1GGetUemAction</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>WS1GGetUemAction</name>
+        <script><![CDATA[/**
+Query and Update methods for obtaining 
+choice field values for a dropdown menu item.
+Called by guided setup to update the action items
+accessible by the app for different roles.
+**/
+
+var WS1GGetUemAction = Class.create();
+WS1GGetUemAction.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    get_value:function() {
+        var action_table;
+        var value = "";
+        var inactive = "";
+        var return_value = [];
+        var json_obj;
+        var answer;
+
+        action_table = new GlideRecord('sys_choice');
+
+        action_table.addQuery('element', 'x_vmw_ws1uem_ws1action');
+        action_table.query();
+
+        return_value = [];
+        while (action_table.next()) {
+            value = action_table.getValue("value");
+            inactive = action_table.getValue("inactive");
+
+            json_obj =  JSON.stringify({"value" : value, "inactive" : inactive});
+
+            return_value.push(json_obj);
+        }
+
+        answer = JSON.stringify(return_value);
+
+//        gs.info("WS1GetUemAction return value " + answer);
+
+        return answer;
+    } ,
+
+set_value:function() {
+    var newValue;
+    var action_table;
+    var actionType = this.getParameter("sysparm_actiontype");
+//    gs.info("WS1GetUemAction set action type " + actionType);
+
+    newValue = this.getParameter("sysparm_new_value");
+
+    action_table = new GlideRecordSecure("sys_choice");
+    action_table.addQuery("element", "x_vmw_ws1uem_ws1action");
+    action_table.addQuery("value", actionType);
+    action_table.query();
+
+    while (action_table.next()) {
+        action_table.inactive = newValue;
+        action_table.update();
+        return true;
+    }
+},
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-24 18:47:14</sys_created_on>
+        <sys_id>f46e8e651bb67850a76c0dc0604bcbdd</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>WS1GGetUemAction</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-24 03:31:05</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_vmw_ws1uem.WS1GGetUemAction&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;WS1GGetUemAction&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/**
+Query and Update methods for obtaining 
+choice field values for a dropdown menu item.
+Called by guided setup to update the action items
+accessible by the app for different roles.
+**/
+
+var WS1GGetUemAction = Class.create();
+WS1GGetUemAction.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    get_value:function() {
+        var action_table;
+        var value = "";
+        var inactive = "";
+        var return_value = [];
+        var json_obj;
+        var answer;
+
+        action_table = new GlideRecord('sys_choice');
+
+        action_table.addQuery('element', 'x_vmw_ws1uem_ws1action');
+        action_table.query();
+
+        return_value = [];
+        while (action_table.next()) {
+            value = action_table.getValue("value");
+            inactive = action_table.getValue("inactive");
+
+            json_obj =  JSON.stringify({"value" : value, "inactive" : inactive});
+
+            return_value.push(json_obj);
+        }
+
+        answer = JSON.stringify(return_value);
+
+//        gs.info("WS1GetUemAction return value " + answer);
+
+        return answer;
+    } ,
+
+set_value:function() {
+    var newValue;
+    var action_table;
+    var actionType = this.getParameter("sysparm_actiontype");
+//    gs.info("WS1GetUemAction set action type " + actionType);
+
+    newValue = this.getParameter("sysparm_new_value");
+
+    action_table = new GlideRecordSecure("sys_choice");
+    action_table.addQuery("element", "x_vmw_ws1uem_ws1action");
+    action_table.addQuery("value", actionType);
+    action_table.query();
+
+    while (action_table.next()) {
+        action_table.inactive = newValue;
+        action_table.update();
+        return true;
+    }
+},
+   _privateFunction: function() { // this function is not client callable     
+    }
+ });]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-09-24 18:47:14&lt;/sys_created_on&gt;&lt;sys_id&gt;f46e8e651bb67850a76c0dc0604bcbdd&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;WS1GGetUemAction&lt;/sys_name&gt;&lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-24 03:31:05&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1187151336</payload_hash>
+        <record_name>WS1GGetUemAction</record_name>
+        <reverted_from/>
+        <source>895112a21b93701092ce8514604bcb74</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-24 03:31:05</sys_created_on>
+        <sys_id>b29e11cf1b1bf010a76c0dc0604bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17cb05a13fa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-24 03:31:05</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>fa9e11cf3b1bf0101d0149f06df9c846</update_guid>
+        <update_guid_history>fa9e11cf3b1bf0101d0149f06df9c846:-1187151336,ff98e44b5097f0107fa780a9e0ad69e0:1666226520,3852acc30f97f0103db671ae1e996086:-1244859935,211b89b9ed0b7890cbdfaecd1268df65:-533081078,bbed01240383b490fece77b5efd2329e:-1328074267,6e1456bbe8b634900d5b8606b1ce3063:367896177,c3134aea7bbaf8507334669c05d976b5:1576354907,08c206eab7baf8506aeaf4aa53715dfd:1796692670,476102aa0ebaf850856ea15603a52db0:-727243429,511102aab7baf85014950d7f2240396e:1603027449,d04de66908f67850baceb6ef61d303b1:-589011701,adc86aa58bf6785043ff3b2088f4e689:1542135949,e96b9aad42b67850693328cdb0f624d1:290003963,0e3a5e6d74b67850f5c48e79a28b69e9:368854674,0169d66d33b678506204d7b4cd09ed72:531526640,89c8126d66b6785063f66e07ca49a428:12276581,90e7562d3cb678503c37bb61676f8a16:1404154115,e7b3d669bbb678509f634df9df0c98e8:-224218236,5e909ae5e3b678505aee2e000d9d61da:576924385</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-01 06:07:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>77c3ee38cf234544b86c2394882c28e1</sys_id>
+        <sys_metadata>f46e8e651bb67850a76c0dc0604bcbdd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS1GGetUemAction</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd</sys_update_name>
+        <sys_update_version display_value="sys_script_include_f46e8e651bb67850a76c0dc0604bcbdd">b29e11cf1b1bf010a76c0dc0604bcb47</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-01 06:07:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
