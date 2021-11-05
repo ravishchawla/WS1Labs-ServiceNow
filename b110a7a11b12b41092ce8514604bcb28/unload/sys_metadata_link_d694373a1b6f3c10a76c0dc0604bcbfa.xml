@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
     <sys_metadata_link action="INSERT_OR_UPDATE">
-        <directory>update</directory>
+        <directory>unload</directory>
         <documentkey>96e07ca61bcb3010a76c0dc0604bcb46</documentkey>
         <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="basic_auth_credentials">
     <basic_auth_credentials action="INSERT_OR_UPDATE">
@@ -14,7 +14,7 @@
         <mid_list/>
         <name>Workspace ONE UEM ITSM Basic Credentials</name>
         <order>100</order>
-        <password></password>
+        <password>password</password>
         <privacy_key/>
         <privacy_protocol/>
         <ssh_passphrase/>
@@ -25,28 +25,28 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>96e07ca61bcb3010a76c0dc0604bcb46</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-10 02:54:06</sys_updated_on>
+        <sys_updated_on>2021-10-21 04:13:07</sys_updated_on>
         <tag/>
         <type>basic_auth</type>
         <use_context>false</use_context>
-        <user_name></user_name>
+        <user_name>username</user_name>
     </basic_auth_credentials>
 </record_update>
 ]]></payload>
         <sys_class_name>sys_metadata_link</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-10-18 01:15:15</sys_created_on>
-        <sys_id>6af5c6c91b1fb410a76c0dc0604bcbfa</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2021-11-05 06:03:38</sys_created_on>
+        <sys_id>d694373a1b6f3c10a76c0dc0604bcbfa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Workspace ONE UEM ITSM Basic Credentials</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name>sys_metadata_link_6af5c6c91b1fb410a76c0dc0604bcbfa</sys_update_name>
+        <sys_update_name>sys_metadata_link_d694373a1b6f3c10a76c0dc0604bcbfa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-19 05:02:30</sys_updated_on>
+        <sys_updated_on>2021-11-05 06:09:34</sys_updated_on>
         <tablename>basic_auth_credentials</tablename>
     </sys_metadata_link>
 </record_update>

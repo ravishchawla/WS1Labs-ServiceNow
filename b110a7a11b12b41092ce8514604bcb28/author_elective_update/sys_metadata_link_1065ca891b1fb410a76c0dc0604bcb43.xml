@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="DELETE">
+        <directory>update</directory>
+        <documentkey>cf8830171bbab09092ce8514604bcbcc</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="http_connection">
+    <http_connection action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</app_scope>
+        <application display_value="ALL">35aa573fd7802200bdbaee5b5e610375</application>
+        <base_path>/api</base_path>
+        <capabilities/>
+        <connection_alias display_value="x_vmw_ws1uem.Workspace_ONE_UEM_ITSM_Connection">f5a9ab761bfa709092ce8514604bcbe7</connection_alias>
+        <connection_retries>0</connection_retries>
+        <connection_timeout>0</connection_timeout>
+        <connection_url></connection_url>
+        <credential display_value="Workspace ONE UEM ITSM OAuth Credentials">aa883cd31bbab09092ce8514604bcb7c</credential>
+        <extended_attributes/>
+        <host></host>
+        <mid_selection>auto_select</mid_selection>
+        <mid_server/>
+        <mutual_auth>false</mutual_auth>
+        <name>Workspace ONE UEM ITSM OAuth Credentials</name>
+        <order>100</order>
+        <port></port>
+        <protocol>https</protocol>
+        <protocol_profile/>
+        <sys_class_name>http_connection</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-29 22:51:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cf8830171bbab09092ce8514604bcbcc</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-11 21:47:09</sys_updated_on>
+        <url_builder>true</url_builder>
+        <use_mid>false</use_mid>
+    </http_connection>
+    <sys_variable_value action="delete_multiple" query="document_key=cf8830171bbab09092ce8514604bcbcc"/>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-18 01:12:38</sys_created_on>
+        <sys_id>1065ca891b1fb410a76c0dc0604bcb43</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Workspace ONE UEM ITSM OAuth Credentials</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_metadata_link_1065ca891b1fb410a76c0dc0604bcb43</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 21:10:13</sys_updated_on>
+        <tablename>http_connection</tablename>
+    </sys_metadata_link>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>e09a80efdb5ba810e03ad7c8f4961908</instance_id>
+        <instance_name>ven04515</instance_name>
+        <name>sys_metadata_link_1065ca891b1fb410a76c0dc0604bcb43</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_metadata_link"&gt;&lt;sys_metadata_link action="INSERT_OR_UPDATE"&gt;&lt;directory&gt;update&lt;/directory&gt;&lt;documentkey&gt;cf8830171bbab09092ce8514604bcbcc&lt;/documentkey&gt;&lt;payload&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="http_connection"&gt;
+    &lt;http_connection action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;app_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/app_scope&gt;
+        &lt;application display_value="ALL"&gt;35aa573fd7802200bdbaee5b5e610375&lt;/application&gt;
+        &lt;base_path&gt;/api&lt;/base_path&gt;
+        &lt;capabilities/&gt;
+        &lt;connection_alias display_value="x_vmw_ws1uem.Workspace_ONE_UEM_ITSM_Connection"&gt;f5a9ab761bfa709092ce8514604bcbe7&lt;/connection_alias&gt;
+        &lt;connection_retries&gt;0&lt;/connection_retries&gt;
+        &lt;connection_timeout&gt;0&lt;/connection_timeout&gt;
+        &lt;connection_url&gt;&lt;/connection_url&gt;
+        &lt;credential display_value="Workspace ONE UEM ITSM OAuth Credentials"&gt;aa883cd31bbab09092ce8514604bcb7c&lt;/credential&gt;
+        &lt;extended_attributes/&gt;
+        &lt;host&gt;&lt;/host&gt;
+        &lt;mid_selection&gt;auto_select&lt;/mid_selection&gt;
+        &lt;mid_server/&gt;
+        &lt;mutual_auth&gt;false&lt;/mutual_auth&gt;
+        &lt;name&gt;Workspace ONE UEM ITSM OAuth Credentials&lt;/name&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;port&gt;&lt;/port&gt;
+        &lt;protocol&gt;https&lt;/protocol&gt;
+        &lt;protocol_profile/&gt;
+        &lt;sys_class_name&gt;http_connection&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2021-09-29 22:51:53&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;cf8830171bbab09092ce8514604bcbcc&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2021-10-11 21:47:09&lt;/sys_updated_on&gt;
+        &lt;url_builder&gt;true&lt;/url_builder&gt;
+        &lt;use_mid&gt;false&lt;/use_mid&gt;
+    &lt;/http_connection&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=cf8830171bbab09092ce8514604bcbcc"/&gt;
+&lt;/record_update&gt;
+]]&gt;&lt;/payload&gt;&lt;sys_class_name&gt;sys_metadata_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-10-18 01:12:38&lt;/sys_created_on&gt;&lt;sys_id&gt;1065ca891b1fb410a76c0dc0604bcb43&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Workspace ONE UEM ITSM OAuth Credentials&lt;/sys_name&gt;&lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_metadata_link_1065ca891b1fb410a76c0dc0604bcb43&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-10-21 21:10:13&lt;/sys_updated_on&gt;&lt;tablename&gt;http_connection&lt;/tablename&gt;&lt;/sys_metadata_link&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1109944832</payload_hash>
+        <record_name>Workspace ONE UEM ITSM OAuth Credentials</record_name>
+        <reverted_from/>
+        <source>06eb89711b2af05092ce8514604bcb93</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 21:10:13</sys_created_on>
+        <sys_id>0444f55a1b9f7010a76c0dc0604bcb78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ca4b0aa280000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 21:10:13</sys_updated_on>
+        <type>Metadata Snapshot</type>
+        <update_guid>4c44f55a4f9f701056b962914d407877</update_guid>
+        <update_guid_history>4c44f55a4f9f701056b962914d407877:1109944832,0f13c4a1745ff410050684dd8292eb62:-712753205,dc65ca89ef1fb410270efc8827e5f543:-603207198</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-05 06:05:15</sys_created_on>
+        <sys_db_object display_value="" name="sys_metadata_link">sys_metadata_link</sys_db_object>
+        <sys_id>2b52ccec5b7649149a6977a446204b19</sys_id>
+        <sys_metadata>1065ca891b1fb410a76c0dc0604bcb43</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Workspace ONE UEM ITSM OAuth Credentials</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_metadata_link_1065ca891b1fb410a76c0dc0604bcb43</sys_update_name>
+        <sys_update_version display_value="sys_metadata_link_1065ca891b1fb410a76c0dc0604bcb43">0444f55a1b9f7010a76c0dc0604bcb78</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-05 06:05:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
