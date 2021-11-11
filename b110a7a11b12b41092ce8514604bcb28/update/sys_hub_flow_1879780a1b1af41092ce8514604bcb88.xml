@@ -6,7 +6,7 @@
         <annotation>Call the Lock or Wipe on a Mac device</annotation>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build>glide-quebec-12-09-2020__patch1-02-18-2021</compiler_build>
+        <compiler_build>glide-quebec-12-09-2020__patch8-09-02-2021_09-07-2021_2219.zip</compiler_build>
         <copied_from>085b703b07993c105740f96d7c1ed013</copied_from>
         <copied_from_name>WS1UEMMacLockWipe</copied_from_name>
         <description>Call the Lock or Wipe on a Mac device. </description>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1879780a1b1af41092ce8514604bcb88</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>WS1UEMMacLockWipe</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -37,7 +37,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_flow_1879780a1b1af41092ce8514604bcb88</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 02:46:19</sys_updated_on>
+        <sys_updated_on>2021-11-08 20:07:43</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=1879780a1b1af41092ce8514604bcb88"/>
@@ -711,7 +711,7 @@
         <action_type display_value="WS1UEMMacLockWipe">be5578821b1af41092ce8514604bcb12</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>be5578821b1af41092ce8514604bcb12</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMMacLockWipe">1879780a1b1af41092ce8514604bcb88</flow>
         <order>1</order>
@@ -720,10 +720,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:14:39</sys_created_on>
         <sys_id>8b0af04a1b1af41092ce8514604bcb6d</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 02:46:19</sys_updated_on>
+        <sys_updated_on>2021-11-10 00:43:07</sys_updated_on>
         <ui_id>5d5a1a06-39cf-4d1a-900d-ca90e905a729</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8b0af04a1b1af41092ce8514604bcb6d"/>
@@ -793,7 +793,7 @@
         <action_type display_value="WS1UEMMessageTranslator">7c46a7e51b12b41092ce8514604bcb07</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>7c46a7e51b12b41092ce8514604bcb07</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMMacLockWipe">1879780a1b1af41092ce8514604bcb88</flow>
         <order>4</order>
@@ -802,10 +802,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-12 00:01:57</sys_created_on>
         <sys_id>b1fb98651beab05092ce8514604bcb28</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 02:46:19</sys_updated_on>
+        <sys_updated_on>2021-11-10 00:43:07</sys_updated_on>
         <ui_id>38d87174-0022-48af-9ab8-2da3a30c1304</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b1fb98651beab05092ce8514604bcb28"/>
@@ -828,7 +828,7 @@
         <action_type display_value="WS1UEMMessageTranslator">7c46a7e51b12b41092ce8514604bcb07</action_type>
         <action_type_parent/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>7c46a7e51b12b41092ce8514604bcb07</compiled_snapshot>
         <display_text/>
         <flow display_value="WS1UEMMacLockWipe">1879780a1b1af41092ce8514604bcb88</flow>
         <order>3</order>
@@ -837,10 +837,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-12 00:01:57</sys_created_on>
         <sys_id>f5fb98651beab05092ce8514604bcb21</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 02:46:19</sys_updated_on>
+        <sys_updated_on>2021-11-10 00:43:07</sys_updated_on>
         <ui_id>ccdb3e49-da8c-40a2-ac8e-52573cce8e64</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=f5fb98651beab05092ce8514604bcb21"/>
@@ -1111,11 +1111,11 @@
         <sys_created_on>2021-10-10 04:05:41</sys_created_on>
         <sys_id>11406d2e1b4f3010a76c0dc0604bcb29</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1TenantCode</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_1879780a1b1af41092ce8514604bcb88_ws1tenantcode_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-10 04:05:41</sys_updated_on>
         <url/>
@@ -1134,11 +1134,11 @@
         <sys_created_on>2021-10-19 22:37:27</sys_created_on>
         <sys_id>9205736d1b1b381092ce8514604bcb8a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1TenantName</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_1879780a1b1af41092ce8514604bcb88_ws1tenantname_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-19 22:37:27</sys_updated_on>
         <url/>
@@ -1157,11 +1157,11 @@
         <sys_created_on>2021-09-01 05:12:01</sys_created_on>
         <sys_id>e479780a1b1af41092ce8514604bcb9a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Passcode</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_1879780a1b1af41092ce8514604bcb88_ws1passcode_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:12:01</sys_updated_on>
         <url/>
@@ -1180,11 +1180,11 @@
         <sys_created_on>2021-09-01 05:12:00</sys_created_on>
         <sys_id>ec79780a1b1af41092ce8514604bcb94</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Ws1Udid</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_1879780a1b1af41092ce8514604bcb88_ws1udid_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:12:00</sys_updated_on>
         <url/>
@@ -1203,11 +1203,11 @@
         <sys_created_on>2021-09-01 05:12:01</sys_created_on>
         <sys_id>ec79780a1b1af41092ce8514604bcb9f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Action</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_1879780a1b1af41092ce8514604bcb88_ws1action_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:12:01</sys_updated_on>
         <url/>
@@ -1227,11 +1227,11 @@
         <sys_created_on>2021-09-01 05:12:01</sys_created_on>
         <sys_id>6079780a1b1af41092ce8514604bcbb8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Error</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_1879780a1b1af41092ce8514604bcb88_ws1error_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:12:01</sys_updated_on>
         <url/>
@@ -1250,11 +1250,11 @@
         <sys_created_on>2021-09-01 05:12:01</sys_created_on>
         <sys_id>6879780a1b1af41092ce8514604bcbc9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1ErrorMessage</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_1879780a1b1af41092ce8514604bcb88_ws1errormessage_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:12:01</sys_updated_on>
         <url/>
@@ -1273,11 +1273,11 @@
         <sys_created_on>2021-09-01 05:12:01</sys_created_on>
         <sys_id>6c79780a1b1af41092ce8514604bcbc0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Response</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_1879780a1b1af41092ce8514604bcb88_ws1response_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:12:01</sys_updated_on>
         <url/>
@@ -1285,9 +1285,9 @@
     </sys_documentation>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=1879780a1b1af41092ce8514604bcb88^sys_idNOT IN639ab08a1b1af41092ce8514604bcb10"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@722c12</plan>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"639ab08a1b1af41092ce8514604bcb10","name":"plan"}}</plan>
         <plan_id display_value="WS1UEMMacLockWipe">1879780a1b1af41092ce8514604bcb88</plan_id>
-        <snapshot>ba9a308a1b1af41092ce8514604bcb9b</snapshot>
+        <snapshot>2f2b50e8973fb050450f3f5bf253af6b</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 05:17:08</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -2409,11 +2409,11 @@
         <sys_created_on>2021-09-01 05:17:05</sys_created_on>
         <sys_id>369a708a1b1af41092ce8514604bcb26</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Action</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ba9a308a1b1af41092ce8514604bcb9b_ws1action_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:17:05</sys_updated_on>
         <url/>
@@ -2432,11 +2432,11 @@
         <sys_created_on>2021-10-10 04:05:44</sys_created_on>
         <sys_id>4e40ad2e1b4f3010a76c0dc0604bcb49</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1TenantCode</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ba9a308a1b1af41092ce8514604bcb9b_ws1tenantcode_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-10 04:05:44</sys_updated_on>
         <url/>
@@ -2455,11 +2455,11 @@
         <sys_created_on>2021-10-19 22:37:37</sys_created_on>
         <sys_id>f015376d1b1b381092ce8514604bcb12</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1TenantName</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ba9a308a1b1af41092ce8514604bcb9b_ws1tenantname_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-19 22:37:37</sys_updated_on>
         <url/>
@@ -2478,11 +2478,11 @@
         <sys_created_on>2021-09-01 05:17:05</sys_created_on>
         <sys_id>fa9a708a1b1af41092ce8514604bcb05</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Ws1Udid</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ba9a308a1b1af41092ce8514604bcb9b_ws1udid_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:17:05</sys_updated_on>
         <url/>
@@ -2501,11 +2501,11 @@
         <sys_created_on>2021-09-01 05:17:05</sys_created_on>
         <sys_id>fa9a708a1b1af41092ce8514604bcb0f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Passcode</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ba9a308a1b1af41092ce8514604bcb9b_ws1passcode_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:17:05</sys_updated_on>
         <url/>
@@ -2525,11 +2525,11 @@
         <sys_created_on>2021-09-01 05:17:06</sys_created_on>
         <sys_id>4b9a708a1b1af41092ce8514604bcb55</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1ErrorMessage</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_ba9a308a1b1af41092ce8514604bcb9b_ws1errormessage_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:17:06</sys_updated_on>
         <url/>
@@ -2548,11 +2548,11 @@
         <sys_created_on>2021-09-01 05:17:06</sys_created_on>
         <sys_id>c79a708a1b1af41092ce8514604bcb37</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Error</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_ba9a308a1b1af41092ce8514604bcb9b_ws1error_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:17:06</sys_updated_on>
         <url/>
@@ -2571,11 +2571,11 @@
         <sys_created_on>2021-09-01 05:17:06</sys_created_on>
         <sys_id>c79a708a1b1af41092ce8514604bcb46</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>WS1Response</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_ba9a308a1b1af41092ce8514604bcb9b_ws1response_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-09-01 05:17:06</sys_updated_on>
         <url/>
