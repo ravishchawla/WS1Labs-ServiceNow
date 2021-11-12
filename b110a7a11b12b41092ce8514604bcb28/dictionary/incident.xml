@@ -4,15 +4,15 @@
         <element attributes="edge_encryption_enabled=true" label="WS1 Console" max_length="1024" name="x_vmw_ws1uem_workspace_one_uem_console" type="url"/>
         <element choice="1" label="Workspace ONE UEM Action" max_length="40" name="x_vmw_ws1uem_ws1action" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Change Passcode" value="changepasscode"/>
-                <element inactive_on_update="false" label="Device Wipe" value="devicewipe"/>
-                <element inactive_on_update="false" label="Enterprise Wipe" value="enterprisewipe"/>
-                <element inactive_on_update="false" label="Lock Device" value="lock"/>
-                <element inactive_on_update="false" label="Remote Assist" value="assist"/>
-                <element inactive_on_update="false" label="Request Logs" value="devicelogs"/>
-                <element inactive_on_update="false" label="Send Message" value="message"/>
-                <element inactive_on_update="false" label="Soft Reset" value="softreset"/>
-                <element inactive_on_update="false" label="Sync Device" value="syncdevice"/>
+                <element inactive_on_update="false" label="Change Passcode" sequence="0" value="changepasscode"/>
+                <element inactive_on_update="false" label="Device Wipe" sequence="1" value="devicewipe"/>
+                <element inactive_on_update="false" label="Enterprise Wipe" sequence="2" value="enterprisewipe"/>
+                <element inactive_on_update="false" label="Lock Device" sequence="3" value="lock"/>
+                <element inactive_on_update="false" label="Remote Assist" sequence="4" value="assist"/>
+                <element inactive_on_update="false" label="Request Logs" sequence="5" value="devicelogs"/>
+                <element inactive_on_update="false" label="Send Message" sequence="6" value="message"/>
+                <element inactive_on_update="false" label="Sync Device" sequence="7" value="syncdevice"/>
+                <element inactive_on_update="false" label="Soft Reset" sequence="8" value="softreset"/>
             </choice>
         </element>
         <element label="WS1 Actions Response" max_length="40" name="x_vmw_ws1uem_ws1_actions_response" type="string"/>
