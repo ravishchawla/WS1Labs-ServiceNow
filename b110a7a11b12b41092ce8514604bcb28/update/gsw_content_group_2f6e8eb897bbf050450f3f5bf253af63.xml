@@ -10,12 +10,12 @@
         <description><![CDATA[<p>Assign VMware Workspace ONE ITSM Connector roles to Groups and Users.</p>
 <p>The application has three roles that can be assigned;</p>
 <p><strong>WS1UEMStandard</strong></p>
-<p>This role contains all the basic actions that that an ITSM agent can perform on devices.</p>
+<p>This role contains all the basic actions that an ITSM agent can perform on devices.</p>
 <p><strong>WS1UEMAdvanced</strong></p>
-<p>This role contains all the actions included with the <strong>WS1UEMStandard</strong> role and include Device and Enterprise wipe actions. </p>
+<p>This role contains all the actions included with the <strong>WS1UEMStandard</strong> role along with Device and Enterprise wipe actions. </p>
 <p><strong>WS1UEMConsoleViewer</strong></p>
 <p>This role enables a button on the Incident form allowing the ITSM agent to open a Workspace ONE UEM Console window. This role is independent of the <strong>WS1UEMStandard </strong>and <strong>WS1UEMAdvanced </strong>roles.</p>
-<p> </p>]]></description>
+<p><br /></p>]]></description>
         <display_child_max_num/>
         <done_status_text/>
         <hide_getting_started>false</hide_getting_started>
@@ -36,14 +36,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-11 03:46:32</sys_created_on>
         <sys_id>2f6e8eb897bbf050450f3f5bf253af63</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Assign Roles</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>gsw_content_group_2f6e8eb897bbf050450f3f5bf253af63</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-11 03:55:19</sys_updated_on>
+        <sys_updated_on>2021-11-12 04:01:48</sys_updated_on>
         <title>Assign Roles</title>
         <weight>1</weight>
     </gsw_content_group>
