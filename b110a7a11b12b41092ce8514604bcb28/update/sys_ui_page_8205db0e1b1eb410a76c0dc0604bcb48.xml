@@ -480,7 +480,7 @@ if (runprocessingscript == "setoauthvalues") {
     var tokenurl = input_ws1_tokenurl;
 
     // get the hostname
-    http_table = new GlideRecord('http_connection');
+    http_table = new GlideRecordSecure('http_connection');
     http_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
     http_table.query();
     if (http_table.next()) {
@@ -488,7 +488,7 @@ if (runprocessingscript == "setoauthvalues") {
     }
 	
     // update the WS1 UEM tokenURL, clientID and Client secret if they have changed
-    var oauth_table = new GlideRecord('oauth_entity');
+    var oauth_table = new GlideRecordSecure('oauth_entity');
     oauth_table.addQuery('name', 'Workspace ONE UEM ITSM OAuth Provider');
     oauth_table.query();
     if (oauth_table.next()) {
@@ -524,7 +524,7 @@ if (runprocessingscript == "setbasicvalues") {
 
 
     // get the hostname
-    http_table = new GlideRecord('http_connection');
+    http_table = new GlideRecordSecure('http_connection');
     http_table.addQuery('name', "Workspace ONE UEM ITSM Basic Credentials");
     http_table.query();
     if (http_table.next()) {
@@ -532,7 +532,7 @@ if (runprocessingscript == "setbasicvalues") {
     }
 
     // update the WS1 UEM token url if needed
-	var action_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
+	var action_table = new GlideRecordSecure('x_vmw_ws1uem_ws1uemappconfig');
 	action_table.addQuery('name', "WS1UEMTenantCode");
     action_table.query();
     action_table.next();
@@ -542,7 +542,7 @@ if (runprocessingscript == "setbasicvalues") {
     }
 
     // update the WS1 UEM username and password if needed
-    var basic_table = new GlideRecord('basic_auth_credentials');
+    var basic_table = new GlideRecordSecure('basic_auth_credentials');
     basic_table.addQuery('name', 'Workspace ONE UEM ITSM Basic Credentials');
     basic_table.query();
     if (basic_table.next()) {
@@ -565,13 +565,13 @@ if (runprocessingscript == "setbasicvalues") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>225</sys_mod_count>
+        <sys_mod_count>230</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-05 05:39:51</sys_updated_on>
+        <sys_updated_on>2021-11-15 20:37:25</sys_updated_on>
     </sys_ui_page>
 </record_update>
