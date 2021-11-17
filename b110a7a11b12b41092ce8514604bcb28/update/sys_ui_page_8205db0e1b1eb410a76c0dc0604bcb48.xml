@@ -10,72 +10,58 @@ WS1 Console.
 onLoad();
 
 function onLoad() {
+	var oauth_result;
+	var basic_result;
+	var oauth_entity;
+	var basic_auth_credentials;
+	var tenant_info;
     var basicactive = false;
     var oauthactive = false;
 
 
-    var http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
-    http_table.query();
-    if (http_table.next()) {
-        var hostid = http_table.host;
-        oauthactive = http_table.active;
-        $("input_ws1_hostid").value = hostid;
-    } else {
-        // default the http connection as it doesn't exist
-        $("input_ws1_hostid").value = "";
-    }
+    var http_request = new GlideAjax('x_vmw_ws1uem.WS1GetAuthCredentials');
+    http_request.addParam('sysparm_name', 'get_credentials');
+    // http_request.addParam('sysparm_credential_name', "Workspace ONE UEM ITSM OAuth Credentials");
 
-    http_table = new GlideRecord('http_connection');
-    http_table.addQuery('name', "Workspace ONE UEM ITSM Basic Credentials");
-    http_table.query();
-    if (http_table.next()) {
-        hostid = http_table.host;
-        basicactive = http_table.active;
-        $("input_ws1_basic_hostid").value = hostid;
-    } else {
-        // default the http connection as it doesn't exist
-        $("input_ws1_basic_hostid").value = "";
-    }
-
-    // set the inputs based on auth type 
-    if (oauthactive == "true") {
-
-        //set the value in the fields to existing values
-        var oauth_table = new GlideRecord('oauth_entity');
-        oauth_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Provider");
-        oauth_table.query();
-        if (oauth_table.next()) {
-            var clientid = oauth_table.client_id;
-            //		don't retrieve the existing client secret but just set it to a temp value;
-            var clientsecret = "********************";
-            var tokenurl = oauth_table.token_url;
-
-            $("input_ws1_clientid").value = clientid;
-            $("input_ws1_clientsecret").value = clientsecret;
-            $("input_ws1_tokenurl").value = tokenurl;
-        }
-
-        $("div_ws1_oauth").hidden = false;
-        $("div_ws1_basic").hidden = true;
-        $("div_ws1_error").hidden = true;
+    http_request.getXML(function parse_response(response) {
+        var result = response.responseXML.documentElement.getAttribute("answer");
+        result = JSON.parse(result);
 		
-    } else if (basicactive == "true") {
+		oauth_result = result.oauth;
+		basic_result = result.basic;
+		oauth_entity = result.oauth_entity;
+		basic_auth_credentials = result.basic_auth_credentials;
+		tenant_info = result.tenant_code;
+		
+        $("input_ws1_hostid").value = oauth_result.hostid;
 
-        var basic_table = new GlideRecord('basic_auth_credentials');
-        basic_table.addQuery('name', "Workspace ONE UEM ITSM Basic Credentials");
-        basic_table.query();
-        if (basic_table.next()) {
-            $("input_ws1_username").value = basic_table.user_name;
-            $("input_ws1_clientpassword").value = "********************";
+        if (oauth_result.hostid != "") {
+            hostid = oauth_result.hostid;
+            oauthactive = (oauth_result.active === "true");
         }
+		
+		$("input_ws1_basic_hostid").value = basic_result.hostid;
+		
+		if (basic_result.hostid != "") {
+			hostid = basic_result.hostid;
+			basicactive = (basic_result.active === "true")
+		}
+		
+		if (oauthactive == true) {
+			//set the value in the fields to existing values
+			$("input_ws1_clientid").value = oauth_entity.clientid;
+			$("input_ws1_clientsecret").value = oauth_entity.clientsecret;
+			$("input_ws1_tokenurl").value = oauth_entity.tokenurl;
 
-        action_table = new GlideRecord('x_vmw_ws1uem_ws1uemappconfig');
-        action_table.addQuery('name', "WS1UEMTenantCode");
-        action_table.query();
-        if (action_table.next()) {
-            $("input_ws1_tenant_code").value = action_table.value;
-        }
+			$("div_ws1_oauth").hidden = false;
+			$("div_ws1_basic").hidden = true;
+			$("div_ws1_error").hidden = true;
+		
+    } else if (basicactive == true) {
+		$("input_ws1_username").value = basic_auth_credentials.user_name;
+		$("input_ws1_clientpassword").value = basic_auth_credentials.user_secret;
+
+        $("input_ws1_tenant_code").value = tenant_info.tenant_code;
 
         $("div_ws1_oauth").hidden = true;
         $("div_ws1_basic").hidden = false;
@@ -86,6 +72,9 @@ function onLoad() {
         $("div_ws1_oauth").hidden = true;
         $("div_ws1_basic").hidden = true;
     }
+    });
+
+    // set the inputs based on auth type 
 }
 
 // function to get the values from the existing oauth record
@@ -125,22 +114,14 @@ function saveValues() {
 
 // test the details are correct by getting the OAuth token
 function testoauth() {
-    var oauth_initiator_url = '';
-    var oauth_table = new GlideRecord('oauth_2_0_credentials');
-    oauth_table.addQuery('name', "Workspace ONE UEM ITSM OAuth Credentials");
-    oauth_table.query();
-    if (oauth_table.next()) {
-        var oauthProfileId = oauth_table.oauth_entity_profile;
-        var oauthRequestorSysId = oauth_table.sys_id;
-        var oauthRequestorContext = 'oauth_2_0_credentials';
+    var http_request = new GlideAjax('x_vmw_ws1uem.WS1GetAuthCredentials');
+	http_request.addParam('sysparm_name', 'get_credentials_2_0');
 
-        oauth_initiator_url = '/oauth_client_credentials_input.do' +
-            '?sysparm_oauth_requestor_context=' + oauthRequestorContext +
-            '&sysparm_oauth_requestor=' + oauthRequestorSysId +
-            '&sysparm_oauth_provider_profile=' + oauthProfileId;
-
-        window.open(oauth_initiator_url, '', 'height=200,width=800'); // pops up window
-    }
+    http_request.getXML(function parse_response(response) {
+        var result = response.responseXML.documentElement.getAttribute("answer");
+        result = JSON.parse(result);
+        window.open(result.oauth_initiator_url, '', 'height=200,width=800'); // pops up window
+    });
 }
 
 function testConnection() {
@@ -565,13 +546,13 @@ if (runprocessingscript == "setbasicvalues") {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:32:04</sys_created_on>
         <sys_id>8205db0e1b1eb410a76c0dc0604bcb48</sys_id>
-        <sys_mod_count>230</sys_mod_count>
+        <sys_mod_count>261</sys_mod_count>
         <sys_name>WS1UEMConfigureConnection</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_8205db0e1b1eb410a76c0dc0604bcb48</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-15 20:37:25</sys_updated_on>
+        <sys_updated_on>2021-11-17 19:15:50</sys_updated_on>
     </sys_ui_page>
 </record_update>
