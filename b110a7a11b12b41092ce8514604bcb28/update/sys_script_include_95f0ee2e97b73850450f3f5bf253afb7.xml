@@ -23,7 +23,6 @@
 	}
 
 	var response = {"hostid" : hostid.toString(), "active" : active.toString()};
-	gs.info("auth = " + auth_name + " hostid = " + hostid + " active = " + active);
 	return response;
 }
 
@@ -109,13 +108,13 @@ WS1GetAuthCredentials.prototype = Object.extendsObject(global.AbstractAjaxProces
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-16 17:04:10</sys_created_on>
         <sys_id>95f0ee2e97b73850450f3f5bf253afb7</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>WS1GetAuthCredentials</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_95f0ee2e97b73850450f3f5bf253afb7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-17 19:16:58</sys_updated_on>
+        <sys_updated_on>2021-11-18 06:59:08</sys_updated_on>
     </sys_script_include>
 </record_update>

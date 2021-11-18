@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_vmw_ws1uem_WS1UEMSupport.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false"
+	xmlns:j="jelly:core"
+	xmlns:g="glide"
+	xmlns:j2="null"
+	xmlns:g2="null">
+	<div class="container">
+		<h1>
+			<strong>${gs.getMessage('WS1UEMHelpyou')}</strong>
+		</h1>
+		<br/>
+		<div class="container">
+			<table class="table-sm table-responsive borderless">
+				<tr>
+					<td>
+						<h2>${gs.getMessage('WS1UEMContactus')}</h2>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>
+							<a rel="noopener noreferrer nofollow" href="${gs.getMessage('WS1UEMSupporturl')}" target="_blank">${gs.getMessage('WS1UEMSupporturl')}</a>
+						</h3>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</j:jelly>]]></html>
+        <name>WS1UEMSupport</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-18 04:48:55</sys_created_on>
+        <sys_id>da1026079773b850450f3f5bf253af6a</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>WS1UEMSupport</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_ui_page_da1026079773b850450f3f5bf253af6a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-18 05:06:43</sys_updated_on>
+    </sys_ui_page>
+</record_update>
