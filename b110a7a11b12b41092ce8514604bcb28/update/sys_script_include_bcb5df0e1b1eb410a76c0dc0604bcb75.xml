@@ -16,9 +16,9 @@ var WS1GetIncidentRecord = Class.create();
 WS1GetIncidentRecord.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     get_incident:function() {
         var test_value;
-        var gr_properties = new GlideRecordSecure("x_vmw_ws1uem_ws1_testing");
+        var gr_properties = new GlideRecordSecure("x_vmw_ws1uem_ws1uemappconfig");
 
-        gr_properties.addQuery("name", "test_incident_record");
+        gr_properties.addQuery("name", "WS1UEMTestIncidentRecord");
         gr_properties.query();
 
         test_value = "";
@@ -36,13 +36,13 @@ WS1GetIncidentRecord.prototype = Object.extendsObject(global.AbstractAjaxProcess
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:35:34</sys_created_on>
         <sys_id>bcb5df0e1b1eb410a76c0dc0604bcb75</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>WS1GetIncidentRecord</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_bcb5df0e1b1eb410a76c0dc0604bcb75</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-07 18:26:59</sys_updated_on>
+        <sys_updated_on>2021-11-18 18:03:07</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -21,7 +21,7 @@ WS1SetActionDefaults.prototype = Object.extendsObject(global.AbstractAjaxProcess
     var gr_mapping_table;
 
     var records = "";
-    var action_table = new GlideRecordsecure('x_vmw_ws1uem_ws1uemappconfig');
+    var action_table = new GlideRecordSecure('x_vmw_ws1uem_ws1uemappconfig');
     action_table.addQuery('name', "WS1UEMActionOSJSONData");
     action_table.query();
     if (action_table.next()) {
@@ -65,13 +65,13 @@ WS1SetActionDefaults.prototype = Object.extendsObject(global.AbstractAjaxProcess
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-17 20:06:35</sys_created_on>
         <sys_id>f58fd2171b663450a76c0dc0604bcbfe</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>WS1SetActionDefaults</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_f58fd2171b663450a76c0dc0604bcbfe</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-18 06:47:48</sys_updated_on>
+        <sys_updated_on>2021-11-19 18:12:42</sys_updated_on>
     </sys_script_include>
 </record_update>

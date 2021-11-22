@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from display_value="Record Update">0bdcfd051b26fc10a76c0dc0604bcbe3</copied_from>
+        <description>Update a record in 'x_vmw_ws1uem_ws1_testing' with the following values:
+Value = {{Step 2: Record Insert.Record}}
+Confirm the record was successfully updated
+
+Warning: Modifying an existing record may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</description>
+        <display_name>Record Update</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>8</order>
+        <snapshot/>
+        <step_config display_value="Record Update">17a72288df60220062fe6c7a4df26397</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>3e290ecd1b26fc10a76c0dc0604bcb8e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Record Update</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_atf_step_3e290ecd1b26fc10a76c0dc0604bcb8e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <table>x_vmw_ws1uem_ws1_testing</table>
+        <test display_value="WS1UEmTestPopup_assist">6a29cacd1b26fc10a76c0dc0604bcb95</test>
+        <timeout/>
+        <warning_message>Warning: Modifying an existing record may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</warning_message>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=3e290ecd1b26fc10a76c0dc0604bcb8e"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>36290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Enforce security">46dbcb535320220002c6435723dc3409</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>72290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>69f719f01b6abc10a76c0dc0604bcb32</value>
+        <variable display_value="Record">501c8f535320220002c6435723dc34da</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>ba290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>value={{step['22290ecd1b26fc10a76c0dc0604bcb50'].record_id}}^EQ</value>
+        <variable display_value="Field values">bc4c43935320220002c6435723dc34a2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>be290ecd1b26fc10a76c0dc0604bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>record_successfully_updated</value>
+        <variable display_value="Assert type">334b7bb7675003007ba405225685ef72</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>f6290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>x_vmw_ws1uem_ws1_testing</value>
+        <variable display_value="Table">53fb0f535320220002c6435723dc34ec</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=3e290ecd1b26fc10a76c0dc0604bcb8e"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>3e290ecd1b26fc10a76c0dc0604bcb8e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>be290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <table>var__m_atf_input_variable_17a72288df60220062fe6c7a4df26397</table>
+        <value>value={{step['22290ecd1b26fc10a76c0dc0604bcb50'].record_id}}^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>record_id</field>
+        <id>3e290ecd1b26fc10a76c0dc0604bcb8e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 19:22:44</sys_created_on>
+        <sys_id>4a721e451b66fc10a76c0dc0604bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 19:22:44</sys_updated_on>
+        <table>var__m_atf_input_variable_17a72288df60220062fe6c7a4df26397</table>
+        <value/>
+    </sys_element_mapping>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>7f877cdedb2674108aea21c40596195a</instance_id>
+        <instance_name>ven04953</instance_name>
+        <name>sys_atf_step_3e290ecd1b26fc10a76c0dc0604bcb8e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Record Update">0bdcfd051b26fc10a76c0dc0604bcbe3</copied_from>
+        <description>Update a record in 'x_vmw_ws1uem_ws1_testing' with the following values:
+Value = {{Step 2: Record Insert.Record}}
+Confirm the record was successfully updated
+
+Warning: Modifying an existing record may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</description>
+        <display_name>Record Update</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>8</order>
+        <snapshot/>
+        <step_config display_value="Record Update">17a72288df60220062fe6c7a4df26397</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>3e290ecd1b26fc10a76c0dc0604bcb8e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Record Update</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_atf_step_3e290ecd1b26fc10a76c0dc0604bcb8e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <table>x_vmw_ws1uem_ws1_testing</table>
+        <test display_value="WS1UEmTestPopup_assist">6a29cacd1b26fc10a76c0dc0604bcb95</test>
+        <timeout/>
+        <warning_message>Warning: Modifying an existing record may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</warning_message>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=3e290ecd1b26fc10a76c0dc0604bcb8e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>36290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Enforce security">46dbcb535320220002c6435723dc3409</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>72290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>69f719f01b6abc10a76c0dc0604bcb32</value>
+        <variable display_value="Record">501c8f535320220002c6435723dc34da</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>ba290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>value={{step['22290ecd1b26fc10a76c0dc0604bcb50'].record_id}}^EQ</value>
+        <variable display_value="Field values">bc4c43935320220002c6435723dc34a2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>be290ecd1b26fc10a76c0dc0604bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>record_successfully_updated</value>
+        <variable display_value="Assert type">334b7bb7675003007ba405225685ef72</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>3e290ecd1b26fc10a76c0dc0604bcb8e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>f6290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <value>x_vmw_ws1uem_ws1_testing</value>
+        <variable display_value="Table">53fb0f535320220002c6435723dc34ec</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3e290ecd1b26fc10a76c0dc0604bcb8e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>3e290ecd1b26fc10a76c0dc0604bcb8e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 18:42:06</sys_created_on>
+        <sys_id>be290ecd1b26fc10a76c0dc0604bcb90</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 18:42:06</sys_updated_on>
+        <table>var__m_atf_input_variable_17a72288df60220062fe6c7a4df26397</table>
+        <value>value={{step['22290ecd1b26fc10a76c0dc0604bcb50'].record_id}}^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_id</field>
+        <id>3e290ecd1b26fc10a76c0dc0604bcb8e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-10 19:22:44</sys_created_on>
+        <sys_id>4a721e451b66fc10a76c0dc0604bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-10 19:22:44</sys_updated_on>
+        <table>var__m_atf_input_variable_17a72288df60220062fe6c7a4df26397</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>]]></payload>
+        <payload_hash>179054093</payload_hash>
+        <record_name>Record Update</record_name>
+        <reverted_from/>
+        <source>20325200977f7050450f3f5bf253af9a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-08 20:07:02</sys_created_on>
+        <sys_id>f5625280977f7050450f3f5bf253af10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17d012946bf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-08 20:07:02</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>b5625280ba7f705016ce9dee704da610</update_guid>
+        <update_guid_history>b5625280ba7f705016ce9dee704da610:179054093</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-18 18:03:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>af5c07ee5b0d47cd9104057a7fd886e1</sys_id>
+        <sys_metadata>3e290ecd1b26fc10a76c0dc0604bcb8e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record Update</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_atf_step_3e290ecd1b26fc10a76c0dc0604bcb8e</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_3e290ecd1b26fc10a76c0dc0604bcb8e">f5625280977f7050450f3f5bf253af10</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-18 18:03:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

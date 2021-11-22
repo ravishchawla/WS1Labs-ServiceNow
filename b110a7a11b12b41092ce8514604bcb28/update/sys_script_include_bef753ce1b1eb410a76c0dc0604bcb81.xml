@@ -16,9 +16,9 @@ var WS1TestOSActionsJSON = Class.create();
 WS1TestOSActionsJSON.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
    get_test_json:function() {
         var test_value;
-        var gr_properties = new GlideRecordSecure("x_vmw_ws1uem_ws1_testing");
+        var gr_properties = new GlideRecordSecure("x_vmw_ws1uem_ws1uemappconfig");
 
-        gr_properties.addQuery("name", "test_uem_json");
+        gr_properties.addQuery("name", "WS1UEMTestActionsJSON");
         gr_properties.query();
 
         test_value = "";
@@ -35,13 +35,13 @@ WS1TestOSActionsJSON.prototype = Object.extendsObject(global.AbstractAjaxProcess
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:44:54</sys_created_on>
         <sys_id>bef753ce1b1eb410a76c0dc0604bcb81</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>WS1TestOSActionsJSON</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_script_include_bef753ce1b1eb410a76c0dc0604bcb81</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-07 18:42:59</sys_updated_on>
+        <sys_updated_on>2021-11-18 18:01:54</sys_updated_on>
     </sys_script_include>
 </record_update>
