@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2d8ee2c21b1f781092ce8514604bcbc3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>WS1UEMRunFlow</sys_name>
         <sys_overrides/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_2d8ee2c21b1f781092ce8514604bcbc3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-08 20:07:15</sys_updated_on>
+        <sys_updated_on>2021-11-23 22:26:11</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -95,10 +95,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-21 06:46:20</sys_created_on>
         <sys_id>a58ee2c21b1f781092ce8514604bcbc9</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 07:33:47</sys_updated_on>
+        <sys_updated_on>2021-11-23 22:26:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a58ee2c21b1f781092ce8514604bcbc9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -137,21 +137,28 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-21 06:46:20</sys_created_on>
         <sys_id>a98ee2c21b1f781092ce8514604bcbd8</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 07:33:47</sys_updated_on>
+        <sys_updated_on>2021-11-23 22:26:08</sys_updated_on>
         <value>(function execute(inputs, outputs) {
  
- 
+ 	var flow_timeout = 30000; // default timeout
+  	var config_table = new GlideRecordSecure("x_vmw_ws1uem_ws1uemappconfig");
+	config_table.addQuery('name', "WS1UEMFlowExecutionTime");
+	config_table.query();
+	if (config_table.next()) {
+		flow_timeout = config_table.value;
+	}
+
   	try {
 		var actioninputs = {};
 		actioninputs['ws1incidentnumber'] = inputs.incidentnumber; // String 
 
 		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
 		// sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inBackground().withInputs(inputs).run();
-				
+      
 		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-		var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(actioninputs).run();
+		var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(actioninputs).timeout(flow_timeout).run();
 		var actionoutputs = result.getOutputs();
 
 		outputs.ws1errorstate = false;	
@@ -586,11 +593,11 @@
         <sys_created_on>2021-10-21 07:01:08</sys_created_on>
         <sys_id>2ee17e461b1f781092ce8514604bcb85</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>ws1incidentnumber</sys_name>
+        <sys_name/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_2d8ee2c21b1f781092ce8514604bcbc3_ws1incidentnumber_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-21 07:01:08</sys_updated_on>
         <url/>
@@ -610,11 +617,11 @@
         <sys_created_on>2021-10-21 07:33:47</sys_created_on>
         <sys_id>6469b24e1b1f781092ce8514604bcb39</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>ws1errorstate</sys_name>
+        <sys_name/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_2d8ee2c21b1f781092ce8514604bcbc3_ws1errorstate_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-21 07:33:47</sys_updated_on>
         <url/>
@@ -624,17 +631,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="WS1UEMRunFlow">2d8ee2c21b1f781092ce8514604bcbc3</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"9eee2ac21b1f781092ce8514604bcb49","name":"plan"}}</plan>
-        <snapshot>5cbcbd261beff810a76c0dc0604bcb2f</snapshot>
+        <snapshot>e212400597c88d50450f3f5bf253af62</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-21 06:48:02</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9eee2ac21b1f781092ce8514604bcb49</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-04 02:41:17</sys_updated_on>
+        <sys_updated_on>2021-11-23 22:26:11</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -718,10 +725,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-21 06:48:01</sys_created_on>
         <sys_id>52ee2ac21b1f781092ce8514604bcb01</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 07:33:51</sys_updated_on>
+        <sys_updated_on>2021-11-23 22:26:11</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=52ee2ac21b1f781092ce8514604bcb01"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -760,21 +767,28 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-10-21 06:48:01</sys_created_on>
         <sys_id>9eee2ac21b1f781092ce8514604bcb0e</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-21 07:33:51</sys_updated_on>
+        <sys_updated_on>2021-11-23 22:26:11</sys_updated_on>
         <value>(function execute(inputs, outputs) {
  
- 
+ 	var flow_timeout = 30000; // default timeout
+  	var config_table = new GlideRecordSecure("x_vmw_ws1uem_ws1uemappconfig");
+	config_table.addQuery('name', "WS1UEMFlowExecutionTime");
+	config_table.query();
+	if (config_table.next()) {
+		flow_timeout = config_table.value;
+	}
+
   	try {
 		var actioninputs = {};
 		actioninputs['ws1incidentnumber'] = inputs.incidentnumber; // String 
 
 		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
 		// sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inBackground().withInputs(inputs).run();
-				
+      
 		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-		var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(actioninputs).run();
+		var result = sn_fd.FlowAPI.getRunner().subflow('x_vmw_ws1uem.ws1uemactionsubflow').inForeground().withInputs(actioninputs).timeout(flow_timeout).run();
 		var actionoutputs = result.getOutputs();
 
 		outputs.ws1errorstate = false;	
@@ -1209,11 +1223,11 @@
         <sys_created_on>2021-10-21 07:01:29</sys_created_on>
         <sys_id>9ff172861b1f781092ce8514604bcb80</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>ws1incidentnumber</sys_name>
+        <sys_name/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_c6eee6c21b1f781092ce8514604bcbf6_ws1incidentnumber_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-21 07:01:29</sys_updated_on>
         <url/>
@@ -1233,11 +1247,11 @@
         <sys_created_on>2021-10-21 07:33:51</sys_created_on>
         <sys_id>a569b24e1b1f781092ce8514604bcbe5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>ws1errorstate</sys_name>
+        <sys_name/>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_c6eee6c21b1f781092ce8514604bcbf6_ws1errorstate_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2021-10-21 07:33:51</sys_updated_on>
         <url/>

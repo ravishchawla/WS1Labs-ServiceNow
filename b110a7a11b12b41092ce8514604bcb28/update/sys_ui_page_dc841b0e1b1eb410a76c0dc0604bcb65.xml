@@ -703,11 +703,19 @@ var addr;
 var util;
 var inputs;
 var message;
+var flow_timeout = 30000; // default timeout
 
 if (runprocessingscript === "actionflow") {
 
     session = gs.getSession();
     addr = session.getUrlOnStack();
+
+    var config_table = new GlideRecordSecure("x_vmw_ws1uem_ws1uemappconfig");
+    config_table.addQuery('name', "WS1UEMFlowExecutionTime");
+    config_table.query();
+    if (config_table.next()) {
+        flow_timeout = config_table.value;
+    }
 
     util = new GlideRecordSecure("incident");
     util.addQuery("sys_id", sid);
@@ -719,21 +727,21 @@ if (runprocessingscript === "actionflow") {
         util.x_vmw_ws1uem_ws1_send_message = jvar_messagetext;
         util.x_vmw_ws1uem_ws1_uem_assist_type = jvar_assisttype;
         util.x_vmw_ws1uem_response = jvar_string;
-		
+
         if (util.update() === null) {
             gs.info("WS1UEM: update failed");
 
-        } 
+        }
 
         try {
             inputs = {};
-            inputs.ws1incidentnumber = util.number; 
+            inputs.ws1incidentnumber = util.number;
 
-			sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemflowwrapper").inBackground().withInputs(inputs).run();
-			
+            sn_fd.FlowAPI.getRunner().subflow("x_vmw_ws1uem.ws1uemflowwrapper").inBackground().withInputs(inputs).timeout(flow_timeout).run();
+
         } catch (ex) {
-			gs.info("WS1UEM: called subflow failed");
-			message = ex.getMessage();
+            gs.info("WS1UEM: called subflow failed");
+            message = ex.getMessage();
             gs.error(message);
         }
     } else {
@@ -741,19 +749,18 @@ if (runprocessingscript === "actionflow") {
     }
 
     response.sendRedirect(addr);
-}
-]]></processing_script>
+}]]></processing_script>
         <sys_class_name>sys_ui_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-09-01 16:29:55</sys_created_on>
         <sys_id>dc841b0e1b1eb410a76c0dc0604bcb65</sys_id>
-        <sys_mod_count>312</sys_mod_count>
+        <sys_mod_count>318</sys_mod_count>
         <sys_name>WS1UEMPopup</sys_name>
         <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
         <sys_policy/>
         <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
         <sys_update_name>sys_ui_page_dc841b0e1b1eb410a76c0dc0604bcb65</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-11-15 20:00:50</sys_updated_on>
+        <sys_updated_on>2021-11-24 10:32:01</sys_updated_on>
     </sys_ui_page>
 </record_update>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_glide_lookup_operation">
+    <sys_rte_eb_glide_lookup_operation action="DELETE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <glide_matching_fields>email</glide_matching_fields>
+        <glide_target_fields>sys_id</glide_target_fields>
+        <is_conditional>false</is_conditional>
+        <name>assigned user</name>
+        <operation_group/>
+        <order>101</order>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields>43eb009a1bea345092ce8514604bcb51</source_sys_rte_eb_fields>
+        <sys_class_name>sys_rte_eb_glide_lookup_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-14 07:09:56</sys_created_on>
+        <sys_id>621158d61b2e345092ce8514604bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assigned user</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector">ecabc85a1bea345092ce8514604bcb31</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">beebcc5a1bea345092ce8514604bcbb2</sys_rte_eb_entity>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>sys_rte_eb_glide_lookup_operation_621158d61b2e345092ce8514604bcb09</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-14 07:09:56</sys_updated_on>
+        <target_sys_rte_eb_field/>
+        <target_sys_rte_eb_fields>221158d61b2e345092ce8514604bcb07</target_sys_rte_eb_fields>
+        <target_table>sys_user</target_table>
+        <type display_value="Glide Lookup Operation">a068e629730000102b6265a751ab9e77</type>
+    </sys_rte_eb_glide_lookup_operation>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</application>
+        <file_path/>
+        <instance_id>7f877cdedb2674108aea21c40596195a</instance_id>
+        <instance_name>ven04953</instance_name>
+        <name>sys_rte_eb_glide_lookup_operation_621158d61b2e345092ce8514604bcb09</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_glide_lookup_operation"&gt;
+    &lt;sys_rte_eb_glide_lookup_operation action="INSERT_OR_UPDATE"&gt;
+        &lt;conditional_fields/&gt;
+        &lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;
+        &lt;glide_matching_fields&gt;email&lt;/glide_matching_fields&gt;
+        &lt;glide_target_fields&gt;sys_id&lt;/glide_target_fields&gt;
+        &lt;is_conditional&gt;false&lt;/is_conditional&gt;
+        &lt;name&gt;assigned user&lt;/name&gt;
+        &lt;operation_group/&gt;
+        &lt;order&gt;101&lt;/order&gt;
+        &lt;source_sys_rte_eb_field/&gt;
+        &lt;source_sys_rte_eb_fields&gt;43eb009a1bea345092ce8514604bcb51&lt;/source_sys_rte_eb_fields&gt;
+        &lt;sys_class_name&gt;sys_rte_eb_glide_lookup_operation&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2021-09-14 07:09:56&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;621158d61b2e345092ce8514604bcb09&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;assigned user&lt;/sys_name&gt;
+        &lt;sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_rte_eb_definition display_value="VMware Workspace ONE ITSM Connector"&gt;ecabc85a1bea345092ce8514604bcb31&lt;/sys_rte_eb_definition&gt;
+        &lt;sys_rte_eb_entity display_value="temp"&gt;beebcc5a1bea345092ce8514604bcbb2&lt;/sys_rte_eb_entity&gt;
+        &lt;sys_scope display_value="VMware Workspace ONE ITSM Connector"&gt;b110a7a11b12b41092ce8514604bcb28&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_rte_eb_glide_lookup_operation_621158d61b2e345092ce8514604bcb09&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2021-09-14 07:09:56&lt;/sys_updated_on&gt;
+        &lt;target_sys_rte_eb_field/&gt;
+        &lt;target_sys_rte_eb_fields&gt;221158d61b2e345092ce8514604bcb07&lt;/target_sys_rte_eb_fields&gt;
+        &lt;target_table&gt;sys_user&lt;/target_table&gt;
+        &lt;type display_value="Glide Lookup Operation"&gt;a068e629730000102b6265a751ab9e77&lt;/type&gt;
+    &lt;/sys_rte_eb_glide_lookup_operation&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-797810069</payload_hash>
+        <record_name>assigned user</record_name>
+        <reverted_from/>
+        <source>20325200977f7050450f3f5bf253af9a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-08 20:08:24</sys_created_on>
+        <sys_id>cab29e04977f7050450f3f5bf253af2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17d012a89520000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-08 20:08:24</sys_updated_on>
+        <type>RTE Glide Lookup Operation</type>
+        <update_guid>8ab29e04f17f7050065ec8a0c202b72f</update_guid>
+        <update_guid_history>8ab29e04f17f7050065ec8a0c202b72f:-797810069</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-24 10:38:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_glide_lookup_operation">sys_rte_eb_glide_lookup_operation</sys_db_object>
+        <sys_id>6a963d8adcd9489495a971c39b300310</sys_id>
+        <sys_metadata>621158d61b2e345092ce8514604bcb09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assigned user</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_scope_delete display_value="">2bd102985c8c4d3c9247af612a7bd3a4</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_glide_lookup_operation_621158d61b2e345092ce8514604bcb09</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_glide_lookup_operation_621158d61b2e345092ce8514604bcb09">cab29e04977f7050450f3f5bf253af2f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-24 10:38:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
