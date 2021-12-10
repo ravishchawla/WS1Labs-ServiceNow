@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="gsw_content_group">
+    <gsw_content_group action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <checksum>KB1mPxJcLPGLRa9RX2KI8L1Awx0=</checksum>
+        <child_can_have_roles>false</child_can_have_roles>
+        <children_layout>2</children_layout>
+        <dependent_on_contents/>
+        <dependent_on_plugins/>
+        <dependent_on_plugins_ids/>
+        <description><![CDATA[<p>Configure the VMware Workspace ONE UEM Basic Authentication details. If using OAuth 2.0 Authentication you can skip this step.</p>
+<p>In order to complete this step, you will need following connection information from your VMware Workspace ONE UEM administrator.</p>
+<p><strong>If using Basic Authentication;</strong></p>
+<ul style="list-style-position: inside;"><li>Host</li><li>Username</li><li>Password</li><li>Tenant code</li></ul>
+<p>For more information about the VMware Workspace ONE UEM API, see the VMware Workspace ONE UEM documentation.</p>]]></description>
+        <display_child_max_num/>
+        <done_status_text/>
+        <hide_getting_started>false</hide_getting_started>
+        <icon/>
+        <implicit_dependent_on/>
+        <implicit_plugin_dependencies/>
+        <is_root_content>false</is_root_content>
+        <order>200</order>
+        <parent display_value="Configure the connection">1f577d9e1bd6381092ce8514604bcb28</parent>
+        <parents>1f577d9e1bd6381092ce8514604bcb28,02c6b99e1bd6381092ce8514604bcb44</parents>
+        <progress_text/>
+        <roles/>
+        <root_intro_frame_link/>
+        <root_parent display_value="Welcome to VMware Workspace ONE ITSM Connector Guided Setup">02c6b99e1bd6381092ce8514604bcb44</root_parent>
+        <skippable>true</skippable>
+        <supports_child_content>true</supports_child_content>
+        <sys_class_name>gsw_content_group</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-10 00:00:45</sys_created_on>
+        <sys_id>7921fa0e9714c990450f3f5bf253afbc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Configure Basic Auth details (optional)</sys_name>
+        <sys_package display_value="VMware Workspace ONE ITSM Connector" source="x_vmw_ws1uem">b110a7a11b12b41092ce8514604bcb28</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="VMware Workspace ONE ITSM Connector">b110a7a11b12b41092ce8514604bcb28</sys_scope>
+        <sys_update_name>gsw_content_group_7921fa0e9714c990450f3f5bf253afbc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-10 00:27:44</sys_updated_on>
+        <title>Configure Basic Auth details (optional)</title>
+        <weight>1</weight>
+    </gsw_content_group>
+    <sys_translated_text action="delete_multiple" query="documentkey=7921fa0e9714c990450f3f5bf253afbc"/>
+</record_update>
